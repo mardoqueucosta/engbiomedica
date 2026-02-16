@@ -60,6 +60,35 @@ app.get('/api/linhas-pesquisa', (req, res) => {
   ]);
 });
 
+app.get('/api/artigos', (req, res) => {
+  res.json([
+    {
+      id: 1,
+      titulo: 'Sensores Halbach para RMN de Baixo Campo',
+      resumo: 'Uma revisão sobre o desenvolvimento de arranjos magnéticos tipo Halbach e suas aplicações em sistemas de ressonância magnética nuclear portáteis para análise não destrutiva.',
+      autor: 'Prof. Dr. Mardoqueu',
+      categoria: 'Instrumentação',
+      data: '15 Fev 2026'
+    },
+    {
+      id: 2,
+      titulo: 'Machine Learning no Diagnóstico por Imagem',
+      resumo: 'Como técnicas de aprendizado de máquina estão revolucionando o processamento de imagens médicas e auxiliando no diagnóstico precoce de patologias.',
+      autor: 'Equipe PPGEB',
+      categoria: 'Inteligência Artificial',
+      data: '10 Fev 2026'
+    },
+    {
+      id: 3,
+      titulo: 'IoT e Monitoramento de Cultivos',
+      resumo: 'A integração de dispositivos IoT com sensores biomédicos para monitoramento em tempo real de variáveis ambientais em estufas e campos de cultivo.',
+      autor: 'Equipe PPGEB',
+      categoria: 'Agricultura de Precisão',
+      data: '05 Fev 2026'
+    }
+  ]);
+});
+
 // ============================================
 // Serve React build em produção
 // ============================================

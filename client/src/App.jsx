@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Activity, FlaskConical, Cpu, GraduationCap, Mail, MapPin, ChevronRight, Menu, X, ExternalLink } from 'lucide-react'
+import { Activity, FlaskConical, Cpu, GraduationCap, Mail, MapPin, ChevronRight, Menu, X, ExternalLink, FileText, Clock, ArrowRight } from 'lucide-react'
 
 function App() {
   const [programa, setPrograma] = useState(null)
   const [linhas, setLinhas] = useState([])
   const [menuOpen, setMenuOpen] = useState(false)
+  const [artigos, setArtigos] = useState([])
 
   useEffect(() => {
     fetch('/api/programa').then(r => r.json()).then(setPrograma)
     fetch('/api/linhas-pesquisa').then(r => r.json()).then(setLinhas)
+    fetch('/api/artigos').then(r => r.json()).then(setArtigos)
   }, [])
 
   const icons = [
@@ -36,6 +38,7 @@ function App() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#sobre" className="text-sm text-gray-600 hover:text-primary-700 transition">Sobre</a>
             <a href="#pesquisa" className="text-sm text-gray-600 hover:text-primary-700 transition">Pesquisa</a>
+            <a href="#artigos" className="text-sm text-gray-600 hover:text-primary-700 transition">Artigos</a>
             <a href="#contato" className="text-sm text-gray-600 hover:text-primary-700 transition">Contato</a>
             <a href="#contato" className="text-sm bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition">
               Inscreva-se
@@ -53,6 +56,7 @@ function App() {
           <div className="md:hidden px-6 pb-4 space-y-3 border-t border-gray-100">
             <a href="#sobre" onClick={() => setMenuOpen(false)} className="block text-sm text-gray-600 py-2">Sobre</a>
             <a href="#pesquisa" onClick={() => setMenuOpen(false)} className="block text-sm text-gray-600 py-2">Pesquisa</a>
+            <a href="#artigos" onClick={() => setMenuOpen(false)} className="block text-sm text-gray-600 py-2">Artigos</a>
             <a href="#contato" onClick={() => setMenuOpen(false)} className="block text-sm text-gray-600 py-2">Contato</a>
           </div>
         )}
@@ -149,6 +153,46 @@ function App() {
                 <h3 className="text-xl font-semibold text-white mt-2 mb-3">{linha.titulo}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{linha.descricao}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ARTIGOS ===== */}
+      <section id="artigos" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-3xl font-bold text-gray-900">Artigos</h2>
+            <div className="flex items-center gap-2 text-accent-600">
+              <FileText className="w-5 h-5" />
+              <span className="text-sm font-medium">{artigos.length} publicações</span>
+            </div>
+          </div>
+          <div className="w-16 h-1 bg-accent-500 rounded-full mb-12"></div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {artigos.map((artigo) => (
+              <article key={artigo.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition group">
+                <div className="h-48 bg-gradient-to-br from-primary-700 to-primary-900 flex items-center justify-center">
+                  <FileText className="w-12 h-12 text-accent-300 opacity-50" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-medium text-accent-600 bg-accent-50 px-2 py-1 rounded-full">{artigo.categoria}</span>
+                    <div className="flex items-center gap-1 text-gray-400">
+                      <Clock className="w-3 h-3" />
+                      <span className="text-xs">{artigo.data}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-700 transition">{artigo.titulo}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{artigo.resumo}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-400">Por {artigo.autor}</span>
+                    <span className="inline-flex items-center gap-1 text-sm text-primary-600 font-medium group-hover:gap-2 transition-all cursor-pointer">
+                      Ler mais <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
