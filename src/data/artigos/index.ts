@@ -1,0 +1,25 @@
+import { Artigo } from './types';
+import { artigo as oQueEEngenhariaBiomedica } from './o-que-e-engenharia-biomedica';
+import { artigo as iaSaudeBrasil2025 } from './ia-saude-brasil-2025';
+import { artigo as diferencaEngenheiroBiomedico } from './diferenca-engenheiro-biomedico-biomedico';
+import { artigo as comoRegistrarCrea } from './como-registrar-crea';
+import { artigo as healthtechsLatam2024 } from './healthtechs-latam-2024';
+
+export type { Artigo };
+
+export const artigos: Record<string, Artigo> = {
+  'o-que-e-engenharia-biomedica': oQueEEngenhariaBiomedica,
+  'ia-saude-brasil-2025': iaSaudeBrasil2025,
+  'diferenca-engenheiro-biomedico-biomedico': diferencaEngenheiroBiomedico,
+  'como-registrar-crea': comoRegistrarCrea,
+  'healthtechs-latam-2024': healthtechsLatam2024,
+};
+
+export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
+  slug,
+  titulo: artigo.titulo,
+  resumo: artigo.resumo,
+  categoria: artigo.categoria,
+  categoriaVariant: artigo.categoriaVariant,
+  data: artigo.data,
+}));
