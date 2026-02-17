@@ -91,7 +91,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${dmSans.variable} ${fraunces.variable} ${dmMono.variable}`}
     >
-      <head>
+      <body className="min-h-screen flex flex-col">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -104,8 +104,6 @@ export default function RootLayout({
             gtag('config', '${GA_ID}');
           `}
         </Script>
-      </head>
-      <body className="min-h-screen flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
