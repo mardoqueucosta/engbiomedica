@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { ExternalLink } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 
@@ -16,6 +17,7 @@ const eventosNacionais = [
     desc: 'Principal evento da área no Brasil, organizado pela SBEB. Reúne pesquisadores, profissionais e estudantes de todo o país.',
     badge: 'Nacional',
     badgeVariant: 'primary' as const,
+    url: 'https://cbeb.org.br/',
   },
   {
     nome: 'Feira Hospitalar',
@@ -24,6 +26,7 @@ const eventosNacionais = [
     desc: 'Maior feira de saúde da América Latina. Inclui a Arena de Engenharia Clínica da ABEClin.',
     badge: 'Feira',
     badgeVariant: 'teal' as const,
+    url: 'https://www.hospitalar.com/pt/home.html',
   },
   {
     nome: 'Seminário Latino-Americano de Engenharia Clínica',
@@ -32,6 +35,7 @@ const eventosNacionais = [
     desc: 'Organizado pela ABEClin, aborda gestão de tecnologia em saúde, manutenção de equipamentos e inovação hospitalar.',
     badge: 'Nacional',
     badgeVariant: 'primary' as const,
+    url: 'https://abeclin.org.br/',
   },
   {
     nome: 'COLAEB — Congresso Latino-Americano de Engenharia Biomédica',
@@ -40,6 +44,7 @@ const eventosNacionais = [
     desc: 'Congresso regional que reúne pesquisadores da América Latina em todas as áreas da Engenharia Biomédica.',
     badge: 'Regional',
     badgeVariant: 'amber' as const,
+    url: 'http://coralbiomedica.org/claib/',
   },
 ];
 
@@ -51,6 +56,7 @@ const eventosInternacionais = [
     desc: 'O maior evento de Engenharia Biomédica do mundo, organizado pela IEEE EMBS. Mais de 12.000 membros em 97 países.',
     badge: 'Internacional',
     badgeVariant: 'coral' as const,
+    url: 'https://embc.embs.org/2026/',
   },
   {
     nome: 'BMES Annual Meeting',
@@ -59,6 +65,7 @@ const eventosInternacionais = [
     desc: 'Congresso anual da Biomedical Engineering Society. Foco acadêmico com apresentações de pesquisa e networking.',
     badge: 'Internacional',
     badgeVariant: 'coral' as const,
+    url: 'https://www.bmes.org/2026/annualmeeting',
   },
   {
     nome: 'MD&M (Medical Design & Manufacturing)',
@@ -67,6 +74,7 @@ const eventosInternacionais = [
     desc: 'Principal feira de design e manufatura de dispositivos médicos dos EUA. Conferências técnicas e exposição.',
     badge: 'Internacional',
     badgeVariant: 'coral' as const,
+    url: 'https://www.mdmwest.com/en/home.html',
   },
 ];
 
@@ -86,7 +94,15 @@ export default function EventosPage() {
           {eventosNacionais.map((e) => (
             <div key={e.nome} className="card p-5 border-l-4 border-l-primary-400">
               <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                <h3 className="text-h4 text-slate-900">{e.nome}</h3>
+                <a
+                  href={e.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-h4 text-slate-900 hover:text-primary-600 transition-colors inline-flex items-center gap-1.5"
+                >
+                  {e.nome}
+                  <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                </a>
                 <Badge variant={e.badgeVariant}>{e.badge}</Badge>
               </div>
               <p className="text-caption text-slate-400 mb-2">
@@ -102,7 +118,15 @@ export default function EventosPage() {
           {eventosInternacionais.map((e) => (
             <div key={e.nome} className="card p-5 border-l-4 border-l-teal-400">
               <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                <h3 className="text-h4 text-slate-900">{e.nome}</h3>
+                <a
+                  href={e.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-h4 text-slate-900 hover:text-primary-600 transition-colors inline-flex items-center gap-1.5"
+                >
+                  {e.nome}
+                  <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                </a>
                 <Badge variant={e.badgeVariant}>{e.badge}</Badge>
               </div>
               <p className="text-caption text-slate-400 mb-2">
