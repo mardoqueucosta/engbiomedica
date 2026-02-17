@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/Badge';
 import { listaArtigos } from '@/data/artigos';
 
 export const metadata: Metadata = {
-  title: 'Blog — Engenharia Biomédica',
+  title: 'Artigos — Engenharia Biomédica',
   description:
     'Artigos, análises e guias sobre tendências, carreira e inovação em Engenharia Biomédica no Brasil.',
 };
@@ -18,14 +18,14 @@ function formatDate(iso: string) {
   });
 }
 
-export default function BlogPage() {
+export default function ArtigosPage() {
   return (
     <>
       <PageHeader
-        overline="Blog"
+        overline="Artigos"
         title="Artigos e Análises"
         description="Tendências, guias práticos e análises de mercado sobre Engenharia Biomédica no Brasil e no mundo."
-        breadcrumbs={[{ label: 'Blog' }]}
+        breadcrumbs={[{ label: 'Artigos' }]}
       />
 
       <section className="container-page py-10 lg:py-14">
@@ -33,7 +33,7 @@ export default function BlogPage() {
           {listaArtigos.map((a) => (
             <Link
               key={a.slug}
-              href={`/blog/${a.slug}`}
+              href={`/artigos/${a.slug}`}
               className="card p-6 group block"
             >
               <div className="flex flex-wrap items-center gap-2 mb-2">

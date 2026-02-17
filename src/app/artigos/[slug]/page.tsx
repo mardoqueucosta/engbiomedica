@@ -38,7 +38,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
         description={artigo.resumo}
         centered
         breadcrumbs={[
-          { label: 'Blog', href: '/blog' },
+          { label: 'Artigos', href: '/artigos' },
           { label: artigo.titulo },
         ]}
       />
@@ -82,7 +82,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
           {/* Back link */}
           <div className="mt-8">
             <Link
-              href="/blog"
+              href="/artigos"
               className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-primary-700 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />

@@ -77,8 +77,8 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    label: 'Blog',
-    href: '/blog',
+    label: 'Artigos',
+    href: '/artigos',
     icon: FileText,
     description: 'Artigos e análises',
   },

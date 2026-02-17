@@ -5,7 +5,20 @@
       "Bash(node --version:*)",
       "Bash(npm --version:*)",
       "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npx @railway/cli link:*)",
+      "Bash(npx @railway/cli service:*)",
+      "Bash(npx @railway/cli up)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: centralizar título dos artigos do blog\n\nAdicionada prop ''centered'' ao PageHeader para centralizar\nbreadcrumbs, título e descrição nos artigos do blog.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git remote add:*)",
+      "Bash(git fetch:*)",
+      "Bash(git remote remove:*)",
+      "Bash(npx @railway/cli:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
