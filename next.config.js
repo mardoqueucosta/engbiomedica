@@ -9,6 +9,21 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/formacao/graduacao', destination: '/artigos/faculdades-engenharia-biomedica-brasil', permanent: true },
+      { source: '/formacao/pos-graduacao', destination: '/artigos/pos-graduacao-engenharia-biomedica', permanent: true },
+      { source: '/formacao/grade-curricular', destination: '/artigos/grade-curricular-engenharia-biomedica', permanent: true },
+      { source: '/mercado/salarios', destination: '/artigos/salario-engenheiro-biomedico', permanent: true },
+      { source: '/mercado/areas-de-atuacao', destination: '/artigos/areas-atuacao-engenharia-biomedica', permanent: true },
+      { source: '/regulamentacao/confea-crea', destination: '/artigos/registro-crea-engenheiro-biomedico', permanent: true },
+      { source: '/regulamentacao/anvisa', destination: '/artigos/anvisa-dispositivos-medicos-regulamentacao', permanent: true },
+      { source: '/regulamentacao/normas', destination: '/artigos/normas-tecnicas-engenharia-biomedica', permanent: true },
+      { source: '/pesquisa/centros', destination: '/artigos/centros-pesquisa-engenharia-biomedica', permanent: true },
+      { source: '/eventos', destination: '/artigos/calendario-eventos-engenharia-biomedica-2026', permanent: true },
+      { source: '/internacional/eua', destination: '/artigos/engenharia-biomedica-eua-vs-brasil', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

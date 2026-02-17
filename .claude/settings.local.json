@@ -18,7 +18,21 @@
       "Bash(npx @railway/cli:*)",
       "Bash(git commit:*)",
       "Bash(npm run build:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:/c/Windows/System32:$PATH\")",
+      "WebFetch(domain:www.hospitalar.com)",
+      "Bash(xcopy \"H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\" \"C:\\\\Users\\\\user\\\\projects\\\\engenhariabiomedica\\\\src\" /E /Y /Q)",
+      "Bash(robocopy \"H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\" \"C:\\\\Users\\\\user\\\\projects\\\\engenhariabiomedica\\\\src\" /E /NFL /NDL /NJH /NJS /nc /ns /np)",
+      "Bash(robocopy \"H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\" \"C:\\\\Users\\\\user\\\\projects\\\\engenhariabiomedica\\\\src\" /E /NFL /NDL /NJH /NJS)",
+      "Bash(cmd /c \"xcopy \"\"H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\"\" \"\"C:\\\\Users\\\\user\\\\projects\\\\engenhariabiomedica\\\\src\"\" /E /Y /Q\")",
+      "Bash(cmd /c \"copy /Y \"\"H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\\\\data\\\\artigos\\\\guia-engenharia-biomedica.ts\"\" \"\"C:\\\\Users\\\\user\\\\projects\\\\engenhariabiomedica\\\\src\\\\data\\\\artigos\\\\guia-engenharia-biomedica.ts\"\"\")",
+      "Bash(powershell:*)",
+      "Bash(nslookup:*)",
+      "Bash(curl:*)",
+      "Bash(git rm:*)",
+      "Bash(Set-Content -LiteralPath 'H:\\\\Meu Drive\\\\0-Desktop\\\\engenhariabiomedica\\\\src\\\\app\\\\cadastro\\\\page.tsx' -NoNewline)",
+      "Bash(\")",
+      "Bash(git restore:*)"
     ]
   }
 }

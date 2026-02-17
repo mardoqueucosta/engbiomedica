@@ -24,19 +24,19 @@ const sections = [
   {
     title: 'Cursos de Graduação',
     description: 'Diretório completo dos 28+ cursos em universidades públicas e privadas, com notas MEC, vagas e modalidades.',
-    href: '/formacao/graduacao',
+    href: '/artigos/faculdades-engenharia-biomedica-brasil',
     badge: 'Bacharelado — 5 anos',
   },
   {
     title: 'Pós-Graduação Stricto Sensu',
     description: 'Mestrado e doutorado em Engenharia Biomédica, com conceitos CAPES, linhas de pesquisa e corpo docente.',
-    href: '/formacao/pos-graduacao',
+    href: '/artigos/pos-graduacao-engenharia-biomedica',
     badge: 'Mestrado & Doutorado',
   },
   {
     title: 'Grade Curricular',
     description: 'Disciplinas do ciclo básico ao profissionalizante, áreas de concentração e estágio obrigatório.',
-    href: '/formacao/grade-curricular',
+    href: '/artigos/grade-curricular-engenharia-biomedica',
     badge: '3.600+ horas',
   },
 ];

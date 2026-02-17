@@ -26,9 +26,9 @@ export const mainNavigation: NavItem[] = [
     description: 'Cursos, grades e pós-graduação',
     children: [
       { label: 'Visão Geral', href: '/formacao' },
-      { label: 'Graduação', href: '/formacao/graduacao' },
-      { label: 'Pós-Graduação', href: '/formacao/pos-graduacao' },
-      { label: 'Grade Curricular', href: '/formacao/grade-curricular' },
+      { label: 'Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
+      { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
+      { label: 'Grade Curricular', href: '/artigos/grade-curricular-engenharia-biomedica' },
     ],
   },
   {
@@ -38,8 +38,8 @@ export const mainNavigation: NavItem[] = [
     description: 'Salários, vagas e empresas',
     children: [
       { label: 'Visão Geral', href: '/mercado' },
-      { label: 'Salários', href: '/mercado/salarios' },
-      { label: 'Áreas de Atuação', href: '/mercado/areas-de-atuacao' },
+      { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
+      { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
       { label: 'Empresas', href: '/mercado/empresas' },
     ],
   },
@@ -50,9 +50,9 @@ export const mainNavigation: NavItem[] = [
     description: 'CREA, ANVISA e normas',
     children: [
       { label: 'Visão Geral', href: '/regulamentacao' },
-      { label: 'CONFEA/CREA', href: '/regulamentacao/confea-crea' },
-      { label: 'ANVISA', href: '/regulamentacao/anvisa' },
-      { label: 'Normas Técnicas', href: '/regulamentacao/normas' },
+      { label: 'CONFEA/CREA', href: '/artigos/registro-crea-engenheiro-biomedico' },
+      { label: 'ANVISA', href: '/artigos/anvisa-dispositivos-medicos-regulamentacao' },
+      { label: 'Normas Técnicas', href: '/artigos/normas-tecnicas-engenharia-biomedica' },
     ],
   },
   {
@@ -62,7 +62,7 @@ export const mainNavigation: NavItem[] = [
     description: 'Centros, financiamento e patentes',
     children: [
       { label: 'Visão Geral', href: '/pesquisa' },
-      { label: 'Centros de Pesquisa', href: '/pesquisa/centros' },
+      { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' },
       { label: 'Financiamento', href: '/pesquisa/financiamento' },
     ],
   },
@@ -84,7 +84,7 @@ export const mainNavigation: NavItem[] = [
   },
   {
     label: 'Eventos',
-    href: '/eventos',
+    href: '/artigos/calendario-eventos-engenharia-biomedica-2026',
     icon: Calendar,
     description: 'CBEB, feiras e congressos',
   },
@@ -95,7 +95,7 @@ export const mainNavigation: NavItem[] = [
     description: 'EUA, rankings e repositórios',
     children: [
       { label: 'Visão Geral', href: '/internacional' },
-      { label: 'Panorama EUA', href: '/internacional/eua' },
+      { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
       { label: 'Repositórios Acadêmicos', href: '/internacional/repositorios' },
     ],
   },
@@ -109,12 +109,12 @@ export const footerNavigation = {
     { label: 'Glossário', href: '/glossario' },
   ],
   formacao: [
-    { label: 'Cursos de Graduação', href: '/formacao/graduacao' },
-    { label: 'Pós-Graduação', href: '/formacao/pos-graduacao' },
-    { label: 'Grade Curricular', href: '/formacao/grade-curricular' },
+    { label: 'Cursos de Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
+    { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
+    { label: 'Grade Curricular', href: '/artigos/grade-curricular-engenharia-biomedica' },
   ],
   profissional: [
-    { label: 'Salários', href: '/mercado/salarios' },
+    { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
     { label: 'Empresas', href: '/mercado/empresas' },
     { label: 'Regulamentação', href: '/regulamentacao' },
     { label: 'Startups', href: '/startups' },

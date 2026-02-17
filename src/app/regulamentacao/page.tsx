@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 const sections = [
-  { title: 'CONFEA/CREA', desc: 'Registro profissional, atribuições e competências do engenheiro biomédico.', href: '/regulamentacao/confea-crea', icon: Shield },
-  { title: 'ANVISA', desc: 'Regulação de dispositivos médicos: classes de risco, registro e tecnovigilância.', href: '/regulamentacao/anvisa', icon: FileCheck },
-  { title: 'Normas Técnicas', desc: 'IEC 60601, ISO 13485, ISO 14971 e legislação fundamental.', href: '/regulamentacao/normas', icon: BookOpen },
+  { title: 'CONFEA/CREA', desc: 'Registro profissional, atribuições e competências do engenheiro biomédico.', href: '/artigos/registro-crea-engenheiro-biomedico', icon: Shield },
+  { title: 'ANVISA', desc: 'Regulação de dispositivos médicos: classes de risco, registro e tecnovigilância.', href: '/artigos/anvisa-dispositivos-medicos-regulamentacao', icon: FileCheck },
+  { title: 'Normas Técnicas', desc: 'IEC 60601, ISO 13485, ISO 14971 e legislação fundamental.', href: '/artigos/normas-tecnicas-engenharia-biomedica', icon: BookOpen },
 ];
 
 export default function RegulamentacaoPage() {

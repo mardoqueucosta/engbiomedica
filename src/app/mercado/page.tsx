@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 };
 
 const sections = [
-  { title: 'Salários', desc: 'Dados atualizados do CAGED por nível, estado e setor.', href: '/mercado/salarios', icon: DollarSign },
-  { title: 'Áreas de Atuação', desc: 'Da engenharia clínica à IA em saúde — todas as carreiras.', href: '/mercado/areas-de-atuacao', icon: TrendingUp },
+  { title: 'Salários', desc: 'Dados atualizados do CAGED por nível, estado e setor.', href: '/artigos/salario-engenheiro-biomedico', icon: DollarSign },
+  { title: 'Áreas de Atuação', desc: 'Da engenharia clínica à IA em saúde — todas as carreiras.', href: '/artigos/areas-atuacao-engenharia-biomedica', icon: TrendingUp },
   { title: 'Empresas', desc: 'Multinacionais e nacionais que empregam engenheiros biomédicos.', href: '/mercado/empresas', icon: Building2 },
 ];
 

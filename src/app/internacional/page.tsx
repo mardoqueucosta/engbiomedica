@@ -33,7 +33,7 @@ export default function InternacionalPage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 mb-12">
-          <Link href="/internacional/eua" className="card p-6 group block">
+          <Link href="/artigos/engenharia-biomedica-eua-vs-brasil" className="card p-6 group block">
             <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               <Globe2 className="w-5 h-5 text-primary-600" />
             </div>
