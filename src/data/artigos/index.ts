@@ -8,6 +8,7 @@ import { artigo as guiaEngenhariaBiomedica } from './guia-engenharia-biomedica';
 import { artigo as historiaEngenhariaBiomedicaBrasil } from './historia-engenharia-biomedica-brasil';
 import { artigo as oQueFazEngenheiroBiomedico } from './o-que-faz-engenheiro-biomedico';
 import { artigo as areasAtuacaoEngenhariaBiomedica } from './areas-atuacao-engenharia-biomedica';
+import { artigo as diferencaEngBiomedicaBiomedicina } from './diferenca-engenharia-biomedica-biomedicina';
 
 export type { Artigo };
 
@@ -21,6 +22,7 @@ export const artigos: Record<string, Artigo> = {
   'historia-engenharia-biomedica-brasil': historiaEngenhariaBiomedicaBrasil,
   'o-que-faz-engenheiro-biomedico': oQueFazEngenheiroBiomedico,
   'areas-atuacao-engenharia-biomedica': areasAtuacaoEngenhariaBiomedica,
+  'diferenca-engenharia-biomedica-biomedicina': diferencaEngBiomedicaBiomedicina,
 };
 
 export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
