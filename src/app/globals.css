@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+
+  /* Editorial body text uses serif */
+  .prose {
+    @apply font-serif text-body text-slate-700;
+  }
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    @apply font-sans text-slate-900;
+  }
+  .prose a {
+    @apply text-teal-600 underline decoration-teal-300 underline-offset-2 hover:decoration-teal-500 transition-colors;
+  }
+  .prose strong {
+    @apply font-semibold text-slate-800;
+  }
+  .prose p {
+    @apply mb-4;
+  }
+
+  /* Data/mono context */
+  .data-text {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  /* Accent gradient bar (top of cards) */
+  .gradient-bar {
+    @apply h-1 bg-gradient-to-r from-primary-600 to-teal-500;
+  }
+
+  /* Hero gradient — Brand Identity */
+  .hero-gradient {
+    background: linear-gradient(135deg, #062A4A 0%, #0E5089 55%, #003D36 100%);
+  }
+
+  /* Section container */
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-card border border-slate-100 shadow-card transition-shadow hover:shadow-card-hover;
+  }
+
+  /* Focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
