@@ -147,7 +147,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* Content */}
-          <div className="prose">
+          <div className="prose prose-lg text-justify">
             {artigo.conteudo.map((paragrafo, i) => (
               <p key={i}>{paragrafo}</p>
             ))}
