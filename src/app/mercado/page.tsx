@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, Rocket, MapPin } from 'lucide-react';
+import { Building2, Rocket, MapPin, Calendar } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
@@ -17,6 +17,7 @@ const sections = [
   { title: 'Empresas', desc: 'Multinacionais e nacionais que empregam engenheiros biomédicos.', href: '/mercado/empresas', icon: Building2 },
   { title: 'Healthtechs', desc: '1.919 healthtechs mapeadas — ecossistema, funding e oportunidades.', href: '/artigos/healthtechs-brasil-ecossistema', icon: Rocket },
   { title: 'Hubs e Aceleradoras', desc: 'Eretz.bio, InovaHC, Cubo Itaú e programas de aceleração.', href: '/startups/hubs', icon: MapPin },
+  { title: 'Eventos', desc: 'CBEB, Hospitalar, CIOSP e o calendário completo de feiras e congressos.', href: '/artigos/calendario-eventos-engenharia-biomedica-2026', icon: Calendar },
 ];
 
 export default function MercadoPage() {
@@ -37,7 +38,7 @@ export default function MercadoPage() {
           <StatCard number="US$ 1,17 bi" label="Exportações 2024" />
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+        <div className="grid gap-4 sm:grid-cols-2 mb-12">
           {sections.map((s) => (
             <Link key={s.href} href={s.href} className="card p-6 group block">
               <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">

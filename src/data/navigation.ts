@@ -4,7 +4,6 @@ import {
   Scale,
   Microscope,
   FileText,
-  Calendar,
   Globe,
   type LucideIcon,
 } from 'lucide-react';
@@ -35,12 +34,13 @@ export const mainNavigation: NavItem[] = [
     label: 'Mercado',
     href: '/mercado',
     icon: Briefcase,
-    description: 'Empresas, healthtechs e hubs',
+    description: 'Empresas, healthtechs, hubs e eventos',
     children: [
       { label: 'Visão Geral', href: '/mercado' },
       { label: 'Empresas', href: '/mercado/empresas' },
       { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
       { label: 'Hubs e Aceleradoras', href: '/startups/hubs' },
+      { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
     ],
   },
   {
@@ -73,12 +73,6 @@ export const mainNavigation: NavItem[] = [
     description: 'Artigos e análises',
   },
   {
-    label: 'Eventos',
-    href: '/artigos/calendario-eventos-engenharia-biomedica-2026',
-    icon: Calendar,
-    description: 'CBEB, feiras e congressos',
-  },
-  {
     label: 'Internacional',
     href: '/internacional',
     icon: Globe,
@@ -108,5 +102,6 @@ export const footerNavigation = {
     { label: 'Empresas', href: '/mercado/empresas' },
     { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
     { label: 'Regulamentação', href: '/regulamentacao' },
+    { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
   ],
 };
