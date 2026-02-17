@@ -131,7 +131,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
       />
 
       <article className="container-page py-10 lg:py-14">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-slate-100">
             <Badge variant={artigo.categoriaVariant}>{artigo.categoria}</Badge>
