@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building, Banknote } from 'lucide-react';
+import { Building, Banknote, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
@@ -31,7 +31,7 @@ export default function PesquisaPage() {
           <StatCard number="19" label="Patentes IFBA" />
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 mb-12">
+        <div className="grid gap-4 sm:grid-cols-3 mb-12">
           <Link href="/artigos/centros-pesquisa-engenharia-biomedica" className="card p-6 group block">
             <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               <Building className="w-5 h-5 text-primary-600" />
@@ -45,6 +45,13 @@ export default function PesquisaPage() {
             </div>
             <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Financiamento</h2>
             <p className="text-body-sm text-slate-500 font-serif">EMBRAPII, FINEP, FAPESP PIPE, CNPq, BNDES e outros programas de fomento à inovação.</p>
+          </Link>
+          <Link href="/internacional/repositorios" className="card p-6 group block">
+            <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+              <BookOpen className="w-5 h-5 text-primary-600" />
+            </div>
+            <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Repositórios Acadêmicos</h2>
+            <p className="text-body-sm text-slate-500 font-serif">PubMed, IEEE Xplore, SciELO, periódicos e bases de dados para pesquisa em Engenharia Biomédica.</p>
           </Link>
         </div>
 

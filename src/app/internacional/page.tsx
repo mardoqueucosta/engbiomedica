@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Globe2, Database } from 'lucide-react';
+import { Globe2 } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
@@ -32,30 +32,17 @@ export default function InternacionalPage() {
           <StatCard number="US$ 7,5 bi" label="VC Medtech 2024" />
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 mb-12">
-          <Link href="/artigos/engenharia-biomedica-eua-vs-brasil" className="card p-6 group block">
-            <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
-              <Globe2 className="w-5 h-5 text-primary-600" />
-            </div>
-            <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">
-              Panorama EUA
-            </h2>
-            <p className="text-body-sm text-slate-500 font-serif">
-              Formação acadêmica (acreditação ABET), mercado de US$ 188–256 bilhões, regulação FDA, venture capital e hubs de inovação.
-            </p>
-          </Link>
-          <Link href="/internacional/repositorios" className="card p-6 group block">
-            <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-3 group-hover:bg-teal-100 transition-colors">
-              <Database className="w-5 h-5 text-teal-600" />
-            </div>
-            <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">
-              Repositórios Acadêmicos
-            </h2>
-            <p className="text-body-sm text-slate-500 font-serif">
-              PubMed, Scopus, IEEE Xplore, Web of Science e outros repositórios essenciais para pesquisa em Engenharia Biomédica.
-            </p>
-          </Link>
-        </div>
+        <Link href="/artigos/engenharia-biomedica-eua-vs-brasil" className="card p-6 group block mb-12">
+          <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+            <Globe2 className="w-5 h-5 text-primary-600" />
+          </div>
+          <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">
+            Panorama EUA
+          </h2>
+          <p className="text-body-sm text-slate-500 font-serif">
+            Formação acadêmica (acreditação ABET), mercado de US$ 188–256 bilhões, regulação FDA, venture capital e hubs de inovação.
+          </p>
+        </Link>
 
         <h2 className="text-h2 text-primary-800 mb-4">
           Brasil × EUA em Números

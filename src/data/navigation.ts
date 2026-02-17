@@ -59,11 +59,12 @@ export const mainNavigation: NavItem[] = [
     label: 'Pesquisa',
     href: '/pesquisa',
     icon: Microscope,
-    description: 'Centros, financiamento e patentes',
+    description: 'Centros, financiamento e repositórios',
     children: [
       { label: 'Visão Geral', href: '/pesquisa' },
       { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' },
       { label: 'Financiamento', href: '/pesquisa/financiamento' },
+      { label: 'Repositórios Acadêmicos', href: '/internacional/repositorios' },
     ],
   },
   {
@@ -76,11 +77,10 @@ export const mainNavigation: NavItem[] = [
     label: 'Internacional',
     href: '/internacional',
     icon: Globe,
-    description: 'EUA, rankings e repositórios',
+    description: 'EUA e rankings globais',
     children: [
       { label: 'Visão Geral', href: '/internacional' },
       { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
-      { label: 'Repositórios Acadêmicos', href: '/internacional/repositorios' },
     ],
   },
 ];
