@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     'ANVISA dispositivos médicos',
   ],
   authors: [{ name: 'engenhariabiomedica.com' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
@@ -86,6 +89,20 @@ export default function RootLayout({
       className={`${dmSans.variable} ${fraunces.variable} ${dmMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Engenharia Biomédica',
+              url: 'https://www.engenhariabiomedica.com',
+              description:
+                'Portal de referência sobre Engenharia Biomédica no Brasil. Cursos, mercado de trabalho, regulamentação, pesquisa e startups.',
+              sameAs: ['https://github.com/mardoqueucosta/engbiomedica'],
+            }),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

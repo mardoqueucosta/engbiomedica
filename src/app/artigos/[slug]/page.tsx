@@ -23,6 +23,15 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${artigo.titulo} — Engenharia Biomédica`,
     description: artigo.resumo,
+    alternates: {
+      canonical: `/artigos/${params.slug}`,
+    },
+    openGraph: {
+      title: artigo.titulo,
+      description: artigo.resumo,
+      type: 'article',
+      publishedTime: artigo.data,
+    },
   };
 }
 
@@ -30,8 +39,31 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
   const artigo = artigos[params.slug];
   if (!artigo) notFound();
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: artigo.titulo,
+    description: artigo.resumo,
+    datePublished: artigo.data,
+    author: {
+      '@type': 'Organization',
+      name: 'Engenharia Biomédica',
+      url: 'https://www.engenhariabiomedica.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Engenharia Biomédica',
+      url: 'https://www.engenhariabiomedica.com',
+    },
+    mainEntityOfPage: `https://www.engenhariabiomedica.com/artigos/${params.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         overline={artigo.categoria}
         title={artigo.titulo}
