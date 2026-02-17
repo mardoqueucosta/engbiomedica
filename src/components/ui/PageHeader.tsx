@@ -18,10 +18,10 @@ export function PageHeader({
   return (
     <div className="bg-white border-b border-slate-100">
       <div className="container-page py-8 lg:py-12">
-        <div className={centered ? 'max-w-3xl mx-auto' : ''}>
+        <div className={centered ? 'max-w-3xl mx-auto text-center' : ''}>
         {/* Breadcrumbs */}
         {breadcrumbs && (
-          <nav className="flex items-center gap-1.5 mb-4 text-xs font-mono text-slate-400">
+          <nav className={`flex items-center gap-1.5 mb-4 text-xs font-mono text-slate-400 ${centered ? 'justify-center' : ''}`}>
             <Link href="/" className="hover:text-primary-600 transition-colors">
               Início
             </Link>
@@ -45,11 +45,11 @@ export function PageHeader({
             {overline}
           </span>
         )}
-        <h1 className="text-h1 lg:text-display text-slate-900 text-balance max-w-3xl">
+        <h1 className={`text-h1 lg:text-display text-slate-900 text-balance ${centered ? '' : 'max-w-3xl'}`}>
           {title}
         </h1>
         {description && (
-          <p className="mt-3 font-serif text-lg text-slate-500 max-w-2xl leading-relaxed">
+          <p className={`mt-3 font-serif text-lg text-slate-500 leading-relaxed ${centered ? 'mx-auto max-w-2xl' : 'max-w-2xl'}`}>
             {description}
           </p>
         )}
