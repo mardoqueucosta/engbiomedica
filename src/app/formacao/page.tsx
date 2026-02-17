@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/Badge';
 
 export const metadata: Metadata = {
   title: 'Formação Acadêmica',
-  description: 'Cursos de graduação e pós-graduação em Engenharia Biomédica no Brasil. Universidades, grades curriculares, notas MEC e conceitos CAPES.',
+  description: 'Cursos de graduação, pós-graduação, salários e áreas de atuação em Engenharia Biomédica no Brasil. Universidades, grades curriculares, notas MEC e conceitos CAPES.',
   alternates: { canonical: '/formacao' },
   openGraph: {
     images: [{ url: '/api/og?title=Forma%C3%A7%C3%A3o%20Acad%C3%AAmica&category=Forma%C3%A7%C3%A3o', width: 1200, height: 630 }],
@@ -39,6 +39,18 @@ const sections = [
     href: '/artigos/grade-curricular-engenharia-biomedica',
     badge: '3.600+ horas',
   },
+  {
+    title: 'Salários',
+    description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
+    href: '/artigos/salario-engenheiro-biomedico',
+    badge: 'R$ 8.600 médio',
+  },
+  {
+    title: 'Áreas de Atuação',
+    description: 'Da engenharia clínica à IA em saúde — todas as carreiras possíveis para o engenheiro biomédico.',
+    href: '/artigos/areas-atuacao-engenharia-biomedica',
+    badge: '8+ especialidades',
+  },
 ];
 
 export default function FormacaoPage() {
@@ -64,7 +76,7 @@ export default function FormacaoPage() {
         </div>
 
         {/* Section links */}
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {sections.map((s) => (
             <Link key={s.href} href={s.href} className="card p-6 group block">
               <Badge variant="teal">{s.badge}</Badge>
