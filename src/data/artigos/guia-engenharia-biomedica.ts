@@ -196,7 +196,7 @@ export const artigo: Artigo = {
 <p>Tambem e importante nao confundir <strong>Engenharia Biomedica</strong> com <strong>Engenharia Clinica</strong>. A Engenharia Clinica e uma <em>subarea</em> da Engenharia Biomedica, focada na gestao de tecnologia hospitalar. Todo engenheiro clinico e (ou deveria ser) um engenheiro biomedico, mas nem todo engenheiro biomedico atua como engenheiro clinico.</p>
 
 <blockquote>
-  <p>Leia tambem: <a href="/artigos/diferenca-engenheiro-biomedico-biomedico">Engenharia Biomedica vs. Biomedicina: qual escolher? Comparativo completo</a></p>
+  <p>Leia tambem: <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">Engenharia Biomedica vs. Biomedicina: qual escolher? Comparativo completo</a></p>
 </blockquote>
 
 <!-- ==================== SECAO 5 ==================== -->
@@ -912,7 +912,7 @@ export const artigo: Artigo = {
 <p>O processo e direto: ao concluir a graduacao em Engenharia Biomedica em instituicao reconhecida pelo MEC, o profissional solicita registro no CREA do estado onde pretende atuar. Todos os <strong>27 CREAs estaduais</strong> processam o registro sem restricao. O profissional registrado pode emitir ART (Anotacao de Responsabilidade Tecnica) e se beneficia do piso salarial legal da Lei 4.950-A/1966.</p>
 
 <blockquote>
-  <p>Leia tambem: <a href="/artigos/como-registrar-crea">Como se registrar no CREA como Engenheiro Biomedico: passo a passo</a></p>
+  <p>Leia tambem: <a href="/artigos/registro-crea-engenheiro-biomedico">Como se registrar no CREA como Engenheiro Biomedico: passo a passo</a></p>
 </blockquote>
 
 <!-- ==================== SECAO 16 ==================== -->
