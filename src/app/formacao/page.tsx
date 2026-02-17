@@ -34,12 +34,6 @@ const sections = [
     badge: 'Mestrado & Doutorado',
   },
   {
-    title: 'Grade Curricular',
-    description: 'Disciplinas do ciclo básico ao profissionalizante, áreas de concentração e estágio obrigatório.',
-    href: '/artigos/grade-curricular-engenharia-biomedica',
-    badge: '3.600+ horas',
-  },
-  {
     title: 'Salários',
     description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
     href: '/artigos/salario-engenheiro-biomedico',
