@@ -16,6 +16,9 @@ import { artigo as notaCorteSisu } from './nota-corte-engenharia-biomedica-sisu'
 import { artigo as posGraduacaoEngBiomedica } from './pos-graduacao-engenharia-biomedica';
 import { artigo as salarioEngenheiroBiomedico } from './salario-engenheiro-biomedico';
 import { artigo as mercadoTrabalhoEngBiomedica } from './mercado-trabalho-engenharia-biomedica';
+import { artigo as mercadoDispositivosMedicosBrasil } from './mercado-dispositivos-medicos-brasil';
+import { artigo as empresasEngBiomedicaBrasil } from './empresas-engenharia-biomedica-brasil';
+import { artigo as healthtechsBrasilEcossistema } from './healthtechs-brasil-ecossistema';
 
 export type { Artigo };
 
@@ -37,6 +40,9 @@ export const artigos: Record<string, Artigo> = {
   'pos-graduacao-engenharia-biomedica': posGraduacaoEngBiomedica,
   'salario-engenheiro-biomedico': salarioEngenheiroBiomedico,
   'mercado-trabalho-engenharia-biomedica': mercadoTrabalhoEngBiomedica,
+  'mercado-dispositivos-medicos-brasil': mercadoDispositivosMedicosBrasil,
+  'empresas-engenharia-biomedica-brasil': empresasEngBiomedicaBrasil,
+  'healthtechs-brasil-ecossistema': healthtechsBrasilEcossistema,
 };
 
 export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
