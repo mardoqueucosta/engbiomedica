@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { DM_Sans, DM_Mono } from 'next/font/google';
 import { Fraunces } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+
+const GA_ID = 'G-HMFP981CMP';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -88,6 +91,20 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${dmSans.variable} ${fraunces.variable} ${dmMono.variable}`}
     >
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className="min-h-screen flex flex-col">
         <script
           type="application/ld+json"
