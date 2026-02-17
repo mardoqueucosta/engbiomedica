@@ -3,7 +3,6 @@ import {
   Briefcase,
   Scale,
   Microscope,
-  Rocket,
   FileText,
   Calendar,
   Globe,
@@ -35,12 +34,14 @@ export const mainNavigation: NavItem[] = [
     label: 'Mercado',
     href: '/mercado',
     icon: Briefcase,
-    description: 'Salários, vagas e empresas',
+    description: 'Salários, empresas e startups',
     children: [
       { label: 'Visão Geral', href: '/mercado' },
       { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
       { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
       { label: 'Empresas', href: '/mercado/empresas' },
+      { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
+      { label: 'Hubs e Aceleradoras', href: '/startups/hubs' },
     ],
   },
   {
@@ -64,16 +65,6 @@ export const mainNavigation: NavItem[] = [
       { label: 'Visão Geral', href: '/pesquisa' },
       { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' },
       { label: 'Financiamento', href: '/pesquisa/financiamento' },
-    ],
-  },
-  {
-    label: 'Startups',
-    href: '/startups',
-    icon: Rocket,
-    description: '1.919 healthtechs mapeadas',
-    children: [
-      { label: 'Ecossistema', href: '/startups' },
-      { label: 'Hubs e Aceleradoras', href: '/startups/hubs' },
     ],
   },
   {
@@ -117,6 +108,6 @@ export const footerNavigation = {
     { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
     { label: 'Empresas', href: '/mercado/empresas' },
     { label: 'Regulamentação', href: '/regulamentacao' },
-    { label: 'Startups', href: '/startups' },
+    { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
   ],
 };

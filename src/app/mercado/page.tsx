@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { TrendingUp, DollarSign, Building2 } from 'lucide-react';
+import { TrendingUp, DollarSign, Building2, Rocket, MapPin } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
 export const metadata: Metadata = {
   title: 'Mercado de Trabalho — Engenharia Biomédica',
-  description: 'Salários, áreas de atuação, empresas e dados do mercado de dispositivos médicos no Brasil. R$ 26,1 bilhões em 2024 com 85 mil empregos diretos.',
+  description: 'Salários, áreas de atuação, empresas, healthtechs e dados do mercado de dispositivos médicos no Brasil. R$ 26,1 bilhões em 2024 com 85 mil empregos diretos.',
   alternates: { canonical: '/mercado' },
   openGraph: {
     images: [{ url: '/api/og?title=Mercado%20de%20Trabalho%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Mercado', width: 1200, height: 630 }],
@@ -17,6 +17,8 @@ const sections = [
   { title: 'Salários', desc: 'Dados atualizados do CAGED por nível, estado e setor.', href: '/artigos/salario-engenheiro-biomedico', icon: DollarSign },
   { title: 'Áreas de Atuação', desc: 'Da engenharia clínica à IA em saúde — todas as carreiras.', href: '/artigos/areas-atuacao-engenharia-biomedica', icon: TrendingUp },
   { title: 'Empresas', desc: 'Multinacionais e nacionais que empregam engenheiros biomédicos.', href: '/mercado/empresas', icon: Building2 },
+  { title: 'Healthtechs', desc: '1.919 healthtechs mapeadas — ecossistema, funding e oportunidades.', href: '/artigos/healthtechs-brasil-ecossistema', icon: Rocket },
+  { title: 'Hubs e Aceleradoras', desc: 'Eretz.bio, InovaHC, Cubo Itaú e programas de aceleração.', href: '/startups/hubs', icon: MapPin },
 ];
 
 export default function MercadoPage() {
@@ -37,7 +39,7 @@ export default function MercadoPage() {
           <StatCard number="US$ 1,17 bi" label="Exportações 2024" />
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3 mb-12">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
           {sections.map((s) => (
             <Link key={s.href} href={s.href} className="card p-6 group block">
               <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">

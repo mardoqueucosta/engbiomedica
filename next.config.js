@@ -22,6 +22,7 @@ const nextConfig = {
       { source: '/pesquisa/centros', destination: '/artigos/centros-pesquisa-engenharia-biomedica', permanent: true },
       { source: '/eventos', destination: '/artigos/calendario-eventos-engenharia-biomedica-2026', permanent: true },
       { source: '/internacional/eua', destination: '/artigos/engenharia-biomedica-eua-vs-brasil', permanent: true },
+      { source: '/startups', destination: '/artigos/healthtechs-brasil-ecossistema', permanent: true },
     ];
   },
   async headers() {

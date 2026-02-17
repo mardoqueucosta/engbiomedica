@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/regulamentacao', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/pesquisa', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/pesquisa/financiamento', changeFrequency: 'monthly' as const, priority: 0.6 },
-    { path: '/startups', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/startups/hubs', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/internacional', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/internacional/repositorios', changeFrequency: 'monthly' as const, priority: 0.6 },
