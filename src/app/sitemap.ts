@@ -6,7 +6,7 @@ const BASE_URL = 'https://engenhariabiomedica.com';
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { path: '', changeFrequency: 'weekly' as const, priority: 1.0 },
-    { path: '/artigos', changeFrequency: 'weekly' as const, priority: 0.9 },
+    { path: '/artigos', changeFrequency: 'daily' as const, priority: 0.9 },
     { path: '/formacao', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/formacao/graduacao', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/formacao/pos-graduacao', changeFrequency: 'monthly' as const, priority: 0.6 },
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ([slug, artigo]) => ({
       url: `${BASE_URL}/artigos/${slug}`,
       lastModified: new Date(artigo.data),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'daily' as const,
       priority: slug === guiaSlug ? 0.9 : 0.8,
     })
   );
