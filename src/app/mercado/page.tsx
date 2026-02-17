@@ -1,19 +1,19 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, Rocket, MapPin, Calendar } from 'lucide-react';
+import { Building2, Rocket, MapPin, Calendar, Globe } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
 export const metadata: Metadata = {
   title: 'Mercado de Trabalho — Engenharia Biomédica',
-  description: 'Empresas, healthtechs, hubs e dados do mercado de dispositivos médicos no Brasil. R$ 26,1 bilhões em 2024 com 85 mil empregos diretos.',
+  description: 'Mercado de dispositivos médicos no Brasil e EUA. Empresas, healthtechs, hubs, eventos e panorama internacional. R$ 26,1 bilhões em 2024.',
   alternates: { canonical: '/mercado' },
   openGraph: {
     images: [{ url: '/api/og?title=Mercado%20de%20Trabalho%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Mercado', width: 1200, height: 630 }],
   },
 };
 
-const sections = [
+const brasilSections = [
   { title: 'Empresas', desc: 'Multinacionais e nacionais que empregam engenheiros biomédicos.', href: '/mercado/empresas', icon: Building2 },
   { title: 'Healthtechs', desc: '1.919 healthtechs mapeadas — ecossistema, funding e oportunidades.', href: '/artigos/healthtechs-brasil-ecossistema', icon: Rocket },
   { title: 'Hubs e Aceleradoras', desc: 'Eretz.bio, InovaHC, Cubo Itaú e programas de aceleração.', href: '/startups/hubs', icon: MapPin },
@@ -38,8 +38,10 @@ export default function MercadoPage() {
           <StatCard number="US$ 1,17 bi" label="Exportações 2024" />
         </div>
 
+        {/* Panorama Brasil */}
+        <h2 className="text-h2 text-primary-800 mb-4 font-serif">Panorama Brasil</h2>
         <div className="grid gap-4 sm:grid-cols-2 mb-12">
-          {sections.map((s) => (
+          {brasilSections.map((s) => (
             <Link key={s.href} href={s.href} className="card p-6 group block">
               <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
                 <s.icon className="w-5 h-5 text-primary-600" />
@@ -49,6 +51,22 @@ export default function MercadoPage() {
             </Link>
           ))}
         </div>
+
+        {/* Panorama EUA */}
+        <h2 className="text-h2 text-primary-800 mb-4 font-serif">Panorama EUA</h2>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          <StatCard number="US$ 256 bi" label="Mercado Medtech EUA" />
+          <StatCard number="400+" label="Programas ABET" />
+          <StatCard number="1.250+" label="Dispositivos IA (FDA)" />
+          <StatCard number="US$ 7,5 bi" label="VC Medtech 2024" />
+        </div>
+        <Link href="/artigos/engenharia-biomedica-eua-vs-brasil" className="card p-6 group block mb-12">
+          <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+            <Globe className="w-5 h-5 text-primary-600" />
+          </div>
+          <h3 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Engenharia Biomédica: EUA vs. Brasil</h3>
+          <p className="text-body-sm text-slate-500 font-serif">Formação acadêmica (ABET), mercado de US$ 188–256 bilhões, regulação FDA, venture capital e hubs de inovação.</p>
+        </Link>
 
         <div className="card p-6">
           <h2 className="text-h3 text-slate-900 mb-3">Distribuição Regional dos Empregos</h2>

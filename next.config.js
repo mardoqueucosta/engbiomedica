@@ -23,6 +23,7 @@ const nextConfig = {
       { source: '/eventos', destination: '/artigos/calendario-eventos-engenharia-biomedica-2026', permanent: true },
       { source: '/internacional/eua', destination: '/artigos/engenharia-biomedica-eua-vs-brasil', permanent: true },
       { source: '/startups', destination: '/artigos/healthtechs-brasil-ecossistema', permanent: true },
+      { source: '/internacional', destination: '/mercado', permanent: true },
     ];
   },
   async headers() {

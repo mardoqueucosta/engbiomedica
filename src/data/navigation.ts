@@ -4,7 +4,6 @@ import {
   Scale,
   Microscope,
   FileText,
-  Globe,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -34,12 +33,13 @@ export const mainNavigation: NavItem[] = [
     label: 'Mercado',
     href: '/mercado',
     icon: Briefcase,
-    description: 'Empresas, healthtechs, hubs e eventos',
+    description: 'Brasil, EUA, empresas e eventos',
     children: [
       { label: 'Visão Geral', href: '/mercado' },
       { label: 'Empresas', href: '/mercado/empresas' },
       { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
       { label: 'Hubs e Aceleradoras', href: '/startups/hubs' },
+      { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
       { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
     ],
   },
@@ -73,16 +73,6 @@ export const mainNavigation: NavItem[] = [
     icon: FileText,
     description: 'Artigos e análises',
   },
-  {
-    label: 'Internacional',
-    href: '/internacional',
-    icon: Globe,
-    description: 'EUA e rankings globais',
-    children: [
-      { label: 'Visão Geral', href: '/internacional' },
-      { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
-    ],
-  },
 ];
 
 export const footerNavigation = {
@@ -101,6 +91,7 @@ export const footerNavigation = {
   profissional: [
     { label: 'Empresas', href: '/mercado/empresas' },
     { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
+    { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
     { label: 'Regulamentação', href: '/regulamentacao' },
     { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
   ],
