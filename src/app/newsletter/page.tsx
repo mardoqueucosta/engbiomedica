@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: 'Newsletter — Engenharia Biomédica',
   description:
     'Receba artigos, dados de mercado, eventos e oportunidades sobre Engenharia Biomédica diretamente no seu e-mail. Gratuito e sem spam.',
+  alternates: { canonical: '/newsletter' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Newsletter%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Newsletter', width: 1200, height: 630 }],
+  },
 };
 
 export default function NewsletterPage() {

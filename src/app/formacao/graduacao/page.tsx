@@ -5,6 +5,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Cursos de Graduação em Engenharia Biomédica',
   description: 'Lista completa dos 28+ cursos de graduação em Engenharia Biomédica no Brasil. Universidades públicas e privadas, notas MEC, vagas e localização.',
+  alternates: { canonical: '/formacao/graduacao' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Cursos%20de%20Gradua%C3%A7%C3%A3o%20em%20Engenharia%20Biom%C3%A9dica&category=Forma%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const cursosPublicas = [

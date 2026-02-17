@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Login',
+  description: 'Acesse sua conta no portal Engenharia Biomédica.',
   robots: { index: false },
 };
 

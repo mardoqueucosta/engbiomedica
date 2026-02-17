@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'CONFEA/CREA — Regulamentação Profissional',
   description: 'Registro, atribuições e competências do engenheiro biomédico no sistema CONFEA/CREA. Decisão PL-0034/2008 e Resolução 1.103/2018.',
+  alternates: { canonical: '/regulamentacao/confea-crea' },
+  openGraph: {
+    images: [{ url: '/api/og?title=CONFEA%2FCREA%20%E2%80%94%20Regulamenta%C3%A7%C3%A3o%20Profissional&category=Regulamenta%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const marcos = [

@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'Recursos e Referências — Engenharia Biomédica',
   description:
     'Links para os sites de referência em Engenharia Biomédica no Brasil e no mundo: SBEB, ANVISA, ABIMO, BMES, IEEE EMBS, FDA e mais.',
+  alternates: { canonical: '/recursos' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Recursos%20e%20Refer%C3%AAncias%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Recursos', width: 1200, height: 630 }],
+  },
 };
 
 const sitesBrasil = [

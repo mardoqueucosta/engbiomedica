@@ -7,6 +7,10 @@ import { StatCard } from '@/components/ui/StatCard';
 export const metadata: Metadata = {
   title: 'Pesquisa e Inovação — Engenharia Biomédica',
   description: 'Centros de excelência, financiamento (EMBRAPII, FINEP, FAPESP) e fronteiras da pesquisa em Engenharia Biomédica no Brasil.',
+  alternates: { canonical: '/pesquisa' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Pesquisa%20e%20Inova%C3%A7%C3%A3o%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Pesquisa', width: 1200, height: 630 }],
+  },
 };
 
 export default function PesquisaPage() {

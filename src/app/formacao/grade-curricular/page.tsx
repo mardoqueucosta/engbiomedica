@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Grade Curricular — Engenharia Biomédica',
   description: 'Disciplinas, ciclo básico, profissionalizante e áreas de concentração da graduação em Engenharia Biomédica no Brasil.',
+  alternates: { canonical: '/formacao/grade-curricular' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Grade%20Curricular%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Forma%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const cicloBasico = [

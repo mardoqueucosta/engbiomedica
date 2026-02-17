@@ -5,6 +5,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Áreas de Atuação — Engenharia Biomédica',
   description: 'Onde o engenheiro biomédico trabalha: engenharia clínica, indústria de dispositivos, regulatório, IA em saúde, biomecânica e mais.',
+  alternates: { canonical: '/mercado/areas-de-atuacao' },
+  openGraph: {
+    images: [{ url: '/api/og?title=%C3%81reas%20de%20Atua%C3%A7%C3%A3o%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Mercado', width: 1200, height: 630 }],
+  },
 };
 
 const areas = [

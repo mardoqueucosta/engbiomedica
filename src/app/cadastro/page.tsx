@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Cadastro',
+  description: 'Cadastre-se no portal Engenharia Biomédica para acessar conteúdos exclusivos.',
   robots: { index: false },
 };
 

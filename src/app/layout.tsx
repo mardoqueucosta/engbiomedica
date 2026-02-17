@@ -100,6 +100,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${dmSans.variable} ${fraunces.variable} ${dmMono.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+      </head>
       <body className="min-h-screen flex flex-col">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
@@ -121,8 +125,15 @@ export default function RootLayout({
               '@type': 'Organization',
               name: 'Engenharia Biomédica',
               url: 'https://engenhariabiomedica.com',
+              logo: 'https://engenhariabiomedica.com/icon.svg',
               description:
                 'Portal de referência sobre Engenharia Biomédica no Brasil. Cursos, mercado de trabalho, regulamentação, pesquisa e startups.',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                email: 'contato@engenhariabiomedica.com',
+                contactType: 'customer service',
+                availableLanguage: 'Portuguese',
+              },
               sameAs: ['https://github.com/mardoqueucosta/engbiomedica'],
             }),
           }}

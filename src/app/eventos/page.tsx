@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'Eventos — Engenharia Biomédica',
   description:
     'Calendário de eventos nacionais e internacionais de Engenharia Biomédica: CBEB, Feira Hospitalar, IEEE EMBC, BMES Annual Meeting e mais.',
+  alternates: { canonical: '/eventos' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Eventos%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Eventos', width: 1200, height: 630 }],
+  },
 };
 
 const eventosNacionais = [

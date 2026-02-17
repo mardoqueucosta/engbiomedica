@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: 'Referência Internacional — Engenharia Biomédica',
   description:
     'Panorama da Engenharia Biomédica nos EUA como benchmark internacional: mercado de US$ 188–256 bilhões, 400+ programas ABET e repositórios acadêmicos globais.',
+  alternates: { canonical: '/internacional' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Refer%C3%AAncia%20Internacional%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Internacional', width: 1200, height: 630 }],
+  },
 };
 
 export default function InternacionalPage() {

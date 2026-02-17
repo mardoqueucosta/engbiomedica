@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Repositórios Acadêmicos — Engenharia Biomédica',
   description:
     'Os 10 maiores repositórios acadêmicos para pesquisa em Engenharia Biomédica: PubMed, Scopus, IEEE Xplore, Web of Science, Compendex e mais.',
+  alternates: { canonical: '/internacional/repositorios' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Reposit%C3%B3rios%20Acad%C3%AAmicos%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Internacional', width: 1200, height: 630 }],
+  },
 };
 
 const repositorios = [

@@ -5,6 +5,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'ANVISA — Regulação de Dispositivos Médicos',
   description: 'Classes de risco, registro, Boas Práticas de Fabricação e tecnovigilância. RDC 751/2022, RDC 665/2022, RDC 657/2022 (SaMD).',
+  alternates: { canonical: '/regulamentacao/anvisa' },
+  openGraph: {
+    images: [{ url: '/api/og?title=ANVISA%20%E2%80%94%20Regula%C3%A7%C3%A3o%20de%20Dispositivos%20M%C3%A9dicos&category=Regulamenta%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const classes = [

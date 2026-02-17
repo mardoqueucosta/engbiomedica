@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Glossário — Engenharia Biomédica',
   description:
     'Glossário de termos técnicos de Engenharia Biomédica: regulamentação (ANVISA, CREA), dispositivos médicos, certificações, normas e mercado.',
+  alternates: { canonical: '/glossario' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Gloss%C3%A1rio%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Gloss%C3%A1rio', width: 1200, height: 630 }],
+  },
 };
 
 const termos = [

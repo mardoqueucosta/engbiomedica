@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Hubs e Aceleradoras — Startups em Engenharia Biomédica',
   description:
     'Eretz.bio (Einstein), InovaHC (USP), Horizontes Hub (Unimed-BH), Cubo Itaú e os principais programas de aceleração de healthtechs no Brasil.',
+  alternates: { canonical: '/startups/hubs' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Hubs%20e%20Aceleradoras%20%E2%80%94%20Startups%20em%20Engenharia%20Biom%C3%A9dica&category=Startups', width: 1200, height: 630 }],
+  },
 };
 
 const hubs = [

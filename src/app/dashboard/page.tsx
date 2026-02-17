@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
+  description: 'Painel administrativo do portal Engenharia Biomédica.',
   robots: { index: false },
 };
 

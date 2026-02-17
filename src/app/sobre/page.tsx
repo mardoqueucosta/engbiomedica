@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Sobre o Portal — Engenharia Biomédica',
   description:
     'Missão, equipe e metodologia editorial do portal engenhariabiomedica.com — a referência sobre Engenharia Biomédica no Brasil.',
+  alternates: { canonical: '/sobre' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Sobre%20o%20Portal%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Sobre', width: 1200, height: 630 }],
+  },
 };
 
 export default function SobrePage() {

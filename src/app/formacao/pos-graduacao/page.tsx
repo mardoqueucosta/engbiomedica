@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Pós-Graduação em Engenharia Biomédica',
   description: 'Programas de mestrado e doutorado em Engenharia Biomédica no Brasil. Conceitos CAPES, linhas de pesquisa e programas correlatos.',
+  alternates: { canonical: '/formacao/pos-graduacao' },
+  openGraph: {
+    images: [{ url: '/api/og?title=P%C3%B3s-Gradua%C3%A7%C3%A3o%20em%20Engenharia%20Biom%C3%A9dica&category=Forma%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const programas = [

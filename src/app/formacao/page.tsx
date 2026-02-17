@@ -7,6 +7,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Formação Acadêmica',
   description: 'Cursos de graduação e pós-graduação em Engenharia Biomédica no Brasil. Universidades, grades curriculares, notas MEC e conceitos CAPES.',
+  alternates: { canonical: '/formacao' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Forma%C3%A7%C3%A3o%20Acad%C3%AAmica&category=Forma%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const stats = [

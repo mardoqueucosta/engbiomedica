@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Salários — Engenharia Biomédica',
   description: 'Salário médio do engenheiro biomédico no Brasil: R$ 8.658/mês. Dados por nível, estado e comparativo com outras engenharias.',
+  alternates: { canonical: '/mercado/salarios' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Sal%C3%A1rios%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Mercado', width: 1200, height: 630 }],
+  },
 };
 
 const salarios = {

@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'Panorama EUA — Engenharia Biomédica',
   description:
     'Engenharia Biomédica nos EUA: 400+ programas ABET, mercado de US$ 188–256 bilhões, regulação FDA, venture capital e hubs de inovação em medtech.',
+  alternates: { canonical: '/internacional/eua' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Panorama%20EUA%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Internacional', width: 1200, height: 630 }],
+  },
 };
 
 const sites = [

@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Financiamento à Pesquisa — Engenharia Biomédica',
   description: 'EMBRAPII (R$ 150 milhões), FINEP, FAPESP PIPE, CNPq e BNDES: fontes de financiamento para pesquisa e inovação em saúde no Brasil.',
+  alternates: { canonical: '/pesquisa/financiamento' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Financiamento%20%C3%A0%20Pesquisa%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Pesquisa', width: 1200, height: 630 }],
+  },
 };
 
 const fontes = [

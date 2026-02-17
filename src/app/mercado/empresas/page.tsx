@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'Empresas — Engenharia Biomedica',
   description:
     'Diretorio completo de empresas de dispositivos medicos, equipamentos hospitalares e healthtech no Brasil. Multinacionais, nacionais e expositores da Hospitalar 2026.',
+  alternates: { canonical: '/mercado/empresas' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Empresas%20%E2%80%94%20Engenharia%20Biomedica&category=Mercado', width: 1200, height: 630 }],
+  },
 };
 
 const multinacionais = [

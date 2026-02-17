@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: 'Startups e Healthtechs — Engenharia Biomédica',
   description:
     '1.919 healthtechs mapeadas no Brasil, 64,8% da América Latina. Startups medtech de destaque, rodadas de investimento e ecossistema de inovação em saúde.',
+  alternates: { canonical: '/startups' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Startups%20e%20Healthtechs%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Startups', width: 1200, height: 630 }],
+  },
 };
 
 const startups = [

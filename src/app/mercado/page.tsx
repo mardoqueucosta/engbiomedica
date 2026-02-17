@@ -7,6 +7,10 @@ import { StatCard } from '@/components/ui/StatCard';
 export const metadata: Metadata = {
   title: 'Mercado de Trabalho — Engenharia Biomédica',
   description: 'Salários, áreas de atuação, empresas e dados do mercado de dispositivos médicos no Brasil. R$ 26,1 bilhões em 2024 com 85 mil empregos diretos.',
+  alternates: { canonical: '/mercado' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Mercado%20de%20Trabalho%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Mercado', width: 1200, height: 630 }],
+  },
 };
 
 const sections = [

@@ -5,6 +5,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Centros de Pesquisa — Engenharia Biomédica',
   description: 'PEB/COPPE-UFRJ, CEB/UNICAMP, LEB/USP, UFPE e outros centros de excelência em pesquisa de Engenharia Biomédica no Brasil.',
+  alternates: { canonical: '/pesquisa/centros' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Centros%20de%20Pesquisa%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Pesquisa', width: 1200, height: 630 }],
+  },
 };
 
 const centros = [

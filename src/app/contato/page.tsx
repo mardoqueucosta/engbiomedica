@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: 'Contato — Engenharia Biomédica',
   description:
     'Entre em contato com a equipe do portal engenhariabiomedica.com. Dúvidas, sugestões, parcerias e colaborações.',
+  alternates: { canonical: '/contato' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Contato%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Contato', width: 1200, height: 630 }],
+  },
 };
 
 export default function ContatoPage() {

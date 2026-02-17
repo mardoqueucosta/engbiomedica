@@ -4,6 +4,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Normas Técnicas — Engenharia Biomédica',
   description: 'IEC 60601, ISO 13485, ISO 14971 e legislação fundamental para a Engenharia Biomédica no Brasil.',
+  alternates: { canonical: '/regulamentacao/normas' },
+  openGraph: {
+    images: [{ url: '/api/og?title=Normas%20T%C3%A9cnicas%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Regulamenta%C3%A7%C3%A3o', width: 1200, height: 630 }],
+  },
 };
 
 const normas = [
