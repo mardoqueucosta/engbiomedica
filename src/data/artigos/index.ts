@@ -22,6 +22,10 @@ import { artigo as healthtechsBrasilEcossistema } from './healthtechs-brasil-eco
 import { artigo as registroCreaBiomedico } from './registro-crea-engenheiro-biomedico';
 import { artigo as anvisaDispositivosMedicos } from './anvisa-dispositivos-medicos-regulamentacao';
 import { artigo as normasTecnicasEngBiomedica } from './normas-tecnicas-engenharia-biomedica';
+import { artigo as centrosPesquisaEngBiomedica } from './centros-pesquisa-engenharia-biomedica';
+import { artigo as tendenciasFuturoEngBiomedica } from './tendencias-futuro-engenharia-biomedica';
+import { artigo as engBiomedicaEuaVsBrasil } from './engenharia-biomedica-eua-vs-brasil';
+import { artigo as calendarioEventosEngBiomedica2026 } from './calendario-eventos-engenharia-biomedica-2026';
 
 export type { Artigo };
 
@@ -49,6 +53,10 @@ export const artigos: Record<string, Artigo> = {
   'registro-crea-engenheiro-biomedico': registroCreaBiomedico,
   'anvisa-dispositivos-medicos-regulamentacao': anvisaDispositivosMedicos,
   'normas-tecnicas-engenharia-biomedica': normasTecnicasEngBiomedica,
+  'centros-pesquisa-engenharia-biomedica': centrosPesquisaEngBiomedica,
+  'tendencias-futuro-engenharia-biomedica': tendenciasFuturoEngBiomedica,
+  'engenharia-biomedica-eua-vs-brasil': engBiomedicaEuaVsBrasil,
+  'calendario-eventos-engenharia-biomedica-2026': calendarioEventosEngBiomedica2026,
 };
 
 export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
