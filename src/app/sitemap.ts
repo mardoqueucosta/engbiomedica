@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { artigos } from '@/data/artigos';
 
-const BASE_URL = 'https://www.engenhariabiomedica.com';
+const BASE_URL = 'https://engenhariabiomedica.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

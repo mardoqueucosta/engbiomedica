@@ -48,14 +48,14 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
     author: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
-      url: 'https://www.engenhariabiomedica.com',
+      url: 'https://engenhariabiomedica.com',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
-      url: 'https://www.engenhariabiomedica.com',
+      url: 'https://engenhariabiomedica.com',
     },
-    mainEntityOfPage: `https://www.engenhariabiomedica.com/artigos/${params.slug}`,
+    mainEntityOfPage: `https://engenhariabiomedica.com/artigos/${params.slug}`,
   };
 
   return (

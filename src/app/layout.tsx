@@ -28,7 +28,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.engenhariabiomedica.com'),
+  metadataBase: new URL('https://engenhariabiomedica.com'),
   title: {
     default: 'Engenharia Biomédica — Portal de Referência no Brasil',
     template: '%s | Engenharia Biomédica',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://www.engenhariabiomedica.com',
+    url: 'https://engenhariabiomedica.com',
     siteName: 'Engenharia Biomédica',
     title: 'Engenharia Biomédica — Portal de Referência no Brasil',
     description:
@@ -96,7 +96,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Engenharia Biomédica',
-              url: 'https://www.engenhariabiomedica.com',
+              url: 'https://engenhariabiomedica.com',
               description:
                 'Portal de referência sobre Engenharia Biomédica no Brasil. Cursos, mercado de trabalho, regulamentação, pesquisa e startups.',
               sameAs: ['https://github.com/mardoqueucosta/engbiomedica'],
