@@ -58,6 +58,10 @@ export const artigo: Artigo = {
 
 <p>A graduacao especifica so chegou <strong>30 anos depois</strong>: o primeiro curso de bacharelado em Engenharia Biomedica foi criado pela UNIVAP (Sao Jose dos Campos/SP) em <strong>2001</strong>. De 2001 a 2024, o numero de cursos cresceu de 2 para <strong>27</strong> — um dos crescimentos mais acelerados entre todas as engenharias no pais.</p>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/historia-engenharia-biomedica-brasil">Historia da Engenharia Biomedica no Brasil: da COPPE/UFRJ aos 27 cursos</a></p>
+</blockquote>
+
 <p>Marcos historicos fundamentais:</p>
 
 <ul>
@@ -85,6 +89,10 @@ export const artigo: Artigo = {
 <p><strong>Na area regulatoria:</strong> preparar dossies tecnicos para registro de dispositivos medicos na ANVISA, realizar analises de risco conforme ISO 14971, implementar e auditar sistemas de gestao de qualidade e monitorar a tecnovigilancia de produtos no mercado.</p>
 
 <p><strong>Em saude digital e startups:</strong> desenvolver softwares medicos, plataformas de telemedicina, aplicativos de monitoramento de saude, sistemas de prontuario eletronico e solucoes baseadas em IA para diagnostico e tratamento.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/o-que-faz-engenheiro-biomedico">O que faz um Engenheiro Biomedico: dia a dia, atividades e perfil profissional</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 3 ==================== -->
 <h2 id="areas-de-atuacao">3. Areas de atuacao da Engenharia Biomedica</h2>
@@ -123,6 +131,10 @@ export const artigo: Artigo = {
 
 <h3>3.11. Areas Emergentes</h3>
 <p>Nanotecnologia em saude, bioimpressao 3D (fabricacao de tecidos e orgaos), gemeos digitais em saude, Internet das Coisas Medicas (IoMT), wearables de saude, realidade aumentada e virtual para cirurgia e reabilitacao, e computacao quantica aplicada a descoberta de farmacos.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/areas-atuacao-engenharia-biomedica">Areas de atuacao da Engenharia Biomedica: guia completo com salarios por area</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 4 ==================== -->
 <h2 id="diferenca-engenharia-biomedica-biomedicina">4. Diferenca entre Engenharia Biomedica e Biomedicina</h2>
@@ -220,6 +232,10 @@ export const artigo: Artigo = {
 
 <p>Sim — como qualquer engenharia, a Engenharia Biomedica exige dedicacao significativa, especialmente nos primeiros dois anos, que concentram disciplinas de calculo, algebra linear, fisica e quimica. A diferenca e que, a partir do terceiro ano, as disciplinas se tornam muito mais aplicadas e envolventes: Instrumentacao Biomedica, Biomecanica, Processamento de Imagens Medicas, Inteligencia Artificial.</p>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/curso-engenharia-biomedica-o-que-esperar">O curso de Engenharia Biomedica: o que esperar dos 5 anos de graduacao</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 6 ==================== -->
 <h2 id="grade-curricular">6. Grade curricular de Engenharia Biomedica</h2>
 
@@ -264,6 +280,10 @@ export const artigo: Artigo = {
 
 <h3>Enfases e areas de concentracao</h3>
 <p>Cada universidade organiza suas enfases de forma diferente. A UFABC, por exemplo, estrutura o curso em quatro eixos: Sinais e Imagens, Biomecanica e Biomateriais, Sistemas Inteligentes e Instrumentacao para Diagnostico e Terapia.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/grade-curricular-engenharia-biomedica">Grade curricular de Engenharia Biomedica: todas as disciplinas detalhadas</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 7 ==================== -->
 <h2 id="onde-estudar">7. Onde estudar Engenharia Biomedica: todas as faculdades do Brasil</h2>
@@ -437,6 +457,10 @@ export const artigo: Artigo = {
 
 <p><strong>Dado importante:</strong> entre 45% e 50% das vagas totais ja sao oferecidas na modalidade EaD ou semipresencial. Se voce valoriza formacao pratica em laboratorios e contato direto com equipamentos reais, priorize instituicoes com oferta presencial e boa infraestrutura.</p>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/faculdades-engenharia-biomedica-brasil">Todas as faculdades de Engenharia Biomedica no Brasil: guia completo</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 8 ==================== -->
 <h2 id="notas-de-corte">8. Notas de corte no SiSU 2025</h2>
 
@@ -476,6 +500,10 @@ export const artigo: Artigo = {
 <p>A <strong>media nacional</strong> das notas de corte e de <strong>667,76 pontos</strong>, o que posiciona Engenharia Biomedica como o <strong>36o curso mais concorrido entre 88 cursos</strong> oferecidos pelo SiSU.</p>
 
 <p>A UFABC nao aparece com nota de corte direta porque utiliza ingresso via Bacharelado em Ciencia e Tecnologia (BC&amp;T), com selecao para a engenharia especifica ocorrendo internamente apos os primeiros semestres.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/nota-corte-engenharia-biomedica-sisu">Notas de corte de Engenharia Biomedica no SiSU: dados atualizados</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 9 ==================== -->
 <h2 id="pos-graduacao">9. Pos-graduacao em Engenharia Biomedica</h2>
@@ -546,6 +574,10 @@ export const artigo: Artigo = {
   <li><strong>USP Sao Carlos:</strong> PPG Interunidades em Bioengenharia (EESC/FMRP/IQSC)</li>
   <li><strong>UFSC:</strong> PPG em Engenharia Eletrica via Instituto de Engenharia Biomedica (IEB-UFSC)</li>
 </ul>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/pos-graduacao-engenharia-biomedica">Pos-graduacao em Engenharia Biomedica: mestrado, doutorado e especializacao</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 10 ==================== -->
 <h2 id="salarios">10. Quanto ganha um Engenheiro Biomedico: salarios atualizados 2026</h2>
@@ -622,6 +654,10 @@ export const artigo: Artigo = {
 
 <p>E importante reforcar a diferenca salarial: o <strong>Biomedico</strong> (profissional de Biomedicina) tem salario medio de apenas <strong>R$ 3.268/mes</strong> — menos da metade do engenheiro biomedico. A amostra, porem, e muito maior: 18.736 profissionais, indicando um mercado mais amplo mas com remuneracao inferior.</p>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/salario-engenheiro-biomedico">Salario do Engenheiro Biomedico: dados atualizados por nivel e regiao</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 11 ==================== -->
 <h2 id="mercado-de-trabalho">11. Mercado de trabalho para Engenheiros Biomedicos</h2>
 
@@ -642,6 +678,10 @@ export const artigo: Artigo = {
 <h3>Onde encontrar vagas</h3>
 
 <p>As melhores fontes de vagas especificas para engenheiros biomedicos sao: LinkedIn (filtrar por "engenheiro biomedico", "engenheiro clinico", "biomedical engineer"), portais de emprego das multinacionais (Philips, GE Healthcare, Siemens Healthineers, Medtronic), o Job Board da BMES (para oportunidades internacionais), grupos da comunidade de engenharia clinica (ABEClin) e plataformas como Vagas.com e Indeed.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/mercado-trabalho-engenharia-biomedica">Mercado de trabalho em Engenharia Biomedica: vagas, tendencias e oportunidades</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 12 ==================== -->
 <h2 id="mercado-dispositivos-medicos">12. O mercado de dispositivos medicos no Brasil</h2>
@@ -700,6 +740,10 @@ export const artigo: Artigo = {
 <p>O mercado total de dispositivos medicos no Brasil foi estimado em <strong>US$ 15,28 bilhoes em 2024</strong>, com projecao de atingir <strong>US$ 25 bilhoes ate 2032</strong> (CAGR de 6,4%).</p>
 
 <p>O <strong>deficit comercial de US$ 8,62 bilhoes</strong> mostra uma forte dependencia de importacoes, mas tambem aponta uma oportunidade enorme para a industria nacional e para engenheiros biomedicos que atuem no desenvolvimento de tecnologia local.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/mercado-dispositivos-medicos-brasil">O mercado de dispositivos medicos no Brasil: numeros e oportunidades</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 13 ==================== -->
 <h2 id="empresas">13. Empresas que contratam Engenheiros Biomedicos</h2>
@@ -804,7 +848,7 @@ export const artigo: Artigo = {
 </table>
 
 <blockquote>
-  <p>Leia tambem: <a href="/mercado/empresas">Guia de empresas de Engenharia Biomedica no Brasil</a></p>
+  <p>Leia tambem: <a href="/artigos/empresas-engenharia-biomedica-brasil">Empresas de Engenharia Biomedica no Brasil: multinacionais e nacionais</a></p>
 </blockquote>
 
 <!-- ==================== SECAO 14 ==================== -->
@@ -892,6 +936,10 @@ export const artigo: Artigo = {
 
 <p>O <strong>Eretz.bio</strong> (Hospital Albert Einstein) ja acelerou mais de 150 startups. O <strong>Hub InovaHC</strong> (HCFMUSP) abriga 30+ startups residentes. O <strong>Horizontes Hub</strong> (Unimed-BH) dispoe de R$ 60 milhoes para investir em 4 anos. O SUPERA Parque (Ribeirao Preto) reune 74 empresas com laboratorios acreditados pelo INMETRO.</p>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/healthtechs-brasil-ecossistema">Healthtechs no Brasil: o ecossistema de startups de saude</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 15 ==================== -->
 <h2 id="regulamentacao">15. Regulamentacao profissional: CONFEA/CREA</h2>
 
@@ -971,6 +1019,10 @@ export const artigo: Artigo = {
   <li><strong>RDC 67/2009</strong> — Tecnovigilancia</li>
 </ul>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA e dispositivos medicos: guia completo de regulamentacao</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 17 ==================== -->
 <h2 id="normas-tecnicas">17. Normas tecnicas que todo Engenheiro Biomedico precisa conhecer</h2>
 
@@ -983,6 +1035,10 @@ export const artigo: Artigo = {
 <p><strong>ISO 14971</strong> — Gerenciamento de risco para dispositivos medicos. Define o processo de identificacao de perigos, estimativa de risco, avaliacao e controle.</p>
 
 <p><strong>IEC 62366</strong> — Engenharia de usabilidade para dispositivos medicos, garantindo que os equipamentos sejam seguros e intuitivos para os usuarios finais.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/normas-tecnicas-engenharia-biomedica">Normas tecnicas essenciais para Engenheiros Biomedicos: IEC 60601, ISO 13485 e mais</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 18 ==================== -->
 <h2 id="pesquisa">18. Pesquisa e centros de excelencia no Brasil</h2>
@@ -1034,6 +1090,10 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/centros-pesquisa-engenharia-biomedica">Centros de pesquisa em Engenharia Biomedica no Brasil: onde se faz ciencia</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 19 ==================== -->
 <h2 id="tendencias">19. Tendencias e futuro da Engenharia Biomedica (2025-2030)</h2>
 
@@ -1056,6 +1116,10 @@ export const artigo: Artigo = {
 
 <h3>19.6. Software como Dispositivo Medico (SaMD)</h3>
 <p>A RDC 657/2022 da ANVISA criou um framework regulatorio especifico para softwares que funcionam como dispositivos medicos — desde apps de diagnostico ate algoritmos de IA. Esta e uma area de crescimento explosivo que combina engenharia de software com conhecimento regulatorio medico.</p>
+
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/tendencias-futuro-engenharia-biomedica">Tendencias e futuro da Engenharia Biomedica: o que esperar ate 2030</a></p>
+</blockquote>
 
 <!-- ==================== SECAO 20 ==================== -->
 <h2 id="engenharia-biomedica-mundo">20. Engenharia Biomedica no mundo</h2>
@@ -1111,6 +1175,10 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
+<blockquote>
+  <p>Leia tambem: <a href="/artigos/engenharia-biomedica-eua-vs-brasil">Engenharia Biomedica nos EUA vs. Brasil: comparativo completo</a></p>
+</blockquote>
+
 <!-- ==================== SECAO 21 ==================== -->
 <h2 id="faq">21. Perguntas frequentes sobre Engenharia Biomedica</h2>
 
@@ -1152,7 +1220,7 @@ export const artigo: Artigo = {
 <p>Outros eventos relevantes: <strong>Feira Hospitalar</strong> (maior feira de saude da America Latina, anual em Sao Paulo), <strong>Arena de Engenharia Clinica</strong> da ABEClin, <strong>IEEE EMBC</strong> (maior evento internacional da area) e congressos da IFMBE.</p>
 
 <blockquote>
-  <p>Leia tambem: <a href="/eventos">Calendario de eventos de Engenharia Biomedica 2026</a></p>
+  <p>Leia tambem: <a href="/artigos/calendario-eventos-engenharia-biomedica-2026">Calendario de eventos de Engenharia Biomedica 2026: congressos, feiras e conferencias</a></p>
 </blockquote>
 
 <h2>Entidades e associacoes profissionais</h2>
