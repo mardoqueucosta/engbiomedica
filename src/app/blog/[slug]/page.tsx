@@ -124,6 +124,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
         overline={artigo.categoria}
         title={artigo.titulo}
         description={artigo.resumo}
+        centered
         breadcrumbs={[
           { label: 'Blog', href: '/blog' },
           { label: artigo.titulo },

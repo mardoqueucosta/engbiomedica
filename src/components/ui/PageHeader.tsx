@@ -7,15 +7,18 @@ export function PageHeader({
   title,
   description,
   breadcrumbs,
+  centered,
 }: {
   overline?: string;
   title: string;
   description?: string;
   breadcrumbs?: { label: string; href?: string }[];
+  centered?: boolean;
 }) {
   return (
     <div className="bg-white border-b border-slate-100">
       <div className="container-page py-8 lg:py-12">
+        <div className={centered ? 'max-w-3xl mx-auto' : ''}>
         {/* Breadcrumbs */}
         {breadcrumbs && (
           <nav className="flex items-center gap-1.5 mb-4 text-xs font-mono text-slate-400">
@@ -50,6 +53,7 @@ export function PageHeader({
             {description}
           </p>
         )}
+        </div>
       </div>
     </div>
   );
