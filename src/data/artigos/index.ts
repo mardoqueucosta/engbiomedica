@@ -56,4 +56,5 @@ export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
   categoria: artigo.categoria,
   categoriaVariant: artigo.categoriaVariant,
   data: artigo.data,
+  leitura: artigo.leitura,
 }));
