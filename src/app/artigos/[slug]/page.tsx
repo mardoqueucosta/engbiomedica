@@ -92,9 +92,13 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
 
           {/* Content */}
           <div className="prose prose-lg text-justify">
-            {artigo.conteudo.map((paragrafo, i) => (
-              <p key={i}>{paragrafo}</p>
-            ))}
+            {typeof artigo.conteudo === 'string' ? (
+              <div dangerouslySetInnerHTML={{ __html: artigo.conteudo }} />
+            ) : (
+              artigo.conteudo.map((paragrafo, i) => (
+                <p key={i}>{paragrafo}</p>
+              ))
+            )}
           </div>
 
           {/* CTA */}

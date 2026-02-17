@@ -5,5 +5,5 @@ export interface Artigo {
   categoriaVariant: 'primary' | 'teal' | 'coral' | 'amber';
   data: string;
   leitura: string;
-  conteudo: string[];
+  conteudo: string | string[];
 }

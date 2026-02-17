@@ -29,6 +29,60 @@
   .prose p {
     @apply mb-4;
   }
+  .prose h2 {
+    @apply text-h2 mt-10 mb-4 pb-2 border-b border-slate-100;
+  }
+  .prose h3 {
+    @apply text-h3 mt-6 mb-3;
+  }
+  .prose ul, .prose ol {
+    @apply mb-4 pl-6;
+  }
+  .prose ul {
+    @apply list-disc;
+  }
+  .prose ol {
+    @apply list-decimal;
+  }
+  .prose li {
+    @apply mb-1.5 text-slate-700;
+  }
+  .prose blockquote {
+    @apply my-6 pl-4 border-l-4 border-teal-300 bg-teal-50/50 py-3 pr-4 rounded-r-lg;
+  }
+  .prose blockquote p {
+    @apply mb-0 text-teal-700 italic;
+  }
+  .prose table {
+    @apply w-full mb-6 text-sm border-collapse;
+  }
+  .prose thead {
+    @apply bg-slate-50;
+  }
+  .prose th {
+    @apply text-left px-3 py-2.5 font-semibold text-slate-700 border-b-2 border-slate-200;
+  }
+  .prose td {
+    @apply px-3 py-2 text-slate-600 border-b border-slate-100;
+  }
+  .prose tbody tr:hover {
+    @apply bg-primary-50/30;
+  }
+  .prose nav {
+    @apply my-8 p-6 bg-white rounded-xl border border-slate-200 shadow-sm;
+  }
+  .prose nav h2 {
+    @apply text-h3 mt-0 mb-3 pb-0 border-0;
+  }
+  .prose nav ol {
+    @apply columns-1 sm:columns-2 gap-x-8;
+  }
+  .prose nav li {
+    @apply mb-1;
+  }
+  .prose nav a {
+    @apply text-sm no-underline hover:underline;
+  }
 
   /* Data/mono context */
   .data-text {

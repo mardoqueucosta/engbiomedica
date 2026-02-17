@@ -4,6 +4,7 @@ import { artigo as iaSaudeBrasil2025 } from './ia-saude-brasil-2025';
 import { artigo as diferencaEngenheiroBiomedico } from './diferenca-engenheiro-biomedico-biomedico';
 import { artigo as comoRegistrarCrea } from './como-registrar-crea';
 import { artigo as healthtechsLatam2024 } from './healthtechs-latam-2024';
+import { artigo as guiaEngenhariaBiomedica } from './guia-engenharia-biomedica';
 
 export type { Artigo };
 
@@ -13,6 +14,7 @@ export const artigos: Record<string, Artigo> = {
   'diferenca-engenheiro-biomedico-biomedico': diferencaEngenheiroBiomedico,
   'como-registrar-crea': comoRegistrarCrea,
   'healthtechs-latam-2024': healthtechsLatam2024,
+  'guia-engenharia-biomedica': guiaEngenhariaBiomedica,
 };
 
 export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
