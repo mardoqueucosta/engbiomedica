@@ -20,6 +20,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const artigo = artigos[params.slug];
   if (!artigo) return { title: 'Artigo não encontrado' };
+  const ogImage = `/api/og?title=${encodeURIComponent(artigo.titulo)}&category=${encodeURIComponent(artigo.categoria)}`;
   return {
     title: `${artigo.titulo} — Engenharia Biomédica`,
     description: artigo.resumo,
@@ -31,6 +32,14 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       description: artigo.resumo,
       type: 'article',
       publishedTime: artigo.data,
+      modifiedTime: artigo.data,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: artigo.titulo }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: artigo.titulo,
+      description: artigo.resumo,
+      images: [ogImage],
     },
   };
 }
@@ -39,12 +48,16 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
   const artigo = artigos[params.slug];
   if (!artigo) notFound();
 
-  const jsonLd = {
+  const articleUrl = `https://engenhariabiomedica.com/artigos/${params.slug}`;
+
+  const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: artigo.titulo,
     description: artigo.resumo,
     datePublished: artigo.data,
+    dateModified: artigo.data,
+    image: `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(artigo.titulo)}&category=${encodeURIComponent(artigo.categoria)}`,
     author: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
@@ -55,14 +68,43 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
       name: 'Engenharia Biomédica',
       url: 'https://engenhariabiomedica.com',
     },
-    mainEntityOfPage: `https://engenhariabiomedica.com/artigos/${params.slug}`,
+    mainEntityOfPage: articleUrl,
+  };
+
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Início',
+        item: 'https://engenhariabiomedica.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Artigos',
+        item: 'https://engenhariabiomedica.com/artigos',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: artigo.titulo,
+        item: articleUrl,
+      },
+    ],
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <PageHeader
         overline={artigo.categoria}

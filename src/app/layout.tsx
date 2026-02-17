@@ -61,12 +61,21 @@ export const metadata: Metadata = {
     title: 'Engenharia Biomédica — Portal de Referência no Brasil',
     description:
       'Cursos, mercado de trabalho, salários, regulamentação, pesquisa, startups e referências internacionais sobre Engenharia Biomédica no Brasil.',
+    images: [
+      {
+        url: '/api/og?title=Engenharia+Biom%C3%A9dica+%E2%80%94+Portal+de+Refer%C3%AAncia+no+Brasil&category=Portal',
+        width: 1200,
+        height: 630,
+        alt: 'Engenharia Biomédica — Portal de Referência no Brasil',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Engenharia Biomédica — Portal de Referência no Brasil',
     description:
       'O portal mais completo sobre Engenharia Biomédica no Brasil.',
+    images: ['/api/og?title=Engenharia+Biom%C3%A9dica+%E2%80%94+Portal+de+Refer%C3%AAncia+no+Brasil&category=Portal'],
   },
   robots: {
     index: true,

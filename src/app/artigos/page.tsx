@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Artigos — Engenharia Biomédica',
   description:
     'Artigos, análises e guias sobre tendências, carreira e inovação em Engenharia Biomédica no Brasil.',
+  alternates: {
+    canonical: '/artigos',
+  },
 };
 
 function formatDate(iso: string) {

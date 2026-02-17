@@ -2,11 +2,31 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { StatCard } from '@/components/ui/StatCard';
 import { SectionCard } from '@/components/ui/SectionCard';
+import { HomeNewsletterForm } from '@/components/forms/HomeNewsletterForm';
 import { mainNavigation } from '@/data/navigation';
+
+const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Engenharia Biomédica',
+  url: 'https://engenhariabiomedica.com',
+  description:
+    'Portal de referência sobre Engenharia Biomédica no Brasil. Cursos, mercado de trabalho, regulamentação, pesquisa e startups.',
+  inLanguage: 'pt-BR',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Engenharia Biomédica',
+    url: 'https://engenhariabiomedica.com',
+  },
+};
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+      />
       {/* Hero */}
       <section className="hero-gradient relative overflow-hidden">
         {/* Decorative elements */}
@@ -109,19 +129,7 @@ export default function HomePage() {
             Receba artigos, dados de mercado, eventos e oportunidades diretamente
             no seu e-mail. Gratuito e sem spam.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="seu@email.com"
-              className="flex-1 px-4 py-3 rounded-lg bg-primary-900 border border-primary-700 text-white placeholder-primary-400 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors"
-            >
-              Inscrever-se
-            </button>
-          </form>
+          <HomeNewsletterForm />
         </div>
       </section>
     </>
