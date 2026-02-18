@@ -57,6 +57,12 @@ export function Header() {
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3">
             <Link
+              href="/contato"
+              className="hidden lg:inline-flex items-center px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-700 transition-colors"
+            >
+              Contato
+            </Link>
+            <Link
               href="/newsletter"
               className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-primary-700 rounded-lg hover:bg-primary-800 transition-colors"
             >
@@ -115,8 +121,15 @@ export function Header() {
                   )}
                 </div>
               ))}
-              {/* Newsletter CTA mobile */}
-              <div className="mt-3 pt-3 border-t border-slate-100">
+              {/* Contato + Newsletter mobile */}
+              <div className="mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <Link
+                  href="/contato"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center px-4 py-2.5 text-sm font-medium text-slate-700 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors"
+                >
+                  Contato
+                </Link>
                 <Link
                   href="/newsletter"
                   onClick={() => setMobileOpen(false)}
