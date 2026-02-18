@@ -20,6 +20,7 @@ export default function SobrePage() {
         title="Sobre o engenhariabiomedica.com"
         description="A referência que a Engenharia Biomédica no Brasil precisava — em um único endereço."
         breadcrumbs={[{ label: 'Sobre' }]}
+        centered
       />
 
       <section className="container-page py-10 lg:py-14">
