@@ -21,22 +21,25 @@ export function PageHeader({
         <div className={centered ? 'max-w-3xl mx-auto' : ''}>
         {/* Breadcrumbs */}
         {breadcrumbs && (
-          <nav className="flex items-center gap-1.5 mb-4 text-xs font-mono text-slate-400">
-            <Link href="/" className="hover:text-primary-600 transition-colors">
+          <nav className="flex flex-wrap items-center gap-1.5 mb-4 text-xs font-mono text-slate-400">
+            <Link href="/" className="hover:text-primary-600 transition-colors flex-shrink-0">
               Início
             </Link>
-            {breadcrumbs.map((crumb, i) => (
-              <span key={i} className="flex items-center gap-1.5">
-                <ChevronRight className="w-3 h-3" />
-                {crumb.href ? (
-                  <Link href={crumb.href} className="hover:text-primary-600 transition-colors">
-                    {crumb.label}
-                  </Link>
-                ) : (
-                  <span className="text-slate-600">{crumb.label}</span>
-                )}
-              </span>
-            ))}
+            {breadcrumbs.map((crumb, i) => {
+              const isLast = i === breadcrumbs.length - 1;
+              return (
+                <span key={i} className={`flex items-center gap-1.5 ${isLast ? 'min-w-0' : 'flex-shrink-0'}`}>
+                  <ChevronRight className="w-3 h-3 flex-shrink-0" />
+                  {crumb.href ? (
+                    <Link href={crumb.href} className="hover:text-primary-600 transition-colors flex-shrink-0">
+                      {crumb.label}
+                    </Link>
+                  ) : (
+                    <span className={`text-slate-600 ${isLast ? 'truncate' : ''}`}>{crumb.label}</span>
+                  )}
+                </span>
+              );
+            })}
           </nav>
         )}
 
