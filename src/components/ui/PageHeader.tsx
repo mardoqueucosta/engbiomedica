@@ -28,14 +28,14 @@ export function PageHeader({
             {breadcrumbs.map((crumb, i) => {
               const isLast = i === breadcrumbs.length - 1;
               return (
-                <span key={i} className={`flex items-center gap-1.5 ${isLast ? 'min-w-0' : 'flex-shrink-0'}`}>
+                <span key={i} className={`flex items-center gap-1.5 flex-shrink-0 ${isLast && !crumb.href ? 'hidden sm:flex' : ''}`}>
                   <ChevronRight className="w-3 h-3 flex-shrink-0" />
                   {crumb.href ? (
-                    <Link href={crumb.href} className="hover:text-primary-600 transition-colors flex-shrink-0">
+                    <Link href={crumb.href} className="hover:text-primary-600 transition-colors">
                       {crumb.label}
                     </Link>
                   ) : (
-                    <span className={`text-slate-600 ${isLast ? 'truncate' : ''}`}>{crumb.label}</span>
+                    <span className="text-slate-600 truncate max-w-[200px] lg:max-w-none">{crumb.label}</span>
                   )}
                 </span>
               );
