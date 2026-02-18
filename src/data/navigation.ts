@@ -76,23 +76,28 @@ export const mainNavigation: NavItem[] = [
 ];
 
 export const footerNavigation = {
-  portal: [
-    { label: 'Sobre', href: '/sobre' },
-    { label: 'Contato', href: '/contato' },
-    { label: 'Recursos', href: '/recursos' },
-    { label: 'Glossário', href: '/glossario' },
-  ],
   formacao: [
-    { label: 'Cursos de Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
+    { label: 'Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
     { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
     { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
     { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
   ],
-  profissional: [
+  mercado: [
     { label: 'Empresas', href: '/mercado/empresas' },
     { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
     { label: 'Panorama EUA', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
-    { label: 'Regulamentação', href: '/regulamentacao' },
     { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
+  ],
+  conhecimento: [
+    { label: 'Regulamentação', href: '/regulamentacao' },
+    { label: 'Pesquisa', href: '/pesquisa' },
+    { label: 'Artigos', href: '/artigos' },
+    { label: 'Glossário', href: '/glossario' },
+    { label: 'Recursos', href: '/recursos' },
+  ],
+  portal: [
+    { label: 'Sobre', href: '/sobre' },
+    { label: 'Contato', href: '/contato' },
+    { label: 'Newsletter', href: '/newsletter' },
   ],
 };
