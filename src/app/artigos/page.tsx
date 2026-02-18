@@ -56,8 +56,8 @@ export default function ArtigosPage() {
           href={`/artigos/${destaque.slug}`}
           className="group block relative overflow-hidden rounded-card bg-gradient-to-br from-primary-800 via-primary-700 to-teal-800 p-8 lg:p-12 mb-10"
         >
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(0,180,158,0.12)_0%,transparent_70%)] pointer-events-none" />
-          <div className="absolute bottom-[-100px] left-[-50px] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(58,147,213,0.08)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full glow-teal-strong pointer-events-none" />
+          <div className="absolute bottom-[-100px] left-[-50px] w-[300px] h-[300px] rounded-full glow-blue-soft pointer-events-none" />
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center px-3 py-1 rounded-md bg-teal-500/20 text-teal-300 text-xs font-semibold tracking-wide border border-teal-500/30">
@@ -145,7 +145,7 @@ export default function ArtigosPage() {
 
         {/* CTA Newsletter */}
         <div className="mt-4 p-8 lg:p-12 rounded-card bg-primary-800 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(0,180,158,0.1)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full glow-teal-soft pointer-events-none" />
           <div className="relative z-10">
             <span className="text-overline uppercase text-teal-300 tracking-[0.12em] block mb-3">
               Newsletter

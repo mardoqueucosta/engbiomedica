@@ -30,8 +30,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="hero-gradient relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-[-40px] right-[-40px] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(0,180,158,0.08)_0%,transparent_70%)]" />
-        <div className="absolute bottom-[-60px] left-[-20px] w-[200px] h-[200px] rounded-full bg-[radial-gradient(circle,rgba(58,147,213,0.06)_0%,transparent_70%)]" />
+        <div className="absolute top-[-40px] right-[-40px] w-[300px] h-[300px] rounded-full glow-teal" />
+        <div className="absolute bottom-[-60px] left-[-20px] w-[200px] h-[200px] rounded-full glow-blue" />
 
         <div className="container-page py-16 lg:py-24 relative z-10">
           <span className="font-mono text-overline uppercase text-teal-300 tracking-[0.15em] block mb-4">

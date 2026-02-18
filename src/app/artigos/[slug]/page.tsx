@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import { artigos } from '@/data/artigos';
+import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', {
@@ -14,38 +14,41 @@ function formatDate(iso: string) {
 }
 
 export function generateStaticParams() {
-  return Object.keys(artigos).map((slug) => ({ slug }));
+  return slugs.map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const artigo = artigos[params.slug];
-  if (!artigo) return { title: 'Artigo não encontrado' };
-  const ogImage = `/api/og?title=${encodeURIComponent(artigo.titulo)}&category=${encodeURIComponent(artigo.categoria)}`;
+  const meta = artigosMetaMap[params.slug];
+  if (!meta) return { title: 'Artigo não encontrado' };
+  const ogImage = `/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`;
   return {
-    title: `${artigo.titulo} — Engenharia Biomédica`,
-    description: artigo.resumo,
+    title: `${meta.titulo} — Engenharia Biomédica`,
+    description: meta.resumo,
     alternates: {
       canonical: `/artigos/${params.slug}`,
     },
     openGraph: {
-      title: artigo.titulo,
-      description: artigo.resumo,
+      title: meta.titulo,
+      description: meta.resumo,
       type: 'article',
-      publishedTime: artigo.data,
-      modifiedTime: artigo.data,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: artigo.titulo }],
+      publishedTime: meta.data,
+      modifiedTime: meta.data,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: meta.titulo }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: artigo.titulo,
-      description: artigo.resumo,
+      title: meta.titulo,
+      description: meta.resumo,
       images: [ogImage],
     },
   };
 }
 
-export default function ArtigoPage({ params }: { params: { slug: string } }) {
-  const artigo = artigos[params.slug];
+export default async function ArtigoPage({ params }: { params: { slug: string } }) {
+  const meta = artigosMetaMap[params.slug];
+  if (!meta) notFound();
+
+  const artigo = await getArtigo(params.slug);
   if (!artigo) notFound();
 
   const articleUrl = `https://engenhariabiomedica.com/artigos/${params.slug}`;
@@ -53,11 +56,11 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: artigo.titulo,
-    description: artigo.resumo,
-    datePublished: artigo.data,
-    dateModified: artigo.data,
-    image: `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(artigo.titulo)}&category=${encodeURIComponent(artigo.categoria)}`,
+    headline: meta.titulo,
+    description: meta.resumo,
+    datePublished: meta.data,
+    dateModified: meta.data,
+    image: `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`,
     author: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
@@ -90,7 +93,7 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
       {
         '@type': 'ListItem',
         position: 3,
-        name: artigo.titulo,
+        name: meta.titulo,
         item: articleUrl,
       },
     ],
@@ -107,13 +110,13 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
       <PageHeader
-        overline={artigo.categoria}
-        title={artigo.titulo}
-        description={artigo.resumo}
+        overline={meta.categoria}
+        title={meta.titulo}
+        description={meta.resumo}
         centered
         breadcrumbs={[
           { label: 'Artigos', href: '/artigos' },
-          { label: artigo.titulo },
+          { label: meta.titulo },
         ]}
       />
 
@@ -121,14 +124,14 @@ export default function ArtigoPage({ params }: { params: { slug: string } }) {
         <div className="max-w-3xl mx-auto">
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-slate-100">
-            <Badge variant={artigo.categoriaVariant}>{artigo.categoria}</Badge>
+            <Badge variant={meta.categoriaVariant}>{meta.categoria}</Badge>
             <div className="flex items-center gap-1.5 text-caption text-slate-400">
               <Calendar className="w-3.5 h-3.5" />
-              {formatDate(artigo.data)}
+              {formatDate(meta.data)}
             </div>
             <div className="flex items-center gap-1.5 text-caption text-slate-400">
               <Clock className="w-3.5 h-3.5" />
-              {artigo.leitura} de leitura
+              {meta.leitura} de leitura
             </div>
           </div>
 

@@ -8,7 +8,6 @@ import { Logo } from './Logo';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   return (
@@ -25,9 +24,7 @@ export function Header() {
             {mainNavigation.map((item) => (
               <div
                 key={item.href}
-                className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                className="relative group"
               >
                 <Link
                   href={item.href}
@@ -37,9 +34,9 @@ export function Header() {
                   {item.children && <ChevronDown className="w-3.5 h-3.5 opacity-50" />}
                 </Link>
 
-                {/* Dropdown */}
-                {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-1 z-50">
+                {/* Dropdown — CSS only via group-hover */}
+                {item.children && (
+                  <div className="absolute top-full left-0 pt-1 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-[opacity,visibility] duration-150">
                     <div className="bg-white rounded-card border border-slate-100 shadow-elevated py-1.5 min-w-[200px]">
                       {item.children.map((child) => (
                         <Link

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { artigos } from '@/data/artigos';
+import { artigosMeta } from '@/data/artigos';
 
 const BASE_URL = 'https://engenhariabiomedica.com';
 
@@ -31,14 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guiaSlug = 'guia-engenharia-biomedica';
 
-  const artigoPages: MetadataRoute.Sitemap = Object.entries(artigos).map(
-    ([slug, artigo]) => ({
-      url: `${BASE_URL}/artigos/${slug}`,
-      lastModified: new Date(artigo.data),
-      changeFrequency: 'daily' as const,
-      priority: slug === guiaSlug ? 0.9 : 0.8,
-    })
-  );
+  const artigoPages: MetadataRoute.Sitemap = artigosMeta.map((a) => ({
+    url: `${BASE_URL}/artigos/${a.slug}`,
+    lastModified: new Date(a.data),
+    changeFrequency: 'daily' as const,
+    priority: a.slug === guiaSlug ? 0.9 : 0.8,
+  }));
 
   return [...pages, ...artigoPages];
 }

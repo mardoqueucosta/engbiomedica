@@ -101,6 +101,23 @@
     background: linear-gradient(135deg, #062A4A 0%, #0E5089 55%, #003D36 100%);
   }
 
+  /* Decorative glow orbs */
+  .glow-teal {
+    background: radial-gradient(circle, rgba(0, 180, 158, 0.08) 0%, transparent 70%);
+  }
+  .glow-teal-strong {
+    background: radial-gradient(circle, rgba(0, 180, 158, 0.12) 0%, transparent 70%);
+  }
+  .glow-teal-soft {
+    background: radial-gradient(circle, rgba(0, 180, 158, 0.1) 0%, transparent 70%);
+  }
+  .glow-blue {
+    background: radial-gradient(circle, rgba(58, 147, 213, 0.06) 0%, transparent 70%);
+  }
+  .glow-blue-soft {
+    background: radial-gradient(circle, rgba(58, 147, 213, 0.08) 0%, transparent 70%);
+  }
+
   /* Section container */
   .container-page {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;

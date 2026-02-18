@@ -1,60 +1,37 @@
-import { Artigo } from './types';
-import { artigo as guiaEngenhariaBiomedica } from './guia-engenharia-biomedica';
-import { artigo as historiaEngenhariaBiomedicaBrasil } from './historia-engenharia-biomedica-brasil';
-import { artigo as oQueFazEngenheiroBiomedico } from './o-que-faz-engenheiro-biomedico';
-import { artigo as areasAtuacaoEngenhariaBiomedica } from './areas-atuacao-engenharia-biomedica';
-import { artigo as diferencaEngBiomedicaBiomedicina } from './diferenca-engenharia-biomedica-biomedicina';
-import { artigo as cursoEngBiomedicaOQueEsperar } from './curso-engenharia-biomedica-o-que-esperar';
-import { artigo as gradeCurricularEngBiomedica } from './grade-curricular-engenharia-biomedica';
-import { artigo as faculdadesEngBiomedicaBrasil } from './faculdades-engenharia-biomedica-brasil';
-import { artigo as notaCorteSisu } from './nota-corte-engenharia-biomedica-sisu';
-import { artigo as posGraduacaoEngBiomedica } from './pos-graduacao-engenharia-biomedica';
-import { artigo as salarioEngenheiroBiomedico } from './salario-engenheiro-biomedico';
-import { artigo as mercadoTrabalhoEngBiomedica } from './mercado-trabalho-engenharia-biomedica';
-import { artigo as mercadoDispositivosMedicosBrasil } from './mercado-dispositivos-medicos-brasil';
-import { artigo as empresasEngBiomedicaBrasil } from './empresas-engenharia-biomedica-brasil';
-import { artigo as healthtechsBrasilEcossistema } from './healthtechs-brasil-ecossistema';
-import { artigo as registroCreaBiomedico } from './registro-crea-engenheiro-biomedico';
-import { artigo as anvisaDispositivosMedicos } from './anvisa-dispositivos-medicos-regulamentacao';
-import { artigo as normasTecnicasEngBiomedica } from './normas-tecnicas-engenharia-biomedica';
-import { artigo as centrosPesquisaEngBiomedica } from './centros-pesquisa-engenharia-biomedica';
-import { artigo as tendenciasFuturoEngBiomedica } from './tendencias-futuro-engenharia-biomedica';
-import { artigo as engBiomedicaEuaVsBrasil } from './engenharia-biomedica-eua-vs-brasil';
-import { artigo as calendarioEventosEngBiomedica2026 } from './calendario-eventos-engenharia-biomedica-2026';
+/**
+ * Re-exporta metadados leves e a função de carregamento individual.
+ * Nenhuma página precisa mais importar todos os artigos completos de uma vez.
+ */
+export type { Artigo } from './types';
+export type { ArtigoMeta } from './metadata';
+export { artigosMeta, artigosMetaMap } from './metadata';
+export { getArtigo } from './getArtigo';
 
-export type { Artigo };
+/** Lista formatada para a página /artigos (retrocompatível com listaArtigos) */
+export { artigosMeta as listaArtigos } from './metadata';
 
-export const artigos: Record<string, Artigo> = {
-  'guia-engenharia-biomedica': guiaEngenhariaBiomedica,
-  'historia-engenharia-biomedica-brasil': historiaEngenhariaBiomedicaBrasil,
-  'o-que-faz-engenheiro-biomedico': oQueFazEngenheiroBiomedico,
-  'areas-atuacao-engenharia-biomedica': areasAtuacaoEngenhariaBiomedica,
-  'diferenca-engenharia-biomedica-biomedicina': diferencaEngBiomedicaBiomedicina,
-  'curso-engenharia-biomedica-o-que-esperar': cursoEngBiomedicaOQueEsperar,
-  'grade-curricular-engenharia-biomedica': gradeCurricularEngBiomedica,
-  'faculdades-engenharia-biomedica-brasil': faculdadesEngBiomedicaBrasil,
-  'nota-corte-engenharia-biomedica-sisu': notaCorteSisu,
-  'pos-graduacao-engenharia-biomedica': posGraduacaoEngBiomedica,
-  'salario-engenheiro-biomedico': salarioEngenheiroBiomedico,
-  'mercado-trabalho-engenharia-biomedica': mercadoTrabalhoEngBiomedica,
-  'mercado-dispositivos-medicos-brasil': mercadoDispositivosMedicosBrasil,
-  'empresas-engenharia-biomedica-brasil': empresasEngBiomedicaBrasil,
-  'healthtechs-brasil-ecossistema': healthtechsBrasilEcossistema,
-  'registro-crea-engenheiro-biomedico': registroCreaBiomedico,
-  'anvisa-dispositivos-medicos-regulamentacao': anvisaDispositivosMedicos,
-  'normas-tecnicas-engenharia-biomedica': normasTecnicasEngBiomedica,
-  'centros-pesquisa-engenharia-biomedica': centrosPesquisaEngBiomedica,
-  'tendencias-futuro-engenharia-biomedica': tendenciasFuturoEngBiomedica,
-  'engenharia-biomedica-eua-vs-brasil': engBiomedicaEuaVsBrasil,
-  'calendario-eventos-engenharia-biomedica-2026': calendarioEventosEngBiomedica2026,
-};
-
-export const listaArtigos = Object.entries(artigos).map(([slug, artigo]) => ({
-  slug,
-  titulo: artigo.titulo,
-  resumo: artigo.resumo,
-  categoria: artigo.categoria,
-  categoriaVariant: artigo.categoriaVariant,
-  data: artigo.data,
-  leitura: artigo.leitura,
-}));
+/** Slugs disponíveis para generateStaticParams */
+export const slugs = [
+  'guia-engenharia-biomedica',
+  'historia-engenharia-biomedica-brasil',
+  'o-que-faz-engenheiro-biomedico',
+  'areas-atuacao-engenharia-biomedica',
+  'diferenca-engenharia-biomedica-biomedicina',
+  'curso-engenharia-biomedica-o-que-esperar',
+  'grade-curricular-engenharia-biomedica',
+  'faculdades-engenharia-biomedica-brasil',
+  'nota-corte-engenharia-biomedica-sisu',
+  'pos-graduacao-engenharia-biomedica',
+  'salario-engenheiro-biomedico',
+  'mercado-trabalho-engenharia-biomedica',
+  'mercado-dispositivos-medicos-brasil',
+  'empresas-engenharia-biomedica-brasil',
+  'healthtechs-brasil-ecossistema',
+  'registro-crea-engenheiro-biomedico',
+  'anvisa-dispositivos-medicos-regulamentacao',
+  'normas-tecnicas-engenharia-biomedica',
+  'centros-pesquisa-engenharia-biomedica',
+  'tendencias-futuro-engenharia-biomedica',
+  'engenharia-biomedica-eua-vs-brasil',
+  'calendario-eventos-engenharia-biomedica-2026',
+];
