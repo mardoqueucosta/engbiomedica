@@ -9,6 +9,7 @@ import { Logo } from './Logo';
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   return (
     <header className="bg-white border-b border-slate-100 sticky top-0 z-50">
@@ -76,20 +77,33 @@ export function Header() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-          <nav className="lg:hidden py-4 border-t border-slate-100">
+          <nav className="lg:hidden py-4 border-t border-slate-100 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="flex flex-col gap-1">
               {mainNavigation.map((item) => (
                 <div key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-colors"
-                  >
-                    {item.icon && <item.icon className="w-4 h-4 text-slate-400" />}
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-10 flex flex-col gap-0.5">
+                  {item.children ? (
+                    <button
+                      onClick={() => setMobileDropdown(mobileDropdown === item.label ? null : item.label)}
+                      className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-colors"
+                    >
+                      <span className="flex items-center gap-3">
+                        {item.icon && <item.icon className="w-4 h-4 text-slate-400" />}
+                        {item.label}
+                      </span>
+                      <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${mobileDropdown === item.label ? 'rotate-180' : ''}`} />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-colors"
+                    >
+                      {item.icon && <item.icon className="w-4 h-4 text-slate-400" />}
+                      {item.label}
+                    </Link>
+                  )}
+                  {item.children && mobileDropdown === item.label && (
+                    <div className="ml-10 flex flex-col gap-0.5 pb-1">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
@@ -104,6 +118,16 @@ export function Header() {
                   )}
                 </div>
               ))}
+              {/* Newsletter CTA mobile */}
+              <div className="mt-3 pt-3 border-t border-slate-100">
+                <Link
+                  href="/newsletter"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-700 rounded-lg hover:bg-primary-800 transition-colors"
+                >
+                  Newsletter
+                </Link>
+              </div>
             </div>
           </nav>
         )}
