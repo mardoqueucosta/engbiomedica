@@ -19,15 +19,14 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
   display: 'swap',
-  weight: ['400', '600', '700'],
-  style: ['normal', 'italic'],
+  weight: ['400', '700'],
 });
 
 const dmMono = DM_Mono({
   subsets: ['latin'],
   variable: '--font-dm-mono',
   display: 'swap',
-  weight: ['400', '500'],
+  weight: ['400'],
 });
 
 export const metadata: Metadata = {
@@ -101,7 +100,8 @@ export default function RootLayout({
       className={`${dmSans.variable} ${fraunces.variable} ${dmMono.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
       <body className="min-h-screen flex flex-col">
