@@ -25,8 +25,8 @@ export const mainNavigation: NavItem[] = [
       { label: 'Visão Geral', href: '/formacao' },
       { label: 'Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
       { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
-      { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
       { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
+      { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
     ],
   },
   {
@@ -85,8 +85,8 @@ export const footerNavigation = {
   formacao: [
     { label: 'Cursos de Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
     { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
-    { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
     { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
+    { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
   ],
   profissional: [
     { label: 'Empresas', href: '/mercado/empresas' },

@@ -34,16 +34,16 @@ const sections = [
     badge: 'Mestrado & Doutorado',
   },
   {
-    title: 'Salários',
-    description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
-    href: '/artigos/salario-engenheiro-biomedico',
-    badge: 'R$ 8.600 médio',
-  },
-  {
     title: 'Áreas de Atuação',
     description: 'Da engenharia clínica à IA em saúde — todas as carreiras possíveis para o engenheiro biomédico.',
     href: '/artigos/areas-atuacao-engenharia-biomedica',
     badge: '8+ especialidades',
+  },
+  {
+    title: 'Salários',
+    description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
+    href: '/artigos/salario-engenheiro-biomedico',
+    badge: 'R$ 8.600 médio',
   },
 ];
 
