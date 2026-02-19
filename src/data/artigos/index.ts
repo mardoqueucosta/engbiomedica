@@ -34,4 +34,10 @@ export const slugs = [
   'tendencias-futuro-engenharia-biomedica',
   'engenharia-biomedica-eua-vs-brasil',
   'calendario-eventos-engenharia-biomedica-2026',
+  'medtronic-nets-fda-clearance-for-robotic-spine-system',
+  'wearable-medical-devices-surge-with-supply-chain-of-four-cor',
+  'anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d',
+  'understanding-fdas-qmsr-and-cybersecurity-mandates-for-medic',
+  'great-stone-resident-secures-fda-approval-enters-us-market-w',
+  'fda-gives-approval-for-first-of-its-kind-device-harlan-enter',
 ];

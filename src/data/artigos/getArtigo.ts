@@ -27,6 +27,12 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'tendencias-futuro-engenharia-biomedica': () => import('./tendencias-futuro-engenharia-biomedica'),
   'engenharia-biomedica-eua-vs-brasil': () => import('./engenharia-biomedica-eua-vs-brasil'),
   'calendario-eventos-engenharia-biomedica-2026': () => import('./calendario-eventos-engenharia-biomedica-2026'),
+  'medtronic-nets-fda-clearance-for-robotic-spine-system': () => import('./medtronic-nets-fda-clearance-for-robotic-spine-system'),
+  'wearable-medical-devices-surge-with-supply-chain-of-four-cor': () => import('./wearable-medical-devices-surge-with-supply-chain-of-four-cor'),
+  'anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d': () => import('./anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d'),
+  'understanding-fdas-qmsr-and-cybersecurity-mandates-for-medic': () => import('./understanding-fdas-qmsr-and-cybersecurity-mandates-for-medic'),
+  'great-stone-resident-secures-fda-approval-enters-us-market-w': () => import('./great-stone-resident-secures-fda-approval-enters-us-market-w'),
+  'fda-gives-approval-for-first-of-its-kind-device-harlan-enter': () => import('./fda-gives-approval-for-first-of-its-kind-device-harlan-enter'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {

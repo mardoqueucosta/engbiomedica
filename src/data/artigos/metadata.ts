@@ -213,6 +213,66 @@ export const artigosMeta: ArtigoMeta[] = [
     data: '2026-02-17',
     leitura: '12 min',
   },
+  {
+    slug: 'medtronic-nets-fda-clearance-for-robotic-spine-system',
+    titulo: 'Medtronic Obtém Autorização da FDA para Sistema Robótico Espinhal Stealth AXiS [2026]',
+    resumo:
+      'A Medtronic recebeu clearance da FDA para o Stealth AXiS, sistema robótico para coluna baseado na plataforma Mazor, reforçando sua posição no mercado global de US$ 15 bilhões em tecnologias cranianas e espinhais.',
+    categoria: 'Mercado',
+    categoriaVariant: 'teal',
+    data: '2026-02-19',
+    leitura: '8 min',
+  },
+  {
+    slug: 'wearable-medical-devices-surge-with-supply-chain-of-four-cor',
+    titulo: 'Wearables Médicos em Ascensão: Os Quatro Componentes que Moldam a Nova Cadeia de Suprimentos [2026]',
+    resumo:
+      'O mercado global de dispositivos médicos vestíveis supera US$ 31 bilhões e cresce acima de 20% ao ano, impulsionado pela consolidação de quatro componentes tecnológicos essenciais.',
+    categoria: 'Inovação',
+    categoriaVariant: 'amber',
+    data: '2026-02-19',
+    leitura: '9 min',
+  },
+  {
+    slug: 'anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d',
+    titulo: 'ANVISA Aprova Sistema de Rastreamento e Identificação de Dispositivos Médicos [2026]',
+    resumo:
+      'A ANVISA aprovou sistema nacional de identificação única (IUD) para dispositivos médicos, alinhando o Brasil ao FDA e à União Europeia em rastreabilidade e segurança do paciente.',
+    categoria: 'Regulamentação',
+    categoriaVariant: 'coral',
+    data: '2026-02-19',
+    leitura: '9 min',
+  },
+  {
+    slug: 'understanding-fdas-qmsr-and-cybersecurity-mandates-for-medic',
+    titulo: 'QMSR e Cibersegurança da FDA: Requisitos Essenciais para Dispositivos Médicos [2026]',
+    resumo:
+      'A FDA implementou o QMSR em 2026, substituindo o QSR e exigindo cibersegurança por projeto em dispositivos médicos conectados. Entenda o que mudou.',
+    categoria: 'Mercado',
+    categoriaVariant: 'teal',
+    data: '2026-02-19',
+    leitura: '8 min',
+  },
+  {
+    slug: 'great-stone-resident-secures-fda-approval-enters-us-market-w',
+    titulo: 'Aprovação FDA para Empresas Internacionais: O Que o Caso do Parque Great Stone Ensina ao Brasil [2026]',
+    resumo:
+      'Empresa do parque industrial sino-bielorrusso Great Stone obtém autorização da FDA e entra no mercado americano de dispositivos médicos — entenda o processo e as implicações para o Brasil.',
+    categoria: 'Regulamentação',
+    categoriaVariant: 'coral',
+    data: '2026-02-19',
+    leitura: '11 min',
+  },
+  {
+    slug: 'fda-gives-approval-for-first-of-its-kind-device-harlan-enter',
+    titulo: 'FDA Aprova Dispositivo Médico Inédito: O Que Isso Significa para o Brasil [2026]',
+    resumo:
+      'O FDA concedeu aprovação a um dispositivo médico sem precedentes em fevereiro de 2026, sinalizando nova fase de inovação regulatória com impactos diretos no mercado brasileiro.',
+    categoria: 'Regulamentação',
+    categoriaVariant: 'coral',
+    data: '2026-02-19',
+    leitura: '8 min',
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */
