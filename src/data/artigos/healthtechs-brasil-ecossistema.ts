@@ -24,7 +24,7 @@ export const artigo: Artigo = {
 <tr><td><strong>Healthtechs mapeadas no Brasil</strong></td><td>1.919</td><td>Tracxn</td></tr>
 <tr><td><strong>Com funding</strong></td><td>265</td><td>Tracxn</td></tr>
 <tr><td><strong>Série A ou superior</strong></td><td>80</td><td>Tracxn</td></tr>
-<tr><td><strong>Healthtechs ativas investidas</strong></td><td>602+</td><td>Distrito</td></tr>
+<tr><td><strong>Healthtechs ativas investidas</strong></td><td>602+</td><td><a href="https://distrito.me">Distrito</a></td></tr>
 <tr><td><strong>Investimento em healthtechs na AL (2024)</strong></td><td>US$ 253,7 milhões</td><td>Distrito</td></tr>
 <tr><td><strong>Crescimento do investimento vs. 2023</strong></td><td>+37,6%</td><td>Distrito</td></tr>
 <tr><td><strong>Novas fundações/ano (média)</strong></td><td>118</td><td>Distrito</td></tr>
@@ -83,7 +83,7 @@ export const artigo: Artigo = {
 <tr><td><strong>Sede</strong></td><td>São Carlos/SP</td></tr>
 <tr><td><strong>Área</strong></td><td>Neuromonitoramento</td></tr>
 <tr><td><strong>Tecnologia</strong></td><td>Sensor não invasivo para monitoramento da complacência intracraniana</td></tr>
-<tr><td><strong>Conquistas</strong></td><td>80+ publicações científicas; clearance FDA 510(k) (aprovação nos EUA); tecnologia patenteada</td></tr>
+<tr><td><strong>Conquistas</strong></td><td>80+ publicações científicas; clearance <a href="https://www.fda.gov/medical-devices">FDA</a> 510(k) (aprovação nos EUA); tecnologia patenteada</td></tr>
 </tbody>
 </table>
 
@@ -226,7 +226,7 @@ export const artigo: Artigo = {
 
 <p><strong>Valide com médicos.</strong> A solução precisa resolver um problema que profissionais de saúde reconheçam como real. Converse com médicos, enfermeiros e gestores antes de construir qualquer coisa.</p>
 
-<p><strong>Entenda a regulação desde o início.</strong> Dispositivos médicos e softwares SaMD precisam de registro na ANVISA. Ignorar isso no início gera retrabalho enorme depois. Planeje a estratégia regulatória desde a concepção.</p>
+<p><strong>Entenda a regulação desde o início.</strong> Dispositivos médicos e softwares SaMD precisam de registro na <a href="https://www.gov.br/anvisa">ANVISA</a>. Ignorar isso no início gera retrabalho enorme depois. Planeje a estratégia regulatória desde a concepção.</p>
 
 <p><strong>Busque apoio do ecossistema.</strong> Eretz.bio, InovaHC, Horizontes Hub, SUPERA, InovAtiva e FAPESP PIPE oferecem desde aceleração até financiamento não reembolsável.</p>
 

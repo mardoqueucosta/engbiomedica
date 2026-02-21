@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '12 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Se a ANVISA é o porteiro que decide quais dispositivos médicos entram no mercado brasileiro, as normas técnicas são as regras do jogo.</strong> Nenhum equipamento médico é registrado, fabricado ou mantido sem referência a normas internacionais — e o engenheiro biomédico que domina esse arcabouço normativo é um dos profissionais mais valorizados do setor.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Se a <a href="https://www.gov.br/anvisa">ANVISA</a> é o porteiro que decide quais dispositivos médicos entram no mercado brasileiro, as normas técnicas são as regras do jogo.</strong> Nenhum equipamento médico é registrado, fabricado ou mantido sem referência a normas internacionais — e o engenheiro biomédico que domina esse arcabouço normativo é um dos profissionais mais valorizados do setor.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
@@ -23,8 +23,8 @@ export const artigo: Artigo = {
 <tr><th>Norma</th><th>Tema</th><th>Quem usa</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>IEC 60601</strong></td><td>Segurança e desempenho de equipamentos eletromédicos</td><td>P&amp;D, qualidade, engenharia clínica</td></tr>
-<tr><td><strong>ISO 13485</strong></td><td>Sistema de gestão da qualidade</td><td>Toda a empresa fabricante</td></tr>
+<tr><td><strong><a href="https://www.iec.ch">IEC</a> 60601</strong></td><td>Segurança e desempenho de equipamentos eletromédicos</td><td>P&amp;D, qualidade, engenharia clínica</td></tr>
+<tr><td><strong><a href="https://www.iso.org">ISO</a> 13485</strong></td><td>Sistema de gestão da qualidade</td><td>Toda a empresa fabricante</td></tr>
 <tr><td><strong>ISO 14971</strong></td><td>Gerenciamento de risco</td><td>P&amp;D, regulatório, qualidade</td></tr>
 <tr><td><strong>IEC 62366</strong></td><td>Engenharia de usabilidade</td><td>P&amp;D, design, fatores humanos</td></tr>
 <tr><td><strong>IEC 62304</strong></td><td>Ciclo de vida de software médico</td><td>Desenvolvimento de software</td></tr>
@@ -32,7 +32,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>No Brasil, a ABNT publica versões nacionais dessas normas com o prefixo "ABNT NBR" (ex: ABNT NBR IEC 60601-1).</p>
+<p>No Brasil, a <a href="https://www.abnt.org.br">ABNT</a> publica versões nacionais dessas normas com o prefixo "ABNT NBR" (ex: ABNT NBR IEC 60601-1).</p>
 
 <h2>1. Série IEC 60601 — A "bíblia" dos equipamentos eletromédicos</h2>
 
@@ -228,7 +228,7 @@ export const artigo: Artigo = {
 <p>Sim. A ABNT, organismos de certificação (TUV, BSI, Bureau Veritas) e consultorias oferecem cursos sobre IEC 60601, ISO 13485 e ISO 14971. Certificações nessas normas são um diferencial no currículo.</p>
 
 <p><strong>Normas e regulamentos são a mesma coisa?</strong></p>
-<p>Não. Normas são documentos técnicos voluntários (IEC, ISO, ABNT). Regulamentos são obrigatórios e emitidos por autoridades (ANVISA, INMETRO). Porém, muitas normas são "presumidas" ou referenciadas nos regulamentos, tornando-se de facto obrigatórias.</p>
+<p>Não. Normas são documentos técnicos voluntários (IEC, ISO, ABNT). Regulamentos são obrigatórios e emitidos por autoridades (ANVISA, <a href="https://www.gov.br/inmetro">INMETRO</a>). Porém, muitas normas são "presumidas" ou referenciadas nos regulamentos, tornando-se de facto obrigatórias.</p>
 
 <p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções.</p>
 

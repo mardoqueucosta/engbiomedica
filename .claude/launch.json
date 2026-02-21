@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "next-dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "setTimeout(()=>{},9999999)"],
+      "port": 3001
+    }
+  ]
+}

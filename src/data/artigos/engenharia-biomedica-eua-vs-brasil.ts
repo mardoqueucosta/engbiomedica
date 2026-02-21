@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '14 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Os Estados Unidos são o berço da Engenharia Biomédica, com mercado 30 vezes maior, salários 6 vezes superiores e 159 instituições formando 14 mil graduados por ano.</strong> Mas o Brasil não é apenas espectador — lidera as healthtechs da América Latina, possui tecnologia com clearance FDA e cresce mais rápido. Este artigo compara os dois ecossistemas em profundidade.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Os Estados Unidos são o berço da Engenharia Biomédica, com mercado 30 vezes maior, salários 6 vezes superiores e 159 instituições formando 14 mil graduados por ano.</strong> Mas o Brasil não é apenas espectador — lidera as healthtechs da América Latina, possui tecnologia com clearance <a href="https://www.fda.gov/medical-devices">FDA</a> e cresce mais rápido. Este artigo compara os dois ecossistemas em profundidade.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
@@ -25,18 +25,18 @@ export const artigo: Artigo = {
 <tr><td><strong>Participação no mercado global</strong></td><td>~40%</td><td>~1-2%</td></tr>
 <tr><td><strong>Programas de graduação</strong></td><td>159 instituições</td><td>27 cursos</td></tr>
 <tr><td><strong>Graduados por ano</strong></td><td>~14.006</td><td>~centenas (estimado)</td></tr>
-<tr><td><strong>Acreditação</strong></td><td>ABET (199 programas)</td><td>MEC + CONFEA/CREA</td></tr>
+<tr><td><strong>Acreditação</strong></td><td><a href="https://www.abet.org">ABET</a> (199 programas)</td><td><a href="https://www.gov.br/mec">MEC</a> + <a href="https://www.confea.org.br">CONFEA</a>/<a href="https://www.crea-sp.org.br">CREA</a></td></tr>
 <tr><td><strong>Duração da graduação</strong></td><td>4 anos</td><td>5 anos</td></tr>
 <tr><td><strong>Salário mediano</strong></td><td><strong>US$ 106.950/ano</strong></td><td><strong>R$ 8.658/mês</strong></td></tr>
 <tr><td><strong>Salário entry-level</strong></td><td>~US$ 94.807/ano</td><td>~R$ 7.659/mês</td></tr>
 <tr><td><strong>Salário senior (P90)</strong></td><td>&gt;US$ 175.970/ano</td><td>~R$ 13.262/mês</td></tr>
-<tr><td><strong>Agência reguladora</strong></td><td>FDA</td><td>ANVISA</td></tr>
+<tr><td><strong>Agência reguladora</strong></td><td>FDA</td><td><a href="https://www.gov.br/anvisa">ANVISA</a></td></tr>
 <tr><td><strong>Classes de dispositivos</strong></td><td>3 (I, II, III)</td><td>4 (I, II, III, IV)</td></tr>
 <tr><td><strong>Dispositivos IA autorizados</strong></td><td>1.250+</td><td>Dezenas</td></tr>
 <tr><td><strong>Financiamento pesquisa BME</strong></td><td>NIBIB ~US$ 441 mi/ano</td><td>EMBRAPII ~R$ 150 mi + FINEP</td></tr>
 <tr><td><strong>VC em medtech (2024)</strong></td><td>~US$ 7,5 bilhões</td><td>~US$ 253,7 mi (AL)</td></tr>
 <tr><td><strong>Healthtechs</strong></td><td>Milhares</td><td>1.919 (64,8% da AL)</td></tr>
-<tr><td><strong>Sociedade profissional</strong></td><td>BMES, IEEE EMBS</td><td>SBEB, ABEClin</td></tr>
+<tr><td><strong>Sociedade profissional</strong></td><td><a href="https://www.bmes.org">BMES</a>, <a href="https://www.embs.org">IEEE EMBS</a></td><td><a href="https://sbeb.org.br">SBEB</a>, ABEClin</td></tr>
 </tbody>
 </table>
 

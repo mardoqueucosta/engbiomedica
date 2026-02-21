@@ -8,7 +8,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '14 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>A pergunta "o que faz um engenheiro biomédico?" tem não uma, mas dezenas de respostas possíveis — porque poucos profissionais atuam em áreas tão diversas.</strong> Um engenheiro biomédico pode estar calibrando um tomógrafo às 7h da manhã em um hospital público, revisando o dossiê regulatório de um novo dispositivo na ANVISA ao meio-dia, ou treinando um modelo de inteligência artificial para detectar arritmias cardíacas à noite em uma startup. Todos são engenheiros biomédicos. Todos exercem a mesma profissão.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>A pergunta "o que faz um engenheiro biomédico?" tem não uma, mas dezenas de respostas possíveis — porque poucos profissionais atuam em áreas tão diversas.</strong> Um engenheiro biomédico pode estar calibrando um tomógrafo às 7h da manhã em um hospital público, revisando o dossiê regulatório de um novo dispositivo na <a href="https://www.gov.br/anvisa">ANVISA</a> ao meio-dia, ou treinando um modelo de inteligência artificial para detectar arritmias cardíacas à noite em uma startup. Todos são engenheiros biomédicos. Todos exercem a mesma profissão.</p>
 
 <p class="mb-6">Para tornar essa diversidade concreta, este artigo apresenta o dia a dia real de cinco perfis típicos da profissão — do engenheiro clínico no chão do hospital ao pesquisador na fronteira da IA médica.</p>
 
@@ -22,7 +22,7 @@ export const artigo: Artigo = {
 
 <p><em>"Pesquisa, projeta, desenvolve e gerencia equipamentos, dispositivos e sistemas biomédicos, adequando-os às necessidades da assistência à saúde."</em></p>
 
-<p>A Resolução CONFEA 1.103/2018 detalha três campos de competência:</p>
+<p>A Resolução <a href="https://www.confea.org.br">CONFEA</a> 1.103/2018 detalha três campos de competência:</p>
 
 <ul>
 <li><strong>Campo I</strong> — Dispositivos para assistência à motricidade, locomoção e função de órgãos (próteses, órteses, exoesqueletos, implantes)</li>
@@ -44,9 +44,9 @@ export const artigo: Artigo = {
 
 <p><strong>8h00</strong> — Ronda pela UTI. Conferência de ventiladores e monitores. Um monitor multiparamétrico apresenta leitura instável de SpO2 — o engenheiro clínico diagnostica o problema (sensor óptico desgastado), providencia a substituição e documenta a intervenção no sistema.</p>
 
-<p><strong>9h30</strong> — Reunião com a diretoria administrativa. Está em pauta a aquisição de dois novos aparelhos de ultrassom para o setor de emergência. O engenheiro clínico apresenta a análise técnica comparativa de três fabricantes: especificações, conformidade com normas IEC 60601, custo total de propriedade (aquisição + manutenção + consumíveis), condições de garantia e assistência técnica.</p>
+<p><strong>9h30</strong> — Reunião com a diretoria administrativa. Está em pauta a aquisição de dois novos aparelhos de ultrassom para o setor de emergência. O engenheiro clínico apresenta a análise técnica comparativa de três fabricantes: especificações, conformidade com normas <a href="https://www.iec.ch">IEC</a> 60601, custo total de propriedade (aquisição + manutenção + consumíveis), condições de garantia e assistência técnica.</p>
 
-<p><strong>11h00</strong> — Calibração preventiva de dois desfibriladores da UTI cardíaca, conforme cronograma de manutenção preventiva. Registro da ART (Anotação de Responsabilidade Técnica) no CREA.</p>
+<p><strong>11h00</strong> — Calibração preventiva de dois desfibriladores da UTI cardíaca, conforme cronograma de manutenção preventiva. Registro da ART (Anotação de Responsabilidade Técnica) no <a href="https://www.crea-sp.org.br">CREA</a>.</p>
 
 <p><strong>14h00</strong> — Treinamento da equipe de enfermagem no novo modelo de bomba de infusão recém-adquirido. Demonstração de operação, alarmes e procedimentos de segurança.</p>
 
@@ -148,7 +148,7 @@ export const artigo: Artigo = {
 
 <h3>O que faz</h3>
 
-<p>Conduz <strong>pesquisa original</strong> em universidades e centros de pesquisa, publica artigos em periódicos científicos, orienta alunos de mestrado e doutorado, leciona na graduação e pós-graduação e busca financiamento para seus projetos junto a agências como FAPESP, CNPq, FINEP e EMBRAPII.</p>
+<p>Conduz <strong>pesquisa original</strong> em universidades e centros de pesquisa, publica artigos em periódicos científicos, orienta alunos de mestrado e doutorado, leciona na graduação e pós-graduação e busca financiamento para seus projetos junto a agências como <a href="https://fapesp.br">FAPESP</a>, <a href="https://www.gov.br/cnpq">CNPq</a>, FINEP e EMBRAPII.</p>
 
 <h3>Um dia típico</h3>
 
@@ -166,7 +166,7 @@ export const artigo: Artigo = {
 
 <h3>Onde trabalha</h3>
 
-<p>Universidades (UFRJ, UNICAMP, USP, UFPE, UFABC, UFU, UFRN, etc.), centros de pesquisa (CEB/UNICAMP, LEB/USP, NUTES-UEPB, SENAI CIMATEC) e institutos de inovação (InovaHC, SUPERA Parque).</p>
+<p>Universidades (UFRJ, UNICAMP, USP, UFPE, UFABC, UFU, UFRN, etc.), centros de pesquisa (<a href="https://www.ceb.unicamp.br">CEB/UNICAMP</a>, LEB/<a href="https://www5.usp.br">USP</a>, NUTES-UEPB, SENAI CIMATEC) e institutos de inovação (InovaHC, SUPERA Parque).</p>
 
 <h3>Faixa salarial</h3>
 

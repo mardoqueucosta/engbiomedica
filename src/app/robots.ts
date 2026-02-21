@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/dashboard/', '/login/', '/cadastro/'],
     },
-    sitemap: 'https://engenhariabiomedica.com/sitemap.xml',
+    sitemap: [
+      'https://engenhariabiomedica.com/sitemap.xml',
+      'https://engenhariabiomedica.com/image-sitemap.xml',
+    ],
   };
 }

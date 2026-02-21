@@ -9,7 +9,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '12 min',
   conteudo: `
-<p><strong>De uma única pós-graduação criada numa sala da COPPE/UFRJ em 1971 até os 27 cursos de graduação, 1.919 healthtechs e um mercado de R$ 26,1 bilhões de 2024 — a trajetória da Engenharia Biomédica no Brasil é uma história de persistência, visão de futuro e consolidação acelerada.</strong> Este artigo reconstrói essa jornada de mais de cinco décadas, com datas, nomes e marcos que moldaram a profissão que hoje está no centro da transformação tecnológica da saúde brasileira.</p>
+<p><strong>De uma única pós-graduação criada numa sala da <a href="https://www.coppe.ufrj.br">COPPE/UFRJ</a> em 1971 até os 27 cursos de graduação, 1.919 healthtechs e um mercado de R$ 26,1 bilhões de 2024 — a trajetória da Engenharia Biomédica no Brasil é uma história de persistência, visão de futuro e consolidação acelerada.</strong> Este artigo reconstrói essa jornada de mais de cinco décadas, com datas, nomes e marcos que moldaram a profissão que hoje está no centro da transformação tecnológica da saúde brasileira.</p>
 
 <blockquote>
   <p>Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>. Volte ao guia para uma visão completa da profissão.</p>
@@ -19,7 +19,7 @@ export const artigo: Artigo = {
 
 <p>Antes de falar do Brasil, é preciso entender o cenário internacional. A Engenharia Biomédica como disciplina acadêmica formalizada nasceu nos <strong>Estados Unidos na década de 1950-1960</strong>, quando engenheiros elétricos e mecânicos começaram a aplicar seus conhecimentos a problemas médicos de forma sistemática.</p>
 
-<p>O primeiro programa de doutorado em Biomedical Engineering foi criado na <strong>Drexel University em 1959</strong>. A <strong>Johns Hopkins University</strong> fundou seu departamento em 1962. A <strong>Biomedical Engineering Society (BMES)</strong> foi estabelecida em <strong>1968</strong>, e a <strong>IEEE Engineering in Medicine and Biology Society (EMBS)</strong> já operava desde os anos 1950 como grupo técnico do IEEE.</p>
+<p>O primeiro programa de doutorado em Biomedical Engineering foi criado na <strong>Drexel University em 1959</strong>. A <strong>Johns Hopkins University</strong> fundou seu departamento em 1962. A <strong>Biomedical Engineering Society (<a href="https://www.bmes.org">BMES</a>)</strong> foi estabelecida em <strong>1968</strong>, e a <strong><a href="https://www.ieee.org">IEEE</a> Engineering in Medicine and Biology Society (<a href="https://www.embs.org">EMBS</a>)</strong> já operava desde os anos 1950 como grupo técnico do IEEE.</p>
 
 <p>Na Europa, a Engenharia Biomédica se desenvolveu em paralelo, com forte presença na Alemanha, Reino Unido e Suécia. A <strong>International Federation for Medical and Biological Engineering (IFMBE)</strong> foi fundada em 1959 para coordenar esforços internacionais.</p>
 
@@ -43,7 +43,7 @@ export const artigo: Artigo = {
 
 <h3>1975 — Fundação da SBEB: a área ganha identidade</h3>
 
-<p>Em <strong>18 de dezembro de 1975</strong>, foi fundada a <strong>Sociedade Brasileira de Engenharia Biomédica (SBEB)</strong>, dando à área uma identidade institucional própria. A primeira diretoria reuniu nomes que transcendem a engenharia: <strong>Euryclides de Jesus Zerbini</strong>, responsável pelo primeiro transplante de coração no Brasil (1968), e <strong>Adib Jatene</strong>, cirurgião cardíaco que viria a ser Ministro da Saúde.</p>
+<p>Em <strong>18 de dezembro de 1975</strong>, foi fundada a <strong>Sociedade Brasileira de Engenharia Biomédica (<a href="https://sbeb.org.br">SBEB</a>)</strong>, dando à área uma identidade institucional própria. A primeira diretoria reuniu nomes que transcendem a engenharia: <strong>Euryclides de Jesus Zerbini</strong>, responsável pelo primeiro transplante de coração no Brasil (1968), e <strong>Adib Jatene</strong>, cirurgião cardíaco que viria a ser Ministro da Saúde.</p>
 
 <p>A presença de cirurgiões cardíacos na fundação da SBEB não é coincidência — a cardiologia era a fronteira onde tecnologia e medicina mais se entrelaçavam nos anos 1970, com marca-passos, desfibriladores e monitores cardíacos exigindo engenheiros que compreendessem tanto circuitos quanto fisiologia.</p>
 
@@ -90,7 +90,7 @@ export const artigo: Artigo = {
 
 <p>Paralelamente à expansão dos cursos, a profissão conquistou reconhecimento formal:</p>
 
-<p>Em <strong>2007</strong>, o sistema <strong>CONFEA/CREA regulamentou o exercício profissional</strong> do engenheiro biomédico, inserindo-o no arcabouço legal das engenharias.</p>
+<p>Em <strong>2007</strong>, o sistema <strong><a href="https://www.confea.org.br">CONFEA</a>/<a href="https://www.crea-sp.org.br">CREA</a> regulamentou o exercício profissional</strong> do engenheiro biomédico, inserindo-o no arcabouço legal das engenharias.</p>
 
 <p>Em <strong>2008</strong>, a <strong>Decisão Plenária PL-0034/2008</strong> do CONFEA inseriu o título "Engenheiro Biomédico" na Tabela de Títulos Profissionais, com código <strong>121-12-00</strong>, classificado no grupo Engenharia, modalidade Eletricista. A partir desse momento, formados em Engenharia Biomédica passaram a ter um título reconhecido para registro no CREA e emissão de ART.</p>
 
@@ -191,7 +191,7 @@ export const artigo: Artigo = {
   <li>CEB/UNICAMP — ceb.unicamp.br</li>
   <li>CONFEA — confea.org.br (Decisão PL-0034/2008 e Resolução 1.103/2018)</li>
   <li>MTE — Classificação Brasileira de Ocupações (CBO 2143-80)</li>
-  <li>ABIMO — abimo.org.br (dados do setor de dispositivos médicos)</li>
+  <li><a href="https://abimo.org.br">ABIMO</a> — abimo.org.br (dados do setor de dispositivos médicos)</li>
   <li>Tracxn, Distrito — dados de healthtechs</li>
 </ul>
 

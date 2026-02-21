@@ -34,7 +34,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>Fontes: ABIMO, ABIIS (Boletim Econômico), Fortune Business Insights.</p>
+<p>Fontes: <a href="https://abimo.org.br">ABIMO</a>, <a href="https://abiis.org.br">ABIIS</a> (Boletim Econômico), <a href="https://www.fortunebusinessinsights.com">Fortune Business Insights</a>.</p>
 
 <h2>Projeção de crescimento</h2>
 
@@ -93,7 +93,7 @@ export const artigo: Artigo = {
 
 <p><strong>ABIMO</strong> (Associação Brasileira da Indústria de Dispositivos Médicos) — Fundada em 1962, representa mais de 300 empresas associadas, com foco na <strong>indústria nacional</strong>. Publica dados do setor, promove exportações, organiza missões internacionais e atua em políticas industriais.</p>
 
-<p><strong>ABIMED</strong> (Associação Brasileira da Indústria de Tecnologia para Saúde) — Fundada em 1996, representa ~200 empresas que respondem por cerca de <strong>65% do faturamento</strong> do segmento. Associa predominantemente multinacionais e empresas de maior porte.</p>
+<p><strong><a href="https://abimed.org.br">ABIMED</a></strong> (Associação Brasileira da Indústria de Tecnologia para Saúde) — Fundada em 1996, representa ~200 empresas que respondem por cerca de <strong>65% do faturamento</strong> do segmento. Associa predominantemente multinacionais e empresas de maior porte.</p>
 
 <p><strong>ABIIS</strong> (Aliança Brasileira da Indústria Inovadora em Saúde) — Publica o Boletim Econômico do setor com dados consolidados de emprego, produção e comércio exterior.</p>
 
@@ -121,7 +121,7 @@ export const artigo: Artigo = {
 
 <p><strong>Projeto e engenharia</strong> — Detalhamento do projeto, seleção de materiais e componentes, design de hardware e software, engenharia de usabilidade (IEC 62366). Fase central do trabalho de P&amp;D.</p>
 
-<p><strong>Regulatório e qualidade</strong> — Preparação de dossiê para registro na ANVISA, análise de risco (ISO 14971), implementação de SGQ (ISO 13485), BPF (RDC 665/2022). Fase crítica para acesso ao mercado.</p>
+<p><strong>Regulatório e qualidade</strong> — Preparação de dossiê para registro na <a href="https://www.gov.br/anvisa">ANVISA</a>, análise de risco (ISO 14971), implementação de SGQ (ISO 13485), BPF (RDC 665/2022). Fase crítica para acesso ao mercado.</p>
 
 <p><strong>Fabricação</strong> — Gestão de produção, controle de qualidade em linha, esterilização, embalagem. Engenheiros biomédicos em fábricas garantem que o produto final atenda às especificações técnicas e regulatórias.</p>
 

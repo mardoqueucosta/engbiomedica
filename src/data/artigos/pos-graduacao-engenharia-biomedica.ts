@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   conteudo: `
 <p class="text-lg leading-relaxed mb-6"><strong>Se a graduação forma o engenheiro biomédico generalista, a pós-graduação forma o especialista, o pesquisador e o inovador.</strong> Para quem deseja atuar na fronteira do conhecimento — inteligência artificial para diagnóstico, bioimpressão 3D, neuroengenharia, robótica cirúrgica — ou seguir carreira acadêmica, o mestrado e o doutorado são passos essenciais.</p>
 
-<p class="mb-6">O Brasil conta com <strong>16 programas de pós-graduação stricto sensu</strong> em Engenharia Biomédica ou áreas correlatas, incluindo o único com conceito de excelência (6) da CAPES na área. Este artigo detalha todos eles.</p>
+<p class="mb-6">O Brasil conta com <strong>16 programas de pós-graduação stricto sensu</strong> em Engenharia Biomédica ou áreas correlatas, incluindo o único com conceito de excelência (6) da <a href="https://www.gov.br/capes">CAPES</a> na área. Este artigo detalha todos eles.</p>
 
 <blockquote>Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</blockquote>
 
@@ -18,13 +18,13 @@ export const artigo: Artigo = {
 
 <p>A pós-graduação abre quatro portas que a graduação sozinha não consegue:</p>
 
-<p><strong>Pesquisa de ponta:</strong> Acesso a laboratórios equipados, financiamento de projetos (FAPESP, CNPq, FINEP, EMBRAPII) e orientação de pesquisadores reconhecidos internacionalmente. É onde se desenvolvem as tecnologias que chegarão ao mercado em 5-10 anos.</p>
+<p><strong>Pesquisa de ponta:</strong> Acesso a laboratórios equipados, financiamento de projetos (<a href="https://fapesp.br">FAPESP</a>, <a href="https://www.gov.br/cnpq">CNPq</a>, FINEP, EMBRAPII) e orientação de pesquisadores reconhecidos internacionalmente. É onde se desenvolvem as tecnologias que chegarão ao mercado em 5-10 anos.</p>
 
 <p><strong>Carreira acadêmica:</strong> Mestrado é pré-requisito para concursos de professor em universidades. Doutorado é obrigatório para docência em programas de pós-graduação e para alcançar as faixas salariais mais altas da carreira acadêmica (R$ 15.000-22.000/mês em regime DE em federais).</p>
 
 <p><strong>Especialização profunda:</strong> O mercado de IA em saúde, regulatório e P&amp;D valoriza cada vez mais mestres e doutores. Profissionais com pós-graduação atingem as faixas salariais sêniores mais rapidamente.</p>
 
-<p><strong>Networking internacional:</strong> Programas de pós oferecem intercâmbios, coautorias com pesquisadores estrangeiros e acesso a congressos internacionais (IEEE EMBC, IFMBE).</p>
+<p><strong>Networking internacional:</strong> Programas de pós oferecem intercâmbios, coautorias com pesquisadores estrangeiros e acesso a congressos internacionais (<a href="https://www.embs.org">IEEE EMBC</a>, IFMBE).</p>
 
 <h2>Tipos de pós-graduação</h2>
 
@@ -214,7 +214,7 @@ export const artigo: Artigo = {
 
 <p><strong>Linhas de pesquisa:</strong> Tecnologias em EB, computação inteligente, biotecnologia.</p>
 
-<p><strong>Por que escolher:</strong> Única opção no Centro-Oeste. Proximidade com órgãos federais (ANVISA, Ministério da Saúde) pode facilitar pesquisa em políticas de saúde e regulação.</p>
+<p><strong>Por que escolher:</strong> Única opção no Centro-Oeste. Proximidade com órgãos federais (<a href="https://www.gov.br/anvisa">ANVISA</a>, Ministério da Saúde) pode facilitar pesquisa em políticas de saúde e regulação.</p>
 
 <h3>UMC (Universidade de Mogi das Cruzes)</h3>
 

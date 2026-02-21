@@ -167,7 +167,7 @@ export const artigo: Artigo = {
 <p>Calibração de equipamentos médicos, incerteza de medição, rastreabilidade metrológica, ensaios de segurança elétrica, conformidade com normas IEC 60601. Essencial para engenharia clínica e laboratórios de ensaio.</p>
 
 <p><strong>Regulação de Produtos para Saúde</strong></p>
-<p>Marco regulatório da ANVISA (RDC 751/2022, RDC 665/2022), classes de risco (I a IV), processo de registro e notificação, Boas Práticas de Fabricação (BPF), ISO 13485, ISO 14971, tecnovigilância, SaMD (RDC 657/2022). Disciplina com demanda crescente pelo mercado.</p>
+<p>Marco regulatório da <a href="https://www.gov.br/anvisa">ANVISA</a> (RDC 751/2022, RDC 665/2022), classes de risco (I a IV), processo de registro e notificação, Boas Práticas de Fabricação (BPF), ISO 13485, ISO 14971, tecnovigilância, SaMD (RDC 657/2022). Disciplina com demanda crescente pelo mercado.</p>
 
 <p><strong>Inteligência Artificial aplicada à Saúde</strong></p>
 <p>Machine learning supervisionado e não supervisionado, redes neurais convolucionais (CNN) para imagens médicas, processamento de linguagem natural (NLP) para prontuários, validação de modelos de IA, métricas clínicas (sensibilidade, especificidade, AUC), ética em IA, regulamentação (PL 2.338/2023).</p>

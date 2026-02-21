@@ -8,7 +8,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '14 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Escolher onde cursar Engenharia Biomédica é uma das decisões mais importantes da sua carreira</strong> — e o Brasil oferece 27 opções, cada uma com perfil, infraestrutura e proposta pedagógica diferentes. Este artigo reúne todas as instituições que oferecem o curso, com dados de conceito MEC, modalidade, mensalidade, diferenciais e o que observar antes de escolher.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Escolher onde cursar Engenharia Biomédica é uma das decisões mais importantes da sua carreira</strong> — e o Brasil oferece 27 opções, cada uma com perfil, infraestrutura e proposta pedagógica diferentes. Este artigo reúne todas as instituições que oferecem o curso, com dados de conceito <a href="https://www.gov.br/mec">MEC</a>, modalidade, mensalidade, diferenciais e o que observar antes de escolher.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
@@ -22,7 +22,7 @@ export const artigo: Artigo = {
 
 <h2>Universidades públicas (gratuitas)</h2>
 
-<p>As universidades públicas oferecem cursos totalmente gratuitos, com ingresso via SiSU (ENEM) ou vestibular próprio. Possuem, em geral, melhor infraestrutura de laboratórios e conexão com pesquisa.</p>
+<p>As universidades públicas oferecem cursos totalmente gratuitos, com ingresso via <a href="https://sisu.mec.gov.br">SiSU</a> (ENEM) ou vestibular próprio. Possuem, em geral, melhor infraestrutura de laboratórios e conexão com pesquisa.</p>
 
 <h3>UFABC — Universidade Federal do ABC</h3>
 
@@ -98,7 +98,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p><strong>Diferenciais:</strong> Pioneira entre as universidades públicas (2001). Programa de pós-graduação com conceito CAPES 4-5. Lidera o projeto Saúde Inteligente (R$ 14,7 milhões da FINEP para IA e IoT no HC-UFPE). Forte em computação biomédica e informática em saúde.</p>
+<p><strong>Diferenciais:</strong> Pioneira entre as universidades públicas (2001). Programa de pós-graduação com conceito <a href="https://www.gov.br/capes">CAPES</a> 4-5. Lidera o projeto Saúde Inteligente (R$ 14,7 milhões da FINEP para IA e IoT no HC-UFPE). Forte em computação biomédica e informática em saúde.</p>
 
 <h3>UFU — Universidade Federal de Uberlândia</h3>
 
@@ -720,7 +720,7 @@ export const artigo: Artigo = {
 <p>Sete critérios essenciais para avaliar:</p>
 
 <ul>
-<li><strong>1. Conceito MEC / ENADE</strong> — A PUC-PR tem nota 5 (máxima). Verifique o conceito no e-MEC (emec.mec.gov.br) antes de escolher.</li>
+<li><strong>1. Conceito MEC / <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade">ENADE</a></strong> — A PUC-PR tem nota 5 (máxima). Verifique o conceito no e-MEC (emec.mec.gov.br) antes de escolher.</li>
 <li><strong>2. Infraestrutura de laboratórios</strong> — Visite pessoalmente. Procure por: laboratório de instrumentação biomédica, laboratório de eletrônica, laboratório de biomecânica/biomateriais, acesso a equipamentos médicos reais (monitor, ventilador, eletrocardiógrafo).</li>
 <li><strong>3. Corpo docente</strong> — Professores com doutorado e experiência na área? Publicações em periódicos relevantes? Projetos de pesquisa ativos? Verifique no Currículo Lattes.</li>
 <li><strong>4. Convênios para estágio</strong> — A instituição tem convênios com hospitais, empresas de dispositivos médicos ou startups? Isso facilita enormemente o estágio obrigatório e a inserção no mercado.</li>
@@ -731,7 +731,7 @@ export const artigo: Artigo = {
 
 <h2>Perguntas frequentes</h2>
 
-<h3>Posso fazer Engenharia Biomédica EaD e me registrar no CREA?</h3>
+<h3>Posso fazer Engenharia Biomédica EaD e me registrar no <a href="https://www.crea-sp.org.br">CREA</a>?</h3>
 <p>Sim, desde que o curso seja reconhecido pelo MEC. Porém, verifique a qualidade da formação prática — o CREA pode exigir comprovação de atividades laboratoriais presenciais.</p>
 
 <h3>Qual a melhor universidade pública?</h3>

@@ -4,6 +4,12 @@
  * Isso evita carregar ~400 KB de HTML no bundle de páginas que não precisam do conteúdo.
  */
 
+export interface ArtigoImagem {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 export interface ArtigoMeta {
   slug: string;
   titulo: string;
@@ -11,7 +17,9 @@ export interface ArtigoMeta {
   categoria: string;
   categoriaVariant: 'primary' | 'teal' | 'coral' | 'amber';
   data: string;
+  dataModificacao?: string;
   leitura: string;
+  imagens?: ArtigoImagem[];
 }
 
 export const artigosMeta: ArtigoMeta[] = [
@@ -214,7 +222,7 @@ export const artigosMeta: ArtigoMeta[] = [
     leitura: '12 min',
   },
   {
-    slug: 'medtronic-nets-fda-clearance-for-robotic-spine-system',
+    slug: 'medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp',
     titulo: 'Medtronic Obtém Autorização da FDA para Sistema Robótico Espinhal Stealth AXiS [2026]',
     resumo:
       'A Medtronic recebeu clearance da FDA para o Stealth AXiS, sistema robótico para coluna baseado na plataforma Mazor, reforçando sua posição no mercado global de US$ 15 bilhões em tecnologias cranianas e espinhais.',
@@ -224,17 +232,21 @@ export const artigosMeta: ArtigoMeta[] = [
     leitura: '8 min',
   },
   {
-    slug: 'wearable-medical-devices-surge-with-supply-chain-of-four-cor',
-    titulo: 'Wearables Médicos em Ascensão: Os Quatro Componentes que Moldam a Nova Cadeia de Suprimentos [2026]',
+    slug: 'dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone',
+    titulo: 'Dispositivos Médicos Vestíveis em Ascensão: Os Quatro Componentes que Moldam a Nova Cadeia de Suprimentos [2026]',
     resumo:
       'O mercado global de dispositivos médicos vestíveis supera US$ 31 bilhões e cresce acima de 20% ao ano, impulsionado pela consolidação de quatro componentes tecnológicos essenciais.',
     categoria: 'Inovação',
     categoriaVariant: 'amber',
     data: '2026-02-19',
     leitura: '9 min',
+    imagens: [
+      { src: '/artigos/dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone/image-1.webp', alt: 'Componentes essenciais de wearables médicos em bancada: módulo biossensor PPG com LED infravermelho, chip SoC nRF5340, antena BLE cerâmica com bobina NFC e bateria LiPo de 120 mAh', caption: 'Os quatro pilares da cadeia de suprimentos: biossensor PPG, SoC de ultra-baixo consumo, módulo de conectividade BLE/NFC e bateria LiPo com PMIC de gerenciamento de energia' },
+      { src: '/artigos/dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone/image-2.webp', alt: 'Dispositivos médicos vestíveis em superfície clínica: smartwatch com traçado ECG, patch cardíaco adesivo, sensor CGM de glicose contínua, anel inteligente e pulseira de detecção de crises epilépticas', caption: 'Aplicações clínicas de dispositivos vestíveis médicos: smartwatch com ECG, patch cardíaco, monitor de glicose contínuo (CGM), anel inteligente para ciclo circadiano e pulseira de detecção de convulsões' },
+    ],
   },
   {
-    slug: 'anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d',
+    slug: 'anvisa-aprova-sistema-de-rastreamento-e-identificacao-de-dis',
     titulo: 'ANVISA Aprova Sistema de Rastreamento e Identificação de Dispositivos Médicos [2026]',
     resumo:
       'A ANVISA aprovou sistema nacional de identificação única (IUD) para dispositivos médicos, alinhando o Brasil ao FDA e à União Europeia em rastreabilidade e segurança do paciente.',
@@ -244,7 +256,7 @@ export const artigosMeta: ArtigoMeta[] = [
     leitura: '9 min',
   },
   {
-    slug: 'understanding-fdas-qmsr-and-cybersecurity-mandates-for-medic',
+    slug: 'qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp',
     titulo: 'QMSR e Cibersegurança da FDA: Requisitos Essenciais para Dispositivos Médicos [2026]',
     resumo:
       'A FDA implementou o QMSR em 2026, substituindo o QSR e exigindo cibersegurança por projeto em dispositivos médicos conectados. Entenda o que mudou.',
@@ -252,9 +264,13 @@ export const artigosMeta: ArtigoMeta[] = [
     categoriaVariant: 'teal',
     data: '2026-02-19',
     leitura: '8 min',
+    imagens: [
+      { src: '/artigos/qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp/image-1.webp', alt: 'Estação de trabalho para revisão de cibersegurança de dispositivos médicos: laptop com dashboard de vulnerabilidades, dispositivo médico conectado via rede, documentação FDA e chave de segurança USB', caption: 'Estação de revisão de cibersegurança: dashboard de vulnerabilidades, dispositivo médico conectado, documentação de conformidade FDA e chave de segurança para autenticação' },
+      { src: '/artigos/qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp/image-2.webp', alt: 'Análise de SBOM para dispositivo médico: monitor com árvore de dependências de software, indicadores de vulnerabilidades CVE e placa de circuito embarcado conectada via cabo de debug', caption: 'Análise de SBOM (Software Bill of Materials): visualização de dependências de software com indicadores de vulnerabilidades CVE, placa embarcada de dispositivo médico e documentação de rastreabilidade' },
+    ],
   },
   {
-    slug: 'great-stone-resident-secures-fda-approval-enters-us-market-w',
+    slug: 'aprovacao-fda-para-empresas-internacionais-o-que-o-caso-do-p',
     titulo: 'Aprovação FDA para Empresas Internacionais: O Que o Caso do Parque Great Stone Ensina ao Brasil [2026]',
     resumo:
       'Empresa do parque industrial sino-bielorrusso Great Stone obtém autorização da FDA e entra no mercado americano de dispositivos médicos — entenda o processo e as implicações para o Brasil.',
@@ -264,14 +280,105 @@ export const artigosMeta: ArtigoMeta[] = [
     leitura: '11 min',
   },
   {
-    slug: 'fda-gives-approval-for-first-of-its-kind-device-harlan-enter',
-    titulo: 'FDA Aprova Dispositivo Médico Inédito: O Que Isso Significa para o Brasil [2026]',
+    slug: 'como-funciona-a-anvisa-estrutura-atribuicoes-e-o-papel-na-re',
+    titulo: 'Como Funciona a ANVISA: Estrutura, Atribuições e o Papel na Regulamentação de Dispositivos Médicos [2026]',
     resumo:
-      'O FDA concedeu aprovação a um dispositivo médico sem precedentes em fevereiro de 2026, sinalizando nova fase de inovação regulatória com impactos diretos no mercado brasileiro.',
+      'Entenda a estrutura organizacional da ANVISA, suas cinco diretorias, o processo de registro de dispositivos médicos e o papel do engenheiro biomédico na regulamentação sanitária brasileira.',
     categoria: 'Regulamentação',
     categoriaVariant: 'coral',
     data: '2026-02-19',
+    leitura: '9 min',
+  },
+  {
+    slug: 'acoes-de-dispositivos-medicos-como-investir-no-setor-em-2026',
+    titulo: 'Ações de Dispositivos Médicos: Como Investir no Setor em 2026',
+    resumo:
+      'Mercado global de US$ 600 bilhões, empresas líderes e estratégias para investidores brasileiros acessarem o setor de dispositivos médicos.',
+    categoria: 'Inovação',
+    categoriaVariant: 'amber',
+    data: '2026-02-19',
+    leitura: '9 min',
+  },
+  {
+    slug: 'novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr',
+    titulo: 'Novocure Recebe Aprovação da FDA para Tratar Câncer de Pâncreas com Campos Elétricos [2026]',
+    resumo:
+      'A FDA aprovou a terapia TTFields da Novocure para câncer de pâncreas localmente avançado, abrindo acesso a cerca de 15.000 pacientes norte-americanos por ano.',
+    categoria: 'Mercado',
+    categoriaVariant: 'teal',
+    data: '2026-02-19',
     leitura: '8 min',
+    imagens: [
+      { src: '/artigos/novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr/image-1.webp', alt: 'Ilustração técnica: Perspectivas para o Brasil', caption: 'Ilustração: Perspectivas para o Brasil' },
+      { src: '/artigos/novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr/image-2.webp', alt: 'Ilustração técnica: Impacto no Mercado de MedTech', caption: 'Ilustração: Impacto no Mercado de MedTech' },
+    ],
+  },
+  {
+    slug: 'sensores-vestiveis-saude-2026',
+    titulo: 'Sensores Vestíveis na Saúde: Como Wearables Estão Revolucionando o Monitoramento de Pacientes [2026]',
+    resumo:
+      'Wearables médicos movimentaram US$ 36 bilhões em 2024 e redefinem o monitoramento de pacientes com ECG, PPG, CGM e IA embarcada.',
+    categoria: 'Inovação',
+    categoriaVariant: 'amber',
+    data: '2026-02-20',
+    leitura: '10 min',
+    imagens: [
+      { src: '/artigos/sensores-vestiveis-saude-2026/image-1.webp', alt: 'Comparativo das quatro tecnologias de sensoriamento em wearables médicos: PPG óptico, ECG elétrico, IMU inercial e bioimpedância', caption: 'As quatro famílias de sensores em wearables médicos operam com princípios físicos distintos — óptico (PPG), elétrico (ECG e BIA) e inercial (IMU)' },
+      { src: '/artigos/sensores-vestiveis-saude-2026/image-2.webp', alt: 'Diagrama de corte transversal de sensor CGM mostrando agulha intersticial, membrana enzimática de glicose-oxidase e transmissão Bluetooth da glicemia', caption: 'O sensor CGM converte a reação eletroquímica entre a glicose intersticial e a enzima glicose-oxidase em corrente elétrica proporcional' },
+      { src: '/artigos/sensores-vestiveis-saude-2026/image-3.webp', alt: 'Tabela comparativa dos sistemas regulatórios ANVISA, FDA e CE Mark para wearables médicos com classes de risco e prazos de aprovação', caption: 'Os três principais sistemas regulatórios para wearables médicos diferem em nomenclatura de classes de risco e prazos de aprovação' },
+    ],
+  },
+  {
+    slug: 'ressonancia-magnetica-ge-healthcare-signa-fda-2026',
+    titulo: 'GE HealthCare Recebe 3 Aprovações do FDA para Nova Geração da Plataforma SIGNA de Ressonância Magnética [2026]',
+    resumo:
+      'GE HealthCare obteve três aprovações do FDA para a plataforma SIGNA em 2025: AIR Recon DL cardíaco, gradientes MAGNUS e integração com NeuroQuant — avanços que redefinem a RM clínica.',
+    categoria: 'Inovação',
+    categoriaVariant: 'amber',
+    data: '2026-02-20',
+    leitura: '9 min',
+    imagens: [
+      { src: '/artigos/ressonancia-magnetica-ge-healthcare-signa-fda-2026/image-1.webp', alt: 'Comparativo técnico das plataformas SIGNA 1.5T, 3T e gradientes MAGNUS com especificações de campo e desempenho clínico', caption: 'A família SIGNA abrange três níveis de campo magnético e diferentes configurações de gradiente, com as aprovações de 2025 aplicáveis em diferentes pontos da linha' },
+      { src: '/artigos/ressonancia-magnetica-ge-healthcare-signa-fda-2026/image-2.webp', alt: 'Scanner de ressonância magnética GE SIGNA Premier 3T instalado em sala clínica com gantry branco e painel de controle', caption: 'O sistema SIGNA Premier 3T, base para as aprovações do AIR Recon DL cardíaco e integração do NeuroQuant, opera em ambiente clínico blindado magneticamente' },
+      { src: '/artigos/ressonancia-magnetica-ge-healthcare-signa-fda-2026/image-3.webp', alt: 'Fluxograma comparativo do processo de aprovação FDA 510k e De Novo versus ANVISA RDC 657 para software de IA em ressonância magnética', caption: 'Os dois principais caminhos regulatórios no FDA para software de IA em dispositivos médicos — 510(k) por equivalência e De Novo para inovações sem predicate' },
+    ],
+  },
+  {
+    slug: 'engenharia-biomedica-vale-a-pena',
+    titulo: 'Engenharia Biomédica Vale a Pena? Análise Completa com Dados Reais [2026]',
+    resumo: 'Engenharia biomédica vale a pena? Análise com dados do CAGED 2026, empregabilidade e mercado de R$ 26,1 bilhões para tomar a melhor decisão de carreira.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-20',
+    dataModificacao: '2026-02-21',
+    leitura: '14 min',
+    imagens: [
+      { src: '/artigos/engenharia-biomedica-vale-a-pena/image-1.webp', alt: 'Progressão salarial do engenheiro biomédico em 2026 por nível de experiência segundo dados CAGED', caption: 'Salários do engenheiro biomédico por nível de experiência. Fonte: CAGED 2026 via Portal Salário.' },
+      { src: '/artigos/engenharia-biomedica-vale-a-pena/image-2.webp', alt: 'Sala de cirurgia robótica com equipamentos de engenharia biomédica e monitores multiparamétricos', caption: 'Cirurgia robótica no Brasil cresceu 417% em cinco anos, com 135 sistemas instalados em mais de 90 hospitais.' },
+      { src: '/artigos/engenharia-biomedica-vale-a-pena/image-3.webp', alt: 'Laboratório de desenvolvimento de dispositivos médicos com prototipagem e instrumentação biomédica', caption: 'Startups como brain4care e HOOBOX Robotics nasceram em laboratórios de engenharia biomédica brasileiros.' },
+    ],
+  },
+  {
+    slug: 'engenharia-biomedica-vale-a-pena-v2',
+    titulo: 'Engenharia Biomédica Vale a Pena? Análise Completa com Dados Reais [2026]',
+    resumo: 'Engenharia biomédica vale a pena? Análise com dados CAGED 2026: salário médio de R$ 8.658/mês, mercado de R$ 26,1 bilhões e 85 mil empregos diretos no setor.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '14 min',
+    imagens: [
+      { src: '/artigos/engenharia-biomedica-vale-a-pena-v2/image-1.webp', alt: 'Visualização conceitual do mercado de engenharia biomédica, com IA, cirurgia robótica e telemedicina', caption: 'O mercado de dispositivos médicos é impulsionado por tecnologias como inteligência artificial, cirurgia robótica e telemedicina, criando uma crescente demanda por engenheiros biomédicos' },
+      { src: '/artigos/engenharia-biomedica-vale-a-pena-v2/image-2.webp', alt: 'Sensor não invasivo de pressão intracraniana da brain4care, tecnologia de engenharia biomédica em detalhe', caption: 'O sensor não invasivo de pressão intracraniana da brain4care, um exemplo da inovação brasileira na engenharia biomédica' },
+    ],
+  },
+  {
+    slug: 'quanto-ganha-engenheiro-biomedico-2026',
+    titulo: 'Quanto Ganha um Engenheiro Biomédico: Salários por Nível, Região e Especialidade [Dados CAGED 2026]',
+    resumo: 'Salário do engenheiro biomédico no Brasil: de R$ 7.659 (júnior) a R$ 14.782 (especialista), com dados CAGED 2026 por estado, setor e especialidade técnica.',
+    categoria: 'Mercado',
+    categoriaVariant: 'teal',
+    data: '2026-02-20',
+    leitura: '12 min',
   },
 ];
 

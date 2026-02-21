@@ -16,7 +16,7 @@ export const artigo: Artigo = {
 
 <h2>O paradoxo dos números</h2>
 
-<p>Quando se consulta o CAGED (Cadastro Geral de Empregados e Desempregados) pelo código CBO 2143-80 (Engenheiro Biomédico), aparecem apenas <strong>137 profissionais</strong> movimentados em 12 meses. Para efeito de comparação, Engenharia Civil registra 26.208 movimentações.</p>
+<p>Quando se consulta o <a href="https://www.gov.br/trabalho-e-emprego">CAGED</a> (Cadastro Geral de Empregados e Desempregados) pelo código CBO 2143-80 (Engenheiro Biomédico), aparecem apenas <strong>137 profissionais</strong> movimentados em 12 meses. Para efeito de comparação, Engenharia Civil registra 26.208 movimentações.</p>
 
 <p>Isso não significa que existam apenas 137 engenheiros biomédicos empregados no Brasil. O número é pequeno por três razões:</p>
 
@@ -34,7 +34,7 @@ export const artigo: Artigo = {
 
 <p><strong>Contratações em alta.</strong> O cargo de Bioengenheiro (CBO 2011-05, categoria correlata) registrou <strong>aumento de 50% nas contratações</strong> entre dezembro/2024 e novembro/2025. É um dos maiores crescimentos entre todas as ocupações de engenharia.</p>
 
-<p><strong>Empresas otimistas.</strong> Segundo pesquisa da ABIMO/ABIIS, <strong>76% das empresas</strong> do setor de dispositivos médicos projetam alta nas vendas e <strong>52% planejam novas contratações</strong> no próximo ano.</p>
+<p><strong>Empresas otimistas.</strong> Segundo pesquisa da <a href="https://abimo.org.br">ABIMO</a>/<a href="https://abiis.org.br">ABIIS</a>, <strong>76% das empresas</strong> do setor de dispositivos médicos projetam alta nas vendas e <strong>52% planejam novas contratações</strong> no próximo ano.</p>
 
 <p><strong>Novas vagas na indústria.</strong> O setor de dispositivos médicos criou <strong>5.979 novas vagas</strong> em 2024, elevando o total de empregos diretos para 85.078 — crescimento de 7% sobre 2023.</p>
 
@@ -62,7 +62,7 @@ export const artigo: Artigo = {
 
 <h3>3. Assuntos regulatórios e qualidade</h3>
 
-<p>Toda empresa que fabrica, importa ou distribui dispositivos médicos precisa de profissionais que entendam o arcabouço regulatório da ANVISA. É uma das áreas com maior escassez de profissionais qualificados.</p>
+<p>Toda empresa que fabrica, importa ou distribui dispositivos médicos precisa de profissionais que entendam o arcabouço regulatório da <a href="https://www.gov.br/anvisa">ANVISA</a>. É uma das áreas com maior escassez de profissionais qualificados.</p>
 
 <p><strong>Vagas típicas:</strong> Analista/especialista/gerente de assuntos regulatórios, analista/gerente de qualidade (ISO 13485), auditor de BPF.</p>
 
@@ -153,7 +153,7 @@ export const artigo: Artigo = {
 
 <p><strong>Portais de emprego</strong> — Indeed, Vagas.com, Catho, Glassdoor. Use os mesmos termos de busca do LinkedIn.</p>
 
-<p><strong>Comunidades profissionais</strong> — Grupos de LinkedIn de Engenharia Clínica e Engenharia Biomédica, grupos de WhatsApp da ABEClin e da comunidade de engenharia clínica, canal da SBEB.</p>
+<p><strong>Comunidades profissionais</strong> — Grupos de LinkedIn de Engenharia Clínica e Engenharia Biomédica, grupos de WhatsApp da ABEClin e da comunidade de engenharia clínica, canal da <a href="https://sbeb.org.br">SBEB</a>.</p>
 
 <p><strong>Feira Hospitalar</strong> — O maior evento de saúde da América Latina, anual em São Paulo. Excelente para networking e entrevistas presenciais com empregadores.</p>
 

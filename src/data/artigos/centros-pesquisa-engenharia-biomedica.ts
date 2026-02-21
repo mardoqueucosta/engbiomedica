@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '13 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>A pesquisa brasileira em Engenharia Biomédica está longe de ser apenas acadêmica — ela já produziu tecnologia com clearance FDA, algoritmos de IA que analisam milhares de exames por dia e ventiladores pulmonares que salvaram vidas em mais de 40 países.</strong> Dos laboratórios pioneiros da COPPE/UFRJ aos centros de inteligência artificial em saúde da UFMG, este artigo mapeia os principais polos de pesquisa do país, suas linhas de investigação e como acessá-los.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>A pesquisa brasileira em Engenharia Biomédica está longe de ser apenas acadêmica — ela já produziu tecnologia com clearance FDA, algoritmos de IA que analisam milhares de exames por dia e ventiladores pulmonares que salvaram vidas em mais de 40 países.</strong> Dos laboratórios pioneiros da <a href="https://www.coppe.ufrj.br">COPPE/UFRJ</a> aos centros de inteligência artificial em saúde da UFMG, este artigo mapeia os principais polos de pesquisa do país, suas linhas de investigação e como acessá-los.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
@@ -18,7 +18,7 @@ export const artigo: Artigo = {
 
 <p>O Brasil possui um ecossistema de pesquisa em EB distribuído entre universidades públicas, centros de inovação hospitalares, institutos SENAI e unidades EMBRAPII. Embora a maior parte da pesquisa esteja concentrada no eixo Sul-Sudeste, há centros relevantes em todas as regiões.</p>
 
-<p>O financiamento vem de múltiplas fontes: FAPESP (São Paulo), CNPq (nacional), FINEP, EMBRAPII, CAPES (bolsas de pós-graduação), fundações estaduais (FAPEMIG, FAPEPE, FAPERJ) e, crescentemente, parcerias com o setor privado.</p>
+<p>O financiamento vem de múltiplas fontes: <a href="https://fapesp.br">FAPESP</a> (São Paulo), <a href="https://www.gov.br/cnpq">CNPq</a> (nacional), FINEP, EMBRAPII, <a href="https://www.gov.br/capes">CAPES</a> (bolsas de pós-graduação), fundações estaduais (FAPEMIG, FAPEPE, FAPERJ) e, crescentemente, parcerias com o setor privado.</p>
 
 <h2>Centros de excelência</h2>
 
@@ -58,7 +58,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>O Centro de Engenharia Biomédica da UNICAMP é referência em processamento de imagens médicas e física médica. Abriga o <strong>MICLab (Medical Image Computing Laboratory)</strong>, liderado pela pesquisadora Letícia Rittner.</p>
+<p>O Centro de Engenharia Biomédica da <a href="https://www.ceb.unicamp.br">UNICAMP</a> é referência em processamento de imagens médicas e física médica. Abriga o <strong>MICLab (Medical Image Computing Laboratory)</strong>, liderado pela pesquisadora Letícia Rittner.</p>
 
 <p><strong>Linhas de pesquisa:</strong> Aceleração de ressonância magnética com IA (até 4x mais rápido), segmentação e análise de imagens cerebrais, quantificação de imagens médicas, física médica, instrumentação.</p>
 
@@ -73,7 +73,7 @@ export const artigo: Artigo = {
 <tr><th>Dado</th><th>Detalhe</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Instituição</strong></td><td>Escola Politécnica da USP</td></tr>
+<tr><td><strong>Instituição</strong></td><td>Escola Politécnica da <a href="https://www5.usp.br">USP</a></td></tr>
 <tr><td><strong>Fundação</strong></td><td>1981</td></tr>
 <tr><td><strong>Localização</strong></td><td>São Paulo/SP</td></tr>
 </tbody>

@@ -10,13 +10,13 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '10 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>O registro no CREA não é opcional — é obrigatório.</strong> Todo engenheiro biomédico que deseja exercer legalmente a profissão no Brasil precisa estar registrado no Conselho Regional de Engenharia e Agronomia do estado em que atua. Sem o registro, você não pode emitir ART (Anotação de Responsabilidade Técnica), não pode assinar projetos, não se beneficia do piso salarial legal e está, tecnicamente, exercendo a profissão de forma ilegal.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>O registro no <a href="https://www.crea-sp.org.br">CREA</a> não é opcional — é obrigatório.</strong> Todo engenheiro biomédico que deseja exercer legalmente a profissão no Brasil precisa estar registrado no Conselho Regional de Engenharia e Agronomia do estado em que atua. Sem o registro, você não pode emitir ART (Anotação de Responsabilidade Técnica), não pode assinar projetos, não se beneficia do piso salarial legal e está, tecnicamente, exercendo a profissão de forma ilegal.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
 <h2>Por que o registro é obrigatório</h2>
 
-<p>O exercício da Engenharia Biomédica no Brasil é regulamentado pelo sistema CONFEA/CREA com base na <strong>Lei 5.194/1966</strong>, que rege o exercício das profissões de engenheiro, arquiteto e agrônomo. A lei estabelece que:</p>
+<p>O exercício da Engenharia Biomédica no Brasil é regulamentado pelo sistema <a href="https://www.confea.org.br">CONFEA</a>/CREA com base na <strong>Lei 5.194/1966</strong>, que rege o exercício das profissões de engenheiro, arquiteto e agrônomo. A lei estabelece que:</p>
 
 <ul>
 <li>Somente profissionais registrados no CREA podem exercer atividades de engenharia</li>
@@ -30,7 +30,7 @@ export const artigo: Artigo = {
 
 <h3>1. Decisão Plenária PL-0034/2008</h3>
 
-<p>Inseriu o título "Engenheiro Biomédico" na tabela do CONFEA. A partir dessa decisão, formados em cursos reconhecidos pelo MEC passaram a ter direito ao registro profissional no CREA.</p>
+<p>Inseriu o título "Engenheiro Biomédico" na tabela do CONFEA. A partir dessa decisão, formados em cursos reconhecidos pelo <a href="https://www.gov.br/mec">MEC</a> passaram a ter direito ao registro profissional no CREA.</p>
 
 <h3>2. Resolução CONFEA n. 1.103/2018</h3>
 
@@ -161,7 +161,7 @@ export const artigo: Artigo = {
 
 <p>Porém, o engenheiro biomédico possui a formação mais adequada para a função, com disciplinas específicas em instrumentação biomédica, engenharia clínica, processamento de sinais biológicos e regulação de dispositivos médicos que outros engenheiros não cursam.</p>
 
-<p>A SBEB defende que a engenharia clínica deveria ser exercida preferencialmente por engenheiros biomédicos, embora reconheça que a regulamentação atual é mais abrangente.</p>
+<p>A <a href="https://sbeb.org.br">SBEB</a> defende que a engenharia clínica deveria ser exercida preferencialmente por engenheiros biomédicos, embora reconheça que a regulamentação atual é mais abrangente.</p>
 
 <h2>Situações especiais</h2>
 

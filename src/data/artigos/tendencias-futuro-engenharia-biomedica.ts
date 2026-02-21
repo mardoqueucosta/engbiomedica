@@ -48,7 +48,7 @@ export const artigo: Artigo = {
 
 <p><strong>Longo prazo (2030+):</strong> Bioimpressão de órgãos funcionais permanece como fronteira de pesquisa.</p>
 
-<p><strong>Impacto na carreira:</strong> Demanda imediata por engenheiros que dominem impressão 3D de dispositivos, biomateriais e regulação ANVISA. Alto potencial de longo prazo para pesquisadores.</p>
+<p><strong>Impacto na carreira:</strong> Demanda imediata por engenheiros que dominem impressão 3D de dispositivos, biomateriais e regulação <a href="https://www.gov.br/anvisa">ANVISA</a>. Alto potencial de longo prazo para pesquisadores.</p>
 
 <h2>5. Internet das Coisas Médicas (IoMT) e Wearables</h2>
 
@@ -86,7 +86,7 @@ export const artigo: Artigo = {
 
 <p><strong>Envelhecimento populacional:</strong> Proporção de 65+ anos passa de ~11% (2025) para ~15% (2030). Mais idosos = mais tecnologia médica = mais engenheiros biomédicos.</p>
 
-<p><strong>Déficit comercial como oportunidade:</strong> US$ 8,62 bilhões de déficit em dispositivos médicos. Políticas como Nova Indústria Brasil (R$ 300 bi) e Saúde Inova EMBRAPII-ABIMO (R$ 150 mi) incentivam produção nacional.</p>
+<p><strong>Déficit comercial como oportunidade:</strong> US$ 8,62 bilhões de déficit em dispositivos médicos. Políticas como Nova Indústria Brasil (R$ 300 bi) e Saúde Inova EMBRAPII-<a href="https://abimo.org.br">ABIMO</a> (R$ 150 mi) incentivam produção nacional.</p>
 
 <p><strong>SUS como catalisador:</strong> 150+ milhões de usuários em transformação digital massiva. A escala cria oportunidades únicas.</p>
 

@@ -108,7 +108,7 @@ export const artigo: Artigo = {
 </thead>
 <tbody>
 <tr><td><strong>Produtos</strong></td><td>Cardiologia intervencionista, endoscopia, neuromodulação, urologia</td></tr>
-<tr><td><strong>Destaque</strong></td><td>Parceira da SBEB no Prêmio Inovação EBM para o SUS</td></tr>
+<tr><td><strong>Destaque</strong></td><td>Parceira da <a href="https://sbeb.org.br">SBEB</a> no Prêmio Inovação EBM para o SUS</td></tr>
 <tr><td><strong>Candidatura</strong></td><td>bostonscientific.com/careers</td></tr>
 </tbody>
 </table>
@@ -214,7 +214,7 @@ export const artigo: Artigo = {
 <tbody>
 <tr><td><strong>Sede</strong></td><td>Curitiba/PR</td></tr>
 <tr><td><strong>Especialidade</strong></td><td>Dispositivos para oncologia e cirurgia</td></tr>
-<tr><td><strong>Destaque</strong></td><td>Certificações FDA (EUA), CE (Europa) e ANVISA; empresa nacional com competitividade global</td></tr>
+<tr><td><strong>Destaque</strong></td><td>Certificações <a href="https://www.fda.gov/medical-devices">FDA</a> (EUA), CE (Europa) e <a href="https://www.gov.br/anvisa">ANVISA</a>; empresa nacional com competitividade global</td></tr>
 </tbody>
 </table>
 

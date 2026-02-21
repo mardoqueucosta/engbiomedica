@@ -16,7 +16,7 @@ export const artigo: Artigo = {
 
 <h2>Metodologia: de onde vêm os dados</h2>
 
-<p>Todos os dados salariais deste artigo são extraídos do <strong>CAGED (Cadastro Geral de Empregados e Desempregados)</strong>, mantido pelo Ministério do Trabalho e Emprego (MTE), consolidados pelo Portal Salário. O CAGED registra admissões e desligamentos formais (regime CLT) no Brasil.</p>
+<p>Todos os dados salariais deste artigo são extraídos do <strong><a href="https://www.gov.br/trabalho-e-emprego">CAGED</a> (Cadastro Geral de Empregados e Desempregados)</strong>, mantido pelo Ministério do Trabalho e Emprego (MTE), consolidados pelo Portal Salário. O CAGED registra admissões e desligamentos formais (regime CLT) no Brasil.</p>
 
 <p>Os valores referem-se a <strong>CBO 2143-80 (Engenheiro Biomédico)</strong> e, complementarmente, a <strong>CBO 2011-05 (Bioengenheiro)</strong>. A data de referência é <strong>fevereiro de 2026</strong>, com dados dos últimos 12 meses.</p>
 
@@ -212,7 +212,7 @@ export const artigo: Artigo = {
 
 <h2>Piso salarial legal (Lei 4.950-A/1966)</h2>
 
-<p>O engenheiro biomédico, como todo engenheiro registrado no CREA, é contemplado pela <strong>Lei 4.950-A/1966</strong>, que estabelece um salário mínimo profissional vinculado ao salário mínimo vigente:</p>
+<p>O engenheiro biomédico, como todo engenheiro registrado no <a href="https://www.crea-sp.org.br">CREA</a>, é contemplado pela <strong>Lei 4.950-A/1966</strong>, que estabelece um salário mínimo profissional vinculado ao salário mínimo vigente:</p>
 
 <table>
   <thead>

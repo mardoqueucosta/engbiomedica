@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '13 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Todo dispositivo médico comercializado no Brasil — de um estetoscópio a um robô cirúrgico — precisa passar pela ANVISA.</strong> A Agência Nacional de Vigilância Sanitária regula todo o ciclo de vida dos dispositivos médicos: da fabricação ao descarte, passando por registro, comercialização, vigilância pós-mercado e recall. Para o engenheiro biomédico que atua na indústria, no regulatório ou em engenharia clínica, dominar esse arcabouço é competência essencial.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Todo dispositivo médico comercializado no Brasil — de um estetoscópio a um robô cirúrgico — precisa passar pela <a href="https://www.gov.br/anvisa">ANVISA</a>.</strong> A Agência Nacional de Vigilância Sanitária regula todo o ciclo de vida dos dispositivos médicos: da fabricação ao descarte, passando por registro, comercialização, vigilância pós-mercado e recall. Para o engenheiro biomédico que atua na indústria, no regulatório ou em engenharia clínica, dominar esse arcabouço é competência essencial.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
@@ -77,7 +77,7 @@ export const artigo: Artigo = {
 
 <p><strong>Relatório de análise de risco (ISO 14971):</strong> Identificação de perigos, estimativa de probabilidade e severidade, medidas de controle de risco, avaliação do risco residual.</p>
 
-<p><strong>Relatório de testes de segurança e desempenho:</strong> Para equipamentos eletromédicos, testes conforme IEC 60601-1 (requisitos gerais) e normas particulares aplicáveis (IEC 60601-2-xx). Ensaios de segurança elétrica, compatibilidade eletromagnética (EMC), desempenho essencial.</p>
+<p><strong>Relatório de testes de segurança e desempenho:</strong> Para equipamentos eletromédicos, testes conforme <a href="https://www.iec.ch">IEC</a> 60601-1 (requisitos gerais) e normas particulares aplicáveis (IEC 60601-2-xx). Ensaios de segurança elétrica, compatibilidade eletromagnética (EMC), desempenho essencial.</p>
 
 <p><strong>Dados de biocompatibilidade (quando aplicável):</strong> Conforme ISO 10993, para dispositivos que entram em contato com tecidos ou fluidos corporais.</p>
 
@@ -94,7 +94,7 @@ export const artigo: Artigo = {
 <p>A BPF é uma certificação obrigatória para fabricantes. A ANVISA realiza inspeções nas unidades fabris para verificar:</p>
 
 <ul>
-<li>Sistema de gestão da qualidade (alinhado à ISO 13485)</li>
+<li>Sistema de gestão da qualidade (alinhado à <a href="https://www.iso.org">ISO</a> 13485)</li>
 <li>Controle de projeto (design controls)</li>
 <li>Controle de produção e processos</li>
 <li>Rastreabilidade de materiais e componentes</li>
@@ -159,7 +159,7 @@ export const artigo: Artigo = {
 
 <h2>Certificação compulsória (INMETRO)</h2>
 
-<p>Alguns dispositivos médicos estão sujeitos à <strong>certificação compulsória pelo INMETRO</strong>, além do registro na ANVISA. Equipamentos eletromédicos que se enquadram na IEC 60601-1 são os principais alvos.</p>
+<p>Alguns dispositivos médicos estão sujeitos à <strong>certificação compulsória pelo <a href="https://www.gov.br/inmetro">INMETRO</a></strong>, além do registro na ANVISA. Equipamentos eletromédicos que se enquadram na IEC 60601-1 são os principais alvos.</p>
 
 <p>A certificação INMETRO é realizada por Organismos de Certificação de Produto (OCPs) acreditados e inclui ensaios de segurança elétrica, compatibilidade eletromagnética e desempenho.</p>
 
@@ -181,7 +181,7 @@ export const artigo: Artigo = {
 
 <h2>Harmonização internacional</h2>
 
-<p>O Brasil participa do <strong>IMDRF</strong> (International Medical Device Regulators Forum) e do <strong>GHTF</strong> (Global Harmonization Task Force), buscando alinhamento regulatório com EUA (FDA), Europa (MDR), Japão (PMDA) e outros mercados.</p>
+<p>O Brasil participa do <strong>IMDRF</strong> (International Medical Device Regulators Forum) e do <strong>GHTF</strong> (Global Harmonization Task Force), buscando alinhamento regulatório com EUA (<a href="https://www.fda.gov/medical-devices">FDA</a>), Europa (MDR), Japão (PMDA) e outros mercados.</p>
 
 <p>Para o engenheiro biomédico, isso significa que conhecer a regulação da ANVISA é um passo para entender regulações internacionais — e vice-versa. A estrutura de classes de risco, a abordagem baseada em análise de risco (ISO 14971) e os requisitos de gestão da qualidade (ISO 13485) são harmonizados globalmente.</p>
 
@@ -194,7 +194,7 @@ export const artigo: Artigo = {
 <p>As taxas variam conforme o tipo de petição. Para registro de Classe III/IV, as taxas podem somar R$ 15.000 a R$ 40.000 (incluindo análise e BPF). Para notificação, valores menores.</p>
 
 <p><strong>Engenheiro biomédico pode assinar dossiê regulatório?</strong></p>
-<p>Sim, na função de responsável técnico da empresa (registro no CREA). Em muitas empresas, o profissional que coordena o dossiê é o especialista em assuntos regulatórios, que pode ou não ser engenheiro.</p>
+<p>Sim, na função de responsável técnico da empresa (registro no <a href="https://www.crea-sp.org.br">CREA</a>). Em muitas empresas, o profissional que coordena o dossiê é o especialista em assuntos regulatórios, que pode ou não ser engenheiro.</p>
 
 <p><strong>O que é o Sandbox Regulatório da ANVISA?</strong></p>
 <p>Ambiente regulatório experimental que permite testar inovações sob supervisão da ANVISA antes da regulamentação definitiva. Voltado especialmente para IA em saúde e dispositivos inovadores. Criado pelo Marco Legal das Startups (LC 182/2021).</p>

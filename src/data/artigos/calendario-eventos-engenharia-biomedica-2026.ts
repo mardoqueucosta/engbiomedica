@@ -25,7 +25,7 @@ export const artigo: Artigo = {
 <tbody>
 <tr><td><strong>Data</strong></td><td>28 de setembro a 2 de outubro de 2026</td></tr>
 <tr><td><strong>Local</strong></td><td>Fortaleza/CE</td></tr>
-<tr><td><strong>Organização</strong></td><td>SBEB (Sociedade Brasileira de Engenharia Biomédica)</td></tr>
+<tr><td><strong>Organização</strong></td><td><a href="https://sbeb.org.br">SBEB</a> (Sociedade Brasileira de Engenharia Biomédica)</td></tr>
 <tr><td><strong>Presidente</strong></td><td>Victor Hugo C. de Albuquerque (UFC)</td></tr>
 <tr><td><strong>Edição</strong></td><td>30ª (edição comemorativa — SBEB completa 51 anos)</td></tr>
 <tr><td><strong>Público</strong></td><td>Pesquisadores, estudantes, profissionais e empresas</td></tr>
@@ -100,7 +100,7 @@ export const artigo: Artigo = {
 
 <p><strong>Simpósios da SBEB</strong> — A SBEB organiza simpósios temáticos regionais ao longo do ano, sobre temas como IA em saúde, instrumentação, processamento de sinais e engenharia clínica. Acompanhe o calendário em sbeb.org.br.</p>
 
-<p><strong>Seminários ANVISA</strong> — A ANVISA realiza periodicamente seminários e consultas públicas sobre regulação de dispositivos médicos, SaMD e IA em saúde. Participar é gratuito e essencial para profissionais de assuntos regulatórios.</p>
+<p><strong>Seminários ANVISA</strong> — A <a href="https://www.gov.br/anvisa">ANVISA</a> realiza periodicamente seminários e consultas públicas sobre regulação de dispositivos médicos, SaMD e IA em saúde. Participar é gratuito e essencial para profissionais de assuntos regulatórios.</p>
 
 <p><strong>Jornadas universitárias</strong> — Diversas universidades (UFPE, UFABC, UFU, PUC-PR) organizam jornadas e semanas acadêmicas de engenharia biomédica, com palestras, workshops e apresentação de projetos de pesquisa.</p>
 
@@ -115,7 +115,7 @@ export const artigo: Artigo = {
 <tbody>
 <tr><td><strong>Data</strong></td><td>Julho de 2026 (data exata a confirmar)</td></tr>
 <tr><td><strong>Local</strong></td><td>A confirmar (geralmente alterna entre América, Europa e Ásia)</td></tr>
-<tr><td><strong>Organização</strong></td><td>IEEE Engineering in Medicine and Biology Society (EMBS)</td></tr>
+<tr><td><strong>Organização</strong></td><td><a href="https://www.ieee.org">IEEE</a> Engineering in Medicine and Biology Society (<a href="https://www.embs.org">EMBS</a>)</td></tr>
 <tr><td><strong>Público</strong></td><td>Pesquisadores, acadêmicos, indústria</td></tr>
 </tbody>
 </table>
@@ -135,7 +135,7 @@ export const artigo: Artigo = {
 <tbody>
 <tr><td><strong>Data</strong></td><td>Outubro de 2026 (data exata a confirmar)</td></tr>
 <tr><td><strong>Local</strong></td><td>A confirmar (geralmente em grandes cidades americanas)</td></tr>
-<tr><td><strong>Organização</strong></td><td>Biomedical Engineering Society (BMES)</td></tr>
+<tr><td><strong>Organização</strong></td><td>Biomedical Engineering Society (<a href="https://www.bmes.org">BMES</a>)</td></tr>
 <tr><td><strong>Público</strong></td><td>Pesquisadores, estudantes, indústria (foco nos EUA)</td></tr>
 </tbody>
 </table>
@@ -227,7 +227,7 @@ export const artigo: Artigo = {
 <tr><th>Tipo de evento</th><th>Custo estimado (inscrição)</th><th>Dica de financiamento</th></tr>
 </thead>
 <tbody>
-<tr><td>CBEB (estudante)</td><td>R$ 200-500</td><td>Bolsa de IC, verba de projeto, auxílio-evento CAPES/CNPq</td></tr>
+<tr><td>CBEB (estudante)</td><td>R$ 200-500</td><td>Bolsa de IC, verba de projeto, auxílio-evento <a href="https://www.gov.br/capes">CAPES</a>/<a href="https://www.gov.br/cnpq">CNPq</a></td></tr>
 <tr><td>CBEB (profissional)</td><td>R$ 500-1.200</td><td>Empresa empregadora, ABEClin</td></tr>
 <tr><td>Feira Hospitalar</td><td>Gratuito (credenciamento profissional)</td><td>—</td></tr>
 <tr><td>IEEE EMBC (estudante)</td><td>US$ 400-600</td><td>Bolsa FAPESP, auxílio-evento, projeto de pesquisa</td></tr>
@@ -236,7 +236,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>A maioria dos programas de pós-graduação possui verba para participação em congressos. Para estudantes de graduação com IC, a FAPESP e o CNPq oferecem auxílio-participação em eventos. Profissionais devem negociar com empregadores o custeio de pelo menos um evento anual.</p>
+<p>A maioria dos programas de pós-graduação possui verba para participação em congressos. Para estudantes de graduação com IC, a <a href="https://fapesp.br">FAPESP</a> e o CNPq oferecem auxílio-participação em eventos. Profissionais devem negociar com empregadores o custeio de pelo menos um evento anual.</p>
 
 <h2>Perguntas frequentes</h2>
 

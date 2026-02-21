@@ -8,7 +8,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '16 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Poucos profissionais de engenharia têm tantas opções de carreira quanto o engenheiro biomédico.</strong> Da UTI de um hospital público ao laboratório de inteligência artificial de uma startup, do escritório de regulamentação da ANVISA à sala limpa de uma fábrica de implantes — a Engenharia Biomédica oferece caminhos radicalmente diferentes entre si, todos unidos pelo mesmo propósito: usar tecnologia para cuidar da saúde das pessoas.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Poucos profissionais de engenharia têm tantas opções de carreira quanto o engenheiro biomédico.</strong> Da UTI de um hospital público ao laboratório de inteligência artificial de uma startup, do escritório de regulamentação da <a href="https://www.gov.br/anvisa">ANVISA</a> à sala limpa de uma fábrica de implantes — a Engenharia Biomédica oferece caminhos radicalmente diferentes entre si, todos unidos pelo mesmo propósito: usar tecnologia para cuidar da saúde das pessoas.</p>
 
 <p class="mb-6">Este artigo detalha cada uma das 12 principais áreas de atuação, com descrição prática do trabalho, perfil ideal, mercado de trabalho e perspectivas futuras. Se você está escolhendo sua especialização ou considerando uma transição de carreira, este guia vai ajudar a encontrar o caminho certo.</p>
 
@@ -62,7 +62,7 @@ export const artigo: Artigo = {
 <p>Desenvolvimento de <strong>algoritmos e softwares para analisar sinais biomédicos e imagens médicas</strong>. Inclui desde filtragem e detecção de padrões em ECGs até segmentação automática de tumores em ressonâncias magnéticas.</p>
 
 <h3>O que faz no dia a dia</h3>
-<p>Implementa algoritmos de processamento digital de sinais (FFT, wavelets, filtros adaptativos), desenvolve pipelines de pré-processamento de imagens DICOM, cria modelos de machine learning para classificação e detecção, valida resultados com médicos especialistas (radiologistas, cardiologistas) e publica resultados em periódicos como IEEE Transactions on Medical Imaging.</p>
+<p>Implementa algoritmos de processamento digital de sinais (FFT, wavelets, filtros adaptativos), desenvolve pipelines de pré-processamento de imagens DICOM, cria modelos de machine learning para classificação e detecção, valida resultados com médicos especialistas (radiologistas, cardiologistas) e publica resultados em periódicos como <a href="https://www.ieee.org">IEEE</a> Transactions on Medical Imaging.</p>
 
 <h3>Perfil ideal</h3>
 <p>Quem gosta de matemática, programação (Python, MATLAB, C++) e tem interesse tanto em teoria (processamento de sinais, álgebra linear) quanto em aplicação clínica.</p>
@@ -108,7 +108,7 @@ export const artigo: Artigo = {
 <p>Quem tem afinidade com química, biologia celular e ciência dos materiais. É a área mais "científica" da Engenharia Biomédica, frequentemente combinada com pesquisa acadêmica.</p>
 
 <h3>Mercado</h3>
-<p>Predominantemente acadêmico e em centros de pesquisa (USP, UNICAMP, UFRJ, UFMG). Empresas de implantes, indústria farmacêutica e startups de medicina regenerativa. No Brasil, empresas como 3DBS (bioimpressão, financiada pelo PIPE-FAPESP) representam o ecossistema nascente.</p>
+<p>Predominantemente acadêmico e em centros de pesquisa (USP, UNICAMP, UFRJ, UFMG). Empresas de implantes, indústria farmacêutica e startups de medicina regenerativa. No Brasil, empresas como 3DBS (bioimpressão, financiada pelo PIPE-<a href="https://fapesp.br">FAPESP</a>) representam o ecossistema nascente.</p>
 
 <h3>Salário médio</h3>
 <p>R$ 7.000 a R$ 13.000/mês (indústria); R$ 10.000 a R$ 22.000/mês (docência em universidades federais).</p>
@@ -199,7 +199,7 @@ export const artigo: Artigo = {
 <h2>10. Regulação e Assuntos Regulatórios</h2>
 
 <h3>O que é</h3>
-<p>A área dedicada a garantir que dispositivos médicos cumpram <strong>todos os requisitos regulatórios</strong> antes de chegarem ao mercado. Envolve registro na ANVISA, conformidade com normas técnicas (IEC 60601, ISO 13485, ISO 14971), vigilância pós-mercado e certificações internacionais (FDA, CE).</p>
+<p>A área dedicada a garantir que dispositivos médicos cumpram <strong>todos os requisitos regulatórios</strong> antes de chegarem ao mercado. Envolve registro na ANVISA, conformidade com normas técnicas (IEC 60601, ISO 13485, ISO 14971), vigilância pós-mercado e certificações internacionais (<a href="https://www.fda.gov/medical-devices">FDA</a>, CE).</p>
 
 <h3>O que faz no dia a dia</h3>
 <p>Prepara dossiês técnicos para registro de dispositivos na ANVISA, conduz análises de risco conforme ISO 14971, coordena testes de segurança e desempenho em laboratórios acreditados, implementa e audita sistemas de gestão da qualidade (ISO 13485), monitora notificações de tecnovigilância e acompanha mudanças regulatórias (novas RDCs, consultas públicas).</p>

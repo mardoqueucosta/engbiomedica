@@ -98,7 +98,7 @@ export const artigo: Artigo = {
 
 <p><strong>Semestre 7:</strong> Processamento de Imagens Médicas, Engenharia Clínica, Biomecânica, Engenharia de Tecidos, disciplinas eletivas de especialização.</p>
 
-<p><strong>Semestre 8:</strong> Regulação de Produtos para Saúde (ANVISA/IEC 60601), Inteligência Artificial aplicada à Saúde, Metrologia Biomédica, Dispositivos Implantáveis e Próteses, mais eletivas.</p>
+<p><strong>Semestre 8:</strong> Regulação de Produtos para Saúde (<a href="https://www.gov.br/anvisa">ANVISA</a>/IEC 60601), Inteligência Artificial aplicada à Saúde, Metrologia Biomédica, Dispositivos Implantáveis e Próteses, mais eletivas.</p>
 
 <h3>O que esperar</h3>
 
@@ -148,13 +148,13 @@ export const artigo: Artigo = {
 
 <p>O mercado absorve engenheiros biomédicos recém-formados em engenharia clínica (hospitais), indústria (empresas como Philips, GE, Siemens, Medtronic), startups de saúde e consultorias. O salário inicial médio é de R$ 7.659/mês (nível júnior conforme CAGED).</p>
 
-<p>A pós-graduação (mestrado e doutorado) é o caminho para quem deseja pesquisa, docência ou especialização profunda em áreas de ponta como IA em saúde, neuroengenharia ou biomateriais. O PEB/COPPE/UFRJ (conceito CAPES 6), UFPE, UNICAMP e USP são as referências.</p>
+<p>A pós-graduação (mestrado e doutorado) é o caminho para quem deseja pesquisa, docência ou especialização profunda em áreas de ponta como IA em saúde, neuroengenharia ou biomateriais. O PEB/COPPE/UFRJ (conceito <a href="https://www.gov.br/capes">CAPES</a> 6), UFPE, UNICAMP e USP são as referências.</p>
 
 <p>O mestrado profissional da UTFPR é uma opção interessante para quem quer combinar pós-graduação com atuação no mercado.</p>
 
 <h3>Dica de sobrevivência</h3>
 
-<p>Comece a buscar emprego ou programa de pós desde o 9º semestre. Networking construído durante iniciação científica, estágio e congressos (como o CBEB da SBEB) é decisivo.</p>
+<p>Comece a buscar emprego ou programa de pós desde o 9º semestre. Networking construído durante iniciação científica, estágio e congressos (como o CBEB da <a href="https://sbeb.org.br">SBEB</a>) é decisivo.</p>
 
 <h2>Os maiores desafios do curso</h2>
 

@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   conteudo: `
 <p class="text-lg leading-relaxed mb-6"><strong>Engenharia Biomédica e Biomedicina compartilham quatro sílabas no nome — e praticamente nada mais.</strong> São profissões com formações diferentes, conselhos reguladores diferentes, atuações que quase não se sobrepõem e salários com diferença de mais de 160%. Mesmo assim, a confusão entre elas é uma das dúvidas mais pesquisadas por vestibulandos no Google Brasil.</p>
 
-<p class="mb-6">Este artigo resolve definitivamente essa questão. Comparamos as duas profissões em 15 dimensões, com dados verificáveis do CAGED, MEC e conselhos profissionais, para que você possa fazer uma escolha informada.</p>
+<p class="mb-6">Este artigo resolve definitivamente essa questão. Comparamos as duas profissões em 15 dimensões, com dados verificáveis do CAGED, <a href="https://www.gov.br/mec">MEC</a> e conselhos profissionais, para que você possa fazer uma escolha informada.</p>
 
 <blockquote>
 <p>Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
@@ -49,7 +49,7 @@ export const artigo: Artigo = {
 <li>Projeta e desenvolve equipamentos médicos (monitores, ventiladores, próteses)</li>
 <li>Gerencia tecnologia em hospitais (engenharia clínica)</li>
 <li>Desenvolve softwares médicos e algoritmos de IA para diagnóstico</li>
-<li>Registra dispositivos médicos na ANVISA</li>
+<li>Registra dispositivos médicos na <a href="https://www.gov.br/anvisa">ANVISA</a></li>
 <li>Pesquisa biomateriais, bioimpressão 3D e nanotecnologia</li>
 <li>Instala, calibra e mantém equipamentos médicos</li>
 </ul>
@@ -66,7 +66,7 @@ export const artigo: Artigo = {
 
 <h3>4. Conselho profissional</h3>
 
-<p><strong>Engenharia Biomédica:</strong> Regulamentada pelo <strong>CONFEA/CREA</strong> (Conselho Federal de Engenharia e Agronomia), sob a Lei 5.194/1966. O registro no CREA é obrigatório. Resolução CONFEA 1.103/2018 define as atribuições.</p>
+<p><strong>Engenharia Biomédica:</strong> Regulamentada pelo <strong><a href="https://www.confea.org.br">CONFEA</a>/<a href="https://www.crea-sp.org.br">CREA</a></strong> (Conselho Federal de Engenharia e Agronomia), sob a Lei 5.194/1966. O registro no CREA é obrigatório. Resolução CONFEA 1.103/2018 define as atribuições.</p>
 
 <p><strong>Biomedicina:</strong> Regulamentada pelo <strong>CFBM/CRBM</strong> (Conselho Federal de Biomedicina), sob a Lei 6.684/1979. O registro no CRBM é obrigatório.</p>
 
@@ -140,7 +140,7 @@ export const artigo: Artigo = {
 
 <h3>11. Nota de corte (ENEM/SiSU)</h3>
 
-<p><strong>Engenharia Biomédica:</strong> Média de <strong>667,76 pontos</strong> no SiSU 2025. As notas mais altas ficam em UFU (754,24), UFPE (750,23) e UFRN (715,53).</p>
+<p><strong>Engenharia Biomédica:</strong> Média de <strong>667,76 pontos</strong> no <a href="https://sisu.mec.gov.br">SiSU</a> 2025. As notas mais altas ficam em UFU (754,24), UFPE (750,23) e UFRN (715,53).</p>
 
 <p><strong>Biomedicina:</strong> Notas de corte geralmente entre 650 e 780 pontos em federais. Medicina e Biomedicina costumam ter notas mais altas que Engenharia Biomédica nas mesmas universidades, por serem cursos de saúde com forte demanda.</p>
 
@@ -158,7 +158,7 @@ export const artigo: Artigo = {
 
 <h3>14. Possibilidade de empreender</h3>
 
-<p><strong>Engenharia Biomédica</strong> oferece possibilidades amplas de empreendedorismo em medtech e healthtech. A Magnamed (ventiladores, fundada por 3 engenheiros) e a brain4care (neuromonitoramento, clearance FDA) são exemplos. O Brasil tem 1.919 healthtechs, muitas fundadas por engenheiros biomédicos.</p>
+<p><strong>Engenharia Biomédica</strong> oferece possibilidades amplas de empreendedorismo em medtech e healthtech. A Magnamed (ventiladores, fundada por 3 engenheiros) e a brain4care (neuromonitoramento, clearance <a href="https://www.fda.gov/medical-devices">FDA</a>) são exemplos. O Brasil tem 1.919 healthtechs, muitas fundadas por engenheiros biomédicos.</p>
 
 <p><strong>Biomedicina</strong> permite empreender em laboratórios de análises clínicas, clínicas de estética (com habilitações específicas) e startups de diagnóstico.</p>
 

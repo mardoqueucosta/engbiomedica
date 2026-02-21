@@ -25,11 +25,20 @@ const nextConfig = {
       { source: '/eventos', destination: '/artigos/calendario-eventos-engenharia-biomedica-2026', permanent: true },
       { source: '/internacional/eua', destination: '/artigos/engenharia-biomedica-eua-vs-brasil', permanent: true },
       { source: '/startups', destination: '/artigos/healthtechs-brasil-ecossistema', permanent: true },
-      { source: '/internacional', destination: '/mercado', permanent: true },
+      { source: '/internacional', destination: '/artigos/engenharia-biomedica-eua-vs-brasil', permanent: true },
     ];
   },
   async headers() {
     return [
+      {
+        source: '/artigos/:slug/:file(.*\\.webp)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       {
         source: '/:path((?!_next/static|_next/image|api/).*)',
         headers: [

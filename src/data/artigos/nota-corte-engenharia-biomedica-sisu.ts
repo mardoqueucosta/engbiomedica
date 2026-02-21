@@ -8,7 +8,7 @@ export const artigo: Artigo = {
   data: '2026-02-17',
   leitura: '10 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>Entrar em Engenharia Biomédica por uma universidade pública federal exige notas competitivas no ENEM</strong> — em algumas universidades, comparáveis a cursos tradicionais como Engenharia Civil e Engenharia Elétrica. Este artigo reúne todas as notas de corte do SiSU 2025, analisa o nível de concorrência e oferece orientações práticas para quem está se preparando.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>Entrar em Engenharia Biomédica por uma universidade pública federal exige notas competitivas no ENEM</strong> — em algumas universidades, comparáveis a cursos tradicionais como Engenharia Civil e Engenharia Elétrica. Este artigo reúne todas as notas de corte do <a href="https://sisu.mec.gov.br">SiSU</a> 2025, analisa o nível de concorrência e oferece orientações práticas para quem está se preparando.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 

@@ -4,6 +4,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
+import { extractFaqItems } from '@/lib/extract-faq';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', {
@@ -32,7 +33,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       description: meta.resumo,
       type: 'article',
       publishedTime: meta.data,
-      modifiedTime: meta.data,
+      modifiedTime: meta.dataModificacao || meta.data,
       images: [{ url: ogImage, width: 1200, height: 630, alt: meta.titulo }],
     },
     twitter: {
@@ -53,26 +54,103 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
 
   const articleUrl = `https://engenhariabiomedica.com/artigos/${params.slug}`;
 
+  const ogImageUrl = `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`;
+  const articleImages = meta.imagens?.length
+    ? [ogImageUrl, ...meta.imagens.map((img) => `https://engenhariabiomedica.com${img.src}`)]
+    : ogImageUrl;
+
+  const conteudoHtml = typeof artigo.conteudo === 'string' ? artigo.conteudo : '';
+  const faqItems = extractFaqItems(conteudoHtml);
+
+  // Schema.org ImageObject individual por imagem
+  const imageObjects = meta.imagens?.map((img) => ({
+    '@type': 'ImageObject',
+    url: `https://engenhariabiomedica.com${img.src}`,
+    contentUrl: `https://engenhariabiomedica.com${img.src}`,
+    caption: img.caption,
+    description: img.alt,
+    width: 1024,
+    height: 576,
+    encodingFormat: 'image/webp',
+  })) || [];
+
+  // Entity linking — about/mentions para organizações citadas
+  const knownEntities: Record<string, { name: string; url: string; sameAs?: string[] }> = {
+    anvisa: { name: 'ANVISA', url: 'https://www.gov.br/anvisa', sameAs: ['https://pt.wikipedia.org/wiki/Ag%C3%AAncia_Nacional_de_Vigil%C3%A2ncia_Sanit%C3%A1ria'] },
+    fda: { name: 'FDA', url: 'https://www.fda.gov', sameAs: ['https://en.wikipedia.org/wiki/Food_and_Drug_Administration'] },
+    ieee: { name: 'IEEE', url: 'https://www.ieee.org', sameAs: ['https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers'] },
+    abimo: { name: 'ABIMO', url: 'https://abimo.org.br' },
+    abimed: { name: 'ABIMED', url: 'https://abimed.org.br' },
+  };
+
+  const contentLower = conteudoHtml.toLowerCase();
+  const mentionedEntities = Object.entries(knownEntities)
+    .filter(([key]) => contentLower.includes(key))
+    .map(([, entity]) => ({
+      '@type': 'Organization' as const,
+      name: entity.name,
+      url: entity.url,
+      ...(entity.sameAs ? { sameAs: entity.sameAs } : {}),
+    }));
+
   const jsonLdArticle = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'MedicalWebPage',
     headline: meta.titulo,
     description: meta.resumo,
     datePublished: meta.data,
-    dateModified: meta.data,
-    image: `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`,
+    dateModified: meta.dataModificacao || meta.data,
+    image: imageObjects.length > 0
+      ? [ogImageUrl, ...imageObjects]
+      : ogImageUrl,
     author: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
       url: 'https://engenhariabiomedica.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://engenhariabiomedica.com/icon.svg',
+      },
+      description: 'Portal brasileiro de referência em Engenharia Biomédica: artigos técnicos, guias de carreira e análises do setor de dispositivos médicos.',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Engenharia Biomédica',
       url: 'https://engenhariabiomedica.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://engenhariabiomedica.com/icon.svg',
+      },
     },
-    mainEntityOfPage: articleUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    articleSection: meta.categoria,
+    inLanguage: 'pt-BR',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.text-lg.leading-relaxed', 'h2', '.prose p:first-of-type'],
+    },
+    ...(mentionedEntities.length > 0 ? { mentions: mentionedEntities } : {}),
+    about: {
+      '@type': 'MedicalSpecialty',
+      name: 'Engenharia Biomédica',
+    },
   };
+
+  const jsonLdFaq = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -109,6 +187,12 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
+      {jsonLdFaq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+        />
+      )}
       <PageHeader
         overline={meta.categoria}
         title={meta.titulo}

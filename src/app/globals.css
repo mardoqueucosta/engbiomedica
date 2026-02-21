@@ -83,6 +83,15 @@
   .prose nav a {
     @apply text-sm no-underline hover:underline;
   }
+  .prose figure {
+    @apply my-8 mx-0;
+  }
+  .prose figure img {
+    @apply w-full h-auto rounded-lg shadow-card;
+  }
+  .prose figcaption {
+    @apply mt-2 text-center text-body-sm text-slate-400 italic font-serif;
+  }
 
   /* Data/mono context */
   .data-text {
