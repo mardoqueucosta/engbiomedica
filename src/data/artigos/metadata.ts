@@ -413,6 +413,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/grade-curricular-engenharia-biomedica-5-anos/image-3.webp', alt: 'Visualização conceitual dos quatro eixos de especialização em Engenharia Biomédica: Sinais, Biomecânica, Sistemas Inteligentes e Instrumentação.', caption: 'Os eixos de especialização da Engenharia Biomédica, como no modelo da UFABC, guiam os estudantes para áreas como Sinais e Imagens, Biomecânica, Sistemas Inteligentes e Instrumentação.' },
     ],
   },
+  {
+    slug: 'diferenca-biomedicina-engenharia-biomedica-guia',
+    titulo: 'Diferença entre Engenharia Biomédica e Biomedicina: Guia Definitivo [2026]',
+    resumo: 'Engenharia biomédica ou biomedicina? Entenda a diferença real: CREA vs CRBM, salário R$ 8.658 vs R$ 3.268, currículo, mercado e como escolher o curso certo para você.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '22 min',
+    imagens: [
+      { src: '/artigos/diferenca-biomedicina-engenharia-biomedica-guia/image-1.webp', alt: 'Infográfico comparando Engenharia Biomédica e Biomedicina, mostrando diferenças em conselho profissional, salário e foco de atuação.', caption: 'Visão geral comparativa entre Engenharia Biomédica e Biomedicina, destacando as áreas de atuação, conselhos reguladores (CREA e CRBM) e a diferença salarial média entre as profissões.' },
+      { src: '/artigos/diferenca-biomedicina-engenharia-biomedica-guia/image-2.webp', alt: 'Tomógrafo de última geração em desenvolvimento, mostrando circuitos internos e software de design, com selo de certificação ANVISA, representando engenharia biomédica.', caption: 'O engenheiro biomédico atua no projeto e desenvolvimento de equipamentos médicos complexos, como tomógrafos, integrando eletrônica, software e biomateriais, e garantindo sua conformidade regulatória com a ANVISA.' },
+      { src: '/artigos/diferenca-biomedicina-engenharia-biomedica-guia/image-3.webp', alt: 'Infográfico comparativo de salários entre Engenheiro Biomédico e Biomédico, destacando a diferença de R$ 5.390 e o piso legal da engenharia.', caption: 'A análise salarial detalhada revela uma diferença significativa de remuneração entre Engenharia Biomédica e Biomedicina, impulsionada pela escassez de profissionais e pelo piso salarial legal da engenharia.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */
