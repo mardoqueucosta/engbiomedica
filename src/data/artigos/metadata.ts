@@ -385,6 +385,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/quanto-ganha-engenheiro-biomedico-2026/image-3.webp', alt: 'Comparação de salários entre engenharias mostrando posição da engenharia biomédica no ranking CAGED 2026', caption: 'Ranking salarial das engenharias (CAGED 2026): a biomédica compensa o salário menor com crescimento de contratações de 50%' },
     ],
   },
+  {
+    slug: 'todas-faculdades-engenharia-biomedica-brasil-ranking',
+    titulo: 'Todas as Faculdades de Engenharia Biomédica no Brasil: Ranking, Notas e Comparativo [2026]',
+    resumo: 'Lista completa das 29 faculdades de engenharia biomédica no Brasil em 2026: 8 públicas federais e 21 privadas, com notas MEC, notas de corte SiSU, mensalidades e comparativo.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '16 min',
+    imagens: [
+      { src: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking/image-1.webp', alt: 'Mapa do Brasil com localização das 8 universidades federais que oferecem engenharia biomédica', caption: 'As 8 universidades federais com graduação em engenharia biomédica — concentração no Sudeste e vazios no Centro-Oeste' },
+      { src: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking/image-2.webp', alt: 'Gráfico de notas de corte SiSU 2025 para engenharia biomédica nas universidades federais brasileiras', caption: 'Notas de corte SiSU 2025: UFU lidera com 754 pontos (pesos iguais) — média nacional de 667 pontos posiciona o curso no top 40' },
+      { src: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking/image-3.webp', alt: 'Mapa de distribuição geográfica dos cursos de engenharia biomédica no Brasil por região', caption: 'Desigualdade regional: 67% dos cursos estão no Sudeste enquanto o Centro-Oeste não possui nenhum programa' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

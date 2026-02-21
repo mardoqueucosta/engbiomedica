@@ -40,6 +40,7 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'engenharia-biomedica-vale-a-pena': () => import('./engenharia-biomedica-vale-a-pena'),
   'engenharia-biomedica-vale-a-pena-v2': () => import('./engenharia-biomedica-vale-a-pena-v2'),
   'quanto-ganha-engenheiro-biomedico-2026': () => import('./quanto-ganha-engenheiro-biomedico-2026'),
+  'todas-faculdades-engenharia-biomedica-brasil-ranking': () => import('./todas-faculdades-engenharia-biomedica-brasil-ranking'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {
