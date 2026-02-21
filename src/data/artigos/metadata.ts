@@ -379,6 +379,11 @@ export const artigosMeta: ArtigoMeta[] = [
     categoriaVariant: 'teal',
     data: '2026-02-20',
     leitura: '12 min',
+    imagens: [
+      { src: '/artigos/quanto-ganha-engenheiro-biomedico-2026/image-1.webp', alt: 'Infográfico de salário do engenheiro biomédico por nível de experiência com dados CAGED 2026', caption: 'Progressão salarial do engenheiro biomédico: do júnior (R$ 7.659) ao sênior (R$ 13.262), com crescimento de 73% — dados CAGED 2026' },
+      { src: '/artigos/quanto-ganha-engenheiro-biomedico-2026/image-2.webp', alt: 'Engenheiro biomédico atuando em engenharia clínica hospitalar com equipamentos médicos ao fundo', caption: 'Engenheiro clínico em hospital: o setor hospitalar paga entre R$ 5.000 e R$ 6.500/mês, enquanto gestão de saúde chega a R$ 11.051' },
+      { src: '/artigos/quanto-ganha-engenheiro-biomedico-2026/image-3.webp', alt: 'Comparação de salários entre engenharias mostrando posição da engenharia biomédica no ranking CAGED 2026', caption: 'Ranking salarial das engenharias (CAGED 2026): a biomédica compensa o salário menor com crescimento de contratações de 50%' },
+    ],
   },
 ];
 
