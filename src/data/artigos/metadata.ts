@@ -441,6 +441,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-3.webp', alt: 'Infográfico sobre saídas de carreira e salários médios de engenheiros biomédicos com pós-graduação no Brasil.', caption: 'As oportunidades de carreira e o impacto na remuneração para mestres e doutores em Engenharia Biomédica, demonstrando a valorização profissional em diferentes setores.' },
     ],
   },
+  {
+    slug: 'nota-corte-engenharia-biomedica-sisu-2026',
+    titulo: 'Nota de Corte Engenharia Biomédica SiSU 2026: Todas as Universidades e Projeções',
+    resumo: 'Nota de corte atualizada de Engenharia Biomédica no SiSU 2026: ranking completo de todas as universidades federais, tabelas de cotas, evolução histórica 5 anos e projeções com a nova regra do ENEM.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '17 min',
+    imagens: [
+      { src: '/artigos/nota-corte-engenharia-biomedica-sisu-2026/image-1.webp', alt: 'Mapa do Brasil ilustrando universidades federais com Engenharia Biomédica no SiSU, destacando UFU, UFPE, UFRN, UFNT, UFRB e UFABC.', caption: 'A distribuição geográfica das universidades federais que oferecem o curso de Engenharia Biomédica via SiSU, evidenciando as opções de ingresso direto e indireto.' },
+      { src: '/artigos/nota-corte-engenharia-biomedica-sisu-2026/image-2.webp', alt: 'Gráfico de linha mostrando a evolução da nota de corte SiSU para Engenharia Biomédica (UFU, UFPE, UFRN) de 2021 a 2025.', caption: 'Análise da trajetória das notas de corte de Engenharia Biomédica nas principais universidades federais, revelando tendências de alta e baixa nos últimos cinco anos do SiSU.' },
+      { src: '/artigos/nota-corte-engenharia-biomedica-sisu-2026/image-3.webp', alt: 'Diagrama comparativo dos pesos das provas do ENEM (Matemática, Natureza, Linguagens, Humanas, Redação) por universidade (UFU, UFPE, UFRN) para Engenharia Biomédica.', caption: 'Entenda como cada universidade federal pondera as provas do ENEM para o curso de Engenharia Biomédica, um fator crucial para a estratégia de inscrição no SiSU.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

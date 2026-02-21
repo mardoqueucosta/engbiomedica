@@ -51,4 +51,5 @@ export const slugs = [
   'grade-curricular-engenharia-biomedica-5-anos',
   'diferenca-biomedicina-engenharia-biomedica-guia',
   'pos-graduacao-mestrado-doutorado-engenharia-biomedica',
+  'nota-corte-engenharia-biomedica-sisu-2026',
 ];
