@@ -399,6 +399,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking/image-3.webp', alt: 'Mapa de distribuição geográfica dos cursos de engenharia biomédica no Brasil por região', caption: 'Desigualdade regional: 67% dos cursos estão no Sudeste enquanto o Centro-Oeste não possui nenhum programa' },
     ],
   },
+  {
+    slug: 'grade-curricular-engenharia-biomedica-5-anos',
+    titulo: 'Grade Curricular de Engenharia Biomédica: O Que Você Vai Estudar em 5 Anos',
+    resumo: 'Conheça semestre a semestre a grade curricular de Engenharia Biomédica: as disciplinas obrigatórias, os três ciclos de formação, os eixos de especialização, as matérias mais difíceis e como 27 universidades brasileiras organizam os ~3.600 horas do curso.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '21 min',
+    imagens: [
+      { src: '/artigos/grade-curricular-engenharia-biomedica-5-anos/image-1.webp', alt: 'Diagrama da grade curricular de Engenharia Biomédica com três ciclos: Básico, Profissionalizante e Especialização, e carga horária.', caption: 'A estrutura curricular da Engenharia Biomédica no Brasil é dividida em três ciclos pedagógicos, totalizando entre 3.600 e 3.840 horas de formação.' },
+      { src: '/artigos/grade-curricular-engenharia-biomedica-5-anos/image-2.webp', alt: 'Bancada de laboratório de Engenharia Biomédica com osciloscópio, protoboard, computador com Python e impressora 3D de biomateriais.', caption: 'Laboratórios de Engenharia Biomédica são equipados com instrumentação avançada, softwares de simulação e ferramentas de fabricação para o desenvolvimento de dispositivos e biomateriais.' },
+      { src: '/artigos/grade-curricular-engenharia-biomedica-5-anos/image-3.webp', alt: 'Visualização conceitual dos quatro eixos de especialização em Engenharia Biomédica: Sinais, Biomecânica, Sistemas Inteligentes e Instrumentação.', caption: 'Os eixos de especialização da Engenharia Biomédica, como no modelo da UFABC, guiam os estudantes para áreas como Sinais e Imagens, Biomecânica, Sistemas Inteligentes e Instrumentação.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

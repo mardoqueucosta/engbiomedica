@@ -48,4 +48,5 @@ export const slugs = [
   'engenharia-biomedica-vale-a-pena-v2',
   'quanto-ganha-engenheiro-biomedico-2026',
   'todas-faculdades-engenharia-biomedica-brasil-ranking',
+  'grade-curricular-engenharia-biomedica-5-anos',
 ];

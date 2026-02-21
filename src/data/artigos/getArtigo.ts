@@ -41,6 +41,7 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'engenharia-biomedica-vale-a-pena-v2': () => import('./engenharia-biomedica-vale-a-pena-v2'),
   'quanto-ganha-engenheiro-biomedico-2026': () => import('./quanto-ganha-engenheiro-biomedico-2026'),
   'todas-faculdades-engenharia-biomedica-brasil-ranking': () => import('./todas-faculdades-engenharia-biomedica-brasil-ranking'),
+  'grade-curricular-engenharia-biomedica-5-anos': () => import('./grade-curricular-engenharia-biomedica-5-anos'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {
