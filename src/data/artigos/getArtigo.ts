@@ -43,6 +43,7 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'todas-faculdades-engenharia-biomedica-brasil-ranking': () => import('./todas-faculdades-engenharia-biomedica-brasil-ranking'),
   'grade-curricular-engenharia-biomedica-5-anos': () => import('./grade-curricular-engenharia-biomedica-5-anos'),
   'diferenca-biomedicina-engenharia-biomedica-guia': () => import('./diferenca-biomedicina-engenharia-biomedica-guia'),
+  'pos-graduacao-mestrado-doutorado-engenharia-biomedica': () => import('./pos-graduacao-mestrado-doutorado-engenharia-biomedica'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {

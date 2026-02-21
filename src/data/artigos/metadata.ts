@@ -427,6 +427,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/diferenca-biomedicina-engenharia-biomedica-guia/image-3.webp', alt: 'Infográfico comparativo de salários entre Engenheiro Biomédico e Biomédico, destacando a diferença de R$ 5.390 e o piso legal da engenharia.', caption: 'A análise salarial detalhada revela uma diferença significativa de remuneração entre Engenharia Biomédica e Biomedicina, impulsionada pela escassez de profissionais e pelo piso salarial legal da engenharia.' },
     ],
   },
+  {
+    slug: 'pos-graduacao-mestrado-doutorado-engenharia-biomedica',
+    titulo: 'Pós-Graduação em Engenharia Biomédica: Todos os Programas de Mestrado e Doutorado no Brasil [2026]',
+    resumo: 'Guia completo com todos os 12 PPGs específicos em Engenharia Biomédica e Bioengenharia no Brasil: conceitos CAPES, vagas, bolsas (até R$ 7.140/mês), processo seletivo, linhas de pesquisa e saídas de carreira para mestres e doutores.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-21',
+    leitura: '24 min',
+    imagens: [
+      { src: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-1.webp', alt: 'Mapa interativo dos 12 programas de pós-graduação em Engenharia Biomédica no Brasil, com conceitos CAPES e níveis.', caption: 'Visão geral dos programas de pós-graduação stricto sensu em Engenharia Biomédica e Bioengenharia no Brasil, com seus conceitos CAPES e níveis de mestrado e doutorado.' },
+      { src: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-2.webp', alt: 'Ilustração técnica de IA, wearables, bioimpressão 3D, robótica cirúrgica e biossensores em Engenharia Biomédica.', caption: 'As principais linhas de pesquisa em Engenharia Biomédica no Brasil e no mundo, abrangendo inteligência artificial, dispositivos vestíveis, bioimpressão 3D, robótica cirúrgica e biossensores avançados.' },
+      { src: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-3.webp', alt: 'Infográfico sobre saídas de carreira e salários médios de engenheiros biomédicos com pós-graduação no Brasil.', caption: 'As oportunidades de carreira e o impacto na remuneração para mestres e doutores em Engenharia Biomédica, demonstrando a valorização profissional em diferentes setores.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

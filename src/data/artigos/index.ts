@@ -50,4 +50,5 @@ export const slugs = [
   'todas-faculdades-engenharia-biomedica-brasil-ranking',
   'grade-curricular-engenharia-biomedica-5-anos',
   'diferenca-biomedicina-engenharia-biomedica-guia',
+  'pos-graduacao-mestrado-doutorado-engenharia-biomedica',
 ];
