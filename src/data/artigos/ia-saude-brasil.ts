@@ -17,11 +17,6 @@ export const artigo: Artigo = {
 
 <p>Essa assimetria cria exatamente o tipo de ambiente em que engenheiros biomédicos com competência técnica em IA se tornam ativos estratégicos. As organizações sabem que precisam avançar, mas poucos profissionais internos têm capacidade de avaliar algoritmos, conduzir validações clínicas e dialogar com reguladores.</p>
 <figure>
-<img src="/artigos/ia-saude-brasil/image-1.webp" alt="Infográfico com dados de mercado e adoção de IA na saúde brasileira, destacando o crescimento e investimento." width="1024" height="571" loading="lazy" decoding="async">
-<figcaption>Este infográfico ilustra o crescimento do mercado de saúde digital no Brasil e a adoção da inteligência artificial, revelando o potencial e a lacuna entre o entusiasmo e a implementação estruturada.</figcaption>
-</figure>
-
-<figure>
 <img src="/artigos/ia-saude-brasil/image-1.webp" alt="Sistema de inteligência artificial analisando eletrocardiogramas em tempo real com dashboard de métricas de acurácia em hospital universitário brasileiro" width="1024" height="571" loading="lazy" decoding="async">
 <figcaption>Plataformas como a do CODE/UFMG processam milhares de ECGs diários com AUC-ROC de 0,947, publicado no Nature Medicine.</figcaption>
 </figure>
