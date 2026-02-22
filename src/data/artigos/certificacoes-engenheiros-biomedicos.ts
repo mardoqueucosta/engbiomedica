@@ -18,6 +18,7 @@ export const artigo: Artigo = {
 
 <p>Certificações funcionam como <strong>validação externa e padronizada</strong> dessas competências. Para empregadores, elas reduzem o risco de contratação. Para profissionais, aceleram a progressão de carreira e abrem portas no mercado internacional.</p>
 
+
 <h3>O cenário do mercado em números</h3>
 
 <p>Os dados reforçam a importância de se diferenciar:</p>
