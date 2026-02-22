@@ -8,35 +8,6 @@ export const artigo: Artigo = {
   data: '2026-02-22',
   leitura: '14 min',
   conteudo: `
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: Fluxo de Notificação de Eventos Adversos no NOTIVISA
-CONTEXT: Diagrama mostrando o fluxo completo de notificação de eventos adversos de dispositivos médicos no Brasil, desde a identificação do evento pelo fabricante/importador até o encerramento pela ANVISA
-VISUAL_ELEMENTS: Caixas de processo numeradas (1-Identificação do evento, 2-Classificação da gravidade, 3-Abertura no NOTIVISA, 4-Envio de relatório preliminar, 5-Investigação interna, 6-Relatório final, 7-Ação corretiva), setas de fluxo, tabela lateral com prazos (72h/10 dias/30 dias), logotipo da ANVISA estilizado
-IMAGE_STYLE: technical
-IMAGE_TYPE: Fluxograma
-ALT: Fluxograma do processo de notificação de eventos adversos de dispositivos médicos no sistema NOTIVISA da ANVISA com prazos regulatórios
-CAPTION: Fluxo de notificação de eventos adversos no NOTIVISA: da identificação do evento à conclusão pela ANVISA, com prazos legais destacados.
-
-<!-- IMG_SLOT_2 -->
-SECTION: Rede Sentinela e a Vigilância Pós-Mercado
-CONTEXT: Profissional de engenharia clínica em hospital realizando inspeção técnica em equipamento médico como parte da Rede Sentinela da ANVISA
-VISUAL_ELEMENTS: Engenheiro clínico com jaleco branco e EPI utilizando tablet para registrar ocorrência junto a equipamento médico hospitalar (monitor multiparâmetros), ambiente de UTI hospitalar moderno, placa da Rede Sentinela ANVISA visível ao fundo
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Profissional em ação
-ALT: Engenheiro clínico inspecionando equipamento médico em UTI hospitalar como parte da Rede Sentinela de tecnovigilância da ANVISA
-CAPTION: A Rede Sentinela conta com 281 unidades hospitalares em todos os 27 estados para monitorar a segurança de dispositivos médicos em uso.
-
-<!-- IMG_SLOT_3 -->
-SECTION: Tecnovigilância Global: Brasil, FDA e União Europeia
-CONTEXT: Comparativo visual entre os sistemas de vigilância pós-mercado do Brasil (ANVISA/NOTIVISA), EUA (FDA/MDR/MAUDE) e União Europeia (EU MDR/EUDAMED)
-VISUAL_ELEMENTS: Três colunas lado a lado com bandeiras (Brasil, EUA, UE), nome do sistema, prazos de notificação em destaque, banco de dados público, tipo de relatório exigido; paleta de cores verde/azul/amarelo-estrela; tabela comparativa estilizada
-IMAGE_STYLE: technical
-IMAGE_TYPE: Comparativo visual
-ALT: Comparativo dos sistemas de tecnovigilância do Brasil NOTIVISA, EUA FDA MAUDE e União Europeia EU MDR EUDAMED com prazos e requisitos
-CAPTION: Comparativo internacional: embora os prazos e sistemas variem, Brasil, EUA e UE convergem para padrões do IMDRF em vigilância pós-mercado.
-IMG_SLOTS-->
-
 <p class="text-lg leading-relaxed mb-6">A <strong>tecnovigilância</strong> é o conjunto de ações de vigilância pós-mercado aplicadas a produtos de saúde — equipamentos médicos, implantes, kits diagnósticos e correlatos — com o objetivo de identificar, avaliar e prevenir eventos adversos e queixas técnicas. No Brasil, esse sistema é coordenado pela <strong>ANVISA</strong> e operacionalizado por meio do <strong>NOTIVISA</strong>, sendo de cumprimento obrigatório para fabricantes, importadores e detentores de registro. Compreender as obrigações legais, os prazos de notificação e as boas práticas desse sistema é indispensável para manter a conformidade regulatória e, sobretudo, proteger pacientes e profissionais de saúde.</p>
 
 <p>Se você ainda está estruturando a base regulatória da sua empresa, consulte também nosso <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">guia completo sobre dispositivos médicos na ANVISA em 2026</a> e o artigo sobre <a href="/artigos/como-registrar-dispositivo-medico-anvisa">como registrar um dispositivo médico na ANVISA</a>. Para a dimensão de gestão de riscos que antecede a vigilância pós-mercado, veja nossa análise da <a href="/artigos/iso-14971-gestao-risco">ISO 14971 para gestão de risco</a>.</p>
@@ -69,7 +40,7 @@ IMG_SLOTS-->
 
 <p>A <strong>Rede Sentinela</strong> é composta por hospitais e serviços de saúde de referência que atuam como notificadores qualificados e vigilantes ativos. Em dezembro de 2025, a rede contava com <strong>281 unidades em todos os 27 estados</strong>. A <strong>RDC 872/2024</strong> modernizou o marco regulatório da Rede Sentinela, reforçando os critérios de adesão, as responsabilidades dos serviços e os mecanismos de retroalimentação de informações. Engenheiros clínicos nesses hospitais são figuras centrais na identificação e registro de ocorrências — veja mais em nosso artigo sobre <a href="/artigos/manutencao-equipamentos-hospitalares">manutenção de equipamentos hospitalares</a>.</p>
 
-<!-- IMG_SLOT_2 -->
+
 
 <h2>NOTIVISA: O Sistema Eletrônico de Notificação</h2>
 
@@ -222,7 +193,7 @@ IMG_SLOTS-->
 
 <p>A RDC 848/2024 exige que fabricantes de dispositivos de maior risco mantenham relatórios de avaliação clínica com revisão periódica, incorporando os dados de pós-mercado coletados. Esse relatório deve demonstrar que o balanço risco-benefício do produto permanece favorável à luz das evidências acumuladas.</p>
 
-<!-- IMG_SLOT_3 -->
+
 
 <h2>Tecnovigilância Global: Comparação com FDA e EU MDR</h2>
 
