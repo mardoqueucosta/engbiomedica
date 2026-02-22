@@ -115,12 +115,6 @@ export const artigo: Artigo = {
 </table>
 
 <p>A predominância de <strong>Gestão/PEP (27,6%)</strong> reflete o tamanho do problema: o Brasil tem mais de 292 mil estabelecimentos de saúde cadastrados no CNES, a maioria ainda operando com processos fragmentados ou em papel. Já o segmento de <strong>IA (6,7%)</strong> — representando 40 das 602 startups ativas — concentra algumas das empresas com maior potencial de impacto, incluindo players com aprovações regulatórias internacionais.</p>
-<figure>
-<img src="/artigos/healthtechs-mapa-brasil/image-1.webp" alt="Infográfico detalhando a segmentação do ecossistema de healthtechs no Brasil, com gráfico de pizza por área e distribuição de modelos de negócio." width="1024" height="571" loading="lazy" decoding="async">
-<figcaption>Este infográfico ilustra a distribuição das startups de saúde digital no Brasil, destacando a predominância da gestão hospitalar e o crescimento de telemedicina e IA, além dos modelos de negócio B2B e SaaS.</figcaption>
-</figure>
-
-
 <h3>Modelos de negócio dominantes</h3>
 
 <p>Quanto à estrutura comercial, o ecossistema converge para dois modelos principais. O <strong>B2B</strong> representa entre 48% e 49% das startups, vendendo para hospitais, clínicas, operadoras e empresas. O modelo <strong>SaaS</strong> (que se sobrepõe parcialmente ao B2B) aparece em 40% a 43% das empresas. O B2C puro — venda direta ao paciente — é minoria, em parte pela dificuldade de monetização direta no contexto brasileiro.</p>
