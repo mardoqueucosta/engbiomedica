@@ -33,11 +33,6 @@ export const artigo: Artigo = {
 <p class="mb-6">O FNDCT abastece diretamente as operações do CNPq e da FINEP, funcionando como o reservatório central do qual as demais agências retiram recursos para seus editais e programas. Sua composição inclui recursos de royalties do petróleo, contribuições sobre o faturamento de empresas de setores estratégicos e dotações orçamentárias diretas da União.</p>
 
 <h2>CNPq: Bolsas e Fomento à Pesquisa Científica</h2>
-<figure>
-<img src="/artigos/financiamento-inovacao-saude/image-2.webp" alt="Comparativo dos valores de bolsas de pesquisa CNPq versus FAPESP por nível acadêmico, de iniciação científica ao pós-doutorado" width="1024" height="571" loading="lazy" decoding="async">
-<figcaption>Bolsas FAPESP chegam a ser até 2,4 vezes maiores que as do CNPq no nível de pós-doutorado, refletindo o orçamento robusto da fundação paulista.</figcaption>
-</figure>
-
 
 <p class="mb-6">O Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) destina cerca de R$1,8 bilhão por ano ao fomento à pesquisa. Sua atuação se divide em duas grandes frentes: bolsas individuais e fomento a projetos coletivos por meio de editais temáticos.</p>
 
@@ -132,8 +127,12 @@ export const artigo: Artigo = {
 
 <h2>EMBRAPII: Parceria Empresa-Instituto para P&D Aplicado</h2>
 
-
 <p class="mb-6">A Empresa Brasileira de Pesquisa e Inovação Industrial (EMBRAPII) opera com um modelo diferente das demais agências: financia projetos de pesquisa aplicada realizados em parceria entre empresas e Unidades EMBRAPII credenciadas (institutos de pesquisa, universidades e centros tecnológicos). O financiamento é tripartite — EMBRAPII, empresa e unidade executora dividem os custos do projeto.</p>
+
+<figure>
+<img src="/artigos/financiamento-inovacao-saude/image-2.webp" alt="Diagrama do modelo tripartite de financiamento EMBRAPII conectando empresa, unidade de pesquisa e recursos compartilhados em projetos de P&D em saude" width="1024" height="571" loading="lazy" decoding="async">
+<figcaption>No modelo EMBRAPII, empresa, unidade de pesquisa e a propria EMBRAPII dividem os custos do projeto, acelerando a transferencia de tecnologia da bancada para o mercado.</figcaption>
+</figure>
 
 <p class="mb-6">Os números acumulados são expressivos: 3.914 projetos financiados com R$7,7 bilhões no total. Na área de saúde, 385 projetos foram apoiados, movimentando R$515 milhões. Em 2024, o Ministério da Saúde firmou um pacote de R$150 milhões com a EMBRAPII para projetos prioritários do setor, com foco em equipamentos hospitalares, diagnósticos e insumos farmacêuticos estratégicos.</p>
 
