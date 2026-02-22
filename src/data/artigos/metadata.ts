@@ -469,6 +469,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/mercado-trabalho-engenharia-biomedica-dados/image-3.webp', alt: 'Ilustração conceitual das tendências de envelhecimento populacional, expansão hospitalar, telemedicina e bioimpressão 3D, que moldam o futuro da engenharia biomédica.', caption: 'O futuro da engenharia biomédica será moldado por tendências como o envelhecimento populacional, a expansão hospitalar, o avanço da telemedicina e a inovação na biofabricação 3D, criando novas demandas e oportunidades.' },
     ],
   },
+  {
+    slug: 'engenharia-biomedica-ead',
+    titulo: 'Engenharia Biomédica EaD: Ainda Existe? Decreto 12.456/2025 e Tudo que Você Precisa Saber [2026]',
+    resumo: 'Em 2025, um decreto federal proibiu a Engenharia Biomédica 100% EaD no Brasil. Entenda quais instituições ainda oferecem o curso, o que muda para quem já está matriculado, se o diploma vale para o CREA e quais alternativas existem.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-22',
+    leitura: '13 min',
+    imagens: [
+      { src: '/artigos/engenharia-biomedica-ead/image-1.webp', alt: 'Mapa do Brasil mostrando distribuição das faculdades de Engenharia Biomédica EaD por estado em 2025', caption: 'Distribuição geográfica das instituições que ofereciam Engenharia Biomédica EaD antes do Decreto nº 12.456/2025. Fonte: e-MEC/MEC.' },
+      { src: '/artigos/engenharia-biomedica-ead/image-2.webp', alt: 'Bancada de laboratório de Engenharia Biomédica com osciloscópio, ECG e equipamentos de instrumentação para aulas práticas', caption: 'Laboratório de Instrumentação Biomédica: equipamentos como osciloscópio, ECG e eletrodos são insubstituíveis no processo de formação técnica do engenheiro biomédico.' },
+      { src: '/artigos/engenharia-biomedica-ead/image-3.webp', alt: 'Fluxograma com quatro alternativas ao EaD em Engenharia Biomédica: Tecnólogo, UFRN noturno, UFABC BCT e pós-graduação EaD', caption: 'Quatro caminhos alternativos ao EaD 100% em Engenharia Biomédica, organizados por perfil de estudante, duração e custo estimado.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */
