@@ -455,6 +455,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/nota-corte-engenharia-biomedica-sisu-2026/image-3.webp', alt: 'Diagrama comparativo dos pesos das provas do ENEM (Matemática, Natureza, Linguagens, Humanas, Redação) por universidade (UFU, UFPE, UFRN) para Engenharia Biomédica.', caption: 'Entenda como cada universidade federal pondera as provas do ENEM para o curso de Engenharia Biomédica, um fator crucial para a estratégia de inscrição no SiSU.' },
     ],
   },
+  {
+    slug: 'mercado-trabalho-engenharia-biomedica-dados',
+    titulo: 'Mercado de Trabalho em Engenharia Biomédica: Dados, Tendências e Onde Buscar Vagas [2026]',
+    resumo: 'Análise completa do mercado de trabalho em engenharia biomédica no Brasil: salários reais (CAGED), maiores empregadores, áreas em expansão (IA, robótica, SaMD), plataformas de vagas e comparativo global. Dados atualizados para 2026.',
+    categoria: 'Mercado',
+    categoriaVariant: 'teal',
+    data: '2026-02-21',
+    leitura: '21 min',
+    imagens: [
+      { src: '/artigos/mercado-trabalho-engenharia-biomedica-dados/image-1.webp', alt: 'Infográfico detalhando a indústria de equipamentos médicos no Brasil, com produção total, empregos e déficit comercial.', caption: 'A indústria brasileira de equipamentos médicos em 2024: um motor de empregos com R$26,1 bilhões em produção e um déficit comercial que aponta para oportunidades de P&D nacional.' },
+      { src: '/artigos/mercado-trabalho-engenharia-biomedica-dados/image-2.webp', alt: 'Visualização conceitual das áreas de IA, SaMD, robótica cirúrgica e healthtechs, as maiores oportunidades em engenharia biomédica.', caption: 'A convergência de IA, Software como Dispositivo Médico, Robótica Cirúrgica e Healthtechs define as áreas mais promissoras para engenheiros biomédicos, impulsionando inovação e demanda por novos talentos.' },
+      { src: '/artigos/mercado-trabalho-engenharia-biomedica-dados/image-3.webp', alt: 'Ilustração conceitual das tendências de envelhecimento populacional, expansão hospitalar, telemedicina e bioimpressão 3D, que moldam o futuro da engenharia biomédica.', caption: 'O futuro da engenharia biomédica será moldado por tendências como o envelhecimento populacional, a expansão hospitalar, o avanço da telemedicina e a inovação na biofabricação 3D, criando novas demandas e oportunidades.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

@@ -52,4 +52,5 @@ export const slugs = [
   'diferenca-biomedicina-engenharia-biomedica-guia',
   'pos-graduacao-mestrado-doutorado-engenharia-biomedica',
   'nota-corte-engenharia-biomedica-sisu-2026',
+  'mercado-trabalho-engenharia-biomedica-dados',
 ];

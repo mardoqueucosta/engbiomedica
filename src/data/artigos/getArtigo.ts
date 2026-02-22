@@ -45,6 +45,7 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'diferenca-biomedicina-engenharia-biomedica-guia': () => import('./diferenca-biomedicina-engenharia-biomedica-guia'),
   'pos-graduacao-mestrado-doutorado-engenharia-biomedica': () => import('./pos-graduacao-mestrado-doutorado-engenharia-biomedica'),
   'nota-corte-engenharia-biomedica-sisu-2026': () => import('./nota-corte-engenharia-biomedica-sisu-2026'),
+  'mercado-trabalho-engenharia-biomedica-dados': () => import('./mercado-trabalho-engenharia-biomedica-dados'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {
