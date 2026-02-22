@@ -13,6 +13,7 @@ export const artigo: Artigo = {
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
 <h2>O Ecossistema de Financiamento à Inovação em Saúde no Brasil</h2>
+
 <figure>
 <img src="/artigos/financiamento-inovacao-saude/image-1.webp" alt="Infográfico mostrando o ecossistema de financiamento público à inovação em saúde no Brasil com CNPq, FAPESP, FINEP, EMBRAPII e BNDES" width="1024" height="571" loading="lazy" decoding="async">
 <figcaption>O Brasil mobiliza mais de R$60 bilhões em financiamento público para inovação em saúde, distribuídos entre agências federais e estaduais de fomento.</figcaption>
@@ -46,7 +47,7 @@ export const artigo: Artigo = {
   <thead>
     <tr>
       <th>Modalidade de Bolsa CNPq</th>
-      <th>Valor Mensal (2025)</th>
+      <th>Valor Mensal (2026)</th>
       <th>Público-alvo</th>
     </tr>
   </thead>
@@ -130,6 +131,7 @@ export const artigo: Artigo = {
 <p class="mb-6">A 2ª Rodada do programa Mais Inovação colocou R$3,3 bilhões em disputa, com janelas temáticas que incluem diagnóstico, dispositivos médicos, biotecnologia e saúde digital. Para empresas do ecossistema de <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs no Brasil</a>, a FINEP representa frequentemente a transição do financiamento de risco (venture capital) para o fomento público com condições mais favoráveis.</p>
 
 <h2>EMBRAPII: Parceria Empresa-Instituto para P&D Aplicado</h2>
+
 
 <p class="mb-6">A Empresa Brasileira de Pesquisa e Inovação Industrial (EMBRAPII) opera com um modelo diferente das demais agências: financia projetos de pesquisa aplicada realizados em parceria entre empresas e Unidades EMBRAPII credenciadas (institutos de pesquisa, universidades e centros tecnológicos). O financiamento é tripartite — EMBRAPII, empresa e unidade executora dividem os custos do projeto.</p>
 
