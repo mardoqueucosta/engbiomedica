@@ -6,7 +6,7 @@ export const artigo: Artigo = {
   categoria: 'Inovação',
   categoriaVariant: 'amber',
   data: '2026-02-22',
-  leitura: 12,
+  leitura: '12 min',
   conteudo: `
 <p class="text-lg leading-relaxed mb-6">
 Em março de 2020, uma resolução do Conselho Federal de Medicina que demorou apenas <strong>27 dias para ser aprovada</strong> mudou para sempre a medicina brasileira. O que era proibido ou extremamente restrito pela CFM 1.643/2002 tornou-se, da noite para o dia, não apenas permitido — mas necessário. Hoje, o Brasil acumula mais de <strong>30 milhões de teleconsultas</strong>, um mercado de US$ 2 bilhões e uma legislação permanente que consolida a telemedicina como pilar do sistema de saúde nacional.
