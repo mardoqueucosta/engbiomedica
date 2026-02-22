@@ -814,9 +814,9 @@ export const artigosMeta: ArtigoMeta[] = [
     data: '2026-02-22',
     leitura: '14 min',
     imagens: [
-      { src: '/artigos/financiamento-inovacao-saude/image-1.webp', alt: 'Infográfico mostrando o ecossistema de financiamento público à inovação em saúde no Brasil com CNPq, FAPESP, FINEP, EMBRAPII e BNDES', caption: 'O Brasil mobiliza mais de R$60 bilhões em financiamento público para inovação em saúde, distribuídos entre agências federais e estaduais de fomento.' },
-      { src: '/artigos/financiamento-inovacao-saude/image-2.webp', alt: 'Comparativo dos valores de bolsas de pesquisa CNPq versus FAPESP por nível acadêmico, de iniciação científica ao pós-doutorado', caption: 'Bolsas FAPESP chegam a ser até 2,4 vezes maiores que as do CNPq no nível de pós-doutorado, refletindo o orçamento robusto da fundação paulista.' },
-      { src: '/artigos/financiamento-inovacao-saude/image-3.webp', alt: 'Fluxograma passo a passo para acesso ao financiamento público de inovação em saúde no Brasil, da inscrição à prestação de contas', caption: 'O processo de acesso ao financiamento público exige planejamento antecipado: editais têm janelas específicas e a preparação da documentação pode levar meses.' },
+      { src: '/artigos/financiamento-inovacao-saude/image-1.webp', alt: 'Ilustração do ecossistema de financiamento à inovação em saúde no Brasil, mostrando R$60 bilhões e agências como CNPq, FAPESP, FINEP, EMBRAPII, BNDES.', caption: 'O ecossistema brasileiro de financiamento à inovação em saúde é composto por diversas agências federais e estaduais, que juntas mobilizam mais de R$60 bilhões para apoiar projetos desde a pesquisa básica até a industrialização de dispositivos e soluções.' },
+      { src: '/artigos/financiamento-inovacao-saude/image-2.webp', alt: 'Diagrama do modelo tripartite de financiamento EMBRAPII, conectando empresa, unidade EMBRAPII e projeto de P&D em saúde.', caption: 'O modelo EMBRAPII impulsiona a P&D aplicada através de uma parceria tripartite, onde a EMBRAPII, empresas e unidades de pesquisa co-investem em projetos que resolvem desafios tecnológicos específicos do setor de saúde.' },
+      { src: '/artigos/financiamento-inovacao-saude/image-3.webp', alt: 'Infográfico do passo a passo para acesso ao financiamento em saúde, correlacionando TRLs (Níveis de Maturidade Tecnológica) com fontes e instrumentos de fomento.', caption: 'Para acessar o financiamento público em inovação na saúde, é essencial alinhar o Nível de Maturidade Tecnológica (TRL) do projeto com as fontes e instrumentos de fomento mais adequados, otimizando as chances de sucesso na captação de recursos.' },
     ],
   },
   {
@@ -1248,9 +1248,9 @@ export const artigosMeta: ArtigoMeta[] = [
     data: '2026-02-22',
     leitura: '18 min',
     imagens: [
-      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-1.webp', alt: 'Engenheiro biomédico com crachá do CREA em ambiente hospitalar cercado por equipamentos médicos de alta complexidade', caption: 'O registro no CREA é a única certificação legalmente obrigatória para exercer a Engenharia Biomédica no Brasil — todas as demais são voluntárias, mas altamente valorizadas pelo mercado.' },
-      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-2.webp', alt: 'Diagrama comparativo das certificações CCE, CBET e CHTM com requisitos, custos e órgãos certificadores', caption: 'As três certificações internacionais mais relevantes para engenheiros biomédicos: CCE (engenharia clínica), CBET (equipamentos) e CHTM (gestão de tecnologia em saúde).' },
-      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-3.webp', alt: 'Linha do tempo estratégica de certificações para engenheiros biomédicos da graduação até cargos de liderança', caption: 'Estratégia recomendada de certificações ao longo da carreira: cada etapa profissional demanda competências específicas que podem ser comprovadas por credenciais reconhecidas.' },
+      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-1.webp', alt: 'Infográfico sobre o mercado de engenharia biomédica no Brasil: dados de mercado, empregos e profissionais registrados.', caption: 'O mercado de dispositivos médicos no Brasil movimenta bilhões, mas o número de engenheiros biomédicos registrados ainda é baixo. Certificações são cruciais para se destacar e atender à demanda crescente.' },
+      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-2.webp', alt: 'Ilustração das certificações internacionais CCE, CBET e CHTM para engenheiros biomédicos, mostrando seus focos.', caption: 'CCE, CBET e CHTM são as credenciais internacionais mais valorizadas, cada uma com foco em engenharia clínica, manutenção de equipamentos e gestão de tecnologia em saúde, respectivamente.' },
+      { src: '/artigos/certificacoes-engenheiros-biomedicos/image-3.webp', alt: 'Diagrama de plano de carreira para engenheiros biomédicos, com certificações recomendadas por fase profissional.', caption: 'Um plano de certificações estratégico é essencial para engenheiros biomédicos, guiando a progressão da carreira desde o recém-formado até posições de liderança e consultoria.' },
     ],
   },
   {
