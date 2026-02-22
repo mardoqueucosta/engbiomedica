@@ -483,6 +483,20 @@ export const artigosMeta: ArtigoMeta[] = [
       { src: '/artigos/engenharia-biomedica-ead/image-3.webp', alt: 'Fluxograma com quatro alternativas ao EaD em Engenharia Biomédica: Tecnólogo, UFRN noturno, UFABC BCT e pós-graduação EaD', caption: 'Quatro caminhos alternativos ao EaD 100% em Engenharia Biomédica, organizados por perfil de estudante, duração e custo estimado.' },
     ],
   },
+  {
+    slug: 'estagio-engenharia-biomedica-guia',
+    titulo: 'Estágio em Engenharia Biomédica [2026]: Guia Completo para Conseguir Sua Vaga',
+    resumo: 'Tudo que você precisa saber para conseguir estágio em Engenharia Biomédica em 2026: empresas que mais contratam, bolsas por região, cronograma semestre a semestre, competências exigidas e seus direitos garantidos por lei.',
+    categoria: 'Formação',
+    categoriaVariant: 'primary',
+    data: '2026-02-22',
+    leitura: '13 min',
+    imagens: [
+      { src: '/artigos/estagio-engenharia-biomedica-guia/image-1.webp', alt: 'Estagiário de engenharia biomédica operando console de ressonância magnética em laboratório de empresa multinacional', caption: 'Programas estruturados de multinacionais como GE Healthcare e Philips incluem rotação em laboratórios de imagem médica, onde estagiários acompanham instalação, calibração e manutenção de equipamentos de alta complexidade.' },
+      { src: '/artigos/estagio-engenharia-biomedica-guia/image-2.webp', alt: 'Bancada de laboratório de engenharia biomédica com Arduino, osciloscópio e laptop executando análise de sinal de ECG em Python', caption: 'Bancada típica de laboratório universitário de Engenharia Biomédica: o domínio de instrumentação eletrônica e programação em Python para sinais biológicos está entre as competências mais exigidas nas vagas de estágio em 2026.' },
+      { src: '/artigos/estagio-engenharia-biomedica-guia/image-3.webp', alt: 'Cronograma semestre a semestre de preparação para estágio em engenharia biomédica do primeiro ao décimo semestre', caption: 'Cronograma recomendado de preparação para o estágio em Engenharia Biomédica: cada fase do curso tem ações específicas que constroem o perfil exigido pelos recrutadores das principais empresas do setor.' },
+    ],
+  },
 ];
 
 /** Mapa slug → metadados para acesso rápido */

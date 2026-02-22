@@ -54,4 +54,5 @@ export const slugs = [
   'nota-corte-engenharia-biomedica-sisu-2026',
   'mercado-trabalho-engenharia-biomedica-dados',
   'engenharia-biomedica-ead',
+  'estagio-engenharia-biomedica-guia',
 ];
