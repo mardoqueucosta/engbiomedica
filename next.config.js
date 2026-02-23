@@ -65,6 +65,7 @@ const nextConfig = {
       { source: '/regulamentacao/certificacao-inmetro', destination: '/artigos/certificacao-inmetro-equipamentos-medicos', permanent: true },
       { source: '/regulamentacao/software-dispositivo-medico-samd', destination: '/artigos/samd-software-dispositivo-medico', permanent: true },
       { source: '/pesquisa/publicacao-cientifica', destination: '/artigos/como-publicar-artigos-engenharia-biomedica', permanent: true },
+      { source: '/pesquisa/financiamento', destination: '/artigos/editais-financiamento-pesquisa-saude', permanent: true },
       { source: '/pesquisa/ferramentas-python-matlab', destination: '/artigos/python-matlab-engenharia-biomedica', permanent: true },
       { source: '/carreira/roadmap-engenheiro-biomedico', destination: '/artigos/roadmap-carreira-engenheiro-biomedico', permanent: true },
       { source: '/carreira/certificacoes', destination: '/artigos/certificacoes-engenheiros-biomedicos', permanent: true },

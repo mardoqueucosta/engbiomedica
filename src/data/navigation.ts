@@ -101,7 +101,7 @@ export const mainNavigation: NavItem[] = [
     children: [
       { label: 'Visão Geral', href: '/pesquisa' },
       { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engbiomedica-mapa' },
-      { label: 'Financiamento', href: '/pesquisa/financiamento' },
+      { label: 'Financiamento', href: '/artigos/editais-financiamento-pesquisa-saude' },
       { label: 'Publicação Científica', href: '/artigos/como-publicar-artigos-engenharia-biomedica' },
       { label: 'Python e MATLAB para Biomédica', href: '/artigos/python-matlab-engenharia-biomedica' },
       { label: 'Repositórios Acadêmicos', href: '/internacional/repositorios' },
@@ -170,7 +170,7 @@ export const footerNavigation = {
   ],
   pesquisa: [
     { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engbiomedica-mapa' },
-    { label: 'Financiamento', href: '/pesquisa/financiamento' },
+    { label: 'Financiamento', href: '/artigos/editais-financiamento-pesquisa-saude' },
     { label: 'Python/MATLAB', href: '/artigos/python-matlab-engenharia-biomedica' },
     { label: 'Publicação Científica', href: '/artigos/como-publicar-artigos-engenharia-biomedica' },
   ],
