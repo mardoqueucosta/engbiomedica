@@ -17,37 +17,37 @@ const sections = [
   {
     title: 'Equipamentos de Centro Cirúrgico',
     description: 'Bisturis elétricos, mesas cirúrgicas, focos, monitores e sistemas integrados para salas de cirurgia.',
-    href: '/equipamentos/centro-cirurgico',
+    href: '/artigos/equipamentos-centro-cirurgico',
     badge: 'Centro Cirúrgico',
   },
   {
     title: 'Equipamentos de UTI',
     description: 'Ventiladores mecânicos, monitores multiparamétricos, bombas de infusão e sistemas de suporte à vida.',
-    href: '/equipamentos/uti',
+    href: '/artigos/equipamentos-uti-guia',
     badge: 'Terapia Intensiva',
   },
   {
     title: 'Diagnóstico por Imagem',
     description: 'Tomografia, ressonância magnética, ultrassonografia, raio-X digital e medicina nuclear.',
-    href: '/equipamentos/diagnostico-imagem',
+    href: '/artigos/equipamentos-diagnostico-imagem',
     badge: 'Imagem Médica',
   },
   {
     title: 'Manutenção Hospitalar',
     description: 'Manutenção preventiva, corretiva e preditiva de equipamentos médicos. Protocolos, calibração e metrologia.',
-    href: '/equipamentos/manutencao-hospitalar',
+    href: '/artigos/manutencao-equipamentos-hospitalares',
     badge: 'Manutenção',
   },
   {
     title: 'Gestão de Parque Tecnológico',
     description: 'Planejamento de aquisição, vida útil, desativação, inventário e gestão patrimonial de equipamentos.',
-    href: '/equipamentos/gestao-parque-tecnologico',
+    href: '/artigos/gestao-parque-tecnologico-hospitalar',
     badge: 'Gestão',
   },
   {
     title: 'Indicadores de Engenharia Clínica',
     description: 'KPIs de manutenção, disponibilidade, tempo médio entre falhas (MTBF), custos e benchmarking hospitalar.',
-    href: '/equipamentos/indicadores-engenharia-clinica',
+    href: '/artigos/indicadores-engenharia-clinica-kpis',
     badge: 'Indicadores',
   },
 ];

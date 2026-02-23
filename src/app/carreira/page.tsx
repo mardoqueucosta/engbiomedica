@@ -16,37 +16,37 @@ const sections = [
   {
     title: 'Roadmap: Do Estágio à Diretoria',
     description: 'Mapa completo da evolução profissional com marcos, competências esperadas e faixas salariais em cada nível.',
-    href: '/carreira/roadmap-engenheiro-biomedico',
+    href: '/artigos/roadmap-carreira-engenheiro-biomedico',
     badge: 'Planejamento',
   },
   {
     title: 'Certificações Profissionais',
     description: 'CBET, CAPM, PMP, Six Sigma e outras certificações que agregam valor ao currículo do engenheiro biomédico.',
-    href: '/carreira/certificacoes',
+    href: '/artigos/certificacoes-engenheiros-biomedicos',
     badge: 'Certificações',
   },
   {
     title: 'Cursos e Especializações',
     description: 'Pós-graduação lato sensu, MBAs, cursos livres e plataformas de educação continuada para profissionais da área.',
-    href: '/carreira/cursos-especializacoes',
+    href: '/artigos/melhores-cursos-online-engenharia-clinica',
     badge: 'Educação Continuada',
   },
   {
     title: 'Estágio e Primeiro Emprego',
     description: 'Como encontrar estágios, preparar currículo, se destacar em processos seletivos e iniciar a carreira.',
-    href: '/carreira/estagio-primeiro-emprego',
+    href: '/artigos/estagio-engenharia-biomedica-guia',
     badge: 'Início de Carreira',
   },
   {
     title: 'Transição de Carreira',
     description: 'Roteiros para profissionais migrando de outras engenharias, da academia para a indústria ou do Brasil para o exterior.',
-    href: '/carreira/transicao-carreira',
+    href: '/artigos/transicao-engenharia-biomedica',
     badge: 'Mudança de Área',
   },
   {
     title: 'Livros Essenciais',
     description: 'Bibliografia fundamental em engenharia biomédica: livros-texto, referências técnicas e leituras recomendadas.',
-    href: '/carreira/livros-engenharia-biomedica',
+    href: '/artigos/livros-engenharia-biomedica',
     badge: 'Bibliografia',
   },
 ];
