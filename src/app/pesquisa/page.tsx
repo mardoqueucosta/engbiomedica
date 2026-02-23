@@ -32,7 +32,7 @@ export default function PesquisaPage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3 mb-12">
-          <Link href="/artigos/centros-pesquisa-engenharia-biomedica" className="card p-6 group block">
+          <Link href="/artigos/centros-pesquisa-engbiomedica-mapa" className="card p-6 group block">
             <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               <Building className="w-5 h-5 text-primary-600" />
             </div>

@@ -348,7 +348,7 @@ export const artigo: Artigo = {
   <li><strong>Indústria de dispositivos médicos</strong> — empresas como Baxter, Medtronic, Philips e fabricantes nacionais contratam engenheiros de diversas formações para P&D, assuntos regulatórios e suporte técnico</li>
   <li><strong>Saúde digital e healthtechs</strong> — <a href="/artigos/healthtechs-mapa-brasil">startups de saúde no Brasil</a> buscam ativamente profissionais de TI com conhecimento do setor</li>
   <li><strong>Consultoria regulatória</strong> — escritórios que assessoram empresas no registro de produtos na ANVISA valorizam profissionais com dupla competência (técnica + regulatória)</li>
-  <li><strong>Pesquisa e academia</strong> — <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa</a> absorvem mestres e doutores de diversas formações em projetos interdisciplinares</li>
+  <li><strong>Pesquisa e academia</strong> — <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa</a> absorvem mestres e doutores de diversas formações em projetos interdisciplinares</li>
 </ul>
 
 <p>Para uma análise detalhada de salários, empregadores e tendências de contratação, consulte o artigo sobre <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação em engenharia biomédica</a>.</p>

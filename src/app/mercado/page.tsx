@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 const brasilSections = [
   { title: 'Empresas', desc: 'Multinacionais e nacionais que empregam engenheiros biomédicos.', href: '/mercado/empresas', icon: Building2 },
-  { title: 'Healthtechs', desc: '1.919 healthtechs mapeadas — ecossistema, funding e oportunidades.', href: '/artigos/healthtechs-brasil-ecossistema', icon: Rocket },
+  { title: 'Healthtechs', desc: '1.919 healthtechs mapeadas — ecossistema, funding e oportunidades.', href: '/artigos/healthtechs-mapa-brasil', icon: Rocket },
   { title: 'Hubs e Aceleradoras', desc: 'Eretz.bio, InovaHC, Cubo Itaú e programas de aceleração.', href: '/startups/hubs', icon: MapPin },
-  { title: 'Eventos', desc: 'CBEB, Hospitalar, CIOSP e o calendário completo de feiras e congressos.', href: '/artigos/calendario-eventos-engenharia-biomedica-2026', icon: Calendar },
+  { title: 'Eventos', desc: 'CBEB, Hospitalar, CIOSP e o calendário completo de feiras e congressos.', href: '/artigos/calendario-eventos-engbiomedica-saude-digital', icon: Calendar },
 ];
 
 export default function MercadoPage() {
@@ -60,7 +60,7 @@ export default function MercadoPage() {
           <StatCard number="1.250+" label="Dispositivos IA (FDA)" />
           <StatCard number="US$ 7,5 bi" label="VC Medtech 2024" />
         </div>
-        <Link href="/artigos/engenharia-biomedica-eua-vs-brasil" className="card p-6 group block mb-12">
+        <Link href="/artigos/engenharia-biomedica-eua-comparativo" className="card p-6 group block mb-12">
           <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
             <Globe className="w-5 h-5 text-primary-600" />
           </div>

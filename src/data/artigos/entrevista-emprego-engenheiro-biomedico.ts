@@ -16,7 +16,7 @@ export const artigo: Artigo = {
 
 <p>O mercado de trabalho para o engenheiro biomédico vive um momento paradoxal em 2026: há mais vagas do que nunca, mas a concorrência por cada posição também aumentou. Segundo dados do setor, <strong>52% das empresas de dispositivos médicos planejam novas contratações</strong>, alimentadas por um crescimento de 11,5% na produção industrial e pela obrigatoriedade de cobertura de cirurgia robótica pela ANS a partir de abril de 2026.</p>
 
-<p>Ao mesmo tempo, a formação em Engenharia Biomédica se consolidou no Brasil, com mais graduados entrando no mercado a cada ano. O resultado é um cenário onde preparação técnica e comportamental diferencia quem conquista a vaga de quem fica na fila de espera. Para entender a fundo os números do setor, consulte nosso artigo sobre o <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em Engenharia Biomédica</a>.</p>
+<p>Ao mesmo tempo, a formação em Engenharia Biomédica se consolidou no Brasil, com mais graduados entrando no mercado a cada ano. O resultado é um cenário onde preparação técnica e comportamental diferencia quem conquista a vaga de quem fica na fila de espera. Para entender a fundo os números do setor, consulte nosso artigo sobre o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em Engenharia Biomédica</a>.</p>
 
 <h2>Processo seletivo por tipo de empregador</h2>
 
@@ -239,7 +239,7 @@ export const artigo: Artigo = {
 
 <h2>Negociação salarial: estratégias com dados</h2>
 
-<p>Negociar salário é uma etapa legítima do processo seletivo, e engenheiros biomédicos têm dados concretos a seu favor. Para uma análise completa de faixas salariais, consulte nosso artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a>.</p>
+<p>Negociar salário é uma etapa legítima do processo seletivo, e engenheiros biomédicos têm dados concretos a seu favor. Para uma análise completa de faixas salariais, consulte nosso artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a>.</p>
 
 <h3>Conheça seu valor de mercado</h3>
 

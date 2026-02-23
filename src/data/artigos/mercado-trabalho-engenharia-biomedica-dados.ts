@@ -694,7 +694,7 @@ CAPTION: Principais trilhas de carreira para o engenheiro biomédico no mercado 
 
 <h3>Vale a pena fazer concurso público como engenheiro biomédico?</h3>
 
-<p>Para muitos profissionais, sim — especialmente pela combinação de remuneração elevada (ANVISA paga R$16.413/mês, EBSERH R$12.911/mês, Fiocruz R$13.687/mês) com estabilidade de carreira. A desvantagem é a concorrência em concursos federais e o tempo de preparação necessário. Para quem tem perfil para o serviço público, essa é uma das melhores trajetórias de remuneração disponíveis para a profissão. Veja mais análises em <a href="/artigos/engenharia-biomedica-vale-a-pena">engenharia biomédica vale a pena</a>.</p>
+<p>Para muitos profissionais, sim — especialmente pela combinação de remuneração elevada (ANVISA paga R$16.413/mês, EBSERH R$12.911/mês, Fiocruz R$13.687/mês) com estabilidade de carreira. A desvantagem é a concorrência em concursos federais e o tempo de preparação necessário. Para quem tem perfil para o serviço público, essa é uma das melhores trajetórias de remuneração disponíveis para a profissão. Veja mais análises em <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">engenharia biomédica vale a pena</a>.</p>
 
 <h3>Qual área de engenharia biomédica paga mais?</h3>
 
@@ -734,7 +734,7 @@ CAPTION: Principais trilhas de carreira para o engenheiro biomédico no mercado 
 
 <p>Para aprofundar seu entendimento da profissão, leia também:</p>
 <ul>
-  <li><a href="/artigos/engenharia-biomedica-vale-a-pena">Engenharia Biomédica Vale a Pena? Análise Honesta da Carreira</a></li>
+  <li><a href="/artigos/engenharia-biomedica-vale-a-pena-v2">Engenharia Biomédica Vale a Pena? Análise Honesta da Carreira</a></li>
   <li><a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha um Engenheiro Biomédico em 2026?</a></li>
   <li><a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Todas as Faculdades de Engenharia Biomédica no Brasil com Ranking</a></li>
   <li><a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">Diferença entre Biomedicina e Engenharia Biomédica: Guia Definitivo</a></li>

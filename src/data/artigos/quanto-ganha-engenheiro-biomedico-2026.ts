@@ -38,7 +38,7 @@ export const artigo: Artigo = {
 </figure>
 
 
-<p>Vale esclarecer um ponto frequentemente confundido: o CBO 2143-80 é o código específico para Engenheiro Biomédico, registrado no <a href="https://confea.org.br">CONFEA/CREA</a>. Já o CBO 2011-05 (Bioengenheiro) aparece em vagas de P&D e tecnologia em saúde, e tende a ter amostra maior porque inclui profissionais de áreas correlatas. Para entender o que faz cada um, consulte o artigo sobre <a href="/artigos/o-que-faz-engenheiro-biomedico">o que faz o engenheiro biomédico</a>.</p>
+<p>Vale esclarecer um ponto frequentemente confundido: o CBO 2143-80 é o código específico para Engenheiro Biomédico, registrado no <a href="https://confea.org.br">CONFEA/CREA</a>. Já o CBO 2011-05 (Bioengenheiro) aparece em vagas de P&D e tecnologia em saúde, e tende a ter amostra maior porque inclui profissionais de áreas correlatas. Para entender o que faz cada um, consulte o artigo sobre <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">o que faz o engenheiro biomédico</a>.</p>
 
 <!-- IMG_SLOT_1 -->
 
@@ -75,7 +75,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>As convenções coletivas de trabalho (CCTs) por estado estabelecem pisos específicos acima do mínimo legal federal. O SEESP (Sindicato dos Engenheiros no Estado de São Paulo) fixou para 2025-2026 o piso de <strong>R$ 11.293,70</strong> para profissionais com mais de 2 anos de experiência e <strong>R$ 8.372,39</strong> para o nível de entrada, com reajuste de 5,32% pelo INPC. Minas Gerais pratica <strong>R$ 10.860,60</strong> e Santa Catarina <strong>R$ 12.903,00</strong> para jornada de 8 horas. Para análise detalhada do mercado por região, veja o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>As convenções coletivas de trabalho (CCTs) por estado estabelecem pisos específicos acima do mínimo legal federal. O SEESP (Sindicato dos Engenheiros no Estado de São Paulo) fixou para 2025-2026 o piso de <strong>R$ 11.293,70</strong> para profissionais com mais de 2 anos de experiência e <strong>R$ 8.372,39</strong> para o nível de entrada, com reajuste de 5,32% pelo INPC. Minas Gerais pratica <strong>R$ 10.860,60</strong> e Santa Catarina <strong>R$ 12.903,00</strong> para jornada de 8 horas. Para análise detalhada do mercado por região, veja o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <h2>Salário por setor e especialidade</h2>
 
@@ -160,7 +160,7 @@ export const artigo: Artigo = {
 </figure>
 
 
-<p>Uma ressalva metodológica importante: a amostra de 137 profissionais para o CBO 2143-80 é significativamente menor do que a de outras engenharias. Isso ocorre porque muitos engenheiros biomédicos são contratados sob outros CBOs (engenheiro clínico, engenheiro de produto, especialista regulatório), onde os salários registrados tendem a ser maiores. Para uma comparação internacional, o artigo sobre <a href="/artigos/engenharia-biomedica-eua-vs-brasil">engenharia biomédica EUA vs Brasil</a> detalha que a mediana americana é de US$ 106.950/ano, equivalente a R$ 41.800–67.100 anuais em paridade de poder de compra (fator PPP: 2,487).</p>
+<p>Uma ressalva metodológica importante: a amostra de 137 profissionais para o CBO 2143-80 é significativamente menor do que a de outras engenharias. Isso ocorre porque muitos engenheiros biomédicos são contratados sob outros CBOs (engenheiro clínico, engenheiro de produto, especialista regulatório), onde os salários registrados tendem a ser maiores. Para uma comparação internacional, o artigo sobre <a href="/artigos/engenharia-biomedica-eua-comparativo">engenharia biomédica EUA vs Brasil</a> detalha que a mediana americana é de US$ 106.950/ano, equivalente a R$ 41.800–67.100 anuais em paridade de poder de compra (fator PPP: 2,487).</p>
 
 <h2>Engenheiro biomédico vs biomédico: a diferença de 2,65 vezes</h2>
 
@@ -198,7 +198,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>A diferença acumulada de <strong>R$ 2,16 milhões</strong> em 30 anos representa o custo de escolher biomedicina em vez de engenharia biomédica exclusivamente pela diferença de duração do curso (4 vs 5 anos). Para entender todas as diferenças entre as duas carreiras, consulte o artigo sobre a <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">diferença entre engenharia biomédica e biomedicina</a>.</p>
+<p>A diferença acumulada de <strong>R$ 2,16 milhões</strong> em 30 anos representa o custo de escolher biomedicina em vez de engenharia biomédica exclusivamente pela diferença de duração do curso (4 vs 5 anos). Para entender todas as diferenças entre as duas carreiras, consulte o artigo sobre a <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">diferença entre engenharia biomédica e biomedicina</a>.</p>
 
 <h2>Piso salarial legal e convenções coletivas</h2>
 
@@ -217,7 +217,7 @@ export const artigo: Artigo = {
 
 <p>Uma nuance importante: o STF decidiu que o piso legal fica congelado no salário mínimo da data de admissão do profissional, e só é atualizado quando o empregador assim decidir ou quando uma CCT negociada previr reajuste. Na prática, isso significa que muitos profissionais na faixa júnior recebem o salário de mercado (R$ 7.659 em média), que está <strong>abaixo do piso legal</strong> de R$ 13.779 para jornada de 8 horas. A diferença entre o salário médio de mercado (R$ 8.658) e o piso legal integral é de <strong>R$ 5.121/mês</strong>.</p>
 
-<p>As convenções coletivas estaduais superam o mínimo legal em alguns casos. O SEESP em São Paulo pratica R$ 8.372,39 para entrada e R$ 11.293,70 para profissionais com mais de 2 anos — valores válidos a partir do reajuste de 5,32% pelo INPC aplicado ao ciclo 2025-2026. Minas Gerais: R$ 10.860,60. Santa Catarina: R$ 12.903,00 para 8h. Para informações completas sobre o <a href="https://confea.org.br">CONFEA</a> e as atribuições legais da profissão, incluindo como registrar-se no CREA, consulte o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>As convenções coletivas estaduais superam o mínimo legal em alguns casos. O SEESP em São Paulo pratica R$ 8.372,39 para entrada e R$ 11.293,70 para profissionais com mais de 2 anos — valores válidos a partir do reajuste de 5,32% pelo INPC aplicado ao ciclo 2025-2026. Minas Gerais: R$ 10.860,60. Santa Catarina: R$ 12.903,00 para 8h. Para informações completas sobre o <a href="https://confea.org.br">CONFEA</a> e as atribuições legais da profissão, incluindo como registrar-se no CREA, consulte o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <h2>Remuneração total: além do salário base</h2>
 
@@ -252,7 +252,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>O regime PJ exige que o profissional contrate por conta própria plano de saúde, previdência complementar e outros benefícios, além de arcar com as obrigações contábeis mensais. O breakeven entre CLT e PJ costuma ficar entre os multiplicadores 1,35 e 1,45, dependendo do perfil de gastos pessoais. Para uma análise de carreira com dados completos, veja o artigo sobre <a href="/artigos/engenharia-biomedica-vale-a-pena">engenharia biomédica vale a pena</a>.</p>
+<p>O regime PJ exige que o profissional contrate por conta própria plano de saúde, previdência complementar e outros benefícios, além de arcar com as obrigações contábeis mensais. O breakeven entre CLT e PJ costuma ficar entre os multiplicadores 1,35 e 1,45, dependendo do perfil de gastos pessoais. Para uma análise de carreira com dados completos, veja o artigo sobre <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">engenharia biomédica vale a pena</a>.</p>
 
 <h2>Como aumentar seu salário: estratégias baseadas em dados</h2>
 
@@ -260,7 +260,7 @@ export const artigo: Artigo = {
 
 <h3>1. Migrar para empresa de maior porte</h3>
 
-<p>O porte do empregador é o fator de maior impacto isolado. Profissionais em megaempresas (500+ funcionários) ganham <strong>87% a mais</strong> do que em microempresas, segundo dados CAGED segmentados por faixa de funcionários. O salário sênior em empresa grande chega a R$ 16.795, contra menos de R$ 9.000 em empresas menores. Empresas multinacionais do setor — Philips Healthcare, GE Healthcare, Siemens Healthineers, Medtronic, Abbott — estão entre as maiores pagadoras. Para conhecer quais empresas contratam engenheiros biomédicos no Brasil, consulte o artigo sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p>O porte do empregador é o fator de maior impacto isolado. Profissionais em megaempresas (500+ funcionários) ganham <strong>87% a mais</strong> do que em microempresas, segundo dados CAGED segmentados por faixa de funcionários. O salário sênior em empresa grande chega a R$ 16.795, contra menos de R$ 9.000 em empresas menores. Empresas multinacionais do setor — Philips Healthcare, GE Healthcare, Siemens Healthineers, Medtronic, Abbott — estão entre as maiores pagadoras. Para conhecer quais empresas contratam engenheiros biomédicos no Brasil, consulte o artigo sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h3>2. Investir em pós-graduação</h3>
 
@@ -284,10 +284,10 @@ export const artigo: Artigo = {
 <p>O salário inicial (nível júnior, 0–3 anos de experiência) é de <strong>R$ 7.659/mês</strong> para o CBO 2143-80 (Engenheiro Biomédico) e <strong>R$ 8.013/mês</strong> para o CBO 2011-05 (Bioengenheiro), segundo dados CAGED compilados em fevereiro de 2026. Em São Paulo, a CCT do SEESP garante piso de R$ 8.372,39 para profissionais de entrada. O piso legal federal para jornada de 8 horas é de R$ 13.779, mas o mercado pratica valores abaixo disso para profissionais recém-formados.</p>
 
 <h3>Engenheiro biomédico ganha mais que biomédico?</h3>
-<p>Sim, e a diferença é grande: o engenheiro biomédico (CBO 2143-80) tem salário médio de <strong>R$ 8.658/mês</strong>, enquanto o biomédico (CBO 2212-05) ganha em média <strong>R$ 3.268/mês</strong> — uma razão de <strong>2,65 vezes</strong>. Em 30 anos de carreira, essa diferença acumula aproximadamente R$ 2,16 milhões. Além disso, a tendência de contratação do engenheiro biomédico é +50%, enquanto a do biomédico é de -15,8%. Para entender as diferenças completas entre as duas formações, consulte o artigo sobre a <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">diferença entre engenharia biomédica e biomedicina</a>.</p>
+<p>Sim, e a diferença é grande: o engenheiro biomédico (CBO 2143-80) tem salário médio de <strong>R$ 8.658/mês</strong>, enquanto o biomédico (CBO 2212-05) ganha em média <strong>R$ 3.268/mês</strong> — uma razão de <strong>2,65 vezes</strong>. Em 30 anos de carreira, essa diferença acumula aproximadamente R$ 2,16 milhões. Além disso, a tendência de contratação do engenheiro biomédico é +50%, enquanto a do biomédico é de -15,8%. Para entender as diferenças completas entre as duas formações, consulte o artigo sobre a <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">diferença entre engenharia biomédica e biomedicina</a>.</p>
 
 <h3>Quanto ganha um engenheiro biomédico nos EUA?</h3>
-<p>Segundo dados do Bureau of Labor Statistics (BLS), a mediana salarial americana para biomedical engineers é de <strong>US$ 106.950/ano</strong> (equivalente a aproximadamente US$ 8.912/mês). Em paridade de poder de compra (PPP, fator 2,487), isso corresponde a <strong>R$ 41.800–67.100 anuais</strong> em poder de compra brasileiro. A comparação direta em dólares é enganosa porque o custo de vida nos EUA é significativamente mais alto. Para análise completa das oportunidades internacionais, veja o artigo sobre <a href="/artigos/engenharia-biomedica-eua-vs-brasil">engenharia biomédica EUA vs Brasil</a>.</p>
+<p>Segundo dados do Bureau of Labor Statistics (BLS), a mediana salarial americana para biomedical engineers é de <strong>US$ 106.950/ano</strong> (equivalente a aproximadamente US$ 8.912/mês). Em paridade de poder de compra (PPP, fator 2,487), isso corresponde a <strong>R$ 41.800–67.100 anuais</strong> em poder de compra brasileiro. A comparação direta em dólares é enganosa porque o custo de vida nos EUA é significativamente mais alto. Para análise completa das oportunidades internacionais, veja o artigo sobre <a href="/artigos/engenharia-biomedica-eua-comparativo">engenharia biomédica EUA vs Brasil</a>.</p>
 
 <h3>O piso salarial do engenheiro biomédico é cumprido?</h3>
 <p>Nem sempre. A Lei 4.950-A/1966 estabelece piso de R$ 13.779/mês para jornada de 8 horas com o salário mínimo de R$ 1.621 em 2026 — mas o salário médio de mercado é de R$ 8.658, abaixo desse piso. A decisão do STF que congelou o piso no salário mínimo da data de admissão, atualizado apenas por negociação, criou situação em que muitas empresas praticam salários inferiores ao mínimo legal. As CCTs estaduais (SP, MG, SC) negociam pisos intermediários entre o mínimo federal e o legal. Profissionais registrados no CREA podem consultar o sindicato da categoria para verificar se seu salário está em conformidade com a CCT local.</p>
@@ -295,7 +295,7 @@ export const artigo: Artigo = {
 <h3>Vale a pena fazer pós-graduação para ganhar mais?</h3>
 <p>Os dados do NDPEC 2024 indicam que sim: profissionais com pós-graduação recebem <strong>42% a mais</strong> em média (R$ 10.752 vs R$ 7.568/mês). No entanto, o retorno depende da especialização escolhida. As de maior retorno documentado são: MBA em Gestão de Saúde (abre acesso a cargos de gerência com salários de R$ 21.775), especialização em Regulatório (ANVISA paga R$ 16.413), e mestrado/doutorado para carreira acadêmica (professor Titular federal: R$ 26.327). Para quem não pretende seguir academia, uma certificação técnica relevante pode ter ROI mais rápido que um mestrado de 2 anos.</p>
 
-<p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções, incluindo <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho</a>, <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação</a> e <a href="/artigos/tendencias-futuro-engenharia-biomedica">tendências da profissão</a>.</p>
+<p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções, incluindo <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho</a>, <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação</a> e <a href="/artigos/tendencias-futuro-engenharia-biomedica">tendências da profissão</a>.</p>
 
 <p><em>Publicado por <a href="https://engenhariabiomedica.com">engenhariabiomedica.com</a> — dados CAGED via <a href="https://salario.com.br">salario.com.br</a>, <a href="https://www.gov.br/trabalho-e-emprego">MTE</a>, <a href="https://abimo.org.br">ABIMO</a> e <a href="https://confea.org.br">CONFEA</a>.</em></p>
 `,

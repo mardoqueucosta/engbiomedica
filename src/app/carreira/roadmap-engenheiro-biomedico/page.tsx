@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Carreira"
       pillarHref="/carreira"
       sectionLabel="Roadmap: Do Estágio à Diretoria"
-      thirdLink={{ label: 'Salários do Engenheiro Biomédico', href: '/artigos/salario-engenheiro-biomedico' }}
+      thirdLink={{ label: 'Salários do Engenheiro Biomédico', href: '/artigos/quanto-ganha-engenheiro-biomedico-2026' }}
     />
   );
 }

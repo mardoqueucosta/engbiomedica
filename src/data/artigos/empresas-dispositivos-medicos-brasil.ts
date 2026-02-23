@@ -57,7 +57,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para uma análise detalhada da estrutura macroeconômica do setor — segmentos, balança comercial e política industrial —, consulte o artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>Para uma análise detalhada da estrutura macroeconômica do setor — segmentos, balança comercial e política industrial —, consulte o artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Ranking das 20 maiores empresas de dispositivos médicos no Brasil</h2>
 
@@ -276,7 +276,7 @@ export const artigo: Artigo = {
 
 <h3>brain4care — sensor intracraniano não-invasivo, FDA em 2021</h3>
 
-<p>A brain4care é o caso mais recente e disruptivo no ranking: desenvolveu um <strong>sensor não-invasivo para monitoramento da pressão intracraniana</strong> — problema de engenharia que a medicina tenta resolver há décadas. Com aprovação do <strong>FDA em 2021</strong> e adoção por mais de <strong>80 instituições</strong> no Brasil e no exterior, a empresa representa o novo perfil de empresa deeptech brasileira em saúde. Para profissionais de P&D, regulatório e neuroengenharia, a brain4care é uma das saídas mais inovadoras do ecossistema nacional. Veja mais sobre esse tipo de empresa no artigo sobre <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a>.</p>
+<p>A brain4care é o caso mais recente e disruptivo no ranking: desenvolveu um <strong>sensor não-invasivo para monitoramento da pressão intracraniana</strong> — problema de engenharia que a medicina tenta resolver há décadas. Com aprovação do <strong>FDA em 2021</strong> e adoção por mais de <strong>80 instituições</strong> no Brasil e no exterior, a empresa representa o novo perfil de empresa deeptech brasileira em saúde. Para profissionais de P&D, regulatório e neuroengenharia, a brain4care é uma das saídas mais inovadoras do ecossistema nacional. Veja mais sobre esse tipo de empresa no artigo sobre <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a>.</p>
 
 <h2>Cargos, salários e faixas de remuneração no setor</h2>
 
@@ -334,7 +334,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>O cargo de <strong>Assuntos Regulatórios</strong> chama atenção pela amplitude: a faixa de R$ 7.000 a R$ 35.000 reflete a escassez de profissionais seniores com domínio da <a href="https://www.gov.br/anvisa">ANVISA</a>, FDA e IMDRF simultaneamente. Para quem quer um aprofundamento sobre remunerações, o artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a> detalha faixas por nível, especialidade e região. Já as <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação em engenharia biomédica</a> descrevem o dia a dia de cada função.</p>
+<p>O cargo de <strong>Assuntos Regulatórios</strong> chama atenção pela amplitude: a faixa de R$ 7.000 a R$ 35.000 reflete a escassez de profissionais seniores com domínio da <a href="https://www.gov.br/anvisa">ANVISA</a>, FDA e IMDRF simultaneamente. Para quem quer um aprofundamento sobre remunerações, o artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a> detalha faixas por nível, especialidade e região. Já as <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação em engenharia biomédica</a> descrevem o dia a dia de cada função.</p>
 
 <h2>Como trabalhar nas maiores empresas: processo seletivo e certificações valorizadas</h2>
 

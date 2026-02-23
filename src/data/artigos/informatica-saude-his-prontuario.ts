@@ -580,7 +580,7 @@ export const artigo: Artigo = {
 
 <h2>Carreira em informática em saúde para engenheiros biomédicos</h2>
 
-<p>A informática em saúde é uma das áreas de crescimento mais acelerado para profissionais de <a href="/artigos/engenharia-biomedica-vale-a-pena">engenharia biomédica</a>. O Brasil registrou 5.979 novas posições em informática em saúde em 2024, com crescimento de 50% nas contratações em relação ao ano anterior.</p>
+<p>A informática em saúde é uma das áreas de crescimento mais acelerado para profissionais de <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">engenharia biomédica</a>. O Brasil registrou 5.979 novas posições em informática em saúde em 2024, com crescimento de 50% nas contratações em relação ao ano anterior.</p>
 
 <h3>Competências técnicas mais valorizadas</h3>
 
@@ -632,7 +632,7 @@ export const artigo: Artigo = {
 
 <p>A remuneração média para profissionais de informática em saúde no Brasil é de R$ 8.658/mês, com profissionais seniores — especialmente arquitetos FHIR, líderes de integração e especialistas em segurança — alcançando R$ 16.000 ou mais. Para referência de carreira e salários na engenharia biomédica em geral, consulte o artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">remuneração do engenheiro biomédico em 2026</a>.</p>
 
-<p>As principais <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a> e fornecedores de HIS como MV Informática, Philips Tasy e TOTVS Saúde são empregadores significativos do setor. A carreira pode se desenvolver também em órgãos públicos como DATASUS, SEIDIGI e secretarias estaduais de saúde, além de hospitais e redes privadas em transição para sistemas integrados.</p>
+<p>As principais <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a> e fornecedores de HIS como MV Informática, Philips Tasy e TOTVS Saúde são empregadores significativos do setor. A carreira pode se desenvolver também em órgãos públicos como DATASUS, SEIDIGI e secretarias estaduais de saúde, além de hospitais e redes privadas em transição para sistemas integrados.</p>
 
 <p>Para quem está ainda na graduação, o tema de informática em saúde oferece excelentes oportunidades de <a href="/artigos/ideias-tcc-engenharia-biomedica">TCCs em engenharia biomédica</a>, especialmente envolvendo integração FHIR, análise de dados do DATASUS ou desenvolvimento de aplicações SMART on FHIR.</p>
 

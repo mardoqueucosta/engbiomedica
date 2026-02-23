@@ -24,13 +24,13 @@ const sections = [
   {
     title: 'Cursos de Graduação',
     description: 'Diretório completo dos 28+ cursos em universidades públicas e privadas, com notas MEC, vagas e modalidades.',
-    href: '/artigos/faculdades-engenharia-biomedica-brasil',
+    href: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking',
     badge: 'Bacharelado — 5 anos',
   },
   {
     title: 'Pós-Graduação Stricto Sensu',
     description: 'Mestrado e doutorado em Engenharia Biomédica, com conceitos CAPES, linhas de pesquisa e corpo docente.',
-    href: '/artigos/pos-graduacao-engenharia-biomedica',
+    href: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica',
     badge: 'Mestrado & Doutorado',
   },
   {
@@ -42,7 +42,7 @@ const sections = [
   {
     title: 'Salários',
     description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
-    href: '/artigos/salario-engenheiro-biomedico',
+    href: '/artigos/quanto-ganha-engenheiro-biomedico-2026',
     badge: 'R$ 8.600 médio',
   },
 ];

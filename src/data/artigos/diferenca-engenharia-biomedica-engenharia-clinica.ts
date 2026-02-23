@@ -163,7 +163,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para uma análise detalhada de cada subárea e os perfis de carreira correspondentes, veja o artigo sobre as <a href="/artigos/areas-atuacao-engenharia-biomedica">8 áreas de atuação da Engenharia Biomédica</a> e o guia sobre <a href="/artigos/o-que-faz-engenheiro-biomedico">o que faz o engenheiro biomédico</a>.</p>
+<p>Para uma análise detalhada de cada subárea e os perfis de carreira correspondentes, veja o artigo sobre as <a href="/artigos/areas-atuacao-engenharia-biomedica">8 áreas de atuação da Engenharia Biomédica</a> e o guia sobre <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">o que faz o engenheiro biomédico</a>.</p>
 
 <h2>O que é Engenharia Clínica: a subárea hospitalar</h2>
 
@@ -279,7 +279,7 @@ export const artigo: Artigo = {
 
 <p>Na CBO (Classificação Brasileira de Ocupações), o código 2143-80 lista "Engenheiro Clínico" como sinônimo de "Engenheiro Biomédico". Isso significa que, para fins de mercado de trabalho e CAGED, os dados salariais não distinguem entre as duas especialidades. No CREA, o único pós-graduado que recebe um título próprio — e não mera anotação — é o Engenheiro de Segurança do Trabalho.</p>
 
-<p>Vale mencionar que o <strong>PL 3.468/2020</strong> propõe regulamentar especificamente a Engenharia Clínica como profissão distinta. A SBEB apoiou a iniciativa com pedido de aprimoramentos técnicos, mas o projeto ainda tramita no Congresso. Para detalhes sobre o registro no CREA, veja o artigo sobre o <a href="/artigos/registro-crea-engenheiro-biomedico">registro no CREA para engenheiros biomédicos</a>.</p>
+<p>Vale mencionar que o <strong>PL 3.468/2020</strong> propõe regulamentar especificamente a Engenharia Clínica como profissão distinta. A SBEB apoiou a iniciativa com pedido de aprimoramentos técnicos, mas o projeto ainda tramita no Congresso. Para detalhes sobre o registro no CREA, veja o artigo sobre o <a href="/artigos/registro-crea-engenheiro-biomedico-guia">registro no CREA para engenheiros biomédicos</a>.</p>
 
 <h2>Ambiente de trabalho e rotina: onde cada um atua</h2>
 
@@ -332,7 +332,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>O mercado de dispositivos médicos no Brasil movimenta <strong>R$ 26,1 bilhões por ano</strong>, com mais de 6.500 hospitais cadastrados no CNES e aproximadamente 500.000 leitos. Esse volume gera demanda permanente tanto para engenheiros biomédicos nas verticais de desenvolvimento quanto para engenheiros clínicos na ponta operacional. Para uma análise detalhada do mercado, veja o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em Engenharia Biomédica</a>.</p>
+<p>O mercado de dispositivos médicos no Brasil movimenta <strong>R$ 26,1 bilhões por ano</strong>, com mais de 6.500 hospitais cadastrados no CNES e aproximadamente 500.000 leitos. Esse volume gera demanda permanente tanto para engenheiros biomédicos nas verticais de desenvolvimento quanto para engenheiros clínicos na ponta operacional. Para uma análise detalhada do mercado, veja o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em Engenharia Biomédica</a>.</p>
 
 <h2>Habilidades técnicas: o que cada especialidade exige</h2>
 
@@ -452,7 +452,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>A progressão na Engenharia Biomédica é <strong>horizontal + vertical</strong>: o profissional pode migrar entre subáreas (de instrumentação para IA médica, por exemplo) além de crescer hierarquicamente. Na Engenharia Clínica, a progressão é <strong>predominantemente vertical</strong>: a especialidade é bem definida, e o crescimento se dá em profundidade e liderança dentro do mesmo campo. Para análise detalhada de remuneração, veja os artigos sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">quanto ganha o engenheiro biomédico em 2026</a>.</p>
+<p>A progressão na Engenharia Biomédica é <strong>horizontal + vertical</strong>: o profissional pode migrar entre subáreas (de instrumentação para IA médica, por exemplo) além de crescer hierarquicamente. Na Engenharia Clínica, a progressão é <strong>predominantemente vertical</strong>: a especialidade é bem definida, e o crescimento se dá em profundidade e liderança dentro do mesmo campo. Para análise detalhada de remuneração, veja os artigos sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">quanto ganha o engenheiro biomédico em 2026</a>.</p>
 
 <p>Nota: o CAGED 2026 registra 137 profissionais CLT sob o CBO 2143-80, com salário médio de R$ 8.658, piso de R$ 8.422 e teto de R$ 14.782 para contratos de 40h semanais. Esse código unifica EB e EC — os dados não distinguem entre as especialidades. Fonte: <a href="https://www.salario.com.br">Salário.com.br</a> com base no CAGED.</p>
 
@@ -595,7 +595,7 @@ export const artigo: Artigo = {
     <tr>
       <td>Criar tecnologia + indústria + flexibilidade + sem graduação</td>
       <td>Engenharia Biomédica (graduação)</td>
-      <td><a href="/artigos/faculdades-engenharia-biomedica-brasil">Ver faculdades</a></td>
+      <td><a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Ver faculdades</a></td>
     </tr>
     <tr>
       <td>Gerenciar + hospital + especializar + já tem engenharia</td>
@@ -605,7 +605,7 @@ export const artigo: Artigo = {
     <tr>
       <td>Pesquisa + academia + inovação + sem graduação</td>
       <td>Engenharia Biomédica + mestrado/doutorado</td>
-      <td><a href="/artigos/pos-graduacao-engenharia-biomedica">Ver pós-graduação</a></td>
+      <td><a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">Ver pós-graduação</a></td>
     </tr>
     <tr>
       <td>EC + crescer para liderança + já na área</td>

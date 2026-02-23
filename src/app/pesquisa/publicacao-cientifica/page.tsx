@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Pesquisa"
       pillarHref="/pesquisa"
       sectionLabel="Publicação Científica"
-      thirdLink={{ label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' }}
+      thirdLink={{ label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engbiomedica-mapa' }}
     />
   );
 }

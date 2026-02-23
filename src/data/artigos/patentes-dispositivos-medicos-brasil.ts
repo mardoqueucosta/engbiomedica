@@ -296,7 +296,7 @@ export const artigo: Artigo = {
 
 <p>Os dados mais recentes mostram, contudo, um cenário desafiador: apenas 23,8% dos NITs assinaram novos contratos de licenciamento em 2023. Isso indica uma lacuna significativa entre a produção de patentes nas universidades e a efetiva transferência dessas tecnologias para empresas que podem transformá-las em produtos no mercado.</p>
 
-<p>Existem exceções notáveis. A Inova Unicamp, agência de inovação da Universidade Estadual de Campinas, mantém 212 contratos ativos de transferência de tecnologia, sendo referência nacional em interação universidade-empresa. Para dispositivos médicos, centros como o <a href="/artigos/centros-pesquisa-engenharia-biomedica">CEB/UNICAMP</a> e o PEB/COPPE/UFRJ possuem portfólios de patentes com potencial comercial significativo em áreas como processamento de imagens médicas, instrumentação biomédica e biomateriais.</p>
+<p>Existem exceções notáveis. A Inova Unicamp, agência de inovação da Universidade Estadual de Campinas, mantém 212 contratos ativos de transferência de tecnologia, sendo referência nacional em interação universidade-empresa. Para dispositivos médicos, centros como o <a href="/artigos/centros-pesquisa-engbiomedica-mapa">CEB/UNICAMP</a> e o PEB/COPPE/UFRJ possuem portfólios de patentes com potencial comercial significativo em áreas como processamento de imagens médicas, instrumentação biomédica e biomateriais.</p>
 
 <!-- IMG_SLOT_3 -->
 

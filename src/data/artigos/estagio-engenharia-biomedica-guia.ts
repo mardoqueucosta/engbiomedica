@@ -96,7 +96,7 @@ export const artigo: Artigo = {
 
 <p>As multinacionais do setor pagam valores sistematicamente acima da média regional. Programas estruturados da Philips, GE Healthcare e Medtronic oferecem entre <strong>R$ 1.800 e R$ 2.800/mês</strong>, além de benefícios como vale-alimentação, plano de saúde e acesso a plataformas de treinamento corporativo. Hospitais privados de grande porte costumam pagar entre R$ 1.200 e R$ 2.000/mês, enquanto hospitais públicos frequentemente oferecem bolsas simbólicas ou não remuneradas — situação que pode ser compensada pelo ganho de experiência em ambientes de alta complexidade.</p>
 
-<p>Como referência de perspectiva futura: após a formação, o engenheiro biomédico júnior ganha em média <strong>R$ 7.659/mês</strong>, o pleno R$ 10.246/mês e o sênior em grandes empresas chega a R$ 16.795/mês. Ver dados completos em <a href="/artigos/salario-engenheiro-biomedico">salários do engenheiro biomédico</a>.</p>
+<p>Como referência de perspectiva futura: após a formação, o engenheiro biomédico júnior ganha em média <strong>R$ 7.659/mês</strong>, o pleno R$ 10.246/mês e o sênior em grandes empresas chega a R$ 16.795/mês. Ver dados completos em <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salários do engenheiro biomédico</a>.</p>
 
 <h2>Principais empregadores e programas de estágio</h2>
 
@@ -151,7 +151,7 @@ export const artigo: Artigo = {
   <li><strong>Santa Casa da Bahia e outras Santas Casas regionais:</strong> oportunidades menos concorridas fora do eixo SP-RJ.</li>
 </ul>
 
-<p>Consulte a lista completa de empregadores do setor no artigo sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de Engenharia Biomédica no Brasil</a>.</p>
+<p>Consulte a lista completa de empregadores do setor no artigo sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de Engenharia Biomédica no Brasil</a>.</p>
 
 <h2>Onde buscar vagas de estágio</h2>
 
@@ -486,7 +486,7 @@ export const artigo: Artigo = {
 
 <p>Em caso de dúvidas sobre registro profissional pós-formatura, o <a href="https://confea.org.br" target="_blank" rel="noopener">CONFEA</a> mantém orientações sobre o processo de obtenção do registro no CREA, necessário para assinar laudos e projetos como engenheiro pleno.</p>
 
-<p>Para mais informações sobre os próximos passos após o estágio, veja o artigo sobre <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">pós-graduação em Engenharia Biomédica</a> e o guia completo sobre <a href="/artigos/o-que-faz-engenheiro-biomedico">o que faz o engenheiro biomédico</a>.</p>
+<p>Para mais informações sobre os próximos passos após o estágio, veja o artigo sobre <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">pós-graduação em Engenharia Biomédica</a> e o guia completo sobre <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">o que faz o engenheiro biomédico</a>.</p>
 
 <h2>Perguntas frequentes</h2>
 

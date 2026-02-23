@@ -30,9 +30,9 @@ export const artigo: Artigo = {
 
 <h3>Modelo brasileiro: 5 anos de formação integral</h3>
 
-<p>No Brasil, a <a href="/artigos/grade-curricular-engenharia-biomedica">grade curricular de engenharia biomédica</a> é mais extensa e integrada. O estudante cursa disciplinas de engenharia (circuitos, sinais, materiais, programação) e de saúde (anatomia, fisiologia, bioquímica) ao longo de todos os 10 semestres. O estágio obrigatório e o TCC estão incluídos na carga horária mínima de 3.600 horas definida pelas Diretrizes Curriculares Nacionais.</p>
+<p>No Brasil, a <a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">grade curricular de engenharia biomédica</a> é mais extensa e integrada. O estudante cursa disciplinas de engenharia (circuitos, sinais, materiais, programação) e de saúde (anatomia, fisiologia, bioquímica) ao longo de todos os 10 semestres. O estágio obrigatório e o TCC estão incluídos na carga horária mínima de 3.600 horas definida pelas Diretrizes Curriculares Nacionais.</p>
 
-<p>Os <strong>27 cursos reconhecidos pelo MEC</strong> concentram-se no Sudeste e Sul, com destaque para UFPE, UFRJ, UNICAMP e USP. A avaliação é feita pelo ENADE e pelo conceito CAPES para programas de pós-graduação. Para uma lista completa, consulte nosso ranking de <a href="/artigos/faculdades-engenharia-biomedica-brasil">faculdades de engenharia biomédica no Brasil</a>.</p>
+<p>Os <strong>27 cursos reconhecidos pelo MEC</strong> concentram-se no Sudeste e Sul, com destaque para UFPE, UFRJ, UNICAMP e USP. A avaliação é feita pelo ENADE e pelo conceito CAPES para programas de pós-graduação. Para uma lista completa, consulte nosso ranking de <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">faculdades de engenharia biomédica no Brasil</a>.</p>
 
 <table>
 <thead>
@@ -108,7 +108,7 @@ export const artigo: Artigo = {
 
 <h3>Salários e emprego no Brasil</h3>
 
-<p>No Brasil, o salário médio do engenheiro biomédico é de <strong>R$ 8.658/mês</strong> segundo dados CAGED, com teto de R$ 14.782. Em cargos de gestão, os valores chegam a R$ 22.000-45.000/mês. O mercado de dispositivos médicos emprega <strong>85.078 profissionais diretos</strong>, com produção nacional de R$ 26,1 bilhões e exportações de US$ 1,17 bilhão. Para análise detalhada, veja nosso artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a>.</p>
+<p>No Brasil, o salário médio do engenheiro biomédico é de <strong>R$ 8.658/mês</strong> segundo dados CAGED, com teto de R$ 14.782. Em cargos de gestão, os valores chegam a R$ 22.000-45.000/mês. O mercado de dispositivos médicos emprega <strong>85.078 profissionais diretos</strong>, com produção nacional de R$ 26,1 bilhões e exportações de US$ 1,17 bilhão. Para análise detalhada, veja nosso artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a>.</p>
 
 <table>
 <thead>
@@ -194,7 +194,7 @@ export const artigo: Artigo = {
 <li><strong>O-1:</strong> visto para profissionais com habilidades extraordinárias, aplicável a pesquisadores com publicações de alto impacto.</li>
 </ul>
 
-<p>Para quem está considerando essa trajetória, recomendamos também o artigo sobre <a href="/artigos/engenharia-biomedica-eua-vs-brasil">engenharia biomédica nos EUA: como se preparar para carreira internacional</a>.</p>
+<p>Para quem está considerando essa trajetória, recomendamos também o artigo sobre <a href="/artigos/engenharia-biomedica-eua-comparativo">engenharia biomédica nos EUA: como se preparar para carreira internacional</a>.</p>
 
 <h2>Perguntas frequentes sobre engenharia biomédica EUA vs Brasil</h2>
 
@@ -202,7 +202,7 @@ export const artigo: Artigo = {
 <p>Não automaticamente. Para trabalhar como engineer nos EUA, é necessário ter o diploma avaliado por agências como WES (World Education Services) ou ECE (Educational Credential Evaluators). A graduação brasileira de 5 anos costuma ser reconhecida como equivalente ao bachelor's degree americano. Para licenciamento como Professional Engineer (PE), é necessário atender aos requisitos do estado, incluindo o exame FE (Fundamentals of Engineering).</p>
 
 <h3>Vale a pena fazer mestrado ou doutorado nos EUA em biomedical engineering?</h3>
-<p>Sim, especialmente o doutorado, que normalmente é financiado (tuition waiver + stipend de US$ 30.000-40.000/ano). O PhD americano abre portas para pesquisa de ponta, posições em grandes corporações de med-tech e imigração via EB-2 NIW. O mestrado é menos frequentemente financiado, mas o STEM OPT permite trabalhar por 3 anos após a conclusão, o que compensa o investimento. Para mais informações sobre pós-graduação, veja <a href="/artigos/pos-graduacao-engenharia-biomedica">mestrado e doutorado em engenharia biomédica</a>.</p>
+<p>Sim, especialmente o doutorado, que normalmente é financiado (tuition waiver + stipend de US$ 30.000-40.000/ano). O PhD americano abre portas para pesquisa de ponta, posições em grandes corporações de med-tech e imigração via EB-2 NIW. O mestrado é menos frequentemente financiado, mas o STEM OPT permite trabalhar por 3 anos após a conclusão, o que compensa o investimento. Para mais informações sobre pós-graduação, veja <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">mestrado e doutorado em engenharia biomédica</a>.</p>
 
 <h3>Quanto custa fazer biomedical engineering nos EUA como estudante internacional?</h3>
 <p>O custo total de 4 anos de graduação varia de <strong>US$ 120.000 a US$ 280.000</strong>, considerando tuition, moradia, alimentação e seguro saúde. Universidades públicas estaduais cobram tarifas out-of-state para internacionais (US$ 30.000-50.000/ano), enquanto privadas chegam a US$ 70.265/ano. Bolsas de mérito podem reduzir significativamente esses valores, mas bolsas full-ride para graduação são raras para estudantes internacionais.</p>

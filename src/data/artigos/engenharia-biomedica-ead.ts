@@ -310,7 +310,7 @@ export const artigo: Artigo = {
 
 <p>A diferença de mensalidade entre o EaD mais barato (R$ 83/mês na UNIAGES) e a média do presencial privado (R$ 1.200/mês) é de quase 15 vezes. Ao longo de 60 meses, isso representa uma economia nominal de até R$ 67.000. Esse dado explica por que o EaD atraiu estudantes em situação financeira vulnerável — e também por que o debate sobre qualidade formativa é tão politicamente sensível: tocar no acesso ao EaD é tocar no único caminho possível para muitos brasileiros.</p>
 
-<p>Mas é preciso colocar o custo em perspectiva de retorno. Um engenheiro biomédico formado em instituição presencial reconhecida tem salários de entrada entre R$ 3.500 e R$ 6.000, segundo dados consolidados em nosso artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salários em Engenharia Biomédica</a>. A diferença de custo total entre EaD e presencial pode ser recuperada em 12 a 36 meses de trabalho, dependendo da trilha de carreira. Mas isso pressupõe empregabilidade equivalente — o que, como discutido, não é garantido.</p>
+<p>Mas é preciso colocar o custo em perspectiva de retorno. Um engenheiro biomédico formado em instituição presencial reconhecida tem salários de entrada entre R$ 3.500 e R$ 6.000, segundo dados consolidados em nosso artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salários em Engenharia Biomédica</a>. A diferença de custo total entre EaD e presencial pode ser recuperada em 12 a 36 meses de trabalho, dependendo da trilha de carreira. Mas isso pressupõe empregabilidade equivalente — o que, como discutido, não é garantido.</p>
 
 <h2>Para quem o semipresencial pode fazer sentido</h2>
 

@@ -112,7 +112,7 @@ export const artigo: Artigo = {
 
 <h2>Impacto para Fabricantes Brasileiros que Exportam para os EUA</h2>
 
-<p>Para empresas brasileiras que comercializam ou pretendem comercializar dispositivos médicos nos Estados Unidos, a dupla exigência do QMSR e da Seção 524B representa um desafio regulatório relevante. O <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado brasileiro de dispositivos médicos</a>, maior da América Latina, tem um número crescente de fabricantes que buscam aprovação da FDA como estratégia de internacionalização.</p>
+<p>Para empresas brasileiras que comercializam ou pretendem comercializar dispositivos médicos nos Estados Unidos, a dupla exigência do QMSR e da Seção 524B representa um desafio regulatório relevante. O <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado brasileiro de dispositivos médicos</a>, maior da América Latina, tem um número crescente de fabricantes que buscam aprovação da FDA como estratégia de internacionalização.</p>
 
 <p>A boa notícia é que empresas certificadas pela <strong>ISO 13485:2016</strong> — exigência da ANVISA para autorização de funcionamento nos termos da RDC 16/2013 e da RDC 751/2022 — já possuem a base do SGQ compatível com o QMSR. Os esforços adicionais se concentram principalmente em:</p>
 
@@ -124,7 +124,7 @@ export const artigo: Artigo = {
   <li><strong>Registro anual na FDA:</strong> estabelecimentos de fabricação devem registrar-se anualmente e pagar a taxa MDUFA (Medical Device User Fee Act), cujo valor para 2026 é de aproximadamente US$ 6.700 por estabelecimento</li>
 </ol>
 
-<p>Vale destacar que a ANVISA acompanha de perto os desenvolvimentos do IMDRF (International Medical Device Regulators Forum) em cibersegurança, do qual é membro. Seu <em>Guia de Boas Práticas em Cibersegurança para Dispositivos Médicos</em>, publicado em 2021, ainda é recomendação, mas a tendência é de formalização progressiva. Empresas que atendam aos requisitos da FDA estarão bem posicionadas para futuras exigências da ANVISA. Veja mais sobre a <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação da ANVISA para dispositivos médicos</a>.</p>
+<p>Vale destacar que a ANVISA acompanha de perto os desenvolvimentos do IMDRF (International Medical Device Regulators Forum) em cibersegurança, do qual é membro. Seu <em>Guia de Boas Práticas em Cibersegurança para Dispositivos Médicos</em>, publicado em 2021, ainda é recomendação, mas a tendência é de formalização progressiva. Empresas que atendam aos requisitos da FDA estarão bem posicionadas para futuras exigências da ANVISA. Veja mais sobre a <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação da ANVISA para dispositivos médicos</a>.</p>
 
 <h2>O que Esperar nas Inspeções da FDA após o QMSR</h2>
 
@@ -134,7 +134,7 @@ export const artigo: Artigo = {
 
 <p>Dados da FDA indicam que entre 2023 e 2025 o número de observações 483 relacionadas a cibersegurança aumentou mais de <strong>200%</strong>, refletindo a atenção crescente da agência ao tema. Fabricantes que integram cibersegurança ao SGQ — e não como processo isolado — tendem a ter inspeções mais eficientes e menor taxa de emissão de observações.</p>
 
-<p>Para um panorama mais amplo sobre como a regulamentação americana se compara ao contexto brasileiro, veja o artigo <a href="/artigos/engenharia-biomedica-eua-vs-brasil">Engenharia Biomédica: EUA vs Brasil</a>.</p>
+<p>Para um panorama mais amplo sobre como a regulamentação americana se compara ao contexto brasileiro, veja o artigo <a href="/artigos/engenharia-biomedica-eua-comparativo">Engenharia Biomédica: EUA vs Brasil</a>.</p>
 
 <h2>Perguntas Frequentes</h2>
 

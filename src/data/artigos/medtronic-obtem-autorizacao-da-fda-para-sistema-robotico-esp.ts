@@ -130,7 +130,7 @@ export const artigo: Artigo = {
   <li><strong>Treinamento e implementação hospitalar</strong>: capacitação de cirurgiões e enfermagem, integração com sistemas HIS/PACS</li>
 </ul>
 
-<p>Para uma visão mais ampla do setor no país, consulte os artigos <a href="/artigos/mercado-dispositivos-medicos-brasil">Mercado de Dispositivos Médicos no Brasil</a> e <a href="/artigos/empresas-engenharia-biomedica-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
+<p>Para uma visão mais ampla do setor no país, consulte os artigos <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">Mercado de Dispositivos Médicos no Brasil</a> e <a href="/artigos/empresas-dispositivos-medicos-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
 
 <h2>Tendências na robótica cirúrgica espinhal para 2026 e além</h2>
 
@@ -165,7 +165,7 @@ export const artigo: Artigo = {
 <p>Os principais competidores são o <strong>ExcelsiusGPS</strong> da Globus Medical (empresa resultante da fusão com NuVasive em 2023), o <strong>Q Guidance System</strong> da Stryker, o <strong>ROSA Spine</strong> da Zimmer Biomet e o <strong>Cirq</strong> da Brainlab. Cada sistema apresenta características distintas de integração de imagem, compatibilidade de implantes e fluxo de trabalho. A escolha hospitalar depende de fatores como custo total de propriedade, portfólio de implantes compatíveis, curva de aprendizado e qualidade do suporte técnico local.</p>
 
 <h3>Como a robótica espinhal impacta a carreira do engenheiro biomédico no Brasil?</h3>
-<p>O crescimento da robótica cirúrgica cria demanda por engenheiros biomédicos com competências em sistemas embarcados, processamento de imagem médica, mecatrônica, normas técnicas (<a href="https://www.iec.ch">IEC</a> 60601, ISO 14971) e assuntos regulatórios. Universidades como USP, UNICAMP e UFMG já oferecem disciplinas em robótica médica, e o setor absorve profissionais tanto em fabricantes internacionais com operações no Brasil quanto em startups do ecossistema healthtech. Para mais detalhes sobre oportunidades de carreira, veja <a href="/artigos/areas-atuacao-engenharia-biomedica">Áreas de Atuação em Engenharia Biomédica</a> e <a href="/artigos/mercado-trabalho-engenharia-biomedica">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
+<p>O crescimento da robótica cirúrgica cria demanda por engenheiros biomédicos com competências em sistemas embarcados, processamento de imagem médica, mecatrônica, normas técnicas (<a href="https://www.iec.ch">IEC</a> 60601, ISO 14971) e assuntos regulatórios. Universidades como USP, UNICAMP e UFMG já oferecem disciplinas em robótica médica, e o setor absorve profissionais tanto em fabricantes internacionais com operações no Brasil quanto em startups do ecossistema healthtech. Para mais detalhes sobre oportunidades de carreira, veja <a href="/artigos/areas-atuacao-engenharia-biomedica">Áreas de Atuação em Engenharia Biomédica</a> e <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
 
 <p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções.</p>
 

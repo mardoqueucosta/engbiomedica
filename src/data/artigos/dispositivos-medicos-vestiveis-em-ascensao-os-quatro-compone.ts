@@ -196,7 +196,7 @@ export const artigo: Artigo = {
 
 <p>A China avançou significativamente em sensores e baterias entre 2022 e 2025. Fabricantes como Goodix Technology (sensores biométricos), Goertek (módulos MEMS e acústicos) e BYD (células de bateria) conquistaram participação crescente no mercado global de componentes para wearables.</p>
 
-<p>A tendência dominante em 2025–2026 é a <strong>verticalização</strong>: gigantes como Apple (chip S10 SiP com sensor BioActive), Samsung e Google desenvolvem componentes proprietários para reduzir dependência de fornecedores externos e acelerar o ciclo de inovação. Para healthtechs menores, isso significa maior disponibilidade de componentes no mercado aberto — mas também maior pressão competitiva de ecossistemas proprietários fechados. Saiba mais sobre o ecossistema de <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a>.</p>
+<p>A tendência dominante em 2025–2026 é a <strong>verticalização</strong>: gigantes como Apple (chip S10 SiP com sensor BioActive), Samsung e Google desenvolvem componentes proprietários para reduzir dependência de fornecedores externos e acelerar o ciclo de inovação. Para healthtechs menores, isso significa maior disponibilidade de componentes no mercado aberto — mas também maior pressão competitiva de ecossistemas proprietários fechados. Saiba mais sobre o ecossistema de <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a>.</p>
 
 <h2>O Cenário Brasileiro de Dispositivos Vestíveis Médicos</h2>
 
@@ -207,7 +207,7 @@ export const artigo: Artigo = {
 
 <p>Iniciativas nacionais relevantes incluem grupos de pesquisa da USP (Laboratório de Eletrônica Orgânica e Dispositivos Flexíveis), UNICAMP e UFMG, que desenvolvem biossensores impressos e e-skin para monitoramento de suor e eletrólitos. No setor privado, a cadeia de suprimentos de componentes ainda depende fortemente de importações, com o Polo Industrial de Manaus respondendo pela maior parte da montagem de eletrônicos de consumo. Incentivos da EMBRAPII e a Lei do Bem têm fomentado projetos de P&D, mas a produção em escala permanece limitada.</p>
 
-<p>Leia mais sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a> e sobre as <a href="/artigos/empresas-engenharia-biomedica-brasil">principais empresas do setor</a>.</p>
+<p>Leia mais sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a> e sobre as <a href="/artigos/empresas-dispositivos-medicos-brasil">principais empresas do setor</a>.</p>
 
 <h2>Regulamentação de Dispositivos Vestíveis Médicos pela ANVISA</h2>
 
@@ -250,7 +250,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>A <strong>RDC nº 657/2022</strong> trata especificamente de Software como Dispositivo Médico (SaMD). Dispositivos vestíveis que dependem de algoritmos de IA para diagnóstico ou suporte à decisão clínica devem seguir também essa norma, além das diretrizes de cibersegurança em alinhamento com a norma <strong>IEC 81001-5-1</strong>. Saiba mais sobre a <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação da ANVISA para dispositivos médicos</a> e as <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas da área</a>.</p>
+<p>A <strong>RDC nº 657/2022</strong> trata especificamente de Software como Dispositivo Médico (SaMD). Dispositivos vestíveis que dependem de algoritmos de IA para diagnóstico ou suporte à decisão clínica devem seguir também essa norma, além das diretrizes de cibersegurança em alinhamento com a norma <strong>IEC 81001-5-1</strong>. Saiba mais sobre a <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação da ANVISA para dispositivos médicos</a> e as <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas da área</a>.</p>
 
 <h2>Perguntas Frequentes</h2>
 

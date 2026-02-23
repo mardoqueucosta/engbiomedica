@@ -18,7 +18,7 @@ export const artigo: Artigo = {
 
 <p>O que torna essa subárea singular é o contexto de uso. Diferente de medir a temperatura de um forno ou a pressão em uma tubulação industrial, medir a atividade elétrica do coração envolve eletrodos em contato com pele ou tecido, amplificadores com ganho de 1.000 vezes ou mais processando sinais de microvolt, e isolamento galvânico rigoroso para evitar que correntes de fuga — mesmo da ordem de 10 µA — induzam fibrilação ventricular. Esse conjunto de restrições molda cada decisão de projeto.</p>
 
-<p>A subárea também conecta diretamente ao mercado: engenheiros de instrumentação atuam no desenvolvimento de equipamentos originais (P&D), na qualificação e manutenção de parques tecnológicos hospitalares (<a href="/artigos/engenharia-clinica-guia-completo">engenharia clínica</a>), na aprovação regulatória junto à <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA</a> e no ecossistema crescente de <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a>.</p>
+<p>A subárea também conecta diretamente ao mercado: engenheiros de instrumentação atuam no desenvolvimento de equipamentos originais (P&D), na qualificação e manutenção de parques tecnológicos hospitalares (<a href="/artigos/engenharia-clinica-guia-completo">engenharia clínica</a>), na aprovação regulatória junto à <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA</a> e no ecossistema crescente de <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a>.</p>
 
 <h2>A cadeia de medição biomédica: quatro estágios fundamentais</h2>
 
@@ -533,7 +533,7 @@ export const artigo: Artigo = {
 
 <h3>Software como Dispositivo Médico (SaMD) e INMETRO</h3>
 
-<p>Algoritmos de IA embarcados em equipamentos de instrumentação seguem a <strong>RDC 657/2022</strong> (SaMD — Software as Medical Device), com enquadramento pela Regra 11 do IMDRF. O PCCP (Predetermined Change Control Plan) para IA/ML está em revisão pela ANVISA. O INMETRO regula a conformidade eletrossegurança pela <strong>Portaria 384/2020</strong> (vigência plena desde dezembro de 2023): todos os equipamentos devem ser ensaiados por OCP credenciado conforme ABNT NBR IEC 60601, com auditorias a cada 15 meses. A <strong>RDC 509/2021</strong> tornará obrigatória a gestão de equipamentos conforme a NBR 15943:2011 para estabelecimentos de saúde. Para aprofundamento no tema regulatório, veja <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">a regulamentação ANVISA de dispositivos médicos</a>.</p>
+<p>Algoritmos de IA embarcados em equipamentos de instrumentação seguem a <strong>RDC 657/2022</strong> (SaMD — Software as Medical Device), com enquadramento pela Regra 11 do IMDRF. O PCCP (Predetermined Change Control Plan) para IA/ML está em revisão pela ANVISA. O INMETRO regula a conformidade eletrossegurança pela <strong>Portaria 384/2020</strong> (vigência plena desde dezembro de 2023): todos os equipamentos devem ser ensaiados por OCP credenciado conforme ABNT NBR IEC 60601, com auditorias a cada 15 meses. A <strong>RDC 509/2021</strong> tornará obrigatória a gestão de equipamentos conforme a NBR 15943:2011 para estabelecimentos de saúde. Para aprofundamento no tema regulatório, veja <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">a regulamentação ANVISA de dispositivos médicos</a>.</p>
 
 <h2>Tendências: wearables, IoMT e inteligência artificial</h2>
 
@@ -588,7 +588,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>O CAGED registrou crescimento de <strong>50% nas contratações</strong> de engenheiros biomédicos entre 2024 e 2025, reflexo do déficit histórico de US$ 8,62 bilhões na balança comercial de dispositivos médicos — que sinaliza tanto dependência externa quanto oportunidade de substituição de importações. Os 6.500+ hospitais brasileiros, multinacionais como Philips, GE HealthCare, Siemens Healthineers e Medtronic, e o ecossistema de 1.900+ healthtechs formam o mercado empregador. Para o panorama completo do mercado, veja <a href="/artigos/mercado-trabalho-engenharia-biomedica">o mercado de trabalho em engenharia biomédica</a> e <a href="/artigos/empresas-engenharia-biomedica-brasil">as principais empresas do setor no Brasil</a>.</p>
+<p>O CAGED registrou crescimento de <strong>50% nas contratações</strong> de engenheiros biomédicos entre 2024 e 2025, reflexo do déficit histórico de US$ 8,62 bilhões na balança comercial de dispositivos médicos — que sinaliza tanto dependência externa quanto oportunidade de substituição de importações. Os 6.500+ hospitais brasileiros, multinacionais como Philips, GE HealthCare, Siemens Healthineers e Medtronic, e o ecossistema de 1.900+ healthtechs formam o mercado empregador. Para o panorama completo do mercado, veja <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">o mercado de trabalho em engenharia biomédica</a> e <a href="/artigos/empresas-dispositivos-medicos-brasil">as principais empresas do setor no Brasil</a>.</p>
 
 <h3>Competências técnicas demandadas (2025–2030)</h3>
 

@@ -447,7 +447,7 @@ CAPTION: Os quatro eixos de especialização da Engenharia Biomédica: cada estu
   <li>Dificuldades financeiras (o curso exige dedicação integral que limita trabalho simultâneo)</li>
 </ul>
 
-<p>A boa notícia é que quem completa o curso tem perspectivas excelentes. O mercado brasileiro de dispositivos médicos movimentou <strong>R$ 26,1 bilhões</strong> em 2024, e o salário médio do engenheiro biomédico registrado no CBO 2143-80 é de <strong>R$ 8.658 por mês</strong>, com crescimento consistente acima da inflação nos últimos cinco anos. Para uma análise aprofundada, leia nosso artigo sobre <a href="/artigos/engenharia-biomedica-vale-a-pena">se a Engenharia Biomédica vale a pena</a>.</p>
+<p>A boa notícia é que quem completa o curso tem perspectivas excelentes. O mercado brasileiro de dispositivos médicos movimentou <strong>R$ 26,1 bilhões</strong> em 2024, e o salário médio do engenheiro biomédico registrado no CBO 2143-80 é de <strong>R$ 8.658 por mês</strong>, com crescimento consistente acima da inflação nos últimos cinco anos. Para uma análise aprofundada, leia nosso artigo sobre <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">se a Engenharia Biomédica vale a pena</a>.</p>
 
 <h2>Livros-referência que você vai usar (e dever comprar ou baixar)</h2>
 

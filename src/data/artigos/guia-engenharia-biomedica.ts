@@ -91,7 +91,7 @@ export const artigo: Artigo = {
 <p><strong>Em saúde digital e startups:</strong> desenvolver softwares médicos, plataformas de telemedicina, aplicativos de monitoramento de saúde, sistemas de prontuário eletrônico e soluções baseadas em IA para diagnóstico e tratamento.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/o-que-faz-engenheiro-biomedico">O que faz um Engenheiro Biomédico: dia a dia, atividades e perfil profissional</a></p>
+  <p>Leia também: <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">O que faz um Engenheiro Biomédico: dia a dia, atividades e perfil profissional</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 3 ==================== -->
@@ -208,7 +208,7 @@ export const artigo: Artigo = {
 <p>Também é importante não confundir <strong>Engenharia Biomédica</strong> com <strong>Engenharia Clínica</strong>. A Engenharia Clínica é uma <em>subárea</em> da Engenharia Biomédica, focada na gestão de tecnologia hospitalar. Todo engenheiro clínico é (ou deveria ser) um engenheiro biomédico, mas nem todo engenheiro biomédico atua como engenheiro clínico.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">Engenharia Biomédica vs. Biomedicina: qual escolher? Comparativo completo</a></p>
+  <p>Leia também: <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">Engenharia Biomédica vs. Biomedicina: qual escolher? Comparativo completo</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 5 ==================== -->
@@ -233,7 +233,7 @@ export const artigo: Artigo = {
 <p>Sim — como qualquer engenharia, a Engenharia Biomédica exige dedicação significativa, especialmente nos primeiros dois anos, que concentram disciplinas de cálculo, álgebra linear, física e química. A diferença é que, a partir do terceiro ano, as disciplinas se tornam muito mais aplicadas e envolventes: Instrumentação Biomédica, Biomecânica, Processamento de Imagens Médicas, Inteligência Artificial.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/curso-engenharia-biomedica-o-que-esperar">O curso de Engenharia Biomédica: o que esperar dos 5 anos de graduação</a></p>
+  <p>Leia também: <a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">O curso de Engenharia Biomédica: o que esperar dos 5 anos de graduação</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 6 ==================== -->
@@ -282,7 +282,7 @@ export const artigo: Artigo = {
 <p>Cada universidade organiza suas ênfases de forma diferente. A UFABC, por exemplo, estrutura o curso em quatro eixos: Sinais e Imagens, Biomecânica e Biomateriais, Sistemas Inteligentes e Instrumentação para Diagnóstico e Terapia.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/grade-curricular-engenharia-biomedica">Grade curricular de Engenharia Biomédica: todas as disciplinas detalhadas</a></p>
+  <p>Leia também: <a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">Grade curricular de Engenharia Biomédica: todas as disciplinas detalhadas</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 7 ==================== -->
@@ -458,7 +458,7 @@ export const artigo: Artigo = {
 <p><strong>Dado importante:</strong> entre 45% e 50% das vagas totais já são oferecidas na modalidade EaD ou semipresencial. Se você valoriza formação prática em laboratórios e contato direto com equipamentos reais, priorize instituições com oferta presencial e boa infraestrutura.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/faculdades-engenharia-biomedica-brasil">Todas as faculdades de Engenharia Biomédica no Brasil: guia completo</a></p>
+  <p>Leia também: <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Todas as faculdades de Engenharia Biomédica no Brasil: guia completo</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 8 ==================== -->
@@ -502,7 +502,7 @@ export const artigo: Artigo = {
 <p>A UFABC não aparece com nota de corte direta porque utiliza ingresso via Bacharelado em Ciência e Tecnologia (BC&amp;T), com seleção para a engenharia específica ocorrendo internamente após os primeiros semestres.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/nota-corte-engenharia-biomedica-sisu">Notas de corte de Engenharia Biomédica no SiSU: dados atualizados</a></p>
+  <p>Leia também: <a href="/artigos/nota-corte-engenharia-biomedica-sisu-2026">Notas de corte de Engenharia Biomédica no SiSU: dados atualizados</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 9 ==================== -->
@@ -576,7 +576,7 @@ export const artigo: Artigo = {
 </ul>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/pos-graduacao-engenharia-biomedica">Pós-graduação em Engenharia Biomédica: mestrado, doutorado e especialização</a></p>
+  <p>Leia também: <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">Pós-graduação em Engenharia Biomédica: mestrado, doutorado e especialização</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 10 ==================== -->
@@ -655,7 +655,7 @@ export const artigo: Artigo = {
 <p>É importante reforçar a diferença salarial: o <strong>Biomédico</strong> (profissional de Biomedicina) tem salário médio de apenas <strong>R$ 3.268/mês</strong> — menos da metade do engenheiro biomédico. A amostra, porém, é muito maior: 18.736 profissionais, indicando um mercado mais amplo mas com remuneração inferior.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/salario-engenheiro-biomedico">Salário do Engenheiro Biomédico: dados atualizados por nível e região</a></p>
+  <p>Leia também: <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Salário do Engenheiro Biomédico: dados atualizados por nível e região</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 11 ==================== -->
@@ -680,7 +680,7 @@ export const artigo: Artigo = {
 <p>As melhores fontes de vagas específicas para engenheiros biomédicos são: LinkedIn (filtrar por "engenheiro biomédico", "engenheiro clínico", "biomedical engineer"), portais de emprego das multinacionais (Philips, GE Healthcare, Siemens Healthineers, Medtronic), o Job Board da BMES (para oportunidades internacionais), grupos da comunidade de engenharia clínica (ABEClin) e plataformas como Vagas.com e Indeed.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/mercado-trabalho-engenharia-biomedica">Mercado de trabalho em Engenharia Biomédica: vagas, tendências e oportunidades</a></p>
+  <p>Leia também: <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de trabalho em Engenharia Biomédica: vagas, tendências e oportunidades</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 12 ==================== -->
@@ -742,7 +742,7 @@ export const artigo: Artigo = {
 <p>O <strong>déficit comercial de US$ 8,62 bilhões</strong> mostra uma forte dependência de importações, mas também aponta uma oportunidade enorme para a indústria nacional e para engenheiros biomédicos que atuem no desenvolvimento de tecnologia local.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/mercado-dispositivos-medicos-brasil">O mercado de dispositivos médicos no Brasil: números e oportunidades</a></p>
+  <p>Leia também: <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">O mercado de dispositivos médicos no Brasil: números e oportunidades</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 13 ==================== -->
@@ -848,7 +848,7 @@ export const artigo: Artigo = {
 </table>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/empresas-engenharia-biomedica-brasil">Empresas de Engenharia Biomédica no Brasil: multinacionais e nacionais</a></p>
+  <p>Leia também: <a href="/artigos/empresas-dispositivos-medicos-brasil">Empresas de Engenharia Biomédica no Brasil: multinacionais e nacionais</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 14 ==================== -->
@@ -937,7 +937,7 @@ export const artigo: Artigo = {
 <p>O <strong>Eretz.bio</strong> (Hospital Albert Einstein) já acelerou mais de 150 startups. O <strong>Hub InovaHC</strong> (HCFMUSP) abriga 30+ startups residentes. O <strong>Horizontes Hub</strong> (Unimed-BH) dispõe de R$ 60 milhões para investir em 4 anos. O SUPERA Parque (Ribeirão Preto) reúne 74 empresas com laboratórios acreditados pelo INMETRO.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/healthtechs-brasil-ecossistema">Healthtechs no Brasil: o ecossistema de startups de saúde</a></p>
+  <p>Leia também: <a href="/artigos/healthtechs-mapa-brasil">Healthtechs no Brasil: o ecossistema de startups de saúde</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 15 ==================== -->
@@ -960,7 +960,7 @@ export const artigo: Artigo = {
 <p>O processo é direto: ao concluir a graduação em Engenharia Biomédica em instituição reconhecida pelo MEC, o profissional solicita registro no CREA do estado onde pretende atuar. Todos os <strong>27 CREAs estaduais</strong> processam o registro sem restrição. O profissional registrado pode emitir ART (Anotação de Responsabilidade Técnica) e se beneficia do piso salarial legal da Lei 4.950-A/1966.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/registro-crea-engenheiro-biomedico">Como se registrar no CREA como Engenheiro Biomédico: passo a passo</a></p>
+  <p>Leia também: <a href="/artigos/registro-crea-engenheiro-biomedico-guia">Como se registrar no CREA como Engenheiro Biomédico: passo a passo</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 16 ==================== -->
@@ -1020,7 +1020,7 @@ export const artigo: Artigo = {
 </ul>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA e dispositivos médicos: guia completo de regulamentação</a></p>
+  <p>Leia também: <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA e dispositivos médicos: guia completo de regulamentação</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 17 ==================== -->
@@ -1091,7 +1091,7 @@ export const artigo: Artigo = {
 </table>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/centros-pesquisa-engenharia-biomedica">Centros de pesquisa em Engenharia Biomédica no Brasil: onde se faz ciência</a></p>
+  <p>Leia também: <a href="/artigos/centros-pesquisa-engbiomedica-mapa">Centros de pesquisa em Engenharia Biomédica no Brasil: onde se faz ciência</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 19 ==================== -->
@@ -1176,7 +1176,7 @@ export const artigo: Artigo = {
 </table>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/engenharia-biomedica-eua-vs-brasil">Engenharia Biomédica nos EUA vs. Brasil: comparativo completo</a></p>
+  <p>Leia também: <a href="/artigos/engenharia-biomedica-eua-comparativo">Engenharia Biomédica nos EUA vs. Brasil: comparativo completo</a></p>
 </blockquote>
 
 <!-- ==================== SEÇÃO 21 ==================== -->
@@ -1220,7 +1220,7 @@ export const artigo: Artigo = {
 <p>Outros eventos relevantes: <strong>Feira Hospitalar</strong> (maior feira de saúde da América Latina, anual em São Paulo), <strong>Arena de Engenharia Clínica</strong> da ABEClin, <strong>IEEE EMBC</strong> (maior evento internacional da área) e congressos da IFMBE.</p>
 
 <blockquote>
-  <p>Leia também: <a href="/artigos/calendario-eventos-engenharia-biomedica-2026">Calendário de eventos de Engenharia Biomédica 2026: congressos, feiras e conferências</a></p>
+  <p>Leia também: <a href="/artigos/calendario-eventos-engbiomedica-saude-digital">Calendário de eventos de Engenharia Biomédica 2026: congressos, feiras e conferências</a></p>
 </blockquote>
 
 <h2>Entidades e associações profissionais</h2>

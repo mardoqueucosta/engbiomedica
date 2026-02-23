@@ -123,7 +123,7 @@ export const artigo: Artigo = {
 
 <p class="mb-6">A FINEP opera em duas modalidades principais. O crédito reembolsável oferece taxa de juros de TR+2% ao ano — a menor taxa histórica da agência — tornando o financiamento acessível para empresas que já possuem alguma capacidade de endividamento. A subvenção econômica, modalidade não reembolsável, destinou R$300 milhões específicos para o setor de saúde, sendo a mais disputada por startups e PMEs sem capacidade de contrapartida financeira robusta.</p>
 
-<p class="mb-6">A 2ª Rodada do programa Mais Inovação colocou R$3,3 bilhões em disputa, com janelas temáticas que incluem diagnóstico, dispositivos médicos, biotecnologia e saúde digital. Para empresas do ecossistema de <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs no Brasil</a>, a FINEP representa frequentemente a transição do financiamento de risco (venture capital) para o fomento público com condições mais favoráveis.</p>
+<p class="mb-6">A 2ª Rodada do programa Mais Inovação colocou R$3,3 bilhões em disputa, com janelas temáticas que incluem diagnóstico, dispositivos médicos, biotecnologia e saúde digital. Para empresas do ecossistema de <a href="/artigos/healthtechs-mapa-brasil">healthtechs no Brasil</a>, a FINEP representa frequentemente a transição do financiamento de risco (venture capital) para o fomento público com condições mais favoráveis.</p>
 
 <h2>EMBRAPII: Parceria Empresa-Instituto para P&D Aplicado</h2>
 
@@ -203,7 +203,7 @@ export const artigo: Artigo = {
 
 <p class="mb-6">O segundo passo é monitorar os editais abertos nas plataformas das agências: a Plataforma Carlos Chagas (CNPq), o sistema SAGE (FAPESP), o portal da FINEP e o site da EMBRAPII publicam chamadas com datas de abertura e encerramento. A preparação da documentação — plano de trabalho, currículo Lattes atualizado, certidões negativas, planilha orçamentária — deve começar com antecedência mínima de 30 a 60 dias em relação ao prazo de submissão.</p>
 
-<p class="mb-6">O <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a> tem dinâmicas regulatórias próprias que afetam diretamente a estratégia de financiamento: projetos que requerem registro na ANVISA devem prever esse custo e prazo no plano de trabalho submetido às agências.</p>
+<p class="mb-6">O <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a> tem dinâmicas regulatórias próprias que afetam diretamente a estratégia de financiamento: projetos que requerem registro na ANVISA devem prever esse custo e prazo no plano de trabalho submetido às agências.</p>
 
 <h2>Perguntas Frequentes sobre Financiamento para Inovação em Saúde</h2>
 

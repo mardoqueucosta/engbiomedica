@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Carreira"
       pillarHref="/carreira"
       sectionLabel="Cursos e Especializações"
-      thirdLink={{ label: 'Pós-Graduação em Engenharia Biomédica', href: '/artigos/pos-graduacao-engenharia-biomedica' }}
+      thirdLink={{ label: 'Pós-Graduação em Engenharia Biomédica', href: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica' }}
     />
   );
 }

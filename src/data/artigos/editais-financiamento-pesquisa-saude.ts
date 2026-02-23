@@ -72,7 +72,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p class="mb-6">Para estudantes de <a href="/artigos/curso-engenharia-biomedica-o-que-esperar">engenharia biomedica</a>, a bolsa de IC e a porta de entrada para laboratorios de pesquisa em areas como <a href="/artigos/biomateriais-implantes-bioimpressao">biomateriais</a>, <a href="/artigos/instrumentacao-biomedica">instrumentacao biomedica</a> e <a href="/artigos/processamento-sinais-biomedicos-python">processamento de sinais biomedicos</a>. Alem do valor financeiro, a bolsa garante insercao em grupos de pesquisa com infraestrutura e orientacao qualificada.</p>
+<p class="mb-6">Para estudantes de <a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">engenharia biomedica</a>, a bolsa de IC e a porta de entrada para laboratorios de pesquisa em areas como <a href="/artigos/biomateriais-implantes-bioimpressao">biomateriais</a>, <a href="/artigos/instrumentacao-biomedica">instrumentacao biomedica</a> e <a href="/artigos/processamento-sinais-biomedicos-python">processamento de sinais biomedicos</a>. Alem do valor financeiro, a bolsa garante insercao em grupos de pesquisa com infraestrutura e orientacao qualificada.</p>
 
 <h3>Edital Universal</h3>
 
@@ -236,7 +236,7 @@ export const artigo: Artigo = {
 
 <p class="mb-6">A experiencia de consultores especializados e pareceristas de agencias de fomento converge em algumas recomendacoes praticas. Primeiro, alinhar o projeto com as prioridades explicitas do edital: agencias publicam documentos de politica e planos estrategicos que indicam quais temas serao priorizados. Segundo, definir metas mensuráveis e realistas: projetos com objetivos vagos como "contribuir para o avanco da ciencia" sao sistematicamente rejeitados. Terceiro, demonstrar capacidade de execucao: equipe qualificada, infraestrutura disponivel e cronograma factivel sao tao importantes quanto a originalidade da proposta.</p>
 
-<p class="mb-6">Para projetos em <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa em engenharia biomedica</a>, a demonstracao de infraestrutura ja existente (laboratorios, equipamentos, parcerias clinicas) fortalece significativamente a proposta. Pesquisadores que ja publicaram resultados preliminares na area do projeto tambem tem vantagem, pois demonstram viabilidade tecnica antes mesmo do financiamento.</p>
+<p class="mb-6">Para projetos em <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa em engenharia biomedica</a>, a demonstracao de infraestrutura ja existente (laboratorios, equipamentos, parcerias clinicas) fortalece significativamente a proposta. Pesquisadores que ja publicaram resultados preliminares na area do projeto tambem tem vantagem, pois demonstram viabilidade tecnica antes mesmo do financiamento.</p>
 
 <h2>Comparativo Consolidado das Principais Fontes de Financiamento</h2>
 

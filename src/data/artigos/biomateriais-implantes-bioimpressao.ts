@@ -232,7 +232,7 @@ export const artigo: Artigo = {
   <li><strong>Dados clínicos pós-mercado:</strong> vigilância contínua após aprovação regulatória.</li>
 </ul>
 
-<p>No Brasil, a <a href="https://www.gov.br/anvisa" target="_blank" rel="noopener">ANVISA</a> classifica implantes como <strong>dispositivos Classe III ou Classe IV</strong> (maior risco), sujeitos ao Programa de Avaliação da Conformidade e à <strong>RDC 848/2024</strong> (requisitos essenciais de segurança e desempenho). Os requisitos de biocompatibilidade são explicitados no Anexo II da RDC. Para o cenário regulatório completo, veja <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA: regulamentação de dispositivos médicos</a> e <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
+<p>No Brasil, a <a href="https://www.gov.br/anvisa" target="_blank" rel="noopener">ANVISA</a> classifica implantes como <strong>dispositivos Classe III ou Classe IV</strong> (maior risco), sujeitos ao Programa de Avaliação da Conformidade e à <strong>RDC 848/2024</strong> (requisitos essenciais de segurança e desempenho). Os requisitos de biocompatibilidade são explicitados no Anexo II da RDC. Para o cenário regulatório completo, veja <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA: regulamentação de dispositivos médicos</a> e <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
 
 <h2>Aplicações clínicas: ortopedia, cardiologia e odontologia</h2>
 
@@ -304,7 +304,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para o panorama completo do setor industrial no Brasil, veja <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a> e <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p>Para o panorama completo do setor industrial no Brasil, veja <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a> e <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h2>Bioimpressão 3D: da biotinta ao tecido vivo</h2>
 
@@ -397,7 +397,7 @@ export const artigo: Artigo = {
   <li><strong>UFRGS / UCS</strong>: tradição em polímeros e compósitos biomédicos.</li>
 </ul>
 
-<p>A <a href="https://sbpmat.org.br" target="_blank" rel="noopener">SBPMat</a> organiza o maior congresso de materiais do hemisfério sul, com sessão dedicada a biomateriais. O <a href="https://sbeb.org.br" target="_blank" rel="noopener">SBEB</a> — Sociedade Brasileira de Engenharia Biomédica — integra a comunidade de engenheiros e pesquisadores; sua presidente Sônia Malmonge destacou que "a engenharia biomédica tem papel estratégico na consolidação da medicina regenerativa no Brasil". Para opções de formação avançada na área, veja <a href="/artigos/pos-graduacao-engenharia-biomedica">pós-graduação em engenharia biomédica</a> e <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa em engenharia biomédica</a>.</p>
+<p>A <a href="https://sbpmat.org.br" target="_blank" rel="noopener">SBPMat</a> organiza o maior congresso de materiais do hemisfério sul, com sessão dedicada a biomateriais. O <a href="https://sbeb.org.br" target="_blank" rel="noopener">SBEB</a> — Sociedade Brasileira de Engenharia Biomédica — integra a comunidade de engenheiros e pesquisadores; sua presidente Sônia Malmonge destacou que "a engenharia biomédica tem papel estratégico na consolidação da medicina regenerativa no Brasil". Para opções de formação avançada na área, veja <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">pós-graduação em engenharia biomédica</a> e <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa em engenharia biomédica</a>.</p>
 
 <h2>Regulamentação: ISO 10993 e ANVISA</h2>
 
@@ -540,7 +540,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para dados atualizados de remuneração, veja <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">quanto ganha o engenheiro biomédico em 2026</a>.</p>
+<p>Para dados atualizados de remuneração, veja <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">quanto ganha o engenheiro biomédico em 2026</a>.</p>
 
 <h2>Tendências 2025–2030: materiais inteligentes e personalização</h2>
 
@@ -576,19 +576,19 @@ export const artigo: Artigo = {
 <p>Não, ainda não é possível imprimir órgãos completos prontos para transplante. O estado da arte em 2026 inclui: pele em ensaios clínicos avançados, modelos tumorais 3D em uso comercial, e scaffolds ósseos/cartilaginosos em fase pré-clínica. Órgãos complexos como rim, fígado e coração enfrentam o problema fundamental da vascularização interna — estimativa atual é de 10–20 anos para transplantes funcionais.</p>
 
 <h3>Quais são as principais empresas brasileiras de biomateriais?</h3>
-<p>As empresas brasileiras de referência são: <strong>Braile Biomédica</strong> (São José do Rio Preto/SP) em cardiovascular, com a válvula transcateter Inovare; <strong>Baumer</strong> (Mogi Mirim/SP) em ortopedia e fosfatos de cálcio; <strong>Neodent</strong> (Curitiba/PR) em implantodontia, com mais de 1,5 milhão de implantes/ano; <strong>S.I.N. Implant System</strong> (São Paulo) em implantes dentários; e <strong>3DBS</strong> (Campinas/SP) em bioimpressão. Para lista completa, veja <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p>As empresas brasileiras de referência são: <strong>Braile Biomédica</strong> (São José do Rio Preto/SP) em cardiovascular, com a válvula transcateter Inovare; <strong>Baumer</strong> (Mogi Mirim/SP) em ortopedia e fosfatos de cálcio; <strong>Neodent</strong> (Curitiba/PR) em implantodontia, com mais de 1,5 milhão de implantes/ano; <strong>S.I.N. Implant System</strong> (São Paulo) em implantes dentários; e <strong>3DBS</strong> (Campinas/SP) em bioimpressão. Para lista completa, veja <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h3>Qual é a relação entre biomateriais e engenharia biomédica?</h3>
 <p>Biomateriais é uma das subáreas centrais da engenharia biomédica, junto com biomecânica, instrumentação, processamento de sinais e engenharia clínica. O engenheiro biomédico aplica conhecimentos de materiais, biologia e mecânica para projetar, testar e regulamentar dispositivos implantáveis. Para entender o campo completo, veja <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação em engenharia biomédica</a> e <a href="/artigos/diferenca-engenharia-biomedica-engenharia-clinica">diferença entre engenharia biomédica e engenharia clínica</a>.</p>
 
 <h3>Como a ANVISA regula biomateriais implantáveis no Brasil?</h3>
-<p>A ANVISA classifica implantes como dispositivos Classe III (alto risco) ou Classe IV (máximo risco), sujeitos à Avaliação da Conformidade e ao registro com dossiê técnico completo. A <strong>RDC 848/2024</strong> estabelece os requisitos essenciais de segurança e desempenho, incluindo biocompatibilidade (referenciando a ISO 10993), esterilidade, prazo de validade e rastreabilidade. O fabricante deve também atender a ISO 13485 (SGQ) e ISO 14971 (gestão de risco). Para mais detalhes, veja <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA para dispositivos médicos</a>.</p>
+<p>A ANVISA classifica implantes como dispositivos Classe III (alto risco) ou Classe IV (máximo risco), sujeitos à Avaliação da Conformidade e ao registro com dossiê técnico completo. A <strong>RDC 848/2024</strong> estabelece os requisitos essenciais de segurança e desempenho, incluindo biocompatibilidade (referenciando a ISO 10993), esterilidade, prazo de validade e rastreabilidade. O fabricante deve também atender a ISO 13485 (SGQ) e ISO 14971 (gestão de risco). Para mais detalhes, veja <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA para dispositivos médicos</a>.</p>
 
 <hr>
 
 <p>Os biomateriais percorreram um caminho de mais de seis décadas — dos primeiros parafusos de titânio implantados nos anos 1960 às biotintas que hoje imprimem fragmentos de pele e cartilagem em laboratório. O mercado de USD 48 bilhões em 2025, a trajetória de crescimento sustentado e a agenda regulatória cada vez mais sofisticada tornam essa uma das subáreas mais dinâmicas e economicamente relevantes da engenharia biomédica. Para o profissional que deseja dominar o ciclo completo — do design molecular à aprovação regulatória — a formação sólida em ciência dos materiais, biologia celular e normas ISO é o diferencial competitivo.</p>
 
-<p>Explore o panorama completo da profissão no <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> e aprofunde-se no <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>Explore o panorama completo da profissão no <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> e aprofunde-se no <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <p><em>Artigo elaborado com base em dados da ISO 10993-1:2025, ANVISA RDC 848/2024, MarketsandMarkets (jan/2026), ABIMO, SBPMat, SBEB e <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubMed</a>. Atualizado em fevereiro de 2026.</em></p>
 `,

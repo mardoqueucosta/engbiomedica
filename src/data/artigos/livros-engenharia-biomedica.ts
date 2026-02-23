@@ -379,7 +379,7 @@ export const artigo: Artigo = {
 
 <p>Construir uma biblioteca sólida em engenharia biomédica é um investimento que acompanha toda a carreira — dos primeiros semestres da graduação à prática profissional em hospitais, indústria ou pesquisa. As 10 obras apresentadas neste guia, combinadas com referências brasileiras e recursos gratuitos, fornecem a base intelectual necessária para atuar com competência técnica em qualquer subárea da engenharia biomédica. A interdisciplinaridade da profissão exige leituras igualmente diversas: dominar a interface entre engenharia, biologia, medicina e regulamentação começa nas páginas desses livros.</p>
 
-<p>Explore o panorama completo da profissão no <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> e descubra as oportunidades de carreira no <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>Explore o panorama completo da profissão no <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> e descubra as oportunidades de carreira no <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <p><em>Artigo elaborado com base em dados do <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>, catálogos da <a href="https://www.elsevier.com" target="_blank" rel="noopener">Elsevier</a>, <a href="https://www.springer.com" target="_blank" rel="noopener">Springer</a>, IEEE, Wiley e programas curriculares de MIT, Johns Hopkins, Stanford, USP, UNICAMP e UFMG. Atualizado em fevereiro de 2026.</em></p>
 `,

@@ -113,7 +113,7 @@ export const artigo: Artigo = {
 
 <p>A <a href="https://sbeb.org.br" target="_blank" rel="noopener">SBEB (Sociedade Brasileira de Engenharia Biomédica)</a> contabiliza 28 IES com graduação em Engenharia Biomédica no Brasil. O curso tem duração de 5 anos e carga horária mínima de 3.600 horas. As IES com nota máxima (CC 5) no MEC são <strong>PUCPR, UFU e FICSAE (Faculdade Israelita Albert Einstein)</strong>. As mensalidades em instituições privadas variam de R$ 700 a R$ 5.160 por mês — veja o ranking completo em <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Ranking de Faculdades de Engenharia Biomédica</a>.</p>
 
-<p>As disciplinas que mais importam para quem quer seguir a rota de engenharia clínica são: Instrumentação Biomédica, Gestão de Tecnologia Médico-Hospitalar, Segurança Elétrica, Metrologia e Normas Técnicas. Verifique se o currículo da IES contempla essas cadeiras antes de escolher. Veja a estrutura completa de disciplinas em <a href="/artigos/faculdades-engenharia-biomedica-brasil">Faculdades de Engenharia Biomédica no Brasil</a>.</p>
+<p>As disciplinas que mais importam para quem quer seguir a rota de engenharia clínica são: Instrumentação Biomédica, Gestão de Tecnologia Médico-Hospitalar, Segurança Elétrica, Metrologia e Normas Técnicas. Verifique se o currículo da IES contempla essas cadeiras antes de escolher. Veja a estrutura completa de disciplinas em <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Faculdades de Engenharia Biomédica no Brasil</a>.</p>
 
 <h3>Engenharia Elétrica: o caminho mais comum</h3>
 
@@ -193,7 +193,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para um panorama completo das opções, incluindo mestrado e doutorado, consulte o artigo sobre <a href="/artigos/pos-graduacao-engenharia-biomedica">Pós-graduação em Engenharia Biomédica</a>. Para modalidades à distância, veja também <a href="/artigos/engenharia-biomedica-ead">Engenharia Biomédica EaD</a>.</p>
+<p>Para um panorama completo das opções, incluindo mestrado e doutorado, consulte o artigo sobre <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">Pós-graduação em Engenharia Biomédica</a>. Para modalidades à distância, veja também <a href="/artigos/engenharia-biomedica-ead">Engenharia Biomédica EaD</a>.</p>
 
 <h2>Passo 3 — Registre-se no CREA</h2>
 
@@ -209,7 +209,7 @@ export const artigo: Artigo = {
   <li><strong>Demais Engenheiros (Computação, Produção, Mecatrônica etc.):</strong> extensão via pós-graduação em EC devidamente reconhecida</li>
 </ul>
 
-<p>Para o passo a passo detalhado do registro, acesse o artigo completo sobre <a href="/artigos/registro-crea-engenheiro-biomedico">Registro no CREA para Engenheiro Biomédico</a>.</p>
+<p>Para o passo a passo detalhado do registro, acesse o artigo completo sobre <a href="/artigos/registro-crea-engenheiro-biomedico-guia">Registro no CREA para Engenheiro Biomédico</a>.</p>
 
 <table>
   <thead>
@@ -392,7 +392,7 @@ export const artigo: Artigo = {
 
 <p>Segundo levantamento no LinkedIn, são cerca de <strong>181 vagas ativas em São Paulo</strong> para engenharia clínica e biomédicaainda em 2025. Os maiores empregadores privados são os hospitais de grande porte (Einstein, Sírio-Libanês, Rede D'Or, HCor) e as empresas terceirizadas que atendem múltiplos clientes. Para aumentar a visibilidade, complete o perfil no LinkedIn com palavras-chave relevantes: "engenharia clínica", "gestão de tecnologias em saúde", "manutenção de equipamentos médicos", "PMOC", "RDC 509".</p>
 
-<p>Fabricantes globais contratam tanto para suporte técnico em campo quanto para engenharia de aplicações e vendas técnicas. As principais empresas do setor estão listadas em <a href="/artigos/empresas-engenharia-biomedica-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
+<p>Fabricantes globais contratam tanto para suporte técnico em campo quanto para engenharia de aplicações e vendas técnicas. As principais empresas do setor estão listadas em <a href="/artigos/empresas-dispositivos-medicos-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
 
 <h3>Concursos públicos: a rota de maior segurança</h3>
 
@@ -447,7 +447,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para dados completos de salários por nível, setor e região, consulte os artigos <a href="/artigos/salario-engenheiro-biomedico">Salário do Engenheiro Biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha o Engenheiro Biomédico em 2026</a>.</p>
+<p>Para dados completos de salários por nível, setor e região, consulte os artigos <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Salário do Engenheiro Biomédico</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha o Engenheiro Biomédico em 2026</a>.</p>
 
 <h2>Passo 8 — Planeje a progressão de carreira</h2>
 
@@ -509,7 +509,7 @@ export const artigo: Artigo = {
 </figure>
 
 
-<p>Para um panorama ampliado das perspectivas de carreira, leia <a href="/artigos/mercado-trabalho-engenharia-biomedica">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
+<p>Para um panorama ampliado das perspectivas de carreira, leia <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
 
 <h2>Networking e comunidade profissional</h2>
 

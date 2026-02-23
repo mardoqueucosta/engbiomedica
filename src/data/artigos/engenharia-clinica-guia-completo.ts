@@ -213,7 +213,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para se aprofundar na regulamentação do setor, consulte também o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA e dispositivos médicos</a> e o guia sobre <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
+<p>Para se aprofundar na regulamentação do setor, consulte também o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA e dispositivos médicos</a> e o guia sobre <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
 
 <h2>Plano de Manutenção e Operações em Conformidade (PMOC): como estruturar</h2>
 
@@ -338,7 +338,7 @@ export const artigo: Artigo = {
 
 <h2>Formação e certificações para engenharia clínica</h2>
 
-<p>Não existe graduação específica em Engenharia Clínica no Brasil. A porta de entrada é a formação em áreas correlatas — Engenharia Biomédica, Elétrica, Mecânica ou de Computação — complementada por especialização voltada à gestão de tecnologias em saúde. Para entender melhor os caminhos de formação inicial, veja as <a href="/artigos/faculdades-engenharia-biomedica-brasil">melhores faculdades de Engenharia Biomédica no Brasil</a>.</p>
+<p>Não existe graduação específica em Engenharia Clínica no Brasil. A porta de entrada é a formação em áreas correlatas — Engenharia Biomédica, Elétrica, Mecânica ou de Computação — complementada por especialização voltada à gestão de tecnologias em saúde. Para entender melhor os caminhos de formação inicial, veja as <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">melhores faculdades de Engenharia Biomédica no Brasil</a>.</p>
 
 <h3>Especializações reconhecidas no Brasil</h3>
 
@@ -393,7 +393,7 @@ export const artigo: Artigo = {
   <li><strong>ISO 13485 Lead Auditor</strong> — certificação em auditoria de sistemas de gestão da qualidade para dispositivos médicos; altamente valorizada em fabricantes e consultorias</li>
 </ul>
 
-<p>Para opções de pós-graduação mais abrangentes, veja o guia de <a href="/artigos/pos-graduacao-engenharia-biomedica">pós-graduação em engenharia biomédica</a>.</p>
+<p>Para opções de pós-graduação mais abrangentes, veja o guia de <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">pós-graduação em engenharia biomédica</a>.</p>
 
 <h2>Salários e mercado de trabalho em 2026</h2>
 
@@ -460,7 +460,7 @@ export const artigo: Artigo = {
   <li><strong>Consultoria e órgãos públicos:</strong> ANVISA, vigilâncias sanitárias estaduais, consultorias de HTA</li>
 </ul>
 
-<p>Para análise detalhada do mercado de trabalho e das maiores empresas do setor, veja os artigos sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a> e <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p>Para análise detalhada do mercado de trabalho e das maiores empresas do setor, veja os artigos sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a> e <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h2>Entidades, eventos e comunidade profissional</h2>
 
@@ -478,7 +478,7 @@ export const artigo: Artigo = {
 
 <p>Os principais eventos são: <strong>CBEB</strong> (bienal, maior congresso de engenharia biomédica do Brasil), <strong>Feira Hospitalar</strong> (anual, São Paulo), <strong>Arena EC ABEClin</strong> (anual) e <strong>CE Day Brasil</strong> (anual).</p>
 
-<p>Para informações sobre registro profissional, consulte o artigo sobre <a href="/artigos/registro-crea-engenheiro-biomedico">registro no CREA para engenheiro biomédico</a>.</p>
+<p>Para informações sobre registro profissional, consulte o artigo sobre <a href="/artigos/registro-crea-engenheiro-biomedico-guia">registro no CREA para engenheiro biomédico</a>.</p>
 
 <h2>Tendências e futuro da engenharia clínica</h2>
 
@@ -504,7 +504,7 @@ export const artigo: Artigo = {
 <p>Não. Engenharia Biomédica é o campo amplo que inclui desenvolvimento de dispositivos, biomateriais, bioinformática, neurociências computacionais e engenharia clínica. A Engenharia Clínica é uma subárea específica da Engenharia Biomédica focada exclusivamente no gerenciamento de tecnologias em ambientes de assistência à saúde. Para entender as diferenças com precisão, veja o artigo sobre <a href="/artigos/diferenca-engenharia-biomedica-engenharia-clinica">diferença entre engenharia biomédica e engenharia clínica</a>.</p>
 
 <h3>Qual graduação cursar para trabalhar em engenharia clínica?</h3>
-<p>A graduação em Engenharia Biomédica é a mais direta, mas profissionais de Engenharia Elétrica, Mecânica e de Computação também têm carreira consolidada na área, desde que complementem a formação com especialização focada em gestão de tecnologias em saúde. Veja as opções de formação nas <a href="/artigos/faculdades-engenharia-biomedica-brasil">melhores faculdades de Engenharia Biomédica</a>.</p>
+<p>A graduação em Engenharia Biomédica é a mais direta, mas profissionais de Engenharia Elétrica, Mecânica e de Computação também têm carreira consolidada na área, desde que complementem a formação com especialização focada em gestão de tecnologias em saúde. Veja as opções de formação nas <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">melhores faculdades de Engenharia Biomédica</a>.</p>
 
 <h3>É obrigatório ter pós-graduação para atuar como engenheiro clínico?</h3>
 <p>A RDC 02/2010 exige profissional de nível superior responsável pelo gerenciamento de tecnologias, mas não especifica pós-graduação. Na prática, porém, a grande maioria dos editais de concurso público e das vagas em hospitais de grande porte exige ou valoriza fortemente a especialização em Engenharia Clínica ou área afim.</p>

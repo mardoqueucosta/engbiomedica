@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Regulamentação"
       pillarHref="/regulamentacao"
       sectionLabel="Certificação INMETRO"
-      thirdLink={{ label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-regulamentacao' }}
+      thirdLink={{ label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-guia-2026' }}
     />
   );
 }

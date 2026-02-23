@@ -285,7 +285,7 @@ IMG_SLOT_1-->
 
 <p>A concentração geográfica é marcante: <strong>São Paulo concentra 45% dos fabricantes</strong> de equipamentos médicos do país. O polo de Minas Gerais (Contagem, Lagoa Santa, Varginha) é o segundo mais relevante, com presença de GE Healthcare e Philips. Rio Grande do Sul (Instramed, Lifemed RS) e Santa Catarina (Siemens Healthineers em Joinville) completam os principais polos industriais.</p>
 
-<p>Para quem deseja conhecer em detalhe o perfil dessas organizações, o artigo sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a> traz um mapeamento completo com localização, segmento e oportunidades de carreira.</p>
+<p>Para quem deseja conhecer em detalhe o perfil dessas organizações, o artigo sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a> traz um mapeamento completo com localização, segmento e oportunidades de carreira.</p>
 
 <!--IMG_SLOT_2
 SECTION: Empresas: multinacionais, fabricantes nacionais e distribuição
@@ -347,7 +347,7 @@ IMG_SLOT_2-->
 </figure>
 
 
-<p>Para empresas e profissionais que atuam na interface entre desenvolvimento de software e dispositivos médicos, a regulamentação de SaMD é cada vez mais crítica. O artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA de dispositivos médicos</a> traz um guia completo do processo de registro e as exigências técnicas por classe de risco.</p>
+<p>Para empresas e profissionais que atuam na interface entre desenvolvimento de software e dispositivos médicos, a regulamentação de SaMD é cada vez mais crítica. O artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA de dispositivos médicos</a> traz um guia completo do processo de registro e as exigências técnicas por classe de risco.</p>
 
 <h2>Política industrial: a Nova Indústria Brasil e a meta de 70% nacional</h2>
 
@@ -483,7 +483,7 @@ IMG_SLOT_2-->
   </tbody>
 </table>
 
-<p>O crescimento de <strong>50% nas contratações de bioengenheiros</strong> entre dezembro de 2024 e novembro de 2025 é o dado mais contundente sobre o aquecimento do mercado. Para análise detalhada de remuneração por especialidade e cargo, consulte o artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a> e o guia do <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>O crescimento de <strong>50% nas contratações de bioengenheiros</strong> entre dezembro de 2024 e novembro de 2025 é o dado mais contundente sobre o aquecimento do mercado. Para análise detalhada de remuneração por especialidade e cargo, consulte o artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a> e o guia do <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <!--IMG_SLOT_3
 SECTION: Empregos, salários e oportunidades para engenheiros biomédicos
@@ -538,7 +538,7 @@ IMG_SLOT_3-->
 
 <p>Os principais aceleradores hospitalares — Eretz.bio (Hospital Israelita Albert Einstein, com 150+ startups aceleradas) e InovaHC (Hospital das Clínicas da USP, com 30+ healthtechs residentes) — funcionam como pontes entre a pesquisa clínica e o desenvolvimento de produtos regulados. Para o engenheiro biomédico, esses ambientes oferecem acesso a dados clínicos reais, orientação regulatória e conexões com investidores especializados.</p>
 
-<p>Para um mapeamento completo do ecossistema, consulte o artigo sobre <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a>.</p>
+<p>Para um mapeamento completo do ecossistema, consulte o artigo sobre <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a>.</p>
 
 <h2>Projeções 2025–2030: onde o mercado deve crescer</h2>
 

@@ -153,7 +153,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p class="mb-6">O Apple Watch com função ECG e o Samsung Galaxy Watch Ultra com detecção de FA foram enquadrados como Classe II pela ANVISA. Um smartwatch idêntico comercializado apenas com claims de bem-estar (passos, calorias) pode ser isento de registro — o enquadramento depende inteiramente da destinação declarada pelo fabricante. Para mais detalhes sobre o processo regulatório, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA de dispositivos médicos</a> e o <a href="https://www.gov.br/anvisa/pt-br" target="_blank" rel="noopener noreferrer">portal oficial da ANVISA</a>.</p>
+<p class="mb-6">O Apple Watch com função ECG e o Samsung Galaxy Watch Ultra com detecção de FA foram enquadrados como Classe II pela ANVISA. Um smartwatch idêntico comercializado apenas com claims de bem-estar (passos, calorias) pode ser isento de registro — o enquadramento depende inteiramente da destinação declarada pelo fabricante. Para mais detalhes sobre o processo regulatório, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA de dispositivos médicos</a> e o <a href="https://www.gov.br/anvisa/pt-br" target="_blank" rel="noopener noreferrer">portal oficial da ANVISA</a>.</p>
 
 <h2>Regulamentação Internacional: FDA e Marcos Recentes</h2>
 

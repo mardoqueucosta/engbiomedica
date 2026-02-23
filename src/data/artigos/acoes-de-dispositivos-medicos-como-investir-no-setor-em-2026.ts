@@ -26,7 +26,7 @@ export const artigo: Artigo = {
   <li><strong>Cirurgias minimamente invasivas:</strong> Substituem procedimentos abertos, com menor risco e tempo de internação reduzido, exigindo equipamentos especializados de maior valor agregado.</li>
 </ul>
 
-<p>Para acompanhar mais sobre o mercado brasileiro especificamente, veja nosso artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>Para acompanhar mais sobre o mercado brasileiro especificamente, veja nosso artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Principais Empresas Globais de Dispositivos Médicos</h2>
 
@@ -235,7 +235,7 @@ export const artigo: Artigo = {
   <li><strong>HB Sistemas de Saúde:</strong> Mesas cirúrgicas e equipamentos de posicionamento hospitalar.</li>
 </ul>
 
-<p>Nenhuma dessas empresas é listada em bolsa de valores no Brasil. O acesso direto ao setor de dispositivos médicos brasileiro via mercado de capitais é, portanto, muito limitado comparado ao mercado americano. Para uma visão completa do ecossistema de inovação em saúde no Brasil, veja nosso artigo sobre <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a> e também sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p>Nenhuma dessas empresas é listada em bolsa de valores no Brasil. O acesso direto ao setor de dispositivos médicos brasileiro via mercado de capitais é, portanto, muito limitado comparado ao mercado americano. Para uma visão completa do ecossistema de inovação em saúde no Brasil, veja nosso artigo sobre <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a> e também sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h2>Perguntas Frequentes</h2>
 

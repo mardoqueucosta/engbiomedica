@@ -86,7 +86,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>Na indústria, o engenheiro biomédico pode atuar em P&D criando novos produtos, em qualidade garantindo conformidade com normas ABNT e ISO, em engenharia de aplicação dando suporte a hospitais clientes, ou em exportação navegando regulamentações internacionais. Para conhecer mais empresas do setor, consulte o artigo sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a> e o estudo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>Na indústria, o engenheiro biomédico pode atuar em P&D criando novos produtos, em qualidade garantindo conformidade com normas ABNT e ISO, em engenharia de aplicação dando suporte a hospitais clientes, ou em exportação navegando regulamentações internacionais. Para conhecer mais empresas do setor, consulte o artigo sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a> e o estudo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Caminho 3: Assuntos regulatórios — entre a engenharia e o direito sanitário</h2>
 
@@ -107,7 +107,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>Esse novo marco criou uma demanda imediata por profissionais que entendem tanto a engenharia do produto quanto a linguagem regulatória. O salário médio nessa especialidade — especialmente em consultorias e empresas multinacionais — pode superar <strong>R$ 16.000/mês</strong> para profissionais sêniores, tornando-a uma das mais bem remuneradas da engenharia biomédica. Para detalhes sobre a regulamentação ANVISA, veja o artigo <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA e dispositivos médicos</a>.</p>
+<p>Esse novo marco criou uma demanda imediata por profissionais que entendem tanto a engenharia do produto quanto a linguagem regulatória. O salário médio nessa especialidade — especialmente em consultorias e empresas multinacionais — pode superar <strong>R$ 16.000/mês</strong> para profissionais sêniores, tornando-a uma das mais bem remuneradas da engenharia biomédica. Para detalhes sobre a regulamentação ANVISA, veja o artigo <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA e dispositivos médicos</a>.</p>
 
 <h3>O que faz um especialista em assuntos regulatórios no dia a dia</h3>
 
@@ -249,7 +249,7 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>Para entender o ecossistema completo, o artigo sobre <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a> e o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica com dados</a> são leituras complementares essenciais. Os <a href="/artigos/sensores-vestiveis-saude-2026">sensores vestíveis para saúde em 2026</a> representam um nicho crescente dentro deste caminho.</p>
+<p>Para entender o ecossistema completo, o artigo sobre <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a> e o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica com dados</a> são leituras complementares essenciais. Os <a href="/artigos/sensores-vestiveis-saude-2026">sensores vestíveis para saúde em 2026</a> representam um nicho crescente dentro deste caminho.</p>
 
 <h2>Caminho 9: Vendas técnicas e consultoria — a ponte entre tecnologia e usuário</h2>
 
@@ -305,7 +305,7 @@ export const artigo: Artigo = {
 </figure>
 
 
-<p>Para análise aprofundada do mercado de trabalho com dados primários, veja o artigo <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica: dados</a>. Para entender se a formação vale o investimento, o artigo <a href="/artigos/engenharia-biomedica-vale-a-pena">engenharia biomédica vale a pena</a> analisa retorno sobre investimento e satisfação profissional.</p>
+<p>Para análise aprofundada do mercado de trabalho com dados primários, veja o artigo <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica: dados</a>. Para entender se a formação vale o investimento, o artigo <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">engenharia biomédica vale a pena</a> analisa retorno sobre investimento e satisfação profissional.</p>
 
 <h2>Perguntas frequentes</h2>
 
@@ -339,7 +339,7 @@ export const artigo: Artigo = {
 <li><strong>Se você tem perfil comercial e boa comunicação:</strong> vendas técnicas pode ser o caminho de maior renda total com menor barreira de entrada.</li>
 </ul>
 
-<p>O <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a> continua se expandindo em todas essas direções. A <a href="/artigos/instrumentacao-biomedica">instrumentação biomédica</a> conecta quase todos os caminhos como base técnica comum. E os dados do setor mostram que a formação em engenharia biomédica, independentemente do caminho escolhido, posiciona o profissional em uma das fronteiras mais dinâmicas da economia global.</p>
+<p>O <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a> continua se expandindo em todas essas direções. A <a href="/artigos/instrumentacao-biomedica">instrumentação biomédica</a> conecta quase todos os caminhos como base técnica comum. E os dados do setor mostram que a formação em engenharia biomédica, independentemente do caminho escolhido, posiciona o profissional em uma das fronteiras mais dinâmicas da economia global.</p>
 
 <p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções.</p>
 <p><em>Publicado por <a href="https://engenhariabiomedica.com">engenhariabiomedica.com</a></em></p>

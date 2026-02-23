@@ -156,7 +156,7 @@ export const artigo: Artigo = {
 
 <h2>Centros de pesquisa brasileiros líderes em bioimpressão 3D</h2>
 
-<p>O ecossistema brasileiro de engenharia de tecidos não está concentrado em um único polo: ele se distribui por ao menos dez instituições com capacidades complementares, formando uma rede informal de colaboração e competição saudável. Para um mapa mais amplo de toda a pesquisa biomédica nacional, veja o artigo sobre <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa em engenharia biomédica</a>.</p>
+<p>O ecossistema brasileiro de engenharia de tecidos não está concentrado em um único polo: ele se distribui por ao menos dez instituições com capacidades complementares, formando uma rede informal de colaboração e competição saudável. Para um mapa mais amplo de toda a pesquisa biomédica nacional, veja o artigo sobre <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa em engenharia biomédica</a>.</p>
 
 <h3>CTI Renato Archer (Campinas, MCTI)</h3>
 
@@ -452,7 +452,7 @@ export const artigo: Artigo = {
 
 <h2>Regulamentação ANVISA para bioimpressão e terapias avançadas</h2>
 
-<p>A ausência de uma regulamentação específica para produtos de bioimpressão 3D é um desafio global — e o Brasil não é exceção. A <a href="https://www.gov.br/anvisa">ANVISA</a> ainda não publicou um guia dedicado à bioimpressão, mas o arcabouço regulatório existente já enquadra os produtos do setor em categorias estabelecidas. Para uma visão completa da regulação de dispositivos médicos, consulte o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA de dispositivos médicos</a>.</p>
+<p>A ausência de uma regulamentação específica para produtos de bioimpressão 3D é um desafio global — e o Brasil não é exceção. A <a href="https://www.gov.br/anvisa">ANVISA</a> ainda não publicou um guia dedicado à bioimpressão, mas o arcabouço regulatório existente já enquadra os produtos do setor em categorias estabelecidas. Para uma visão completa da regulação de dispositivos médicos, consulte o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA de dispositivos médicos</a>.</p>
 
 <table>
   <thead>
@@ -554,7 +554,7 @@ export const artigo: Artigo = {
 
 <h2>Startups e empresas brasileiras do setor</h2>
 
-<p>Apesar das limitações de capital, o ecossistema de startups em engenharia de tecidos no Brasil cresceu nos últimos cinco anos. Para um panorama mais amplo, veja os artigos sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a> e <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras</a>.</p>
+<p>Apesar das limitações de capital, o ecossistema de startups em engenharia de tecidos no Brasil cresceu nos últimos cinco anos. Para um panorama mais amplo, veja os artigos sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a> e <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras</a>.</p>
 
 <table>
   <thead>
@@ -766,7 +766,7 @@ export const artigo: Artigo = {
     <tr>
       <td>Regulação e assuntos regulatórios</td>
       <td>Navegação pelo arcabouço ANVISA para PTAs</td>
-      <td><a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">Regulamentação ANVISA</a>; cursos ENSP/Fiocruz</td>
+      <td><a href="/artigos/anvisa-dispositivos-medicos-guia-2026">Regulamentação ANVISA</a>; cursos ENSP/Fiocruz</td>
     </tr>
   </tbody>
 </table>

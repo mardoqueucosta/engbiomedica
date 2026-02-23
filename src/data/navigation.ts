@@ -26,11 +26,11 @@ export const mainNavigation: NavItem[] = [
     description: 'Cursos, salários e áreas de atuação',
     children: [
       { label: 'Visão Geral', href: '/formacao' },
-      { label: 'Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
-      { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
-      { label: 'Grade Curricular', href: '/formacao/grade-curricular' },
+      { label: 'Graduação', href: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking' },
+      { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica' },
+      { label: 'Grade Curricular', href: '/artigos/grade-curricular-engenharia-biomedica-5-anos' },
       { label: 'Áreas de Atuação', href: '/artigos/areas-atuacao-engenharia-biomedica' },
-      { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
+      { label: 'Salários', href: '/artigos/quanto-ganha-engenheiro-biomedico-2026' },
     ],
   },
   {
@@ -58,10 +58,10 @@ export const mainNavigation: NavItem[] = [
     children: [
       { label: 'Visão Geral', href: '/mercado' },
       { label: 'Empresas e Empregadores', href: '/mercado/empresas' },
-      { label: 'Healthtechs e Startups', href: '/artigos/healthtechs-brasil-ecossistema' },
-      { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
-      { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
-      { label: 'Panorama Internacional', href: '/artigos/engenharia-biomedica-eua-vs-brasil' },
+      { label: 'Healthtechs e Startups', href: '/artigos/healthtechs-mapa-brasil' },
+      { label: 'Salários', href: '/artigos/quanto-ganha-engenheiro-biomedico-2026' },
+      { label: 'Eventos', href: '/artigos/calendario-eventos-engbiomedica-saude-digital' },
+      { label: 'Panorama Internacional', href: '/artigos/engenharia-biomedica-eua-comparativo' },
     ],
   },
   {
@@ -71,8 +71,8 @@ export const mainNavigation: NavItem[] = [
     description: 'ANVISA, CREA, normas técnicas e certificações',
     children: [
       { label: 'Visão Geral', href: '/regulamentacao' },
-      { label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-regulamentacao' },
-      { label: 'CONFEA/CREA', href: '/artigos/registro-crea-engenheiro-biomedico' },
+      { label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-guia-2026' },
+      { label: 'CONFEA/CREA', href: '/artigos/registro-crea-engenheiro-biomedico-guia' },
       { label: 'Normas Técnicas', href: '/artigos/normas-tecnicas-engenharia-biomedica' },
       { label: 'Certificação INMETRO', href: '/regulamentacao/certificacao-inmetro' },
       { label: 'SaMD — Software como Disp. Médico', href: '/regulamentacao/software-dispositivo-medico-samd' },
@@ -100,7 +100,7 @@ export const mainNavigation: NavItem[] = [
     description: 'Centros, financiamento, publicação e ferramentas',
     children: [
       { label: 'Visão Geral', href: '/pesquisa' },
-      { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' },
+      { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engbiomedica-mapa' },
       { label: 'Financiamento', href: '/pesquisa/financiamento' },
       { label: 'Publicação Científica', href: '/pesquisa/publicacao-cientifica' },
       { label: 'Python e MATLAB para Biomédica', href: '/pesquisa/ferramentas-python-matlab' },
@@ -138,9 +138,9 @@ export const footerNavigation = {
     { label: 'Recursos', href: '/recursos' },
   ],
   formacao: [
-    { label: 'Graduação', href: '/artigos/faculdades-engenharia-biomedica-brasil' },
-    { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-engenharia-biomedica' },
-    { label: 'Grade Curricular', href: '/formacao/grade-curricular' },
+    { label: 'Graduação', href: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking' },
+    { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica' },
+    { label: 'Grade Curricular', href: '/artigos/grade-curricular-engenharia-biomedica-5-anos' },
   ],
   especialidades: [
     { label: 'Eng. Clínica', href: '/especialidades/engenharia-clinica' },
@@ -151,13 +151,13 @@ export const footerNavigation = {
   mercado: [
     { label: 'Panorama', href: '/mercado' },
     { label: 'Empresas', href: '/mercado/empresas' },
-    { label: 'Healthtechs', href: '/artigos/healthtechs-brasil-ecossistema' },
-    { label: 'Salários', href: '/artigos/salario-engenheiro-biomedico' },
-    { label: 'Eventos', href: '/artigos/calendario-eventos-engenharia-biomedica-2026' },
+    { label: 'Healthtechs', href: '/artigos/healthtechs-mapa-brasil' },
+    { label: 'Salários', href: '/artigos/quanto-ganha-engenheiro-biomedico-2026' },
+    { label: 'Eventos', href: '/artigos/calendario-eventos-engbiomedica-saude-digital' },
   ],
   regulamentacao: [
-    { label: 'ANVISA', href: '/artigos/anvisa-dispositivos-medicos-regulamentacao' },
-    { label: 'CREA', href: '/artigos/registro-crea-engenheiro-biomedico' },
+    { label: 'ANVISA', href: '/artigos/anvisa-dispositivos-medicos-guia-2026' },
+    { label: 'CREA', href: '/artigos/registro-crea-engenheiro-biomedico-guia' },
     { label: 'Normas Técnicas', href: '/artigos/normas-tecnicas-engenharia-biomedica' },
     { label: 'INMETRO', href: '/regulamentacao/certificacao-inmetro' },
     { label: 'SaMD', href: '/regulamentacao/software-dispositivo-medico-samd' },
@@ -169,7 +169,7 @@ export const footerNavigation = {
     { label: 'Diagnóstico por Imagem', href: '/equipamentos/diagnostico-imagem' },
   ],
   pesquisa: [
-    { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engenharia-biomedica' },
+    { label: 'Centros de Pesquisa', href: '/artigos/centros-pesquisa-engbiomedica-mapa' },
     { label: 'Financiamento', href: '/pesquisa/financiamento' },
     { label: 'Python/MATLAB', href: '/pesquisa/ferramentas-python-matlab' },
     { label: 'Publicação Científica', href: '/pesquisa/publicacao-cientifica' },

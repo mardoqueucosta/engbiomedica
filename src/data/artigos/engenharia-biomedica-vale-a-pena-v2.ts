@@ -30,9 +30,9 @@ export const artigo: Artigo = {
 </tbody>
 </table>
 
-<p>O piso legal é garantido pela Lei 4.950-A/1966: com o salário mínimo de R$ 1.621 em 2026, a remuneração mínima para jornada de 8 horas é de <strong>R$ 13.785/mês</strong> (8,5 salários mínimos). Esse piso vale para todos os engenheiros registrados no <a href="/artigos/registro-crea-engenheiro-biomedico">CREA</a>.</p>
+<p>O piso legal é garantido pela Lei 4.950-A/1966: com o salário mínimo de R$ 1.621 em 2026, a remuneração mínima para jornada de 8 horas é de <strong>R$ 13.785/mês</strong> (8,5 salários mínimos). Esse piso vale para todos os engenheiros registrados no <a href="/artigos/registro-crea-engenheiro-biomedico-guia">CREA</a>.</p>
 
-<p>Em cargos de gestão, os valores sobem consideravelmente: gerentes de engenharia recebem entre R$ 12.060 e R$ 22.764, enquanto diretores em grandes empresas podem alcançar <strong>R$ 45.000/mês</strong>. Para uma análise completa por estado e setor, veja nosso artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a>.</p>
+<p>Em cargos de gestão, os valores sobem consideravelmente: gerentes de engenharia recebem entre R$ 12.060 e R$ 22.764, enquanto diretores em grandes empresas podem alcançar <strong>R$ 45.000/mês</strong>. Para uma análise completa por estado e setor, veja nosso artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a>.</p>
 
 <h2>Engenharia biomédica compensa financeiramente? Comparação com outras engenharias</h2>
 
@@ -55,7 +55,7 @@ export const artigo: Artigo = {
 
 <p>A engenharia biomédica aparece abaixo da média salarial das engenharias tradicionais. Porém, há uma nuance fundamental: a amostra CAGED contém apenas <strong>137 profissionais</strong> registrados sob o CBO 2143-80. Isso acontece porque a maioria dos engenheiros biomédicos é contratada sob outros títulos — engenheiro clínico, engenheiro de aplicação, engenheiro de produto, especialista regulatório — que aparecem em CBOs diferentes e geralmente com salários maiores.</p>
 
-<p>Um dado que merece destaque: o engenheiro biomédico ganha <strong>2,6 vezes mais</strong> que o biomédico (profissional de Biomedicina), cuja média é R$ 3.268/mês. Para quem confunde os dois cursos, a diferença salarial de mais de R$ 5.000 mensais justifica entender a <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">diferença entre engenharia biomédica e biomedicina</a>.</p>
+<p>Um dado que merece destaque: o engenheiro biomédico ganha <strong>2,6 vezes mais</strong> que o biomédico (profissional de Biomedicina), cuja média é R$ 3.268/mês. Para quem confunde os dois cursos, a diferença salarial de mais de R$ 5.000 mensais justifica entender a <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">diferença entre engenharia biomédica e biomedicina</a>.</p>
 
 <h3>Retorno sobre o investimento (ROI) do curso</h3>
 
@@ -77,13 +77,13 @@ export const artigo: Artigo = {
 <ul>
 <li><strong>Hospitais e clínicas:</strong> engenharia clínica, manutenção de equipamentos, gestão de parque tecnológico. A busca por "engenheiro clínico" no Indeed retorna 400-500+ vagas simultaneamente.</li>
 <li><strong>Indústria de dispositivos médicos:</strong> P&D, qualidade, produção. Multinacionais como Philips (24 vagas abertas), GE Healthcare, Siemens Healthineers, Medtronic e Abbott mantêm operações no Brasil.</li>
-<li><strong>Healthtechs e startups:</strong> o ecossistema brasileiro conta com até <a href="/artigos/healthtechs-brasil-ecossistema">1.900 healthtechs</a>, que receberam R$ 799 milhões em investimentos em 2024.</li>
-<li><strong>Regulatório:</strong> registro de dispositivos na <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">ANVISA</a>, assuntos regulatórios, compliance com <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas</a>.</li>
+<li><strong>Healthtechs e startups:</strong> o ecossistema brasileiro conta com até <a href="/artigos/healthtechs-mapa-brasil">1.900 healthtechs</a>, que receberam R$ 799 milhões em investimentos em 2024.</li>
+<li><strong>Regulatório:</strong> registro de dispositivos na <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA</a>, assuntos regulatórios, compliance com <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas</a>.</li>
 <li><strong>Academia e pesquisa:</strong> 16+ programas de pós-graduação, com destaque para o COPPE/UFRJ (nota CAPES 6).</li>
 <li><strong>Consultoria:</strong> empresas especializadas em engenharia clínica como EQUIPACARE, Engemed e E.QUALITY Soluções.</li>
 </ul>
 
-<p>Para um panorama completo das vagas e tendências, consulte o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>Para um panorama completo das vagas e tendências, consulte o artigo sobre <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <h2>O mercado de R$ 26,1 bilhões que impulsiona a profissão</h2>
 
@@ -102,7 +102,7 @@ export const artigo: Artigo = {
 <li><strong>Telemedicina:</strong> de zero para mais de 30 milhões de teleconsultas anuais. O mercado deve atingir US$ 6,19 bilhões até 2030 (CAGR de 19,2%).</li>
 </ul>
 
-<p>O investimento público reforça essa tendência: o Complexo Econômico-Industrial da Saúde (CEIS) mobiliza <strong>R$ 57,4 bilhões</strong> (R$ 16,4 bilhões públicos + R$ 39,5 bilhões privados). A <a href="https://www.gov.br/mcti">EMBRAPII</a> investiu R$ 524 milhões em 390 projetos de saúde, e a FINEP alocou R$ 3,5 bilhões para o setor sob o programa Nova Indústria Brasil. Para detalhes sobre o tamanho do mercado, veja o artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>O investimento público reforça essa tendência: o Complexo Econômico-Industrial da Saúde (CEIS) mobiliza <strong>R$ 57,4 bilhões</strong> (R$ 16,4 bilhões públicos + R$ 39,5 bilhões privados). A <a href="https://www.gov.br/mcti">EMBRAPII</a> investiu R$ 524 milhões em 390 projetos de saúde, e a FINEP alocou R$ 3,5 bilhões para o setor sob o programa Nova Indústria Brasil. Para detalhes sobre o tamanho do mercado, veja o artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Os desafios reais: por que nem tudo são flores</h2>
 
@@ -141,7 +141,7 @@ export const artigo: Artigo = {
 <li>Prioriza retorno financeiro imediato — engenharia de software oferece salário júnior 68% maior</li>
 <li>Mora em região com pouca infraestrutura hospitalar ou industrial e não pretende se mudar</li>
 <li>Prefere uma carreira com mercado já consolidado e milhares de vagas formais visíveis no CAGED</li>
-<li>Confunde engenharia biomédica com biomedicina — são cursos fundamentalmente diferentes. Consulte nosso <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">guia comparativo</a></li>
+<li>Confunde engenharia biomédica com biomedicina — são cursos fundamentalmente diferentes. Consulte nosso <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">guia comparativo</a></li>
 <li>Não tem interesse por cálculo, física e programação — o curso é uma engenharia plena com 5 anos de duração</li>
 </ul>
 
@@ -158,15 +158,15 @@ export const artigo: Artigo = {
 
 <p>No campo da inovação, startups brasileiras fundadas por engenheiros biomédicos demonstram o potencial da profissão. A brain4care desenvolveu o único sensor não invasivo de pressão intracraniana do mundo, aprovado pela <a href="https://www.gov.br/anvisa">ANVISA</a>. A HOOBOX Robotics criou um sistema que traduz expressões faciais em comandos para cadeiras de rodas, acelerada pela Johnson & Johnson e presente em 40+ países.</p>
 
-<p>Sônia Malmonge, presidente da SBEB, contextualiza: "O amadurecimento da área ao longo desses 50 anos permitiu a consolidação de programas de pós-graduação com pesquisas de grande relevância, o que hoje se reflete no surgimento de startups e healthtechs." Para conhecer as principais <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas do setor no Brasil</a>, incluindo multinacionais e fabricantes nacionais, consulte nosso guia.</p>
+<p>Sônia Malmonge, presidente da SBEB, contextualiza: "O amadurecimento da área ao longo desses 50 anos permitiu a consolidação de programas de pós-graduação com pesquisas de grande relevância, o que hoje se reflete no surgimento de startups e healthtechs." Para conhecer as principais <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas do setor no Brasil</a>, incluindo multinacionais e fabricantes nacionais, consulte nosso guia.</p>
 
 <h2>Engenharia biomédica é difícil?</h2>
 
 <p>O curso de engenharia biomédica dura <strong>5 anos</strong> em período integral, com carga mínima de 3.600 horas. A nota de corte média no SiSU 2025 é de <strong>667,76 pontos</strong> — a 36a entre 88 cursos de engenharia, abaixo de Eng. Aeronáutica (779,68) e Eng. de Computação (727,34), mas próxima de Eng. Civil (674,95) e Eng. Elétrica (671,30).</p>
 
-<p>A <a href="/artigos/grade-curricular-engenharia-biomedica">grade curricular</a> combina disciplinas de três eixos: exatas (cálculo, álgebra linear, física, equações diferenciais), engenharia (eletrônica, processamento de sinais, mecânica dos materiais, programação) e saúde (anatomia, fisiologia, bioquímica). Essa combinação é o que torna o curso desafiador — e também o que diferencia o profissional no mercado.</p>
+<p>A <a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">grade curricular</a> combina disciplinas de três eixos: exatas (cálculo, álgebra linear, física, equações diferenciais), engenharia (eletrônica, processamento de sinais, mecânica dos materiais, programação) e saúde (anatomia, fisiologia, bioquímica). Essa combinação é o que torna o curso desafiador — e também o que diferencia o profissional no mercado.</p>
 
-<p>Atualmente, 27 instituições oferecem a graduação no Brasil, incluindo <a href="/artigos/faculdades-engenharia-biomedica-brasil">universidades públicas e privadas</a>. Mensalidades em instituições privadas variam de R$ 700 a R$ 2.500/mês, com bolsas ProUni, FIES e descontos institucionais que podem reduzir esse valor significativamente. Sobre oportunidades internacionais, confira a comparação <a href="/artigos/engenharia-biomedica-eua-vs-brasil">EUA vs Brasil</a>, onde a mediana salarial americana atinge US$ 106.950/ano.</p>
+<p>Atualmente, 27 instituições oferecem a graduação no Brasil, incluindo <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">universidades públicas e privadas</a>. Mensalidades em instituições privadas variam de R$ 700 a R$ 2.500/mês, com bolsas ProUni, FIES e descontos institucionais que podem reduzir esse valor significativamente. Sobre oportunidades internacionais, confira a comparação <a href="/artigos/engenharia-biomedica-eua-comparativo">EUA vs Brasil</a>, onde a mediana salarial americana atinge US$ 106.950/ano.</p>
 
 <h2>Perguntas frequentes</h2>
 

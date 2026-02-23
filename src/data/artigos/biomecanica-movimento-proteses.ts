@@ -25,7 +25,7 @@ export const artigo: Artigo = {
   <li><strong>Biomecânica da reabilitação:</strong> desenvolvimento de próteses, órteses e exoesqueletos com base na análise quantitativa do movimento.</li>
 </ul>
 
-<p>O mercado global de implantes ortopédicos — um dos principais destinos do conhecimento biomecânico — foi avaliado em <strong>US$ 52,86 bilhões em 2026</strong> e deve alcançar <strong>US$ 80,14 bilhões até 2034</strong> (CAGR de 5,34%). Biomateriais metálicos respondem por 47–59% desse mercado. Para o engenheiro que deseja atuar nessa cadeia produtiva, dominar FEA, CAD e prototipagem rápida representa uma vantagem competitiva direta — refletida em salários médios de <strong>R$ 8.658/mês</strong> e até mais de R$ 16.000/mês em cargos sênior, conforme dados do CAGED. Confira o panorama completo em <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de Trabalho em Engenharia Biomédica</a> e em <a href="/artigos/salario-engenheiro-biomedico">Salários do Engenheiro Biomédico</a>.</p>
+<p>O mercado global de implantes ortopédicos — um dos principais destinos do conhecimento biomecânico — foi avaliado em <strong>US$ 52,86 bilhões em 2026</strong> e deve alcançar <strong>US$ 80,14 bilhões até 2034</strong> (CAGR de 5,34%). Biomateriais metálicos respondem por 47–59% desse mercado. Para o engenheiro que deseja atuar nessa cadeia produtiva, dominar FEA, CAD e prototipagem rápida representa uma vantagem competitiva direta — refletida em salários médios de <strong>R$ 8.658/mês</strong> e até mais de R$ 16.000/mês em cargos sênior, conforme dados do CAGED. Confira o panorama completo em <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de Trabalho em Engenharia Biomédica</a> e em <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Salários do Engenheiro Biomédico</a>.</p>
 
 <h2>Propriedades mecânicas de tecidos biológicos</h2>
 
@@ -233,7 +233,7 @@ export const artigo: Artigo = {
 
 <h3>Membros superiores: mãos mioelétricas de alta funcionalidade</h3>
 
-<p>As mãos mioelétricas de última geração — <strong>i-Limb (Össur), bebionic (Ottobock) e TASKA Hand</strong> — possuem até 24 padrões de preensão e são controladas por sinais de EMG de superfície captados no coto. O engenheiro de produto que trabalha nessa área lida diariamente com otimização cinemática de garras, seleção de atuadores (motores DC brushless de alta eficiência energética), encapsulamento à prova d'água e algoritmos de reconhecimento de padrão mioelétrico baseados em aprendizado de máquina. Para conhecer as empresas que fabricam esses dispositivos no Brasil, consulte <a href="/artigos/empresas-engenharia-biomedica-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
+<p>As mãos mioelétricas de última geração — <strong>i-Limb (Össur), bebionic (Ottobock) e TASKA Hand</strong> — possuem até 24 padrões de preensão e são controladas por sinais de EMG de superfície captados no coto. O engenheiro de produto que trabalha nessa área lida diariamente com otimização cinemática de garras, seleção de atuadores (motores DC brushless de alta eficiência energética), encapsulamento à prova d'água e algoritmos de reconhecimento de padrão mioelétrico baseados em aprendizado de máquina. Para conhecer as empresas que fabricam esses dispositivos no Brasil, consulte <a href="/artigos/empresas-dispositivos-medicos-brasil">Empresas de Engenharia Biomédica no Brasil</a>.</p>
 
 <h2>Impressão 3D de próteses e órteses</h2>
 
@@ -469,7 +469,7 @@ export const artigo: Artigo = {
   <li>Especialista regulatório na ANVISA ou em empresas que buscam registros de implantes.</li>
 </ul>
 
-<p>Para um panorama completo das possibilidades, consulte <a href="/artigos/o-que-faz-engenheiro-biomedico">O que faz o Engenheiro Biomédico</a>.</p>
+<p>Para um panorama completo das possibilidades, consulte <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">O que faz o Engenheiro Biomédico</a>.</p>
 
 <h2>Perguntas frequentes</h2>
 

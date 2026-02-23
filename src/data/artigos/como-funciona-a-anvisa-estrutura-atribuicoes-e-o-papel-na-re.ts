@@ -111,7 +111,7 @@ export const artigo: Artigo = {
 <li>Hospitais sentinela da Rede Sentinela, com mais de 200 unidades em todo o Brasil, são os principais notificadores</li>
 </ul>
 
-<p>O engenheiro biomédico que atua em <a href="/artigos/o-que-faz-engenheiro-biomedico">engenharia clínica</a> é frequentemente o responsável por identificar e reportar eventos adversos dentro do hospital, funcionando como elo entre a instituição de saúde e a ANVISA.</p>
+<p>O engenheiro biomédico que atua em <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">engenharia clínica</a> é frequentemente o responsável por identificar e reportar eventos adversos dentro do hospital, funcionando como elo entre a instituição de saúde e a ANVISA.</p>
 
 <h2>O papel do engenheiro biomédico na ANVISA</h2>
 
@@ -125,7 +125,7 @@ export const artigo: Artigo = {
 <li><strong>Cooperação internacional:</strong> participação em fóruns como o IMDRF (International Medical Device Regulators Forum)</li>
 </ul>
 
-<p>O ingresso na ANVISA se dá por <strong>concurso público</strong> para o cargo de Especialista em Regulação e Vigilância Sanitária. O último concurso, realizado em 2024, ofereceu 70 vagas com salário inicial de aproximadamente R$ 16.000 para nível superior. A formação em Engenharia Biomédica é aceita para o cargo, e profissionais com conhecimento em <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas (IEC 60601, ISO 13485)</a> e <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação de dispositivos médicos</a> possuem vantagem competitiva significativa.</p>
+<p>O ingresso na ANVISA se dá por <strong>concurso público</strong> para o cargo de Especialista em Regulação e Vigilância Sanitária. O último concurso, realizado em 2024, ofereceu 70 vagas com salário inicial de aproximadamente R$ 16.000 para nível superior. A formação em Engenharia Biomédica é aceita para o cargo, e profissionais com conhecimento em <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas (IEC 60601, ISO 13485)</a> e <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação de dispositivos médicos</a> possuem vantagem competitiva significativa.</p>
 
 <h2>ANVISA no contexto internacional</h2>
 
@@ -133,7 +133,7 @@ export const artigo: Artigo = {
 
 <p>Em 2026, a ANVISA implementou o sistema de <a href="/artigos/anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d">Identificação Única de Dispositivo (IUD)</a>, alinhando o Brasil ao padrão internacional de rastreabilidade adotado pelo FDA (UDI) e pela União Europeia (UDI-MDR). Essa iniciativa representa um marco na convergência regulatória brasileira com os mercados internacionais.</p>
 
-<p>Para engenheiros biomédicos que desejam <a href="/artigos/engenharia-biomedica-eua-vs-brasil">atuar internacionalmente</a>, compreender o sistema regulatório da ANVISA é fundamental, pois muitas multinacionais buscam profissionais familiarizados com múltiplos frameworks regulatórios.</p>
+<p>Para engenheiros biomédicos que desejam <a href="/artigos/engenharia-biomedica-eua-comparativo">atuar internacionalmente</a>, compreender o sistema regulatório da ANVISA é fundamental, pois muitas multinacionais buscam profissionais familiarizados com múltiplos frameworks regulatórios.</p>
 
 <h2>Perguntas frequentes</h2>
 

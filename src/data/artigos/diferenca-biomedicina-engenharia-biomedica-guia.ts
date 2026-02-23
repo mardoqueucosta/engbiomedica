@@ -471,7 +471,7 @@ CAPTION: Use este framework para identificar qual perfil combina mais com você:
 <p>Se você quer aprofundar sua pesquisa sobre engenharia biomédica, confira nossos artigos completos:</p>
 
 <ul>
-<li><a href="/artigos/engenharia-biomedica-vale-a-pena">Engenharia biomédica vale a pena? Análise com dados reais</a></li>
+<li><a href="/artigos/engenharia-biomedica-vale-a-pena-v2">Engenharia biomédica vale a pena? Análise com dados reais</a></li>
 <li><a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto ganha o engenheiro biomédico em 2026</a></li>
 <li><a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Todas as faculdades de engenharia biomédica no Brasil com ranking</a></li>
 <li><a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">Grade curricular de engenharia biomédica: os 5 anos detalhados</a></li>

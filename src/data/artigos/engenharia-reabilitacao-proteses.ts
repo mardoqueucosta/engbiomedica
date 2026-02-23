@@ -125,7 +125,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Esses números posicionam o Brasil como um mercado relevante e com demanda reprimida significativa: apenas uma fração das pessoas com deficiência que necessitam de dispositivos de reabilitação têm acesso adequado, criando tanto um desafio de saúde pública quanto uma oportunidade de inovação tecnológica. Veja mais sobre o mercado de dispositivos no artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>Esses números posicionam o Brasil como um mercado relevante e com demanda reprimida significativa: apenas uma fração das pessoas com deficiência que necessitam de dispositivos de reabilitação têm acesso adequado, criando tanto um desafio de saúde pública quanto uma oportunidade de inovação tecnológica. Veja mais sobre o mercado de dispositivos no artigo sobre o <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Próteses de membros: da mecânica à biônica</h2>
 
@@ -232,7 +232,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>O financiamento público estrutura o campo: a <strong>FAPESP</strong> mantém quatro centros temáticos com R$ 10 milhões (Tecvida, Taal, CMDTA, Taebs). A <strong>EMBRAPII</strong> registra 71 projetos em saúde em 2024 (recorde), com R$ 1 bilhão investido no acumulado. A <strong>FINEP</strong> oferece até R$ 15 milhões por projeto e fundo de R$ 40 milhões específico para startups de tecnologia assistiva. Para entender o ecossistema de inovação, veja <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs no Brasil</a>.</p>
+<p>O financiamento público estrutura o campo: a <strong>FAPESP</strong> mantém quatro centros temáticos com R$ 10 milhões (Tecvida, Taal, CMDTA, Taebs). A <strong>EMBRAPII</strong> registra 71 projetos em saúde em 2024 (recorde), com R$ 1 bilhão investido no acumulado. A <strong>FINEP</strong> oferece até R$ 15 milhões por projeto e fundo de R$ 40 milhões específico para startups de tecnologia assistiva. Para entender o ecossistema de inovação, veja <a href="/artigos/healthtechs-mapa-brasil">healthtechs no Brasil</a>.</p>
 
 <h2>Órteses e dispositivos ortóticos: do AFO à impressão 3D</h2>
 
@@ -460,7 +460,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Nos EUA, a <strong>RESNA</strong> (<a href="https://www.resna.org" target="_blank" rel="noopener">Rehabilitation Engineering and Assistive Technology Society of North America</a>) é a principal organização técnico-científica e de certificação profissional para engenheiros de reabilitação. A <strong><a href="https://www.who.int/teams/assistive-and-medical-technology/assistive-technology" target="_blank" rel="noopener">OMS</a></strong> coordena a Global Cooperation on Assistive Technology (GATE) para expandir acesso global. Para o framework regulatório completo no Brasil, veja <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA</a> e <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
+<p>Nos EUA, a <strong>RESNA</strong> (<a href="https://www.resna.org" target="_blank" rel="noopener">Rehabilitation Engineering and Assistive Technology Society of North America</a>) é a principal organização técnico-científica e de certificação profissional para engenheiros de reabilitação. A <strong><a href="https://www.who.int/teams/assistive-and-medical-technology/assistive-technology" target="_blank" rel="noopener">OMS</a></strong> coordena a Global Cooperation on Assistive Technology (GATE) para expandir acesso global. Para o framework regulatório completo no Brasil, veja <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA</a> e <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
 
 <h2>Mercado, indústria e formação profissional no Brasil</h2>
 
@@ -505,7 +505,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para pós-graduação específica na área, destacam-se: <strong>UFABC</strong> (Biomecânica, Reabilitação e TA), <strong>UFU</strong> (Engenharia de Reabilitação), <strong>USP</strong> (IMREA/Tecvida), <strong>UFES</strong> (Núcleo de TA) e <strong>Instituto Santos Dumont</strong> (Neuroengenharia). Veja mais em <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa em engenharia biomédica</a> e <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a>. Para quem busca oportunidades no setor, consulte também o <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>Para pós-graduação específica na área, destacam-se: <strong>UFABC</strong> (Biomecânica, Reabilitação e TA), <strong>UFU</strong> (Engenharia de Reabilitação), <strong>USP</strong> (IMREA/Tecvida), <strong>UFES</strong> (Núcleo de TA) e <strong>Instituto Santos Dumont</strong> (Neuroengenharia). Veja mais em <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa em engenharia biomédica</a> e <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a>. Para quem busca oportunidades no setor, consulte também o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <h2>Tendências e futuro da engenharia de reabilitação</h2>
 
@@ -547,7 +547,7 @@ export const artigo: Artigo = {
 <p>A IA, especialmente redes neurais convolucionais temporais e algoritmos de aprendizado de máquina, transformou o controle de próteses biônicas. O reconhecimento de padrões eletromiográficos atingiu 97% de acurácia em voluntários saudáveis e 88% em pacientes com reinervação muscular direcionada (TMR), viabilizando controle intuitivo e em tempo real de mãos e braços multiarticulados. O Rheo Knee XC da Össur (2024) usa ML embarcado para adaptar o comportamento do joelho ao estilo de marcha individual. Em exoesqueletos, o sistema agnóstico à tarefa de Molinaro et al. (Nature, 2024) aprende automaticamente a assistir diferentes atividades sem reprogramação.</p>
 
 <h3>Onde posso me especializar em engenharia de reabilitação no Brasil?</h3>
-<p>As principais opções de pós-graduação específicas em engenharia de reabilitação no Brasil são: <strong>UFABC</strong> (programa em Bioengenharia com linhas em Biomecânica e Tecnologia Assistiva), <strong>UFU</strong> (Engenharia de Reabilitação), <strong>USP</strong> (IMREA e centro Tecvida), <strong>UFES</strong> (Núcleo de Tecnologia Assistiva) e <strong>Instituto Santos Dumont</strong> (Neuroengenharia, Natal/RN). Para a lista completa de centros de pesquisa, veja <a href="/artigos/centros-pesquisa-engenharia-biomedica">centros de pesquisa em engenharia biomédica</a> e, para opções de graduação, <a href="/artigos/faculdades-engenharia-biomedica-brasil">faculdades de engenharia biomédica no Brasil</a>.</p>
+<p>As principais opções de pós-graduação específicas em engenharia de reabilitação no Brasil são: <strong>UFABC</strong> (programa em Bioengenharia com linhas em Biomecânica e Tecnologia Assistiva), <strong>UFU</strong> (Engenharia de Reabilitação), <strong>USP</strong> (IMREA e centro Tecvida), <strong>UFES</strong> (Núcleo de Tecnologia Assistiva) e <strong>Instituto Santos Dumont</strong> (Neuroengenharia, Natal/RN). Para a lista completa de centros de pesquisa, veja <a href="/artigos/centros-pesquisa-engbiomedica-mapa">centros de pesquisa em engenharia biomédica</a> e, para opções de graduação, <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">faculdades de engenharia biomédica no Brasil</a>.</p>
 
 <hr>
 

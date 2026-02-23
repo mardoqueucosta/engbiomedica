@@ -677,7 +677,7 @@ CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engen
 <li><strong>Na inscrição:</strong> Revise o edital linha por linha. Erros de documentação eliminam candidatos fortes por razões puramente burocráticas.</li>
 </ol>
 
-<p>Para uma análise mais ampla sobre se a carreira de engenheiro biomédico faz sentido para o seu perfil, veja o artigo <a href="/artigos/engenharia-biomedica-vale-a-pena">Engenharia Biomédica Vale a Pena</a>.</p>
+<p>Para uma análise mais ampla sobre se a carreira de engenheiro biomédico faz sentido para o seu perfil, veja o artigo <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">Engenharia Biomédica Vale a Pena</a>.</p>
 
 <h2>Perguntas frequentes sobre pós-graduação em engenharia biomédica</h2>
 
@@ -726,7 +726,7 @@ CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engen
 <p>Se você está considerando a pós-graduação como parte da sua trajetória, os artigos abaixo podem complementar este guia com informações específicas sobre outros aspectos da carreira em engenharia biomédica:</p>
 
 <ul>
-<li><a href="/artigos/engenharia-biomedica-vale-a-pena">Engenharia Biomédica Vale a Pena?</a> — análise objetiva da carreira para quem está avaliando o campo</li>
+<li><a href="/artigos/engenharia-biomedica-vale-a-pena-v2">Engenharia Biomédica Vale a Pena?</a> — análise objetiva da carreira para quem está avaliando o campo</li>
 <li><a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha um Engenheiro Biomédico em 2026</a> — dados salariais detalhados por nível de formação, setor e função</li>
 <li><a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">Todas as Faculdades de Engenharia Biomédica no Brasil: Ranking</a> — para quem ainda está na graduação ou avaliando transferência</li>
 <li><a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">Grade Curricular de Engenharia Biomédica: os 5 Anos em Detalhes</a> — entenda o que a graduação cobre antes de planejar a especialização na pós</li>

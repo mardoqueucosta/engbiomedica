@@ -48,7 +48,7 @@ export const artigo: Artigo = {
 
 <p class="mb-6">A resolução está atualmente em processo de revisão pela ANVISA, com foco em dois temas emergentes: o tratamento de <strong>software adaptável</strong> (aquele que aprende e muda com o tempo, como modelos de IA) e a incorporação do conceito de <strong>PCCP — Predetermined Change Control Plan</strong>, já adotado pelo FDA americano para gerenciar atualizações de algoritmos sem exigir uma nova submissão regulatória a cada mudança.</p>
 
-<p class="mb-6">Para aprofundar o entendimento sobre o ecossistema regulatório brasileiro, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA para dispositivos médicos</a>.</p>
+<p class="mb-6">Para aprofundar o entendimento sobre o ecossistema regulatório brasileiro, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA para dispositivos médicos</a>.</p>
 
 <h2>A Matriz de Risco IMDRF: Como Classificar um SaMD</h2>
 <figure>

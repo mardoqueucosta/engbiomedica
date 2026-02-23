@@ -10,7 +10,7 @@ export const artigo: Artigo = {
   conteudo: `
 <p class="text-lg leading-relaxed mb-6"><strong>A carreira do engenheiro biomédico evolui ao longo de seis estágios bem definidos, cobrindo de 15 a 20 anos de trajetória profissional — do estágio obrigatório na graduação até cargos de diretoria e C-level.</strong> Cada etapa exige competências técnicas e comportamentais específicas, certificações progressivas e decisões estratégicas que impactam a remuneração e o posicionamento no mercado. Neste artigo, apresentamos o roadmap completo com salários atualizados, habilidades exigidas por nível e a bifurcação entre as trilhas técnica e gerencial que define o futuro de todo profissional da área.</p>
 
-<p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>. Para dados salariais detalhados por estado e setor, consulte <a href="/artigos/salario-engenheiro-biomedico">Quanto Ganha um Engenheiro Biomédico</a>.</p>
+<p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>. Para dados salariais detalhados por estado e setor, consulte <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha um Engenheiro Biomédico</a>.</p>
 
 <h2>Visão Geral do Roadmap: 6 Estágios em 15-20 Anos</h2>
 
@@ -119,7 +119,7 @@ export const artigo: Artigo = {
 
 <h3>Requisito obrigatório: registro no CREA</h3>
 
-<p>O primeiro passo é o <strong>registro no <a href="https://www.confea.org.br">CREA</a></strong> (Conselho Regional de Engenharia e Agronomia), que habilita legalmente o exercício da profissão. Sem o registro, o engenheiro biomédico não pode assinar laudos técnicos, Anotações de Responsabilidade Técnica (ARTs) nem assumir responsabilidade técnica por equipamentos ou projetos. Para o passo a passo completo, consulte <a href="/artigos/registro-crea-engenheiro-biomedico">Registro no CREA para Engenheiro Biomédico</a>.</p>
+<p>O primeiro passo é o <strong>registro no <a href="https://www.confea.org.br">CREA</a></strong> (Conselho Regional de Engenharia e Agronomia), que habilita legalmente o exercício da profissão. Sem o registro, o engenheiro biomédico não pode assinar laudos técnicos, Anotações de Responsabilidade Técnica (ARTs) nem assumir responsabilidade técnica por equipamentos ou projetos. Para o passo a passo completo, consulte <a href="/artigos/registro-crea-engenheiro-biomedico-guia">Registro no CREA para Engenheiro Biomédico</a>.</p>
 
 <h3>Salário e mercado</h3>
 
@@ -131,7 +131,7 @@ export const artigo: Artigo = {
 
 <p><strong>Comportamentais:</strong> Capacidade de aprendizado contínuo, proatividade na resolução de problemas, comunicação clara com equipes clínicas e administrativas, e gestão básica do tempo.</p>
 
-<p><strong>Setores de entrada mais comuns:</strong> Hospitais e redes de saúde (engenharia clínica), empresas de manutenção de equipamentos, distribuidoras de dispositivos médicos (suporte técnico e aplicação) e healthtechs em estágio inicial. Para conhecer as principais empresas, veja nosso guia sobre <a href="/artigos/empresas-engenharia-biomedica-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
+<p><strong>Setores de entrada mais comuns:</strong> Hospitais e redes de saúde (engenharia clínica), empresas de manutenção de equipamentos, distribuidoras de dispositivos médicos (suporte técnico e aplicação) e healthtechs em estágio inicial. Para conhecer as principais empresas, veja nosso guia sobre <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de engenharia biomédica no Brasil</a>.</p>
 
 <h2>Estágio 3 — Engenheiro Pleno (Anos 3-7): Bifurcação Estratégica</h2>
 
@@ -200,7 +200,7 @@ export const artigo: Artigo = {
 
 <p><strong>CCE — Certified Clinical Engineer:</strong> Concedida pela <a href="https://www.bfrsi.org" target="_blank" rel="noopener noreferrer">AAMI/HTCC</a>, é a credencial internacional de maior prestígio para engenheiros clínicos. Exige experiência comprovada e aprovação em exame abrangente.</p>
 
-<p><strong>Mestrado acadêmico:</strong> Para a trilha técnica, o mestrado em Engenharia Biomédica ou área correlata é praticamente obrigatório neste nível. Além de aprofundar o conhecimento, abre portas para docência e pesquisa. Confira as opções em <a href="/artigos/pos-graduacao-engenharia-biomedica">Pós-Graduação em Engenharia Biomédica</a>.</p>
+<p><strong>Mestrado acadêmico:</strong> Para a trilha técnica, o mestrado em Engenharia Biomédica ou área correlata é praticamente obrigatório neste nível. Além de aprofundar o conhecimento, abre portas para docência e pesquisa. Confira as opções em <a href="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica">Pós-Graduação em Engenharia Biomédica</a>.</p>
 
 <figure>
 <img src="/artigos/roadmap-carreira-engenheiro-biomedico/image-2.webp" alt="Engenheiro biomédico sênior orientando equipe júnior durante inspeção técnica de equipamento de ressonância magnética em laboratório de engenharia clínica hospitalar" width="1024" height="571" loading="lazy" decoding="async">
@@ -282,7 +282,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>A diferença absoluta é significativa: o profissional americano ganha, em média, <strong>5 vezes mais em dólares</strong>. Porém, ao ajustar pelo custo de vida (paridade de poder de compra), a diferença se reduz para aproximadamente 2,5 a 3 vezes. Para uma análise completa das diferenças entre os mercados, consulte nosso artigo sobre <a href="/artigos/engenharia-biomedica-eua-vs-brasil">Engenharia Biomédica nos EUA vs. Brasil</a>.</p>
+<p>A diferença absoluta é significativa: o profissional americano ganha, em média, <strong>5 vezes mais em dólares</strong>. Porém, ao ajustar pelo custo de vida (paridade de poder de compra), a diferença se reduz para aproximadamente 2,5 a 3 vezes. Para uma análise completa das diferenças entre os mercados, consulte nosso artigo sobre <a href="/artigos/engenharia-biomedica-eua-comparativo">Engenharia Biomédica nos EUA vs. Brasil</a>.</p>
 
 <figure>
 <img src="/artigos/roadmap-carreira-engenheiro-biomedico/image-3.webp" alt="Diagrama comparativo mostrando trilha técnica e trilha gerencial da carreira do engenheiro biomédico com cargos certificações e competências de cada caminho" width="1024" height="571" loading="lazy" decoding="async">
@@ -397,7 +397,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Uma estratégia eficaz é a <strong>movimentação planejada entre setores</strong>: iniciar em hospital (base técnica ampla), migrar para indústria ou consultoria (especialização e salário), e eventualmente retornar ao setor hospitalar em posição de liderança ou seguir para C-level na indústria. Para entender melhor <a href="/artigos/o-que-faz-engenheiro-biomedico">o que faz um engenheiro biomédico</a> em cada um desses ambientes, consulte nosso artigo dedicado.</p>
+<p>Uma estratégia eficaz é a <strong>movimentação planejada entre setores</strong>: iniciar em hospital (base técnica ampla), migrar para indústria ou consultoria (especialização e salário), e eventualmente retornar ao setor hospitalar em posição de liderança ou seguir para C-level na indústria. Para entender melhor <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">o que faz um engenheiro biomédico</a> em cada um desses ambientes, consulte nosso artigo dedicado.</p>
 
 <h2>Habilidades Comportamentais por Nível</h2>
 

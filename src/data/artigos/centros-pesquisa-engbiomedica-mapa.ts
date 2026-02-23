@@ -224,7 +224,7 @@ export const artigo: Artigo = {
 
 <p><strong>Colaboracao empresa-academia:</strong> Unidades EMBRAPII e hubs hospitalares como InovaHC (USP) e Eretz.bio (Einstein) facilitam parcerias. Empresas interessadas em P&amp;D podem acessar infraestrutura de ponta e pesquisadores qualificados com financiamento parcialmente subsidiado.</p>
 
-<p>Para quem esta avaliando a formacao em engenharia biomedica, nosso guia sobre <a href="/artigos/faculdades-engenharia-biomedica-brasil">faculdades de engenharia biomedica no Brasil</a> oferece um panorama completo das opcoes de graduacao.</p>
+<p>Para quem esta avaliando a formacao em engenharia biomedica, nosso guia sobre <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">faculdades de engenharia biomedica no Brasil</a> oferece um panorama completo das opcoes de graduacao.</p>
 
 <h2>Perguntas Frequentes</h2>
 

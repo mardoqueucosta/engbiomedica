@@ -173,7 +173,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Um ponto de convergência estratégico: ambas as agências participam do <strong>International Medical Device Regulators Forum (IMDRF)</strong> e do programa <strong>Medical Device Single Audit Program (MDSAP)</strong>, que permite que uma única auditoria de sistema de qualidade seja reconhecida pela FDA, Health Canada, TGA (Austrália), PMDA (Japão) e ANVISA. Empresas brasileiras que participam do MDSAP ganham eficiência regulatória em múltiplos mercados simultaneamente. Para detalhes sobre o sistema regulatório brasileiro, veja o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação de dispositivos médicos pela ANVISA</a> e o artigo sobre <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
+<p>Um ponto de convergência estratégico: ambas as agências participam do <strong>International Medical Device Regulators Forum (IMDRF)</strong> e do programa <strong>Medical Device Single Audit Program (MDSAP)</strong>, que permite que uma única auditoria de sistema de qualidade seja reconhecida pela FDA, Health Canada, TGA (Austrália), PMDA (Japão) e ANVISA. Empresas brasileiras que participam do MDSAP ganham eficiência regulatória em múltiplos mercados simultaneamente. Para detalhes sobre o sistema regulatório brasileiro, veja o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação de dispositivos médicos pela ANVISA</a> e o artigo sobre <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a>.</p>
 
 <h2>Implicações para engenheiros biomédicos brasileiros</h2>
 
@@ -216,7 +216,7 @@ export const artigo: Artigo = {
 
 <h3>Empresas brasileiras podem obter autorização FDA para vender nos EUA?</h3>
 
-<p>Sim, e diversas já o fazem. O processo é o mesmo para fabricantes nacionais e internacionais: registro do estabelecimento na FDA, designação de agente americano, implementação de QMS conforme 21 CFR Part 820 (ou QMSR), e submissão da via regulatória adequada (510(k), De Novo ou PMA). Empresas brasileiras exportam para os EUA principalmente em categorias de menor risco: artigos descartáveis, instrumental cirúrgico, equipamentos de monitoração e diagnóstico. Veja mais no artigo sobre <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>Sim, e diversas já o fazem. O processo é o mesmo para fabricantes nacionais e internacionais: registro do estabelecimento na FDA, designação de agente americano, implementação de QMS conforme 21 CFR Part 820 (ou QMSR), e submissão da via regulatória adequada (510(k), De Novo ou PMA). Empresas brasileiras exportam para os EUA principalmente em categorias de menor risco: artigos descartáveis, instrumental cirúrgico, equipamentos de monitoração e diagnóstico. Veja mais no artigo sobre <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h3>Qual é a diferença entre 510(k) e De Novo?</h3>
 

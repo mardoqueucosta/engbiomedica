@@ -162,7 +162,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para dados comparativos sobre remuneração na engenharia biomédica em outras áreas, consulte nossa análise de <a href="/artigos/salario-engenheiro-biomedico">salários do engenheiro biomédico</a> e o panorama do <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a>.</p>
+<p>Para dados comparativos sobre remuneração na engenharia biomédica em outras áreas, consulte nossa análise de <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salários do engenheiro biomédico</a> e o panorama do <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a>.</p>
 
 <h2>Principais Aplicações Clínicas com IA no Brasil</h2>
 
@@ -228,7 +228,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Para uma visão mais detalhada do ecossistema de startups de saúde no país, veja nossa análise sobre <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs no Brasil</a>.</p>
+<p>Para uma visão mais detalhada do ecossistema de startups de saúde no país, veja nossa análise sobre <a href="/artigos/healthtechs-mapa-brasil">healthtechs no Brasil</a>.</p>
 
 <h2>Como o Engenheiro Biomédico se Posiciona Nesse Cenário</h2>
 

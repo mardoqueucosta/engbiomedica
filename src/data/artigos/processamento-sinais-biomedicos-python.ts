@@ -18,7 +18,7 @@ export const artigo: Artigo = {
 
 <p>O campo pode ser dividido em três grandes operações encadeadas. O <strong>pré-processamento</strong> envolve filtragem para remoção de ruído elétrico (60 Hz no Brasil), artefatos de movimento e deriva de linha de base. A <strong>extração de parâmetros</strong> identifica eventos clínicos relevantes — picos R no ECG, componentes de ritmos cerebrais no EEG, unidades motoras no EMG. A <strong>classificação</strong> aplica critérios diagnósticos ou modelos de aprendizado de máquina para categorizar o estado fisiológico em condições normais ou patológicas.</p>
 
-<p>A subárea está diretamente conectada à <a href="/artigos/instrumentacao-biomedica">instrumentação biomédica</a>, que cuida da aquisição do sinal na ponta — eletrodos, amplificadores, conversores A/D — entregando os dados digitais que os algoritmos de processamento consomem. Profissionais de <a href="/artigos/engenharia-clinica-guia-completo">engenharia clínica</a> e centros de <a href="/artigos/centros-pesquisa-engenharia-biomedica">pesquisa biomédica</a> são os principais consumidores dessas técnicas no ecossistema brasileiro.</p>
+<p>A subárea está diretamente conectada à <a href="/artigos/instrumentacao-biomedica">instrumentação biomédica</a>, que cuida da aquisição do sinal na ponta — eletrodos, amplificadores, conversores A/D — entregando os dados digitais que os algoritmos de processamento consomem. Profissionais de <a href="/artigos/engenharia-clinica-guia-completo">engenharia clínica</a> e centros de <a href="/artigos/centros-pesquisa-engbiomedica-mapa">pesquisa biomédica</a> são os principais consumidores dessas técnicas no ecossistema brasileiro.</p>
 
 <h2>Características técnicas dos principais sinais biomédicos</h2>
 
@@ -224,7 +224,7 @@ export const artigo: Artigo = {
 
 <p>Primeiro, o <strong>custo de licença</strong>: MATLAB custa USD 2.150 ou mais por licença individual (toolboxes como Signal Processing e Wavelet somam centenas adicionais), enquanto Python é gratuito e open-source. Segundo, a <strong>integração nativa com ecossistema de ML/DL</strong>: TensorFlow (~188.000 stars no GitHub) e PyTorch (~86.000 stars) não têm equivalente no MATLAB. Terceiro, a <strong>reprodutibilidade</strong>: Jupyter Notebooks, pip/conda para ambientes e Docker para contêineres permitem que qualquer pesquisador replique exatamente o pipeline publicado. Quarto, o <strong>mercado de trabalho</strong>: healthtechs brasileiras e empresas globais como GE HealthCare, Philips e Siemens Healthineers contratam profissionais com Python, não MATLAB.</p>
 
-<p>Esse cenário é especialmente relevante para quem analisa o <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a> e as <a href="/artigos/tendencias-futuro-engenharia-biomedica">tendências tecnológicas do setor</a>.</p>
+<p>Esse cenário é especialmente relevante para quem analisa o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a> e as <a href="/artigos/tendencias-futuro-engenharia-biomedica">tendências tecnológicas do setor</a>.</p>
 
 <h2>Bibliotecas Python para processamento de biossinais</h2>
 
@@ -455,11 +455,11 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>No Brasil, o setor de dispositivos médicos produziu R$ 26,1 bilhões em 2024 (ABIMO/ABIIS), com crescimento de 11,5% e 85.078 trabalhadores em 1.200+ fabricantes. As exportações somaram USD 852 milhões, mas as importações chegaram a USD 8,012 bilhões — refletindo a dependência de equipamentos sofisticados que incluem os sistemas de processamento de sinais de maior valor agregado. O ecossistema de <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs</a> conta com 602 empresas que receberam R$ 799 milhões em investimentos, e o Brasil concentra 64,8% de todas as healthtechs investidas da América Latina.</p>
+<p>No Brasil, o setor de dispositivos médicos produziu R$ 26,1 bilhões em 2024 (ABIMO/ABIIS), com crescimento de 11,5% e 85.078 trabalhadores em 1.200+ fabricantes. As exportações somaram USD 852 milhões, mas as importações chegaram a USD 8,012 bilhões — refletindo a dependência de equipamentos sofisticados que incluem os sistemas de processamento de sinais de maior valor agregado. O ecossistema de <a href="/artigos/healthtechs-mapa-brasil">healthtechs</a> conta com 602 empresas que receberam R$ 799 milhões em investimentos, e o Brasil concentra 64,8% de todas as healthtechs investidas da América Latina.</p>
 
 <h2>Pesquisa brasileira em destaque</h2>
 
-<p>A pesquisa nacional em processamento de sinais biomédicos possui centros de excelência reconhecidos internacionalmente. O <strong>Laboratório de Engenharia Biomédica da USP (LEB)</strong>, o <strong>Programa de Engenharia Biomédica da COPPE/UFRJ (PEB)</strong> e o <strong>Núcleo de Pesquisa em Engenharia Biomédica da UFMG (NEPEB)</strong> lideram publicações com impacto global. O <strong>Instituto de Engenharia Biomédica da UFSC (IEB)</strong> e os programas da UFABC, UNIVAP e UFC completam uma rede nacional de pesquisa conectada ao <a href="/artigos/centros-pesquisa-engenharia-biomedica">mapa de centros de pesquisa biomédica do país</a>.</p>
+<p>A pesquisa nacional em processamento de sinais biomédicos possui centros de excelência reconhecidos internacionalmente. O <strong>Laboratório de Engenharia Biomédica da USP (LEB)</strong>, o <strong>Programa de Engenharia Biomédica da COPPE/UFRJ (PEB)</strong> e o <strong>Núcleo de Pesquisa em Engenharia Biomédica da UFMG (NEPEB)</strong> lideram publicações com impacto global. O <strong>Instituto de Engenharia Biomédica da UFSC (IEB)</strong> e os programas da UFABC, UNIVAP e UFC completam uma rede nacional de pesquisa conectada ao <a href="/artigos/centros-pesquisa-engbiomedica-mapa">mapa de centros de pesquisa biomédica do país</a>.</p>
 
 <p>A empresa paulistana <strong>brain4care</strong> é o caso de maior visibilidade internacional: desenvolve tecnologia de monitoramento não-invasivo de complacência e pressão intracraniana (PIC) baseada em análise da morfologia da onda de pulso arterial. Captou USD 23,6 milhões em investimentos e foi reconhecida como <strong>Technology Pioneer 2025 do Fórum Econômico Mundial</strong> — distinção concedida a menos de 100 empresas tecnológicas no mundo.</p>
 
@@ -469,7 +469,7 @@ export const artigo: Artigo = {
 
 <p>Qualquer sistema de processamento de sinais biomédicos destinado a uso diagnóstico no Brasil é classificado como dispositivo médico ou software como dispositivo médico (SaMD) e sujeito à regulamentação da <a href="https://www.gov.br/anvisa" rel="noopener noreferrer" target="_blank">ANVISA</a>. A <strong>RDC 751/2022</strong> define quatro classes de risco: equipamentos de ECG, EEG e EMG diagnósticos enquadram-se na <strong>Classe II</strong> (notificação), enquanto dispositivos de maior risco como monitores cardíacos implantáveis requerem registro completo com validade de dez anos. Para software com finalidade médica — incluindo algoritmos de IA para análise de sinais — a <strong>RDC 657/2022</strong> estabelece os requisitos de ciclo de vida alinhados às normas IEC 62304 e ISO 14971.</p>
 
-<p>Para mais detalhes sobre o processo regulatório, o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA de dispositivos médicos</a> e o guia de <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a> oferecem cobertura completa das exigências vigentes.</p>
+<p>Para mais detalhes sobre o processo regulatório, o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA de dispositivos médicos</a> e o guia de <a href="/artigos/normas-tecnicas-engenharia-biomedica">normas técnicas em engenharia biomédica</a> oferecem cobertura completa das exigências vigentes.</p>
 
 <table>
   <thead>
@@ -526,7 +526,7 @@ export const artigo: Artigo = {
 
 <p>Segundo dados do CAGED para o CBO 2143-80 (engenheiro biomédico) com amostra de 137 profissionais CLT com jornada de 40 horas, os salários em 2025 foram: <strong>Júnior: R$ 7.659, Pleno: R$ 10.246, Sênior: R$ 13.262</strong>, com média de R$ 8.658, piso de R$ 8.422 e teto de R$ 14.782. É fundamental não confundir com o CBO 2212-05 (Biomédico/Biomedical Scientist), cujo salário médio é R$ 3.268/mês — uma diferença de nomenclatura com implicações salariais significativas.</p>
 
-<p>Para detalhamento completo das remunerações e comparativos por setor, o artigo sobre <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico</a> e o guia de <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho em engenharia biomédica</a> fornecem dados atualizados por CBO, região e subárea.</p>
+<p>Para detalhamento completo das remunerações e comparativos por setor, o artigo sobre <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico</a> e o guia de <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho em engenharia biomédica</a> fornecem dados atualizados por CBO, região e subárea.</p>
 
 <table>
   <thead>
@@ -565,7 +565,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>A formação começa nos 27+ programas de graduação em engenharia biomédica no Brasil (detalhados no guia de <a href="/artigos/faculdades-engenharia-biomedica-brasil">faculdades de engenharia biomédica</a>). A pós-graduação especializada em sinais está disponível em COPPE/UFRJ (PEB), UFABC (PPGEBM), UNICAMP, USP, UNIVAP (PPGEB) e UFMG. O <a href="https://www.ieee.org/membership/society-memberships.html" rel="noopener noreferrer" target="_blank">IEEE Engineering in Medicine and Biology Society (EMBS)</a>, com mais de 10.000 membros, é a principal sociedade internacional da área e publica o <em>IEEE Transactions on Biomedical Engineering</em> e o <em>Journal of Biomedical and Health Informatics</em>.</p>
+<p>A formação começa nos 27+ programas de graduação em engenharia biomédica no Brasil (detalhados no guia de <a href="/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking">faculdades de engenharia biomédica</a>). A pós-graduação especializada em sinais está disponível em COPPE/UFRJ (PEB), UFABC (PPGEBM), UNICAMP, USP, UNIVAP (PPGEB) e UFMG. O <a href="https://www.ieee.org/membership/society-memberships.html" rel="noopener noreferrer" target="_blank">IEEE Engineering in Medicine and Biology Society (EMBS)</a>, com mais de 10.000 membros, é a principal sociedade internacional da área e publica o <em>IEEE Transactions on Biomedical Engineering</em> e o <em>Journal of Biomedical and Health Informatics</em>.</p>
 
 <p>Para quem planeja <a href="/artigos/ideias-tcc-engenharia-biomedica">projetos de TCC</a> ou pós-graduação na área, o processamento de sinais biomédicos com Python oferece temas de fronteira: classificação de arritmias com modelos de fundação, BCI não-invasiva para reabilitação motora, detecção precoce de epilepsia por EEG ambulatorial e análise de HRV em wearables para estratificação de risco cardiovascular.</p>
 

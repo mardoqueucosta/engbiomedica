@@ -149,7 +149,7 @@ export const artigo: Artigo = {
 
 <p>Um ponto relevante para exportadores brasileiros é a <strong>compatibilidade entre sistemas</strong>: empresas que já possuem UDI válido para o FDA ou para o MDR europeu poderão aproveitar a mesma estrutura de codificação GS1 para o sistema brasileiro, reduzindo custos de adequação. O registro no banco de dados nacional da ANVISA, no entanto, será sempre obrigatório de forma independente.</p>
 
-<p>Para uma análise detalhada do ambiente regulatório comparado entre Brasil e EUA, consulte o artigo <a href="/artigos/engenharia-biomedica-eua-vs-brasil">Engenharia Biomédica: EUA vs. Brasil</a>. O panorama completo da regulamentação ANVISA está disponível em <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">Regulamentação ANVISA para Dispositivos Médicos</a>.</p>
+<p>Para uma análise detalhada do ambiente regulatório comparado entre Brasil e EUA, consulte o artigo <a href="/artigos/engenharia-biomedica-eua-comparativo">Engenharia Biomédica: EUA vs. Brasil</a>. O panorama completo da regulamentação ANVISA está disponível em <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">Regulamentação ANVISA para Dispositivos Médicos</a>.</p>
 
 <h2>Impacto para fabricantes, importadores e prestadores de saúde</h2>
 
@@ -191,7 +191,7 @@ export const artigo: Artigo = {
   <li><strong>Consultoria:</strong> apoio a fabricantes de pequeno e médio porte na interpretação dos requisitos e na escolha de soluções tecnológicas adequadas.</li>
 </ul>
 
-<p>As oportunidades de mercado geradas pela nova regulamentação são significativas: empresas de tecnologia de rastreamento, consultorias regulatórias e fornecedores de sistemas de gestão hospitalar tendem a ampliar sua demanda por profissionais com formação em engenharia biomédica e conhecimento regulatório. Para entender o espectro completo de atuação da profissão, acesse <a href="/artigos/areas-atuacao-engenharia-biomedica">8 Áreas de Atuação em Engenharia Biomédica</a> e o artigo sobre o <a href="/artigos/mercado-trabalho-engenharia-biomedica">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
+<p>As oportunidades de mercado geradas pela nova regulamentação são significativas: empresas de tecnologia de rastreamento, consultorias regulatórias e fornecedores de sistemas de gestão hospitalar tendem a ampliar sua demanda por profissionais com formação em engenharia biomédica e conhecimento regulatório. Para entender o espectro completo de atuação da profissão, acesse <a href="/artigos/areas-atuacao-engenharia-biomedica">8 Áreas de Atuação em Engenharia Biomédica</a> e o artigo sobre o <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">Mercado de Trabalho em Engenharia Biomédica</a>.</p>
 
 <h2>Perguntas frequentes</h2>
 

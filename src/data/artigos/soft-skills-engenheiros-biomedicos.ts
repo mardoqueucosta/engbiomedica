@@ -109,7 +109,7 @@ export const artigo: Artigo = {
 
 <h3>5. Gestão de projetos e pensamento estratégico</h3>
 
-<p>O <a href="/artigos/o-que-faz-engenheiro-biomedico">engenheiro biomédico</a> que avança na carreira invariavelmente assume a gestão de projetos: implantação de parques tecnológicos, processos de aquisição, migração de sistemas legados e projetos de inovação. Isso demanda domínio de metodologias como PMBOK, Scrum adaptado ao contexto hospitalar e ferramentas de cronograma como Gantt.</p>
+<p>O <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">engenheiro biomédico</a> que avança na carreira invariavelmente assume a gestão de projetos: implantação de parques tecnológicos, processos de aquisição, migração de sistemas legados e projetos de inovação. Isso demanda domínio de metodologias como PMBOK, Scrum adaptado ao contexto hospitalar e ferramentas de cronograma como Gantt.</p>
 
 <p>O Dr. Welbert Pereira, engenheiro biomédico do Hospital Israelita Albert Einstein, observa que o diferencial do profissional de engenharia biomédica está em sua capacidade de interpretar simultaneamente os avanços tecnológicos e as necessidades reais de saúde — uma visão estratégica que exige pensamento sistêmico, não apenas conhecimento técnico.</p>
 
@@ -321,7 +321,7 @@ export const artigo: Artigo = {
 
 <p>Com apenas 632 engenheiros biomédicos registrados no CONFEA para atender mais de 6.500 hospitais, o profissional brasileiro frequentemente acumula funções que em outros países seriam distribuídas entre especialistas. Um mesmo engenheiro pode ser responsável por manutenção, aquisição, treinamento, regulação e planejamento tecnológico — o que exige versatilidade comportamental extraordinária.</p>
 
-<p>Confira o <a href="/artigos/o-que-faz-engenheiro-biomedico">panorama completo de atuação do engenheiro biomédico</a> para entender a amplitude dessas responsabilidades.</p>
+<p>Confira o <a href="/artigos/o-que-faz-engenheiro-biomedico-9-caminhos">panorama completo de atuação do engenheiro biomédico</a> para entender a amplitude dessas responsabilidades.</p>
 
 <h3>Regionalização e gestão distribuída</h3>
 

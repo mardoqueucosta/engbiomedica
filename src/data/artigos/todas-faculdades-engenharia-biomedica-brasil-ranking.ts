@@ -498,7 +498,7 @@ export const artigo: Artigo = {
 
 <p>A realidade é que engenharia biomédica, por sua natureza interdisciplinar e prática, é um dos cursos menos adequados para a modalidade totalmente a distância. O decreto apenas formalizou o que o mercado já sinalizava. Se você está considerando a carreira mas tem restrições de deslocamento, o caminho mais seguro é buscar um curso presencial ou semipresencial com laboratórios regulamentados — não um EaD desacreditado.</p>
 
-<p>Para entender melhor as diferenças entre engenharia biomédica e cursos relacionados como biomedicina, o artigo sobre a <a href="/artigos/diferenca-engenharia-biomedica-biomedicina">diferença entre engenharia biomédica e biomedicina</a> é um bom ponto de partida.</p>
+<p>Para entender melhor as diferenças entre engenharia biomédica e cursos relacionados como biomedicina, o artigo sobre a <a href="/artigos/diferenca-biomedicina-engenharia-biomedica-guia">diferença entre engenharia biomédica e biomedicina</a> é um bom ponto de partida.</p>
 
 <h2>Qual faculdade escolher: recomendação por perfil</h2>
 
@@ -573,7 +573,7 @@ export const artigo: Artigo = {
   <li><strong>Laboratórios específicos:</strong> O curso tem laboratório de biossensores, processamento de imagens médicas e biomecânica? Visite presencialmente se possível.</li>
   <li><strong>Convênios hospitalares:</strong> Onde os alunos fazem estágio? Hospital universitário próprio ou conveniado? Quantas horas práticas em ambiente clínico?</li>
   <li><strong>Grupos de pesquisa ativos:</strong> Consulte a Plataforma Lattes e veja se há grupos publicando em periódicos como IEEE TBME, Medical Physics ou Biomedical Signal Processing.</li>
-  <li><strong>Taxa de empregabilidade:</strong> Peça dados à coordenação ou busque ex-alunos no LinkedIn. O <a href="/artigos/mercado-trabalho-engenharia-biomedica">mercado de trabalho para engenheiros biomédicos</a> tem nuances regionais importantes.</li>
+  <li><strong>Taxa de empregabilidade:</strong> Peça dados à coordenação ou busque ex-alunos no LinkedIn. O <a href="/artigos/mercado-trabalho-engenharia-biomedica-dados">mercado de trabalho para engenheiros biomédicos</a> tem nuances regionais importantes.</li>
   <li><strong>Grade curricular:</strong> O curso é mais voltado a eletrônica, a TI médica ou a biomecânica? O foco deve estar alinhado com as <a href="/artigos/areas-atuacao-engenharia-biomedica">áreas de atuação</a> que você almeja.</li>
 </ul>
 
@@ -593,7 +593,7 @@ export const artigo: Artigo = {
 
 <h3>É possível fazer engenharia biomédica se não sou bom em matemática?</h3>
 
-<p>Engenharia biomédica exige uma base sólida em matemática, física e eletrônica — não há como contornar isso. O diferencial do curso é que essa matemática está sempre aplicada a problemas de saúde concretos, o que motiva muitos estudantes que não se identificavam com engenharia "abstrata". Se você tem dificuldades em cálculo, a recomendação é reforçar antes do vestibular ou aproveitar os primeiros semestres para nivelar — a maioria dos programas tem monitoria e apoio acadêmico. Para entender mais sobre a <a href="/artigos/engenharia-biomedica-vale-a-pena">decisão de se vale a pena cursar engenharia biomédica</a>, temos um artigo específico sobre o tema.</p>
+<p>Engenharia biomédica exige uma base sólida em matemática, física e eletrônica — não há como contornar isso. O diferencial do curso é que essa matemática está sempre aplicada a problemas de saúde concretos, o que motiva muitos estudantes que não se identificavam com engenharia "abstrata". Se você tem dificuldades em cálculo, a recomendação é reforçar antes do vestibular ou aproveitar os primeiros semestres para nivelar — a maioria dos programas tem monitoria e apoio acadêmico. Para entender mais sobre a <a href="/artigos/engenharia-biomedica-vale-a-pena-v2">decisão de se vale a pena cursar engenharia biomédica</a>, temos um artigo específico sobre o tema.</p>
 
 <h3>Quais estados brasileiros não têm nenhum curso de engenharia biomédica?</h3>
 

@@ -128,7 +128,7 @@ export const artigo: Artigo = {
   <li>Participação em ensaios clínicos nacionais que investiguem TTFields em populações brasileiras</li>
 </ul>
 
-<p>Para mais informações sobre o processo regulatório de dispositivos médicos no Brasil, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação ANVISA para dispositivos médicos</a>. Para o contexto do mercado de inovação em saúde, veja também <a href="/artigos/healthtechs-brasil-ecossistema">healthtechs brasileiras e o ecossistema de inovação</a>.</p>
+<p>Para mais informações sobre o processo regulatório de dispositivos médicos no Brasil, consulte nosso artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação ANVISA para dispositivos médicos</a>. Para o contexto do mercado de inovação em saúde, veja também <a href="/artigos/healthtechs-mapa-brasil">healthtechs brasileiras e o ecossistema de inovação</a>.</p>
 
 <h2>A Física dos TTFields: Uma Perspectiva de Engenharia</h2>
 

@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Carreira"
       pillarHref="/carreira"
       sectionLabel="Transição de Carreira"
-      thirdLink={{ label: 'Panorama Internacional', href: '/artigos/engenharia-biomedica-eua-vs-brasil' }}
+      thirdLink={{ label: 'Panorama Internacional', href: '/artigos/engenharia-biomedica-eua-comparativo' }}
     />
   );
 }

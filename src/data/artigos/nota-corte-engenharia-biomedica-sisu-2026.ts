@@ -908,7 +908,7 @@ CAPTION: Estratégia de inscrição no SiSU 2026 para Engenharia Biomédica por 
 <p>Para aprofundar sua pesquisa antes de decidir onde se inscrever, leia também:</p>
 
 <ul>
-  <li><a href="/artigos/engenharia-biomedica-vale-a-pena">Engenharia Biomédica Vale a Pena? Mercado, Salários e Perspectivas</a></li>
+  <li><a href="/artigos/engenharia-biomedica-vale-a-pena-v2">Engenharia Biomédica Vale a Pena? Mercado, Salários e Perspectivas</a></li>
   <li><a href="/artigos/grade-curricular-engenharia-biomedica-5-anos">Grade Curricular de Engenharia Biomédica: os 5 Anos em Detalhe</a></li>
   <li><a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a></li>
 </ul>

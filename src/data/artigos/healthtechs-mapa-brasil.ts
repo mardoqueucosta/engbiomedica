@@ -223,7 +223,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>A aprovação FDA obtida pela brain4care e pela Magnamed é relevante não apenas como validação técnica — ela abre o mercado norte-americano (o maior do mundo para dispositivos médicos) e sinaliza ao ecossistema brasileiro que é possível competir em nível global. Para profissionais de engenharia biomédica interessados em startups, essas empresas representam ambientes de trabalho que combinam P&D de alto nível com pressão real de mercado. Veja mais sobre esse perfil de mercado em <a href="/artigos/mercado-dispositivos-medicos-brasil">mercado de dispositivos médicos no Brasil</a>.</p>
+<p>A aprovação FDA obtida pela brain4care e pela Magnamed é relevante não apenas como validação técnica — ela abre o mercado norte-americano (o maior do mundo para dispositivos médicos) e sinaliza ao ecossistema brasileiro que é possível competir em nível global. Para profissionais de engenharia biomédica interessados em startups, essas empresas representam ambientes de trabalho que combinam P&D de alto nível com pressão real de mercado. Veja mais sobre esse perfil de mercado em <a href="/artigos/mercado-dispositivos-medicos-brasil-dados">mercado de dispositivos médicos no Brasil</a>.</p>
 
 <h2>Hubs e aceleradoras: onde o ecossistema se concentra</h2>
 
@@ -271,7 +271,7 @@ export const artigo: Artigo = {
 
 <h3>Regulatório e certificação</h3>
 
-<p>A classificação de softwares de saúde como dispositivos médicos pela ANVISA — alinhada à norma internacional IEC 62304 — aumentou a segurança dos produtos, mas também o tempo e custo de entrada no mercado. Uma startup que desenvolve um algoritmo de diagnóstico por imagem pode levar de 18 a 36 meses para obter o registro necessário. Isso favorece empresas capitalizadas e penaliza startups bootstrapped. Para quem quer entender o ambiente regulatório completo, o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-regulamentacao">regulamentação de dispositivos médicos pela ANVISA</a> detalha esse processo.</p>
+<p>A classificação de softwares de saúde como dispositivos médicos pela ANVISA — alinhada à norma internacional IEC 62304 — aumentou a segurança dos produtos, mas também o tempo e custo de entrada no mercado. Uma startup que desenvolve um algoritmo de diagnóstico por imagem pode levar de 18 a 36 meses para obter o registro necessário. Isso favorece empresas capitalizadas e penaliza startups bootstrapped. Para quem quer entender o ambiente regulatório completo, o artigo sobre <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">regulamentação de dispositivos médicos pela ANVISA</a> detalha esse processo.</p>
 
 <h3>Acesso ao sistema público</h3>
 
@@ -279,7 +279,7 @@ export const artigo: Artigo = {
 
 <h3>Escassez de talento técnico especializado</h3>
 
-<p>A combinação de formação técnica em saúde + competências digitais + experiência clínica é rara no Brasil. Engenheiros biomédicos com experiência em desenvolvimento de software, ciência de dados ou gestão de projetos estão entre os profissionais mais disputados do ecossistema — e com salários que refletem essa escassez. Veja dados detalhados em <a href="/artigos/salario-engenheiro-biomedico">salário do engenheiro biomédico no Brasil</a>.</p>
+<p>A combinação de formação técnica em saúde + competências digitais + experiência clínica é rara no Brasil. Engenheiros biomédicos com experiência em desenvolvimento de software, ciência de dados ou gestão de projetos estão entre os profissionais mais disputados do ecossistema — e com salários que refletem essa escassez. Veja dados detalhados em <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">salário do engenheiro biomédico no Brasil</a>.</p>
 
 <h2>Como engenheiros biomédicos se inserem no ecossistema de healthtechs</h2>
 
