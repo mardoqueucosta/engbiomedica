@@ -14,22 +14,22 @@ export const metadata: Metadata = {
 };
 
 const multinacionais = [
-  { nome: 'Philips Healthcare', area: 'Diagnostico por imagem, monitoramento, informatica em saude', destaque: '€350 mi investidos desde 2007' },
-  { nome: 'GE Healthcare', area: 'Imagem medica, monitoramento, biomanufatura', destaque: 'US$ 250 mi em centro de pesquisa; Brasil e 3o mercado global' },
-  { nome: 'Siemens Healthineers', area: 'Imagem, diagnostico laboratorial, saude digital', destaque: 'Fabrica em Joinville/SC (R$ 50 mi)' },
-  { nome: 'Medtronic', area: 'Dispositivos cardiacos, neuromodulacao, cirurgia robotica', destaque: 'Operacoes nacionais' },
-  { nome: 'Johnson & Johnson', area: 'Dispositivos cirurgicos, ortopedia, oftalmologia', destaque: 'Forte presenca' },
-  { nome: 'Boston Scientific', area: 'Cardiologia, endoscopia, neuromodulacao', destaque: 'Parceira da SBEB em premio de inovacao' },
-  { nome: 'Stryker', area: 'Ortopedia, equipamentos cirurgicos', destaque: 'Operacoes nacionais' },
-  { nome: 'BD (Becton Dickinson)', area: 'Diagnostico, sistemas de infusao', destaque: 'Operacoes nacionais' },
+  { nome: 'Philips Healthcare', area: 'Diagnostico por imagem, monitoramento, informatica em saude', destaque: '€350 mi investidos desde 2007', url: 'https://www.philips.com.br/healthcare' },
+  { nome: 'GE Healthcare', area: 'Imagem medica, monitoramento, biomanufatura', destaque: 'US$ 250 mi em centro de pesquisa; Brasil e 3o mercado global', url: 'https://www.gehealthcare.com.br' },
+  { nome: 'Siemens Healthineers', area: 'Imagem, diagnostico laboratorial, saude digital', destaque: 'Fabrica em Joinville/SC (R$ 50 mi)', url: 'https://www.siemens-healthineers.com/br' },
+  { nome: 'Medtronic', area: 'Dispositivos cardiacos, neuromodulacao, cirurgia robotica', destaque: 'Operacoes nacionais', url: 'https://www.medtronic.com/br-pt/index.html' },
+  { nome: 'Johnson & Johnson', area: 'Dispositivos cirurgicos, ortopedia, oftalmologia', destaque: 'Forte presenca', url: 'https://www.jnjmedtech.com/pt-br' },
+  { nome: 'Boston Scientific', area: 'Cardiologia, endoscopia, neuromodulacao', destaque: 'Parceira da SBEB em premio de inovacao', url: 'https://www.bostonscientific.com/pt-br.html' },
+  { nome: 'Stryker', area: 'Ortopedia, equipamentos cirurgicos', destaque: 'Operacoes nacionais', url: 'https://www.stryker.com/br/pt' },
+  { nome: 'BD (Becton Dickinson)', area: 'Diagnostico, sistemas de infusao', destaque: 'Operacoes nacionais', url: 'https://www.bd.com/pt-br' },
 ];
 
 const nacionais = [
-  { nome: 'Fanem', sede: 'Sao Paulo/SP', fundacao: '1924', area: 'Incubadoras neonatais, bercos aquecidos — pioneira brasileira e multinacional' },
-  { nome: 'Instramed', sede: 'Porto Alegre/RS', fundacao: '1986', area: 'Monitores cardiacos, desfibriladores — exporta para 30+ paises' },
-  { nome: 'Lifemed', sede: 'Pelotas/RS', fundacao: '~40 anos', area: 'Equipamentos hospitalares — presente em 2.000+ hospitais' },
-  { nome: 'Magnamed', sede: 'Cotia/SP', fundacao: '2005', area: 'Ventiladores pulmonares — presente em 40+ paises; fundada por 3 engenheiros' },
-  { nome: 'BMR Medical', sede: 'Curitiba/PR', fundacao: '—', area: 'Dispositivos para oncologia e cirurgia — certificacoes FDA, CE, ANVISA' },
+  { nome: 'Fanem', sede: 'Sao Paulo/SP', fundacao: '1924', area: 'Incubadoras neonatais, bercos aquecidos — pioneira brasileira e multinacional', url: 'https://www.fanem.com.br' },
+  { nome: 'Instramed', sede: 'Porto Alegre/RS', fundacao: '1986', area: 'Monitores cardiacos, desfibriladores — exporta para 30+ paises', url: 'https://www.instramed.com.br' },
+  { nome: 'Lifemed', sede: 'Pelotas/RS', fundacao: '~40 anos', area: 'Equipamentos hospitalares — presente em 2.000+ hospitais', url: 'https://www.lifemed.com.br' },
+  { nome: 'Magnamed', sede: 'Cotia/SP', fundacao: '2005', area: 'Ventiladores pulmonares — presente em 40+ paises; fundada por 3 engenheiros', url: 'https://www.magnamed.com' },
+  { nome: 'BMR Medical', sede: 'Curitiba/PR', fundacao: '—', area: 'Dispositivos para oncologia e cirurgia — certificacoes FDA, CE, ANVISA', url: 'https://www.bmrmedical.com' },
 ];
 
 export default function EmpresasPage() {
@@ -50,7 +50,9 @@ export default function EmpresasPage() {
         <div className="grid gap-3 sm:grid-cols-2 mb-12">
           {multinacionais.map((e) => (
             <div key={e.nome} className="card p-5">
-              <h3 className="text-h4 text-slate-900 mb-1">{e.nome}</h3>
+              <h3 className="text-h4 text-slate-900 mb-1">
+                <a href={e.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">{e.nome}</a>
+              </h3>
               <p className="text-body-sm text-slate-500">{e.area}</p>
               <p className="text-xs text-teal-600 font-semibold mt-2">{e.destaque}</p>
             </div>
@@ -72,7 +74,9 @@ export default function EmpresasPage() {
             <tbody>
               {nacionais.map((e) => (
                 <tr key={e.nome} className="border-b border-slate-50 hover:bg-primary-50/50 transition-colors">
-                  <td className="px-4 py-3 font-semibold text-slate-900">{e.nome}</td>
+                  <td className="px-4 py-3 font-semibold text-slate-900">
+                    <a href={e.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">{e.nome}</a>
+                  </td>
                   <td className="px-4 py-3 text-slate-600">{e.sede}</td>
                   <td className="px-4 py-3 font-mono text-slate-500">{e.fundacao}</td>
                   <td className="px-4 py-3 text-slate-500">{e.area}</td>
