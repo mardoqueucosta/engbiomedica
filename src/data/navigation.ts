@@ -34,6 +34,21 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
+    label: 'Carreira',
+    href: '/carreira',
+    icon: TrendingUp,
+    description: 'Roadmap, certificações, cursos e recursos profissionais',
+    children: [
+      { label: 'Visão Geral', href: '/carreira' },
+      { label: 'Roadmap: Estágio à Diretoria', href: '/artigos/roadmap-carreira-engenheiro-biomedico' },
+      { label: 'Certificações Profissionais', href: '/artigos/certificacoes-engenheiros-biomedicos' },
+      { label: 'Cursos e Especializações', href: '/artigos/melhores-cursos-online-engenharia-clinica' },
+      { label: 'Estágio e Primeiro Emprego', href: '/artigos/estagio-engenharia-biomedica-guia' },
+      { label: 'Transição de Carreira', href: '/artigos/transicao-engenharia-biomedica' },
+      { label: 'Livros Essenciais', href: '/artigos/livros-engenharia-biomedica' },
+    ],
+  },
+  {
     label: 'Especialidades',
     href: '/especialidades',
     icon: Stethoscope,
@@ -65,20 +80,6 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    label: 'Regulamentação',
-    href: '/regulamentacao',
-    icon: Scale,
-    description: 'ANVISA, CREA, normas técnicas e certificações',
-    children: [
-      { label: 'Visão Geral', href: '/regulamentacao' },
-      { label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-guia-2026' },
-      { label: 'CONFEA/CREA', href: '/artigos/registro-crea-engenheiro-biomedico-guia' },
-      { label: 'Normas Técnicas', href: '/artigos/normas-tecnicas-engenharia-biomedica' },
-      { label: 'Certificação INMETRO', href: '/artigos/certificacao-inmetro-equipamentos-medicos' },
-      { label: 'SaMD — Software como Disp. Médico', href: '/artigos/samd-software-dispositivo-medico' },
-    ],
-  },
-  {
     label: 'Equipamentos',
     href: '/equipamentos',
     icon: HeartPulse,
@@ -91,6 +92,20 @@ export const mainNavigation: NavItem[] = [
       { label: 'Manutenção Hospitalar', href: '/artigos/manutencao-equipamentos-hospitalares' },
       { label: 'Gestão de Parque Tecnológico', href: '/artigos/gestao-parque-tecnologico-hospitalar' },
       { label: 'Indicadores de Eng. Clínica', href: '/artigos/indicadores-engenharia-clinica-kpis' },
+    ],
+  },
+  {
+    label: 'Regulamentação',
+    href: '/regulamentacao',
+    icon: Scale,
+    description: 'ANVISA, CREA, normas técnicas e certificações',
+    children: [
+      { label: 'Visão Geral', href: '/regulamentacao' },
+      { label: 'ANVISA e Dispositivos Médicos', href: '/artigos/anvisa-dispositivos-medicos-guia-2026' },
+      { label: 'CONFEA/CREA', href: '/artigos/registro-crea-engenheiro-biomedico-guia' },
+      { label: 'Normas Técnicas', href: '/artigos/normas-tecnicas-engenharia-biomedica' },
+      { label: 'Certificação INMETRO', href: '/artigos/certificacao-inmetro-equipamentos-medicos' },
+      { label: 'SaMD — Software como Disp. Médico', href: '/artigos/samd-software-dispositivo-medico' },
     ],
   },
   {
@@ -108,25 +123,10 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    label: 'Carreira',
-    href: '/carreira',
-    icon: TrendingUp,
-    description: 'Roadmap, certificações, cursos e recursos profissionais',
-    children: [
-      { label: 'Visão Geral', href: '/carreira' },
-      { label: 'Roadmap: Estágio à Diretoria', href: '/artigos/roadmap-carreira-engenheiro-biomedico' },
-      { label: 'Certificações Profissionais', href: '/artigos/certificacoes-engenheiros-biomedicos' },
-      { label: 'Cursos e Especializações', href: '/artigos/melhores-cursos-online-engenharia-clinica' },
-      { label: 'Estágio e Primeiro Emprego', href: '/artigos/estagio-engenharia-biomedica-guia' },
-      { label: 'Transição de Carreira', href: '/artigos/transicao-engenharia-biomedica' },
-      { label: 'Livros Essenciais', href: '/artigos/livros-engenharia-biomedica' },
-    ],
-  },
-  {
     label: 'Artigos',
     href: '/artigos',
     icon: FileText,
-    description: 'Artigos e análises',
+    description: 'Todos os artigos e análises',
   },
 ];
 
