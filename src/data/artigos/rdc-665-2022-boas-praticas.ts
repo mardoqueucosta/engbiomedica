@@ -27,17 +27,6 @@ export const artigo: Artigo = {
 
 <p class="mb-6">Para entender como a RDC 665/2022 se encaixa no processo de registro de produtos, veja nosso artigo sobre a <a href="/artigos/rdc-751-2022-classificacao-registro" class="text-blue-600 hover:underline">RDC 751/2022: Classificação e Registro de Dispositivos Médicos</a>.</p>
 
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: Os 138 Artigos: Estrutura e Pilares da RDC 665/2022
-CONTEXT: A RDC 665/2022 organiza seus 138 artigos em blocos temáticos que cobrem todo o ciclo de vida do dispositivo médico. O diagrama ilustra a arquitetura do sistema de gestão de qualidade exigido pela norma.
-VISUAL_ELEMENTS: sistema de gestão da qualidade central, blocos de responsabilidade da direção, controles de projeto, controles de produção, CAPA e rastreabilidade
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico
-ALT: Diagrama técnico mostrando a estrutura dos 138 artigos da RDC 665/2022 e os pilares do sistema de gestão da qualidade para dispositivos médicos
-CAPTION: Estrutura modular da RDC 665/2022: os 138 artigos organizados nos principais pilares do sistema de gestão da qualidade exigido pela ANVISA para fabricantes de dispositivos médicos.
-IMG_SLOTS-->
-
 <h2 class="text-2xl font-bold mt-10 mb-4">Os 138 Artigos: Estrutura e Pilares da RDC 665/2022</h2>
 
 <p class="mb-4">A norma está organizada em blocos temáticos que cobrem o ciclo de vida completo do dispositivo médico. A tabela abaixo apresenta os principais blocos e seus temas centrais:</p>
@@ -176,16 +165,6 @@ IMG_SLOTS-->
 
 <p class="mb-6">A integração da gestão de riscos com dados pós-mercado é particularmente importante: reclamações e eventos adversos devem alimentar reanálises de risco, fechando o ciclo de melhoria contínua. Para dispositivos que utilizam inteligência artificial, a RDC 982/2025 estabeleceu diretrizes adicionais para a incorporação de IA na gestão de riscos dentro do contexto BPF.</p>
 
-<!--IMG_SLOTS
-<!-- IMG_SLOT_2 -->
-SECTION: Controles de Produção e Validação de Processos
-CONTEXT: A RDC 665/2022 exige validação de todos os processos cujos outputs não podem ser completamente verificados por inspeção ou ensaio posterior. A imagem mostra um ambiente de fabricação de dispositivos médicos com controles de processo e qualificação de equipamentos.
-VISUAL_ELEMENTS: sala limpa com operadores em EPI, equipamentos de produção qualificados, registros de lote em área de trabalho, sistema de controle ambiental visível
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Cenário laboratorial
-ALT: Cenário laboratorial de fabricação de dispositivos médicos com controles de processo conforme RDC 665/2022 e operadores em equipamentos de proteção individual
-CAPTION: Ambiente controlado de fabricação de dispositivos médicos: a RDC 665/2022 exige validação de processos e monitoramento contínuo das condições de produção para garantir conformidade e segurança ao paciente.
-IMG_SLOTS-->
 
 <h2 class="text-2xl font-bold mt-10 mb-4">Controles de Produção e Validação de Processos</h2>
 
@@ -253,16 +232,6 @@ IMG_SLOTS-->
   <p class="text-blue-700 mt-1">Empresas com produto aprovado no Brasil que buscam expandir para o mercado norte-americano ou canadense encontram no MDSAP um atalho regulatório significativo, evitando auditorias redundantes por diferentes agências.</p>
 </div>
 
-<!--IMG_SLOTS
-<!-- IMG_SLOT_3 -->
-SECTION: Checklist de Conformidade com a RDC 665/2022
-CONTEXT: A implementação prática da RDC 665/2022 exige a execução sistemática de múltiplas atividades organizadas por fases do ciclo de vida. O fluxograma apresenta o caminho de conformidade desde o planejamento do SGQ até a obtenção do CBPF.
-VISUAL_ELEMENTS: etapas sequenciais de conformidade, blocos de documentação obrigatória, decisões de auditoria interna, caminho para CBPF via MDSAP ou inspeção ANVISA
-IMAGE_STYLE: technical
-IMAGE_TYPE: Fluxograma
-ALT: Fluxograma do processo de conformidade com a RDC 665/2022 mostrando etapas desde implementação do SGQ até obtenção do CBPF e registro ANVISA para dispositivos médicos Classe III e IV
-CAPTION: Fluxograma de conformidade com a RDC 665/2022: do planejamento do sistema de gestão da qualidade à obtenção do CBPF, passando pelos dois caminhos possíveis — inspeção direta ANVISA ou auditorias MDSAP conforme RDC 850/2024.
-IMG_SLOTS-->
 
 <h2 class="text-2xl font-bold mt-10 mb-4">Checklist de Conformidade com a RDC 665/2022</h2>
 

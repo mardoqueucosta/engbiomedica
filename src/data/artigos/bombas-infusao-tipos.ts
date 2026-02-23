@@ -8,35 +8,6 @@ export const artigo: Artigo = {
   data: '2026-02-22',
   leitura: '17 min',
   conteudo: `
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: Bombas de Infusão como Tecnologia Central da Terapia Intravenosa Moderna
-CONTEXT: Torre de bombas de infusão hospitalares em suporte vertical ao lado de leito de UTI, com quatro bombas volumétricas peristálticas e duas bombas de seringa empilhadas, telas iluminadas exibindo taxa de infusão, volume infundido e alarmes, tubulações conectadas ao paciente.
-VISUAL_ELEMENTS: Suporte intravenoso metálico com seis bombas empilhadas — quatro volumétricas B.Braun ou Lifemed de cor cinza/azul com display LCD verde, duas seringas Samtronic ou BD em posição superior — fios e equipes específicas organizados, telas numéricas exibindo "125 mL/h" e "10 mL/h", LEDs de status verde, cabeceira de leito ao fundo, ambiente de UTI com iluminação LED clínica fria.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto clínica
-ALT: Torre com seis bombas de infusão hospitalares empilhadas — volumétricas e de seringa — ao lado de leito de UTI com telas ativas exibindo taxa e volume
-CAPTION: Em leitos de UTI de alta complexidade, torres com quatro a seis bombas de infusão são a norma, exigindo gestão técnica rigorosa de calibração, manutenção e compatibilidade de equipes.
-
-<!-- IMG_SLOT_2 -->
-SECTION: Mecanismos de Acionamento: Peristáltico Linear, Rotativo e Pistão de Cassete
-CONTEXT: Diagrama técnico em corte transversal comparando três mecanismos internos de bombas de infusão — peristáltico linear com dedos de compressão, peristáltico rotativo com rolos e cassete de pistão — com setas indicando direção do fluxo e equação de vazão.
-VISUAL_ELEMENTS: Três painéis técnicos lado a lado em fundo branco com linhas de engenharia: painel esquerdo mostrando bomba peristáltica linear com seis dedos metálicos comprimindo tubo de silicone em sequência com setas de fluxo; painel central com rotor de três rolos comprimindo tubo em segmento curvo; painel direito com cassete de pistão — câmara de sapfira, válvulas de entrada e saída, pistão de precisão — com gráfico de pressão senoidal; legenda com códigos de cor para tubo, fluido e mecanismo.
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico
-ALT: Diagrama técnico comparativo dos mecanismos de bomba peristáltica linear, peristáltica rotativa e cassete de pistão utilizados em bombas de infusão hospitalares
-CAPTION: O mecanismo de cassete de pistão com câmara de safira oferece a maior precisão de fluxo (±1%) e é utilizado nas bombas de seringa de alta criticidade para sedação e vasoativos.
-
-<!-- IMG_SLOT_3 -->
-SECTION: Calibração e Verificação de Desempenho com Analisador de Fluxo
-CONTEXT: Técnico de engenharia clínica realizando calibração de bomba de infusão volumétrica com analisador de fluxo Fluke IDA-4 Plus em bancada de laboratório de engenharia clínica, com resultados de precisão exibidos na tela do equipamento e planilha de registro ao lado.
-VISUAL_ELEMENTS: Bancada metálica de laboratório com bomba de infusão Samtronic ST670 conectada via equipe de PVC transparente ao analisador Fluke IDA-4 Plus de cor amarela e preta, display do analisador mostrando "Vazão medida: 99,8 mL/h / Referência: 100 mL/h / Erro: -0,2%", multímetro digital ao lado para verificação elétrica, prancheta com formulário de calibração preenchido, EPI — jaleco e luvas — sobre técnico ao fundo desfocado, iluminação fluorescente de laboratório.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto clínica
-ALT: Técnico de engenharia clínica calibrando bomba de infusão volumétrica com analisador de fluxo Fluke IDA-4 em bancada de laboratório hospitalar mostrando erro de 0,2 por cento
-CAPTION: A calibração com analisador de fluxo rastreável ao INMETRO deve ser realizada anualmente ou após qualquer manutenção corretiva, com tolerância máxima de ±5% conforme a IEC 60601-2-24.
-IMG_SLOTS-->
-
 <p class="text-lg leading-relaxed mb-6">As bombas de infusão são o dispositivo médico ativo mais presente nos hospitais brasileiros: <strong>mais de 70% dos pacientes internados recebem alguma forma de terapia intravenosa controlada</strong> por esses equipamentos, que movimentam um mercado global de US$ 18,5 bilhões em 2024 com projeção de US$ 28,3 bilhões até 2030 — e cuja falha de calibração ou manutenção figura entre as principais causas de eventos adversos medicamentosos em ambiente hospitalar.</p>
 
 <p class="mb-6">Este artigo faz parte do nosso <a href="/artigos/engenharia-clinica-guia-completo">Guia Completo de Engenharia Clínica</a> e deve ser lido em conjunto com os artigos sobre <a href="/artigos/equipamentos-uti-guia">equipamentos de UTI</a> e <a href="/artigos/manutencao-equipamentos-hospitalares">manutenção de equipamentos hospitalares</a>, que contextualizam a bomba de infusão dentro do parque tecnológico hospitalar mais amplo.</p>

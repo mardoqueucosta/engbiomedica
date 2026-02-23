@@ -8,35 +8,6 @@ export const artigo: Artigo = {
   data: '2026-02-22',
   leitura: '17 min',
   conteudo: `
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: O Processo Licitatório de Equipamentos Hospitalares no Brasil
-CONTEXT: Sala de comissão de licitação em hospital público brasileiro, com membros ao redor de mesa exibindo documentos técnicos, notebook com o Portal Nacional de Contratações Públicas (PNCP) aberto, planilhas de análise TCO e catálogos de equipamentos médicos empilhados, ambiente formal e organizado.
-VISUAL_ELEMENTS: Mesa de reunião com quatro profissionais em trajes formais analisando documentos, notebook exibindo interface do PNCP ao centro, pastas com etiquetas "Estudo Técnico Preliminar", "Termo de Referência" e "Análise TCO" visíveis, cartaz com fluxograma do processo licitatório na parede ao fundo, placa "Comissão de Contratação" sobre a mesa, iluminação de escritório corporativo neutro.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto institucional
-ALT: Comissão de licitação hospitalar analisando documentos técnicos de equipamentos médicos com Portal Nacional de Contratações Públicas aberto em notebook
-CAPTION: A Lei 14.133/2021 exige que toda licitação de equipamentos hospitalares seja precedida por um Estudo Técnico Preliminar (ETP) documentado e publicado no Portal Nacional de Contratações Públicas (PNCP).
-
-<!-- IMG_SLOT_2 -->
-SECTION: Especificação Técnica de Equipamentos Médicos
-CONTEXT: Engenheiro clínico elaborando especificação técnica de equipamento médico em computador, com documento de termo de referência aberto, manual técnico do equipamento ao lado, planilha de matriz de conformidade na tela secundária e normativas ANVISA impressas sobre a mesa.
-VISUAL_ELEMENTS: Profissional com jaleco branco e crachá de engenheiro clínico diante de dois monitores, tela principal com documento técnico contendo tabela de especificações com colunas "Parâmetro", "Especificação Mínima" e "Justificativa Técnica", tela secundária com matriz de conformidade colorida em verde e vermelho, manual técnico de ventilador mecânico aberto ao lado, caderno com anotações técnicas, luz natural da janela ao fundo.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto profissional
-ALT: Engenheiro clínico elaborando especificação técnica de equipamento hospitalar com matriz de conformidade e normativas ANVISA sobre a mesa de trabalho
-CAPTION: A especificação técnica deve descrever desempenho funcional e não marcas — prática conhecida como especificação por função, obrigatória na Lei 14.133/2021 para garantir competitividade no certame.
-
-<!-- IMG_SLOT_3 -->
-SECTION: Modalidades Licitatórias e Fluxo do Processo de Compra
-CONTEXT: Infográfico técnico detalhando as modalidades licitatórias da Lei 14.133/2021 aplicadas a equipamentos hospitalares, com fluxograma sequencial do processo de aquisição do ETP até o aceite técnico final, incluindo prazos e responsáveis em cada etapa.
-VISUAL_ELEMENTS: Diagrama de fluxo com caixas coloridas em azul-petróleo e verde-teal sobre fundo branco; coluna esquerda com as cinco modalidades da Lei 14.133 (pregão eletrônico destacado em verde, concorrência, diálogo competitivo, credenciamento, leilão); ao centro fluxo linear vertical: ETP → Termo de Referência → Edital → Sessão Pública → Análise de Propostas → Habilitação → Aceite Técnico → Empenho; coluna direita com prazos mínimos em dias e ícones de responsável (engenheiro clínico, jurídico, gestão).
-IMAGE_STYLE: technical
-IMAGE_TYPE: Infográfico técnico
-ALT: Fluxograma técnico das modalidades licitatórias da Lei 14.133/2021 e etapas do processo de compra de equipamentos hospitalares do ETP ao aceite técnico
-CAPTION: O pregão eletrônico é a modalidade mais utilizada para equipamentos hospitalares de uso comum — já o diálogo competitivo é recomendado para tecnologias inovadoras sem especificação técnica consolidada.
-IMG_SLOTS-->
-
 <p class="text-lg leading-relaxed mb-6"><strong>A compra de equipamentos hospitalares no Brasil envolve um dos processos burocráticos mais complexos da administração pública — e os erros cometidos na fase de especificação técnica ou na elaboração do edital podem resultar em aquisições inadequadas, impugnações, superfaturamento ou equipamentos inoperantes por falta de acessórios e suporte.</strong> Com a entrada em vigor da Lei 14.133/2021 como marco jurídico obrigatório a partir de 30 de dezembro de 2023, hospitais públicos, secretarias de saúde e fundações hospitalares precisaram se adaptar a uma nova lógica de contratação — mais planejada, mais transparente e com o engenheiro clínico no centro do processo técnico.</p>
 
 <p class="mb-6">Este artigo integra o ecossistema de conteúdo sobre gestão tecnológica hospitalar do portal, complementando diretamente os artigos sobre <a href="/artigos/gestao-parque-tecnologico-hospitalar">Gestão de Parque Tecnológico Hospitalar</a>, <a href="/artigos/manutencao-equipamentos-hospitalares">Manutenção de Equipamentos Hospitalares</a>, <a href="/artigos/equipamentos-diagnostico-imagem">Equipamentos de Diagnóstico por Imagem</a> e <a href="/artigos/equipamentos-uti-guia">Equipamentos de UTI</a>. Se você atua em engenharia clínica, gestão hospitalar ou no setor de <a href="/artigos/empresas-dispositivos-medicos-brasil">empresas de dispositivos médicos no Brasil</a>, este guia oferece o mapa completo do processo de aquisição.</p>

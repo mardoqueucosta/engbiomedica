@@ -8,35 +8,6 @@ export const artigo: Artigo = {
   data: '2026-02-22',
   leitura: '15 min',
   conteudo: `
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: Princípios de Funcionamento e Equação do Movimento Respiratório
-CONTEXT: Diagrama técnico da equação do movimento respiratório com representação do circuito pneumático de um ventilador mecânico moderno baseado em turbina, mostrando os elementos físicos correspondentes a cada variável da equação.
-VISUAL_ELEMENTS: Equação central em destaque (Paw = V/C + R × Flow + PEEP) com setas apontando para cada elemento físico: bloco de complacência pulmonar (C) representado por balão elástico, resistência das vias aéreas (R) como tubo estreito com gradiente de velocidade, PEEP como válvula de pressão positiva expiratória, Paw como saída da turbina; esquema do circuito completo à direita com turbina/blower, válvula inspiratória proporcional, umidificador ativo, cânula traqueal, pulmões esquemáticos e válvula expiratória com controle de PEEP; fundo técnico em azul escuro com linhas brancas e valores numéricos exemplares.
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico
-ALT: Diagrama técnico da equação do movimento respiratório Paw igual V sobre C mais R vezes Flow mais PEEP com circuito pneumático completo de ventilador mecânico moderno com turbina
-CAPTION: A equação do movimento (Paw = V/C + R × Flow + PEEP) é o fundamento matemático que governa o controle de pressão e fluxo em todos os modos ventilatórios modernos.
-
-<!-- IMG_SLOT_2 -->
-SECTION: Sensores de Fluxo e Pressão: Tecnologias e Princípios de Medição
-CONTEXT: Comparação técnica lado a lado dos três principais tipos de sensores de fluxo usados em ventiladores mecânicos modernos — diferencial de pressão tipo Pitot, anemômetro de fio quente e sensor ultrassônico — com seus princípios físicos e curvas de resposta.
-VISUAL_ELEMENTS: Três painéis técnicos em coluna: painel esquerdo mostrando tubo de Pitot com diferencial de pressão ΔP e orifício calibrado, equação Q = k√ΔP em destaque, resposta em milissegundos; painel central com fio de platina aquecido, representação da convecção forçada reduzindo temperatura proporcional ao fluxo, curva de resposta < 1 ms, alta sensibilidade a fluxos baixos; painel direito com transdutores ultrassônicos opostos, diferença de tempo de voo entre direção a favor e contra o fluxo, imunidade a secreções; gráfico comparativo de resposta em frequência (Hz) na base; fundo cinza técnico escuro.
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico comparativo
-ALT: Diagrama comparativo dos sensores de fluxo em ventiladores mecânicos mostrando tubo de Pitot diferencial, anemômetro de fio quente e sensor ultrassônico com princípios físicos e curvas de resposta em frequência
-CAPTION: A escolha do sensor de fluxo impacta diretamente a responsividade do ventilador ao esforço inspiratório do paciente, com sensores ultrassônicos oferecendo a maior imunidade a condensação e secreções.
-
-<!-- IMG_SLOT_3 -->
-SECTION: Fabricantes Brasileiros e o Projeto INSPIRE
-CONTEXT: Imagem hiperrealista mostrando um engenheiro e uma engenheira brasileiros em laboratório de P&D de ventiladores mecânicos, com protótipo do ventilador Magnamed FlexiMag em bancada de testes, instrumentação de medição e computador com software de análise de modos ventilatórios.
-VISUAL_ELEMENTS: Laboratório moderno com bancada metálica, ventilador mecânico compacto modelo nacional em teste com pulmão artificial de borracha conectado, osciloscópio digital mostrando curvas de pressão e fluxo em tempo real, dois engenheiros em EPIs (jaleco branco, óculos de segurança) discutindo dados em notebook, cartaz do projeto INSPIRE USP ao fundo, ambiente com equipamentos de instrumentação — multímetro, transdutores, data logger — em tom profissional e tecnológico; luz natural e artificial combinadas.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto de laboratório de P&D
-ALT: Engenheiros brasileiros em laboratório de pesquisa e desenvolvimento testando ventilador mecânico nacional em bancada com pulmão artificial instrumentada e monitoramento digital em tempo real
-CAPTION: O Brasil conta com fabricantes nacionais consolidados como Magnamed e Intermed, além do projeto INSPIRE da USP, que desenvolveu um ventilador de código aberto durante a pandemia de COVID-19.
-IMG_SLOTS-->
-
 <p class="text-lg leading-relaxed mb-6">O ventilador mecânico é o equipamento de suporte de vida mais crítico da terapia intensiva moderna: com um mercado global estimado entre <strong>US$ 3,5 e 5,7 bilhões e crescimento de 4 a 7% ao ano</strong>, o dispositivo concentra décadas de inovação em pneumática, eletrônica de potência, sensoriamento de precisão e algoritmos de controle — e compreender sua engenharia é competência fundamental para qualquer engenheiro biomédico ou clínico que atue em ambientes hospitalares.</p>
 
 <p class="mb-6">Este artigo integra nossa série sobre <a href="/artigos/equipamentos-uti-guia">equipamentos de UTI</a> e aprofunda os princípios de funcionamento que apenas são mencionados em visões gerais. Para o contexto regulatório completo, consulte nossa análise da <a href="/artigos/iec-60601-norma-equipamentos">norma IEC 60601 para equipamentos eletromédicos</a>.</p>
