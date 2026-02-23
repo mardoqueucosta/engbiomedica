@@ -8,34 +8,6 @@ export const artigo: Artigo = {
   data: '2026-02-22',
   leitura: '15 min',
   conteudo: `
-<!--IMG_SLOTS
-<!-- IMG_SLOT_1 -->
-SECTION: Panorama das Modalidades de Diagnóstico por Imagem
-CONTEXT: Sala de diagnóstico por imagem de hospital de alta complexidade mostrando simultaneamente ao fundo um gantry de tomógrafo multislice, uma mesa de ressonância magnética 3T e um equipamento de ultrassom de última geração em primeiro plano, em ambiente clínico moderno.
-VISUAL_ELEMENTS: Gantry branco de TC multislice ao centro com abertura circular iluminada em azul-cobalto, sistema de RM 3T com magneto cilíndrico de supercondutores ao fundo esquerdo, carrinho de ultrassom com monitor touchscreen e transdutor convexo em primeiro plano à direita, iluminação LED clínica fria, chão de epóxi cinza-claro, paredes revestidas em painéis brancos, profissionais de jaleco interagindo com os equipamentos.
-IMAGE_STYLE: hyperrealistic
-IMAGE_TYPE: Foto clínica
-ALT: Sala de diagnóstico por imagem hospitalar com tomógrafo multislice, ressonância magnética 3T e sistema de ultrassom de última geração dispostos em ambiente clínico moderno
-CAPTION: O Brasil conta com mais de 293.000 equipamentos de diagnóstico por imagem cadastrados, atendendo mais de 500 milhões de procedimentos ao ano nas redes pública e privada.
-
-<!-- IMG_SLOT_2 -->
-SECTION: Tomografia Computadorizada: Princípios Físicos e Geração de Imagem
-CONTEXT: Diagrama técnico explodido de um tomógrafo computadorizado de quarta geração mostrando o tubo de raio-X, o anel de detectores, o sistema de colimação, o mecanismo de rotação e as curvas de atenuação com reconstrução por retroprojeção filtrada.
-VISUAL_ELEMENTS: Corte axial do gantry com tubo de raio-X em vermelho emitindo feixe cônico em laranja, anel completo de detectores de estado sólido (GOS ou cintilador LGSO) em azul, colimadores primário e secundário em cinza-escuro, mancal de rolamento (slip ring) em prata; painel lateral com gráfico de perfil de atenuação µ(x) seguido de sinograma e imagem reconstruída em escala HU, legenda técnica mostrando parâmetros: pitch 0,5–1,5, kVp 80–140, mAs 50–400, resolução isométrica 0,4–0,6 mm.
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico
-ALT: Diagrama técnico explodido de tomógrafo computadorizado de quarta geração com tubo de raio-X, anel de detectores, colimadores e fluxo de reconstrução de imagem por retroprojeção filtrada
-CAPTION: Tomógrafos de última geração com detectores photon-counting (PCD-CT) eliminam o cintilador intermediário, reduzindo dose em até 50% e aumentando a resolução espectral para diagnóstico diferenciado de tecidos.
-
-<!-- IMG_SLOT_3 -->
-SECTION: Ressonância Magnética: Componentes do Sistema 3T
-CONTEXT: Corte técnico de um sistema de ressonância magnética 3 Tesla mostrando o magneto supercondutor com criostato de hélio líquido, as bobinas de gradiente triaxiais, as bobinas de radiofrequência e o sistema de blindagem de RF (gaiola de Faraday).
-VISUAL_ELEMENTS: Corte longitudinal do ímã cilíndrico com espirais de fio supercondutor NbTi banhadas em hélio líquido a 4 K em azul-turquesa, três conjuntos de bobinas de gradiente ortogonais (Gx, Gy, Gz) em cores distintas (vermelho, verde, azul) sobreposta à estrutura, bobina de corpo de radiofrequência em dourado ao redor do bore de 60–70 cm, blindagem de RF (painel metálico de cobre) na parede externa, gráfico lateral mostrando envelope de SAR em W/kg versus campo B0, seta indicando frequência de Larmor ωL = γ·B0 (127,7 MHz a 3 T).
-IMAGE_STYLE: technical
-IMAGE_TYPE: Diagrama técnico
-ALT: Diagrama técnico de corte longitudinal de sistema de ressonância magnética 3 Tesla mostrando magneto supercondutor com criostato de hélio, bobinas de gradiente triaxiais e bobinas de radiofrequência
-CAPTION: Um sistema de RM 3T requer blindagem magnética ativa e passiva para conter o campo de 5 gauss (linha de exclusão), consumindo entre 45 e 60 kVA em operação contínua e gerando calor residual gerenciado por chillers de precisão.
-IMG_SLOTS-->
 
 <p class="text-lg leading-relaxed mb-6">O diagnóstico por imagem é o eixo tecnológico que sustenta o sistema de saúde moderno: em 2025, o mercado global de equipamentos de imagem médica foi avaliado em <strong>US$ 44–48 bilhões</strong>, com projeção de atingir US$ 70 bilhões até 2032 — e o Brasil, com mais de 293.000 equipamentos cadastrados, é o principal mercado da América Latina, ao mesmo tempo que convive com disparidades regionais severas, como a variação de 7,1 ressonâncias magnéticas por milhão de habitantes no Amazonas versus 45,8 no Distrito Federal. Dominar as cinco grandes modalidades — raio-X, tomografia computadorizada, ressonância magnética, ultrassom e PET-CT — é competência fundamental para o engenheiro biomédico que atua em engenharia clínica, desenvolvimento de produtos ou regulação.</p>
 
