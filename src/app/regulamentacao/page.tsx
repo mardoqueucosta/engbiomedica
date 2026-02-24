@@ -41,6 +41,22 @@ export default function RegulamentacaoPage() {
           ))}
         </div>
 
+        <h2 className="text-h2 text-primary-800 mb-4 font-serif">Atualizações Regulatórias</h2>
+        <div className="grid gap-3 sm:grid-cols-3 mb-12">
+          <Link href="/artigos/como-funciona-a-anvisa-estrutura-atribuicoes-e-o-papel-na-re" className="card p-5 group block">
+            <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Como Funciona a ANVISA</h3>
+            <p className="text-body-sm text-slate-500 font-serif">Estrutura organizacional, cinco diretorias e o papel do engenheiro biomédico na regulamentação.</p>
+          </Link>
+          <Link href="/artigos/anvisa-aprova-sistema-de-rastreamento-e-identificacao-de-dis" className="card p-5 group block">
+            <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Rastreamento IUD — ANVISA</h3>
+            <p className="text-body-sm text-slate-500 font-serif">Sistema nacional de identificação única para dispositivos médicos, alinhando o Brasil ao FDA e UE.</p>
+          </Link>
+          <Link href="/artigos/aprovacao-fda-para-empresas-internacionais-o-que-o-caso-do-p" className="card p-5 group block">
+            <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Aprovação FDA Internacional</h3>
+            <p className="text-body-sm text-slate-500 font-serif">O caso do parque Great Stone e as implicações para empresas brasileiras acessarem o mercado americano.</p>
+          </Link>
+        </div>
+
         <div className="p-6 rounded-xl bg-coral-100 border border-coral-300">
           <h3 className="text-h4 text-coral-500 mb-2">Engenheiro Biomédico ≠ Biomédico</h3>
           <p className="text-body-sm text-slate-700 font-serif">

@@ -4,11 +4,11 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 
 export const metadata: Metadata = {
-  title: 'Especialidades da Engenharia Biomédica',
-  description: 'Conheça as áreas de especialização em Engenharia Biomédica: engenharia clínica, biomateriais, IA em saúde, instrumentação, biomecânica, neuroengenharia e mais.',
-  alternates: { canonical: '/especialidades' },
+  title: 'Áreas de Atuação da Engenharia Biomédica',
+  description: 'Conheça as áreas de atuação em Engenharia Biomédica: engenharia clínica, biomateriais, IA em saúde, instrumentação, biomecânica, neuroengenharia, robótica cirúrgica e mais.',
+  alternates: { canonical: '/areas-de-atuacao' },
   openGraph: {
-    images: [{ url: '/api/og?title=Especialidades%20da%20Engenharia%20Biom%C3%A9dica&category=Especialidades', width: 1200, height: 630 }],
+    images: [{ url: '/api/og?title=%C3%81reas%20de%20Atua%C3%A7%C3%A3o%20da%20Engenharia%20Biom%C3%A9dica&category=%C3%81reas%20de%20Atua%C3%A7%C3%A3o', width: 1200, height: 630 }],
   },
 };
 
@@ -26,12 +26,6 @@ const sections = [
     badge: 'Sensores & Sinais',
   },
   {
-    title: 'Processamento de Sinais e Imagens',
-    description: 'Análise computacional de sinais biomédicos (ECG, EEG, EMG) e imagens médicas (tomografia, ressonância, ultrassom).',
-    href: '/artigos/processamento-sinais-biomedicos-python',
-    badge: 'Imagens Médicas',
-  },
-  {
     title: 'Biomecânica e Reabilitação',
     description: 'Estudo do movimento humano, desenvolvimento de próteses, órteses e equipamentos de reabilitação funcional.',
     href: '/artigos/biomecanica-movimento-proteses',
@@ -42,6 +36,12 @@ const sections = [
     description: 'Pesquisa e desenvolvimento de materiais biocompatíveis, implantes, scaffolds e engenharia tecidual.',
     href: '/artigos/biomateriais-implantes-bioimpressao',
     badge: 'Implantes & Tecidos',
+  },
+  {
+    title: 'Processamento de Sinais e Imagens',
+    description: 'Análise computacional de sinais biomédicos (ECG, EEG, EMG) e imagens médicas (tomografia, ressonância, ultrassom).',
+    href: '/artigos/processamento-sinais-biomedicos-python',
+    badge: 'Imagens Médicas',
   },
   {
     title: 'Informática em Saúde',
@@ -56,27 +56,45 @@ const sections = [
     badge: 'Machine Learning',
   },
   {
-    title: 'Neuroengenharia',
+    title: 'Neuroengenharia e BCI',
     description: 'Interfaces cérebro-máquina, neuroestimulação, neuroimagem funcional e dispositivos para distúrbios neurológicos.',
     href: '/artigos/neuroengenharia-bci',
     badge: 'Cérebro & Interfaces',
   },
   {
-    title: 'Robótica Médica',
+    title: 'Robótica Cirúrgica',
     description: 'Robôs cirúrgicos, exoesqueletos, sistemas de navegação intraoperatória e automação em procedimentos médicos.',
     href: '/artigos/cirurgia-robotica-brasil',
     badge: 'Cirurgia & Automação',
   },
+  {
+    title: 'Bioimpressão 3D',
+    description: 'Impressão 3D de tecidos e órgãos, bioinks, scaffolds biofabricados e aplicações em medicina regenerativa.',
+    href: '/artigos/engenharia-tecidos-bioimpressao-3d',
+    badge: 'Biofabricação',
+  },
+  {
+    title: 'Engenharia Genômica e CRISPR',
+    description: 'Edição gênica com CRISPR-Cas9, terapias gênicas, diagnósticos moleculares e biologia sintética aplicada à saúde.',
+    href: '/artigos/engenharia-genomica-crispr',
+    badge: 'Genômica & Edição Gênica',
+  },
+  {
+    title: 'Nanotecnologia Biomédica',
+    description: 'Nanopartículas para drug delivery, nanossensores, nanomateriais biocompatíveis e diagnóstico em escala nanométrica.',
+    href: '/artigos/nanotecnologia-biomedica',
+    badge: 'Nanomedicina',
+  },
 ];
 
-export default function EspecialidadesPage() {
+export default function AreasDeAtuacaoPage() {
   return (
     <>
       <PageHeader
-        overline="Especialidades"
-        title="Especialidades da Engenharia Biomédica"
-        description="Conheça as áreas de especialização, o que cada profissional faz no dia a dia, mercado de trabalho e perspectivas futuras."
-        breadcrumbs={[{ label: 'Especialidades' }]}
+        overline="Áreas de Atuação"
+        title="Áreas de Atuação da Engenharia Biomédica"
+        description="Conheça as áreas de atuação, o que cada profissional faz no dia a dia, mercado de trabalho e perspectivas futuras."
+        breadcrumbs={[{ label: 'Áreas de Atuação' }]}
       />
 
       <section className="container-page py-10 lg:py-14">
@@ -98,7 +116,7 @@ export default function EspecialidadesPage() {
           <p className="text-body text-slate-600 font-serif leading-relaxed">
             A Engenharia Biomédica oferece um dos leques mais amplos de especialização entre todas as engenharias.
             Da UTI de um hospital ao laboratório de inteligência artificial, do escritório de regulamentação da ANVISA
-            à sala limpa de uma fábrica de implantes — cada especialidade tem perfil, mercado e desafios próprios.
+            à sala limpa de uma fábrica de implantes — cada área tem perfil, mercado e desafios próprios.
             Explore cada área para descobrir qual se encaixa no seu perfil.
           </p>
           <p className="mt-4 text-body-sm text-slate-500 font-serif">

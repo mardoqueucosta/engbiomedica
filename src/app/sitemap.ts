@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/newsletter', changeFrequency: 'yearly' as const, priority: 0.5 },
     { path: '/contato', changeFrequency: 'yearly' as const, priority: 0.4 },
     // Hub pages — novos pilares (apenas hubs, sub-páginas redirecionam para /artigos/)
-    { path: '/especialidades', changeFrequency: 'monthly' as const, priority: 0.7 },
+    { path: '/areas-de-atuacao', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/equipamentos', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/carreira', changeFrequency: 'monthly' as const, priority: 0.7 },
   ];

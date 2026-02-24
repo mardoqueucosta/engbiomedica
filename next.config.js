@@ -46,7 +46,9 @@ const nextConfig = {
       { source: '/artigos/calendario-eventos-engenharia-biomedica-2026', destination: '/artigos/calendario-eventos-engbiomedica-saude-digital', permanent: true },
       { source: '/artigos/engenharia-biomedica-vale-a-pena', destination: '/artigos/engenharia-biomedica-vale-a-pena-v2', permanent: true },
       { source: '/artigos/curso-engenharia-biomedica-o-que-esperar', destination: '/artigos/grade-curricular-engenharia-biomedica-5-anos', permanent: true },
-      // Redirects 301: sub-páginas Coming Soon -> artigos profundos
+      // Redirect 301: /especialidades -> /areas-de-atuacao (rename)
+      { source: '/especialidades', destination: '/areas-de-atuacao', permanent: true },
+      // Backward compat: old /especialidades/* sub-pages -> artigos
       { source: '/especialidades/engenharia-clinica', destination: '/artigos/engenharia-clinica-guia-completo', permanent: true },
       { source: '/especialidades/instrumentacao-biomedica', destination: '/artigos/instrumentacao-biomedica', permanent: true },
       { source: '/especialidades/processamento-sinais-imagens', destination: '/artigos/processamento-sinais-biomedicos-python', permanent: true },
@@ -56,6 +58,19 @@ const nextConfig = {
       { source: '/especialidades/inteligencia-artificial-saude', destination: '/artigos/ia-saude-brasil', permanent: true },
       { source: '/especialidades/neuroengenharia', destination: '/artigos/neuroengenharia-bci', permanent: true },
       { source: '/especialidades/robotica-medica', destination: '/artigos/cirurgia-robotica-brasil', permanent: true },
+      // New /areas-de-atuacao/* sub-pages -> artigos
+      { source: '/areas-de-atuacao/engenharia-clinica', destination: '/artigos/engenharia-clinica-guia-completo', permanent: true },
+      { source: '/areas-de-atuacao/instrumentacao-biomedica', destination: '/artigos/instrumentacao-biomedica', permanent: true },
+      { source: '/areas-de-atuacao/processamento-sinais-imagens', destination: '/artigos/processamento-sinais-biomedicos-python', permanent: true },
+      { source: '/areas-de-atuacao/biomecanica-reabilitacao', destination: '/artigos/biomecanica-movimento-proteses', permanent: true },
+      { source: '/areas-de-atuacao/biomateriais-engenharia-tecidos', destination: '/artigos/biomateriais-implantes-bioimpressao', permanent: true },
+      { source: '/areas-de-atuacao/informatica-saude', destination: '/artigos/informatica-saude-his-prontuario', permanent: true },
+      { source: '/areas-de-atuacao/inteligencia-artificial-saude', destination: '/artigos/ia-saude-brasil', permanent: true },
+      { source: '/areas-de-atuacao/neuroengenharia', destination: '/artigos/neuroengenharia-bci', permanent: true },
+      { source: '/areas-de-atuacao/robotica-cirurgica', destination: '/artigos/cirurgia-robotica-brasil', permanent: true },
+      { source: '/areas-de-atuacao/bioimpressao-3d', destination: '/artigos/engenharia-tecidos-bioimpressao-3d', permanent: true },
+      { source: '/areas-de-atuacao/engenharia-genomica-crispr', destination: '/artigos/engenharia-genomica-crispr', permanent: true },
+      { source: '/areas-de-atuacao/nanotecnologia-biomedica', destination: '/artigos/nanotecnologia-biomedica', permanent: true },
       { source: '/equipamentos/centro-cirurgico', destination: '/artigos/equipamentos-centro-cirurgico', permanent: true },
       { source: '/equipamentos/uti', destination: '/artigos/equipamentos-uti-guia', permanent: true },
       { source: '/equipamentos/diagnostico-imagem', destination: '/artigos/equipamentos-diagnostico-imagem', permanent: true },

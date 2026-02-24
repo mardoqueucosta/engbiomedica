@@ -13,7 +13,7 @@ export default function Page() {
       pillarLabel="Equipamentos"
       pillarHref="/equipamentos"
       sectionLabel="Diagnóstico por Imagem"
-      thirdLink={{ label: 'Processamento de Sinais e Imagens', href: '/especialidades/processamento-sinais-imagens' }}
+      thirdLink={{ label: 'Processamento de Sinais e Imagens', href: '/artigos/processamento-sinais-biomedicos-python' }}
     />
   );
 }

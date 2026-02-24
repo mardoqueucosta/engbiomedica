@@ -3,17 +3,17 @@ import { Artigo } from './types';
 export const artigo: Artigo = {
   titulo: 'Pós-Graduação em Engenharia Biomédica: Todos os Programas de Mestrado e Doutorado no Brasil [2026]',
   resumo:
-    'Guia completo com todos os 12 PPGs específicos em Engenharia Biomédica e Bioengenharia no Brasil: conceitos CAPES, vagas, bolsas (até R$ 7.140/mês), processo seletivo, linhas de pesquisa e saídas de carreira para mestres e doutores.',
+    'Guia completo com todos os 14 PPGs específicos em Engenharia Biomédica e Bioengenharia no Brasil: conceitos CAPES, classificação oficial da área, vagas, bolsas (até R$ 7.140/mês), processo seletivo, linhas de pesquisa e saídas de carreira para mestres e doutores.',
   categoria: 'Formação',
   categoriaVariant: 'primary',
-  data: '2026-02-21',
-  leitura: '24 min',
+  data: '2026-02-23',
+  leitura: '26 min',
   conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>O Brasil tem 12 programas de pós-graduação específicos em Engenharia Biomédica e Bioengenharia, mais de uma dezena de programas afins em Engenharia Elétrica e Bioengenharia, e bolsas de até R$ 7.140 por mês isentas de imposto de renda.</strong> Apesar disso, a maioria dos graduandos chega ao final do curso sem saber que esses programas existem, como funcionam os conceitos CAPES, quem pode se candidatar (não é só engenheiro) ou o que fazer nos seis meses antes da seleção. Este guia reúne, pela primeira vez em um único lugar, todos os programas, com dados comparativos de conceito, vagas, modalidade e localização.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>O Brasil tem 14 programas de pós-graduação específicos em Engenharia Biomédica e Bioengenharia — com 12 mestrados, 7 doutorados e 2 mestrados profissionais —, mais de uma dezena de programas afins em Engenharia Elétrica e Bioengenharia, e bolsas de até R$ 7.140 por mês isentas de imposto de renda.</strong> Apesar disso, a maioria dos graduandos chega ao final do curso sem saber que esses programas existem, como funcionam os conceitos CAPES, quem pode se candidatar (não é só engenheiro) ou o que fazer nos seis meses antes da seleção. Este guia reúne, pela primeira vez em um único lugar, todos os programas, com dados comparativos de conceito, vagas, modalidade e localização.</p>
 
-<p class="leading-relaxed mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica" class="text-teal-600 hover:underline font-medium">Guia Definitivo de Engenharia Biomédica</a> e foi elaborado com dados das plataformas Sucupira/CAPES (ciclo 2021–2024), sites institucionais dos programas e relatórios de fomento da FAPESP, FAPERJ e FAPEMIG atualizados em fevereiro de 2026. Se você está avaliando se vale a pena fazer uma pós em engenharia biomédica, qual programa escolher ou como se preparar para a seleção, este é o recurso mais completo disponível em língua portuguesa.</p>
+<p class="leading-relaxed mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica" class="text-teal-600 hover:underline font-medium">Guia Definitivo de Engenharia Biomédica</a> e foi elaborado com dados das plataformas Sucupira/CAPES (ciclo 2021–2024), Documento de Área Engenharias IV 2025–2028, sites institucionais dos programas e relatórios de fomento da FAPESP, FAPERJ e FAPEMIG atualizados em fevereiro de 2026. Se você está avaliando se vale a pena fazer uma pós em engenharia biomédica, qual programa escolher ou como se preparar para a seleção, este é o recurso mais completo disponível em língua portuguesa.</p>
 
-<h2>Panorama geral: os 12 programas de pós-graduação em Engenharia Biomédica no Brasil</h2>
+<h2>Panorama geral: os programas de pós-graduação em Engenharia Biomédica no Brasil</h2>
 
 <p>A tabela abaixo reúne todos os programas de pós-graduação <em>stricto sensu</em> com denominação específica em Engenharia Biomédica ou Bioengenharia avaliados pela CAPES. Programas de Engenharia Elétrica com subárea expressiva em EB são tratados em seção separada.</p>
 
@@ -70,11 +70,19 @@ export const artigo: Artigo = {
 <td>Privada</td>
 </tr>
 <tr>
+<td><strong>Universidade Brasil – Eng. Biomédica</strong></td>
+<td>São Paulo / SP</td>
+<td>2018</td>
+<td>4</td>
+<td>MA + DO</td>
+<td>Privada</td>
+</tr>
+<tr>
 <td><strong>UFPE – Eng. Biomédica</strong></td>
 <td>Recife / PE</td>
 <td>2005</td>
 <td>3</td>
-<td>MA</td>
+<td>MA + DO</td>
 <td>Pública federal</td>
 </tr>
 <tr>
@@ -82,7 +90,7 @@ export const artigo: Artigo = {
 <td>Uberlândia / MG</td>
 <td>2011</td>
 <td>3</td>
-<td>MA</td>
+<td>MA + DO</td>
 <td>Pública federal</td>
 </tr>
 <tr>
@@ -100,14 +108,6 @@ export const artigo: Artigo = {
 <td>3</td>
 <td>MA</td>
 <td>Pública federal</td>
-</tr>
-<tr>
-<td><strong>Universidade Brasil – Bioeng.</strong></td>
-<td>Fernandópolis / SP</td>
-<td>2018</td>
-<td>3</td>
-<td>MA</td>
-<td>Privada</td>
 </tr>
 <tr>
 <td><strong>UMC – Bioengenharia</strong></td>
@@ -129,21 +129,71 @@ export const artigo: Artigo = {
 </table>
 
 <p><strong>Legenda:</strong> MA = Mestrado Acadêmico; DO = Doutorado; MP = Mestrado Profissional. O CPGEI/UTFPR é listado aqui por ser o único programa conceito 7 com subárea formal em Engenharia Biomédica; os demais programas de Eng. Elétrica conceito 5–7 com linhas em EB são detalhados na seção "Programas afins".</p>
+
 <figure>
-<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-1.webp" alt="Mapa interativo dos 12 programas de pós-graduação em Engenharia Biomédica no Brasil, com conceitos CAPES e níveis." width="1024" height="571" loading="lazy" decoding="async">
+<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-1.webp" alt="Mapa dos programas de pós-graduação em Engenharia Biomédica no Brasil, com conceitos CAPES e níveis." width="1024" height="576" loading="lazy" decoding="async">
 <figcaption>Visão geral dos programas de pós-graduação stricto sensu em Engenharia Biomédica e Bioengenharia no Brasil, com seus conceitos CAPES e níveis de mestrado e doutorado.</figcaption>
 </figure>
 
+<h2>A Engenharia Biomédica no sistema de classificação CAPES</h2>
 
-<!-- IMG_SLOT_1
-SECTION: Panorama geral dos programas
-CONTEXT: Mapa do Brasil mostrando a distribuição geográfica dos 12 programas de pós-graduação em Engenharia Biomédica, com marcadores coloridos por conceito CAPES (6=azul escuro, 4=azul médio, 3=azul claro) e concentração evidente no Sudeste
-VISUAL_ELEMENTS: mapa do Brasil, marcadores de localização, legenda de conceitos CAPES, nomes das instituições, destaque para São Paulo e Rio de Janeiro, ícone de universidade
-IMAGE_TYPE: Diagrama técnico
-IMAGE_STYLE: technical
-ALT: Mapa do Brasil com distribuição geográfica dos 12 programas de pós-graduação em Engenharia Biomédica, classificados por conceito CAPES de 3 a 7
-CAPTION: Distribuição geográfica dos programas de pós-graduação em Engenharia Biomédica no Brasil (2026). A concentração no Sudeste reflete a história do campo no país, mas programas no Nordeste (UFPE/Recife) e Centro-Oeste (UnB/Brasília) ampliam o acesso regional.
--->
+<p>Antes de detalhar cada programa, é fundamental compreender como a Engenharia Biomédica está posicionada no sistema brasileiro de pós-graduação. Essa classificação determina como os programas são avaliados, financiados e comparados.</p>
+
+<h3>Código, posição e hierarquia</h3>
+
+<p>A Engenharia Biomédica é classificada pela CAPES como uma <strong>área do conhecimento autônoma</strong> (código <strong>3.13.00.00-6</strong>) dentro da Grande Área das Engenharias, ocupando a 13ª posição entre as áreas dessa grande área. A Tabela de Áreas de Conhecimento — compartilhada entre CAPES, CNPq e FINEP — organiza o conhecimento em quatro níveis hierárquicos:</p>
+
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Classificação</th>
+<th>Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grande Área</strong></td>
+<td>Engenharias</td>
+<td>3.00.00.00-9</td>
+</tr>
+<tr>
+<td><strong>Área</strong></td>
+<td>Engenharia Biomédica</td>
+<td>3.13.00.00-6</td>
+</tr>
+<tr>
+<td><strong>Subárea 1</strong></td>
+<td>Bioengenharia</td>
+<td>3.13.01.00-2</td>
+</tr>
+<tr>
+<td><strong>Subárea 2</strong></td>
+<td>Engenharia Médica</td>
+<td>3.13.02.00-9</td>
+</tr>
+</tbody>
+</table>
+
+<p>A diferença entre os códigos CAPES (8 dígitos contínuos, como 31300006) e CNPq (formato com pontos e dígito verificador, como 3.13.00.00-6) é meramente de formatação. Ambos referem-se à mesma classificação, elaborada por comissão conjunta CAPES/CNPq/FINEP. A versão vigente foi publicada em outubro de 2022 e permanece inalterada.</p>
+
+<h3>Duas subáreas e sete especialidades oficiais</h3>
+
+<p>A CAPES reconhece uma estrutura relativamente enxuta para a Engenharia Biomédica, distribuída em duas subáreas que se complementam:</p>
+
+<p><strong>Bioengenharia (3.13.01.00-2)</strong> — voltada a modelagem e processamento — compreende três especialidades: Processamento de Sinais Biológicos (análise e interpretação de biossinais como EEG, ECG e EMG), Modelagem de Fenômenos Biológicos (representação matemática de processos fisiológicos) e Modelagem de Sistemas Biológicos (simulação computacional de sistemas biológicos integrados).</p>
+
+<p><strong>Engenharia Médica (3.13.02.00-9)</strong> — focada em dispositivos e materiais — compreende quatro especialidades: Biomateriais e Materiais Biocompatíveis, Transdutores para Aplicações Biomédicas, Instrumentação Odontológica e Médico-Hospitalar e Tecnologia de Próteses.</p>
+
+<p>Vale notar que áreas contemporâneas como <strong>engenharia clínica</strong>, <strong>inteligência artificial aplicada à saúde</strong>, <strong>neuroimagem</strong> e <strong>engenharia de tecidos</strong> não aparecem como especialidades formais na tabela. Isso reflete a defasagem da classificação original, que não foi substancialmente revisada. Na prática, os programas de pós-graduação absorvem essas temáticas emergentes em suas linhas de pesquisa, independentemente da nomenclatura oficial.</p>
+
+<h3>Engenharias IV: a casa da Engenharia Biomédica na avaliação CAPES</h3>
+
+<p>Na estrutura de avaliação da CAPES — que é distinta da Tabela de Áreas de Conhecimento — os programas de pós-graduação são agrupados em <strong>50 áreas de avaliação</strong>. A Engenharia Biomédica está alocada na área de avaliação <strong>Engenharias IV</strong> (Área 14), dentro do Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar.</p>
+
+<p>Engenharias IV abrange duas áreas básicas: <strong>Engenharia Elétrica</strong> e <strong>Engenharia Biomédica</strong>. O Documento de Área 2025–2028 descreve essa composição como complementar, reconhecendo denominações alternativas para programas de Engenharia Biomédica, como Bioengenharia e Neuroengenharia. Em dezembro de 2022, a área contava com <strong>93 PPGs reconhecidos</strong> (137 cursos: 77 mestrados acadêmicos, 13 mestrados profissionais e 47 doutorados), dos quais <strong>14 PPGs</strong> pertencem à área básica de Engenharia Biomédica (com 12 mestrados, 7 doutorados e 2 mestrados profissionais). O coordenador atual do ciclo 2025–2028 é <strong>Hypolito José Kalinowski</strong>.</p>
+
+<p>Não há dispersão entre áreas de avaliação: todos os programas de Engenharia Biomédica identificados estão em Engenharias IV — nenhum está classificado em Engenharias III, Interdisciplinar ou Biotecnologia. Porém, o Documento de Área reconhece que temáticas comuns à Engenharias IV aparecem também em programas de Engenharias II, III e Interdisciplinar, evidenciando o caráter intrinsecamente multidisciplinar da área.</p>
 
 <h2>PEB/COPPE/UFRJ: o programa de referência no Brasil</h2>
 
@@ -152,6 +202,8 @@ CAPTION: Distribuição geográfica dos programas de pós-graduação em Engenha
 <h3>Conceito 6 e nível PROEX</h3>
 
 <p>Na avaliação quadrienal 2021–2024 da CAPES, o PEB manteve o <strong>conceito 6</strong> e integra o seleto grupo PROEX (Programa de Excelência Acadêmica), que agrupa os programas nacionais com desempenho próximo ao padrão de excelência internacional. No Brasil, menos de 7% dos programas de pós-graduação atingem conceito 6 ou 7. Para o PEB, isso se traduz em cotas adicionais de bolsas CAPES e maior competitividade para captação de recursos junto a agências nacionais e internacionais.</p>
+
+<p>O PEB é o <strong>único programa específico de Engenharia Biomédica no país com status de excelência</strong> — todos os demais programas oscilam entre conceitos 3 e 4. A distância entre o PEB e o segundo grupo de programas é uma das características mais marcantes do panorama brasileiro.</p>
 
 <h3>Estrutura acadêmica e vagas</h3>
 
@@ -211,15 +263,29 @@ CAPTION: Distribuição geográfica dos programas de pós-graduação em Engenha
 
 <h3>UNIVAP – São José dos Campos (SP): conceito 4, mestrado e doutorado</h3>
 
-<p>A Universidade do Vale do Paraíba tem o programa privado mais bem avaliado da área, com <strong>conceito 4</strong> e oferta de mestrado e doutorado. O programa se destaca na área de biofotônica, laserterapia e aplicações ópticas em medicina — herança da tradição tecnológica do Vale do Paraíba (região de São José dos Campos, polo aeroespacial e de defesa). A UNIVAP é a única instituição privada com doutorado próprio em bioengenharia no Brasil.</p>
+<p>A Universidade do Vale do Paraíba tem o programa privado mais bem avaliado da área entre as instituições tradicionais, com <strong>conceito 4</strong> e oferta de mestrado e doutorado. O programa se destaca na área de biofotônica, laserterapia e aplicações ópticas em medicina — herança da tradição tecnológica do Vale do Paraíba (região de São José dos Campos, polo aeroespacial e de defesa). A UNIVAP é uma das poucas instituições privadas com doutorado próprio em bioengenharia no Brasil.</p>
+
+<h3>Universidade Brasil – São Paulo (SP): conceito 4, mestrado, doutorado e pós-doutorado</h3>
+
+<p>A <strong>Universidade Brasil</strong> oferece um dos programas privados mais completos da área, com <strong>conceito 4 na CAPES</strong> e oferta de <strong>mestrado acadêmico</strong> (24 meses), <strong>doutorado acadêmico</strong> (48 meses) e <strong>pós-doutorado</strong> em Engenharia Biomédica — sendo uma das únicas instituições privadas com essa tríade completa. O programa funciona no campus de São Paulo em modalidade presencial.</p>
+
+<p>O PPG em Engenharia Biomédica da UB organiza-se em <strong>três áreas de concentração</strong> com perfil diferenciado no panorama nacional:</p>
+
+<ul>
+<li><strong>Sistemas de Reabilitação e Procedimentos Terapêuticos</strong> — novos sistemas e produtos cosméticos e terapêuticos; procedimentos terapêuticos utilizando radiação não ionizante</li>
+<li><strong>Dispositivos, Espectroscopia Óptica e Sistemas Biomédicos</strong> — espectroscopia óptica aplicada à engenharia biomédica e ciências cosméticas; instrumentação biomédica e desenvolvimento de técnicas e dispositivos para sistemas biológicos; modelagem computacional, processamento e análise de sinais biológicos; saúde pública</li>
+<li><strong>Nanociências, Plasmas e Ozônio</strong> — microbiologia; nanobiomateriais; ozonioterapia; plasma aplicado à saúde</li>
+</ul>
+
+<p>A Universidade Brasil aceita candidatos com graduação, tecnologia ou mestrado nas áreas de Ciências Exatas, Saúde e Biológicas. A mensalidade é a partir de <strong>R$ 1.833,34/mês</strong> no mestrado e <strong>R$ 2.291,66/mês</strong> no doutorado, com possibilidade de bolsas e financiamentos institucionais. A UB mantém também um <strong>Mestrado Profissional em Bioengenharia</strong> separado do programa acadêmico, ampliando as opções para diferentes perfis de candidatos.</p>
 
 <h3>UFPE – Recife (PE): o programa referência no Nordeste</h3>
 
-<p>O Programa de Pós-Graduação em Engenharia Biomédica da UFPE, com <strong>conceito 3</strong> e mestrado acadêmico, é o único programa específico na região Nordeste e cobre uma lacuna estratégica importante. As linhas de pesquisa incluem processamento de sinais, instrumentação e sistemas de telemedicina — área de especial relevância para um estado com dimensão territorial e demanda hospitalar do Pernambuco.</p>
+<p>O Programa de Pós-Graduação em Engenharia Biomédica da UFPE, com <strong>conceito 3</strong> e oferta de <strong>mestrado e doutorado acadêmicos</strong>, é o único programa específico na região Nordeste e cobre uma lacuna estratégica importante. As linhas de pesquisa incluem processamento de biossinais, imagens médicas, instrumentação, informática em saúde, sistemas de telemedicina e IA aplicada — áreas de especial relevância para um estado com a dimensão territorial e a demanda hospitalar de Pernambuco. O documento CAPES descreve o PPGEB/UFPE como o programa mais novo entre os de Engenharia Biomédica, com forte presença de pesquisa em computação biomédica.</p>
 
-<h3>UFU – Uberlândia (MG): conceito 3, foco em instrumentação</h3>
+<h3>UFU – Uberlândia (MG): foco em instrumentação e engenharia clínica</h3>
 
-<p>O programa de Uberlândia tem interface direta com o HC-UFU (Hospital das Clínicas da UFU), permitindo projetos com aplicação clínica imediata. As linhas de pesquisa em instrumentação biomédica e processamento de sinais se beneficiam da proximidade geográfica com o centro industrial do Triângulo Mineiro.</p>
+<p>O programa de Uberlândia, vinculado à FEELT, oferece <strong>mestrado e doutorado</strong> com <strong>conceito 3</strong> e interface direta com o HC-UFU (Hospital das Clínicas da UFU), permitindo projetos com aplicação clínica imediata. As linhas de pesquisa em instrumentação biomédica, processamento de sinais, engenharia clínica e avaliação de tecnologias em saúde se beneficiam da proximidade geográfica com o centro industrial do Triângulo Mineiro.</p>
 
 <h3>UnB – Brasília (DF): conceito 3, capital federal</h3>
 
@@ -229,9 +295,9 @@ CAPTION: Distribuição geográfica dos programas de pós-graduação em Engenha
 
 <p>A Universidade Federal de São Paulo, uma das maiores escolas médicas do Brasil, mantém um programa de Engenharia Biomédica com <strong>conceito 3</strong>. A força do programa está na integração com os hospitais da rede UNIFESP, que inclui o Hospital São Paulo (Hospital Universitário da UNIFESP) e outros serviços de saúde de alta complexidade — dando acesso a dados clínicos e pacientes em volume difícil de encontrar em outros programas.</p>
 
-<h3>Instituições privadas (Universidade Brasil e UMC)</h3>
+<h3>UMC – Mogi das Cruzes (SP): conceito 3, mestrado acadêmico</h3>
 
-<p>A <strong>Universidade Brasil</strong>, em Fernandópolis (interior de SP), e a <strong>UMC</strong> (Universidade de Mogi das Cruzes), em Mogi das Cruzes (Grande SP), mantêm programas de pós-graduação em Bioengenharia com <strong>conceito 3</strong> e foco em mestrado acadêmico. Ambos são opções para candidatos da região que não podem se deslocar para os grandes centros. A UMC tem tradição em ciências da saúde e biomateriais; a Universidade Brasil aposta em bioengenharia aplicada ao agronegócio e saúde animal — uma vertente diferenciada no panorama nacional.</p>
+<p>A UMC (Universidade de Mogi das Cruzes), na Grande SP, mantém um programa de pós-graduação em Bioengenharia com <strong>conceito 3</strong> e foco em mestrado acadêmico. É uma opção para candidatos da região do Alto Tietê, com tradição em ciências da saúde e biomateriais.</p>
 
 <h2>Programas afins em Engenharia Elétrica com forte subárea em EB</h2>
 
@@ -280,19 +346,11 @@ CAPTION: Distribuição geográfica dos programas de pós-graduação em Engenha
 </tbody>
 </table>
 
+<p>Um dado relevante é que o <strong>CEB/UNICAMP não constitui um PPG autônomo</strong> na Plataforma Sucupira. Os pesquisadores do Centro de Engenharia Biomédica atuam dentro do Programa de Pós-Graduação em Engenharia Elétrica da FEEC, onde Engenharia Biomédica funciona como <strong>área de concentração</strong>. Situação semelhante ocorre no CPGEI/UTFPR, que possui Engenharia Biomédica como uma de suas cinco áreas de pesquisa.</p>
+
 <p>O <strong>ISD</strong> (Instituto de Saúde Digital, iniciativa conjunta de UFBA, SENAI CIMATEC e outros parceiros) representa uma nova geração de programas híbridos, com foco em neuroengenharia e interfaces cérebro-computador aplicadas à reabilitação. Embora não seja um PPG stricto sensu tradicional, é uma das mais promissoras estruturas de pesquisa aplicada em EB no Brasil.</p>
 
 <p>Para candidatos sem preferência de denominação no diploma, a FEEC/UNICAMP (conceito 7) e a EPUSP (conceito 6) oferecem ambiente de pesquisa de nível internacional com acesso a financiamento e colaborações que poucos programas específicos de EB conseguem igualar.</p>
-
-<!-- IMG_SLOT_2
-SECTION: Bolsas e financiamento
-CONTEXT: Infográfico comparando os valores de bolsas de pós-graduação das principais agências de fomento brasileiras (CAPES, FAPESP, FAPEMIG, FAPERJ) para mestrado e doutorado em engenharia biomédica, com barras horizontais e destaque para isenção de IR
-VISUAL_ELEMENTS: barras horizontais por agência e nível, valores em reais, logos das agências, ícone de isenção de imposto, nota sobre possibilidade de trabalho desde 2023
-IMAGE_TYPE: Infográfico
-IMAGE_STYLE: technical
-ALT: Infográfico comparando bolsas de mestrado e doutorado CAPES, FAPESP, FAPEMIG e FAPERJ em engenharia biomédica, com valores de R$ 2.100 a R$ 7.140 mensais isentos de IR
-CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por agência de fomento (valores de referência 2026). Todas as bolsas de pós-graduação são isentas de Imposto de Renda no Brasil. Desde 2023, bolsistas CAPES podem exercer atividade remunerada sem perda automática da bolsa.
--->
 
 <h2>O sistema de avaliação CAPES: o que significam os conceitos</h2>
 
@@ -357,9 +415,19 @@ CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por 
 
 <p>Os conceitos 6 e 7 só são atribuídos a programas que oferecem doutorado — portanto, programas exclusivamente de mestrado têm teto em 5. Isso explica por que vários programas de EB com mestrado isolado têm conceito 3 ou 4 mesmo com boa produção científica.</p>
 
-<h3>Avaliação quadrienal 2021–2024 e transição do Qualis</h3>
+<h3>Avaliação quadrienal 2021–2024 e o fim do Qualis Periódicos</h3>
 
-<p>O ciclo avaliativo 2021–2024 trouxe mudanças importantes. A CAPES está migrando gradualmente do <strong>Qualis Periódicos</strong> (sistema de classificação de revistas por área) para indicadores bibliométricos mais próximos dos padrões internacionais (h-index, fator de impacto, citações). Para engenharia biomédica, isso representa uma aproximação com a área de Ciências Exatas e da Terra, área com alta competitividade bibliométrica. Os resultados finais do quadriênio 2021–2024 devem ser divulgados ao longo de 2025–2026.</p>
+<p>O ciclo avaliativo 2021–2024 trouxe duas mudanças estruturais importantes para a Engenharia Biomédica:</p>
+
+<p><strong>Fim do sistema Qualis Periódicos.</strong> Aprovado pelo CTC-ES em <strong>31 de outubro de 2024</strong>, o Qualis deixa de existir a partir do ciclo 2025–2028. A avaliação passará a ser <strong>centrada em artigos individuais</strong>, não mais em classificações de periódicos por área. Para os programas de Engenharia Biomédica, isso significa que a produção docente será mensurada por indicadores bibliométricos mais próximos dos padrões internacionais (h-index, fator de impacto, citações) em vez da classificação A1-C de revistas. Essa mudança impacta diretamente como a produção científica dos programas será comparada e ranqueada.</p>
+
+<p><strong>Resultados preliminares divulgados.</strong> A Avaliação Quadrienal 2021–2024 teve seus resultados preliminares divulgados em <strong>12 de janeiro de 2026</strong>. Os resultados finais ainda podem sofrer alterações após pedidos de reconsideração. Informações parciais indicam estabilidade nas notas da maioria dos programas de Engenharia Biomédica, com o PEB/UFRJ mantendo o conceito 6.</p>
+
+<p>O novo <strong>Documento de Área Engenharias IV 2025–2028</strong> reforça a exigência de que pelo menos <strong>60% dos docentes permanentes</strong> tenham formação em Engenharia Elétrica e/ou Biomédica, e reconhece o desafio persistente de expandir a presença da Engenharia Biomédica para além do Sudeste e de elevar o conceito dos programas estagnados no nível de entrada (notas 3 e 4).</p>
+
+<h3>A assimetria regional</h3>
+
+<p>A <strong>assimetria regional</strong> é um desafio reconhecido pelo próprio Documento de Área: a maioria dos programas concentra-se no Sudeste (UFRJ, UNICAMP, UFU, UFABC, UNIVAP, Universidade Brasil, UMC, UNIFESP, USP), com presença limitada no Nordeste (UFPE), Sul (UTFPR) e Centro-Oeste (UnB). A região Norte permanece sem programa específico de pós-graduação em Engenharia Biomédica.</p>
 
 <h2>Bolsas e financiamento: quanto você pode receber</h2>
 
@@ -460,7 +528,7 @@ CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por 
 
 <h2>Mestrado profissional vs. mestrado acadêmico: qual escolher</h2>
 
-<p>Existem três programas de <strong>Mestrado Profissional (MP)</strong> em Engenharia Biomédica no Brasil: UTFPR (Curitiba), e iniciativas em desenvolvimento em outras IES. O MP tem a mesma validade legal do mestrado acadêmico para concursos públicos e ascensão em planos de carreira privados — a distinção é de natureza metodológica.</p>
+<p>Existem programas de <strong>Mestrado Profissional (MP)</strong> em Engenharia Biomédica no Brasil, com destaque para a UTFPR (Curitiba) e a Universidade Brasil (Bioengenharia). O MP tem a mesma validade legal do mestrado acadêmico para concursos públicos e ascensão em planos de carreira privados — a distinção é de natureza metodológica.</p>
 
 <table>
 <thead>
@@ -513,11 +581,11 @@ CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por 
 <h3>Inteligência artificial e aprendizado de máquina em saúde</h3>
 
 <p>IA médica é a linha de maior crescimento em termos de publicações e financiamento. Aplicações incluem diagnóstico assistido por IA em patologia digital, radiologia computacional, análise de sinais de ECG e EEG, e modelos preditivos de desfechos clínicos. No Brasil, grupos no PEB/UFRJ, FEEC/UNICAMP e UFMG lideram as publicações da área. O potencial dos dados do SUS (o maior sistema público de saúde do mundo em volume) para treinamento de modelos de IA é um diferencial competitivo genuíno do Brasil nessa agenda de pesquisa.</p>
-<figure>
-<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-2.webp" alt="Ilustração técnica de IA, wearables, bioimpressão 3D, robótica cirúrgica e biossensores em Engenharia Biomédica." width="1024" height="571" loading="lazy" decoding="async">
-<figcaption>As principais linhas de pesquisa em Engenharia Biomédica no Brasil e no mundo, abrangendo inteligência artificial, dispositivos vestíveis, bioimpressão 3D, robótica cirúrgica e biossensores avançados.</figcaption>
-</figure>
 
+<figure>
+<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-2.webp" alt="Ilustração de IA, wearables, bioimpressão 3D, robótica cirúrgica, biossensores e espectroscopia em Engenharia Biomédica." width="1024" height="576" loading="lazy" decoding="async">
+<figcaption>As principais linhas de pesquisa em Engenharia Biomédica no Brasil e no mundo, incluindo inteligência artificial, dispositivos vestíveis, bioimpressão 3D, robótica cirúrgica, biossensores e espectroscopia aplicada.</figcaption>
+</figure>
 
 <h3>Dispositivos vestíveis e software como dispositivo médico (SaMD)</h3>
 
@@ -538,6 +606,10 @@ CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por 
 <h3>Neuroengenharia e interfaces cérebro-computador</h3>
 
 <p>Uma das áreas de maior impacto social: interfaces cérebro-computador para controle de próteses e cadeiras de rodas por pessoas com lesão medular ou paralisia. O Brasil tem contribuições importantes na área a partir de iniciativas como o Andar de Novo (Walk Again Project), coordenado pelo Dr. Miguel Nicolelis da UFRN/Duke University, e grupos no ISD/UFBA e UFPE.</p>
+
+<h3>Espectroscopia, nanociências e plasmas</h3>
+
+<p>Uma linha emergente com presença crescente no cenário nacional, especialmente na Universidade Brasil: espectroscopia óptica aplicada à engenharia biomédica, nanobiomateriais para aplicações terapêuticas, ozonioterapia e plasmas frios aplicados à saúde. Essa vertente diferenciada combina ciência dos materiais com aplicações biomédicas de fronteira.</p>
 
 <h2>Produção científica e impacto: o que a pesquisa brasileira gera</h2>
 
@@ -628,23 +700,13 @@ CAPTION: Comparativo de bolsas de pós-graduação em Engenharia Biomédica por 
 </table>
 
 <p>O salto mais expressivo ocorre no <strong>doutorado</strong>, especialmente para quem segue carreira em gestão de P&amp;D em empresas multinacionais do setor ou em docência universitária. Mestres com experiência de três a cinco anos e inglês fluente podem competir por posições internacionais na Medtronic, Boston Scientific, Siemens Healthineers, Philips e similares com pacotes salariais substancialmente superiores ao valor médio nacional.</p>
+
 <figure>
-<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-3.webp" alt="Infográfico sobre saídas de carreira e salários médios de engenheiros biomédicos com pós-graduação no Brasil." width="1024" height="571" loading="lazy" decoding="async">
+<img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-3.webp" alt="Infográfico sobre saídas de carreira e salários médios de engenheiros biomédicos com pós-graduação no Brasil." width="1024" height="576" loading="lazy" decoding="async">
 <figcaption>As oportunidades de carreira e o impacto na remuneração para mestres e doutores em Engenharia Biomédica, demonstrando a valorização profissional em diferentes setores.</figcaption>
 </figure>
 
-
 <p>Para dados completos de remuneração por nível, função e setor, consulte o artigo <a href="/artigos/quanto-ganha-engenheiro-biomedico-2026">Quanto Ganha um Engenheiro Biomédico em 2026</a>.</p>
-
-<!-- IMG_SLOT_3
-SECTION: Saídas de carreira após a pós-graduação
-CONTEXT: Diagrama conceitual mostrando os diferentes caminhos de carreira disponíveis após mestrado e doutorado em engenharia biomédica, com ramificações para indústria, academia, hospitais, startups e setor regulatório, incluindo faixas salariais indicativas
-VISUAL_ELEMENTS: árvore de decisão de carreiras, ícones de cada setor, faixas salariais, setas indicando progressão, destaque para posições internacionais
-IMAGE_TYPE: Ilustração conceitual
-IMAGE_STYLE: technical
-ALT: Diagrama de caminhos de carreira após pós-graduação em engenharia biomédica mostrando saídas para indústria, academia, hospitais, startups e regulação com faixas salariais
-CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engenharia Biomédica no Brasil. O doutorado abre posições de liderança em P&D com remuneração média 60% superior à graduação. Dados de referência 2026 baseados em pesquisas salariais CAGED, Glassdoor BR e levantamento próprio.
--->
 
 <h2>Especializações lato sensu: opções para quem não quer o stricto sensu</h2>
 
@@ -695,7 +757,7 @@ CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engen
 
 <h3>É possível fazer pós-graduação em Engenharia Biomédica sem bolsa?</h3>
 
-<p>Sim, mas é raro no mestrado acadêmico e doutorado de programas bem avaliados. A maioria dos candidatos aprovados em programas conceito 4 ou superior recebe bolsa CAPES, CNPq ou das FAPs estaduais. Alunos sem bolsa (chamados "alunos regulares sem vínculo de bolsa") existem — especialmente no Mestrado Profissional, financiado em parte por empresa ou pelo próprio aluno — mas são minoria nos programas acadêmicos.</p>
+<p>Sim, mas é raro no mestrado acadêmico e doutorado de programas bem avaliados. A maioria dos candidatos aprovados em programas conceito 4 ou superior recebe bolsa CAPES, CNPq ou das FAPs estaduais. Alunos sem bolsa (chamados "alunos regulares sem vínculo de bolsa") existem — especialmente no Mestrado Profissional, financiado em parte por empresa ou pelo próprio aluno — mas são minoria nos programas acadêmicos. Programas privados como a Universidade Brasil e a UNIVAP cobram mensalidade, mas oferecem bolsas e financiamentos institucionais.</p>
 
 <h3>A bolsa de pós-graduação paga Imposto de Renda?</h3>
 
@@ -713,13 +775,17 @@ CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engen
 
 <p>Não existem programas de mestrado ou doutorado stricto sensu 100% EAD em Engenharia Biomédica reconhecidos pela CAPES. A natureza experimental da área (laboratórios, bancadas, equipamentos, coleta de dados clínicos) exige presença física. Especializações lato sensu EAD existem em algumas instituições, mas sem a validade do stricto sensu. O Mestrado Profissional é o formato mais flexível em termos de presença — alguns permitem atividades semipresenciais — mas ainda requer presença física para defesa e atividades práticas.</p>
 
+<h3>Como a CAPES classifica a Engenharia Biomédica?</h3>
+
+<p>A Engenharia Biomédica é classificada como área do conhecimento autônoma (código 3.13.00.00-6) dentro da Grande Área das Engenharias, com duas subáreas oficiais: Bioengenharia (processamento e modelagem, com três especialidades) e Engenharia Médica (dispositivos e materiais, com quatro especialidades), totalizando sete especialidades reconhecidas. Todos os programas de pós-graduação da área são avaliados em Engenharias IV (Área 14), ao lado da Engenharia Elétrica. Essa classificação é compartilhada entre CAPES, CNPq e FINEP, e não sofreu alterações desde outubro de 2022. É importante notar que áreas emergentes como engenharia clínica, IA em saúde e neuroimagem não constam como especialidades formais na tabela, embora estejam presentes nas linhas de pesquisa dos programas.</p>
+
 <h3>Quais habilidades devo desenvolver antes de entrar na pós-graduação em Engenharia Biomédica?</h3>
 
 <p>As mais valorizadas pelos orientadores são: (1) programação em Python ou MATLAB — indispensável para processamento de sinais, IA e simulação; (2) inglês científico para leitura e escrita de artigos; (3) fundamentos sólidos de cálculo, álgebra linear e probabilidade; (4) familiaridade com bases de dados públicas de saúde (PhysioNet, MIMIC, TCIA); (5) experiência com ferramentas de gestão de projetos e normas (ABNT, ISO 13485 para dispositivos médicos). Experiência prévia em IC — mesmo que em área adjacente — é fortemente recomendada.</p>
 
 <h3>Vale mais a pena fazer pós-graduação no Brasil ou no exterior?</h3>
 
-<p>Depende do seu objetivo. Para carreira na indústria brasileira de dispositivos médicos ou hospitais nacionais, um mestrado no PEB/UFRJ, FEEC/UNICAMP ou USP São Carlos é altamente valorizado e mais rápido (menos burocracia que processos de visto e adaptação). Para carreira acadêmica internacional ou em empresas multinacionais em P&D avançado, um doutorado no exterior (MIT, ETH Zurich, Imperial College) ainda abre portas que os melhores programas brasileiros não conseguem igualar de forma consistente. A rota intermediária — mestrado no Brasil com bolsa FAPESP e doutorado sanduíche ou doutorado no exterior — é adotada por muitos dos perfis mais bem-sucedidos da área.</p>
+<p>Depende do seu objetivo. Para carreira na indústria brasileira de dispositivos médicos ou hospitais nacionais, um mestrado no PEB/UFRJ, FEEC/UNICAMP ou USP São Carlos é altamente valorizado e mais rápido (menos burocracia que processos de visto e adaptação). Para carreira acadêmica internacional ou em empresas multinacionais em P&amp;D avançado, um doutorado no exterior (MIT, ETH Zurich, Imperial College) ainda abre portas que os melhores programas brasileiros não conseguem igualar de forma consistente. A rota intermediária — mestrado no Brasil com bolsa FAPESP e doutorado sanduíche ou doutorado no exterior — é adotada por muitos dos perfis mais bem-sucedidos da área.</p>
 
 <h2>Próximos passos: aprofunde o seu planejamento</h2>
 
@@ -733,5 +799,5 @@ CAPTION: Principais trajetórias de carreira após mestrado e doutorado em Engen
 </ul>
 
 <p><em>Publicado por <a href="https://engenhariabiomedica.com">engenhariabiomedica.com</a></em></p>
-`
+`,
 };

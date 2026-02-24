@@ -5,7 +5,7 @@ import { footerNavigation } from '@/data/navigation';
 const footerColumns = [
   { title: 'Portal', links: footerNavigation.portal },
   { title: 'Formação', links: footerNavigation.formacao },
-  { title: 'Especialidades', links: footerNavigation.especialidades },
+  { title: 'Áreas de Atuação', links: footerNavigation.areasDeAtuacao },
   { title: 'Mercado', links: footerNavigation.mercado },
   { title: 'Regulamentação', links: footerNavigation.regulamentacao },
   { title: 'Equipamentos', links: footerNavigation.equipamentos },

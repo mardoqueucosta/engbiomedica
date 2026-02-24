@@ -49,6 +49,24 @@ const sections = [
     href: '/artigos/livros-engenharia-biomedica',
     badge: 'Bibliografia',
   },
+  {
+    title: 'Entrevista de Emprego',
+    description: 'Perguntas técnicas por área, método STAR para questões comportamentais e estratégias de negociação salarial.',
+    href: '/artigos/entrevista-emprego-engenheiro-biomedico',
+    badge: 'Entrevista',
+  },
+  {
+    title: 'Soft Skills',
+    description: 'Comunicação interdisciplinar, liderança em equipes hospitalares e competências comportamentais valorizadas pelo mercado.',
+    href: '/artigos/soft-skills-engenheiros-biomedicos',
+    badge: 'Competências',
+  },
+  {
+    title: 'Inglês Técnico',
+    description: 'Glossário com 120+ termos, impacto salarial de +83% e recursos para alcançar fluência técnica.',
+    href: '/artigos/ingles-tecnico-engenharia-biomedica',
+    badge: 'Idiomas',
+  },
 ];
 
 export default function CarreiraPage() {

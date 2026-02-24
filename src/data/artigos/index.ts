@@ -97,4 +97,6 @@ export const slugs = [
   'ingles-tecnico-engenharia-biomedica',
   'livros-engenharia-biomedica',
   'entrevista-emprego-engenheiro-biomedico',
+  'engenharia-genomica-crispr',
+  'nanotecnologia-biomedica',
 ];

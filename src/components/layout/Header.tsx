@@ -28,7 +28,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-700 transition-colors rounded-lg hover:bg-primary-50"
+                  className="flex items-center gap-1 px-2.5 py-2 text-sm font-medium text-slate-600 hover:text-primary-700 transition-colors rounded-lg hover:bg-primary-50 whitespace-nowrap"
                 >
                   {item.label}
                   {item.children && <ChevronDown className="w-3.5 h-3.5 opacity-50" />}
@@ -42,7 +42,7 @@ export function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2 text-sm text-slate-600 hover:text-primary-700 hover:bg-primary-50 transition-colors"
+                          className="block px-4 py-2 text-sm text-slate-600 hover:text-primary-700 hover:bg-primary-50 transition-colors whitespace-nowrap"
                         >
                           {child.label}
                         </Link>

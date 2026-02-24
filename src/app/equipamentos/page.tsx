@@ -50,6 +50,24 @@ const sections = [
     href: '/artigos/indicadores-engenharia-clinica-kpis',
     badge: 'Indicadores',
   },
+  {
+    title: 'Guia de Compra Hospitalar',
+    description: 'Lei 14.133/2021, especificação técnica, licitações, análise de TCO e financiamento via ProEquipaSUS.',
+    href: '/artigos/guia-compra-equipamentos-hospitalares',
+    badge: 'Aquisição',
+  },
+  {
+    title: 'Ressonância Magnética: GE SIGNA',
+    description: 'Três aprovações FDA para a plataforma SIGNA: AIR Recon DL cardíaco, MAGNUS e NeuroQuant.',
+    href: '/artigos/ressonancia-magnetica-ge-healthcare-signa-fda-2026',
+    badge: 'Inovação',
+  },
+  {
+    title: 'Wearables Médicos',
+    description: 'Mercado de US$ 31 bilhões: os quatro componentes que moldam dispositivos vestíveis em saúde.',
+    href: '/artigos/dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone',
+    badge: 'Wearables',
+  },
 ];
 
 export default function EquipamentosPage() {

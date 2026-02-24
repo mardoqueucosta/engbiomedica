@@ -90,6 +90,8 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'ingles-tecnico-engenharia-biomedica': () => import('./ingles-tecnico-engenharia-biomedica'),
   'livros-engenharia-biomedica': () => import('./livros-engenharia-biomedica'),
   'entrevista-emprego-engenheiro-biomedico': () => import('./entrevista-emprego-engenheiro-biomedico'),
+  'engenharia-genomica-crispr': () => import('./engenharia-genomica-crispr'),
+  'nanotecnologia-biomedica': () => import('./nanotecnologia-biomedica'),
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building, Banknote, BookOpen } from 'lucide-react';
+import { Building, Banknote, BookOpen, FlaskConical } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
@@ -53,6 +53,26 @@ export default function PesquisaPage() {
             <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Repositórios Acadêmicos</h2>
             <p className="text-body-sm text-slate-500 font-serif">PubMed, IEEE Xplore, SciELO, periódicos e bases de dados para pesquisa em Engenharia Biomédica.</p>
           </Link>
+        </div>
+
+        <h2 className="text-h2 text-primary-800 mb-4 font-serif">Guias para Pesquisadores</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+          {[
+            { title: 'Como Publicar Artigos Científicos', desc: 'Escolha de revistas (Nature BME, IEEE, RBEB), métricas de impacto e estratégias para aceite.', href: '/artigos/como-publicar-artigos-engenharia-biomedica' },
+            { title: 'Editais e Financiamento', desc: 'FAPESP, CNPq, FINEP, EMBRAPII, BNDES e Decit/MS: valores, prazos e como submeter projetos.', href: '/artigos/editais-financiamento-pesquisa-saude' },
+            { title: 'Do Laboratório ao Mercado', desc: 'Transferência tecnológica: do TRL 1 ao registro ANVISA, spin-offs e incubadoras hospitalares.', href: '/artigos/laboratorio-mercado-pesquisa-produto-medico' },
+            { title: 'Patentes em Dispositivos Médicos', desc: 'Requisitos INPI, custos, sistema PCT, PPH, patentes de SaMD e casos brasileiros.', href: '/artigos/patentes-dispositivos-medicos-brasil' },
+            { title: 'Python e MATLAB', desc: 'Comparativo técnico: bibliotecas, toolboxes e aplicações em sinais, imagens, IA e bioinformática.', href: '/artigos/python-matlab-engenharia-biomedica' },
+            { title: 'Tendências de Pesquisa', desc: '8 fronteiras: IA diagnóstica, bioimpressão, organ-on-chip, robótica, BCIs, CRISPR e IoMT.', href: '/artigos/tendencias-pesquisa-engenharia-biomedica' },
+          ].map((g) => (
+            <Link key={g.href} href={g.href} className="card p-5 group block">
+              <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center mb-2 group-hover:bg-teal-100 transition-colors">
+                <FlaskConical className="w-4 h-4 text-teal-600" />
+              </div>
+              <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">{g.title}</h3>
+              <p className="text-body-sm text-slate-500 font-serif">{g.desc}</p>
+            </Link>
+          ))}
         </div>
 
         <h2 className="text-h2 text-primary-800 mb-4">Fronteiras da Pesquisa</h2>

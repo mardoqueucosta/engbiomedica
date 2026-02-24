@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { icon: GraduationCap, value: '28+', label: 'Cursos de Graduação' },
-  { icon: BookOpen, value: '16', label: 'Programas Stricto Sensu' },
+  { icon: BookOpen, value: '18', label: 'Programas Stricto Sensu' },
   { icon: Award, value: '6', label: 'Conceito Máximo CAPES' },
   { icon: MapPin, value: '15', label: 'Estados com Oferta' },
 ];
@@ -37,13 +37,25 @@ const sections = [
     title: 'Áreas de Atuação',
     description: 'Da engenharia clínica à IA em saúde — todas as carreiras possíveis para o engenheiro biomédico.',
     href: '/artigos/areas-atuacao-engenharia-biomedica',
-    badge: '8+ especialidades',
+    badge: '12 especialidades',
   },
   {
     title: 'Salários',
     description: 'Dados atualizados do CAGED por nível de experiência, estado e setor de atuação.',
     href: '/artigos/quanto-ganha-engenheiro-biomedico-2026',
     badge: 'R$ 8.600 médio',
+  },
+  {
+    title: 'Engenharia Biomédica EaD',
+    description: 'Decreto 12.456/2025 proibiu cursos 100% EaD. Entenda o que muda e quais alternativas existem.',
+    href: '/artigos/engenharia-biomedica-ead',
+    badge: 'EaD & Legislação',
+  },
+  {
+    title: 'História da Engenharia Biomédica',
+    description: 'Da COPPE/UFRJ em 1971 ao ecossistema de 1.900+ healthtechs — a trajetória completa no Brasil.',
+    href: '/artigos/historia-engenharia-biomedica-brasil',
+    badge: 'História',
   },
 ];
 

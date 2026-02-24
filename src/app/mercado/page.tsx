@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, Rocket, MapPin, Calendar, Globe } from 'lucide-react';
+import { Building2, Rocket, MapPin, Calendar, Globe, Newspaper } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
@@ -67,6 +67,26 @@ export default function MercadoPage() {
           <h3 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Engenharia Biomédica: EUA vs. Brasil</h3>
           <p className="text-body-sm text-slate-500 font-serif">Formação acadêmica (ABET), mercado de US$ 188–256 bilhões, regulação FDA, venture capital e hubs de inovação.</p>
         </Link>
+
+        {/* Notícias e Análises */}
+        <h2 className="text-h2 text-primary-800 mb-4 font-serif">Notícias e Análises</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+          {[
+            { title: 'Investir em Dispositivos Médicos', desc: 'Mercado global de US$ 600 bilhões, empresas líderes e estratégias para investidores brasileiros.', href: '/artigos/acoes-de-dispositivos-medicos-como-investir-no-setor-em-2026' },
+            { title: 'Medtronic: Robótica Espinhal', desc: 'FDA autoriza o Stealth AXiS, sistema robótico para coluna baseado na plataforma Mazor.', href: '/artigos/medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp' },
+            { title: 'Novocure: Câncer de Pâncreas', desc: 'FDA aprova terapia TTFields para câncer de pâncreas localmente avançado.', href: '/artigos/novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr' },
+            { title: 'QMSR e Cibersegurança FDA', desc: 'QMSR substituiu o QSR em 2026, exigindo cibersegurança por projeto em dispositivos conectados.', href: '/artigos/qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp' },
+            { title: 'Wearables em Ascensão', desc: 'Mercado de US$ 31 bilhões: os quatro componentes que moldam a nova cadeia de suprimentos.', href: '/artigos/dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone' },
+          ].map((n) => (
+            <Link key={n.href} href={n.href} className="card p-5 group block">
+              <div className="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center mb-2 group-hover:bg-coral-100 transition-colors">
+                <Newspaper className="w-4 h-4 text-coral-600" />
+              </div>
+              <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">{n.title}</h3>
+              <p className="text-body-sm text-slate-500 font-serif">{n.desc}</p>
+            </Link>
+          ))}
+        </div>
 
         <div className="card p-6">
           <h2 className="text-h3 text-slate-900 mb-3">Distribuição Regional dos Empregos</h2>
