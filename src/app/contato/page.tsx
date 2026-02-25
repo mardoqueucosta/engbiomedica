@@ -42,7 +42,7 @@ export default function ContatoPage() {
               </div>
               <h3 className="text-h4 text-slate-900 mb-1">E-mail</h3>
               <p className="text-body-sm text-slate-500 font-serif">
-                contato@engenhariabiomedica.com
+                mardoqueu.costa@ub.edu.br
               </p>
             </div>
 
@@ -60,11 +60,9 @@ export default function ContatoPage() {
               <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center mb-3">
                 <MapPin className="w-5 h-5 text-amber-500" />
               </div>
-              <h3 className="text-h4 text-slate-900 mb-1">Origem</h3>
+              <h3 className="text-h4 text-slate-900 mb-1">Idealizador</h3>
               <p className="text-body-sm text-slate-500 font-serif">
-                PPGEB — Universidade Brasil
-                <br />
-                Em parceria com ESALQ/USP
+                Mardoqueu M. Costa
               </p>
             </div>
 
