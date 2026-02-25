@@ -18,7 +18,7 @@ export default function SobrePage() {
       <PageHeader
         overline="O Portal"
         title="Sobre o engenhariabiomedica.com"
-        description="A referência que a Engenharia Biomédica no Brasil precisava — em um único endereço."
+        description="A referência que a Engenharia Biomédica no Brasil precisava, em um único endereço."
         breadcrumbs={[{ label: 'Sobre' }]}
         centered
       />
@@ -60,10 +60,22 @@ export default function SobrePage() {
           </div>
 
           <div>
-            <h2 className="text-h2 text-primary-800 mb-3">Origem</h2>
-            <p className="text-body text-slate-600 font-serif leading-relaxed text-justify">
-              O portal nasceu do Programa de Pós-Graduação em Engenharia Biomédica (PPGEB) da Universidade Brasil, em parceria com pesquisadores da ESALQ/USP. A plataforma foi concebida em fevereiro de 2026 a partir de uma extensa pesquisa documental que mapeou o ecossistema completo da Engenharia Biomédica no Brasil e nos EUA, resultando em cinco documentos de referência que formam a base de conteúdo do portal.
-            </p>
+            <h2 className="text-h2 text-primary-800 mb-3">Idealizador</h2>
+            <div className="card p-6">
+              <h3 className="text-h4 text-slate-900 mb-2">Mardoqueu Martins da Costa</h3>
+              <p className="text-body text-slate-600 font-serif leading-relaxed text-justify">
+                Pós-doutor em Engenharia de Biossistemas pela ESALQ/USP, Doutor e Mestre em Engenharia Elétrica pela EESC/USP, com formação em Ciências Exatas (IFSC/USP) e Mecatrônica (SENAI). Atua desde 2005 nas áreas de Engenharia Biomédica, Instrumentação e Empreendedorismo, com ênfase no desenvolvimento de equipamentos e dispositivos científicos e industriais, bem como softwares de aquisição, controle e análise de dados. Professor e pesquisador no Programa de Pós-Graduação em Engenharia Biomédica da Universidade Brasil desde 2017, mantém forte interface com o setor produtivo por meio de projetos de P&D e captação de recursos junto ao CNPq e à FAPESP.
+              </p>
+              <a
+                href="http://lattes.cnpq.br/7819717440359474"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
+              >
+                Currículo Lattes
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
