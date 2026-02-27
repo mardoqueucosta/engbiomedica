@@ -9,6 +9,7 @@ import { WelcomeEmail } from '@/emails/welcome';
 
 export async function GET(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || req.url;
   const token = req.nextUrl.searchParams.get('token');
   if (!token) {
     return NextResponse.json({ error: 'Token ausente' }, { status: 400 });
@@ -16,7 +17,7 @@ export async function GET(req: NextRequest) {
 
   const payload = verifyToken(token);
   if (!payload) {
-    return NextResponse.redirect(new URL('/newsletter?error=token-invalido', req.url));
+    return NextResponse.redirect(new URL('/newsletter?error=token-invalido', baseUrl));
   }
 
   // Criar contato já atribuído ao segmento (chamada atômica)
@@ -50,5 +51,5 @@ export async function GET(req: NextRequest) {
     method: 'double-opt-in',
   }));
 
-  return NextResponse.redirect(new URL('/subscription-confirmed', req.url));
+  return NextResponse.redirect(new URL('/subscription-confirmed', baseUrl));
 }
