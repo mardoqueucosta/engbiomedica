@@ -43,7 +43,8 @@ export function Turnstile({ onVerify, onExpire, onError }: TurnstileProps) {
         console.error('[TURNSTILE] Widget error:', errorCode);
         onError?.(errorCode);
       },
-      retry: 'never',
+      retry: 'auto',
+      'retry-interval': 5000,
       theme: 'light',
       size: 'normal',
     });
