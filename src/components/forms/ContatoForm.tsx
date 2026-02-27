@@ -152,7 +152,7 @@ export function ContatoForm() {
       )}
       <button
         type="submit"
-        disabled={status === 'loading' || !turnstileToken}
+        disabled={status === 'loading'}
         className="px-6 py-3 bg-primary-700 text-white rounded-lg font-semibold text-sm hover:bg-primary-800 transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? 'Enviando...' : 'Enviar mensagem'}

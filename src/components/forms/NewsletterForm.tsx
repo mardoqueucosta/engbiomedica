@@ -107,7 +107,7 @@ export function NewsletterForm() {
       <Turnstile onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
       <button
         type="submit"
-        disabled={status === 'loading' || !turnstileToken}
+        disabled={status === 'loading'}
         className="w-full px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? 'Enviando...' : 'Inscrever-se na newsletter'}

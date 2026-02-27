@@ -23,8 +23,8 @@ export async function POST(req: NextRequest) {
 
   const { email, firstName, turnstileToken } = await req.json();
 
-  // Turnstile verification
-  if (!turnstileToken || !(await verifyTurnstile(turnstileToken))) {
+  // Turnstile verification (if token provided)
+  if (turnstileToken && !(await verifyTurnstile(turnstileToken))) {
     return NextResponse.json(
       { error: 'Verificação anti-spam falhou. Recarregue a página e tente novamente.' },
       { status: 403 }
