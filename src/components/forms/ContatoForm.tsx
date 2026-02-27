@@ -43,7 +43,7 @@ export function ContatoForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, subject, message, website: honeypot, turnstileToken }),
+        body: JSON.stringify({ name, email, subject, message, company_fax: honeypot, turnstileToken }),
       });
 
       const data = await res.json();
@@ -113,15 +113,16 @@ export function ContatoForm() {
           />
         </div>
       </div>
-      {/* Honeypot */}
+      {/* Honeypot — name must not match common autofill fields */}
       <input
         type="text"
-        name="website"
+        name="company_fax"
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
+        aria-hidden="true"
         style={{ position: 'absolute', left: '-9999px' }}
         tabIndex={-1}
-        autoComplete="off"
+        autoComplete="nope"
       />
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">

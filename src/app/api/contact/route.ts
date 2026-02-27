@@ -19,10 +19,10 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const body = await req.json();
-  const { name, email, subject, message, website, turnstileToken } = body;
+  const { name, email, subject, message, company_fax, turnstileToken } = body;
 
   // Honeypot
-  if (website) {
+  if (company_fax) {
     return NextResponse.json({ message: 'Mensagem enviada com sucesso' });
   }
 
