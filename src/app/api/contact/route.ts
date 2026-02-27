@@ -26,15 +26,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Mensagem enviada com sucesso' });
   }
 
-  // Turnstile verification — validate if token provided, fallback to honeypot + rate limit
-  if (turnstileToken) {
-    const ipForTurnstile = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
-    if (!(await verifyTurnstile(turnstileToken, ipForTurnstile || undefined))) {
-      return NextResponse.json(
-        { error: 'Verificação anti-spam falhou. Recarregue a página e tente novamente.' },
-        { status: 403 }
-      );
-    }
+  // Turnstile verification — required
+  if (!turnstileToken) {
+    return NextResponse.json(
+      { error: 'Verificação anti-spam é obrigatória. Recarregue a página e tente novamente.' },
+      { status: 400 }
+    );
+  }
+
+  const ipForTurnstile = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
+  if (!(await verifyTurnstile(turnstileToken, ipForTurnstile || undefined))) {
+    return NextResponse.json(
+      { error: 'Verificação anti-spam falhou. Recarregue a página e tente novamente.' },
+      { status: 403 }
+    );
   }
 
   // Validation

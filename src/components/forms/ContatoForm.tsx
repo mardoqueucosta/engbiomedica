@@ -79,7 +79,7 @@ export function ContatoForm() {
     );
   }
 
-  const isSubmitDisabled = status === 'loading';
+  const isSubmitDisabled = status === 'loading' || !turnstileToken;
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">

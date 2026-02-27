@@ -20,13 +20,12 @@ export async function verifyTurnstile(token: string, ip?: string): Promise<boole
   }
 
   try {
-    const body: Record<string, string> = { secret, response: token };
-    if (ip) body.remoteip = ip;
+    const body = new URLSearchParams({ secret, response: token });
+    if (ip) body.set('remoteip', ip);
 
     const res = await fetch(VERIFY_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      body,
     });
 
     const data: TurnstileVerifyResponse = await res.json();
