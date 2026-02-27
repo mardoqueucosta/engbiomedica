@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, FormEvent } from 'react';
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -7,19 +9,56 @@ declare global {
 }
 
 export function NewsletterForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (honeypot) return;
+    setStatus('loading');
+    setErrorMsg('');
 
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'newsletter_inscricao', {
-        event_category: 'engajamento',
-        event_label: 'formulario_newsletter',
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, firstName: nome }),
       });
-    }
+      const data = await res.json();
 
-    // TODO: integrar com serviço de e-mail (Mailchimp, Resend, etc.)
-    alert('Inscrição realizada com sucesso! Você receberá nosso próximo envio.');
+      if (res.ok) {
+        setStatus('success');
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'newsletter_inscricao', {
+            event_category: 'engajamento',
+            event_label: 'formulario_newsletter',
+          });
+        }
+      } else {
+        setStatus('error');
+        setErrorMsg(data.error || 'Erro ao processar inscrição.');
+      }
+    } catch {
+      setStatus('error');
+      setErrorMsg('Erro de conexão. Tente novamente.');
+    }
   };
+
+  if (status === 'success') {
+    return (
+      <div className="p-6 bg-teal-50 rounded-lg border border-teal-200">
+        <p className="text-teal-800 font-medium">
+          Confira seu email para confirmar a inscrição!
+        </p>
+        <p className="text-sm text-teal-600 mt-1">
+          Enviamos um link de confirmação. Verifique também a pasta de spam.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -30,11 +69,22 @@ export function NewsletterForm() {
         <input
           id="name"
           type="text"
-          required
-          placeholder="Seu nome"
+          placeholder="Seu nome (opcional)"
+          value={nome}
+          onChange={e => setNome(e.target.value)}
           className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
         />
       </div>
+      {/* Honeypot — invisível, bots preenchem automaticamente */}
+      <input
+        type="text"
+        name="website"
+        value={honeypot}
+        onChange={e => setHoneypot(e.target.value)}
+        style={{ position: 'absolute', left: '-9999px' }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
           E-mail
@@ -44,15 +94,26 @@ export function NewsletterForm() {
           type="email"
           required
           placeholder="seu@email.com"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
         />
       </div>
       <button
         type="submit"
-        className="w-full px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors"
+        disabled={status === 'loading'}
+        className="w-full px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
       >
-        Inscrever-se na newsletter
+        {status === 'loading' ? 'Enviando...' : 'Inscrever-se na newsletter'}
       </button>
+      {status === 'error' && (
+        <p className="text-sm text-red-600">{errorMsg}</p>
+      )}
+      <p className="text-xs text-slate-400">
+        Ao se inscrever, você concorda com nossa{' '}
+        <a href="/privacidade" className="underline">Política de Privacidade</a>.
+        Você pode cancelar a qualquer momento.
+      </p>
     </form>
   );
 }
