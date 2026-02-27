@@ -20,15 +20,23 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL('/newsletter?error=token-invalido', baseUrl));
   }
 
-  // Criar contato já atribuído ao segmento (chamada atômica)
-  const { error } = await resend.contacts.create({
+  // Criar ou reativar contato no segmento
+  const { error: createError } = await resend.contacts.create({
     email: payload.email,
     firstName: payload.firstName || '',
     unsubscribed: false,
     segments: [{ id: process.env.RESEND_SEGMENT_ID! }],
   });
 
-  if (error) console.error('Erro ao criar contato:', error);
+  // Se o contato já existe, reativar via update
+  if (createError) {
+    console.log('[CONFIRM] Contato já existe, reativando:', payload.email);
+    const { error: updateError } = await resend.contacts.update({
+      email: payload.email,
+      unsubscribed: false,
+    });
+    if (updateError) console.error('Erro ao reativar contato:', updateError);
+  }
 
   // Enviar email de boas-vindas
   const welcomeHtml = await render(
