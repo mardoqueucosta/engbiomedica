@@ -9,52 +9,77 @@ declare global {
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
     };
+    onTurnstileLoad?: () => void;
   }
 }
 
 interface TurnstileProps {
   onVerify: (token: string) => void;
   onExpire?: () => void;
+  onError?: () => void;
 }
 
-export function Turnstile({ onVerify, onExpire }: TurnstileProps) {
+export function Turnstile({ onVerify, onExpire, onError }: TurnstileProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
+  const mountedRef = useRef(true);
 
   const renderWidget = useCallback(() => {
-    if (!containerRef.current || !window.turnstile || widgetIdRef.current) return;
+    if (!containerRef.current || !window.turnstile) return;
+
+    // Remove existing widget before re-rendering
+    if (widgetIdRef.current) {
+      window.turnstile.remove(widgetIdRef.current);
+      widgetIdRef.current = null;
+    }
+
+    if (!mountedRef.current) return;
 
     widgetIdRef.current = window.turnstile.render(containerRef.current, {
       sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
       callback: (token: string) => onVerify(token),
       'expired-callback': () => onExpire?.(),
+      'error-callback': () => onError?.(),
       theme: 'light',
       size: 'normal',
     });
-  }, [onVerify, onExpire]);
+  }, [onVerify, onExpire, onError]);
 
   useEffect(() => {
-    // Load Turnstile script if not already loaded
-    if (!document.querySelector('script[src*="turnstile"]')) {
+    mountedRef.current = true;
+    let intervalId: ReturnType<typeof setInterval> | null = null;
+
+    const scriptExists = document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]');
+
+    if (!scriptExists) {
+      // Load Turnstile script with onload callback
+      const callbackName = 'onTurnstileLoad';
+      window[callbackName] = () => {
+        if (mountedRef.current) renderWidget();
+      };
+
       const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=${callbackName}`;
       script.async = true;
-      script.onload = () => renderWidget();
       document.head.appendChild(script);
     } else if (window.turnstile) {
+      // Script already loaded and ready
       renderWidget();
     } else {
-      // Script is loading, wait for it
-      const interval = setInterval(() => {
+      // Script exists but still loading — poll until ready
+      intervalId = setInterval(() => {
         if (window.turnstile) {
-          clearInterval(interval);
-          renderWidget();
+          if (intervalId) clearInterval(intervalId);
+          intervalId = null;
+          if (mountedRef.current) renderWidget();
         }
       }, 100);
-      return () => clearInterval(interval);
     }
 
+    // Unified cleanup for all paths
     return () => {
+      mountedRef.current = false;
+      if (intervalId) clearInterval(intervalId);
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current);
         widgetIdRef.current = null;

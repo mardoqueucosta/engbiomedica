@@ -17,15 +17,29 @@ export function ContatoForm() {
   const [message, setMessage] = useState('');
   const [honeypot, setHoneypot] = useState('');
   const [turnstileToken, setTurnstileToken] = useState('');
+  const [turnstileError, setTurnstileError] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
+  const onTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+    setTurnstileError(false);
+  }, []);
   const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
+  const onTurnstileError = useCallback(() => {
+    setTurnstileToken('');
+    setTurnstileError(true);
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (honeypot) return;
+
+    if (!turnstileToken) {
+      setStatus('error');
+      setErrorMsg('Aguarde a verificação anti-spam ou recarregue a página.');
+      return;
+    }
 
     setStatus('loading');
     setErrorMsg('');
@@ -69,6 +83,8 @@ export function ContatoForm() {
       </div>
     );
   }
+
+  const isSubmitDisabled = status === 'loading' || !turnstileToken;
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -146,14 +162,23 @@ export function ContatoForm() {
           className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors resize-none"
         />
       </div>
-      <Turnstile onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
+      <Turnstile
+        onVerify={onTurnstileVerify}
+        onExpire={onTurnstileExpire}
+        onError={onTurnstileError}
+      />
+      {turnstileError && (
+        <p className="text-sm text-amber-600">
+          Verificação anti-spam falhou. Recarregue a página para tentar novamente.
+        </p>
+      )}
       {status === 'error' && (
         <p className="text-sm text-red-600">{errorMsg}</p>
       )}
       <button
         type="submit"
-        disabled={status === 'loading'}
-        className="px-6 py-3 bg-primary-700 text-white rounded-lg font-semibold text-sm hover:bg-primary-800 transition-colors disabled:opacity-50"
+        disabled={isSubmitDisabled}
+        className="px-6 py-3 bg-primary-700 text-white rounded-lg font-semibold text-sm hover:bg-primary-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? 'Enviando...' : 'Enviar mensagem'}
       </button>
