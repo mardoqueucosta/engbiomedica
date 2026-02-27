@@ -5,6 +5,7 @@ import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 import { generateToken } from '@/lib/tokens';
 import { getSubscribeRatelimit } from '@/lib/ratelimit';
+import { verifyTurnstile } from '@/lib/turnstile';
 import { render } from '@react-email/render';
 import { ConfirmSubscription } from '@/emails/confirm-subscription';
 
@@ -20,7 +21,16 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { email, firstName } = await req.json();
+  const { email, firstName, turnstileToken } = await req.json();
+
+  // Turnstile verification
+  if (!turnstileToken || !(await verifyTurnstile(turnstileToken))) {
+    return NextResponse.json(
+      { error: 'Verificação anti-spam falhou. Recarregue a página e tente novamente.' },
+      { status: 403 }
+    );
+  }
+
   if (!email || typeof email !== 'string') {
     return NextResponse.json({ error: 'Email obrigatório' }, { status: 400 });
   }

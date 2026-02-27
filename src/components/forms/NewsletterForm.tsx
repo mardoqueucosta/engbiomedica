@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useCallback, FormEvent } from 'react';
+import { Turnstile } from '@/components/ui/Turnstile';
 
 declare global {
   interface Window {
@@ -12,8 +13,12 @@ export function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [nome, setNome] = useState('');
   const [honeypot, setHoneypot] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+
+  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -25,7 +30,7 @@ export function NewsletterForm() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, firstName: nome }),
+        body: JSON.stringify({ email, firstName: nome, turnstileToken }),
       });
       const data = await res.json();
 
@@ -99,9 +104,10 @@ export function NewsletterForm() {
           className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
         />
       </div>
+      <Turnstile onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
       <button
         type="submit"
-        disabled={status === 'loading'}
+        disabled={status === 'loading' || !turnstileToken}
         className="w-full px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? 'Enviando...' : 'Inscrever-se na newsletter'}
