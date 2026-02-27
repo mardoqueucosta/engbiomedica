@@ -156,6 +156,12 @@ export default function PrivacidadePage() {
                 privacidade@engenhariabiomedica.com
               </a>. Responderemos em até 15 dias úteis.
             </p>
+            <p className="text-body text-slate-600 font-serif leading-relaxed text-justify mt-3">
+              Para solicitar a <strong>exclusão permanente</strong> dos seus dados pessoais, acesse a{' '}
+              <Link href="/excluir-dados" className="text-teal-600 hover:text-teal-700 transition-colors">
+                página de exclusão de dados
+              </Link>.
+            </p>
           </div>
 
           <div>
@@ -166,7 +172,12 @@ export default function PrivacidadePage() {
               diretamente a{' '}
               <Link href="/unsubscribe" className="text-teal-600 hover:text-teal-700 transition-colors">
                 página de cancelamento
-              </Link>. O cancelamento é imediato e irreversível (a menos que você se inscreva novamente).
+              </Link>. O cancelamento é imediato (a menos que você se inscreva novamente).
+              Se deseja a <strong>exclusão total</strong> dos seus dados (e não apenas o cancelamento da newsletter),
+              acesse a{' '}
+              <Link href="/excluir-dados" className="text-teal-600 hover:text-teal-700 transition-colors">
+                página de exclusão de dados
+              </Link>.
             </p>
           </div>
 
