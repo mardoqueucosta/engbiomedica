@@ -29,10 +29,10 @@ export default function PrivacidadePage() {
           <div>
             <h2 className="text-h2 text-primary-800 mb-3">1. Controlador dos dados</h2>
             <p className="text-body text-slate-600 font-serif leading-relaxed text-justify">
-              O portal <strong>engenhariabiomedica.com</strong> é mantido por Mardoqueu Martins da Costa,
+              O portal <strong>engenhariabiomedica.com</strong> é mantido por Mardoqueu M Costa,
               inscrito no CPF sob responsabilidade própria, com sede no Brasil. Para fins da Lei Geral de
               Proteção de Dados (Lei n.º 13.709/2018), o controlador dos dados pessoais coletados por
-              este portal é Mardoqueu Martins da Costa.
+              este portal é Mardoqueu M Costa.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function PrivacidadePage() {
             <h2 className="text-h2 text-primary-800 mb-3">2. Encarregado de Proteção de Dados (DPO)</h2>
             <div className="card p-5">
               <p className="text-body text-slate-600 font-serif">
-                <strong>Nome:</strong> Mardoqueu Martins da Costa
+                <strong>Nome:</strong> Mardoqueu M Costa
               </p>
               <p className="text-body text-slate-600 font-serif mt-1">
                 <strong>E-mail:</strong>{' '}
