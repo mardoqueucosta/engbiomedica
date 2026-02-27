@@ -23,14 +23,8 @@ export async function POST(req: NextRequest) {
 
   const { email, firstName, turnstileToken } = await req.json();
 
-  // Turnstile verification — mandatory per Cloudflare docs
-  if (!turnstileToken) {
-    return NextResponse.json(
-      { error: 'Verificação anti-spam necessária. Recarregue a página e tente novamente.' },
-      { status: 400 }
-    );
-  }
-  if (!(await verifyTurnstile(turnstileToken, ip))) {
+  // Turnstile verification — validate if token provided, fallback to honeypot + rate limit
+  if (turnstileToken && !(await verifyTurnstile(turnstileToken, ip))) {
     return NextResponse.json(
       { error: 'Verificação anti-spam falhou. Recarregue a página e tente novamente.' },
       { status: 403 }

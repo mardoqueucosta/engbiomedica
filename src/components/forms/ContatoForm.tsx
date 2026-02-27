@@ -35,12 +35,6 @@ export function ContatoForm() {
     e.preventDefault();
     if (honeypot) return;
 
-    if (!turnstileToken) {
-      setStatus('error');
-      setErrorMsg('Aguarde a verificação anti-spam ou recarregue a página.');
-      return;
-    }
-
     setStatus('loading');
     setErrorMsg('');
 
@@ -84,7 +78,7 @@ export function ContatoForm() {
     );
   }
 
-  const isSubmitDisabled = status === 'loading' || !turnstileToken;
+  const isSubmitDisabled = status === 'loading';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
