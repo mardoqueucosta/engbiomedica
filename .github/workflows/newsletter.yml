@@ -1,0 +1,93 @@
+name: Newsletter Quinzenal
+
+on:
+  schedule:
+    # Toda terça-feira 13:15 UTC (10:15 BRT)
+    - cron: '15 13 * * 2'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Modo dry-run (nenhum email enviado)'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+      force_send:
+        description: 'Forçar envio mesmo em semana ímpar'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Verificar cadência quinzenal
+        id: cadence
+        run: |
+          FORCE="${{ github.event.inputs.force_send || 'false' }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Envio forçado via workflow_dispatch."
+            exit 0
+          fi
+
+          WEEK_NUM=$(date +%V)
+          if [ $((WEEK_NUM % 2)) -ne 0 ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Semana ímpar ($WEEK_NUM) — pulando envio."
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Semana par ($WEEK_NUM) — prosseguindo."
+          fi
+
+      - name: Checkout repositório
+        if: steps.cadence.outputs.skip != 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: steps.cadence.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        if: steps.cadence.outputs.skip != 'true'
+        run: npm ci
+
+      - name: Gerar e enviar newsletter
+        if: steps.cadence.outputs.skip != 'true'
+        run: npx tsx scripts/send-newsletter.ts
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          FROM_EMAIL: ${{ vars.FROM_EMAIL }}
+          BASE_URL: ${{ vars.BASE_URL }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+
+      - name: Notificar sucesso (Slack)
+        if: success() && steps.cadence.outputs.skip != 'true'
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"✅ Newsletter quinzenal disparada com sucesso."}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }} || true
+
+      - name: Notificar falha (Slack)
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"❌ Newsletter falhou! Ver: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }} || true
+
+      - name: Log de semana pulada
+        if: steps.cadence.outputs.skip == 'true'
+        run: echo "Semana ímpar — newsletter não enviada. Isso é esperado."
