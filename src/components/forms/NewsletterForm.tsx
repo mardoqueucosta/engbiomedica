@@ -23,9 +23,10 @@ export function NewsletterForm() {
     setTurnstileError(false);
   }, []);
   const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
-  const onTurnstileError = useCallback(() => {
+  const onTurnstileError = useCallback((errorCode?: string) => {
     setTurnstileToken('');
     setTurnstileError(true);
+    if (errorCode) console.warn('[TURNSTILE] Error code:', errorCode);
   }, []);
 
   const handleSubmit = async (e: FormEvent) => {

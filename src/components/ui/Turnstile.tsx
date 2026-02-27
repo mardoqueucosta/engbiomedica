@@ -16,7 +16,7 @@ declare global {
 interface TurnstileProps {
   onVerify: (token: string) => void;
   onExpire?: () => void;
-  onError?: () => void;
+  onError?: (errorCode?: string) => void;
 }
 
 export function Turnstile({ onVerify, onExpire, onError }: TurnstileProps) {
@@ -39,7 +39,12 @@ export function Turnstile({ onVerify, onExpire, onError }: TurnstileProps) {
       sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
       callback: (token: string) => onVerify(token),
       'expired-callback': () => onExpire?.(),
-      'error-callback': () => onError?.(),
+      'error-callback': (errorCode: string) => {
+        console.error('[TURNSTILE] Widget error:', errorCode);
+        onError?.(errorCode);
+      },
+      retry: 'auto',
+      'retry-interval': 3000,
       theme: 'light',
       size: 'normal',
     });
