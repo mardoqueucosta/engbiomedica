@@ -11,7 +11,7 @@ async function sendNewsletter(dryRun = false) {
       previewText: 'Tendências em Engenharia Biomédica para 2026',
       title: 'Newsletter #1 — Tendências em Engenharia Biomédica',
       content: 'conteúdo da newsletter aqui...',
-      unsubscribeVariable: '{{{RESEND_UNSUBSCRIBE_URL}}}',
+      unsubscribeUrl: 'https://engenhariabiomedica.com/unsubscribe?email={{{EMAIL}}}',
     })
   );
 

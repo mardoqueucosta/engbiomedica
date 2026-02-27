@@ -8,7 +8,7 @@ interface Props {
   previewText: string;
   title: string;
   content: string;
-  unsubscribeVariable?: string;
+  unsubscribeUrl?: string;
 }
 
 export function NewsletterEmail({
@@ -16,7 +16,7 @@ export function NewsletterEmail({
   previewText,
   title,
   content,
-  unsubscribeVariable = '{{{RESEND_UNSUBSCRIBE_URL}}}',
+  unsubscribeUrl = `${process.env.NEXT_PUBLIC_APP_URL || 'https://engenhariabiomedica.com'}/unsubscribe?email={{{EMAIL}}}`,
 }: Props) {
   return (
     <Html lang="pt-BR">
@@ -33,7 +33,7 @@ export function NewsletterEmail({
             <Hr className="my-6" />
             <Text className="text-xs text-gray-400 text-center">
               Você recebeu este email por estar inscrito na newsletter.{' '}
-              <Link href={unsubscribeVariable}>Cancelar inscrição</Link>
+              <Link href={unsubscribeUrl}>Cancelar inscrição</Link>
             </Text>
           </Container>
         </Body>
