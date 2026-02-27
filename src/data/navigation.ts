@@ -138,6 +138,7 @@ export const footerNavigation = {
     { label: 'Contato', href: '/contato' },
     { label: 'Glossário', href: '/glossario' },
     { label: 'Recursos', href: '/recursos' },
+    { label: 'Privacidade', href: '/privacidade' },
   ],
   formacao: [
     { label: 'Graduação', href: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking' },

@@ -102,8 +102,11 @@ export function Footer() {
               <Link key={item.href} href={item.href} className="text-sm font-medium text-white hover:text-teal-400 transition-colors">{item.label}</Link>
             ))}
           </nav>
-          <span className="text-sm font-medium text-primary-300">
-            Feito no Brasil 🇧🇷
+          <span className="text-sm text-primary-400">
+            DPO:{' '}
+            <a href="mailto:privacidade@engenhariabiomedica.com" className="text-primary-300 hover:text-teal-400 transition-colors">
+              privacidade@engenhariabiomedica.com
+            </a>
           </span>
         </div>
       </div>
