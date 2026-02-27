@@ -7,7 +7,7 @@ export function getSubscribeRatelimit() {
   if (!_ratelimit) {
     _ratelimit = new Ratelimit({
       redis: Redis.fromEnv(),
-      limiter: Ratelimit.slidingWindow(3, '1 h'), // 3 inscrições por hora por IP
+      limiter: Ratelimit.slidingWindow(10, '1 h'), // 10 inscrições por hora por IP
       prefix: 'ratelimit:subscribe',
     });
   }
