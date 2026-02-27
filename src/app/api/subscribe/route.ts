@@ -1,18 +1,18 @@
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 import { generateToken } from '@/lib/tokens';
-import { subscribeRatelimit } from '@/lib/ratelimit';
+import { getSubscribeRatelimit } from '@/lib/ratelimit';
 import { render } from '@react-email/render';
 import { ConfirmSubscription } from '@/emails/confirm-subscription';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   // Rate limiting por IP
   const ip = req.headers.get('x-forwarded-for') ?? 'unknown';
-  const { success } = await subscribeRatelimit.limit(ip);
+  const { success } = await getSubscribeRatelimit().limit(ip);
   if (!success) {
     return NextResponse.json(
       { error: 'Muitas tentativas. Aguarde antes de tentar novamente.' },

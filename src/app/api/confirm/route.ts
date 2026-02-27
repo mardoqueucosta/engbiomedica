@@ -1,4 +1,5 @@
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
@@ -6,9 +7,8 @@ import { verifyToken } from '@/lib/tokens';
 import { render } from '@react-email/render';
 import { WelcomeEmail } from '@/emails/welcome';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function GET(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const token = req.nextUrl.searchParams.get('token');
   if (!token) {
     return NextResponse.json({ error: 'Token ausente' }, { status: 400 });
