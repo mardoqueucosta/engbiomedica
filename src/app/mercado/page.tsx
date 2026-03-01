@@ -90,7 +90,7 @@ export default function MercadoPage() {
 
         <div className="card p-6">
           <h2 className="text-h3 text-slate-900 mb-3">Distribuição Regional dos Empregos</h2>
-          <div className="grid grid-cols-5 gap-3 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
             {[
               { regiao: 'Sudeste', pct: '66%' },
               { regiao: 'Sul', pct: '20%' },

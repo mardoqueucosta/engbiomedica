@@ -48,7 +48,7 @@ export function PageHeader({
             {overline}
           </span>
         )}
-        <h1 className={`text-h1 lg:text-display text-slate-900 text-balance ${centered ? '' : 'max-w-3xl'}`}>
+        <h1 className={`text-h1 lg:text-display text-slate-900 text-balance break-words ${centered ? '' : 'max-w-3xl'}`}>
           {title}
         </h1>
         {description && (

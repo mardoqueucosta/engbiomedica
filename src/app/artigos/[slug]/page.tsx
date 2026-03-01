@@ -220,7 +220,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg text-justify">
+          <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
               <div dangerouslySetInnerHTML={{ __html: artigo.conteudo }} />
             ) : (

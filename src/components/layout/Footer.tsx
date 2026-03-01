@@ -25,7 +25,7 @@ export function Footer() {
           <div className="hidden lg:block w-px bg-primary-800 self-stretch" />
 
           {/* Links — 5 columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-6 flex-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 sm:gap-x-6 lg:gap-x-8 gap-y-6 flex-1">
             {/* Formação & Carreira */}
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Formação & Carreira</h4>
@@ -97,7 +97,7 @@ export function Footer() {
           <span className="font-mono text-sm font-medium text-primary-300">
             &copy; {new Date().getFullYear()} engenhariabiomedica.com
           </span>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {footerNavigation.portal.map((item) => (
               <Link key={item.href} href={item.href} className="text-sm font-medium text-white hover:text-teal-400 transition-colors">{item.label}</Link>
             ))}
