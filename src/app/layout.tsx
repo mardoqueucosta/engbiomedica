@@ -134,7 +134,13 @@ export default function RootLayout({
                 contactType: 'customer service',
                 availableLanguage: 'Portuguese',
               },
-              sameAs: ['https://github.com/mardoqueucosta/engbiomedica'],
+              sameAs: [
+                'https://github.com/mardoqueucosta/engbiomedica',
+                'https://www.linkedin.com/company/engenharia-biomedica/',
+                'https://www.instagram.com/engenhariabiomedica.com.br',
+                'https://www.facebook.com/engenhariabiomedica.com.br',
+                'https://www.youtube.com/@engenhariabiomedica-br',
+              ],
             }),
           }}
         />

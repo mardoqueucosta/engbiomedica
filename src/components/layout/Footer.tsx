@@ -1,6 +1,14 @@
 import Link from 'next/link';
+import { Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 import { Logo } from './Logo';
 import { footerNavigation } from '@/data/navigation';
+
+const socialLinks = [
+  { href: 'https://www.linkedin.com/company/engenharia-biomedica/', icon: Linkedin, label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/engenhariabiomedica.com.br', icon: Instagram, label: 'Instagram' },
+  { href: 'https://www.facebook.com/engenhariabiomedica.com.br', icon: Facebook, label: 'Facebook' },
+  { href: 'https://www.youtube.com/@engenhariabiomedica-br', icon: Youtube, label: 'YouTube' },
+];
 
 export function Footer() {
   return (
@@ -13,12 +21,28 @@ export function Footer() {
             <p className="mt-3 text-sm text-primary-300 leading-relaxed">
               O portal mais completo sobre Engenharia Biomédica no Brasil.
             </p>
-            <Link
-              href="/newsletter"
-              className="inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-500 rounded-md transition-colors"
-            >
-              Assinar newsletter
-            </Link>
+            <div className="flex justify-center mt-4">
+              <Link
+                href="/newsletter"
+                className="inline-flex items-center px-4 py-2 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-500 rounded-md transition-colors"
+              >
+                Assinar newsletter
+              </Link>
+            </div>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              {socialLinks.map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-primary-400 hover:text-teal-400 transition-colors"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Separator — visible only on lg */}
