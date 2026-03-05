@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 
 export const metadata: Metadata = {
-  title: 'Recursos e Referências — Engenharia Biomédica',
+  title: 'Recursos e Referências',
   description:
     'Links para os sites de referência em Engenharia Biomédica no Brasil e no mundo: SBEB, ANVISA, ABIMO, BMES, IEEE EMBS, FDA e mais.',
   alternates: { canonical: '/recursos' },

@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { ExcluirDadosForm } from './ExcluirDadosForm';
 
 export const metadata: Metadata = {
-  title: 'Excluir Meus Dados — Engenharia Biomédica',
+  title: 'Excluir Meus Dados',
   description:
     'Solicite a exclusão permanente dos seus dados pessoais conforme a LGPD Art. 18.',
   alternates: { canonical: '/excluir-dados' },

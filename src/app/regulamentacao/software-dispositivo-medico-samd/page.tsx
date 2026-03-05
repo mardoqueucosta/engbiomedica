@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ComingSoonPage } from '@/components/ui/ComingSoonPage';
 
 export const metadata: Metadata = {
-  title: 'SaMD — Software como Dispositivo Médico — Regulamentação — Engenharia Biomédica',
+  title: 'SaMD — Software como Dispositivo Médico — Regulamentação',
   description: 'Guia completo sobre Software como Dispositivo Médico (SaMD): classificação, requisitos regulatórios, processo ANVISA e boas práticas.',
   alternates: { canonical: '/regulamentacao/software-dispositivo-medico-samd' },
 };

@@ -127,7 +127,7 @@ export const artigo: Artigo = {
 
 <h2>Regulação: FDA vs ANVISA</h2>
 
-<p>O ambiente regulatório determina como dispositivos médicos chegam ao mercado e impacta diretamente o trabalho do engenheiro biomédico em <a href="/artigos/assuntos-regulatorios-dispositivos-medicos">assuntos regulatórios</a>.</p>
+<p>O ambiente regulatório determina como dispositivos médicos chegam ao mercado e impacta diretamente o trabalho do engenheiro biomédico em <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">assuntos regulatórios</a>.</p>
 
 <h3>FDA: o modelo americano</h3>
 
@@ -140,7 +140,7 @@ export const artigo: Artigo = {
 
 <h3>ANVISA: o modelo brasileiro</h3>
 
-<p>A <a href="/artigos/anvisa-dispositivos-medicos-guia">ANVISA</a> classifica dispositivos em <strong>4 classes de risco</strong> (I, II, III e IV) sob a <a href="/artigos/rdc-751-2022-classificacao-registro">RDC 751/2022</a>. O processo de registro brasileiro é frequentemente considerado mais burocrático, mas avanços recentes estão mudando esse cenário. A <strong>IN 290/2024</strong> permite que a ANVISA aceite aprovações de agências estrangeiras de referência — incluindo FDA, Health Canada, TGA (Austrália) e PMDA (Japão) — agilizando registros de produtos já aprovados internacionalmente.</p>
+<p>A <a href="/artigos/anvisa-dispositivos-medicos-guia-2026">ANVISA</a> classifica dispositivos em <strong>4 classes de risco</strong> (I, II, III e IV) sob a <a href="/artigos/rdc-751-2022-classificacao-registro">RDC 751/2022</a>. O processo de registro brasileiro é frequentemente considerado mais burocrático, mas avanços recentes estão mudando esse cenário. A <strong>IN 290/2024</strong> permite que a ANVISA aceite aprovações de agências estrangeiras de referência — incluindo FDA, Health Canada, TGA (Austrália) e PMDA (Japão) — agilizando registros de produtos já aprovados internacionalmente.</p>
 
 <p>Em inteligência artificial aplicada à saúde, a ANVISA registra aproximadamente <strong>100 dispositivos com IA</strong>, número significativamente menor que os 1.250+ da FDA, refletindo diferenças de mercado e de maturidade regulatória.</p>
 

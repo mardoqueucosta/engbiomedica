@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { UnsubscribeForm } from './UnsubscribeForm';
 
 export const metadata: Metadata = {
-  title: 'Cancelar inscrição — Engenharia Biomédica',
+  title: 'Cancelar inscrição',
   description: 'Cancele sua inscrição na newsletter de Engenharia Biomédica.',
 };
 

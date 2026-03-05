@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ComingSoonPage } from '@/components/ui/ComingSoonPage';
 
 export const metadata: Metadata = {
-  title: 'Manutenção Hospitalar — Equipamentos Hospitalares — Engenharia Biomédica',
+  title: 'Manutenção Hospitalar — Equipamentos Hospitalares',
   description: 'Guia técnico sobre manutenção hospitalar: especificações, boas práticas, protocolos e recursos para engenheiros clínicos e gestores hospitalares.',
   alternates: { canonical: '/equipamentos/manutencao-hospitalar' },
 };

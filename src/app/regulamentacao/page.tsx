@@ -4,7 +4,7 @@ import { Shield, FileCheck, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 
 export const metadata: Metadata = {
-  title: 'Regulamentação — Engenharia Biomédica',
+  title: 'Regulamentação',
   description: 'Regulamentação profissional (CONFEA/CREA), dispositivos médicos (ANVISA) e normas técnicas (IEC 60601, ISO 13485) da Engenharia Biomédica no Brasil.',
   alternates: { canonical: '/regulamentacao' },
   openGraph: {

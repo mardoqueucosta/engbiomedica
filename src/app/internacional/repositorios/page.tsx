@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 
 export const metadata: Metadata = {
-  title: 'Repositórios Acadêmicos — Engenharia Biomédica',
+  title: 'Repositórios Acadêmicos',
   description:
     'Os 10 maiores repositórios acadêmicos para pesquisa em Engenharia Biomédica: PubMed, Scopus, IEEE Xplore, Web of Science, Compendex e mais.',
   alternates: { canonical: '/internacional/repositorios' },

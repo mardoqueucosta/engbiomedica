@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 
 export const metadata: Metadata = {
-  title: 'Glossário — Engenharia Biomédica',
+  title: 'Glossário',
   description:
     'Glossário de termos técnicos de Engenharia Biomédica: regulamentação (ANVISA, CREA), dispositivos médicos, certificações, normas e mercado.',
   alternates: { canonical: '/glossario' },

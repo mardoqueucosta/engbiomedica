@@ -5,7 +5,7 @@ import { ContatoForm } from '@/components/forms/ContatoForm';
 import { Mail, MessageSquare, MapPin, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contato — Engenharia Biomédica',
+  title: 'Contato',
   description:
     'Entre em contato com a equipe do portal engenhariabiomedica.com. Dúvidas, sugestões, parcerias e colaborações.',
   alternates: { canonical: '/contato' },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 
 export const metadata: Metadata = {
-  title: 'Sobre o Portal — Engenharia Biomédica',
+  title: 'Sobre o Portal',
   description:
     'Missão, equipe e metodologia editorial do portal engenhariabiomedica.com — a referência sobre Engenharia Biomédica no Brasil.',
   alternates: { canonical: '/sobre' },

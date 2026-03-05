@@ -131,7 +131,7 @@ export const artigo: Artigo = {
 
 <p>A ANVISA é reconhecida internacionalmente como uma agência de referência entre países em desenvolvimento. Desde 2016, a agência integra o <strong>ICH (International Council for Harmonisation)</strong> como membro regulatório, e participa ativamente do <strong>IMDRF</strong> e do <strong>PANDRH</strong> (Rede Pan-Americana de Harmonização da Regulamentação Farmacêutica).</p>
 
-<p>Em 2026, a ANVISA implementou o sistema de <a href="/artigos/anvisa-aprova-sistema-para-rastreamento-e-identificacao-de-d">Identificação Única de Dispositivo (IUD)</a>, alinhando o Brasil ao padrão internacional de rastreabilidade adotado pelo FDA (UDI) e pela União Europeia (UDI-MDR). Essa iniciativa representa um marco na convergência regulatória brasileira com os mercados internacionais.</p>
+<p>Em 2026, a ANVISA implementou o sistema de <a href="/artigos/anvisa-aprova-sistema-de-rastreamento-e-identificacao-de-dis">Identificação Única de Dispositivo (IUD)</a>, alinhando o Brasil ao padrão internacional de rastreabilidade adotado pelo FDA (UDI) e pela União Europeia (UDI-MDR). Essa iniciativa representa um marco na convergência regulatória brasileira com os mercados internacionais.</p>
 
 <p>Para engenheiros biomédicos que desejam <a href="/artigos/engenharia-biomedica-eua-comparativo">atuar internacionalmente</a>, compreender o sistema regulatório da ANVISA é fundamental, pois muitas multinacionais buscam profissionais familiarizados com múltiplos frameworks regulatórios.</p>
 

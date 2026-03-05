@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
 export const metadata: Metadata = {
-  title: 'Mercado de Trabalho — Engenharia Biomédica',
+  title: 'Mercado de Trabalho',
   description: 'Mercado de dispositivos médicos no Brasil e EUA. Empresas, healthtechs, hubs, eventos e panorama internacional. R$ 26,1 bilhões em 2024.',
   alternates: { canonical: '/mercado' },
   openGraph: {

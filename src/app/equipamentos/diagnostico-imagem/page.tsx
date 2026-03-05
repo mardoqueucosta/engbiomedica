@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ComingSoonPage } from '@/components/ui/ComingSoonPage';
 
 export const metadata: Metadata = {
-  title: 'Diagnóstico por Imagem — Equipamentos Hospitalares — Engenharia Biomédica',
+  title: 'Diagnóstico por Imagem — Equipamentos Hospitalares',
   description: 'Guia técnico sobre equipamentos de diagnóstico por imagem: especificações, manutenção, boas práticas e recursos para engenheiros clínicos e gestores hospitalares.',
   alternates: { canonical: '/equipamentos/diagnostico-imagem' },
 };

@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Inscrição Confirmada — Engenharia Biomédica',
+  title: 'Inscrição Confirmada',
   description: 'Sua inscrição na newsletter de Engenharia Biomédica foi confirmada com sucesso.',
 };
 

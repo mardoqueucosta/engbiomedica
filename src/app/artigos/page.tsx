@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/Badge';
 import { listaArtigos } from '@/data/artigos';
 
 export const metadata: Metadata = {
-  title: 'Artigos — Engenharia Biomédica',
+  title: 'Artigos',
   description:
     'Artigos, análises e guias sobre tendências, carreira e inovação em Engenharia Biomédica no Brasil.',
   alternates: {

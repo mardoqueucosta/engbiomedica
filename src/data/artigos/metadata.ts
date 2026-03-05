@@ -628,7 +628,7 @@ export const artigosMeta: ArtigoMeta[] = [
   {
     slug: 'wearables-saude-brasil',
     titulo: 'Wearables de Saúde: Engenharia, Regulamentação e Mercado no Brasil',
-    resumo: '',
+    resumo: 'O mercado global de wearables saúde atingiu US$ 41 bilhões em 2024. Mapeamos sensores, regulamentação ANVISA/FDA e oportunidades para engenheiros biomédicos.',
     categoria: 'Inovação',
     categoriaVariant: 'amber',
     data: '2026-02-22',

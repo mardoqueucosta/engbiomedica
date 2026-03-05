@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ComingSoonPage } from '@/components/ui/ComingSoonPage';
 
 export const metadata: Metadata = {
-  title: 'Publicação Científica — Pesquisa — Engenharia Biomédica',
+  title: 'Publicação Científica — Pesquisa',
   description: 'Guia de publicação científica para pesquisadores e pós-graduandos em Engenharia Biomédica no Brasil: revistas, fator de impacto e boas práticas.',
   alternates: { canonical: '/pesquisa/publicacao-cientifica' },
 };

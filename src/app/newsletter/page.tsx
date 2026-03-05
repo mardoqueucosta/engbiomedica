@@ -5,7 +5,7 @@ import { NewsletterForm } from '@/components/forms/NewsletterForm';
 import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Newsletter — Engenharia Biomédica',
+  title: 'Newsletter',
   description:
     'Receba artigos, dados de mercado, eventos e oportunidades sobre Engenharia Biomédica diretamente no seu e-mail. Gratuito e sem spam.',
   alternates: { canonical: '/newsletter' },

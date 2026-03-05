@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade — Engenharia Biomédica',
+  title: 'Política de Privacidade',
   description:
     'Política de Privacidade e proteção de dados pessoais do portal engenhariabiomedica.com, em conformidade com a LGPD.',
   alternates: { canonical: '/privacidade' },

@@ -23,7 +23,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!meta) return { title: 'Artigo não encontrado' };
   const ogImage = `/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`;
   return {
-    title: `${meta.titulo} — Engenharia Biomédica`,
+    title: meta.titulo,
     description: meta.resumo,
     alternates: {
       canonical: `/artigos/${params.slug}`,

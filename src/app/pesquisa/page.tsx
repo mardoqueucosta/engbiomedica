@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 
 export const metadata: Metadata = {
-  title: 'Pesquisa e Inovação — Engenharia Biomédica',
+  title: 'Pesquisa e Inovação',
   description: 'Centros de excelência, financiamento (EMBRAPII, FINEP, FAPESP) e fronteiras da pesquisa em Engenharia Biomédica no Brasil.',
   alternates: { canonical: '/pesquisa' },
   openGraph: {
