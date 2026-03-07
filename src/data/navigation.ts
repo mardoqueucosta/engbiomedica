@@ -45,6 +45,7 @@ export const mainNavigation: NavItem[] = [
       { label: 'Estágio e Primeiro Emprego', href: '/artigos/estagio-engenharia-biomedica-guia' },
       { label: 'Transição de Carreira', href: '/artigos/transicao-engenharia-biomedica' },
       { label: 'Livros Essenciais', href: '/artigos/livros-engenharia-biomedica' },
+      { label: 'Processo Seletivo PPGEB', href: '/carreira/processo-seletivo' },
     ],
   },
   {
@@ -184,5 +185,6 @@ export const footerNavigation = {
     { label: 'Roadmap', href: '/artigos/roadmap-carreira-engenheiro-biomedico' },
     { label: 'Livros', href: '/artigos/livros-engenharia-biomedica' },
     { label: 'Estágio', href: '/artigos/estagio-engenharia-biomedica-guia' },
+    { label: 'Processo Seletivo', href: '/carreira/processo-seletivo' },
   ],
 };

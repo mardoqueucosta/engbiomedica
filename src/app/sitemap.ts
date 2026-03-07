@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/areas-de-atuacao', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/equipamentos', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/carreira', changeFrequency: 'monthly' as const, priority: 0.7 },
+    { path: '/carreira/processo-seletivo', changeFrequency: 'weekly' as const, priority: 0.7 },
   ];
 
   const pages: MetadataRoute.Sitemap = staticPages.map((page) => ({
