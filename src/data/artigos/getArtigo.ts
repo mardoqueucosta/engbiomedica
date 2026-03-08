@@ -2,7 +2,7 @@
  * Carrega o conteúdo completo de um artigo por slug.
  * Usado apenas em [slug]/page.tsx — evita carregar todos os artigos no bundle.
  *
- * Modo híbrido: tenta .mdx primeiro (via gray-matter), fallback para .ts (lazy import).
+ * Lê arquivos .mdx com frontmatter YAML via gray-matter.
  */
 import fs from 'fs';
 import path from 'path';
@@ -11,101 +11,21 @@ import { Artigo } from './types';
 
 const articlesDir = path.join(process.cwd(), 'src/data/artigos');
 
-const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
-  'guia-engenharia-biomedica': () => import('./guia-engenharia-biomedica'),
-  'historia-engenharia-biomedica-brasil': () => import('./historia-engenharia-biomedica-brasil'),
-  'normas-tecnicas-engenharia-biomedica': () => import('./normas-tecnicas-engenharia-biomedica'),
-  'tendencias-futuro-engenharia-biomedica': () => import('./tendencias-futuro-engenharia-biomedica'),
-  'medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp': () => import('./medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp'),
-  'dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone': () => import('./dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone'),
-  'qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp': () => import('./qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp'),
-  'novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr': () => import('./novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr'),
-  'sensores-vestiveis-saude-2026': () => import('./sensores-vestiveis-saude-2026'),
-  'ressonancia-magnetica-ge-healthcare-signa-fda-2026': () => import('./ressonancia-magnetica-ge-healthcare-signa-fda-2026'),
-  'engenharia-biomedica-vale-a-pena-v2': () => import('./engenharia-biomedica-vale-a-pena-v2'),
-  'quanto-ganha-engenheiro-biomedico-2026': () => import('./quanto-ganha-engenheiro-biomedico-2026'),
-  'todas-faculdades-engenharia-biomedica-brasil-ranking': () => import('./todas-faculdades-engenharia-biomedica-brasil-ranking'),
-  'grade-curricular-engenharia-biomedica-5-anos': () => import('./grade-curricular-engenharia-biomedica-5-anos'),
-  'diferenca-biomedicina-engenharia-biomedica-guia': () => import('./diferenca-biomedicina-engenharia-biomedica-guia'),
-  'pos-graduacao-mestrado-doutorado-engenharia-biomedica': () => import('./pos-graduacao-mestrado-doutorado-engenharia-biomedica'),
-  'nota-corte-engenharia-biomedica-sisu-2026': () => import('./nota-corte-engenharia-biomedica-sisu-2026'),
-  'mercado-trabalho-engenharia-biomedica-dados': () => import('./mercado-trabalho-engenharia-biomedica-dados'),
-  'engenharia-biomedica-ead': () => import('./engenharia-biomedica-ead'),
-  'estagio-engenharia-biomedica-guia': () => import('./estagio-engenharia-biomedica-guia'),
-  'ideias-tcc-engenharia-biomedica': () => import('./ideias-tcc-engenharia-biomedica'),
-  'engenharia-clinica-guia-completo': () => import('./engenharia-clinica-guia-completo'),
-  'como-ser-engenheiro-clinico': () => import('./como-ser-engenheiro-clinico'),
-  'diferenca-engenharia-biomedica-engenharia-clinica': () => import('./diferenca-engenharia-biomedica-engenharia-clinica'),
-  'instrumentacao-biomedica': () => import('./instrumentacao-biomedica'),
-  'processamento-sinais-biomedicos-python': () => import('./processamento-sinais-biomedicos-python'),
-  'processamento-imagens-medicas': () => import('./processamento-imagens-medicas'),
-  'engenharia-reabilitacao-proteses': () => import('./engenharia-reabilitacao-proteses'),
-  'o-que-faz-engenheiro-biomedico-9-caminhos': () => import('./o-que-faz-engenheiro-biomedico-9-caminhos'),
-  'engenharia-tecidos-bioimpressao-3d': () => import('./engenharia-tecidos-bioimpressao-3d'),
-  'neuroengenharia-bci': () => import('./neuroengenharia-bci'),
-  'informatica-saude-his-prontuario': () => import('./informatica-saude-his-prontuario'),
-  'mercado-dispositivos-medicos-brasil-dados': () => import('./mercado-dispositivos-medicos-brasil-dados'),
-  'empresas-dispositivos-medicos-brasil': () => import('./empresas-dispositivos-medicos-brasil'),
-  'healthtechs-mapa-brasil': () => import('./healthtechs-mapa-brasil'),
-  'ia-saude-brasil': () => import('./ia-saude-brasil'),
-  'telemedicina-brasil': () => import('./telemedicina-brasil'),
-  'wearables-saude-brasil': () => import('./wearables-saude-brasil'),
-  'samd-software-dispositivo-medico': () => import('./samd-software-dispositivo-medico'),
-  'financiamento-inovacao-saude': () => import('./financiamento-inovacao-saude'),
-  'rdc-751-2022-classificacao-registro': () => import('./rdc-751-2022-classificacao-registro'),
-  'rdc-665-2022-boas-praticas': () => import('./rdc-665-2022-boas-praticas'),
-  'registro-crea-engenheiro-biomedico-guia': () => import('./registro-crea-engenheiro-biomedico-guia'),
-  'iso-13485-dispositivos-medicos': () => import('./iso-13485-dispositivos-medicos'),
-  'iso-14971-gestao-risco': () => import('./iso-14971-gestao-risco'),
-  'iec-60601-norma-equipamentos': () => import('./iec-60601-norma-equipamentos'),
-  'como-registrar-dispositivo-medico-anvisa': () => import('./como-registrar-dispositivo-medico-anvisa'),
-  'tecnovigilancia-brasil': () => import('./tecnovigilancia-brasil'),
-  'equipamentos-centro-cirurgico': () => import('./equipamentos-centro-cirurgico'),
-  'equipamentos-uti-guia': () => import('./equipamentos-uti-guia'),
-  'manutencao-equipamentos-hospitalares': () => import('./manutencao-equipamentos-hospitalares'),
-  'gestao-parque-tecnologico-hospitalar': () => import('./gestao-parque-tecnologico-hospitalar'),
-  'equipamentos-diagnostico-imagem': () => import('./equipamentos-diagnostico-imagem'),
-  'ventiladores-mecanicos-engenharia': () => import('./ventiladores-mecanicos-engenharia'),
-  'plano-manutencao-preventiva-hospitalar': () => import('./plano-manutencao-preventiva-hospitalar'),
-  'indicadores-engenharia-clinica-kpis': () => import('./indicadores-engenharia-clinica-kpis'),
-  'guia-compra-equipamentos-hospitalares': () => import('./guia-compra-equipamentos-hospitalares'),
-  'laboratorio-mercado-pesquisa-produto-medico': () => import('./laboratorio-mercado-pesquisa-produto-medico'),
-  'engenharia-biomedica-eua-comparativo': () => import('./engenharia-biomedica-eua-comparativo'),
-  'editais-financiamento-pesquisa-saude': () => import('./editais-financiamento-pesquisa-saude'),
-  'python-matlab-engenharia-biomedica': () => import('./python-matlab-engenharia-biomedica'),
-  'patentes-dispositivos-medicos-brasil': () => import('./patentes-dispositivos-medicos-brasil'),
-  'tendencias-pesquisa-engenharia-biomedica': () => import('./tendencias-pesquisa-engenharia-biomedica'),
-  'melhores-cursos-online-engenharia-clinica': () => import('./melhores-cursos-online-engenharia-clinica'),
-  'roadmap-carreira-engenheiro-biomedico': () => import('./roadmap-carreira-engenheiro-biomedico'),
-  'transicao-engenharia-biomedica': () => import('./transicao-engenharia-biomedica'),
-  'soft-skills-engenheiros-biomedicos': () => import('./soft-skills-engenheiros-biomedicos'),
-  'ingles-tecnico-engenharia-biomedica': () => import('./ingles-tecnico-engenharia-biomedica'),
-  'livros-engenharia-biomedica': () => import('./livros-engenharia-biomedica'),
-  'entrevista-emprego-engenheiro-biomedico': () => import('./entrevista-emprego-engenheiro-biomedico'),
-  'engenharia-genomica-crispr': () => import('./engenharia-genomica-crispr'),
-  'nanotecnologia-biomedica': () => import('./nanotecnologia-biomedica'),
-};
-
 export async function getArtigo(slug: string): Promise<Artigo | null> {
-  // 1. Tenta .mdx primeiro
   const mdxPath = path.join(articlesDir, `${slug}.mdx`);
-  if (fs.existsSync(mdxPath)) {
-    const raw = fs.readFileSync(mdxPath, 'utf-8');
-    const { data, content } = matter(raw);
-    return {
-      titulo: data.titulo,
-      resumo: data.resumo,
-      categoria: data.categoria,
-      categoriaVariant: data.categoriaVariant,
-      data: data.data,
-      leitura: data.leitura,
-      conteudo: content.trim(),
-    };
-  }
 
-  // 2. Fallback para lazy import .ts
-  const loader = artigoModules[slug];
-  if (!loader) return null;
-  const mod = await loader();
-  return mod.artigo;
+  if (!fs.existsSync(mdxPath)) return null;
+
+  const raw = fs.readFileSync(mdxPath, 'utf-8');
+  const { data, content } = matter(raw);
+
+  return {
+    titulo: data.titulo,
+    resumo: data.resumo,
+    categoria: data.categoria,
+    categoriaVariant: data.categoriaVariant,
+    data: data.data,
+    leitura: data.leitura,
+    conteudo: content.trim(),
+  };
 }
