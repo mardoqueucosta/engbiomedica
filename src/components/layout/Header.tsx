@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { mainNavigation } from '@/data/navigation';
 import { Logo } from './Logo';
+import { SearchModal } from '@/components/search/SearchModal';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -56,6 +57,7 @@ export function Header() {
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3">
+            <SearchModal />
             <Link
               href="/newsletter"
               className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-primary-700 rounded-lg hover:bg-primary-800 transition-colors"
