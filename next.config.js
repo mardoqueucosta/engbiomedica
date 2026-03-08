@@ -1,3 +1,5 @@
+const { withSentryConfig } = require('@sentry/nextjs');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
@@ -138,4 +140,15 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withSentryConfig(nextConfig, {
+  // Suprime logs do Sentry no build quando DSN não está configurado
+  silent: !process.env.NEXT_PUBLIC_SENTRY_DSN,
+
+  // Não envia source maps para o Sentry (evita precisar de SENTRY_AUTH_TOKEN)
+  sourcemaps: {
+    disable: true,
+  },
+
+  // Desabilita tunneling (não precisa para sites simples)
+  tunnelRoute: undefined,
+});

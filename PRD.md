@@ -383,12 +383,12 @@ Cada hub segue estrutura consistente:
 
 ### P1 — Importantes (risco operacional)
 
-| Dívida | Impacto SEO | Ação |
-|--------|------------|------|
-| **Sem testes automatizados** | Regressão silenciosa em cada deploy (ex: redirect quebrado = perda de ranking) | Vitest + Playwright |
-| **Sem monitoramento de erros** | Páginas retornando 500 ou 404 passam despercebidas por dias/semanas | Sentry para Next.js |
-| **`.env.example` incompleto** | Apenas 4 de 12+ variáveis documentadas; novo dev não consegue rodar o projeto | Documentar todas as variáveis |
-| **Sem "Artigos Relacionados"** | Cross-linking fraco entre artigos; reduz páginas/sessão e tempo no site | Componente com artigos da mesma categoria |
+| Dívida | Impacto SEO | Ação | Status |
+|--------|------------|------|--------|
+| ~~Sem testes automatizados~~ | ~~Regressão silenciosa em cada deploy~~ | ~~Vitest + Playwright~~ | **Concluído** (Março 2026) — 66 unit tests + 51 e2e tests (páginas, busca, redirects, SEO, sitemap) |
+| ~~Sem monitoramento de erros~~ | ~~Páginas 500/404 despercebidas~~ | ~~Sentry para Next.js~~ | **Concluído** (Março 2026) — @sentry/nextjs v10 com client/server/edge configs, global-error.tsx, desabilitado sem DSN |
+| ~~`.env.example` incompleto~~ | ~~Apenas 4 de 12+ variáveis~~ | ~~Documentar todas~~ | **Concluído** (Março 2026) — 12 variáveis documentadas no .env.example |
+| **Sem "Artigos Relacionados"** | Cross-linking fraco entre artigos; reduz páginas/sessão e tempo no site | Componente com artigos da mesma categoria | Pendente |
 
 ### P2 — Desejáveis (melhorias incrementais)
 
@@ -512,7 +512,7 @@ Cada hub segue estrutura consistente:
 | Acessibilidade | WCAG 2.1 AA | Parcial (sem auditoria formal) |
 | SEO | Schema.org completo, sitemaps, robots, canonical, OG dinâmico, 84 redirects | Implementado |
 | Responsividade | Mobile-first (testado em 375px) | Implementado |
-| Observabilidade | GA4 para analytics | Parcial (sem Sentry, sem logging) |
+| Observabilidade | GA4 para analytics + Sentry para erros | Implementado (Março 2026) |
 | Backup | Código em GitHub; banco no Railway | Parcial (sem backup automático de DB) |
 
 ---
@@ -767,8 +767,9 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 - [ ] Schema Article Series
 - [ ] Métricas de conteúdo (scroll depth, reading time)
 - [ ] Glossário expandido (20 → 50+ termos)
-- [ ] Testes de regressão SEO (redirects, schema, sitemap)
-- [ ] Monitoramento de erros (Sentry)
+- [x] Testes automatizados (Vitest 66 unit + Playwright 51 e2e — páginas, busca, 21 redirects, sitemap, SEO, Schema.org)
+- [x] Monitoramento de erros (@sentry/nextjs v10 — client/server/edge, global-error.tsx, desabilitado sem DSN)
+- [x] `.env.example` completo (12 variáveis: site, analytics, Sentry, newsletter, HMAC, Redis, Turnstile)
 - [ ] Botões de compartilhamento social
 - [ ] Sistema de comentários (Giscus)
 
@@ -781,3 +782,4 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 | 1.0 | Março 2026 | Mardoqueu Costa | Documento retroativo inicial |
 | 2.0 | Março 2026 | Mardoqueu Costa | Reescrita completa: dados auditados do código-fonte, SEO expandido como seção principal, roadmap 6 meses priorizado, variáveis de ambiente documentadas, mapa de 43 rotas, checklist SEO |
 | 2.1 | Março 2026 | Mardoqueu Costa | Migração completa: 88 artigos .ts → .mdx; metadata.ts e index.ts dinamizados; busca interna com Fuse.js (modal Ctrl+K + inline /artigos); remoção de travessões; TikTok no footer; ADRs 002/007/008 atualizados |
+| 2.2 | Março 2026 | Mardoqueu Costa | Testes automatizados (Vitest 66 unit + Playwright 51 e2e); Sentry v10 para monitoramento de erros; .env.example completo com 12 variáveis; global-error.tsx; P1 concluído (3/4 itens) |
