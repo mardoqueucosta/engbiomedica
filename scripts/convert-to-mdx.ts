@@ -36,6 +36,52 @@ function extractConteudo(raw: string): string {
   return '';
 }
 
+/**
+ * Remove travessões (—) do texto, substituindo por conectores naturais.
+ * Travessões quebram a fluidez da leitura nas redes sociais e devem ser
+ * substituídos por vírgulas, conjunções ou ponto final.
+ *
+ * Regras:
+ * 1. Travessão pareado (apositivo): " — texto — " → ", texto, "
+ * 2. Travessão após vírgula: ", — " → ", "
+ * 3. Travessão antes de vírgula: " — ," → ", "
+ * 4. Travessão simples entre frases: " — " → ", "
+ * 5. Limpa vírgulas duplicadas resultantes
+ */
+function removeTravessoes(text: string): string {
+  let result = text;
+
+  // 1. Travessão pareado: " — conteúdo — " → ", conteúdo, "
+  //    Captura pares de travessões com texto entre eles
+  result = result.replace(/ — ([^—\n]+?) — /g, ', $1, ');
+
+  // 2. Travessão após vírgula: ", — " → ", "
+  result = result.replace(/,\s*—\s+/g, ', ');
+
+  // 3. Travessão antes de vírgula: " — ," → ","
+  result = result.replace(/\s+—\s*,/g, ',');
+
+  // 4. Travessão simples restante: " — " → ", "
+  result = result.replace(/ — /g, ', ');
+
+  // 5. Travessão colado (sem espaço antes/depois)
+  result = result.replace(/—/g, ', ');
+
+  // Limpeza: vírgula duplicada ", ," ou ",,"
+  result = result.replace(/,\s*,/g, ',');
+
+  // Limpeza: espaço antes de vírgula " ,"
+  result = result.replace(/ ,/g, ',');
+
+  // Limpeza: vírgula após ponto ". ," → "."
+  result = result.replace(/\.\s*,/g, '.');
+
+  // Limpeza: vírgula no início de frase após tag HTML
+  result = result.replace(/(>)\s*,\s*/g, '$1 ');
+
+  return result;
+}
+
 function escapeYamlValue(val: string): string {
   // Se contém caracteres especiais YAML, envolve em aspas simples
   // Escapa aspas simples internas duplicando-as
@@ -81,10 +127,15 @@ async function convertArticle(slug: string) {
   const dataModificacao = meta?.dataModificacao;
   const imagens = meta?.imagens;
 
+  // Remover travessões do título, resumo e conteúdo
+  const tituloLimpo = removeTravessoes(titulo);
+  const resumoLimpo = removeTravessoes(resumo);
+  const conteudoLimpo = removeTravessoes(conteudo);
+
   // Montar frontmatter
   let frontmatter = '---\n';
-  frontmatter += `titulo: ${escapeYamlValue(titulo)}\n`;
-  frontmatter += `resumo: ${escapeYamlValue(resumo)}\n`;
+  frontmatter += `titulo: ${escapeYamlValue(tituloLimpo)}\n`;
+  frontmatter += `resumo: ${escapeYamlValue(resumoLimpo)}\n`;
   frontmatter += `categoria: ${escapeYamlValue(categoria)}\n`;
   frontmatter += `categoriaVariant: '${categoriaVariant}'\n`;
   frontmatter += `data: '${data}'\n`;
@@ -97,15 +148,15 @@ async function convertArticle(slug: string) {
     frontmatter += 'imagens:\n';
     for (const img of imagens) {
       frontmatter += `  - src: '${img.src}'\n`;
-      frontmatter += `    alt: ${escapeYamlValue(img.alt)}\n`;
-      frontmatter += `    caption: ${escapeYamlValue(img.caption)}\n`;
+      frontmatter += `    alt: ${escapeYamlValue(removeTravessoes(img.alt))}\n`;
+      frontmatter += `    caption: ${escapeYamlValue(removeTravessoes(img.caption))}\n`;
     }
   }
 
   frontmatter += '---\n';
 
   // Escrever .mdx
-  const mdxContent = `${frontmatter}\n${conteudo}\n`;
+  const mdxContent = `${frontmatter}\n${conteudoLimpo}\n`;
   fs.writeFileSync(mdxPath, mdxContent, 'utf-8');
 
   const stats = {
