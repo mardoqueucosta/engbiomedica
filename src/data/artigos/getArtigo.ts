@@ -1,13 +1,19 @@
 /**
  * Carrega o conteúdo completo de um artigo por slug.
  * Usado apenas em [slug]/page.tsx — evita carregar todos os artigos no bundle.
+ *
+ * Modo híbrido: tenta .mdx primeiro (via gray-matter), fallback para .ts (lazy import).
  */
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import { Artigo } from './types';
+
+const articlesDir = path.join(process.cwd(), 'src/data/artigos');
 
 const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'guia-engenharia-biomedica': () => import('./guia-engenharia-biomedica'),
   'historia-engenharia-biomedica-brasil': () => import('./historia-engenharia-biomedica-brasil'),
-  'areas-atuacao-engenharia-biomedica': () => import('./areas-atuacao-engenharia-biomedica'),
   'normas-tecnicas-engenharia-biomedica': () => import('./normas-tecnicas-engenharia-biomedica'),
   'tendencias-futuro-engenharia-biomedica': () => import('./tendencias-futuro-engenharia-biomedica'),
   'medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp': () => import('./medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp'),
@@ -47,14 +53,12 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'mercado-dispositivos-medicos-brasil-dados': () => import('./mercado-dispositivos-medicos-brasil-dados'),
   'empresas-dispositivos-medicos-brasil': () => import('./empresas-dispositivos-medicos-brasil'),
   'healthtechs-mapa-brasil': () => import('./healthtechs-mapa-brasil'),
-  'cirurgia-robotica-brasil': () => import('./cirurgia-robotica-brasil'),
   'ia-saude-brasil': () => import('./ia-saude-brasil'),
   'telemedicina-brasil': () => import('./telemedicina-brasil'),
   'wearables-saude-brasil': () => import('./wearables-saude-brasil'),
   'samd-software-dispositivo-medico': () => import('./samd-software-dispositivo-medico'),
   'financiamento-inovacao-saude': () => import('./financiamento-inovacao-saude'),
   'calendario-eventos-engbiomedica-saude-digital': () => import('./calendario-eventos-engbiomedica-saude-digital'),
-  'anvisa-dispositivos-medicos-guia-2026': () => import('./anvisa-dispositivos-medicos-guia-2026'),
   'rdc-751-2022-classificacao-registro': () => import('./rdc-751-2022-classificacao-registro'),
   'rdc-665-2022-boas-praticas': () => import('./rdc-665-2022-boas-praticas'),
   'certificacao-inmetro-equipamentos-medicos': () => import('./certificacao-inmetro-equipamentos-medicos'),
@@ -69,7 +73,6 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'manutencao-equipamentos-hospitalares': () => import('./manutencao-equipamentos-hospitalares'),
   'gestao-parque-tecnologico-hospitalar': () => import('./gestao-parque-tecnologico-hospitalar'),
   'equipamentos-diagnostico-imagem': () => import('./equipamentos-diagnostico-imagem'),
-  'bombas-infusao-tipos': () => import('./bombas-infusao-tipos'),
   'ventiladores-mecanicos-engenharia': () => import('./ventiladores-mecanicos-engenharia'),
   'plano-manutencao-preventiva-hospitalar': () => import('./plano-manutencao-preventiva-hospitalar'),
   'indicadores-engenharia-clinica-kpis': () => import('./indicadores-engenharia-clinica-kpis'),
@@ -83,7 +86,6 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
   'patentes-dispositivos-medicos-brasil': () => import('./patentes-dispositivos-medicos-brasil'),
   'tendencias-pesquisa-engenharia-biomedica': () => import('./tendencias-pesquisa-engenharia-biomedica'),
   'melhores-cursos-online-engenharia-clinica': () => import('./melhores-cursos-online-engenharia-clinica'),
-  'certificacoes-engenheiros-biomedicos': () => import('./certificacoes-engenheiros-biomedicos'),
   'roadmap-carreira-engenheiro-biomedico': () => import('./roadmap-carreira-engenheiro-biomedico'),
   'transicao-engenharia-biomedica': () => import('./transicao-engenharia-biomedica'),
   'soft-skills-engenheiros-biomedicos': () => import('./soft-skills-engenheiros-biomedicos'),
@@ -95,6 +97,23 @@ const artigoModules: Record<string, () => Promise<{ artigo: Artigo }>> = {
 };
 
 export async function getArtigo(slug: string): Promise<Artigo | null> {
+  // 1. Tenta .mdx primeiro
+  const mdxPath = path.join(articlesDir, `${slug}.mdx`);
+  if (fs.existsSync(mdxPath)) {
+    const raw = fs.readFileSync(mdxPath, 'utf-8');
+    const { data, content } = matter(raw);
+    return {
+      titulo: data.titulo,
+      resumo: data.resumo,
+      categoria: data.categoria,
+      categoriaVariant: data.categoriaVariant,
+      data: data.data,
+      leitura: data.leitura,
+      conteudo: content.trim(),
+    };
+  }
+
+  // 2. Fallback para lazy import .ts
   const loader = artigoModules[slug];
   if (!loader) return null;
   const mod = await loader();

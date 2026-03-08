@@ -1,13 +1,22 @@
-import { Artigo } from './types';
+---
+titulo: 'Bombas de Infusão: Tipos, Funcionamento, Calibração e Manutenção'
+resumo: 'Guia técnico completo sobre bombas de infusão — volumétricas, de seringa, elastoméricas, PCA e enterais — com mecanismos de acionamento, sistemas de segurança DERS, calibração IEC 60601-2-24, fabricantes brasileiros (Samtronic, Lifemed) e gestão do modelo de comodato para engenheiros clínicos e gestores hospitalares.'
+categoria: 'Profissão'
+categoriaVariant: 'coral'
+data: '2026-02-22'
+leitura: '17 min'
+imagens:
+  - src: '/artigos/bombas-infusao-tipos/image-1.webp'
+    alt: 'Torre com seis bombas de infusão hospitalares empilhadas — volumétricas e de seringa — ao lado de leito de UTI com telas ativas exibindo taxa e volume'
+    caption: 'Em leitos de UTI de alta complexidade, torres com quatro a seis bombas de infusão são a norma, exigindo gestão técnica rigorosa de calibração, manutenção e compatibilidade de equipes.'
+  - src: '/artigos/bombas-infusao-tipos/image-2.webp'
+    alt: 'Diagrama técnico comparativo dos mecanismos de bomba peristáltica linear, peristáltica rotativa e cassete de pistão utilizados em bombas de infusão hospitalares'
+    caption: 'O mecanismo de cassete de pistão com câmara de safira oferece a maior precisão de fluxo (±1%) e é utilizado nas bombas de seringa de alta criticidade para sedação e vasoativos.'
+  - src: '/artigos/bombas-infusao-tipos/image-3.webp'
+    alt: 'Técnico de engenharia clínica calibrando bomba de infusão volumétrica com analisador de fluxo Fluke IDA-4 em bancada de laboratório hospitalar mostrando erro de 0,2 por cento'
+    caption: 'A calibração com analisador de fluxo rastreável ao INMETRO deve ser realizada anualmente ou após qualquer manutenção corretiva, com tolerância máxima de ±5% conforme a IEC 60601-2-24.'
+---
 
-export const artigo: Artigo = {
-  titulo: 'Bombas de Infusão: Tipos, Funcionamento, Calibração e Manutenção',
-  resumo: 'Guia técnico completo sobre bombas de infusão — volumétricas, de seringa, elastoméricas, PCA e enterais — com mecanismos de acionamento, sistemas de segurança DERS, calibração IEC 60601-2-24, fabricantes brasileiros (Samtronic, Lifemed) e gestão do modelo de comodato para engenheiros clínicos e gestores hospitalares.',
-  categoria: 'Profissão',
-  categoriaVariant: 'coral',
-  data: '2026-02-22',
-  leitura: '17 min',
-  conteudo: `
 <p class="text-lg leading-relaxed mb-6">As bombas de infusão são o dispositivo médico ativo mais presente nos hospitais brasileiros: <strong>mais de 70% dos pacientes internados recebem alguma forma de terapia intravenosa controlada</strong> por esses equipamentos, que movimentam um mercado global de US$ 18,5 bilhões em 2024 com projeção de US$ 28,3 bilhões até 2030 — e cuja falha de calibração ou manutenção figura entre as principais causas de eventos adversos medicamentosos em ambiente hospitalar.</p>
 
 <p class="mb-6">Este artigo faz parte do nosso <a href="/artigos/engenharia-clinica-guia-completo">Guia Completo de Engenharia Clínica</a> e deve ser lido em conjunto com os artigos sobre <a href="/artigos/equipamentos-uti-guia">equipamentos de UTI</a> e <a href="/artigos/manutencao-equipamentos-hospitalares">manutenção de equipamentos hospitalares</a>, que contextualizam a bomba de infusão dentro do parque tecnológico hospitalar mais amplo.</p>
@@ -360,5 +369,3 @@ export const artigo: Artigo = {
   <li><a href="https://www.fda.gov/medical-devices/infusion-pumps" rel="noopener noreferrer" target="_blank">FDA — Infusion Pumps: Safety Communications and Guidance Documents</a></li>
   <li><a href="https://www.flukebiomedical.com/products/biomedical-test-equipment/infusion-device-analyzers" rel="noopener noreferrer" target="_blank">Fluke Biomedical — Infusion Device Analyzers IDA-4 e IDA-5: Especificações e Manuais</a></li>
 </ul>
-`,
-};
