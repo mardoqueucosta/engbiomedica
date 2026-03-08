@@ -281,7 +281,7 @@ export const artigosMeta: ArtigoMeta[] = [
     categoria: 'Formação',
     categoriaVariant: 'primary',
     data: '2026-02-23',
-    dataModificacao: '2026-02-23',
+    dataModificacao: '2026-03-08',
     leitura: '26 min',
     imagens: [
       { src: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-1.webp', alt: 'Mapa dos programas de pós-graduação em Engenharia Biomédica no Brasil, com conceitos CAPES e níveis.', caption: 'Visão geral dos programas de pós-graduação stricto sensu em Engenharia Biomédica e Bioengenharia no Brasil, com seus conceitos CAPES e níveis de mestrado e doutorado.' },

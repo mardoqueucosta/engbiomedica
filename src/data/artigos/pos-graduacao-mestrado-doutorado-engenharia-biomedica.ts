@@ -32,21 +32,61 @@ export const artigo: Artigo = {
 <tr>
 <td><strong>UFRJ – PEB/COPPE</strong></td>
 <td>Rio de Janeiro / RJ</td>
-<td>1970</td>
-<td>6 (PROEX)</td>
+<td>1971</td>
+<td>7 (PROEX, prelim.)</td>
 <td>MA + DO</td>
 <td>Pública federal</td>
 </tr>
 <tr>
 <td><strong>USP – Bioengenharia (São Carlos)</strong></td>
 <td>São Carlos / SP</td>
-<td>2002</td>
+<td>1977</td>
 <td>4</td>
 <td>MA + DO</td>
 <td>Pública estadual</td>
 </tr>
 <tr>
-<td><strong>UFABC – Bioengenharia</strong></td>
+<td><strong>UFU – Eng. Biomédica</strong></td>
+<td>Uberlândia / MG</td>
+<td>2013</td>
+<td>4 (est.)</td>
+<td>MA + DO</td>
+<td>Pública federal</td>
+</tr>
+<tr>
+<td><strong>UMC – Eng. Biomédica</strong></td>
+<td>Mogi das Cruzes / SP</td>
+<td>—</td>
+<td>4 (est.)</td>
+<td>MA + DO</td>
+<td>Privada</td>
+</tr>
+<tr>
+<td><strong>UNIVAP – Eng. Biomédica</strong></td>
+<td>São José dos Campos / SP</td>
+<td>—</td>
+<td>4 (est.)</td>
+<td>MA + DO</td>
+<td>Privada comunitária</td>
+</tr>
+<tr>
+<td><strong>Universidade Brasil – Eng. Biomédica</strong></td>
+<td>Fernandópolis–SJC / SP</td>
+<td>2009</td>
+<td>4 (est.)</td>
+<td>MA + DO</td>
+<td>Privada</td>
+</tr>
+<tr>
+<td><strong>Anhembi Morumbi – Eng. Biomédica</strong></td>
+<td>São José dos Campos / SP</td>
+<td>—</td>
+<td>4 (est.)</td>
+<td>MA + DO</td>
+<td>Privada</td>
+</tr>
+<tr>
+<td><strong>UFABC – Eng. Biomédica</strong></td>
 <td>Santo André / SP</td>
 <td>2013</td>
 <td>4</td>
@@ -54,81 +94,57 @@ export const artigo: Artigo = {
 <td>Pública federal</td>
 </tr>
 <tr>
-<td><strong>UTFPR – Eng. Biomédica (MP)</strong></td>
-<td>Curitiba / PR</td>
-<td>2014</td>
-<td>4</td>
-<td>MP</td>
-<td>Pública federal</td>
-</tr>
-<tr>
-<td><strong>UNIVAP – Bioengenharia</strong></td>
+<td><strong>UNIFESP – Eng. Biomédica</strong></td>
 <td>São José dos Campos / SP</td>
-<td>2001</td>
-<td>4</td>
-<td>MA + DO</td>
-<td>Privada</td>
-</tr>
-<tr>
-<td><strong>Universidade Brasil – Eng. Biomédica</strong></td>
-<td>São Paulo / SP</td>
-<td>2018</td>
-<td>4</td>
-<td>MA + DO</td>
-<td>Privada</td>
+<td>2016</td>
+<td>3</td>
+<td>MA</td>
+<td>Pública federal</td>
 </tr>
 <tr>
 <td><strong>UFPE – Eng. Biomédica</strong></td>
 <td>Recife / PE</td>
-<td>2005</td>
+<td>2012</td>
 <td>3</td>
-<td>MA + DO</td>
+<td>MA</td>
 <td>Pública federal</td>
 </tr>
 <tr>
-<td><strong>UFU – Eng. Biomédica</strong></td>
-<td>Uberlândia / MG</td>
-<td>2011</td>
-<td>3</td>
-<td>MA + DO</td>
-<td>Pública federal</td>
+<td><strong>ISD – Neuroengenharia</strong></td>
+<td>Macaíba / RN</td>
+<td>2013</td>
+<td>3 (est.)</td>
+<td>MA</td>
+<td>Privada s/ fins lucrativos</td>
 </tr>
 <tr>
 <td><strong>UnB – Eng. Biomédica</strong></td>
-<td>Brasília / DF</td>
+<td>Brasília (Gama) / DF</td>
 <td>2009</td>
 <td>3</td>
 <td>MA</td>
 <td>Pública federal</td>
 </tr>
 <tr>
-<td><strong>UNIFESP – Eng. Biomédica</strong></td>
-<td>São Paulo / SP</td>
-<td>2013</td>
-<td>3</td>
-<td>MA</td>
-<td>Pública federal</td>
-</tr>
-<tr>
-<td><strong>UMC – Bioengenharia</strong></td>
-<td>Mogi das Cruzes / SP</td>
-<td>2016</td>
-<td>3</td>
-<td>MA</td>
-<td>Privada</td>
-</tr>
-<tr>
-<td><strong>CPGEI/UTFPR – Eng. Elétrica e Informática (EB)</strong></td>
+<td><strong>UTFPR – Eng. Biomédica (MP)</strong></td>
 <td>Curitiba / PR</td>
-<td>1990</td>
-<td>7</td>
-<td>MA + DO</td>
+<td>2011</td>
+<td>4</td>
+<td>MP</td>
 <td>Pública federal</td>
+</tr>
+<tr>
+<td><strong>Universidade Brasil – Bioengenharia (MP)</strong></td>
+<td>Fernandópolis–SJC / SP</td>
+<td>—</td>
+<td>3 (est.)</td>
+<td>MP</td>
+<td>Privada</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Legenda:</strong> MA = Mestrado Acadêmico; DO = Doutorado; MP = Mestrado Profissional. O CPGEI/UTFPR é listado aqui por ser o único programa conceito 7 com subárea formal em Engenharia Biomédica; os demais programas de Eng. Elétrica conceito 5–7 com linhas em EB são detalhados na seção "Programas afins".</p>
+<p><strong>Legenda:</strong> MA = Mestrado Acadêmico; DO = Doutorado; MP = Mestrado Profissional; (est.) = nota estimada (programas com doutorado exigem nota mínima 4); (prelim.) = resultado preliminar da Quadrienal 2021–2024, divulgado em janeiro de 2026. Programas de Engenharia Elétrica conceito 5–7 com linhas expressivas em EB (FEEC/UNICAMP, EPUSP e outros) são detalhados na seção "Programas afins".</p>
 
 <figure>
 <img src="/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica/image-1.webp" alt="Mapa dos programas de pós-graduação em Engenharia Biomédica no Brasil, com conceitos CAPES e níveis." width="1024" height="576" loading="lazy" decoding="async">
@@ -191,17 +207,17 @@ export const artigo: Artigo = {
 
 <p>Na estrutura de avaliação da CAPES — que é distinta da Tabela de Áreas de Conhecimento — os programas de pós-graduação são agrupados em <strong>50 áreas de avaliação</strong>. A Engenharia Biomédica está alocada na área de avaliação <strong>Engenharias IV</strong> (Área 14), dentro do Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar.</p>
 
-<p>Engenharias IV abrange duas áreas básicas: <strong>Engenharia Elétrica</strong> e <strong>Engenharia Biomédica</strong>. O Documento de Área 2025–2028 descreve essa composição como complementar, reconhecendo denominações alternativas para programas de Engenharia Biomédica, como Bioengenharia e Neuroengenharia. Em dezembro de 2022, a área contava com <strong>93 PPGs reconhecidos</strong> (137 cursos: 77 mestrados acadêmicos, 13 mestrados profissionais e 47 doutorados), dos quais <strong>14 PPGs</strong> pertencem à área básica de Engenharia Biomédica (com 12 mestrados, 7 doutorados e 2 mestrados profissionais). O coordenador atual do ciclo 2025–2028 é <strong>Hypolito José Kalinowski</strong>.</p>
+<p>Engenharias IV abrange duas áreas básicas: <strong>Engenharia Elétrica</strong> e <strong>Engenharia Biomédica</strong>. O Documento de Área 2025–2028 descreve essa composição como complementar, reconhecendo denominações alternativas para programas de Engenharia Biomédica, como Bioengenharia e Neuroengenharia. Em dezembro de 2022, a área contava com <strong>93 PPGs reconhecidos</strong> (137 cursos: 77 mestrados acadêmicos, 13 mestrados profissionais e 47 doutorados), dos quais <strong>14 PPGs</strong> pertencem à área básica de Engenharia Biomédica, totalizando <strong>21 cursos</strong>: 12 mestrados acadêmicos, 7 doutorados e 2 mestrados profissionais. O coordenador atual do ciclo 2025–2028 é <strong>Hypolito José Kalinowski</strong>.</p>
 
 <p>Não há dispersão entre áreas de avaliação: todos os programas de Engenharia Biomédica identificados estão em Engenharias IV — nenhum está classificado em Engenharias III, Interdisciplinar ou Biotecnologia. Porém, o Documento de Área reconhece que temáticas comuns à Engenharias IV aparecem também em programas de Engenharias II, III e Interdisciplinar, evidenciando o caráter intrinsecamente multidisciplinar da área.</p>
 
 <h2>PEB/COPPE/UFRJ: o programa de referência no Brasil</h2>
 
-<p>O Programa de Engenharia Biomédica da COPPE/UFRJ (PEB) é o mais antigo, maior e mais bem avaliado programa específico de Engenharia Biomédica do país. Fundado em 1970, o PEB acumula mais de <strong>548 mestres e 178 doutores formados</strong>, representando a maior parte da massa crítica de pesquisadores e profissionais sênior da área no Brasil.</p>
+<p>O Programa de Engenharia Biomédica da COPPE/UFRJ (PEB) é o mais antigo, maior e mais bem avaliado programa específico de Engenharia Biomédica do país. Fundado em 1971, o PEB acumula mais de <strong>509 mestres e 165 doutores formados</strong>, representando a maior parte da massa crítica de pesquisadores e profissionais sênior da área no Brasil.</p>
 
-<h3>Conceito 6 e nível PROEX</h3>
+<h3>Conceito 7 e nível PROEX</h3>
 
-<p>Na avaliação quadrienal 2021–2024 da CAPES, o PEB manteve o <strong>conceito 6</strong> e integra o seleto grupo PROEX (Programa de Excelência Acadêmica), que agrupa os programas nacionais com desempenho próximo ao padrão de excelência internacional. No Brasil, menos de 7% dos programas de pós-graduação atingem conceito 6 ou 7. Para o PEB, isso se traduz em cotas adicionais de bolsas CAPES e maior competitividade para captação de recursos junto a agências nacionais e internacionais.</p>
+<p>Na avaliação quadrienal 2017–2020 da CAPES, o PEB recebeu <strong>conceito 6</strong>. Nos resultados preliminares da Quadrienal 2021–2024, divulgados em janeiro de 2026, o PEB retornou ao <strong>conceito 7</strong> — o máximo da escala —, reafirmando seu status no seleto grupo PROEX (Programa de Excelência Acadêmica), que agrupa os programas nacionais com desempenho de nível internacional. No Brasil, menos de 4% dos programas de pós-graduação atingem conceito 7. Para o PEB, isso se traduz em cotas maximizadas de bolsas CAPES e maior competitividade para captação de recursos junto a agências nacionais e internacionais.</p>
 
 <p>O PEB é o <strong>único programa específico de Engenharia Biomédica no país com status de excelência</strong> — todos os demais programas oscilam entre conceitos 3 e 4. A distância entre o PEB e o segundo grupo de programas é uma das características mais marcantes do panorama brasileiro.</p>
 
@@ -228,7 +244,7 @@ export const artigo: Artigo = {
 
 <h2>USP São Carlos – Bioengenharia: o programa interunidades</h2>
 
-<p>O Programa de Pós-Graduação Interunidades em Bioengenharia da USP, sediado em São Carlos, é uma iniciativa conjunta de três unidades: <strong>EESC</strong> (Escola de Engenharia de São Carlos), <strong>FMRP</strong> (Faculdade de Medicina de Ribeirão Preto) e <strong>IQSC</strong> (Instituto de Química de São Carlos). Essa estrutura tripartite é única no Brasil e reflete a natureza genuinamente interdisciplinar da bioengenharia.</p>
+<p>O Programa de Pós-Graduação Interunidades em Bioengenharia da USP, sediado em São Carlos e criado em 1977, é uma iniciativa conjunta de três unidades: <strong>EESC</strong> (Escola de Engenharia de São Carlos), <strong>FMRP</strong> (Faculdade de Medicina de Ribeirão Preto) e <strong>IQSC</strong> (Instituto de Química de São Carlos). Essa estrutura tripartite é única no Brasil e reflete a natureza genuinamente interdisciplinar da bioengenharia.</p>
 
 <p>Com <strong>conceito 4 na CAPES</strong>, o programa organiza sua oferta em três grandes áreas de concentração:</p>
 
@@ -240,9 +256,9 @@ export const artigo: Artigo = {
 
 <p>A proximidade geográfica entre São Carlos e Ribeirão Preto (cerca de 80 km) permite que estudantes do programa acessem tanto os laboratórios de engenharia do campus principal quanto as instalações hospitalares do HC-FMRP, um dos maiores hospitais-escola do Brasil. Isso cria uma rara combinação de rigor técnico em engenharia com acesso a volume clínico expressivo.</p>
 
-<h2>UFABC – Bioengenharia: o programa mais acessível do ABC Paulista</h2>
+<h2>UFABC – Engenharia Biomédica: o programa mais acessível do ABC Paulista</h2>
 
-<p>A UFABC, em Santo André, mantém um Programa de Pós-Graduação em Bioengenharia com <strong>conceito 4</strong> e características que o tornam especialmente atrativo para candidatos que conciliam trabalho e pesquisa:</p>
+<p>A UFABC, em Santo André, mantém o Programa de Pós-Graduação em Engenharia Biomédica (PPGEBM) com <strong>conceito 4</strong> (subiu de nota 3 para 4 na Quadrienal 2017–2020) e <strong>doutorado aprovado via APCN em setembro de 2023</strong> (Portaria CAPES nº 173/2023). É um programa jovem que demonstrou rápida evolução, com características que o tornam especialmente atrativo para candidatos que conciliam trabalho e pesquisa:</p>
 
 <ul>
 <li><strong>Três processos seletivos por ano</strong> — flexibilidade de entrada incomum em PPGs brasileiros</li>
@@ -255,7 +271,7 @@ export const artigo: Artigo = {
 
 <h2>UTFPR – Engenharia Biomédica: o mestrado profissional</h2>
 
-<p>A Universidade Tecnológica Federal do Paraná oferece em Curitiba um <strong>Mestrado Profissional em Engenharia Biomédica</strong> com conceito 4. O MP da UTFPR é voltado para profissionais já inseridos no mercado — engenheiros clínicos, físicos médicos, técnicos de equipamentos médicos — que buscam aprofundamento sem o compromisso de tempo integral exigido pelo mestrado acadêmico.</p>
+<p>A Universidade Tecnológica Federal do Paraná oferece em Curitiba, desde 2011, um <strong>Mestrado Profissional em Engenharia Biomédica</strong> com <strong>conceito 4</strong> (subiu de nota 3 para 4 na Quadrienal 2017–2020). É o <strong>único programa de Engenharia Biomédica de toda a região Sul</strong> e um dos dois mestrados profissionais da área no país. O MP da UTFPR é voltado para profissionais já inseridos no mercado — engenheiros clínicos, físicos médicos, técnicos de equipamentos médicos — que buscam aprofundamento sem o compromisso de tempo integral exigido pelo mestrado acadêmico.</p>
 
 <p>Paralelamente, a UTFPR mantém o <strong>CPGEI</strong> (Programa de Pós-Graduação em Engenharia Elétrica e Informática Industrial), com conceito <strong>7</strong> — o máximo da escala CAPES — que conta com uma subárea formal em Engenharia Biomédica. Para candidatos que buscam o mais alto nível de excelência acadêmica e não se importam com a denominação formal do programa, o CPGEI representa uma das melhores opções do país.</p>
 
@@ -263,11 +279,11 @@ export const artigo: Artigo = {
 
 <h3>UNIVAP – São José dos Campos (SP): conceito 4, mestrado e doutorado</h3>
 
-<p>A Universidade do Vale do Paraíba tem o programa privado mais bem avaliado da área entre as instituições tradicionais, com <strong>conceito 4</strong> e oferta de mestrado e doutorado. O programa se destaca na área de biofotônica, laserterapia e aplicações ópticas em medicina — herança da tradição tecnológica do Vale do Paraíba (região de São José dos Campos, polo aeroespacial e de defesa). A UNIVAP é uma das poucas instituições privadas com doutorado próprio em bioengenharia no Brasil.</p>
+<p>A Universidade do Vale do Paraíba, coordenada pelo IP&D, oferece mestrado e doutorado em Engenharia Biomédica com <strong>conceito 4</strong> e cerca de <strong>35 vagas por processo</strong> (20 ME + 15 DO). O programa se destaca nas áreas de materiais aplicados à engenharia biomédica e biofotônica, com 16 pesquisadores doutores permanentes — herança da tradição tecnológica do Vale do Paraíba (região de São José dos Campos, polo aeroespacial e de defesa). A UNIVAP é uma das poucas instituições privadas com doutorado próprio em bioengenharia no Brasil.</p>
 
-<h3>Universidade Brasil – São Paulo (SP): conceito 4, mestrado, doutorado e pós-doutorado</h3>
+<h3>Universidade Brasil – Fernandópolis–SJC (SP): conceito 4, mestrado, doutorado e pós-doutorado</h3>
 
-<p>A <strong>Universidade Brasil</strong> oferece um dos programas privados mais completos da área, com <strong>conceito 4 na CAPES</strong> e oferta de <strong>mestrado acadêmico</strong> (24 meses), <strong>doutorado acadêmico</strong> (48 meses) e <strong>pós-doutorado</strong> em Engenharia Biomédica — sendo uma das únicas instituições privadas com essa tríade completa. O programa funciona no campus de São Paulo em modalidade presencial.</p>
+<p>A <strong>Universidade Brasil</strong> (antiga UNICASTELO) oferece um dos programas privados mais completos da área, com <strong>conceito 4 na CAPES</strong> (recomendado CTC/CAPES em 2009) e oferta de <strong>mestrado acadêmico</strong> (24 meses), <strong>doutorado acadêmico</strong> (48 meses) e <strong>pós-doutorado</strong> em Engenharia Biomédica — sendo uma das únicas instituições privadas com essa tríade completa. Primeiros mestres formados em 2010 e primeiros doutores em 2012. O corpo docente conta com 14 doutores.</p>
 
 <p>O PPG em Engenharia Biomédica da UB organiza-se em <strong>três áreas de concentração</strong> com perfil diferenciado no panorama nacional:</p>
 
@@ -277,27 +293,39 @@ export const artigo: Artigo = {
 <li><strong>Nanociências, Plasmas e Ozônio</strong> — microbiologia; nanobiomateriais; ozonioterapia; plasma aplicado à saúde</li>
 </ul>
 
-<p>A Universidade Brasil aceita candidatos com graduação, tecnologia ou mestrado nas áreas de Ciências Exatas, Saúde e Biológicas. A mensalidade é a partir de <strong>R$ 1.833,34/mês</strong> no mestrado e <strong>R$ 2.291,66/mês</strong> no doutorado, com possibilidade de bolsas e financiamentos institucionais. A UB mantém também um <strong>Mestrado Profissional em Bioengenharia</strong> separado do programa acadêmico, ampliando as opções para diferentes perfis de candidatos.</p>
+<p>A Universidade Brasil aceita candidatos com graduação, tecnologia ou mestrado nas áreas de Ciências Exatas, Saúde e Biológicas. A mensalidade é a partir de <strong>R$ 1.833,34/mês</strong> no mestrado e <strong>R$ 2.291,66/mês</strong> no doutorado, com possibilidade de bolsas e financiamentos institucionais. A UB mantém também um <strong>Mestrado Profissional em Bioengenharia</strong> separado do programa acadêmico (detalhado adiante), com foco em fotobiomodulação e reabilitação, ampliando as opções para diferentes perfis de candidatos.</p>
 
 <h3>UFPE – Recife (PE): o programa referência no Nordeste</h3>
 
-<p>O Programa de Pós-Graduação em Engenharia Biomédica da UFPE, com <strong>conceito 3</strong> e oferta de <strong>mestrado e doutorado acadêmicos</strong>, é o único programa específico na região Nordeste e cobre uma lacuna estratégica importante. As linhas de pesquisa incluem processamento de biossinais, imagens médicas, instrumentação, informática em saúde, sistemas de telemedicina e IA aplicada — áreas de especial relevância para um estado com a dimensão territorial e a demanda hospitalar de Pernambuco. O documento CAPES descreve o PPGEB/UFPE como o programa mais novo entre os de Engenharia Biomédica, com forte presença de pesquisa em computação biomédica.</p>
+<p>O Programa de Pós-Graduação em Engenharia Biomédica da UFPE, criado em 2012, com <strong>conceito 3</strong> e oferta de <strong>mestrado acadêmico</strong>, é o programa de referência no Nordeste e cobre uma lacuna estratégica importante. Com mais de 50 mestres formados, as linhas de pesquisa incluem instrumentação biomédica, computação biomédica, biotecnologia e processamento de biossinais e imagens — áreas de especial relevância para um estado com a dimensão territorial e a demanda hospitalar de Pernambuco.</p>
 
 <h3>UFU – Uberlândia (MG): foco em instrumentação e engenharia clínica</h3>
 
-<p>O programa de Uberlândia, vinculado à FEELT, oferece <strong>mestrado e doutorado</strong> com <strong>conceito 3</strong> e interface direta com o HC-UFU (Hospital das Clínicas da UFU), permitindo projetos com aplicação clínica imediata. As linhas de pesquisa em instrumentação biomédica, processamento de sinais, engenharia clínica e avaliação de tecnologias em saúde se beneficiam da proximidade geográfica com o centro industrial do Triângulo Mineiro.</p>
+<p>O programa de Uberlândia, vinculado à FEELT, oferece <strong>mestrado acadêmico</strong> (desde 2013) <strong>e doutorado</strong> com <strong>conceito 4</strong> e interface direta com o HC-UFU (Hospital das Clínicas da UFU), permitindo projetos com aplicação clínica imediata. As linhas de pesquisa em engenharia clínica, tecnologias em radiações e imagens médicas, engenharia de reabilitação e biomecânica se beneficiam da proximidade geográfica com o centro industrial do Triângulo Mineiro. O programa mantém parcerias internacionais com a Université de Lorraine (França).</p>
 
-<h3>UnB – Brasília (DF): conceito 3, capital federal</h3>
+<h3>UnB/FGA – Brasília–Gama (DF): conceito 3, capital federal</h3>
 
-<p>A UnB mantém seu programa de Engenharia Biomédica com <strong>conceito 3</strong> e foco em tecnologias assistivas, telemedicina e engenharia clínica — áreas de alta relevância para quem busca carreira próxima ao setor regulatório e de políticas de saúde, dada a localização do programa na capital federal onde estão a ANVISA, o Ministério da Saúde e grande parte das estruturas regulatórias do setor de saúde brasileiro.</p>
+<p>A UnB mantém, na Faculdade UnB Gama (FGA), o único programa de Engenharia Biomédica do Centro-Oeste, com <strong>conceito 3</strong> e foco em tecnologias em engenharia biomédica, computação inteligente para pesquisa biomédica, políticas públicas em saúde e biotecnologia — áreas de alta relevância para quem busca carreira próxima ao setor regulatório e de políticas de saúde, dada a localização na capital federal onde estão a ANVISA, o Ministério da Saúde e grande parte das estruturas regulatórias do setor de saúde brasileiro.</p>
 
-<h3>UNIFESP – São Paulo (SP): conceito 3, base hospitalar forte</h3>
+<h3>UNIFESP/ICT – São José dos Campos (SP): conceito 3, instrumentação e biossistemas</h3>
 
-<p>A Universidade Federal de São Paulo, uma das maiores escolas médicas do Brasil, mantém um programa de Engenharia Biomédica com <strong>conceito 3</strong>. A força do programa está na integração com os hospitais da rede UNIFESP, que inclui o Hospital São Paulo (Hospital Universitário da UNIFESP) e outros serviços de saúde de alta complexidade — dando acesso a dados clínicos e pacientes em volume difícil de encontrar em outros programas.</p>
+<p>A Universidade Federal de São Paulo mantém, no seu Instituto de Ciência e Tecnologia (ICT) em São José dos Campos, um programa de Engenharia Biomédica com <strong>conceito 3</strong>, recomendado pela CAPES em 2016. As áreas de concentração incluem análise de sinais e imagens, instrumentos biomédicos e bioengenharia de biossistemas.</p>
 
-<h3>UMC – Mogi das Cruzes (SP): conceito 3, mestrado acadêmico</h3>
+<h3>UMC – Mogi das Cruzes (SP): conceito 4, mestrado e doutorado</h3>
 
-<p>A UMC (Universidade de Mogi das Cruzes), na Grande SP, mantém um programa de pós-graduação em Bioengenharia com <strong>conceito 3</strong> e foco em mestrado acadêmico. É uma opção para candidatos da região do Alto Tietê, com tradição em ciências da saúde e biomateriais.</p>
+<p>A UMC (Universidade de Mogi das Cruzes), na Grande SP, é uma das <strong>instituições pioneiras em Engenharia Biomédica no Brasil</strong>, com programa integrado desde os anos 1970. Oferece <strong>mestrado e doutorado</strong> com <strong>conceito 4</strong>, bolsas CAPES e CNPq disponíveis. O programa aceita graduados de exatas, biológicas, agrárias e saúde, sendo uma opção consolidada para candidatos da região do Alto Tietê e da Grande São Paulo.</p>
+
+<h3>Anhembi Morumbi – São José dos Campos (SP): conceito 4, mestrado e doutorado</h3>
+
+<p>A <strong>Universidade Anhembi Morumbi (UAM)</strong> oferece mestrado acadêmico (24 meses) e doutorado (48 meses) em Engenharia Biomédica com <strong>conceito 4</strong>, localizado no Parque Tecnológico de São José dos Campos. O programa conta com bolsas CAPES (PROSUC) e institucionais disponíveis para candidatos aprovados.</p>
+
+<h3>ISD/IIN-ELS – Macaíba (RN): o primeiro mestrado em Neuroengenharia do Brasil</h3>
+
+<p>O <strong>Instituto Santos Dumont</strong> (vinculado ao MEC) opera em Macaíba/RN o <strong>primeiro e único mestrado em Neuroengenharia do Brasil</strong> desde 2013. Gratuito e presencial, com duração de 24 meses, o programa tem <strong>conceito 3</strong> e foco em interface cérebro-máquina (ICM) e neuromodulação — uma das áreas de maior impacto social da engenharia biomédica contemporânea.</p>
+
+<h3>Universidade Brasil – Bioengenharia (MP): mestrado profissional em Fernandópolis–SJC (SP)</h3>
+
+<p>Além do programa acadêmico, a <strong>Universidade Brasil</strong> mantém um <strong>Mestrado Profissional em Bioengenharia</strong> separado, com aulas modulares e <strong>conceito 3</strong>. As áreas de concentração incluem fotobiomodulação, biomarcadores e sistemas diagnósticos, e reabilitação — perfil voltado a profissionais que buscam aprofundamento aplicado sem o compromisso de dedicação exclusiva do mestrado acadêmico.</p>
 
 <h2>Programas afins em Engenharia Elétrica com forte subárea em EB</h2>
 
@@ -337,18 +365,10 @@ export const artigo: Artigo = {
 <td>6–7</td>
 <td>Biophotonics, instrumentação médica, biossensores</td>
 </tr>
-<tr>
-<td>ISD – Neuroengenharia</td>
-<td>UFBA / Salvador (BA)</td>
-<td>—</td>
-<td>Neuroengenharia, interfaces cérebro-computador, reabilitação</td>
-</tr>
 </tbody>
 </table>
 
 <p>Um dado relevante é que o <strong>CEB/UNICAMP não constitui um PPG autônomo</strong> na Plataforma Sucupira. Os pesquisadores do Centro de Engenharia Biomédica atuam dentro do Programa de Pós-Graduação em Engenharia Elétrica da FEEC, onde Engenharia Biomédica funciona como <strong>área de concentração</strong>. Situação semelhante ocorre no CPGEI/UTFPR, que possui Engenharia Biomédica como uma de suas cinco áreas de pesquisa.</p>
-
-<p>O <strong>ISD</strong> (Instituto de Saúde Digital, iniciativa conjunta de UFBA, SENAI CIMATEC e outros parceiros) representa uma nova geração de programas híbridos, com foco em neuroengenharia e interfaces cérebro-computador aplicadas à reabilitação. Embora não seja um PPG stricto sensu tradicional, é uma das mais promissoras estruturas de pesquisa aplicada em EB no Brasil.</p>
 
 <p>Para candidatos sem preferência de denominação no diploma, a FEEC/UNICAMP (conceito 7) e a EPUSP (conceito 6) oferecem ambiente de pesquisa de nível internacional com acesso a financiamento e colaborações que poucos programas específicos de EB conseguem igualar.</p>
 
@@ -421,13 +441,13 @@ export const artigo: Artigo = {
 
 <p><strong>Fim do sistema Qualis Periódicos.</strong> Aprovado pelo CTC-ES em <strong>31 de outubro de 2024</strong>, o Qualis deixa de existir a partir do ciclo 2025–2028. A avaliação passará a ser <strong>centrada em artigos individuais</strong>, não mais em classificações de periódicos por área. Para os programas de Engenharia Biomédica, isso significa que a produção docente será mensurada por indicadores bibliométricos mais próximos dos padrões internacionais (h-index, fator de impacto, citações) em vez da classificação A1-C de revistas. Essa mudança impacta diretamente como a produção científica dos programas será comparada e ranqueada.</p>
 
-<p><strong>Resultados preliminares divulgados.</strong> A Avaliação Quadrienal 2021–2024 teve seus resultados preliminares divulgados em <strong>12 de janeiro de 2026</strong>. Os resultados finais ainda podem sofrer alterações após pedidos de reconsideração. Informações parciais indicam estabilidade nas notas da maioria dos programas de Engenharia Biomédica, com o PEB/UFRJ mantendo o conceito 6.</p>
+<p><strong>Resultados preliminares divulgados.</strong> A Avaliação Quadrienal 2021–2024 teve seus resultados preliminares divulgados em <strong>12 de janeiro de 2026</strong>. Os resultados finais ainda podem sofrer alterações após pedidos de reconsideração. O principal avanço: o <strong>PEB/UFRJ retornou ao conceito 7</strong> — o máximo da escala —, reafirmando-se como o único programa de excelência da área. Os demais programas apresentaram estabilidade nas notas.</p>
 
 <p>O novo <strong>Documento de Área Engenharias IV 2025–2028</strong> reforça a exigência de que pelo menos <strong>60% dos docentes permanentes</strong> tenham formação em Engenharia Elétrica e/ou Biomédica, e reconhece o desafio persistente de expandir a presença da Engenharia Biomédica para além do Sudeste e de elevar o conceito dos programas estagnados no nível de entrada (notas 3 e 4).</p>
 
 <h3>A assimetria regional</h3>
 
-<p>A <strong>assimetria regional</strong> é um desafio reconhecido pelo próprio Documento de Área: a maioria dos programas concentra-se no Sudeste (UFRJ, UNICAMP, UFU, UFABC, UNIVAP, Universidade Brasil, UMC, UNIFESP, USP), com presença limitada no Nordeste (UFPE), Sul (UTFPR) e Centro-Oeste (UnB). A região Norte permanece sem programa específico de pós-graduação em Engenharia Biomédica.</p>
+<p>A <strong>assimetria regional</strong> é um desafio reconhecido pelo próprio Documento de Área: <strong>10 dos 14 programas concentram-se no Sudeste</strong> (a maioria em São Paulo), com apenas 2 no Nordeste (UFPE em Recife e ISD em Macaíba/RN), 1 no Sul (UTFPR em Curitiba) e 1 no Centro-Oeste (UnB em Brasília). <strong>Sete estados brasileiros não possuem sequer um PPG em Engenharias IV</strong> (Acre, Alagoas, Amapá, Rondônia, Roraima, Mato Grosso e Tocantins), e a Engenharia Biomédica está ausente de toda a região Norte. São José dos Campos, sozinha, abriga três programas (UNIVAP, Anhembi Morumbi e UNIFESP).</p>
 
 <h2>Bolsas e financiamento: quanto você pode receber</h2>
 
@@ -749,7 +769,7 @@ export const artigo: Artigo = {
 
 <h3>Qual é o melhor programa de pós-graduação em Engenharia Biomédica do Brasil?</h3>
 
-<p>Depende do critério. Por conceito CAPES, o PEB/COPPE/UFRJ (conceito 6) é o mais bem avaliado entre os programas específicos de EB. Por excelência acadêmica global (incluindo programas afins), a FEEC/UNICAMP e o CPGEI/UTFPR têm conceito 7. Por localização e acesso hospitalar, a USP São Carlos (interunidades com FMRP) e a UNIFESP têm posições únicas. Não existe um "melhor" absoluto: o melhor programa é aquele que tem o orientador certo para o seu projeto de pesquisa.</p>
+<p>Depende do critério. Por conceito CAPES, o PEB/COPPE/UFRJ alcançou <strong>conceito 7</strong> (resultado preliminar da Quadrienal 2021–2024) — o único programa específico de EB com nota máxima, ao lado do CPGEI/UTFPR (Engenharia Elétrica com subárea em EB) e da FEEC/UNICAMP (também em EE). Por localização e acesso hospitalar, a USP São Carlos (interunidades com FMRP) e a UNIFESP têm posições únicas. Não existe um "melhor" absoluto: o melhor programa é aquele que tem o orientador certo para o seu projeto de pesquisa.</p>
 
 <h3>Quanto tempo leva o mestrado e o doutorado em Engenharia Biomédica?</h3>
 
