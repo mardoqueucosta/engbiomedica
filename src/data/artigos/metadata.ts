@@ -277,7 +277,7 @@ export const artigosMeta: ArtigoMeta[] = [
   {
     slug: 'pos-graduacao-mestrado-doutorado-engenharia-biomedica',
     titulo: 'Pós-Graduação em Engenharia Biomédica: Todos os Programas de Mestrado e Doutorado no Brasil [2026]',
-    resumo: 'Guia completo com todos os 14 PPGs específicos em Engenharia Biomédica e Bioengenharia no Brasil: conceitos CAPES, classificação oficial da área, vagas, bolsas (até R$ 7.140/mês), processo seletivo, linhas de pesquisa e saídas de carreira para mestres e doutores.',
+    resumo: 'Guia completo com todos os 13 PPGs de Engenharia Biomédica em Engenharias IV: conceitos CAPES, classificação oficial da área, vagas, bolsas (até R$ 7.140/mês), processo seletivo, linhas de pesquisa e saídas de carreira para mestres e doutores.',
     categoria: 'Formação',
     categoriaVariant: 'primary',
     data: '2026-02-23',
