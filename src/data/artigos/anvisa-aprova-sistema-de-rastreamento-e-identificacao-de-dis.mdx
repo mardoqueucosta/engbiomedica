@@ -1,32 +1,30 @@
-import { Artigo } from './types';
+---
+titulo: 'ANVISA Aprova Sistema de Rastreamento e Identificação de Dispositivos Médicos [2026]'
+resumo: 'A ANVISA aprovou sistema nacional de identificação única (IUD) para dispositivos médicos, alinhando o Brasil ao FDA e à União Europeia em rastreabilidade e segurança do paciente.'
+categoria: 'Regulamentação'
+categoriaVariant: 'coral'
+data: '2026-02-19'
+leitura: '9 min'
+---
 
-export const artigo: Artigo = {
-  titulo: 'ANVISA Aprova Sistema de Rastreamento e Identificação de Dispositivos Médicos [2026]',
-  resumo:
-    'A ANVISA aprovou sistema nacional de identificação única (IUD) para dispositivos médicos, alinhando o Brasil ao FDA e à União Europeia em rastreabilidade e segurança do paciente.',
-  categoria: 'Regulamentação',
-  categoriaVariant: 'coral',
-  data: '2026-02-19',
-  leitura: '9 min',
-  conteudo: `
-<p class="text-lg leading-relaxed mb-6"><strong>A <a href="https://www.gov.br/anvisa">ANVISA</a> aprovou, em fevereiro de 2026, um sistema nacional de rastreamento e identificação única de dispositivos médicos</strong>, estabelecendo obrigações graduais para fabricantes, importadores e distribuidores que comercializam produtos no mercado brasileiro. A medida coloca o Brasil ao lado de EUA, União Europeia e China entre os países com sistemas estruturados de rastreabilidade de equipamentos e insumos de saúde, fortalecendo a vigilância pós-mercado e a resposta a eventos adversos e recalls.</p>
+<p class="text-lg leading-relaxed mb-6"><strong>A <a href="https://www.gov.br/anvisa">ANVISA</a> aprovou, em fevereiro de 2026, um sistema nacional de rastreamento e identificação única de dispositivos médicos</strong> estabelecendo obrigações graduais para fabricantes, importadores e distribuidores que comercializam produtos no mercado brasileiro. A medida coloca o Brasil ao lado de EUA, União Europeia e China entre os países com sistemas estruturados de rastreabilidade de equipamentos e insumos de saúde, fortalecendo a vigilância pós-mercado e a resposta a eventos adversos e recalls.</p>
 
 <p class="mb-6">Este artigo faz parte do <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a>.</p>
 
 <h2>O que é o sistema de rastreamento aprovado pela ANVISA?</h2>
 
-<p>O sistema institui a <strong>Identificação Única de Dispositivos (IUD)</strong> — equivalente brasileiro do <em>Unique Device Identification</em> (UDI) —, um conjunto de regras, padrões técnicos e infraestrutura digital que permite identificar, localizar e monitorar dispositivos médicos em toda a cadeia de distribuição, da saída da fábrica ao uso no paciente final.</p>
+<p>O sistema institui a <strong>Identificação Única de Dispositivos (IUD)</strong> equivalente brasileiro do <em>Unique Device Identification</em> (UDI), um conjunto de regras, padrões técnicos e infraestrutura digital que permite identificar, localizar e monitorar dispositivos médicos em toda a cadeia de distribuição, da saída da fábrica ao uso no paciente final.</p>
 
 <p>O modelo é estruturado em dois identificadores complementares:</p>
 
 <ul>
-  <li><strong>Identificador do dispositivo (DI — <em>Device Identifier</em>):</strong> código fixo e exclusivo que identifica o fabricante e o modelo específico do produto. É o "endereço permanente" do item no sistema regulatório.</li>
-  <li><strong>Identificador de produção (PI — <em>Production Identifier</em>):</strong> código variável que registra número de lote, número de série, data de fabricação e data de validade. Muda conforme a produção, permitindo rastreamento por batelada.</li>
+  <li><strong>Identificador do dispositivo (DI, <em>Device Identifier</em>):</strong> código fixo e exclusivo que identifica o fabricante e o modelo específico do produto. É o "endereço permanente" do item no sistema regulatório.</li>
+  <li><strong>Identificador de produção (PI, <em>Production Identifier</em>):</strong> código variável que registra número de lote, número de série, data de fabricação e data de validade. Muda conforme a produção, permitindo rastreamento por batelada.</li>
 </ul>
 
-<p>Esses dados são expressos em <strong>suportes legíveis por máquina</strong> aplicados na embalagem: código de barras linear GS1-128, símbolo bidimensional DataMatrix (<a href="https://www.iso.org">ISO</a>/<a href="https://www.iec.ch">IEC</a> 16022) e, onde aplicável, etiquetas RFID. Para dispositivos implantáveis, a marcação direta no item — quando tecnicamente viável — também é prevista, seguindo padrões da série <strong>ISO 15223</strong>.</p>
+<p>Esses dados são expressos em <strong>suportes legíveis por máquina</strong> aplicados na embalagem: código de barras linear GS1-128, símbolo bidimensional DataMatrix (<a href="https://www.iso.org">ISO</a>/<a href="https://www.iec.ch">IEC</a> 16022) e, onde aplicável, etiquetas RFID. Para dispositivos implantáveis, a marcação direta no item, quando tecnicamente viável, também é prevista, seguindo padrões da série <strong>ISO 15223</strong>.</p>
 
-<p>Todas as informações são consolidadas em um <strong>banco de dados nacional de IUD</strong>, gerenciado pela ANVISA, acessível a autoridades sanitárias, profissionais de saúde e ao público em geral para consulta de dados não confidenciais.</p>
+<p>Todas as informações são consolidadas em um <strong>banco de dados nacional de IUD</strong> gerenciado pela ANVISA, acessível a autoridades sanitárias, profissionais de saúde e ao público em geral para consulta de dados não confidenciais.</p>
 
 <h2>Por que a rastreabilidade de dispositivos médicos é necessária?</h2>
 
@@ -48,7 +46,7 @@ export const artigo: Artigo = {
 <p>A operação do sistema envolve três camadas interdependentes:</p>
 
 <h3>1. Emissão do identificador</h3>
-<p>O fabricante ou importador obtém o código DI por meio de uma <strong>Agência Emissora credenciada pela ANVISA</strong>. No Brasil, a <strong>GS1 Brasil</strong> é a principal organização habilitada a emitir prefixos de empresa e identificadores de item (GTIN — <em>Global Trade Item Number</em>), que formam a base do DI. A HIBCC (<em>Health Industry Business Communications Council</em>) também é reconhecida internacionalmente como agência emissora alternativa.</p>
+<p>O fabricante ou importador obtém o código DI por meio de uma <strong>Agência Emissora credenciada pela ANVISA</strong>. No Brasil, a <strong>GS1 Brasil</strong> é a principal organização habilitada a emitir prefixos de empresa e identificadores de item (GTIN, <em>Global Trade Item Number</em>), que formam a base do DI. A HIBCC (<em>Health Industry Business Communications Council</em>) também é reconhecida internacionalmente como agência emissora alternativa.</p>
 
 <h3>2. Registro no banco de dados nacional</h3>
 <p>O titular do registro sanitário na ANVISA submete as informações cadastrais de cada produto ao banco de dados nacional de IUD. Os dados incluem denominação, fabricante, classe de risco, condição de esterilidade, usos indicados e informações de rotulagem. O conceito segue o modelo do <em>Global UDI Database</em> (GUDID, FDA) e do EUDAMED (Comissão Europeia), com compatibilidade de dados planejada entre os sistemas.</p>
@@ -58,7 +56,7 @@ export const artigo: Artigo = {
 
 <h2>Fases e cronograma de implementação</h2>
 
-<p>A ANVISA adotou uma <strong>estratégia faseada por classe de risco</strong>, priorizando os dispositivos de maior impacto sobre a segurança do paciente:</p>
+<p>A ANVISA adotou uma <strong>estratégia faseada por classe de risco</strong> priorizando os dispositivos de maior impacto sobre a segurança do paciente:</p>
 
 <table>
   <thead>
@@ -92,7 +90,7 @@ export const artigo: Artigo = {
   </tbody>
 </table>
 
-<p>Essa abordagem é consistente com a adotada pelo FDA e pela Comissão Europeia, e tem como objetivo dar tempo para que fabricantes — especialmente micro e pequenas empresas — se adaptem sem gerar desabastecimento de produtos críticos. A ANVISA prevê mecanismos de suporte técnico e orientações específicas para empresas de menor porte.</p>
+<p>Essa abordagem é consistente com a adotada pelo FDA e pela Comissão Europeia, e tem como objetivo dar tempo para que fabricantes, especialmente micro e pequenas empresas, se adaptem sem gerar desabastecimento de produtos críticos. A ANVISA prevê mecanismos de suporte técnico e orientações específicas para empresas de menor porte.</p>
 
 <h2>Comparação com sistemas internacionais</h2>
 
@@ -165,7 +163,7 @@ export const artigo: Artigo = {
   <li>Atualizar documentação técnica e registros sanitários quando houver mudanças relevantes de embalagem.</li>
 </ul>
 
-<p>O custo de adequação varia conforme o porte. A obtenção do prefixo GS1 para geração de GTINs tem anuidade que varia de <strong>R$ 800 a R$ 15.000</strong> dependendo do faturamento da empresa. Para grandes multinacionais com presença em múltiplos mercados, o custo incremental de adequação ao sistema brasileiro tende a ser marginal. Para micro e pequenas empresas — que representam cerca de <strong>60% dos fabricantes nacionais registrados na ANVISA</strong>, segundo a ABIMO —, o suporte técnico da agência será determinante para evitar descontinuidade de produtos.</p>
+<p>O custo de adequação varia conforme o porte. A obtenção do prefixo GS1 para geração de GTINs tem anuidade que varia de <strong>R$ 800 a R$ 15.000</strong> dependendo do faturamento da empresa. Para grandes multinacionais com presença em múltiplos mercados, o custo incremental de adequação ao sistema brasileiro tende a ser marginal. Para micro e pequenas empresas, que representam cerca de <strong>60% dos fabricantes nacionais registrados na ANVISA</strong> segundo a ABIMO, o suporte técnico da agência será determinante para evitar descontinuidade de produtos.</p>
 
 <h3>Para hospitais e operadoras de saúde</h3>
 
@@ -173,12 +171,12 @@ export const artigo: Artigo = {
 
 <ul>
   <li><strong>Automatização da gestão de estoque:</strong> leitura por scanner elimina conferências manuais e reduz erros de cadastro;</li>
-  <li><strong>Vinculação do dispositivo ao prontuário do paciente:</strong> fundamental para implantes — em caso de recall, o hospital saberá em minutos quais pacientes foram afetados;</li>
+  <li><strong>Vinculação do dispositivo ao prontuário do paciente:</strong> fundamental para implantes, em caso de recall, o hospital saberá em minutos quais pacientes foram afetados;</li>
   <li><strong>Resposta ágil a alertas e recalls:</strong> notificações da ANVISA poderão ser cruzadas automaticamente com o estoque e os registros de uso;</li>
   <li><strong>Controle de validade e rotatividade:</strong> redução de perdas por vencimento e melhora no giro de estoque.</li>
 </ul>
 
-<p>Experiências de hospitais que já adotam padrões GS1 para medicamentos mostram redução de <strong>30% a 50% nos erros de dispensação</strong> e ganhos expressivos de eficiência logística — resultados que tendem a se repetir com a extensão a dispositivos médicos.</p>
+<p>Experiências de hospitais que já adotam padrões GS1 para medicamentos mostram redução de <strong>30% a 50% nos erros de dispensação</strong> e ganhos expressivos de eficiência logística, resultados que tendem a se repetir com a extensão a dispositivos médicos.</p>
 
 <h2>O papel do engenheiro biomédico na implementação</h2>
 
@@ -196,7 +194,7 @@ export const artigo: Artigo = {
 <h2>Perguntas frequentes</h2>
 
 <h3>O que é o IUD e como ele se diferencia do UDI americano?</h3>
-<p>O IUD (<strong>Identificação Única de Dispositivos</strong>) é o equivalente brasileiro do UDI (<em>Unique Device Identification</em>) americano. Ambos compartilham a mesma estrutura conceitual — identificador do dispositivo (DI) mais identificador de produção (PI) — e utilizam padrões GS1 ou HIBCC para codificação. A diferença está na jurisdição: o IUD é regulamentado pela ANVISA e alimenta um banco de dados nacional brasileiro, mas com compatibilidade planejada com o GUDID (FDA) e o EUDAMED (UE) para facilitar a atuação de empresas em múltiplos mercados.</p>
+<p>O IUD (<strong>Identificação Única de Dispositivos</strong>) é o equivalente brasileiro do UDI (<em>Unique Device Identification</em>) americano. Ambos compartilham a mesma estrutura conceitual, identificador do dispositivo (DI) mais identificador de produção (PI), e utilizam padrões GS1 ou HIBCC para codificação. A diferença está na jurisdição: o IUD é regulamentado pela ANVISA e alimenta um banco de dados nacional brasileiro, mas com compatibilidade planejada com o GUDID (FDA) e o EUDAMED (UE) para facilitar a atuação de empresas em múltiplos mercados.</p>
 
 <h3>Quem é obrigado a implementar o sistema de rastreamento?</h3>
 <p>Todos os fabricantes e importadores de dispositivos médicos com registro sanitário vigente na ANVISA serão obrigados a adotar o sistema dentro dos prazos definidos para cada classe de risco. Distribuidores e prestadores de saúde (hospitais, clínicas, operadoras) terão responsabilidades relacionadas à captura e ao uso dos dados de rastreamento em suas operações internas.</p>
@@ -213,5 +211,3 @@ export const artigo: Artigo = {
 <p>Volte ao <a href="/artigos/guia-engenharia-biomedica">Guia Definitivo de Engenharia Biomédica</a> para explorar todas as seções.</p>
 
 <p><em>Publicado por <a href="https://engenhariabiomedica.com">engenhariabiomedica.com</a></em></p>
-`,
-};
