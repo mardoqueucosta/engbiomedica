@@ -141,6 +141,7 @@ export default function RootLayout({
                 'https://www.facebook.com/engenhariabiomedica.com.br',
                 'https://www.youtube.com/@engenhariabiomedica-br',
                 'https://x.com/EngBiomedicaBr',
+                'https://www.tiktok.com/@engenharia.biomedica',
               ],
             }),
           }}
