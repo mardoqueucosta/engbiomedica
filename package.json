@@ -11,6 +11,8 @@
     "preview": "node preview.js",
     "newsletter": "tsx scripts/send-newsletter.ts",
     "newsletter:dry": "tsx scripts/send-newsletter.ts --dry-run",
+    "indexnow": "tsx scripts/indexnow.ts",
+    "indexnow:all": "tsx scripts/indexnow.ts --all",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
