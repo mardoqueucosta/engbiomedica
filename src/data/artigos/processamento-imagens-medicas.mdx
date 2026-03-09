@@ -36,7 +36,7 @@ imagens:
 
 <h3>Ressonância magnética</h3>
 
-<p>A RM baseia-se na <strong>ressonância nuclear magnética</strong> de prótons de hidrogênio. Campos de 1,5 T, 3 T ou 7 T alinham os spins; pulsos de radiofrequência na frequência de Larmor os perturbam; a relaxação T1 (longitudinal) e T2 (transversal) gera o contraste. Os dados são adquiridos no <strong>espaço k</strong> (domínio de Fourier) e reconstruídos pela transformada inversa. Sequências como spin echo, gradient echo e EPI oferecem diferentes compromissos entre contraste, tempo de aquisição e artefatos de movimento. A ausência de radiação ionizante é vantagem central.</p>
+<p>A RM baseia-se na <strong>ressonância nuclear magnética</strong> de prótons de hidrogênio. Campos de 1,5 T, 3 T ou 7 T alinham os spins; pulsos de radiofrequência na frequência de Larmor os perturbam; a relaxação T1 (longitudinal) e T2 (transversal) gera o contraste. Os dados são adquiridos no <strong>espaço k</strong> (domínio de Fourier) e reconstruídos pela transformada inversa. Sequências como spin echo, gradient echo e EPI oferecem diferentes compromissos entre contraste, tempo de aquisição e artefatos de movimento. A ausência de radiação ionizante é vantagem central. Um exemplo de avanço recente na área é o <a href="/artigos/ressonancia-magnetica-ge-healthcare-signa-fda-2026">novo sistema SIGNA da GE Healthcare aprovado pelo FDA em 2026</a>.</p>
 
 <h3>Ultrassom e medicina nuclear</h3>
 
@@ -370,7 +370,7 @@ imagens:
 
 <h2>Ferramentas e ecossistema Python</h2>
 
-<p>Python é a língua franca do processamento de imagens médicas em pesquisa e desenvolvimento. O ecossistema amadureceu a ponto de cobrir todo o pipeline, da leitura de DICOM ao deploy em produção clínica, com ferramentas estáveis e mantidas ativamente.</p>
+<p>Python é a língua franca do processamento de imagens médicas em pesquisa e desenvolvimento. Para uma comparação detalhada entre Python e MATLAB e quando usar cada ferramenta, consulte nosso artigo sobre <a href="/artigos/python-matlab-engenharia-biomedica">Python e MATLAB na engenharia biomédica</a>. O ecossistema amadureceu a ponto de cobrir todo o pipeline, da leitura de DICOM ao deploy em produção clínica, com ferramentas estáveis e mantidas ativamente.</p>
 
 <p>O <strong>MONAI v1.5.2</strong> (NVIDIA + King's College London) é hoje a plataforma mais completa para IA em imagens médicas. Oferece transforms otimizadas para volumes 3D, implementações de U-Net, SegResNet, SwinUNETR e ViT, SmartCache para datasets grandes, loss functions especializadas (DiceLoss, FocalLoss, DiceCELoss) e suporte a exportação TensorRT/ONNX. O MONAI Label v0.8.4+ permite anotação ativa com modelos de aprendizado contínuo; o MONAI Bundle fornece 15+ modelos pré-treinados prontos para uso. Em outubro de 2025, o MONAI adicionou suporte a AMD ROCm. O <strong>TotalSegmentator v2.12.0</strong> (dezembro 2025) segmenta 117+ estruturas anatômicas em TC e MRI.</p>
 

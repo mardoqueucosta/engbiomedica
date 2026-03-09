@@ -21,7 +21,10 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:all": "vitest run && playwright test"
+    "test:all": "vitest run && playwright test",
+    "audit:links": "tsx scripts/audit-internal-links.ts",
+    "audit:links:json": "tsx scripts/audit-internal-links.ts --json",
+    "audit:links:orphans": "tsx scripts/audit-internal-links.ts --orphans"
   },
   "dependencies": {
     "@react-email/components": "^1.0.8",

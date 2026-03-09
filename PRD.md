@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Versão | 2.5 |
+| Versão | 2.7 |
 | Data | Março 2026 |
 | Autor | Mardoqueu Costa |
 | Horizonte | Q2–Q3 2026 (6 meses) |
@@ -17,7 +17,7 @@
 
 O **engenhariabiomedica.com** é um portal de conteúdo especializado em Engenharia Biomédica, construído com Next.js 14 (App Router), TypeScript e Tailwind CSS, deployado via Docker no Railway. O projeto evoluiu de um site informativo para uma plataforma com 87 artigos técnicos em MDX, sistema de newsletter automatizada, diretório de 495 empresas, glossário, infraestrutura SEO avançada com Schema.org MedicalWebPage, busca interna com Fuse.js, e 98 testes automatizados (Vitest + Playwright).
 
-Este PRD v2.5 incorpora dados auditados diretamente do código-fonte (Março 2026), corrigindo contagens imprecisas de versões anteriores e adicionando achados da auditoria técnica cruzada com o PRD.
+Este PRD v2.6 incorpora dados auditados diretamente do código-fonte (Março 2026), corrigindo contagens imprecisas de versões anteriores e adicionando achados da auditoria técnica cruzada com o PRD. Atualizado com implementações P0/P1 completadas.
 
 ### Snapshot do Projeto (Março 2026 — Auditado)
 
@@ -37,7 +37,8 @@ Este PRD v2.5 incorpora dados auditados diretamente do código-fonte (Março 202
 | Structured Data | Organization, WebSite, MedicalWebPage, FAQPage, BreadcrumbList, ImageObject, Speakable |
 | Assets estáticos | 249 arquivos em `/public` |
 | Autenticação | Placeholder — NextAuth e Prisma Client não ativos (planejado para Fase 2) |
-| CI/CD | Apenas `newsletter.yml`; sem pipeline de testes/build/lint no GitHub Actions |
+| CI/CD | `ci.yml` (lint → type-check → unit → build → e2e) + `newsletter.yml` com concurrency |
+| Glossário | 55 termos técnicos organizados por área |
 
 ### Proposta de Valor
 
@@ -64,7 +65,7 @@ O portal ocupa um nicho com **baixa concorrência e alta demanda latente**: não
 
 | Camada | Tecnologia | Versão | Observações |
 |--------|-----------|--------|-------------|
-| Framework | Next.js (App Router) | ^14.2.21 | TypeScript, output standalone |
+| Framework | Next.js (App Router) | 14.2.35 | TypeScript, output standalone |
 | Runtime | Node.js | >=18 | Alpine Linux no Docker |
 | Estilos | Tailwind CSS | ^3.4.16 | Design system com variáveis CSS customizadas |
 | Tipografia | Fraunces + DM Sans + DM Mono | — | Google Fonts com display swap |
@@ -77,7 +78,9 @@ O portal ocupa um nicho com **baixa concorrência e alta demanda latente**: não
 | Banco de Dados | PostgreSQL (Prisma ORM) | — | Schema definido; **Prisma Client não ativo** (placeholder) |
 | Testes | Vitest + Playwright | ^4.0.18 / ^1.58.2 | 66 unit + 32 e2e = 98 testes |
 | Deploy | Railway (Docker multi-stage) | — | Auto-deploy via push no `main` |
-| CI/CD | GitHub Actions | — | Apenas newsletter automatizada; **sem pipeline de testes/build** |
+| CI/CD | GitHub Actions | — | `ci.yml` (lint, type-check, unit, build, e2e) + `newsletter.yml` com concurrency e idempotência |
+| Sanitização | isomorphic-dompurify | — | Sanitiza HTML de artigos via DOMPurify (SSR) antes de `dangerouslySetInnerHTML` |
+| Linting | ESLint 8 + eslint-config-next | 14.2.35 | Config `next/core-web-vitals` |
 | Analytics | Google Analytics 4 | — | G-HMFP981CMP |
 | SEO | Schema.org (JSON-LD) | — | MedicalWebPage, FAQPage, Organization, Speakable |
 
@@ -344,10 +347,51 @@ Cada hub segue estrutura consistente:
 | Hub → Artigo | Section Cards com badges e CTAs | Hub pages |
 | Artigo → Newsletter | CTA box ao final de cada artigo | Todos os artigos |
 | Artigo → Listagem | Link "Ver todos os artigos" com ArrowLeft | Todos os artigos |
-
 | Artigo → Artigo | Componente "Artigos Relacionados" (até 4 da mesma categoria, grid responsivo) | Todos os artigos |
+| Artigo → Artigo (inline) | Links `<a href="/artigos/slug">` no corpo HTML dos artigos | 852 links mapeados (média 9.8/artigo) |
 
 **Lacuna anterior resolvida (Março 2026):** Componente `RelatedArticles` implementado — exibe até 4 artigos da mesma categoria no final de cada artigo, com Badge, título, resumo e tempo de leitura.
+
+#### Auditoria de Internal Links (09/03/2026)
+
+Script `scripts/audit-internal-links.ts` criado para monitoramento contínuo. Comandos: `npm run audit:links`, `npm run audit:links:json`, `npm run audit:links:orphans`.
+
+| Métrica | Valor | Avaliação |
+|---------|-------|-----------|
+| Links internos entre artigos | 852 | ✅ Média de 9.8/artigo (acima do ideal 3-5) |
+| Links externos | 479 | ✅ |
+| Links quebrados | 0 | ✅ |
+| Artigos com 0 links recebidos | 20 (23%) | 🔴 Invisíveis para crawlers |
+| Artigos com ≤ 1 link recebido | 27 (31%) | ⚠️ Concentração excessiva |
+
+**Diagnóstico:** Forte concentração — `guia-engenharia-biomedica` recebe 129 links enquanto 20 artigos recebem zero. Os 5 artigos mais linkados acumulam 288 links (34% do total). Os 20 artigos órfãos são majoritariamente artigos de notícias/mercado e artigos de pesquisa recentes que não foram interligados ao acervo existente.
+
+**Artigos com 0 links recebidos (20):**
+
+| Slug | Categoria |
+|------|-----------|
+| `acoes-de-dispositivos-medicos-como-investir-no-setor-em-2026` | Inovação |
+| `aprovacao-fda-para-empresas-internacionais-o-que-o-caso-do-p` | Regulamentação |
+| `como-funciona-a-anvisa-estrutura-atribuicoes-e-o-papel-na-re` | Regulamentação |
+| `como-publicar-artigos-engenharia-biomedica` | Pesquisa |
+| `dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone` | Inovação |
+| `editais-financiamento-pesquisa-saude` | Pesquisa |
+| `entrevista-emprego-engenheiro-biomedico` | Profissão |
+| `ingles-tecnico-engenharia-biomedica` | Formação |
+| `laboratorio-mercado-pesquisa-produto-medico` | Pesquisa |
+| `livros-engenharia-biomedica` | Formação |
+| `medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp` | Mercado |
+| `melhores-cursos-online-engenharia-clinica` | Formação |
+| `novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr` | Mercado |
+| `patentes-dispositivos-medicos-brasil` | Pesquisa |
+| `python-matlab-engenharia-biomedica` | Pesquisa |
+| `qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp` | Mercado |
+| `ressonancia-magnetica-ge-healthcare-signa-fda-2026` | Inovação |
+| `soft-skills-engenheiros-biomedicos` | Profissão |
+| `tendencias-pesquisa-engenharia-biomedica` | Pesquisa |
+| `transicao-engenharia-biomedica` | Profissão |
+
+**Ação necessária:** Adicionar 2-3 links de artigos da mesma categoria apontando para cada órfão. O script gera sugestões automáticas via `npm run audit:links`.
 
 ---
 
@@ -419,17 +463,17 @@ Cada hub segue estrutura consistente:
 
 | Dívida | Impacto | Ação |
 |--------|---------|------|
-| Sem CI/CD para testes/build | Testes existem (98) mas **não executam no GitHub Actions**. Deploy via auto-deploy no push ao `main` sem nenhum gate de qualidade. Regressão silenciosa em produção. | Criar workflow `ci.yml` com `tsc --noEmit`, `npm run lint`, `npm run test`, build |
-| Newsletter sem idempotência | `send-newsletter.ts` não verifica se já enviou para o período atual. Se workflow executa duas vezes, envia **newsletters duplicadas** aos assinantes. | Verificar `resend.broadcasts.list()` antes de criar novo broadcast |
-| Sem concurrency no newsletter.yml | Sem campo `concurrency` — possível execução paralela do workflow | Adicionar `concurrency: { group: newsletter, cancel-in-progress: false }` |
+| ~~Sem CI/CD para testes/build~~ | ~~Testes existem (98) mas não executam no GitHub Actions.~~ **RESOLVIDO v2.6** — `ci.yml` criado com lint → type-check → unit → build → e2e. | ~~Criar workflow~~ **Implementado** |
+| ~~Newsletter sem idempotência~~ | ~~`send-newsletter.ts` não verifica se já enviou para o período atual.~~ **RESOLVIDO v2.6** — Broadcast name check (`newsletter-{issue}-{date}`) via `resend.broadcasts.list()` + notificação Slack ao detectar duplicata. | ~~Verificar broadcasts~~ **Implementado** |
+| ~~Sem concurrency no newsletter.yml~~ | ~~Sem campo `concurrency`.~~ **RESOLVIDO v2.6** — concurrency adicionado + idempotência via broadcast name check. | ~~Adicionar concurrency~~ **Implementado** |
 
 ### P1 — Importantes (segurança e qualidade)
 
 | Dívida | Impacto | Ação |
 |--------|---------|------|
-| Sem security headers | Nenhum CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy configurado no `next.config.js`. Apenas `poweredByHeader: false`. | Adicionar headers de segurança na seção `headers()` do next.config.js |
-| Next.js ^14.2.21 (abaixo do fix CVE-2025-29927) | Sem impacto atual (auth é placeholder), mas **bloqueará** implementação segura da Fase 2. O middleware só faz redirect www→non-www, então o bypass não afeta nenhuma rota protegida hoje. | Atualizar para >= 14.2.25 antes de implementar autenticação |
-| HTML renderizado sem sanitização | `dangerouslySetInnerHTML` em `artigos/[slug]/page.tsx` sem DOMPurify. Risco baixo (conteúdo vem de MDX no Git, autor único), mas sem defense-in-depth. | Adicionar CSP como primeira camada; considerar DOMPurify se pipeline de conteúdo mudar |
+| ~~Sem security headers~~ | ~~Nenhum HSTS, X-Frame-Options, etc.~~ **RESOLVIDO v2.7** — 7 security headers adicionados (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-DNS-Prefetch-Control, Content-Security-Policy). CSP implementado com diretivas auditadas para GA4, Turnstile, Upstash. | ~~Adicionar headers~~ **Implementado** |
+| ~~Next.js ^14.2.21 (abaixo do fix CVE-2025-29927)~~ | ~~Sem impacto atual (auth é placeholder).~~ **RESOLVIDO v2.6** — Atualizado para Next.js 14.2.35 (CVE-2025-29927 corrigido). | ~~Atualizar para >= 14.2.25~~ **Implementado** |
+| ~~HTML renderizado sem sanitização~~ | ~~`dangerouslySetInnerHTML` sem DOMPurify.~~ **RESOLVIDO v2.6** — `isomorphic-dompurify` adicionado para sanitizar conteúdo HTML dos artigos no SSR. | ~~Adicionar DOMPurify~~ **Implementado** |
 | Monitoramento de erros ausente | Sentry removido; apenas `global-error.tsx` (error boundary nativo, não reporta) | Avaliar alternativa leve: error reporting via API route própria ou Sentry client-only |
 
 ### P2 — Desejáveis (melhorias incrementais)
@@ -438,10 +482,12 @@ Cada hub segue estrutura consistente:
 |--------|---------|------|
 | Sem CDN explícito | 249 assets servidos pelo Railway sem edge caching | Cloudflare (free tier) |
 | Tailwind config duplicado | `.js` é placeholder vazio; confusão para devs | Remover `.js` |
-| Sitemap: datas estáticas com `new Date()` | Páginas estáticas (/sobre, /contato) reportam data atual a cada build, sinalizando falsa atualização | Usar datas fixas para páginas que raramente mudam |
+| ~~Sitemap: datas estáticas com `new Date()`~~ | ~~Páginas estáticas (/sobre, /contato) reportam data atual a cada build, sinalizando falsa atualização.~~ **RESOLVIDO v2.7** — Cada página estática tem `lastModified` fixo (hubs: 2026-03-01, /sobre,/contato: 2026-01-15). Artigos usam data do frontmatter. | ~~Usar datas fixas~~ **Implementado** |
 | Prisma/Auth não ativos | Schema Prisma definido mas `prisma.ts` e `auth.ts` são `export {}`. NextAuth não instalado. | Implementar na Fase 2 quando necessário |
 | Sem métricas de conteúdo | Sem scroll depth, tempo de leitura real, compartilhamentos | GA4 custom events |
 | Entity linking limitado | Apenas 5 entidades; faltam CREA, CONFEA, ISO, IEC, OMS | Expandir dicionário |
+| 20 artigos órfãos (0 links recebidos) | 23% dos artigos são invisíveis para crawlers internos; concentração de links nos top 5 artigos (34% do total) | Adicionar 2-3 links de artigos da mesma categoria para cada órfão. Usar `npm run audit:links` para sugestões e verificação |
+| CTA de artigos genérico e apenas no final | Apenas 1 CTA "Gostou? Assine newsletter" ao final; maioria dos leitores não chega ao fim | Criar `ArticleCTA.tsx` com variantes contextuais (newsletter, comunidade, download) inseridos inline no corpo dos artigos |
 
 ---
 
@@ -463,9 +509,11 @@ Cada hub segue estrutura consistente:
 | Entrega | Detalhamento | Impacto Esperado |
 |---------|-------------|-----------------|
 | +10 artigos long-tail | Keywords identificados via Google Search Console (impressões sem cliques) | +50 keywords ranqueadas |
-| Glossário expandido | 20 → 50+ termos (cada termo = página indexável adicional) | +30 páginas no índice |
-| Artigos Relacionados | Componente no final de cada artigo (3-5 artigos da mesma categoria) | +0.5 páginas/sessão |
+| ~~Glossário expandido~~ | ~~20 → 50+ termos~~ | **Concluído** — 55 termos |
+| ~~Artigos Relacionados~~ | ~~Componente no final de cada artigo~~ | **Concluído** — `RelatedArticles.tsx` |
 | Páginas de categoria | `/artigos/categoria/[nome]` — listagem filtrada com meta dedicada | +10 landing pages indexáveis |
+| Corrigir 20 artigos órfãos | Adicionar 2-3 links internos para cada artigo com 0 links recebidos (auditoria 09/03/2026) | +20 artigos visíveis para crawlers; distribuição de autoridade |
+| CTAs contextuais inline | Componente `ArticleCTA.tsx` com variantes por categoria, inserido no corpo dos artigos | +conversão de leitores em inscritos |
 
 #### Mês 3 — Performance e Core Web Vitals
 
@@ -501,7 +549,7 @@ Cada hub segue estrutura consistente:
 | Comentários | Giscus (GitHub Discussions) — gratuito, sem backend | UGC para SEO; sinais de engajamento |
 | Compartilhamento social | Botões nativos (WhatsApp, LinkedIn, X, copiar link) | Amplificação orgânica |
 | ~~Testes automatizados~~ | ~~Vitest (unit) + Playwright (e2e)~~ | **Concluído antecipadamente** (Q1 2026) — 66 unit + 32 e2e = 98 testes |
-| **CI/CD pipeline** | Workflow `ci.yml` com type-check, lint, test, build — gate obrigatório antes do deploy | Previne regressão em produção |
+| **CI/CD pipeline** ✅ | Workflow `ci.yml` com lint, type-check, test, build, e2e — gate obrigatório antes do deploy | Previne regressão em produção — **Implementado v2.6** |
 | Ferramenta interativa | Calculadora salarial ou quiz "Qual área combina comigo?" | Link bait; alta retenção |
 
 ---
@@ -541,7 +589,7 @@ Cada hub segue estrutura consistente:
 | Core Web Vitals (CLS) | < 0.1 |
 | Uptime | > 99.5% |
 | Erros 500 em produção | 0 (sem monitoramento ativo — Sentry removido; `global-error.tsx` apenas) |
-| Testes automatizados | 98 testes (66 unit + 32 e2e); **sem execução em CI/CD** |
+| Testes automatizados | 98 testes (66 unit + 32 e2e); executados via CI/CD (`ci.yml`) |
 
 ---
 
@@ -552,13 +600,13 @@ Cada hub segue estrutura consistente:
 | Performance | LCP < 2.5s, INP < 200ms, CLS < 0.1 | A validar |
 | Disponibilidade | 99.5% uptime (Railway health check em `/`) | Implementado |
 | Segurança — Anti-spam | HTTPS, Turnstile, rate limiting (10/h/IP), tokens HMAC, honeypot | Implementado |
-| Segurança — Headers | CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | **Não implementado** (apenas `poweredByHeader: false`) |
+| Segurança — Headers | HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-DNS-Prefetch-Control, CSP | **Implementado v2.7** (7 headers completos) |
 | Segurança — Auth | NextAuth + roles + autorização server-side | **Placeholder** (Fase 2) |
 | LGPD | Página de privacidade, exclusão de dados, double opt-in | Implementado |
 | Acessibilidade | WCAG 2.1 AA | Parcial (sem auditoria formal) |
 | SEO | Schema.org completo, sitemaps, robots, canonical, OG dinâmico, 73 redirects | Implementado |
 | Responsividade | Mobile-first (testado em 375px) | Implementado |
-| Testes | 66 unit (Vitest) + 32 e2e (Playwright) = 98 testes | Implementado localmente; **sem CI/CD** |
+| Testes | 66 unit (Vitest) + 32 e2e (Playwright) = 98 testes | Implementado com CI/CD |
 | Observabilidade | GA4 para analytics; Sentry removido; `global-error.tsx` mantido | Parcial |
 | Backup | Código em GitHub; banco no Railway | Parcial (sem backup automático de DB) |
 
@@ -568,15 +616,15 @@ Cada hub segue estrutura consistente:
 
 | Risco | Prob. | Impacto | Mitigação | Status |
 |-------|-------|---------|-----------|--------|
-| Regressão por deploy sem CI/CD | **Alta** | **Alto** | Testes existem (98) mas sem workflow no GitHub Actions; deploy direto ao Railway no push | **Ativo — prioridade máxima** |
-| Newsletter duplicada | Média | Alto | `send-newsletter.ts` sem verificação de idempotência; sem `concurrency` no workflow | **Ativo** |
+| ~~Regressão por deploy sem CI/CD~~ | ~~Alta~~ | ~~Alto~~ | ~~Testes existem (98) mas sem workflow no GitHub Actions~~ | **RESOLVIDO v2.6** — CI pipeline ativo |
+| ~~Newsletter duplicada~~ | ~~Média~~ | ~~Alto~~ | ~~`send-newsletter.ts` sem verificação de idempotência; sem `concurrency` no workflow~~ | **RESOLVIDO v2.6** — Idempotência via broadcast name check + concurrency no workflow |
 | Canibalização de keywords entre artigos | Média | Alto | Audit de keywords com GSC; consolidar artigos com overlap via redirects 301 | Monitorar |
 | Conteúdo desatualizado prejudica E-E-A-T | Média | Alto | Pipeline de revisão trimestral; `dataModificacao` em metadata | Monitorar |
 | Single point of failure (dev único) | Alta | Alto | MDX concluído; documentar processos; considerar CMS se equipe crescer | Mitigado parcialmente |
-| Penalização por conteúdo thin | Baixa | Alto | Manter artigos com >1.500 palavras; expandir glossário | Monitorar |
+| Penalização por conteúdo thin | Baixa | Alto | Manter artigos com >1.500 palavras; glossário expandido para 55 termos (v2.6) | Monitorar |
 | Custo de Railway/Resend escala com tráfego | Média | Médio | Monitorar custos; avaliar Vercel/Cloudflare Pages | Monitorar |
 | Dependência de Railway (single provider) | Média | Médio | Docker portabilístico; documentar processo de migração | Aceito |
-| Next.js desatualizado bloqueia Fase 2 | Média | Alto | Versão ^14.2.21 abaixo do fix CVE-2025-29927; atualizar antes de implementar auth | **Ativo** |
+| ~~Next.js desatualizado bloqueia Fase 2~~ | ~~Média~~ | ~~Alto~~ | ~~Versão ^14.2.21 abaixo do fix CVE-2025-29927~~ | **RESOLVIDO v2.6** — Atualizado para 14.2.35 |
 
 ---
 
@@ -674,8 +722,9 @@ Cloudflare (free tier) como proxy reverso na frente do Railway. Caching de asset
 ```
 engbiomedica/
 ├── .claude/                  # Configurações Claude Code
-├── .github/workflows/        # Newsletter automatizada (cron quinzenal)
-│   └── newsletter.yml
+├── .github/workflows/        # CI/CD + Newsletter automatizada
+│   ├── ci.yml                # Lint, type-check, unit, build, e2e
+│   └── newsletter.yml        # Cron quinzenal com concurrency e idempotência
 ├── prisma/
 │   └── schema.prisma         # User, Account, Session, VerificationToken
 ├── public/                   # 249 assets estáticos
@@ -685,8 +734,11 @@ engbiomedica/
 ├── scripts/
 │   ├── send-newsletter.ts    # Pipeline de envio da newsletter
 │   ├── article-utils.ts      # Seleção de artigos recentes/últimos
+│   ├── audit-internal-links.ts # Auditoria de links internos (órfãos, quebrados, sugestões)
 │   ├── convert-to-mdx.ts     # Script de migração .ts → .mdx (histórico)
-│   └── indexnow.ts           # Notificação IndexNow para motores de busca
+│   ├── google-indexing.ts     # Notificação Google Indexing API
+│   ├── indexnow.ts           # Notificação IndexNow para motores de busca
+│   └── publish.ts            # Pipeline de publicação (push + deploy + indexação)
 ├── src/
 │   ├── app/                  # 43 page.tsx + 10 API routes
 │   │   ├── api/              # subscribe, confirm, contact, og, search-data, webhooks, auth, delete-data, unsubscribe
@@ -834,9 +886,9 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 
 ### A Implementar (Q2–Q3 2026)
 
-- [ ] **CI/CD pipeline** — testes/build no GitHub Actions antes do deploy (P0)
-- [ ] **Security headers** — CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy (P1)
-- [ ] **Newsletter idempotência** — verificar envio duplicado antes de criar broadcast (P0)
+- [x] **CI/CD pipeline** — `ci.yml` com lint, type-check, unit, build, e2e (P0) ✅ v2.6
+- [x] **Security headers** — HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-DNS-Prefetch-Control, CSP (P1) ✅ v2.7 (7 headers completos)
+- [x] **Newsletter idempotência** — broadcast name check via `resend.broadcasts.list()` (P0) ✅ v2.6
 - [ ] Páginas de categoria (`/artigos/categoria/[nome]`)
 - [ ] Table of Contents automático para artigos longos
 - [ ] Core Web Vitals audit e otimização
@@ -844,12 +896,13 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 - [ ] Expansão de entity linking (+6 entidades: CREA, CONFEA, ISO, IEC, OMS, OPAS)
 - [ ] Schema Article Series
 - [ ] Métricas de conteúdo (scroll depth, reading time)
-- [ ] Glossário expandido (20 → 50+ termos)
+- [x] Glossário expandido (20 → 55 termos) ✅ v2.6
 - [ ] Monitoramento de erros — alternativa leve ao Sentry
-- [ ] Sitemap: datas fixas para páginas estáticas (atualmente usa `new Date()`)
+- [x] Sitemap: datas fixas para páginas estáticas ✅ v2.7 — cada página com lastModified fixo
 - [ ] Botões de compartilhamento social
 - [ ] Sistema de comentários (Giscus)
-- [ ] Atualização Next.js >= 14.2.25 (pré-requisito para Fase 2 / auth)
+- [x] Atualização Next.js 14.2.35 (CVE-2025-29927 corrigido) ✅ v2.6
+- [x] CSP (Content-Security-Policy) — implementado com diretivas auditadas (GA4, Turnstile, Upstash) ✅ v2.7
 
 ---
 
@@ -864,3 +917,5 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 | 2.3 | Março 2026 | Mardoqueu Costa | Componente "Artigos Relacionados" (RelatedArticles); Sentry server-side desabilitado — `withSentryConfig` + instrumentação OpenTelemetry causavam 502 timeout (15s) em todas as rotas no Railway; P1 concluído (4/4 itens) |
 | 2.4 | Março 2026 | Mardoqueu Costa | @sentry/nextjs completamente removido; Cloudflare AI Crawl Control — toggle "Cloudflare managed" desativado |
 | 2.5 | Março 2026 | Mardoqueu Costa | **Auditoria técnica cruzada com PRD**: contagens corrigidas com dados do código-fonte (100 .ts/.tsx, 87 .mdx, 73 redirects, 10 API routes, 15 componentes, 98 testes); seção Auth reescrita como placeholder (NextAuth não instalado, prisma.ts/auth.ts = `export {}`); dívidas técnicas repriorizadas por impacto real (CI/CD e idempotência da newsletter como P0); security headers e Next.js CVE-2025-29927 documentados; checklist SEO expandido com 12 itens verificados no código |
+| 2.6 | Março 2026 | Mardoqueu Costa | **Implementação P0/P1 concluída**: CI/CD pipeline (`ci.yml` com lint, type-check, unit, build, e2e); ESLint configurado (`next/core-web-vitals`); newsletter com idempotência (broadcast name check) e concurrency; 6 security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-DNS-Prefetch-Control); Next.js atualizado para 14.2.35 (CVE-2025-29927 corrigido); DOMPurify (`isomorphic-dompurify`) para sanitização de HTML dos artigos; tsconfig corrigido (scripts/ excluído do build); glossário expandido de 20 → 55 termos técnicos; Lighthouse scores: Performance 77, Accessibility 94, Best Practices 100, SEO 100 |
+| 2.7 | Março 2026 | Mardoqueu Costa | **CSP + Sitemap corrigido**: Content-Security-Policy implementado com diretivas auditadas (script-src GA4, frame-src Turnstile, connect-src Upstash/GA4, img-src https, frame-ancestors none, upgrade-insecure-requests) — 7 security headers completos; Sitemap corrigido para usar datas fixas por página estática em vez de new Date() (hubs: 2026-03-01, páginas estáticas: 2026-01-15, glossário: 2026-03-09) |
