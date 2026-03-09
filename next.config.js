@@ -140,15 +140,10 @@ const nextConfig = {
   },
 };
 
-module.exports = withSentryConfig(nextConfig, {
-  // Suprime logs do Sentry no build quando DSN não está configurado
-  silent: !process.env.NEXT_PUBLIC_SENTRY_DSN,
-
-  // Não envia source maps para o Sentry (evita precisar de SENTRY_AUTH_TOKEN)
-  sourcemaps: {
-    disable: true,
-  },
-
-  // Desabilita tunneling (não precisa para sites simples)
-  tunnelRoute: undefined,
-});
+// Temporarily bypass Sentry wrapper to diagnose 502 on Railway
+// module.exports = withSentryConfig(nextConfig, {
+//   silent: !process.env.NEXT_PUBLIC_SENTRY_DSN,
+//   sourcemaps: { disable: true },
+//   tunnelRoute: undefined,
+// });
+module.exports = nextConfig;
