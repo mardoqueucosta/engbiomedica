@@ -1,10 +1,12 @@
 /**
- * Script para notificar o IndexNow (Bing/Yandex) sobre URLs novas ou atualizadas.
+ * Script para notificar a Google Indexing API sobre URLs novas ou atualizadas.
  *
  * Uso:
- *   npx tsx scripts/indexnow.ts          # artigos dos últimos 7 dias
- *   npx tsx scripts/indexnow.ts --days 3 # artigos dos últimos 3 dias
- *   npx tsx scripts/indexnow.ts --all    # todas as URLs do site
+ *   npx tsx scripts/google-indexing.ts          # artigos dos últimos 7 dias
+ *   npx tsx scripts/google-indexing.ts --days 3 # artigos dos últimos 3 dias
+ *   npx tsx scripts/google-indexing.ts --all    # todas as URLs do site
+ *
+ * Limite: 200 URLs/dia (cota da Google Indexing API)
  */
 
 import { config } from 'dotenv';
@@ -19,15 +21,20 @@ async function main() {
     process.exit(1);
   }
 
+  if (!process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
+    console.error('❌ GOOGLE_SERVICE_ACCOUNT_JSON não definida. Adicione ao .env.local');
+    process.exit(1);
+  }
+
   const args = process.argv.slice(2);
   const all = args.includes('--all');
   const daysIdx = args.indexOf('--days');
   const days = daysIdx !== -1 ? args[daysIdx + 1] : '7';
 
   const params = all ? '?all' : `?days=${days}`;
-  const url = `${BASE_URL}/api/indexnow${params}`;
+  const url = `${BASE_URL}/api/google-indexing${params}`;
 
-  console.log(`🔔 Enviando URLs ao IndexNow...`);
+  console.log(`🔔 Enviando URLs à Google Indexing API...`);
   console.log(`   Endpoint: ${url}`);
 
   const response = await fetch(url, {
@@ -43,9 +50,17 @@ async function main() {
   }
 
   console.log(`✅ ${data.message}`);
-  if (data.urlList) {
+
+  if (data.results?.length) {
     console.log(`\nURLs submetidas:`);
-    data.urlList.forEach((u: string) => console.log(`  → ${u}`));
+    data.results.forEach((r: { url: string }) => console.log(`  ✓ ${r.url}`));
+  }
+
+  if (data.errors?.length) {
+    console.log(`\n⚠️  Erros:`);
+    data.errors.forEach((e: { url: string; error: string }) =>
+      console.log(`  ✗ ${e.url} — ${e.error}`)
+    );
   }
 }
 
