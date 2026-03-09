@@ -47,3 +47,26 @@ O Railway faz o deploy automaticamente ao detectar o push.
 - Broadcast usa `segmentId` (NÃO `audienceId` que é deprecated)
 - Dois passos: `broadcasts.create()` (draft) → `broadcasts.send(id)`
 - Variáveis broadcast no template: `{{{FIRST_NAME|leitor(a)}}}`, `{{{RESEND_UNSUBSCRIBE_URL}}}`
+
+## Indexação (IndexNow + Google Indexing API)
+### Arquivos-chave
+- `/src/app/api/indexnow/route.ts` — Rota API para IndexNow (Bing/Yandex)
+- `/src/app/api/google-indexing/route.ts` — Rota API para Google Indexing API
+- `/scripts/indexnow.ts` — Script CLI para IndexNow
+- `/scripts/google-indexing.ts` — Script CLI para Google Indexing API
+- `/public/2ff1987ccc6203baf5ee6f9d9d480ddf.txt` — Chave de verificação IndexNow
+- `/google-credentials.json` — Credenciais da service account Google (no .gitignore)
+- `.github/workflows/indexing.yml` — Workflow automático ao publicar artigos
+
+### Execução
+- Após publicar novos artigos, basta rodar `npm run indexnow` e `npm run google-indexing` para notificar ambos os buscadores
+- `npm run indexnow:all` / `npm run google-indexing:all` — submete todas as URLs
+- A indexação também é disparada **automaticamente** via GitHub Actions ao fazer push com mudanças em `src/data/artigos/`
+
+### Secrets GitHub
+- `INDEXNOW_API_KEY` — Chave IndexNow
+- `GOOGLE_SERVICE_ACCOUNT_JSON` — JSON da service account Google
+
+### Limites
+- Google Indexing API: 200 URLs/dia
+- IndexNow: sem limite prático
