@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import DOMPurify from 'isomorphic-dompurify';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
@@ -224,7 +225,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
           {/* Content */}
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
-              <div dangerouslySetInnerHTML={{ __html: artigo.conteudo }} />
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(artigo.conteudo) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
                 <p key={i}>{paragrafo}</p>
