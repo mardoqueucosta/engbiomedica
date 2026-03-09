@@ -87,12 +87,11 @@ export async function POST(req: NextRequest) {
   }
 
   // Autenticar com a service account
-  const jwtClient = new google.auth.JWT(
-    credentials.client_email,
-    undefined,
-    credentials.private_key,
-    ['https://www.googleapis.com/auth/indexing'],
-  );
+  const jwtClient = new google.auth.JWT({
+    email: credentials.client_email,
+    key: credentials.private_key,
+    scopes: ['https://www.googleapis.com/auth/indexing'],
+  });
 
   await jwtClient.authorize();
 
