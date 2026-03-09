@@ -9,8 +9,8 @@
  * Limite: 200 URLs/dia (cota da Google Indexing API)
  */
 
-import { config } from 'dotenv';
-config({ path: '.env.local' });
+// Carrega .env.local apenas quando disponível (local dev)
+try { require('dotenv').config({ path: '.env.local' }); } catch {}
 
 const BASE_URL = 'https://engenhariabiomedica.com';
 

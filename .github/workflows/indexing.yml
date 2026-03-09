@@ -1,0 +1,79 @@
+name: Notificar buscadores (IndexNow + Google Indexing)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/artigos/**'
+
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Escopo da submissão'
+        required: true
+        default: 'recent'
+        type: choice
+        options:
+          - 'recent'
+          - 'all'
+
+concurrency:
+  group: indexing
+  cancel-in-progress: true
+
+jobs:
+  notify-search-engines:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Aguardar deploy do Railway (2 min)
+        run: sleep 120
+
+      - name: Determinar escopo
+        id: scope
+        run: |
+          if [ "${{ github.event.inputs.scope }}" = "all" ]; then
+            echo "flag=--all" >> $GITHUB_OUTPUT
+            echo "label=todas as URLs" >> $GITHUB_OUTPUT
+          else
+            echo "flag=" >> $GITHUB_OUTPUT
+            echo "label=artigos recentes (últimos 7 dias)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Notificar IndexNow (Bing/Yandex)
+        run: npx tsx scripts/indexnow.ts ${{ steps.scope.outputs.flag }}
+        env:
+          INDEXNOW_API_KEY: ${{ secrets.INDEXNOW_API_KEY }}
+
+      - name: Notificar Google Indexing API
+        run: npx tsx scripts/google-indexing.ts ${{ steps.scope.outputs.flag }}
+        env:
+          INDEXNOW_API_KEY: ${{ secrets.INDEXNOW_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+
+      - name: Notificar sucesso (Slack)
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"🔔 Indexação automática concluída — ${{ steps.scope.outputs.label }}.\"}" \
+            ${{ secrets.SLACK_WEBHOOK_URL }} || true
+
+      - name: Notificar falha (Slack)
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"❌ Indexação falhou! Ver: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }} || true
