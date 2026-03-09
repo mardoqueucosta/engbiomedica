@@ -23,6 +23,10 @@ on:
           - 'true'
           - 'false'
 
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
 jobs:
   send-newsletter:
     runs-on: ubuntu-latest

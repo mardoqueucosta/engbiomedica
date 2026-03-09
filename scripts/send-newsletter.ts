@@ -126,9 +126,18 @@ async function main() {
     process.exit(1);
   }
 
-  // 5. Criar broadcast (draft)
+  // 5. Verificar idempotência e criar broadcast
   const resend = new Resend(process.env.RESEND_API_KEY);
   const broadcastName = `newsletter-${issueNumber}-${new Date().toISOString().split('T')[0]}`;
+
+  const { data: broadcasts } = await resend.broadcasts.list();
+  const alreadySent = broadcasts?.data?.find((b: { name: string }) => b.name === broadcastName);
+
+  if (alreadySent) {
+    log('WARN', `Broadcast "${broadcastName}" já existe (ID: ${alreadySent.id}). Abortando para evitar duplicata.`);
+    await notifySlack(`[NEWSLETTER] Broadcast #${issueNumber} já enviado — envio duplicado evitado.`);
+    return;
+  }
 
   const { data: createData, error: createError } = await resend.broadcasts.create({
     segmentId: SEGMENT_ID,

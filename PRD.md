@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Versão | 2.3 |
+| Versão | 2.5 |
 | Data | Março 2026 |
 | Autor | Mardoqueu Costa |
 | Horizonte | Q2–Q3 2026 (6 meses) |
@@ -15,25 +15,29 @@
 
 ## 1. Resumo Executivo
 
-O **engenhariabiomedica.com** é um portal de conteúdo especializado em Engenharia Biomédica, construído com Next.js 14 (App Router), TypeScript e Tailwind CSS, deployado via Docker no Railway. O projeto evoluiu de um site informativo para uma plataforma com 88 artigos técnicos, sistema de newsletter automatizada, diretório de 495 empresas, glossário, infraestrutura SEO avançada com Schema.org MedicalWebPage, e sistema de autenticação em estágio inicial.
+O **engenhariabiomedica.com** é um portal de conteúdo especializado em Engenharia Biomédica, construído com Next.js 14 (App Router), TypeScript e Tailwind CSS, deployado via Docker no Railway. O projeto evoluiu de um site informativo para uma plataforma com 87 artigos técnicos em MDX, sistema de newsletter automatizada, diretório de 495 empresas, glossário, infraestrutura SEO avançada com Schema.org MedicalWebPage, busca interna com Fuse.js, e 98 testes automatizados (Vitest + Playwright).
 
-Este PRD v2.0 substitui o documento retroativo v1.0, corrigindo dados desatualizados, expandindo a documentação de SEO (o ativo mais forte do projeto), e estabelecendo um roadmap priorizado de 6 meses com foco em crescimento orgânico.
+Este PRD v2.5 incorpora dados auditados diretamente do código-fonte (Março 2026), corrigindo contagens imprecisas de versões anteriores e adicionando achados da auditoria técnica cruzada com o PRD.
 
 ### Snapshot do Projeto (Março 2026 — Auditado)
 
-| Dimensão | Status Atual |
+| Dimensão | Status Atual (Auditado no Código) |
 |----------|-------------|
-| Código-fonte | 179 arquivos TypeScript/TSX |
-| Artigos publicados | 88 artigos técnicos em 10 categorias |
-| Páginas (rotas) | 43 page.tsx + 1 rota dinâmica `[slug]` |
-| API Routes | 9 endpoints (subscribe, confirm, contact, OG, webhooks, auth, register, delete-data, unsubscribe) |
-| Redirects 301 | 84 redirecionamentos permanentes em `next.config.js` |
+| Código-fonte | 100 arquivos TypeScript/TSX em `src/` |
+| Artigos publicados | 87 artigos técnicos em `.mdx` (10 categorias) |
+| Páginas (rotas) | 43 `page.tsx` + 1 rota dinâmica `[slug]` |
+| API Routes | 10 endpoints (subscribe, confirm, contact, OG, search-data, webhooks, auth, register, delete-data, unsubscribe) |
+| Componentes | 15 componentes em `src/components/` |
+| Redirects 301 | 73 redirecionamentos permanentes em `next.config.js` |
+| Testes | 66 unit (Vitest) + 32 e2e (Playwright) = 98 testes |
 | Newsletter | Automatizada quinzenal via GitHub Actions + Resend (double opt-in) |
 | Deploy | Railway (Docker multi-stage, node:20-alpine) com auto-deploy via GitHub |
 | Domínio | engenhariabiomedica.com |
 | Analytics | Google Analytics 4 (G-HMFP981CMP) |
 | Structured Data | Organization, WebSite, MedicalWebPage, FAQPage, BreadcrumbList, ImageObject, Speakable |
-| Assets estáticos | 248 arquivos em `/public` |
+| Assets estáticos | 249 arquivos em `/public` |
+| Autenticação | Placeholder — NextAuth e Prisma Client não ativos (planejado para Fase 2) |
+| CI/CD | Apenas `newsletter.yml`; sem pipeline de testes/build/lint no GitHub Actions |
 
 ### Proposta de Valor
 
@@ -60,17 +64,20 @@ O portal ocupa um nicho com **baixa concorrência e alta demanda latente**: não
 
 | Camada | Tecnologia | Versão | Observações |
 |--------|-----------|--------|-------------|
-| Framework | Next.js (App Router) | 14.2.21 | TypeScript, output standalone |
+| Framework | Next.js (App Router) | ^14.2.21 | TypeScript, output standalone |
 | Runtime | Node.js | >=18 | Alpine Linux no Docker |
-| Estilos | Tailwind CSS | 3.4.16 | Design system com variáveis CSS customizadas |
+| Estilos | Tailwind CSS | ^3.4.16 | Design system com variáveis CSS customizadas |
 | Tipografia | Fraunces + DM Sans + DM Mono | — | Google Fonts com display swap |
-| Ícones | Lucide React | 0.468.0 | Tree-shakeable |
-| Email | Resend + React Email | 6.9.2 / 2.0.4 | Double opt-in, broadcast via segments |
-| Rate Limiting | Upstash Redis | 1.36.2 / 2.0.8 | 10 req/hora por IP no subscribe |
+| Ícones | Lucide React | ^0.468.0 | Tree-shakeable |
+| Email | Resend + React Email | ^6.9.2 / ^1.0.8+^2.0.4 | Double opt-in, broadcast via segments |
+| Rate Limiting | Upstash Redis | ^1.36.2 / ^2.0.8 | 10 req/hora por IP no subscribe |
 | Anti-spam | Cloudflare Turnstile | — | Verificação server-side com fallback honeypot |
-| Banco de Dados | PostgreSQL (Prisma ORM) | — | Schema para User/Account/Session/VerificationToken |
+| Busca | Fuse.js | ^7.1.0 | Client-side fuzzy search, accent-insensitive |
+| Conteúdo | gray-matter | ^4.0.3 | Parsing de frontmatter YAML dos arquivos MDX |
+| Banco de Dados | PostgreSQL (Prisma ORM) | — | Schema definido; **Prisma Client não ativo** (placeholder) |
+| Testes | Vitest + Playwright | ^4.0.18 / ^1.58.2 | 66 unit + 32 e2e = 98 testes |
 | Deploy | Railway (Docker multi-stage) | — | Auto-deploy via push no `main` |
-| CI/CD | GitHub Actions | — | Newsletter automatizada quinzenal |
+| CI/CD | GitHub Actions | — | Apenas newsletter automatizada; **sem pipeline de testes/build** |
 | Analytics | Google Analytics 4 | — | G-HMFP981CMP |
 | SEO | Schema.org (JSON-LD) | — | MedicalWebPage, FAQPage, Organization, Speakable |
 
@@ -131,9 +138,18 @@ Pipeline completo de email marketing:
 
 ### 3.4 Sistema de Autenticação
 
-Schema Prisma com modelo de roles (`ADMIN`, `PROFESSOR`, `STUDENT`), integrado via NextAuth com adapter Prisma. Rotas `/login`, `/cadastro` e `/dashboard` existem. Endpoint `/api/auth/register` processa cadastro com hash de senha.
+**Status: PLACEHOLDER — não implementado.**
 
-**Status:** Funcionalidade limitada — autenticação implementada mas sem features protegidas por role.
+O schema Prisma define modelos para `User` (com roles `ADMIN`, `PROFESSOR`, `STUDENT`), `Account`, `Session` e `VerificationToken`. Porém, a implementação real é:
+
+- **`src/lib/auth.ts`** — exporta `{}` (placeholder vazio)
+- **`src/lib/prisma.ts`** — exporta `{}` (placeholder vazio)
+- **`next-auth`** — **não instalado** no `package.json`
+- **`/api/auth/[...nextauth]`** — retorna 501 "Auth não configurado nesta fase"
+- **`/api/auth/register`** — retorna 501 "Cadastro não configurado nesta fase"
+- **`/login`, `/cadastro`, `/dashboard`** — páginas placeholder públicas sem verificação de sessão
+
+**Implicação:** Não há vulnerabilidade de autenticação porque não há autenticação ativa. O sistema de roles, propagação de callbacks JWT/session, e autorização server-side serão implementados na Fase 2 quando NextAuth for instalado e configurado. O schema Prisma está preparado mas não conectado.
 
 ---
 
@@ -191,13 +207,14 @@ Detecção automática de entidades no conteúdo dos artigos, adicionadas aos ca
 
 ### 4.5 Estratégia de Redirects
 
-**84 redirects 301** permanentes em `next.config.js`, organizados em 3 padrões:
+**73 redirects 301** permanentes em `next.config.js`, organizados em 3 padrões:
 
 | Padrão | Quantidade | Exemplo |
 |--------|-----------|---------|
-| Short → Deep | ~23 | `/formacao/graduacao` → `/artigos/todas-faculdades-...` |
-| Old → New | ~26 | `/artigos/o-que-faz-engenheiro-biomedico` → `/artigos/...-9-caminhos` |
-| Area → Hub/Article | ~35 | `/especialidades/*` → `/areas-de-atuacao/*` → `/artigos/*` |
+| Short → Deep | ~13 | `/formacao/graduacao` → `/artigos/todas-faculdades-...` |
+| Old → New | ~31 | `/artigos/o-que-faz-engenheiro-biomedico` → `/artigos/...-9-caminhos` |
+| Area → Hub/Article | ~24 | `/especialidades/*` → `/areas-de-atuacao/*` → `/artigos/*` |
+| Equipment/Research | ~5 | `/equipamentos/*`, `/pesquisa/*`, `/regulamentacao/*` → artigos |
 
 **Propósito:** Consolidar conteúdo fragmentado em guias definitivos, melhorando topical authority e evitando canibalização de keywords.
 
@@ -216,6 +233,12 @@ Detecção automática de entidades no conteúdo dos artigos, adicionadas aos ca
 - Allow: `/` (tudo permitido por padrão)
 - Disallow: `/api/`, `/dashboard/`, `/login/`, `/cadastro/`
 - Sitemaps: `sitemap.xml` + `image-sitemap.xml`
+
+**Cloudflare AI Crawl Control (Março 2026):**
+- Toggle "Cloudflare managed" **desativado** — quando ativado, Cloudflare injetava blocos `User-agent:` adicionais no robots.txt para bloquear bots de AI (GPTBot, ClaudeBot, etc.), criando **duplicatas de `User-agent: *`** que podiam confundir crawlers de busca
+- Após desativação, robots.txt contém exclusivamente as regras declaradas pelo site
+- Bots de busca (Googlebot, Bingbot) nunca foram afetados (sempre retornaram 200)
+- Bots de AI (ClaudeBot) recebiam 403 do Cloudflare — irrelevante para SEO
 
 **Google Bot (metadata):**
 - `index: true`, `follow: true`
@@ -252,7 +275,7 @@ Detecção automática de entidades no conteúdo dos artigos, adicionadas aos ca
 
 ### 5.1 Modelo Hub-and-Spoke
 
-O portal organiza conteúdo em **7 hubs temáticos** que funcionam como páginas de agregação, direcionando para **88 artigos** (spokes) que contêm o conteúdo aprofundado.
+O portal organiza conteúdo em **7 hubs temáticos** que funcionam como páginas de agregação, direcionando para **87 artigos** (spokes) que contêm o conteúdo aprofundado.
 
 ```
 Home (/)
@@ -281,7 +304,7 @@ Home (/)
 │   ├── /ferramentas-python-matlab
 │   ├── /publicacao-cientifica
 │   └── /financiamento
-├── Artigos (/artigos)              → 88 artigos (listagem central)
+├── Artigos (/artigos)              → 87 artigos (listagem central)
 ├── Glossário (/glossario)          → 20 termos técnicos
 ├── Newsletter (/newsletter)        → Inscrição dedicada
 └── Páginas auxiliares              → sobre, contato, privacidade, excluir-dados, recursos
@@ -341,8 +364,11 @@ Cada hub segue estrutura consistente:
 | StatCard | `components/ui/StatCard.tsx` | Cards de métricas nas hub pages |
 | PageHeader | `components/ui/PageHeader.tsx` | Cabeçalho padronizado com breadcrumbs |
 | SectionCard | `components/ui/SectionCard.tsx` | Cards de seção temática |
+| RelatedArticles | `components/ui/RelatedArticles.tsx` | Artigos relacionados (até 4 da mesma categoria) |
 | ComingSoonPage | `components/ui/ComingSoonPage.tsx` | Placeholder para páginas futuras |
 | Turnstile | `components/ui/Turnstile.tsx` | Widget anti-spam Cloudflare |
+| SearchModal | `components/search/SearchModal.tsx` | Modal de busca global (Ctrl+K) |
+| ArticleSearch | `components/search/ArticleSearch.tsx` | Busca inline na página /artigos |
 | NewsletterForm | `components/forms/NewsletterForm.tsx` | Formulário de inscrição (padrão) |
 | HomeNewsletterForm | `components/forms/HomeNewsletterForm.tsx` | Formulário de inscrição (home) |
 | ContatoForm | `components/forms/ContatoForm.tsx` | Formulário de contato |
@@ -355,50 +381,65 @@ Cada hub segue estrutura consistente:
 | `/api/confirm` | GET | Double opt-in | Token HMAC |
 | `/api/contact` | POST | Formulário de contato | Turnstile |
 | `/api/og` | GET (Edge) | Imagem OG dinâmica | Cache 1 dia |
+| `/api/search-data` | GET | Dados para busca client-side (Fuse.js) | — |
 | `/api/webhooks/resend` | POST | Bounce/complaint webhook | — |
-| `/api/auth/[...nextauth]` | * | NextAuth endpoints | NextAuth |
-| `/api/auth/register` | POST | Cadastro de usuário | Hash de senha |
+| `/api/auth/[...nextauth]` | * | **Placeholder** — retorna 501 | — |
+| `/api/auth/register` | POST | **Placeholder** — retorna 501 | — |
 | `/api/delete-data` | POST | Exclusão de dados (LGPD) | — |
 | `/api/unsubscribe` | GET/POST | Cancelamento de newsletter | — |
 
 ### 6.3 Utilitários (`src/lib/`)
 
-| Módulo | Finalidade |
-|--------|-----------|
-| `auth.ts` | Configuração NextAuth com Prisma adapter |
-| `tokens.ts` | Geração e verificação de tokens HMAC |
-| `ratelimit.ts` | Rate limiting via Upstash Redis |
-| `turnstile.ts` | Verificação server-side do Cloudflare Turnstile |
-| `prisma.ts` | Singleton do Prisma Client |
-| `extract-faq.ts` | Extração de FAQ do HTML para Schema.org |
+| Módulo | Finalidade | Status |
+|--------|-----------|--------|
+| `auth.ts` | Configuração NextAuth | **Placeholder** (`export {}`) |
+| `tokens.ts` | Geração e verificação de tokens HMAC (24h expiry) | Ativo |
+| `ratelimit.ts` | Rate limiting via Upstash Redis (10/h/IP) | Ativo |
+| `turnstile.ts` | Verificação server-side do Cloudflare Turnstile | Ativo |
+| `prisma.ts` | Singleton do Prisma Client | **Placeholder** (`export {}`) |
+| `extract-faq.ts` | Extração de FAQ do HTML para Schema.org | Ativo |
+| `normalize.ts` | Remoção de diacríticos para busca PT-BR | Ativo |
 
 ---
 
-## 7. Dívidas Técnicas (Priorizadas por Impacto em SEO)
+## 7. Dívidas Técnicas (Priorizadas por Impacto Real — Auditado Março 2026)
 
-### P0 — Críticas (bloqueiam crescimento)
+### Concluídos
 
-| Dívida | Impacto SEO | Ação | Status |
-|--------|------------|------|--------|
-| ~~Sem busca interna~~ | ~~88 artigos sem discovery~~ | ~~Implementar Fuse.js~~ | **Concluído** (Março 2026) — Fuse.js client-side com modal global Ctrl+K + busca inline na /artigos |
-| ~~Artigos em `.ts` com HTML inline~~ | ~~Publicação lenta~~ | ~~Migrar para MDX com frontmatter~~ | **Concluído** (Março 2026) — 88 artigos migrados para .mdx; metadata.ts e index.ts dinamizados |
+| Dívida | Status |
+|--------|--------|
+| ~~Sem busca interna~~ | **Concluído** — Fuse.js client-side com modal global Ctrl+K + busca inline na /artigos |
+| ~~Artigos em `.ts` com HTML inline~~ | **Concluído** — 87 artigos migrados para .mdx; metadata.ts e index.ts dinamizados |
+| ~~Sem testes automatizados~~ | **Concluído** — 66 unit (Vitest) + 32 e2e (Playwright) = 98 testes |
+| ~~`.env.example` incompleto~~ | **Concluído** — 12 variáveis documentadas |
+| ~~Sem "Artigos Relacionados"~~ | **Concluído** — `RelatedArticles` exibe até 4 artigos da mesma categoria |
+| ~~Sentry~~ | **Removido** — @sentry/nextjs v10 causava 502 timeout no Railway; `global-error.tsx` mantido |
 
-### P1 — Importantes (risco operacional)
+### P0 — Críticas (risco operacional imediato)
 
-| Dívida | Impacto SEO | Ação | Status |
-|--------|------------|------|--------|
-| ~~Sem testes automatizados~~ | ~~Regressão silenciosa em cada deploy~~ | ~~Vitest + Playwright~~ | **Concluído** (Março 2026) — 66 unit tests + 51 e2e tests (páginas, busca, redirects, SEO, sitemap) |
-| ~~Sem monitoramento de erros~~ | ~~Páginas 500/404 despercebidas~~ | ~~Sentry para Next.js~~ | **Desabilitado** (Março 2026) — @sentry/nextjs v10 instalado e configurado, porém **causava 502 (timeout 15s) em todas as rotas no Railway**. O `withSentryConfig` injeta hooks OpenTelemetry no middleware (+83 KB) e server que travam o processo em containers com recursos limitados. Healthcheck passa, mas requests subsequentes nunca recebem resposta. Instrumentação server/edge e wrapper desabilitados; `global-error.tsx` e client SDK mantidos. DSN configurado no Railway. **Requer:** investigar compatibilidade com Railway (memória/CPU) ou migrar para Sentry client-only. |
-| ~~`.env.example` incompleto~~ | ~~Apenas 4 de 12+ variáveis~~ | ~~Documentar todas~~ | **Concluído** (Março 2026) — 12 variáveis documentadas no .env.example |
-| ~~Sem "Artigos Relacionados"~~ | ~~Cross-linking fraco entre artigos~~ | ~~Componente com artigos da mesma categoria~~ | **Concluído** (Março 2026) — `RelatedArticles` exibe até 4 artigos da mesma categoria ao final de cada artigo; grid responsivo 1×1/2×2 com Badge, título, resumo e tempo de leitura |
+| Dívida | Impacto | Ação |
+|--------|---------|------|
+| Sem CI/CD para testes/build | Testes existem (98) mas **não executam no GitHub Actions**. Deploy via auto-deploy no push ao `main` sem nenhum gate de qualidade. Regressão silenciosa em produção. | Criar workflow `ci.yml` com `tsc --noEmit`, `npm run lint`, `npm run test`, build |
+| Newsletter sem idempotência | `send-newsletter.ts` não verifica se já enviou para o período atual. Se workflow executa duas vezes, envia **newsletters duplicadas** aos assinantes. | Verificar `resend.broadcasts.list()` antes de criar novo broadcast |
+| Sem concurrency no newsletter.yml | Sem campo `concurrency` — possível execução paralela do workflow | Adicionar `concurrency: { group: newsletter, cancel-in-progress: false }` |
+
+### P1 — Importantes (segurança e qualidade)
+
+| Dívida | Impacto | Ação |
+|--------|---------|------|
+| Sem security headers | Nenhum CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy configurado no `next.config.js`. Apenas `poweredByHeader: false`. | Adicionar headers de segurança na seção `headers()` do next.config.js |
+| Next.js ^14.2.21 (abaixo do fix CVE-2025-29927) | Sem impacto atual (auth é placeholder), mas **bloqueará** implementação segura da Fase 2. O middleware só faz redirect www→non-www, então o bypass não afeta nenhuma rota protegida hoje. | Atualizar para >= 14.2.25 antes de implementar autenticação |
+| HTML renderizado sem sanitização | `dangerouslySetInnerHTML` em `artigos/[slug]/page.tsx` sem DOMPurify. Risco baixo (conteúdo vem de MDX no Git, autor único), mas sem defense-in-depth. | Adicionar CSP como primeira camada; considerar DOMPurify se pipeline de conteúdo mudar |
+| Monitoramento de erros ausente | Sentry removido; apenas `global-error.tsx` (error boundary nativo, não reporta) | Avaliar alternativa leve: error reporting via API route própria ou Sentry client-only |
 
 ### P2 — Desejáveis (melhorias incrementais)
 
 | Dívida | Impacto | Ação |
 |--------|---------|------|
-| Sem CDN explícito | 248 assets servidos pelo Railway sem edge caching | Cloudflare |
+| Sem CDN explícito | 249 assets servidos pelo Railway sem edge caching | Cloudflare (free tier) |
 | Tailwind config duplicado | `.js` é placeholder vazio; confusão para devs | Remover `.js` |
-| Prisma subutilizado | Banco provisionado para auth básico; sem uso para features de produto | Aproveitar para busca, favoritos, comentários |
+| Sitemap: datas estáticas com `new Date()` | Páginas estáticas (/sobre, /contato) reportam data atual a cada build, sinalizando falsa atualização | Usar datas fixas para páginas que raramente mudam |
+| Prisma/Auth não ativos | Schema Prisma definido mas `prisma.ts` e `auth.ts` são `export {}`. NextAuth não instalado. | Implementar na Fase 2 quando necessário |
 | Sem métricas de conteúdo | Sem scroll depth, tempo de leitura real, compartilhamentos | GA4 custom events |
 | Entity linking limitado | Apenas 5 entidades; faltam CREA, CONFEA, ISO, IEC, OMS | Expandir dicionário |
 
@@ -441,7 +482,7 @@ Cada hub segue estrutura consistente:
 
 | Entrega | Detalhamento | Impacto Esperado |
 |---------|-------------|-----------------|
-| Migração para MDX | 88 artigos de `.ts` → `.mdx` com frontmatter; preservar URLs e metadata | Publicação sem deploy; contribuição externa |
+| ~~Migração para MDX~~ | ~~87 artigos de `.ts` → `.mdx` com frontmatter~~ | **Concluído antecipadamente** (Q1 2026) |
 | Pipeline editorial | Script de scaffolding para novo artigo; validação de frontmatter | Tempo de publicação: horas → minutos |
 
 #### Mês 5 — Autoridade Temática
@@ -459,7 +500,8 @@ Cada hub segue estrutura consistente:
 |---------|-------------|-----------------|
 | Comentários | Giscus (GitHub Discussions) — gratuito, sem backend | UGC para SEO; sinais de engajamento |
 | Compartilhamento social | Botões nativos (WhatsApp, LinkedIn, X, copiar link) | Amplificação orgânica |
-| Testes automatizados | Vitest (unit) + Playwright (e2e: rotas críticas, redirects, newsletter) | Previne regressão SEO |
+| ~~Testes automatizados~~ | ~~Vitest (unit) + Playwright (e2e)~~ | **Concluído antecipadamente** (Q1 2026) — 66 unit + 32 e2e = 98 testes |
+| **CI/CD pipeline** | Workflow `ci.yml` com type-check, lint, test, build — gate obrigatório antes do deploy | Previne regressão em produção |
 | Ferramenta interativa | Calculadora salarial ou quiz "Qual área combina comigo?" | Link bait; alta retenção |
 
 ---
@@ -471,7 +513,7 @@ Cada hub segue estrutura consistente:
 | KPI | Baseline (Mar/2026) | Meta Jun/2026 | Meta Set/2026 |
 |-----|---------------------|--------------|--------------|
 | Sessões orgânicas/mês | A medir via GA4 | 5.000 | 15.000 |
-| Artigos indexados (Google) | 88 | 100 | 120+ |
+| Artigos indexados (Google) | 87 | 100 | 120+ |
 | Keywords no top 10 | A medir via GSC | 50 | 150 |
 | Keywords no top 100 | A medir via GSC | 200 | 500 |
 | Posição média (GSC) | A medir | Top 20 | Top 10 |
@@ -498,8 +540,8 @@ Cada hub segue estrutura consistente:
 | Core Web Vitals (INP) | < 200ms |
 | Core Web Vitals (CLS) | < 0.1 |
 | Uptime | > 99.5% |
-| Erros 500 em produção | 0 (monitorado via Sentry) |
-| Cobertura de testes (rotas críticas) | > 80% |
+| Erros 500 em produção | 0 (sem monitoramento ativo — Sentry removido; `global-error.tsx` apenas) |
+| Testes automatizados | 98 testes (66 unit + 32 e2e); **sem execução em CI/CD** |
 
 ---
 
@@ -509,27 +551,32 @@ Cada hub segue estrutura consistente:
 |-----------|--------------|-------------|
 | Performance | LCP < 2.5s, INP < 200ms, CLS < 0.1 | A validar |
 | Disponibilidade | 99.5% uptime (Railway health check em `/`) | Implementado |
-| Segurança | HTTPS, Turnstile, rate limiting (10/h/IP), tokens HMAC, honeypot | Implementado |
+| Segurança — Anti-spam | HTTPS, Turnstile, rate limiting (10/h/IP), tokens HMAC, honeypot | Implementado |
+| Segurança — Headers | CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | **Não implementado** (apenas `poweredByHeader: false`) |
+| Segurança — Auth | NextAuth + roles + autorização server-side | **Placeholder** (Fase 2) |
 | LGPD | Página de privacidade, exclusão de dados, double opt-in | Implementado |
 | Acessibilidade | WCAG 2.1 AA | Parcial (sem auditoria formal) |
-| SEO | Schema.org completo, sitemaps, robots, canonical, OG dinâmico, 84 redirects | Implementado |
+| SEO | Schema.org completo, sitemaps, robots, canonical, OG dinâmico, 73 redirects | Implementado |
 | Responsividade | Mobile-first (testado em 375px) | Implementado |
-| Observabilidade | GA4 para analytics; Sentry server-side desabilitado (incompatível com Railway — causa 502 timeout); client SDK e global-error.tsx mantidos | Parcial (Março 2026) |
+| Testes | 66 unit (Vitest) + 32 e2e (Playwright) = 98 testes | Implementado localmente; **sem CI/CD** |
+| Observabilidade | GA4 para analytics; Sentry removido; `global-error.tsx` mantido | Parcial |
 | Backup | Código em GitHub; banco no Railway | Parcial (sem backup automático de DB) |
 
 ---
 
 ## 11. Riscos e Mitigações
 
-| Risco | Prob. | Impacto | Mitigação |
-|-------|-------|---------|-----------|
-| Regressão SEO por deploy sem testes | Alta | Alto | Implementar Playwright para testar redirects, sitemaps e schema em CI |
-| Canibalização de keywords entre artigos | Média | Alto | Audit de keywords com GSC; consolidar artigos com overlap via redirects 301 |
-| Conteúdo desatualizado prejudica E-E-A-T | Média | Alto | Pipeline de revisão trimestral; `dataModificacao` em metadata |
-| Single point of failure (dev único) | Alta | Alto | Migrar para MDX (publicação sem dev); documentar processos; simplificar stack |
-| Penalização por conteúdo thin | Baixa | Alto | Manter artigos com >1.500 palavras; expandir glossário com definições substanciais |
-| Custo de Railway/Resend escala com tráfego | Média | Médio | Monitorar custos mensais; avaliar Vercel/Cloudflare Pages como alternativa |
-| Dependência de Railway (single provider) | Média | Médio | Docker portabilístico; documentar processo de migração |
+| Risco | Prob. | Impacto | Mitigação | Status |
+|-------|-------|---------|-----------|--------|
+| Regressão por deploy sem CI/CD | **Alta** | **Alto** | Testes existem (98) mas sem workflow no GitHub Actions; deploy direto ao Railway no push | **Ativo — prioridade máxima** |
+| Newsletter duplicada | Média | Alto | `send-newsletter.ts` sem verificação de idempotência; sem `concurrency` no workflow | **Ativo** |
+| Canibalização de keywords entre artigos | Média | Alto | Audit de keywords com GSC; consolidar artigos com overlap via redirects 301 | Monitorar |
+| Conteúdo desatualizado prejudica E-E-A-T | Média | Alto | Pipeline de revisão trimestral; `dataModificacao` em metadata | Monitorar |
+| Single point of failure (dev único) | Alta | Alto | MDX concluído; documentar processos; considerar CMS se equipe crescer | Mitigado parcialmente |
+| Penalização por conteúdo thin | Baixa | Alto | Manter artigos com >1.500 palavras; expandir glossário | Monitorar |
+| Custo de Railway/Resend escala com tráfego | Média | Médio | Monitorar custos; avaliar Vercel/Cloudflare Pages | Monitorar |
+| Dependência de Railway (single provider) | Média | Médio | Docker portabilístico; documentar processo de migração | Aceito |
+| Next.js desatualizado bloqueia Fase 2 | Média | Alto | Versão ^14.2.21 abaixo do fix CVE-2025-29927; atualizar antes de implementar auth | **Ativo** |
 
 ---
 
@@ -539,7 +586,7 @@ Cada hub segue estrutura consistente:
 Escolhido por SSG nativo, rotas dinâmicas, API routes integradas e ecossistema React. **Trade-off:** complexidade maior que Astro para site predominantemente estático.
 
 ### ADR-002: Artigos como MDX com frontmatter (migrado em Março 2026)
-Decisão inicial era TypeScript estático para velocidade de prototipagem. **Migrado para MDX** em Março 2026: 88 artigos convertidos de `.ts` para `.mdx` com frontmatter YAML + corpo HTML. `metadata.ts` e `index.ts` dinamizados para ler frontmatter via `gray-matter`. Adicionar novo artigo requer apenas criar um `.mdx` — zero manutenção em outros arquivos.
+Decisão inicial era TypeScript estático para velocidade de prototipagem. **Migrado para MDX** em Março 2026: 87 artigos convertidos de `.ts` para `.mdx` com frontmatter YAML + corpo HTML. `metadata.ts` e `index.ts` dinamizados para ler frontmatter via `gray-matter`. Adicionar novo artigo requer apenas criar um `.mdx` — zero manutenção em outros arquivos.
 
 ### ADR-003: Railway + Docker multi-stage
 Infraestrutura simples com auto-deploy. Output standalone reduz imagem Docker. **Trade-off:** custo potencialmente maior que serverless em escala.
@@ -571,7 +618,7 @@ Cloudflare (free tier) como proxy reverso na frente do Railway. Caching de asset
 | Rota | Tipo | Descrição |
 |------|------|-----------|
 | `/` | Página | Homepage (hero + stats + hubs + CTA) |
-| `/artigos` | Página | Listagem de 88 artigos com filtro por categoria |
+| `/artigos` | Página | Listagem de 87 artigos com filtro por categoria |
 | `/artigos/[slug]` | Dinâmica (SSG) | Renderização de artigos individuais |
 | `/newsletter` | Página | Inscrição dedicada |
 | `/glossario` | Página | 20 termos técnicos |
@@ -613,9 +660,10 @@ Cloudflare (free tier) como proxy reverso na frente do Railway. Caching de asset
 | `/api/confirm` | GET | Double opt-in |
 | `/api/contact` | POST | Formulário de contato |
 | `/api/og` | GET (Edge) | Imagem OG dinâmica |
+| `/api/search-data` | GET | Dados para busca Fuse.js |
 | `/api/webhooks/resend` | POST | Webhook bounce/complaint |
-| `/api/auth/[...nextauth]` | * | NextAuth |
-| `/api/auth/register` | POST | Cadastro |
+| `/api/auth/[...nextauth]` | * | **Placeholder** (retorna 501) |
+| `/api/auth/register` | POST | **Placeholder** (retorna 501) |
 | `/api/delete-data` | POST | Exclusão LGPD |
 | `/api/unsubscribe` | GET/POST | Cancelamento newsletter |
 
@@ -630,13 +678,15 @@ engbiomedica/
 │   └── newsletter.yml
 ├── prisma/
 │   └── schema.prisma         # User, Account, Session, VerificationToken
-├── public/                   # 248 assets estáticos
+├── public/                   # 249 assets estáticos
 │   ├── artigos/              # Imagens dos artigos (WebP)
 │   ├── docentes/             # Fotos de docentes
 │   └── editais/              # Editais em PDF
 ├── scripts/
-│   ├── send-newsletter.ts    # Pipeline de envio
-│   └── article-utils.ts      # Seleção de artigos recentes/últimos
+│   ├── send-newsletter.ts    # Pipeline de envio da newsletter
+│   ├── article-utils.ts      # Seleção de artigos recentes/últimos
+│   ├── convert-to-mdx.ts     # Script de migração .ts → .mdx (histórico)
+│   └── indexnow.ts           # Notificação IndexNow para motores de busca
 ├── src/
 │   ├── app/                  # 43 page.tsx + 10 API routes
 │   │   ├── api/              # subscribe, confirm, contact, og, search-data, webhooks, auth, delete-data, unsubscribe
@@ -651,13 +701,13 @@ engbiomedica/
 │   │   ├── sitemap.ts        # Sitemap dinâmico
 │   │   ├── robots.ts         # Configuração de crawling
 │   │   └── image-sitemap.xml/# Sitemap de imagens
-│   ├── components/           # 14 componentes
+│   ├── components/           # 15 componentes
 │   │   ├── forms/            # NewsletterForm, HomeNewsletterForm, ContatoForm
 │   │   ├── layout/           # Header, Footer, Logo
 │   │   ├── search/           # SearchModal, ArticleSearch (Fuse.js)
-│   │   └── ui/               # Badge, StatCard, PageHeader, SectionCard, Turnstile, ComingSoonPage
+│   │   └── ui/               # Badge, StatCard, PageHeader, SectionCard, RelatedArticles, Turnstile, ComingSoonPage
 │   ├── data/                 # ~2.9MB de dados estáticos
-│   │   ├── artigos/          # 88 artigos .mdx + metadata.ts (dinâmico) + types.ts + getArtigo.ts + index.ts
+│   │   ├── artigos/          # 87 artigos .mdx + metadata.ts (dinâmico) + types.ts + getArtigo.ts + index.ts
 │   │   ├── empresas/         # 495 empresas
 │   │   └── navigation.ts     # Estrutura de navegação (7 categorias)
 │   ├── emails/               # 4 templates React Email
@@ -668,19 +718,34 @@ engbiomedica/
 │   ├── hooks/                # 1 hook
 │   │   └── useArticleSearch.ts # Hook Fuse.js com normalização PT-BR
 │   ├── lib/                  # 7 utilitários
-│   │   ├── auth.ts           # NextAuth config
-│   │   ├── tokens.ts         # HMAC tokens
-│   │   ├── ratelimit.ts      # Upstash rate limiting
-│   │   ├── turnstile.ts      # Cloudflare verification
-│   │   ├── prisma.ts         # Prisma singleton
-│   │   ├── normalize.ts      # Remoção de diacríticos para busca
+│   │   ├── auth.ts           # Placeholder (export {}) — NextAuth não instalado
+│   │   ├── tokens.ts         # HMAC tokens (24h expiry)
+│   │   ├── ratelimit.ts      # Upstash rate limiting (10/h/IP)
+│   │   ├── turnstile.ts      # Cloudflare verification server-side
+│   │   ├── prisma.ts         # Placeholder (export {}) — Prisma Client não ativo
+│   │   ├── normalize.ts      # Remoção de diacríticos para busca PT-BR
 │   │   └── extract-faq.ts    # FAQ extraction para Schema.org
 │   └── middleware.ts         # Redirect www → non-www (301)
+├── tests/
+│   ├── unit/                # 6 arquivos, 66 testes (Vitest)
+│   │   ├── article-utils.test.ts
+│   │   ├── extract-faq.test.ts
+│   │   ├── getArtigo.test.ts
+│   │   ├── metadata.test.ts
+│   │   ├── normalize.test.ts
+│   │   └── tokens.test.ts
+│   └── e2e/                 # 4 arquivos, 32 testes (Playwright)
+│       ├── pages.spec.ts
+│       ├── redirects.spec.ts
+│       ├── search.spec.ts
+│       └── seo.spec.ts
 ├── CLAUDE.md                 # Instruções para Claude Code
 ├── PRD.md                    # Este documento
+├── vitest.config.ts          # Configuração Vitest (unit tests)
+├── playwright.config.ts      # Configuração Playwright (e2e tests)
 ├── Dockerfile                # Multi-stage (node:20-alpine → standalone)
 ├── railway.toml              # Deploy config (healthcheck, restart policy)
-├── next.config.js            # 84 redirects, standalone output, caching headers
+├── next.config.js            # 73 redirects, standalone output, caching headers
 ├── tailwind.config.ts        # Design system (cores, tipografia, sombras)
 ├── tailwind.config.js        # Placeholder vazio (a remover)
 ├── tsconfig.json             # TypeScript com path aliases
@@ -733,47 +798,58 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 
 ## Apêndice D — Checklist SEO Técnico
 
-### Implementado
+### Implementado (verificado no código)
 
 - [x] Sitemap XML dinâmico com prioridades diferenciadas
 - [x] Image sitemap dedicado
-- [x] Robots.ts com disallow para rotas privadas
-- [x] Schema.org Organization (global)
+- [x] Robots.ts com disallow para rotas privadas (`/api/`, `/dashboard/`, `/login/`, `/cadastro/`)
+- [x] Schema.org Organization (global, layout.tsx)
 - [x] Schema.org WebSite (home)
-- [x] Schema.org MedicalWebPage (artigos)
-- [x] Schema.org FAQPage (condicional, automático)
-- [x] Schema.org BreadcrumbList (artigos)
+- [x] Schema.org MedicalWebPage (artigos — com entity linking e Speakable)
+- [x] Schema.org FAQPage (condicional, automático via extract-faq.ts)
+- [x] Schema.org BreadcrumbList (artigos — 3 níveis)
 - [x] Schema.org ImageObject (artigos com imagens)
 - [x] Speakable specification (voice search)
 - [x] Entity linking (5 entidades: ANVISA, FDA, IEEE, ABIMO, ABIMED)
 - [x] OG images dinâmicas (Edge Runtime, 1200x630)
 - [x] Canonical URLs em todas as páginas
 - [x] Twitter Cards (summary_large_image)
-- [x] 84 redirects 301 (consolidação de conteúdo)
+- [x] 73 redirects 301 (consolidação de conteúdo)
 - [x] Middleware www → non-www (301)
-- [x] Cache-Control multi-camada
+- [x] Cache-Control multi-camada (imagens 1 ano, HTML 1h+1d, OG 1d+7d)
 - [x] Fonts com display swap
 - [x] Output standalone (otimização de bundle)
 - [x] Mobile-first responsive (testado 375px)
 - [x] Google Analytics 4
+- [x] `metadataBase` configurado (`https://engenhariabiomedica.com`)
+- [x] `lang="pt-BR"` no `<html>`
+- [x] `generateMetadata` dinâmico por artigo (título, OG article, publishedTime, modifiedTime)
+- [x] `noindex` em páginas internas (dashboard, login, cadastro)
+- [x] Alt text obrigatório nas imagens (interface ArtigoImagem)
+- [x] Busca interna (Fuse.js — modal Ctrl+K + inline /artigos, accent-insensitive, GA4 tracking)
+- [x] Componente "Artigos Relacionados" (RelatedArticles — até 4 artigos da mesma categoria)
+- [x] Testes automatizados (Vitest 66 unit + Playwright 32 e2e — páginas, busca, redirects, sitemap, SEO, Schema.org)
+- [x] Cloudflare robots.txt — toggle "Cloudflare managed" desativado
+- [x] `.env.example` completo (12 variáveis)
 
 ### A Implementar (Q2–Q3 2026)
 
-- [x] Busca interna (Fuse.js — modal Ctrl+K + inline /artigos, accent-insensitive, GA4 tracking)
-- [x] Componente "Artigos Relacionados" (RelatedArticles — até 4 artigos da mesma categoria, grid responsivo)
+- [ ] **CI/CD pipeline** — testes/build no GitHub Actions antes do deploy (P0)
+- [ ] **Security headers** — CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy (P1)
+- [ ] **Newsletter idempotência** — verificar envio duplicado antes de criar broadcast (P0)
 - [ ] Páginas de categoria (`/artigos/categoria/[nome]`)
 - [ ] Table of Contents automático para artigos longos
 - [ ] Core Web Vitals audit e otimização
 - [ ] CDN (Cloudflare)
-- [ ] Expansão de entity linking (+6 entidades)
+- [ ] Expansão de entity linking (+6 entidades: CREA, CONFEA, ISO, IEC, OMS, OPAS)
 - [ ] Schema Article Series
 - [ ] Métricas de conteúdo (scroll depth, reading time)
 - [ ] Glossário expandido (20 → 50+ termos)
-- [x] Testes automatizados (Vitest 66 unit + Playwright 51 e2e — páginas, busca, 21 redirects, sitemap, SEO, Schema.org)
-- [x] ~~Monitoramento de erros (@sentry/nextjs v10)~~ — **server-side desabilitado** (causa 502 timeout no Railway); client SDK e global-error.tsx mantidos; requer investigação de compatibilidade
-- [x] `.env.example` completo (12 variáveis: site, analytics, Sentry, newsletter, HMAC, Redis, Turnstile)
+- [ ] Monitoramento de erros — alternativa leve ao Sentry
+- [ ] Sitemap: datas fixas para páginas estáticas (atualmente usa `new Date()`)
 - [ ] Botões de compartilhamento social
 - [ ] Sistema de comentários (Giscus)
+- [ ] Atualização Next.js >= 14.2.25 (pré-requisito para Fase 2 / auth)
 
 ---
 
@@ -783,6 +859,8 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 |--------|------|-------|-----------|
 | 1.0 | Março 2026 | Mardoqueu Costa | Documento retroativo inicial |
 | 2.0 | Março 2026 | Mardoqueu Costa | Reescrita completa: dados auditados do código-fonte, SEO expandido como seção principal, roadmap 6 meses priorizado, variáveis de ambiente documentadas, mapa de 43 rotas, checklist SEO |
-| 2.1 | Março 2026 | Mardoqueu Costa | Migração completa: 88 artigos .ts → .mdx; metadata.ts e index.ts dinamizados; busca interna com Fuse.js (modal Ctrl+K + inline /artigos); remoção de travessões; TikTok no footer; ADRs 002/007/008 atualizados |
-| 2.2 | Março 2026 | Mardoqueu Costa | Testes automatizados (Vitest 66 unit + Playwright 51 e2e); Sentry v10 para monitoramento de erros; .env.example completo com 12 variáveis; global-error.tsx; P1 concluído (3/4 itens) |
-| 2.3 | Março 2026 | Mardoqueu Costa | Componente "Artigos Relacionados" (RelatedArticles); Sentry server-side desabilitado — `withSentryConfig` + instrumentação OpenTelemetry causavam 502 timeout (15s) em todas as rotas no Railway (healthcheck passava mas requests travavam); wrapper e instrumentation comentados, client SDK e global-error.tsx mantidos; P1 concluído (4/4 itens) |
+| 2.1 | Março 2026 | Mardoqueu Costa | Migração completa: 87 artigos .ts → .mdx; metadata.ts e index.ts dinamizados; busca interna com Fuse.js (modal Ctrl+K + inline /artigos); remoção de travessões; TikTok no footer; ADRs 002/007/008 atualizados |
+| 2.2 | Março 2026 | Mardoqueu Costa | Testes automatizados (Vitest 66 unit + Playwright 32 e2e); Sentry v10 para monitoramento de erros; .env.example completo com 12 variáveis; global-error.tsx; P1 concluído (3/4 itens) |
+| 2.3 | Março 2026 | Mardoqueu Costa | Componente "Artigos Relacionados" (RelatedArticles); Sentry server-side desabilitado — `withSentryConfig` + instrumentação OpenTelemetry causavam 502 timeout (15s) em todas as rotas no Railway; P1 concluído (4/4 itens) |
+| 2.4 | Março 2026 | Mardoqueu Costa | @sentry/nextjs completamente removido; Cloudflare AI Crawl Control — toggle "Cloudflare managed" desativado |
+| 2.5 | Março 2026 | Mardoqueu Costa | **Auditoria técnica cruzada com PRD**: contagens corrigidas com dados do código-fonte (100 .ts/.tsx, 87 .mdx, 73 redirects, 10 API routes, 15 componentes, 98 testes); seção Auth reescrita como placeholder (NextAuth não instalado, prisma.ts/auth.ts = `export {}`); dívidas técnicas repriorizadas por impacto real (CI/CD e idempotência da newsletter como P0); security headers e Next.js CVE-2025-29927 documentados; checklist SEO expandido com 12 itens verificados no código |
