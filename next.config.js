@@ -1,5 +1,3 @@
-const { withSentryConfig } = require('@sentry/nextjs');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
@@ -140,10 +138,4 @@ const nextConfig = {
   },
 };
 
-// Temporarily bypass Sentry wrapper to diagnose 502 on Railway
-// module.exports = withSentryConfig(nextConfig, {
-//   silent: !process.env.NEXT_PUBLIC_SENTRY_DSN,
-//   sourcemaps: { disable: true },
-//   tunnelRoute: undefined,
-// });
 module.exports = nextConfig;

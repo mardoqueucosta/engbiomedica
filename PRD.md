@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Versão | 2.0 |
+| Versão | 2.3 |
 | Data | Março 2026 |
 | Autor | Mardoqueu Costa |
 | Horizonte | Q2–Q3 2026 (6 meses) |
@@ -322,7 +322,9 @@ Cada hub segue estrutura consistente:
 | Artigo → Newsletter | CTA box ao final de cada artigo | Todos os artigos |
 | Artigo → Listagem | Link "Ver todos os artigos" com ArrowLeft | Todos os artigos |
 
-**Lacuna identificada:** Não existe "Artigos Relacionados" no final dos artigos — oportunidade de cross-linking.
+| Artigo → Artigo | Componente "Artigos Relacionados" (até 4 da mesma categoria, grid responsivo) | Todos os artigos |
+
+**Lacuna anterior resolvida (Março 2026):** Componente `RelatedArticles` implementado — exibe até 4 artigos da mesma categoria no final de cada artigo, com Badge, título, resumo e tempo de leitura.
 
 ---
 
@@ -386,9 +388,9 @@ Cada hub segue estrutura consistente:
 | Dívida | Impacto SEO | Ação | Status |
 |--------|------------|------|--------|
 | ~~Sem testes automatizados~~ | ~~Regressão silenciosa em cada deploy~~ | ~~Vitest + Playwright~~ | **Concluído** (Março 2026) — 66 unit tests + 51 e2e tests (páginas, busca, redirects, SEO, sitemap) |
-| ~~Sem monitoramento de erros~~ | ~~Páginas 500/404 despercebidas~~ | ~~Sentry para Next.js~~ | **Concluído** (Março 2026) — @sentry/nextjs v10 com client/server/edge configs, global-error.tsx, desabilitado sem DSN |
+| ~~Sem monitoramento de erros~~ | ~~Páginas 500/404 despercebidas~~ | ~~Sentry para Next.js~~ | **Desabilitado** (Março 2026) — @sentry/nextjs v10 instalado e configurado, porém **causava 502 (timeout 15s) em todas as rotas no Railway**. O `withSentryConfig` injeta hooks OpenTelemetry no middleware (+83 KB) e server que travam o processo em containers com recursos limitados. Healthcheck passa, mas requests subsequentes nunca recebem resposta. Instrumentação server/edge e wrapper desabilitados; `global-error.tsx` e client SDK mantidos. DSN configurado no Railway. **Requer:** investigar compatibilidade com Railway (memória/CPU) ou migrar para Sentry client-only. |
 | ~~`.env.example` incompleto~~ | ~~Apenas 4 de 12+ variáveis~~ | ~~Documentar todas~~ | **Concluído** (Março 2026) — 12 variáveis documentadas no .env.example |
-| **Sem "Artigos Relacionados"** | Cross-linking fraco entre artigos; reduz páginas/sessão e tempo no site | Componente com artigos da mesma categoria | Pendente |
+| ~~Sem "Artigos Relacionados"~~ | ~~Cross-linking fraco entre artigos~~ | ~~Componente com artigos da mesma categoria~~ | **Concluído** (Março 2026) — `RelatedArticles` exibe até 4 artigos da mesma categoria ao final de cada artigo; grid responsivo 1×1/2×2 com Badge, título, resumo e tempo de leitura |
 
 ### P2 — Desejáveis (melhorias incrementais)
 
@@ -512,7 +514,7 @@ Cada hub segue estrutura consistente:
 | Acessibilidade | WCAG 2.1 AA | Parcial (sem auditoria formal) |
 | SEO | Schema.org completo, sitemaps, robots, canonical, OG dinâmico, 84 redirects | Implementado |
 | Responsividade | Mobile-first (testado em 375px) | Implementado |
-| Observabilidade | GA4 para analytics + Sentry para erros | Implementado (Março 2026) |
+| Observabilidade | GA4 para analytics; Sentry server-side desabilitado (incompatível com Railway — causa 502 timeout); client SDK e global-error.tsx mantidos | Parcial (Março 2026) |
 | Backup | Código em GitHub; banco no Railway | Parcial (sem backup automático de DB) |
 
 ---
@@ -758,7 +760,7 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 ### A Implementar (Q2–Q3 2026)
 
 - [x] Busca interna (Fuse.js — modal Ctrl+K + inline /artigos, accent-insensitive, GA4 tracking)
-- [ ] Componente "Artigos Relacionados"
+- [x] Componente "Artigos Relacionados" (RelatedArticles — até 4 artigos da mesma categoria, grid responsivo)
 - [ ] Páginas de categoria (`/artigos/categoria/[nome]`)
 - [ ] Table of Contents automático para artigos longos
 - [ ] Core Web Vitals audit e otimização
@@ -768,7 +770,7 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 - [ ] Métricas de conteúdo (scroll depth, reading time)
 - [ ] Glossário expandido (20 → 50+ termos)
 - [x] Testes automatizados (Vitest 66 unit + Playwright 51 e2e — páginas, busca, 21 redirects, sitemap, SEO, Schema.org)
-- [x] Monitoramento de erros (@sentry/nextjs v10 — client/server/edge, global-error.tsx, desabilitado sem DSN)
+- [x] ~~Monitoramento de erros (@sentry/nextjs v10)~~ — **server-side desabilitado** (causa 502 timeout no Railway); client SDK e global-error.tsx mantidos; requer investigação de compatibilidade
 - [x] `.env.example` completo (12 variáveis: site, analytics, Sentry, newsletter, HMAC, Redis, Turnstile)
 - [ ] Botões de compartilhamento social
 - [ ] Sistema de comentários (Giscus)
@@ -783,3 +785,4 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxxxx  # opcional
 | 2.0 | Março 2026 | Mardoqueu Costa | Reescrita completa: dados auditados do código-fonte, SEO expandido como seção principal, roadmap 6 meses priorizado, variáveis de ambiente documentadas, mapa de 43 rotas, checklist SEO |
 | 2.1 | Março 2026 | Mardoqueu Costa | Migração completa: 88 artigos .ts → .mdx; metadata.ts e index.ts dinamizados; busca interna com Fuse.js (modal Ctrl+K + inline /artigos); remoção de travessões; TikTok no footer; ADRs 002/007/008 atualizados |
 | 2.2 | Março 2026 | Mardoqueu Costa | Testes automatizados (Vitest 66 unit + Playwright 51 e2e); Sentry v10 para monitoramento de erros; .env.example completo com 12 variáveis; global-error.tsx; P1 concluído (3/4 itens) |
+| 2.3 | Março 2026 | Mardoqueu Costa | Componente "Artigos Relacionados" (RelatedArticles); Sentry server-side desabilitado — `withSentryConfig` + instrumentação OpenTelemetry causavam 502 timeout (15s) em todas as rotas no Railway (healthcheck passava mas requests travavam); wrapper e instrumentation comentados, client SDK e global-error.tsx mantidos; P1 concluído (4/4 itens) |
