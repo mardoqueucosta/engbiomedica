@@ -4,7 +4,9 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
+import { artigosMeta } from '@/data/artigos/metadata';
 import { extractFaqItems } from '@/lib/extract-faq';
+import { RelatedArticles } from '@/components/ui/RelatedArticles';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', {
@@ -243,6 +245,14 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
               Assinar newsletter
             </Link>
           </div>
+
+          {/* Related Articles */}
+          <RelatedArticles
+            currentSlug={params.slug}
+            categoria={meta.categoria}
+            categoriaVariant={meta.categoriaVariant}
+            allArticles={artigosMeta}
+          />
 
           {/* Back link */}
           <div className="mt-8">
