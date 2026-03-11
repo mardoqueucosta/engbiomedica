@@ -172,6 +172,8 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
       ...(entity.sameAs ? { sameAs: entity.sameAs } : {}),
     }));
 
+  const primaryImage = imageObjects.length > 0 ? imageObjects[0] : null;
+
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
@@ -182,6 +184,7 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
     image: imageObjects.length > 0
       ? [ogImageUrl, ...imageObjects]
       : ogImageUrl,
+    ...(primaryImage ? { primaryImageOfPage: primaryImage } : {}),
     author: {
       '@type': 'Person',
       '@id': 'https://engenhariabiomedica.com/#author',
@@ -326,7 +329,7 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
               <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, {
-                    ADD_ATTR: ['loading', 'decoding', 'width', 'height'],
+                    ADD_ATTR: ['loading', 'decoding', 'width', 'height', 'fetchpriority'],
                     ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup'],
                     FORBID_TAGS: ['form', 'input', 'textarea', 'select', 'button', 'style', 'meta', 'link', 'script', 'iframe', 'object', 'embed'],
                     FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur', 'onsubmit', 'onchange', 'srcdoc'],
