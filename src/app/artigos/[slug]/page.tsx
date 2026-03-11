@@ -100,15 +100,16 @@ export function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const meta = artigosMetaMap[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const meta = artigosMetaMap[slug];
   if (!meta) return { title: 'Artigo não encontrado' };
   const ogImage = `/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`;
   return {
     title: meta.titulo,
     description: meta.resumo,
     alternates: {
-      canonical: `/artigos/${params.slug}`,
+      canonical: `/artigos/${slug}`,
     },
     openGraph: {
       title: meta.titulo,
@@ -127,14 +128,15 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default async function ArtigoPage({ params }: { params: { slug: string } }) {
-  const meta = artigosMetaMap[params.slug];
+export default async function ArtigoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const meta = artigosMetaMap[slug];
   if (!meta) notFound();
 
-  const artigo = await getArtigo(params.slug);
+  const artigo = await getArtigo(slug);
   if (!artigo) notFound();
 
-  const articleUrl = `https://engenhariabiomedica.com/artigos/${params.slug}`;
+  const articleUrl = `https://engenhariabiomedica.com/artigos/${slug}`;
 
   const ogImageUrl = `https://engenhariabiomedica.com/api/og?title=${encodeURIComponent(meta.titulo)}&category=${encodeURIComponent(meta.categoria)}`;
   const articleImages = meta.imagens?.length
@@ -144,7 +146,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
   const conteudoHtml = typeof artigo.conteudo === 'string' ? artigo.conteudo : '';
   const headings = extractHeadings(conteudoHtml);
   const conteudoComIds = headings.length >= 3 ? injectHeadingIds(conteudoHtml, headings) : conteudoHtml;
-  const conteudoFinal = injectCrossReferences(conteudoComIds, params.slug, meta.categoria, artigosMeta);
+  const conteudoFinal = injectCrossReferences(conteudoComIds, slug, meta.categoria, artigosMeta);
   const faqItems = extractFaqItems(conteudoHtml);
 
   // Schema.org ImageObject individual por imagem
@@ -354,7 +356,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
 
           {/* Related Articles */}
           <RelatedArticles
-            currentSlug={params.slug}
+            currentSlug={slug}
             categoria={meta.categoria}
             categoriaVariant={meta.categoriaVariant}
             allArticles={artigosMeta}
