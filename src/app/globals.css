@@ -54,6 +54,9 @@
   .prose blockquote p {
     @apply mb-0 text-teal-700 italic;
   }
+  .prose blockquote cite {
+    @apply block text-xs text-teal-600 not-italic mt-2 font-sans;
+  }
   .prose table {
     @apply w-full mb-6 text-sm border-collapse;
     display: block;
