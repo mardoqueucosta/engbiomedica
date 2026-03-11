@@ -30,23 +30,56 @@ async function main() {
   console.log(`🔔 Enviando URLs ao IndexNow...`);
   console.log(`   Endpoint: ${url}`);
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${apiKey}` },
-  });
+  // Retry até 3 vezes (Railway pode demorar após deploy)
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${apiKey}` },
+      });
 
-  const data = await response.json();
+      const text = await response.text();
+      let data: any;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        if (attempt < 3) {
+          console.log(`⏳ Tentativa ${attempt}/3 — resposta não-JSON (site pode estar reiniciando). Aguardando 30s...`);
+          await new Promise(r => setTimeout(r, 30_000));
+          continue;
+        }
+        console.error(`❌ Resposta não-JSON após 3 tentativas (${response.status}): ${text.slice(0, 200)}`);
+        process.exit(1);
+      }
 
-  if (!response.ok) {
-    console.error(`❌ Erro (${response.status}):`, data);
-    process.exit(1);
+      if (!response.ok) {
+        if (attempt < 3 && response.status >= 500) {
+          console.log(`⏳ Tentativa ${attempt}/3 — erro ${response.status}. Aguardando 30s...`);
+          await new Promise(r => setTimeout(r, 30_000));
+          continue;
+        }
+        console.error(`❌ Erro (${response.status}):`, data);
+        process.exit(1);
+      }
+
+      // Sucesso
+      console.log(`✅ ${data.message}`);
+      if (data.urlList) {
+        console.log(`\nURLs submetidas:`);
+        data.urlList.forEach((u: string) => console.log(`  → ${u}`));
+      }
+      return;
+    } catch (err) {
+      lastError = err;
+      if (attempt < 3) {
+        console.log(`⏳ Tentativa ${attempt}/3 — erro de rede. Aguardando 30s...`);
+        await new Promise(r => setTimeout(r, 30_000));
+        continue;
+      }
+    }
   }
-
-  console.log(`✅ ${data.message}`);
-  if (data.urlList) {
-    console.log(`\nURLs submetidas:`);
-    data.urlList.forEach((u: string) => console.log(`  → ${u}`));
-  }
+  throw lastError;
 }
 
 main().catch(err => {
