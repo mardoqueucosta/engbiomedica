@@ -190,6 +190,8 @@ tldr: >-
 
 <p>O <strong>DERS (Drug Error Reduction System)</strong também chamado de <em>Dose Error Reduction Software</em> ou simplesmente biblioteca de medicamentos (<em>drug library</em>), é o avanço mais significativo das últimas duas décadas. A biblioteca contém limites de dose configurados pela farmácia clínica para cada medicamento, concentração e perfil de paciente (adulto, pediátrico, neonatal). Quando o profissional programa uma dose fora dos limites, a bomba emite alertas <em>soft</em> (consultivo, pode ser ignorado com justificativa) ou <em>hard</em> (bloqueio absoluto). Estudos publicados no <em>American Journal of Health-System Pharmacy</em> demonstram redução de 50–80% em erros de programação com DERS ativo.</p>
 
+<blockquote><p>A Iniciativa de Melhoria de Bombas de Infusão da FDA (2010) foi motivada por aproximadamente 56.000 relatos de eventos adversos entre 2005 e 2009, incluindo mais de 500 mortes e 87 recalls — dos quais 14 foram Class I (risco de morte).</p><cite>— FDA Infusion Pump Improvement Initiative, 2010</cite></blockquote>
+
 <p>O <strong>detector de ar em linha (air-in-line)</strong> utiliza um par emissor/receptor de ultrassom posicionado no segmento da equipe: a diferença de impedância acústica entre o líquido e uma bolha de ar acima de 20–50 μL aciona o alarme e bloqueia a bomba automaticamente. A sensibilidade mínima exigida pela IEC 60601-2-24 é de 0,10 mL de ar total.</p>
 
 <p>O <strong>sensor de oclusão</strong> monitora a pressão a jusante (distal) e a montante (proximal) do mecanismo de infusão. O limiar de oclusão, determina com que rapidez a bomba alerta sobre obstrução. Limiares baixos (100–200 mmHg) são adequados para acessos periféricos; limiares altos (600–900 mmHg) para cateteres centrais de múltiplos lúmens. O tempo de resposta para acionar o alarme não deve exceder 45 segundos na pressão máxima configurada.</p>
@@ -265,6 +267,10 @@ tldr: >-
 <p>O fluxo de trabalho de <strong>infusão em circuito fechado (closed-loop infusion)</strong> funciona da seguinte forma: o médico prescreve no CPOE; a prescrição é validada pela farmácia clínica; a ordem é transmitida eletronicamente à bomba já identificada ao leito via código de barras ou RFID; o enfermeiro confirma a programação no display; e os dados de infusão (volume infundido, alarmes disparados, interrupções) retornam automaticamente ao PEP. Esse ciclo elimina a transcrição manual, fonte de até 39% dos erros de medicação segundo estudo do Institute for Safe Medication Practices (ISMP).</p>
 
 <p>A interoperabilidade plena, contudo, exige investimento em infraestrutura: rede Wi-Fi hospitalar com cobertura de 100% das áreas clínicas, servidor de middleware para integração (tipicamente Capsule Technologies ou ICU Medical DoseEdge), e profissional de TI clínica dedicado à manutenção da biblioteca de medicamentos. No Brasil, hospitais com mais de 200 leitos e certificação ONA Nível 3 ou Qmentum são os principais adotantes.</p>
+
+<blockquote><p>Um estudo da Palo Alto Networks Unit 42 (2022) escaneou mais de 200.000 bombas de infusão em redes hospitalares dos EUA e encontrou que 75% possuíam vulnerabilidades de segurança conhecidas, sendo 52% suscetíveis às vulnerabilidades críticas URGENT/11 no stack TCP/IP.</p><cite>— Palo Alto Networks Unit 42, 2022</cite></blockquote>
+
+<blockquote><p>Embora o DERS possa reduzir erros de programação em até 80%, o ECRI Institute avaliou que esse sistema poderia ter evitado apenas 28% dos problemas reportados em dois anos de análise, evidenciando limitações como fadiga de alarmes e override frequente de alertas.</p><cite>— ECRI Institute, Health Devices Analysis</cite></blockquote>
 
 <h2>Calibração: IEC 60601-2-24 e Procedimentos com Analisador de Fluxo</h2>
 
