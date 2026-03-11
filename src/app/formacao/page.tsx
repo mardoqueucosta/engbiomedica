@@ -59,9 +59,89 @@ const sections = [
   },
 ];
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Formação Acadêmica em Engenharia Biomédica',
+  numberOfItems: sections.length,
+  itemListElement: sections.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
+const courseSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOccupationalProgram',
+    name: 'Bacharelado em Engenharia Biomédica',
+    description:
+      'Curso de graduação com duração de 5 anos (10 semestres) que forma profissionais para atuar na interface entre engenharia e saúde — engenharia clínica, biomateriais, processamento de sinais, IA em saúde e mais.',
+    educationalProgramMode: 'full-time',
+    timeToComplete: 'P5Y',
+    educationalCredentialAwarded: 'Bacharelado em Engenharia Biomédica',
+    programType: 'Bacharelado',
+    occupationalCategory: {
+      '@type': 'CategoryCode',
+      codeValue: '2143-80',
+      name: 'Engenheiro Biomédico',
+      inCodeSet: {
+        '@type': 'CategoryCodeSet',
+        name: 'Classificação Brasileira de Ocupações (CBO)',
+      },
+    },
+    numberOfCredits: {
+      '@type': 'StructuredValue',
+      value: 3600,
+      unitText: 'horas',
+    },
+    provider: [
+      { '@type': 'CollegeOrUniversity', name: 'Universidade Federal de Pernambuco (UFPE)', sameAs: 'https://www.wikidata.org/wiki/Q1063819' },
+      { '@type': 'CollegeOrUniversity', name: 'Universidade Federal de Uberlândia (UFU)', sameAs: 'https://www.wikidata.org/wiki/Q2302205' },
+      { '@type': 'CollegeOrUniversity', name: 'Universidade Federal do ABC (UFABC)', sameAs: 'https://www.wikidata.org/wiki/Q2465687' },
+      { '@type': 'CollegeOrUniversity', name: 'Instituto Federal da Bahia (IFBA)', sameAs: 'https://www.wikidata.org/wiki/Q10301990' },
+      { '@type': 'CollegeOrUniversity', name: 'UNIVAP — Universidade do Vale do Paraíba' },
+    ],
+    url: 'https://engenhariabiomedica.com/formacao',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOccupationalProgram',
+    name: 'Pós-Graduação em Engenharia Biomédica (Mestrado e Doutorado)',
+    description:
+      'Programas stricto sensu (mestrado acadêmico, mestrado profissional e doutorado) em Engenharia Biomédica avaliados pela CAPES, com linhas de pesquisa em instrumentação, sinais, biomateriais, IA e engenharia clínica.',
+    educationalProgramMode: 'full-time',
+    timeToComplete: 'P2Y',
+    educationalCredentialAwarded: 'Mestre ou Doutor em Engenharia Biomédica',
+    programType: 'Mestrado e Doutorado',
+    provider: [
+      { '@type': 'CollegeOrUniversity', name: 'COPPE/UFRJ — Universidade Federal do Rio de Janeiro', sameAs: 'https://www.wikidata.org/wiki/Q1065076' },
+      { '@type': 'CollegeOrUniversity', name: 'CEB/UNICAMP — Universidade Estadual de Campinas', sameAs: 'https://www.wikidata.org/wiki/Q1065395' },
+      { '@type': 'CollegeOrUniversity', name: 'USP — Universidade de São Paulo', sameAs: 'https://www.wikidata.org/wiki/Q835960' },
+      { '@type': 'CollegeOrUniversity', name: 'UFMG — Universidade Federal de Minas Gerais', sameAs: 'https://www.wikidata.org/wiki/Q583195' },
+    ],
+    url: 'https://engenhariabiomedica.com/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica',
+  },
+];
+
 export default function FormacaoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      {courseSchemas.map((cs, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cs) }}
+        />
+      ))}
+
       <PageHeader
         overline="Formação Acadêmica"
         title="Onde estudar Engenharia Biomédica no Brasil"

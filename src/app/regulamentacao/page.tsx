@@ -18,9 +18,35 @@ const sections = [
   { title: 'Normas Técnicas', desc: 'IEC 60601, ISO 13485, ISO 14971 e legislação fundamental.', href: '/artigos/normas-tecnicas-engenharia-biomedica', icon: BookOpen },
 ];
 
+const allLinks = [
+  ...sections.map((s) => ({ title: s.title, description: s.desc, href: s.href })),
+  { title: 'Como Funciona a ANVISA', description: 'Estrutura organizacional, cinco diretorias e o papel do engenheiro biomédico na regulamentação.', href: '/artigos/como-funciona-a-anvisa-estrutura-atribuicoes-e-o-papel-na-re' },
+  { title: 'Rastreamento IUD — ANVISA', description: 'Sistema nacional de identificação única para dispositivos médicos, alinhando o Brasil ao FDA e UE.', href: '/artigos/anvisa-aprova-sistema-de-rastreamento-e-identificacao-de-dis' },
+  { title: 'Aprovação FDA Internacional', description: 'O caso do parque Great Stone e as implicações para empresas brasileiras acessarem o mercado americano.', href: '/artigos/aprovacao-fda-para-empresas-internacionais-o-que-o-caso-do-p' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Regulamentação da Engenharia Biomédica',
+  numberOfItems: allLinks.length,
+  itemListElement: allLinks.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
 export default function RegulamentacaoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <PageHeader
         overline="Regulamentação"
         title="O arcabouço regulatório da Engenharia Biomédica"

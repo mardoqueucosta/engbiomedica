@@ -20,9 +20,38 @@ const brasilSections = [
   { title: 'Eventos', desc: 'CBEB, Hospitalar, CIOSP e o calendário completo de feiras e congressos.', href: '/artigos/calendario-eventos-engbiomedica-saude-digital', icon: Calendar },
 ];
 
+const allLinks = [
+  ...brasilSections.map((s) => ({ title: s.title, description: s.desc, href: s.href })),
+  { title: 'Engenharia Biomédica: EUA vs. Brasil', description: 'Formação acadêmica (ABET), mercado de US$ 188-256 bilhões, regulação FDA, venture capital e hubs de inovação.', href: '/artigos/engenharia-biomedica-eua-comparativo' },
+  { title: 'Investir em Dispositivos Médicos', description: 'Mercado global de US$ 600 bilhões, empresas líderes e estratégias para investidores brasileiros.', href: '/artigos/acoes-de-dispositivos-medicos-como-investir-no-setor-em-2026' },
+  { title: 'Medtronic: Robótica Espinhal', description: 'FDA autoriza o Stealth AXiS, sistema robótico para coluna baseado na plataforma Mazor.', href: '/artigos/medtronic-obtem-autorizacao-da-fda-para-sistema-robotico-esp' },
+  { title: 'Novocure: Câncer de Pâncreas', description: 'FDA aprova terapia TTFields para câncer de pâncreas localmente avançado.', href: '/artigos/novocure-recebe-aprovacao-da-fda-para-tratar-cancer-de-pancr' },
+  { title: 'QMSR e Cibersegurança FDA', description: 'QMSR substituiu o QSR em 2026, exigindo cibersegurança por projeto em dispositivos conectados.', href: '/artigos/qmsr-e-ciberseguranca-da-fda-requisitos-essenciais-para-disp' },
+  { title: 'Wearables em Ascensão', description: 'Mercado de US$ 31 bilhões: os quatro componentes que moldam a nova cadeia de suprimentos.', href: '/artigos/dispositivos-medicos-vestiveis-em-ascensao-os-quatro-compone' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Mercado de Trabalho — Engenharia Biomédica',
+  numberOfItems: allLinks.length,
+  itemListElement: allLinks.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
 export default function MercadoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <PageHeader
         overline="Mercado de Trabalho"
         title="Um mercado de R$ 26 bilhões com 85 mil empregos"

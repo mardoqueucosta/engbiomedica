@@ -69,9 +69,28 @@ const sections = [
   },
 ];
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Carreira em Engenharia Biomédica',
+  numberOfItems: sections.length,
+  itemListElement: sections.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
 export default function CarreiraPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <PageHeader
         overline="Carreira em Engenharia Biomédica"
         title="Carreira em Engenharia Biomédica"

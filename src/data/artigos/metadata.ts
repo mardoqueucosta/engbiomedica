@@ -22,6 +22,7 @@ export interface ArtigoMeta {
   data: string;
   dataModificacao?: string;
   leitura: string;
+  tldr?: string;
   imagens?: ArtigoImagem[];
 }
 
@@ -44,6 +45,7 @@ function loadArtigosMeta(): ArtigoMeta[] {
       data: data.data ?? '',
       dataModificacao: data.dataModificacao,
       leitura: data.leitura ?? '',
+      tldr: data.tldr,
       imagens: data.imagens,
     } as ArtigoMeta;
   }).sort((a, b) => b.data.localeCompare(a.data));

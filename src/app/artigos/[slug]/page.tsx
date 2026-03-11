@@ -5,9 +5,10 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
-import { artigosMeta } from '@/data/artigos/metadata';
+import { artigosMeta, type ArtigoMeta } from '@/data/artigos/metadata';
 import { extractFaqItems } from '@/lib/extract-faq';
 import { RelatedArticles } from '@/components/ui/RelatedArticles';
+import { knownEntities } from '@/data/entities';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', {
@@ -15,6 +16,84 @@ function formatDate(iso: string) {
     month: 'long',
     year: 'numeric',
   });
+}
+
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/<[^>]+>/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function extractHeadings(html: string): { id: string; text: string }[] {
+  const regex = /<h2[^>]*>(.*?)<\/h2>/gi;
+  const headings: { id: string; text: string }[] = [];
+  let match;
+  while ((match = regex.exec(html)) !== null) {
+    const text = match[1].replace(/<[^>]+>/g, '').trim();
+    if (text) {
+      headings.push({ id: slugify(text), text });
+    }
+  }
+  return headings;
+}
+
+function injectHeadingIds(html: string, headings: { id: string; text: string }[]): string {
+  let index = 0;
+  return html.replace(/<h2([^>]*)>/gi, (fullMatch, attrs) => {
+    if (index < headings.length) {
+      const id = headings[index].id;
+      index++;
+      if (attrs.includes('id=')) return fullMatch;
+      return `<h2${attrs} id="${id}">`;
+    }
+    return fullMatch;
+  });
+}
+
+function truncateText(text: string, maxLen: number): string {
+  if (text.length <= maxLen) return text;
+  const truncated = text.substring(0, maxLen);
+  const lastSpace = truncated.lastIndexOf(' ');
+  return (lastSpace > 0 ? truncated.substring(0, lastSpace) : truncated) + '…';
+}
+
+function injectCrossReferences(
+  html: string,
+  currentSlug: string,
+  categoria: string,
+  allArticles: ArtigoMeta[]
+): string {
+  const related = allArticles
+    .filter((a) => a.categoria === categoria && a.slug !== currentSlug)
+    .slice(0, 2);
+
+  if (related.length === 0) return html;
+
+  const h2Regex = /<h2[^>]*>/gi;
+  const h2Positions: number[] = [];
+  let match;
+  while ((match = h2Regex.exec(html)) !== null) {
+    h2Positions.push(match.index);
+  }
+
+  const insertIndices = [2, 4].filter((i) => i < h2Positions.length);
+
+  let offset = 0;
+  insertIndices.forEach((h2Index, refIndex) => {
+    if (refIndex >= related.length) return;
+    const article = related[refIndex];
+    const desc = truncateText(article.resumo, 120);
+    const crossRefHtml = `<aside class="cross-ref"><strong>Leia também</strong><a href="/artigos/${article.slug}">${article.titulo}</a><span>${desc}</span></aside>`;
+    const insertAt = h2Positions[h2Index] + offset;
+    html = html.slice(0, insertAt) + crossRefHtml + html.slice(insertAt);
+    offset += crossRefHtml.length;
+  });
+
+  return html;
 }
 
 export function generateStaticParams() {
@@ -63,6 +142,9 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
     : ogImageUrl;
 
   const conteudoHtml = typeof artigo.conteudo === 'string' ? artigo.conteudo : '';
+  const headings = extractHeadings(conteudoHtml);
+  const conteudoComIds = headings.length >= 3 ? injectHeadingIds(conteudoHtml, headings) : conteudoHtml;
+  const conteudoFinal = injectCrossReferences(conteudoComIds, params.slug, meta.categoria, artigosMeta);
   const faqItems = extractFaqItems(conteudoHtml);
 
   // Schema.org ImageObject individual por imagem
@@ -77,20 +159,12 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
     encodingFormat: 'image/webp',
   })) || [];
 
-  // Entity linking — about/mentions para organizações citadas
-  const knownEntities: Record<string, { name: string; url: string; sameAs?: string[] }> = {
-    anvisa: { name: 'ANVISA', url: 'https://www.gov.br/anvisa', sameAs: ['https://pt.wikipedia.org/wiki/Ag%C3%AAncia_Nacional_de_Vigil%C3%A2ncia_Sanit%C3%A1ria'] },
-    fda: { name: 'FDA', url: 'https://www.fda.gov', sameAs: ['https://en.wikipedia.org/wiki/Food_and_Drug_Administration'] },
-    ieee: { name: 'IEEE', url: 'https://www.ieee.org', sameAs: ['https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers'] },
-    abimo: { name: 'ABIMO', url: 'https://abimo.org.br' },
-    abimed: { name: 'ABIMED', url: 'https://abimed.org.br' },
-  };
-
+  // Entity linking — about/mentions para entidades citadas (src/data/entities.ts)
   const contentLower = conteudoHtml.toLowerCase();
   const mentionedEntities = Object.entries(knownEntities)
     .filter(([key]) => contentLower.includes(key))
     .map(([, entity]) => ({
-      '@type': 'Organization' as const,
+      '@type': entity.type,
       name: entity.name,
       url: entity.url,
       ...(entity.sameAs ? { sameAs: entity.sameAs } : {}),
@@ -107,14 +181,12 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
       ? [ogImageUrl, ...imageObjects]
       : ogImageUrl,
     author: {
-      '@type': 'Organization',
-      name: 'Engenharia Biomédica',
-      url: 'https://engenhariabiomedica.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://engenhariabiomedica.com/icon.svg',
-      },
-      description: 'Portal brasileiro de referência em Engenharia Biomédica: artigos técnicos, guias de carreira e análises do setor de dispositivos médicos.',
+      '@type': 'Person',
+      '@id': 'https://engenhariabiomedica.com/#author',
+      name: 'Mardoqueu Martins da Costa',
+      jobTitle: 'Pesquisador e Professor em Engenharia Biomédica',
+      url: 'https://engenhariabiomedica.com/sobre',
+      sameAs: ['http://lattes.cnpq.br/7819717440359474'],
     },
     publisher: {
       '@type': 'Organization',
@@ -133,7 +205,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
     inLanguage: 'pt-BR',
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.text-lg.leading-relaxed', 'h2', '.prose p:first-of-type'],
+      cssSelector: ['.tldr', '.text-lg.leading-relaxed', 'h2', '.prose p:first-of-type'],
     },
     ...(mentionedEntities.length > 0 ? { mentions: mentionedEntities } : {}),
     about: {
@@ -222,10 +294,36 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
             </div>
           </div>
 
+          {/* Table of Contents */}
+          {headings.length >= 3 && (
+            <div className="prose prose-lg text-justify overflow-x-hidden">
+              <nav aria-label="Índice">
+                <h2>Índice</h2>
+                <ol>
+                  {headings.map((h) => (
+                    <li key={h.id}>
+                      <a href={`#${h.id}`}>{h.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+          )}
+
+          {/* TL;DR */}
+          {meta.tldr && (
+            <div className="prose prose-lg text-justify overflow-x-hidden">
+              <aside className="tldr">
+                <strong>Em resumo</strong>
+                <p>{meta.tldr}</p>
+              </aside>
+            </div>
+          )}
+
           {/* Content */}
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
-              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(artigo.conteudo) }} />
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, { ADD_ATTR: ['id'] }) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
                 <p key={i}>{paragrafo}</p>

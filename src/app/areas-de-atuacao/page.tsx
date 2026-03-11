@@ -87,9 +87,28 @@ const sections = [
   },
 ];
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Áreas de Atuação da Engenharia Biomédica',
+  numberOfItems: sections.length,
+  itemListElement: sections.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
 export default function AreasDeAtuacaoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <PageHeader
         overline="Áreas de Atuação"
         title="Áreas de Atuação da Engenharia Biomédica"

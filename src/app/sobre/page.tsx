@@ -12,9 +12,64 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://engenhariabiomedica.com/#author',
+  name: 'Mardoqueu Martins da Costa',
+  jobTitle: 'Pesquisador e Professor em Engenharia Biomédica',
+  description:
+    'Pós-doutor em Engenharia de Biossistemas pela ESALQ/USP, Doutor e Mestre em Engenharia Elétrica pela EESC/USP. Professor e pesquisador no Programa de Pós-Graduação em Engenharia Biomédica da Universidade Brasil.',
+  url: 'https://engenhariabiomedica.com/sobre',
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Universidade de São Paulo (USP)',
+      department: 'ESALQ — Engenharia de Biossistemas',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Universidade de São Paulo (USP)',
+      department: 'EESC — Engenharia Elétrica',
+    },
+  ],
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Universidade Brasil',
+    department: 'Programa de Pós-Graduação em Engenharia Biomédica',
+  },
+  sameAs: ['http://lattes.cnpq.br/7819717440359474'],
+  knowsAbout: [
+    'Engenharia Biomédica',
+    'Instrumentação Biomédica',
+    'Equipamentos Médicos',
+    'Processamento de Sinais Biológicos',
+    'Engenharia Clínica',
+  ],
+};
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Sobre o Portal',
+  description:
+    'Missão, equipe e metodologia editorial do portal engenhariabiomedica.com — a referência sobre Engenharia Biomédica no Brasil.',
+  url: 'https://engenhariabiomedica.com/sobre',
+  mainEntity: { '@id': 'https://engenhariabiomedica.com/#author' },
+};
+
 export default function SobrePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+
       <PageHeader
         overline="O Portal"
         title="Sobre o engenhariabiomedica.com"

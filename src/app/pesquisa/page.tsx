@@ -13,9 +13,41 @@ export const metadata: Metadata = {
   },
 };
 
+
+const allLinks = [
+  { title: 'Centros de Pesquisa', description: 'PEB/COPPE-UFRJ, CEB/UNICAMP, LEB/USP, UFPE, UFMG e outros centros de excelência.', href: '/artigos/centros-pesquisa-engbiomedica-mapa' },
+  { title: 'Financiamento', description: 'EMBRAPII, FINEP, FAPESP PIPE, CNPq, BNDES e outros programas de fomento à inovação.', href: '/pesquisa/financiamento' },
+  { title: 'Repositórios Acadêmicos', description: 'PubMed, IEEE Xplore, SciELO, periódicos e bases de dados para pesquisa em Engenharia Biomédica.', href: '/internacional/repositorios' },
+  { title: 'Como Publicar Artigos Científicos', description: 'Escolha de revistas, métricas de impacto e estratégias para aceite.', href: '/artigos/como-publicar-artigos-engenharia-biomedica' },
+  { title: 'Editais e Financiamento', description: 'FAPESP, CNPq, FINEP, EMBRAPII, BNDES e Decit/MS: valores, prazos e como submeter projetos.', href: '/artigos/editais-financiamento-pesquisa-saude' },
+  { title: 'Do Laboratório ao Mercado', description: 'Transferência tecnológica: do TRL 1 ao registro ANVISA, spin-offs e incubadoras hospitalares.', href: '/artigos/laboratorio-mercado-pesquisa-produto-medico' },
+  { title: 'Patentes em Dispositivos Médicos', description: 'Requisitos INPI, custos, sistema PCT, PPH, patentes de SaMD e casos brasileiros.', href: '/artigos/patentes-dispositivos-medicos-brasil' },
+  { title: 'Python e MATLAB', description: 'Comparativo técnico: bibliotecas, toolboxes e aplicações em sinais, imagens, IA e bioinformática.', href: '/artigos/python-matlab-engenharia-biomedica' },
+  { title: 'Tendências de Pesquisa', description: '8 fronteiras: IA diagnóstica, bioimpressão, organ-on-chip, robótica, BCIs, CRISPR e IoMT.', href: '/artigos/tendencias-pesquisa-engenharia-biomedica' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pesquisa e Inovação em Engenharia Biomédica',
+  numberOfItems: allLinks.length,
+  itemListElement: allLinks.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    description: s.description,
+    url: `https://engenhariabiomedica.com${s.href}`,
+  })),
+};
+
 export default function PesquisaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <PageHeader
         overline="Pesquisa & Inovação"
         title="A pesquisa que transforma a saúde no Brasil"

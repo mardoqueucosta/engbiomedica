@@ -1,20 +1,48 @@
 ---
 titulo: 'Processamento de Imagens Médicas: Guia Técnico Completo [2026]'
-resumo: 'Guia técnico sobre processamento de imagens médicas: modalidades de imagem, IA, segmentação, ferramentas Python/MONAI, regulamentação e cenário brasileiro.'
-categoria: 'Pesquisa'
-categoriaVariant: 'primary'
+resumo: >-
+  Guia técnico sobre processamento de imagens médicas: modalidades de imagem,
+  IA, segmentação, ferramentas Python/MONAI, regulamentação e cenário
+  brasileiro.
+categoria: Pesquisa
+categoriaVariant: primary
 data: '2026-02-22'
-leitura: '16 min'
+dataModificacao: '2026-02-22'
+leitura: 16 min
 imagens:
-  - src: '/artigos/processamento-imagens-medicas/image-1.webp'
-    alt: 'Diagrama comparativo dos princípios físicos das seis modalidades de imagem médica: raio-X, TC, RM, ultrassom, PET e SPECT com resolução e dose (120 chars)'
-    caption: 'Os princípios físicos das seis principais modalidades de imagem médica, cada fenômeno físico distinto determina resolução, dose e aplicação clínica ideal.'
-  - src: '/artigos/processamento-imagens-medicas/image-2.webp'
-    alt: 'Diagrama técnico da arquitetura U-Net para segmentação de imagens médicas mostrando encoder, decoder e skip connections com exemplo de segmentação abdominal (115 chars)'
-    caption: 'A arquitetura U-Net, encoder-decoder com skip connections, revolucionou a segmentação médica em 2015 e permanece base de modelos estado-da-arte como nnU-Net e SwinUNETR.'
-  - src: '/artigos/processamento-imagens-medicas/image-3.webp'
-    alt: 'Pesquisador analisando segmentação por IA de tomografia computadorizada em laboratório de processamento de imagens médicas com múltiplos monitores (109 chars)'
-    caption: 'O laboratório de processamento de imagens médicas brasileiro, de grupos como LAPIMO/USP e COPPE/UFRJ, une reconstrução volumétrica, segmentação por IA e validação clínica em um único fluxo de pesquisa.'
+  - src: /artigos/processamento-imagens-medicas/image-1.webp
+    alt: >-
+      Diagrama comparativo dos princípios físicos das seis modalidades de imagem
+      médica: raio-X, TC, RM, ultrassom, PET e SPECT com resolução e dose (120
+      chars)
+    caption: >-
+      Os princípios físicos das seis principais modalidades de imagem médica,
+      cada fenômeno físico distinto determina resolução, dose e aplicação
+      clínica ideal.
+  - src: /artigos/processamento-imagens-medicas/image-2.webp
+    alt: >-
+      Diagrama técnico da arquitetura U-Net para segmentação de imagens médicas
+      mostrando encoder, decoder e skip connections com exemplo de segmentação
+      abdominal (115 chars)
+    caption: >-
+      A arquitetura U-Net, encoder-decoder com skip connections, revolucionou a
+      segmentação médica em 2015 e permanece base de modelos estado-da-arte como
+      nnU-Net e SwinUNETR.
+  - src: /artigos/processamento-imagens-medicas/image-3.webp
+    alt: >-
+      Pesquisador analisando segmentação por IA de tomografia computadorizada em
+      laboratório de processamento de imagens médicas com múltiplos monitores
+      (109 chars)
+    caption: >-
+      O laboratório de processamento de imagens médicas brasileiro, de grupos
+      como LAPIMO/USP e COPPE/UFRJ, une reconstrução volumétrica, segmentação
+      por IA e validação clínica em um único fluxo de pesquisa.
+tldr: >-
+  Processamento de imagens médicas é a disciplina que combina física de formação
+  de imagem, matemática aplicada e inteligência artificial para extrair
+  informação clínica útil a partir de dados gerados por modalidades como
+  tomografia computadorizada, ressonância magnética, ultrassom e medicina
+  nuclear.
 ---
 
 <p class="text-lg leading-relaxed mb-6"><strong>Processamento de imagens médicas</strong> é a disciplina que combina física de formação de imagem, matemática aplicada e inteligência artificial para extrair informação clínica útil a partir de dados gerados por modalidades como tomografia computadorizada, ressonância magnética, ultrassom e medicina nuclear. O campo vive sua transformação mais acelerada: o FDA autorizou <strong>1.356 dispositivos baseados em IA</strong> até setembro de 2025, com 295 apenas naquele ano, e modelos de fundação como MedSAM2, BiomedParse e Med-Gemini redefinem o que é possível em segmentação e diagnóstico automatizado. No Brasil, com um mercado de dispositivos avaliado em <strong>US$ 15,28 bilhões em 2024</strong> e filas de exames que chegam a 2034 em algumas cidades, dominar esse conhecimento é ao mesmo tempo oportunidade profissional e contribuição concreta ao sistema de saúde.</p>

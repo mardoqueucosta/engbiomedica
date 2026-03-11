@@ -4,12 +4,21 @@ import { PageHeader } from '@/components/ui/PageHeader';
 export const metadata: Metadata = {
   title: 'Glossário',
   description:
-    'Glossário com 55+ termos técnicos de Engenharia Biomédica: regulamentação (ANVISA, CREA, FDA), dispositivos médicos, normas (ISO, IEC), áreas técnicas, informática em saúde e mercado.',
+    'Glossário com 85+ termos técnicos de Engenharia Biomédica: regulamentação (ANVISA, CREA, FDA), dispositivos médicos, normas (ISO, IEC), áreas técnicas, informática em saúde e mercado.',
   alternates: { canonical: '/glossario' },
   openGraph: {
     images: [{ url: '/api/og?title=Gloss%C3%A1rio%20%E2%80%94%20Engenharia%20Biom%C3%A9dica&category=Gloss%C3%A1rio', width: 1200, height: 630 }],
   },
 };
+
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 const termos = [
   // ─── Regulamentação e institucional ────────────────────────────
@@ -84,9 +93,32 @@ const termos = [
   { termo: 'LGPD em Saúde', def: 'Aplicação da Lei Geral de Proteção de Dados (Lei 13.709/2018) ao setor de saúde — dados de saúde são classificados como sensíveis e exigem consentimento específico e medidas reforçadas de segurança.' },
 ];
 
+const sortedTermos = [...termos].sort((a, b) => a.termo.localeCompare(b.termo));
+
+const definedTermSetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  name: 'Glossário de Engenharia Biomédica',
+  description:
+    'Glossário com 85+ termos técnicos de Engenharia Biomédica: regulamentação, dispositivos médicos, normas, áreas técnicas e mercado.',
+  url: 'https://engenhariabiomedica.com/glossario',
+  definedTerm: sortedTermos.map((t) => ({
+    '@type': 'DefinedTerm',
+    name: t.termo,
+    description: t.def,
+    url: `https://engenhariabiomedica.com/glossario#${slugify(t.termo)}`,
+    inDefinedTermSet: 'https://engenhariabiomedica.com/glossario',
+  })),
+};
+
 export default function GlossarioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
+      />
+
       <PageHeader
         overline="Referências"
         title="Glossário de Engenharia Biomédica"
@@ -95,18 +127,16 @@ export default function GlossarioPage() {
       />
 
       <section className="container-page py-10 lg:py-14">
-        <div className="space-y-0 divide-y divide-slate-100">
-          {termos
-            .sort((a, b) => a.termo.localeCompare(b.termo))
-            .map((t) => (
-              <div key={t.termo} className="py-4 first:pt-0 last:pb-0">
+        <dl className="space-y-0 divide-y divide-slate-100">
+          {sortedTermos.map((t) => (
+              <div key={t.termo} id={slugify(t.termo)} className="py-4 first:pt-0 last:pb-0">
                 <dt className="text-h4 text-primary-700 mb-1">{t.termo}</dt>
                 <dd className="text-body-sm text-slate-600 font-serif">
                   {t.def}
                 </dd>
               </div>
             ))}
-        </div>
+        </dl>
 
         <div className="mt-10 p-5 rounded-xl bg-teal-50 border border-teal-200">
           <h3 className="text-h4 text-teal-700 mb-2">

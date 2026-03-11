@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const artigoPages: MetadataRoute.Sitemap = artigosMeta.map((a) => ({
     url: `${BASE_URL}/artigos/${a.slug}`,
-    lastModified: new Date(a.data),
+    lastModified: new Date(a.dataModificacao || a.data),
     changeFrequency: 'daily' as const,
     priority: a.slug === guiaSlug ? 0.9 : 0.8,
   }));
