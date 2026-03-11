@@ -135,6 +135,15 @@ const nextConfig = {
         ],
       },
       {
+        source: '/artigos/:slug/:file(.*\\.avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
         source: '/:path((?!_next/static|_next/image|api/).*)',
         headers: [
           {

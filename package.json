@@ -18,6 +18,7 @@
     "publish": "tsx scripts/publish.ts",
     "publish:all": "tsx scripts/publish.ts --all",
     "generate:blur": "tsx scripts/generate-blur.ts",
+    "generate:responsive": "tsx scripts/generate-responsive.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",

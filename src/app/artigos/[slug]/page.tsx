@@ -112,6 +112,15 @@ function injectBlurPlaceholders(html: string): string {
   });
 }
 
+function injectPictureElement(html: string): string {
+  return html.replace(/<img\s([^>]*?)src="(\/artigos\/[^"]+?)\.webp"([^>]*?)>/gi, (full, before, basePath, after) => {
+    const sizes = '(max-width: 768px) 100vw, 768px';
+    const avifSrcset = `${basePath}-640.avif 640w, ${basePath}-768.avif 768w, ${basePath}.avif 1024w`;
+    const webpSrcset = `${basePath}-640.webp 640w, ${basePath}-768.webp 768w, ${basePath}.webp 1024w`;
+    return `<picture><source type="image/avif" srcset="${avifSrcset}" sizes="${sizes}"><source type="image/webp" srcset="${webpSrcset}" sizes="${sizes}"><img ${before}src="${basePath}.webp"${after}></picture>`;
+  });
+}
+
 export function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
@@ -358,14 +367,14 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
           {/* Content */}
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
-              <div dangerouslySetInnerHTML={{ __html: injectBlurPlaceholders(DOMPurify.sanitize(conteudoFinal, {
-                    ADD_ATTR: ['loading', 'decoding', 'width', 'height', 'fetchpriority', 'aria-details'],
-                    ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup', 'details', 'summary'],
+              <div dangerouslySetInnerHTML={{ __html: injectPictureElement(injectBlurPlaceholders(DOMPurify.sanitize(conteudoFinal, {
+                    ADD_ATTR: ['loading', 'decoding', 'width', 'height', 'fetchpriority', 'aria-details', 'srcset', 'sizes', 'type'],
+                    ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup', 'details', 'summary', 'picture', 'source'],
                     FORBID_TAGS: ['form', 'input', 'textarea', 'select', 'button', 'style', 'meta', 'link', 'script', 'iframe', 'object', 'embed'],
                     FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur', 'onsubmit', 'onchange', 'srcdoc'],
                     ALLOW_DATA_ATTR: false,
                     ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto):|[^a-z]|[a-z+.-]+(?:[^a-z+.\-:]|$))/i,
-                  })) }} />
+                  }))) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
                 <p key={i}>{paragrafo}</p>
