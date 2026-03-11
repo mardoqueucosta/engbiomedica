@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Repositórios Acadêmicos',
@@ -108,6 +109,10 @@ const repositorios = [
 export default function RepositoriosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Internacional', href: '/internacional/repositorios' }, { name: 'Repositórios', href: '/internacional/repositorios' }])) }}
+      />
       <PageHeader
         overline="Internacional"
         title="Repositórios Acadêmicos Globais"

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Glossário',
@@ -114,6 +115,10 @@ const definedTermSetSchema = {
 export default function GlossarioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Glossário', href: '/glossario' }])) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}

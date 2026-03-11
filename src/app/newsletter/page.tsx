@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { NewsletterForm } from '@/components/forms/NewsletterForm';
 import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Newsletter',
@@ -17,6 +18,10 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Newsletter', href: '/newsletter' }])) }}
+      />
       <PageHeader
         overline="Newsletter"
         title="Fique por dentro da Engenharia Biomédica"

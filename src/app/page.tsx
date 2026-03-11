@@ -18,6 +18,14 @@ const jsonLdWebSite = {
     name: 'Engenharia Biomédica',
     url: 'https://engenhariabiomedica.com',
   },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://engenhariabiomedica.com/artigos?q={search_term}',
+    },
+    'query-input': 'required name=search_term',
+  },
 };
 
 export default function HomePage() {

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
 import { empresasHospitalar, categorias } from '@/data/empresas';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Empresas — Engenharia Biomedica',
@@ -37,6 +38,10 @@ export default function EmpresasPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Mercado', href: '/mercado' }, { name: 'Empresas', href: '/mercado/empresas' }])) }}
+      />
       <PageHeader
         overline="Mercado de Trabalho"
         title="Empresas que Empregam Engenheiros Biomedicos"

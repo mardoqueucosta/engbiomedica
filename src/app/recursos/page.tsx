@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Recursos e Referências',
@@ -42,6 +43,10 @@ const sitesEUA = [
 export default function RecursosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Recursos', href: '/recursos' }])) }}
+      />
       <PageHeader
         overline="Referências"
         title="Recursos e Links Essenciais"

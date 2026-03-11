@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArticleSearch } from '@/components/search/ArticleSearch';
 import { listaArtigos } from '@/data/artigos';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Artigos',
@@ -24,6 +25,10 @@ export const metadata: Metadata = {
 export default function ArtigosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Artigos', href: '/artigos' }])) }}
+      />
       <PageHeader
         overline="Artigos"
         title="Artigos e Análises"

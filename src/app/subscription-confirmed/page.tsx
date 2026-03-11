@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Inscrição Confirmada',
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
 export default function SubscriptionConfirmedPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Newsletter', href: '/newsletter' }, { name: 'Confirmado', href: '/subscription-confirmed' }])) }}
+      />
       <PageHeader
         overline="Newsletter"
         title="Inscrição confirmada!"

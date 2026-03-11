@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Financiamento à Pesquisa',
@@ -21,6 +22,10 @@ const fontes = [
 export default function FinanciamentoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Pesquisa', href: '/pesquisa' }, { name: 'Financiamento', href: '/pesquisa/financiamento' }])) }}
+      />
       <PageHeader
         overline="Pesquisa & Inovação"
         title="Financiamento à Pesquisa e Inovação"

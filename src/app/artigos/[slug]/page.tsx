@@ -286,7 +286,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
             <Badge variant={meta.categoriaVariant}>{meta.categoria}</Badge>
             <div className="flex items-center gap-1.5 text-caption text-slate-400">
               <Calendar className="w-3.5 h-3.5" />
-              {formatDate(meta.data)}
+              <time dateTime={meta.data}>{formatDate(meta.data)}</time>
             </div>
             <div className="flex items-center gap-1.5 text-caption text-slate-400">
               <Clock className="w-3.5 h-3.5" />

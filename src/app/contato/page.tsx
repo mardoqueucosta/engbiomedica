@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ContatoForm } from '@/components/forms/ContatoForm';
 import { Mail, MessageSquare, MapPin, ArrowLeft } from 'lucide-react';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Contato',
@@ -17,6 +18,10 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Contato', href: '/contato' }])) }}
+      />
       <PageHeader
         overline="Contato"
         title="Fale conosco"

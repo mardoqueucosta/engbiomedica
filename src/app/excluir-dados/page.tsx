@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ExcluirDadosForm } from './ExcluirDadosForm';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Excluir Meus Dados',
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function ExcluirDadosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Privacidade', href: '/privacidade' }, { name: 'Excluir Dados', href: '/excluir-dados' }])) }}
+      />
       <PageHeader
         overline="LGPD"
         title="Excluir meus dados"

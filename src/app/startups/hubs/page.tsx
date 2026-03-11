@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Hubs e Aceleradoras — Startups em Engenharia Biomédica',
@@ -65,6 +66,10 @@ const aceleradoras = [
 export default function HubsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Startups', href: '/startups/hubs' }, { name: 'Hubs', href: '/startups/hubs' }])) }}
+      />
       <PageHeader
         overline="Startups & Healthtechs"
         title="Hubs e Aceleradoras"

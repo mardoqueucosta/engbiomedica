@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, FileCheck, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Regulamentação',
@@ -42,6 +43,10 @@ const itemListSchema = {
 export default function RegulamentacaoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Regulamentação', href: '/regulamentacao' }])) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GraduationCap, BookOpen, Award, MapPin } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Formação Acadêmica',
@@ -130,6 +131,10 @@ const courseSchemas = [
 export default function FormacaoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Formação', href: '/formacao' }])) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}

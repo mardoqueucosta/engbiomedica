@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Building2, Rocket, MapPin, Calendar, Globe, Newspaper } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Mercado de Trabalho',
@@ -47,6 +48,10 @@ const itemListSchema = {
 export default function MercadoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Mercado', href: '/mercado' }])) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}

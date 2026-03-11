@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Suspense } from 'react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { UnsubscribeForm } from './UnsubscribeForm';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Cancelar inscrição',
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
 export default function UnsubscribePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Newsletter', href: '/newsletter' }, { name: 'Cancelar Inscrição', href: '/unsubscribe' }])) }}
+      />
       <PageHeader
         overline="Newsletter"
         title="Cancelar inscrição"

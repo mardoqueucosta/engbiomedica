@@ -13,6 +13,7 @@ import {
   Mail,
   ArrowRight,
 } from 'lucide-react';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Processo Seletivo Docente — PPGEB Universidade Brasil',
@@ -313,6 +314,10 @@ const docentes = [
 export default function ProcessoSeletivoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Carreira', href: '/carreira' }, { name: 'Processo Seletivo', href: '/carreira/processo-seletivo' }])) }}
+      />
       <PageHeader
         overline="Edital 01/2026 — PPGEB"
         title="Processo Seletivo: Professor/Pesquisador Permanente"

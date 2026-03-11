@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade',
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function PrivacidadePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Privacidade', href: '/privacidade' }])) }}
+      />
       <PageHeader
         overline="Legal"
         title="Política de Privacidade"
