@@ -74,7 +74,7 @@ export function HomeNewsletterForm() {
           />
           <button
             type="submit"
-            disabled={status === 'loading'}
+            disabled={status === 'loading' || !turnstileToken}
             className="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
           >
             {status === 'loading' ? 'Enviando...' : 'Inscrever-se'}

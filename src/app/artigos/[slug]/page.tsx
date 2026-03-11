@@ -326,8 +326,10 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
               <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, {
                     ADD_ATTR: ['loading', 'decoding', 'width', 'height'],
                     ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup'],
-                    FORBID_TAGS: ['form', 'input', 'textarea', 'select', 'button', 'style', 'meta', 'link'],
+                    FORBID_TAGS: ['form', 'input', 'textarea', 'select', 'button', 'style', 'meta', 'link', 'script', 'iframe', 'object', 'embed'],
+                    FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur', 'onsubmit', 'onchange', 'srcdoc'],
                     ALLOW_DATA_ATTR: false,
+                    ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto):|[^a-z]|[a-z+.-]+(?:[^a-z+.\-:]|$))/i,
                   }) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
