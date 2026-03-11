@@ -9,6 +9,7 @@ import { artigosMeta, type ArtigoMeta } from '@/data/artigos/metadata';
 import { extractFaqItems } from '@/lib/extract-faq';
 import { RelatedArticles } from '@/components/ui/RelatedArticles';
 import { knownEntities } from '@/data/entities';
+import blurData from '@/data/blur-data.json';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', {
@@ -94,6 +95,21 @@ function injectCrossReferences(
   });
 
   return html;
+}
+
+const blurMap = blurData as Record<string, string>;
+
+function injectBlurPlaceholders(html: string): string {
+  return html.replace(/<img\s([^>]*?)src="([^"]+)"([^>]*?)>/gi, (full, before, src, after) => {
+    const blur = blurMap[src];
+    if (!blur) return full;
+    const existingStyle = /style="([^"]*)"/.exec(before + after);
+    const blurStyle = `background-image:url(${blur});background-size:cover;background-repeat:no-repeat`;
+    if (existingStyle) {
+      return full.replace(existingStyle[0], `style="${existingStyle[1]};${blurStyle}"`);
+    }
+    return `<img ${before}src="${src}"${after} style="${blurStyle}">`;
+  });
 }
 
 export function generateStaticParams() {
@@ -336,14 +352,14 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
           {/* Content */}
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
-              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, {
-                    ADD_ATTR: ['loading', 'decoding', 'width', 'height', 'fetchpriority'],
-                    ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup'],
+              <div dangerouslySetInnerHTML={{ __html: injectBlurPlaceholders(DOMPurify.sanitize(conteudoFinal, {
+                    ADD_ATTR: ['loading', 'decoding', 'width', 'height', 'fetchpriority', 'aria-details'],
+                    ADD_TAGS: ['figure', 'figcaption', 'cite', 'time', 'sup', 'details', 'summary'],
                     FORBID_TAGS: ['form', 'input', 'textarea', 'select', 'button', 'style', 'meta', 'link', 'script', 'iframe', 'object', 'embed'],
                     FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur', 'onsubmit', 'onchange', 'srcdoc'],
                     ALLOW_DATA_ATTR: false,
                     ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto):|[^a-z]|[a-z+.-]+(?:[^a-z+.\-:]|$))/i,
-                  }) }} />
+                  })) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
                 <p key={i}>{paragrafo}</p>

@@ -194,8 +194,13 @@ tldr: >-
 
 <p>O <strong>teorema de Nyquist-Shannon</strong> estabelece que a taxa de amostragem deve ser pelo menos o dobro da frequência máxima de interesse. Para ECG clínico com componentes até 40 Hz (complexo QRS), 100 Hz seria o mínimo teórico, mas a prática clínica usa 250–500 Hz para preservar a morfologia do QRS e permitir análise de potenciais tardios. A <strong>quantização</strong> define a resolução vertical: sistemas de 12 bits oferecem 4.096 níveis (equipamentos mais antigos), 16 bits fornecem 65.536 níveis (mínimo recomendado pelo ACNS para EEG clínico), e 24 bits chegam a 16.777.216 níveis para pesquisa de alta resolução.</p>
 <figure>
-<img src="/artigos/processamento-sinais-biomedicos-python/fluxograma-do-pipeline-de-processamento-de-sinais-biome-1.webp" alt="Fluxograma do pipeline de processamento de sinais biomédicos com filtragem digital, FFT, wavelet e classificação por machine learning (120 chars)" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async">
-<figcaption>Pipeline completo de processamento digital de biossinais, da aquisição analógica à classificação automática por algoritmos de aprendizado de máquina.</figcaption>
+<img src="/artigos/processamento-sinais-biomedicos-python/fluxograma-do-pipeline-de-processamento-de-sinais-biome-1.webp" alt="Fluxograma do pipeline de processamento de sinais biomédicos com filtragem digital, FFT, wavelet e classificação por machine learning (120 chars)" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async" aria-details="desc-processamento-sinais-biomedicos-python-1">
+<figcaption>Pipeline completo de processamento digital de biossinais, da aquisição analógica à classificação automática por algoritmos de aprendizado de máquina.
+<details id="desc-processamento-sinais-biomedicos-python-1">
+<summary>Descrição completa da imagem</summary>
+<p>Fluxograma do pipeline de processamento de sinais biomédicos com filtragem digital, FFT, wavelet e classificação por machine learning (120 chars).</p>
+</details>
+</figcaption>
 </figure>
 
 
@@ -398,8 +403,13 @@ tldr: >-
 
 <p>Em 2019, Hannun et al. publicaram na <em>Nature Medicine</em> uma CNN com 34 camadas treinada em 91.232 ECGs de Holter de canal único. O modelo atingiu F1=0,837 para 12 condições cardíacas, superando a mediana de cardiologistas (F1=0,780), com AUC de 0,97. No Brasil, Ribeiro et al. (2020, <em>Nature Communications</em>) da UFMG treinaram uma rede residual 1D no banco CODE com mais de 2 milhões de ECGs da Rede de Teleassistência de Minas Gerais. O modelo atingiu F1 superior a 80% e especificidade acima de 99% para seis anormalidades, superando o desempenho de residentes, uma contribuição brasileira de projeção mundial.</p>
 <figure>
-<img src="/artigos/processamento-sinais-biomedicos-python/arquitetura-de-rede-neural-residual-1d-do-estudo-code-u-2.webp" alt="Arquitetura de rede neural residual 1D do estudo CODE UFMG para classificação automática de ECG com desempenho superior a residentes médicos (118 chars)" width="1024" height="571" loading="lazy" decoding="async">
-<figcaption>Arquitetura da rede residual 1D treinada em 2,3 milhões de ECGs pela UFMG, publicada na Nature Communications (2020): desempenho F1 superior a médicos residentes em seis condições cardíacas.</figcaption>
+<img src="/artigos/processamento-sinais-biomedicos-python/arquitetura-de-rede-neural-residual-1d-do-estudo-code-u-2.webp" alt="Arquitetura de rede neural residual 1D do estudo CODE UFMG para classificação automática de ECG com desempenho superior a residentes médicos (118 chars)" width="1024" height="571" loading="lazy" decoding="async" aria-details="desc-processamento-sinais-biomedicos-python-2">
+<figcaption>Arquitetura da rede residual 1D treinada em 2,3 milhões de ECGs pela UFMG, publicada na Nature Communications (2020): desempenho F1 superior a médicos residentes em seis condições cardíacas.
+<details id="desc-processamento-sinais-biomedicos-python-2">
+<summary>Descrição completa da imagem</summary>
+<p>Arquitetura de rede neural residual 1D do estudo CODE UFMG para classificação automática de ECG com desempenho superior a residentes médicos (118 chars).</p>
+</details>
+</figcaption>
 </figure>
 
 

@@ -121,6 +121,26 @@
     @apply mt-2 text-center text-body-sm text-slate-400 italic font-serif;
   }
 
+  /* Blur placeholder (LQIP) */
+  .prose figure img[style*="background-image"] {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* aria-details collapsible description */
+  .prose figcaption details {
+    @apply mt-1 text-left not-italic;
+    font-size: 0.8125rem;
+    color: var(--color-slate-600, #475569);
+  }
+  .prose figcaption details summary {
+    @apply cursor-pointer font-medium not-italic;
+    color: var(--color-teal-700, #0f766e);
+  }
+  .prose figcaption details[open] summary {
+    @apply mb-1;
+  }
+
   /* Data/mono context */
   .data-text {
     @apply font-mono;
