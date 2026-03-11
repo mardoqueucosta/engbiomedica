@@ -57,6 +57,11 @@
     "typescript": "^5.7.2",
     "vitest": "^4.0.18"
   },
+  "overrides": {
+    "@next/eslint-plugin-next": {
+      "glob": "^11.0.0"
+    }
+  },
   "engines": {
     "node": ">=18"
   }

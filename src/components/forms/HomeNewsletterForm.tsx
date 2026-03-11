@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useCallback, FormEvent } from 'react';
+import { Turnstile } from '@/components/ui/Turnstile';
 
 declare global {
   interface Window {
@@ -10,8 +11,13 @@ declare global {
 
 export function HomeNewsletterForm() {
   const [email, setEmail] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+
+  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
+  const onTurnstileError = useCallback(() => setTurnstileToken(''), []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -22,7 +28,7 @@ export function HomeNewsletterForm() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, firstName: '' }),
+        body: JSON.stringify({ email, firstName: '', turnstileToken }),
       });
       const data = await res.json();
 
@@ -56,22 +62,29 @@ export function HomeNewsletterForm() {
 
   return (
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-        <input
-          type="email"
-          required
-          placeholder="seu@email.com"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          className="flex-1 px-4 py-3 rounded-lg bg-primary-900 border border-primary-700 text-white placeholder-primary-400 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            required
+            placeholder="seu@email.com"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            className="flex-1 px-4 py-3 rounded-lg bg-primary-900 border border-primary-700 text-white placeholder-primary-400 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+          />
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
+          >
+            {status === 'loading' ? 'Enviando...' : 'Inscrever-se'}
+          </button>
+        </div>
+        <Turnstile
+          onVerify={onTurnstileVerify}
+          onExpire={onTurnstileExpire}
+          onError={onTurnstileError}
         />
-        <button
-          type="submit"
-          disabled={status === 'loading'}
-          className="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors disabled:opacity-50"
-        >
-          {status === 'loading' ? 'Enviando...' : 'Inscrever-se'}
-        </button>
       </form>
       {status === 'error' && (
         <p className="text-sm text-red-400 mt-2">{errorMsg}</p>
