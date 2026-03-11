@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import DOMPurify from 'isomorphic-dompurify';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Badge } from '@/components/ui/Badge';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, RefreshCw } from 'lucide-react';
 import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
 import { artigosMeta, type ArtigoMeta } from '@/data/artigos/metadata';
 import { extractFaqItems } from '@/lib/extract-faq';
@@ -317,6 +317,12 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
               <Calendar className="w-3.5 h-3.5" />
               <time dateTime={meta.data}>{formatDate(meta.data)}</time>
             </div>
+            {meta.dataModificacao && meta.dataModificacao !== meta.data && (
+              <div className="flex items-center gap-1.5 text-caption text-teal-600 font-medium">
+                <RefreshCw className="w-3.5 h-3.5" />
+                <time dateTime={meta.dataModificacao}>Atualizado em {formatDate(meta.dataModificacao)}</time>
+              </div>
+            )}
             <div className="flex items-center gap-1.5 text-caption text-slate-400">
               <Clock className="w-3.5 h-3.5" />
               {meta.leitura} de leitura
