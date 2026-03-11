@@ -6,6 +6,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSubscribeRatelimit } from '@/lib/ratelimit';
 import { verifyTurnstile } from '@/lib/turnstile';
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 const SUBJECT_LABELS: Record<string, string> = {
   duvida: 'Dúvida sobre conteúdo',
   sugestao: 'Sugestão de tema ou melhoria',
@@ -68,31 +77,41 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const subjectLabel = SUBJECT_LABELS[subject] || subject;
+  const subjectLabel = SUBJECT_LABELS[subject];
+  if (!subjectLabel) {
+    return NextResponse.json(
+      { error: 'Assunto inválido.' },
+      { status: 400 }
+    );
+  }
+
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safeMessage = escapeHtml(message);
 
   const { error } = await resend.emails.send({
     from: 'Portal Engenharia Biomédica <noreply@mail.engenhariabiomedica.com>',
     to: 'contato@engenhariabiomedica.com',
     replyTo: email,
-    subject: `[Contato] ${subjectLabel} — ${name}`,
+    subject: `[Contato] ${subjectLabel} — ${safeName}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px;">
         <h2 style="color: #0f4c5c;">Nova mensagem de contato</h2>
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
           <tr>
             <td style="padding: 8px 12px; background: #f1f5f9; font-weight: bold; width: 120px;">Nome</td>
-            <td style="padding: 8px 12px;">${name}</td>
+            <td style="padding: 8px 12px;">${safeName}</td>
           </tr>
           <tr>
             <td style="padding: 8px 12px; background: #f1f5f9; font-weight: bold;">E-mail</td>
-            <td style="padding: 8px 12px;"><a href="mailto:${email}">${email}</a></td>
+            <td style="padding: 8px 12px;"><a href="mailto:${safeEmail}">${safeEmail}</a></td>
           </tr>
           <tr>
             <td style="padding: 8px 12px; background: #f1f5f9; font-weight: bold;">Assunto</td>
             <td style="padding: 8px 12px;">${subjectLabel}</td>
           </tr>
         </table>
-        <div style="padding: 16px; background: #f8fafc; border-left: 4px solid #14b8a6; white-space: pre-wrap;">${message}</div>
+        <div style="padding: 16px; background: #f8fafc; border-left: 4px solid #14b8a6; white-space: pre-wrap;">${safeMessage}</div>
         <p style="margin-top: 20px; font-size: 12px; color: #94a3b8;">
           Enviado pelo formulário de contato do engenhariabiomedica.com<br/>
           IP: ${ip}

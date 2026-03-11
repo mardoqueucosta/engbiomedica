@@ -10,8 +10,8 @@ interface TurnstileVerifyResponse {
 export async function verifyTurnstile(token: string, ip?: string): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) {
-    console.warn('[TURNSTILE] Secret key not configured, skipping verification');
-    return true;
+    console.error('[TURNSTILE] TURNSTILE_SECRET_KEY not configured — rejecting request');
+    return false;
   }
 
   if (!token || typeof token !== 'string') {
