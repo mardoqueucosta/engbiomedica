@@ -2,13 +2,23 @@
  * Entidades conhecidas para entity linking no JSON-LD dos artigos.
  * Cada chave é o termo buscado (lowercase) no conteúdo HTML.
  * O campo `type` mapeia para o @type do Schema.org.
+ * O campo `medicalCode` opcional vincula a vocabulários controlados (MeSH).
  */
+
+export interface MedicalCodeRef {
+  codeValue: string;
+  codingSystem: string;
+  url: string;
+}
 
 export interface KnownEntity {
   name: string;
-  type: 'Organization' | 'GovernmentOrganization' | 'EducationalOrganization' | 'DefinedTerm' | 'MedicalSpecialty';
+  type: 'Organization' | 'GovernmentOrganization' | 'EducationalOrganization'
+      | 'DefinedTerm' | 'MedicalSpecialty' | 'MedicalDevice' | 'MedicalProcedure'
+      | 'MedicalCondition' | 'MedicalTherapy';
   url: string;
   sameAs?: string[];
+  medicalCode?: MedicalCodeRef;
 }
 
 export const knownEntities: Record<string, KnownEntity> = {
@@ -171,5 +181,254 @@ export const knownEntities: Record<string, KnownEntity> = {
     type: 'EducationalOrganization',
     url: 'https://www.ufmg.br',
     sameAs: ['https://pt.wikipedia.org/wiki/Universidade_Federal_de_Minas_Gerais', 'https://www.wikidata.org/wiki/Q583451'],
+  },
+
+  // === Equipamentos e Dispositivos Médicos (com MeSH) ===
+  'ressonância magnética': {
+    name: 'Ressonância Magnética',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Imagem_por_resson%C3%A2ncia_magn%C3%A9tica',
+    sameAs: ['https://www.wikidata.org/wiki/Q161238'],
+    medicalCode: { codeValue: 'D008279', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D008279' },
+  },
+  'tomografia computadorizada': {
+    name: 'Tomografia Computadorizada',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Tomografia_computadorizada',
+    sameAs: ['https://www.wikidata.org/wiki/Q32566'],
+    medicalCode: { codeValue: 'D014057', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D014057' },
+  },
+  'ultrassom': {
+    name: 'Ultrassonografia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Ultrassonografia',
+    sameAs: ['https://www.wikidata.org/wiki/Q211431'],
+    medicalCode: { codeValue: 'D014463', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D014463' },
+  },
+  'eletrocardiograma': {
+    name: 'Eletrocardiografia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Eletrocardiograma',
+    sameAs: ['https://www.wikidata.org/wiki/Q170484'],
+    medicalCode: { codeValue: 'D004562', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004562' },
+  },
+  'ventilador mecânico': {
+    name: 'Ventilador Mecânico',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Ventila%C3%A7%C3%A3o_mec%C3%A2nica',
+    sameAs: ['https://www.wikidata.org/wiki/Q274977'],
+    medicalCode: { codeValue: 'D012122', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D012122' },
+  },
+  'bomba de infusão': {
+    name: 'Bomba de Infusão',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Bomba_de_infus%C3%A3o',
+    sameAs: ['https://www.wikidata.org/wiki/Q1141688'],
+    medicalCode: { codeValue: 'D007260', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D007260' },
+  },
+  'desfibrilador': {
+    name: 'Desfibrilador',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Desfibrilador',
+    sameAs: ['https://www.wikidata.org/wiki/Q188955'],
+    medicalCode: { codeValue: 'D047548', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D047548' },
+  },
+  'oxímetro': {
+    name: 'Oximetria',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Oximetria_de_pulso',
+    sameAs: ['https://www.wikidata.org/wiki/Q579527'],
+    medicalCode: { codeValue: 'D010092', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D010092' },
+  },
+  'endoscópio': {
+    name: 'Endoscopia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Endoscopia',
+    sameAs: ['https://www.wikidata.org/wiki/Q188100'],
+    medicalCode: { codeValue: 'D004724', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004724' },
+  },
+  'bisturi elétrico': {
+    name: 'Eletrocirurgia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Eletrocirurgia',
+    medicalCode: { codeValue: 'D004598', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004598' },
+  },
+  'monitor multiparamétrico': {
+    name: 'Monitorização Fisiológica',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Monitor_de_sinais_vitais',
+    medicalCode: { codeValue: 'D008991', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D008991' },
+  },
+
+  // === Procedimentos e Técnicas (com MeSH) ===
+  'cirurgia robótica': {
+    name: 'Cirurgia Robótica',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Cirurgia_rob%C3%B3tica',
+    sameAs: ['https://www.wikidata.org/wiki/Q3320495'],
+    medicalCode: { codeValue: 'D065287', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D065287' },
+  },
+  'hemodiálise': {
+    name: 'Hemodiálise',
+    type: 'MedicalTherapy',
+    url: 'https://pt.wikipedia.org/wiki/Hemodi%C3%A1lise',
+    sameAs: ['https://www.wikidata.org/wiki/Q181257'],
+    medicalCode: { codeValue: 'D006435', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D006435' },
+  },
+  'radioterapia': {
+    name: 'Radioterapia',
+    type: 'MedicalTherapy',
+    url: 'https://pt.wikipedia.org/wiki/Radioterapia',
+    sameAs: ['https://www.wikidata.org/wiki/Q180507'],
+    medicalCode: { codeValue: 'D011878', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D011878' },
+  },
+  'eletroencefalografia': {
+    name: 'Eletroencefalografia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Eletroencefalografia',
+    sameAs: ['https://www.wikidata.org/wiki/Q183281'],
+    medicalCode: { codeValue: 'D004569', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004569' },
+  },
+  'ecocardiografia': {
+    name: 'Ecocardiografia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Ecocardiografia',
+    sameAs: ['https://www.wikidata.org/wiki/Q650631'],
+    medicalCode: { codeValue: 'D004452', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004452' },
+  },
+  'laparoscopia': {
+    name: 'Laparoscopia',
+    type: 'MedicalProcedure',
+    url: 'https://pt.wikipedia.org/wiki/Laparoscopia',
+    sameAs: ['https://www.wikidata.org/wiki/Q221175'],
+    medicalCode: { codeValue: 'D010535', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D010535' },
+  },
+  'processamento de sinais': {
+    name: 'Processamento de Sinais',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Processamento_de_sinal',
+    medicalCode: { codeValue: 'D012815', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D012815' },
+  },
+
+  // === Biomateriais, Próteses e Engenharia de Tecidos (com MeSH) ===
+  'prótese': {
+    name: 'Próteses e Implantes',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Pr%C3%B3tese',
+    sameAs: ['https://www.wikidata.org/wiki/Q187964'],
+    medicalCode: { codeValue: 'D019736', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D019736' },
+  },
+  'órtese': {
+    name: 'Órteses',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/%C3%93rtese',
+    medicalCode: { codeValue: 'D009989', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D009989' },
+  },
+  'biomaterial': {
+    name: 'Biomateriais',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Biomaterial',
+    sameAs: ['https://www.wikidata.org/wiki/Q862247'],
+    medicalCode: { codeValue: 'D001672', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D001672' },
+  },
+  'engenharia de tecidos': {
+    name: 'Engenharia de Tecidos',
+    type: 'MedicalSpecialty',
+    url: 'https://pt.wikipedia.org/wiki/Engenharia_de_tecidos',
+    sameAs: ['https://www.wikidata.org/wiki/Q309482'],
+    medicalCode: { codeValue: 'D023822', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D023822' },
+  },
+  'bioimpressão': {
+    name: 'Bioimpressão',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Bioimpress%C3%A3o',
+    medicalCode: { codeValue: 'D062028', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D062028' },
+  },
+  'impressão 3d': {
+    name: 'Impressão 3D',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Impress%C3%A3o_3D',
+    sameAs: ['https://www.wikidata.org/wiki/Q229367'],
+    medicalCode: { codeValue: 'D066330', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D066330' },
+  },
+  'nanomedicina': {
+    name: 'Nanomedicina',
+    type: 'MedicalSpecialty',
+    url: 'https://pt.wikipedia.org/wiki/Nanomedicina',
+    medicalCode: { codeValue: 'D050997', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D050997' },
+  },
+
+  // === Saúde Digital e Telemedicina (com MeSH) ===
+  'telemedicina': {
+    name: 'Telemedicina',
+    type: 'MedicalSpecialty',
+    url: 'https://pt.wikipedia.org/wiki/Telemedicina',
+    sameAs: ['https://www.wikidata.org/wiki/Q387458'],
+    medicalCode: { codeValue: 'D017216', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D017216' },
+  },
+
+  // === Neuroengenharia e Interfaces (com MeSH) ===
+  'interface cérebro-computador': {
+    name: 'Interface Cérebro-Computador',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Interface_c%C3%A9rebro%E2%80%93computador',
+    sameAs: ['https://www.wikidata.org/wiki/Q387169'],
+    medicalCode: { codeValue: 'D062207', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D062207' },
+  },
+  'crispr': {
+    name: 'CRISPR-Cas',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/CRISPR',
+    sameAs: ['https://www.wikidata.org/wiki/Q15053768'],
+    medicalCode: { codeValue: 'D064113', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D064113' },
+  },
+
+  // === Tecnologia e IA (com MeSH) ===
+  'inteligência artificial': {
+    name: 'Inteligência Artificial',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial',
+    sameAs: ['https://www.wikidata.org/wiki/Q11660'],
+    medicalCode: { codeValue: 'D001185', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D001185' },
+  },
+  'machine learning': {
+    name: 'Machine Learning',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Aprendizado_de_m%C3%A1quina',
+    sameAs: ['https://www.wikidata.org/wiki/Q2539'],
+    medicalCode: { codeValue: 'D000069550', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D000069550' },
+  },
+  'deep learning': {
+    name: 'Deep Learning',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Aprendizagem_profunda',
+    sameAs: ['https://www.wikidata.org/wiki/Q197536'],
+    medicalCode: { codeValue: 'D000077321', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D000077321' },
+  },
+  'wearable': {
+    name: 'Dispositivos Eletrônicos Vestíveis',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Tecnologia_vest%C3%ADvel',
+    sameAs: ['https://www.wikidata.org/wiki/Q4668750'],
+    medicalCode: { codeValue: 'D000076251', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D000076251' },
+  },
+  'sensor vestível': {
+    name: 'Dispositivos Eletrônicos Vestíveis',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Tecnologia_vest%C3%ADvel',
+    medicalCode: { codeValue: 'D000076251', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D000076251' },
+  },
+  'dispositivo médico': {
+    name: 'Equipamentos Médicos',
+    type: 'MedicalDevice',
+    url: 'https://pt.wikipedia.org/wiki/Dispositivo_m%C3%A9dico',
+    medicalCode: { codeValue: 'D004865', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D004865' },
+  },
+  'internet das coisas': {
+    name: 'Internet das Coisas',
+    type: 'DefinedTerm',
+    url: 'https://pt.wikipedia.org/wiki/Internet_das_coisas',
+    sameAs: ['https://www.wikidata.org/wiki/Q251212'],
+    medicalCode: { codeValue: 'D000080487', codingSystem: 'MeSH', url: 'https://meshb.nlm.nih.gov/record/ui?ui=D000080487' },
   },
 };

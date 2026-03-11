@@ -170,6 +170,14 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
       name: entity.name,
       url: entity.url,
       ...(entity.sameAs ? { sameAs: entity.sameAs } : {}),
+      ...(entity.medicalCode ? {
+        code: {
+          '@type': 'MedicalCode',
+          codeValue: entity.medicalCode.codeValue,
+          codingSystem: entity.medicalCode.codingSystem,
+          url: entity.medicalCode.url,
+        },
+      } : {}),
     }));
 
   const primaryImage = imageObjects.length > 0 ? imageObjects[0] : null;
