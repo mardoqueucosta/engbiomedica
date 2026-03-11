@@ -323,7 +323,7 @@ export default async function ArtigoPage({ params }: { params: { slug: string } 
           {/* Content */}
           <div className="prose prose-lg text-justify overflow-x-hidden">
             {typeof artigo.conteudo === 'string' ? (
-              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, { ADD_ATTR: ['id'] }) }} />
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(conteudoFinal, { ADD_ATTR: ['id', 'loading', 'decoding', 'width', 'height'] }) }} />
             ) : (
               artigo.conteudo.map((paragrafo, i) => (
                 <p key={i}>{paragrafo}</p>

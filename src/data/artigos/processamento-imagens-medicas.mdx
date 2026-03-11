@@ -10,7 +10,7 @@ data: '2026-02-22'
 dataModificacao: '2026-02-22'
 leitura: 16 min
 imagens:
-  - src: /artigos/processamento-imagens-medicas/image-1.webp
+  - src: /artigos/processamento-imagens-medicas/diagrama-comparativo-dos-principios-fisicos-das-seis-mo-1.webp
     alt: >-
       Diagrama comparativo dos princípios físicos das seis modalidades de imagem
       médica: raio-X, TC, RM, ultrassom, PET e SPECT com resolução e dose (120
@@ -19,7 +19,7 @@ imagens:
       Os princípios físicos das seis principais modalidades de imagem médica,
       cada fenômeno físico distinto determina resolução, dose e aplicação
       clínica ideal.
-  - src: /artigos/processamento-imagens-medicas/image-2.webp
+  - src: /artigos/processamento-imagens-medicas/diagrama-tecnico-da-arquitetura-u-net-para-segmentacao--2.webp
     alt: >-
       Diagrama técnico da arquitetura U-Net para segmentação de imagens médicas
       mostrando encoder, decoder e skip connections com exemplo de segmentação
@@ -28,7 +28,7 @@ imagens:
       A arquitetura U-Net, encoder-decoder com skip connections, revolucionou a
       segmentação médica em 2015 e permanece base de modelos estado-da-arte como
       nnU-Net e SwinUNETR.
-  - src: /artigos/processamento-imagens-medicas/image-3.webp
+  - src: /artigos/processamento-imagens-medicas/pesquisador-analisando-segmentacao-por-ia-de-tomografia-3.webp
     alt: >-
       Pesquisador analisando segmentação por IA de tomografia computadorizada em
       laboratório de processamento de imagens médicas com múltiplos monitores
@@ -57,7 +57,7 @@ tldr: >-
 
 <p>Raio-X e TC exploram a <strong>atenuação de fótons</strong> descrita pela lei de Beer-Lambert: I = I₀ · e^(−µx), onde µ é o coeficiente de atenuação linear do tecido. A TC adquire múltiplas projeções angulares e reconstrói o volume por <strong>retroprojeção filtrada</strong> (filtro Ram-Lak) ou métodos iterativos (MLEM, OSEM, MBIR). Os valores resultantes são expressos em <strong>Unidades Hounsfield</strong>: água = 0 HU, ar = −1.000 HU, osso cortical ≈ +1.000 HU, gordura ≈ −100 HU. A nova geração de detectores <strong>photon-counting CT</strong> (CdZnTe) conta fótons individuais, reduzindo dose e aumentando contraste espectral.</p>
 <figure>
-<img src="/artigos/processamento-imagens-medicas/image-1.webp" alt="Diagrama comparativo dos princípios físicos das seis modalidades de imagem médica: raio-X, TC, RM, ultrassom, PET e SPECT com resolução e dose (120 chars)" width="1024" height="571" loading="lazy" decoding="async">
+<img src="/artigos/processamento-imagens-medicas/diagrama-comparativo-dos-principios-fisicos-das-seis-mo-1.webp" alt="Diagrama comparativo dos princípios físicos das seis modalidades de imagem médica: raio-X, TC, RM, ultrassom, PET e SPECT com resolução e dose (120 chars)" width="1024" height="571" loading="eager" decoding="async">
 <figcaption>Os princípios físicos das seis principais modalidades de imagem médica, cada fenômeno físico distinto determina resolução, dose e aplicação clínica ideal.</figcaption>
 </figure>
 
@@ -205,7 +205,7 @@ tldr: >-
 
 <p>As variantes evoluíram em diversas direções: U-Net++ com conexões densas aninhadas, Attention U-Net com portões de atenção nos skip connections, V-Net para volumes 3D nativos. A chegada dos Transformers com ViT (Vision Transformer, 2020) inaugurou a atenção global multi-cabeça na visão computacional médica. O <strong>TransUNet</strong> combinou CNN para features locais com Transformer para contexto global, obtendo +4,30% no Dice em tumores pancreáticos. O <strong>Swin-UNet</strong> e o <strong>SwinUNETR</strong> (Hatamizadeh 2022, disponível no MONAI) aplicam atenção baseada em janelas deslocadas, mais eficiente computacionalmente. Importante: benchmarks recentes mostram que CNNs bem configuradas (nnU-Net) ainda superam Transformers e modelos Mamba em muitas tarefas de segmentação 3D.</p>
 <figure>
-<img src="/artigos/processamento-imagens-medicas/image-2.webp" alt="Diagrama técnico da arquitetura U-Net para segmentação de imagens médicas mostrando encoder, decoder e skip connections com exemplo de segmentação abdominal (115 chars)" width="1024" height="571" loading="lazy" decoding="async">
+<img src="/artigos/processamento-imagens-medicas/diagrama-tecnico-da-arquitetura-u-net-para-segmentacao--2.webp" alt="Diagrama técnico da arquitetura U-Net para segmentação de imagens médicas mostrando encoder, decoder e skip connections com exemplo de segmentação abdominal (115 chars)" width="1024" height="571" loading="lazy" decoding="async">
 <figcaption>A arquitetura U-Net, encoder-decoder com skip connections, revolucionou a segmentação médica em 2015 e permanece base de modelos estado-da-arte como nnU-Net e SwinUNETR.</figcaption>
 </figure>
 
@@ -475,7 +475,7 @@ tldr: >-
 
 <p>O <strong>LAPIMO/USP São Carlos</strong> (Prof. Homero Schiabel) desenvolve sistemas de CAD para mamografia há mais de 20 anos, um dos grupos mais antigos da América Latina na área. O <strong>LEB/POLI-USP</strong> ativo desde 1981 com parceria com o InCor, desenvolveu sistemas de análise cardíaca por imagem há décadas. O <strong>PEB-COPPE/UFRJ</strong> (conceito CAPES 6, laboratório LAPIS) formou 548 mestres e 178 doutores, com pesquisa em reconstrução tomográfica e análise de imagens nucleares. A UFPE recebeu R$14,7 milhões do FINEP para o projeto Saúde Inteligente, com componente forte em imagens médicas. O NIMed/PUC-RS e o IEB/UFSC em telemedicina completam o mapa.</p>
 <figure>
-<img src="/artigos/processamento-imagens-medicas/image-3.webp" alt="Pesquisador analisando segmentação por IA de tomografia computadorizada em laboratório de processamento de imagens médicas com múltiplos monitores (109 chars)" width="1024" height="571" loading="lazy" decoding="async">
+<img src="/artigos/processamento-imagens-medicas/pesquisador-analisando-segmentacao-por-ia-de-tomografia-3.webp" alt="Pesquisador analisando segmentação por IA de tomografia computadorizada em laboratório de processamento de imagens médicas com múltiplos monitores (109 chars)" width="1024" height="571" loading="lazy" decoding="async">
 <figcaption>O laboratório de processamento de imagens médicas brasileiro, de grupos como LAPIMO/USP e COPPE/UFRJ, une reconstrução volumétrica, segmentação por IA e validação clínica em um único fluxo de pesquisa.</figcaption>
 </figure>
 

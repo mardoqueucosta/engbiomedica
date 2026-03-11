@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastMod,
       changeFrequency,
       priority: a.slug === guiaSlug ? 0.9 : 0.8,
+      images: a.imagens?.map((img) => `${BASE_URL}${img.src}`) || [],
     };
   });
 
