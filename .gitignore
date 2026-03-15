@@ -38,3 +38,7 @@ google-credentials.json
 *.tsbuildinfo
 next-env.d.ts
 nul
+
+# claude code (local settings)
+.claude/worktrees/
+.claude/settings.local.json
