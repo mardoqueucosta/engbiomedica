@@ -30,6 +30,7 @@ export const mainNavigation: NavItem[] = [
       { label: 'Pós-Graduação', href: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica' },
       { label: 'Grade Curricular', href: '/artigos/grade-curricular-engenharia-biomedica-5-anos' },
       { label: 'Salários', href: '/artigos/quanto-ganha-engenheiro-biomedico-2026' },
+      { label: 'Cursos', href: '/cursos' },
     ],
   },
   {
