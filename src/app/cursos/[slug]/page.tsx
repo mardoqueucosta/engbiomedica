@@ -56,7 +56,7 @@ export default async function CursoPage({ params }: Props) {
   };
 
   // Moodle EAD URL - will be configured per environment
-  const moodleBaseUrl = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://ead.engenhariabiomedica.com.br';
+  const moodleBaseUrl = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://ead.engenhariabiomedica.com';
   const moodleUrl = `${moodleBaseUrl}/programa/${curso.moodleSlug}`;
 
   return (
