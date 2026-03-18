@@ -42,3 +42,6 @@ nul
 # claude code (local settings)
 .claude/worktrees/
 .claude/settings.local.json
+desktop.ini
+playwright-report/
+test-results/

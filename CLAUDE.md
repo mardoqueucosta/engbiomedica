@@ -1,16 +1,38 @@
 # Engenharia Biomédica - Portal
 
 ## Projeto
-- Site Next.js 14 hospedado no Railway (auto-deploy via GitHub)
+- Site Next.js 15 hospedado em VPS própria (Docker + Traefik)
+- VPS: 129.121.50.168 (Ubuntu 22.04, porta SSH 22022)
 - Repo: https://github.com/mardoqueucosta/engbiomedica (branch: main)
 - Domínio: https://engenhariabiomedica.com
+- Cloudflare proxy ativo (CDN + DDoS protection)
 
 ## Deploy
+Deploy automático via GitHub Actions (`.github/workflows/deploy.yml`).
+
 Quando o usuário pedir "faça o deploy" ou "deploy":
 1. `git add .` (exceto .env, node_modules, .next)
 2. `git commit` com mensagem descritiva das alterações
 3. `git push origin main`
-O Railway faz o deploy automaticamente ao detectar o push.
+O GitHub Actions automaticamente: envia arquivos → build Docker → restart container na VPS.
+
+Para pular o deploy automático, inclua `[skip deploy]` na mensagem do commit.
+
+### Deploy manual (emergência)
+```bash
+cd "D:/Google-Drive/01-projetos-claude/03-Site-engenhariabiomedica"
+tar --exclude=node_modules --exclude=.next --exclude=.git --exclude=coverage --exclude=test-results --exclude=.env --exclude=.env.local -cf - . | ssh -p 22022 -i "D:/Google-Drive/01-projetos-claude/id_rsa" root@129.121.50.168 "tar xf - -C /opt/sites/engenhariabiomedica/app"
+ssh -p 22022 -i "D:/Google-Drive/01-projetos-claude/id_rsa" root@129.121.50.168 "cd /opt/sites/engenhariabiomedica && docker compose build --no-cache && docker compose up -d"
+```
+
+## Infraestrutura VPS
+- SSH: `ssh -p 22022 -i "D:/Google-Drive/01-projetos-claude/id_rsa" root@129.121.50.168`
+- Site container: `/opt/sites/engenhariabiomedica/`
+- Docker compose: `/opt/sites/engenhariabiomedica/docker-compose.yml`
+- Env vars: `/opt/sites/engenhariabiomedica/.env`
+- Traefik: `/opt/traefik/` (reverse proxy + SSL automático)
+- PostgreSQL: `/opt/postgres/` (container dedicado, rede interna `db`)
+- Logs: `docker logs engenhariabiomedica`
 
 ## Git Config (este repo)
 - user.name: Mardoqueu Costa

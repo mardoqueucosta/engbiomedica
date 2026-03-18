@@ -1,7 +1,7 @@
 /**
  * Script de publicação completa:
- * 1. git push origin main
- * 2. Aguarda deploy do Railway (~2 min)
+ * 1. git push origin main (triggers GitHub Actions deploy)
+ * 2. Aguarda deploy (~3 min)
  * 3. Notifica IndexNow (Bing/Yandex)
  * 4. Notifica Google Indexing API
  *
@@ -15,7 +15,7 @@ try { require('dotenv').config({ path: '.env.local' }); } catch {}
 import { execSync } from 'child_process';
 
 const BASE_URL = 'https://engenhariabiomedica.com';
-const DEPLOY_WAIT_MS = 120_000; // 2 minutos
+const DEPLOY_WAIT_MS = 180_000; // 3 minutos (GitHub Actions + build Docker)
 
 async function callApi(path: string, label: string) {
   const apiKey = process.env.INDEXNOW_API_KEY;
@@ -61,8 +61,8 @@ async function main() {
     }
   }
 
-  // 2. Aguardar deploy
-  console.log(`\n⏳ Aguardando deploy do Railway (${DEPLOY_WAIT_MS / 1000}s)...`);
+  // 2. Aguardar deploy (GitHub Actions → VPS)
+  console.log(`\n⏳ Aguardando deploy via GitHub Actions (${DEPLOY_WAIT_MS / 1000}s)...`);
   await new Promise(resolve => setTimeout(resolve, DEPLOY_WAIT_MS));
   console.log('  ✅ Deploy provavelmente concluído');
 

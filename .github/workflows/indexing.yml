@@ -39,8 +39,8 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Aguardar deploy do Railway (2 min)
-        run: sleep 120
+      - name: Aguardar deploy da VPS (30s)
+        run: sleep 30
 
       - name: Determinar escopo
         id: scope

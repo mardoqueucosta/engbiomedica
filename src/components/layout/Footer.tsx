@@ -146,8 +146,8 @@ export function Footer() {
           </nav>
           <span className="text-sm text-primary-400">
             DPO:{' '}
-            <a href="mailto:privacidade@engenhariabiomedica.com" className="text-primary-300 hover:text-teal-400 transition-colors">
-              privacidade@engenhariabiomedica.com
+            <a href="mailto:contato@engenhariabiomedica.com" className="text-primary-300 hover:text-teal-400 transition-colors">
+              contato@engenhariabiomedica.com
             </a>
           </span>
         </div>
