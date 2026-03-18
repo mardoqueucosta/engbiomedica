@@ -158,8 +158,8 @@ export function ExcluirDadosForm() {
 
       <p className="text-xs text-slate-400 mt-4 text-center">
         Dúvidas? Entre em contato com o DPO:{' '}
-        <a href="mailto:privacidade@engenhariabiomedica.com" className="underline">
-          privacidade@engenhariabiomedica.com
+        <a href="mailto:contato@engenhariabiomedica.com" className="underline">
+          contato@engenhariabiomedica.com
         </a>
       </p>
     </form>

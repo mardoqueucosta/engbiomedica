@@ -49,8 +49,8 @@ export default function PrivacidadePage() {
               </p>
               <p className="text-body text-slate-600 font-serif mt-1">
                 <strong>E-mail:</strong>{' '}
-                <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
-                  privacidade@engenhariabiomedica.com
+                <a href="mailto:contato@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
+                  contato@engenhariabiomedica.com
                 </a>
               </p>
               <p className="text-body-sm text-slate-500 font-serif mt-2">
@@ -157,8 +157,8 @@ export default function PrivacidadePage() {
             <p className="text-body text-slate-600 font-serif leading-relaxed text-justify mt-3">
               Para exercer qualquer desses direitos, entre em contato com o Encarregado (DPO) pelo
               e-mail{' '}
-              <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
-                privacidade@engenhariabiomedica.com
+              <a href="mailto:contato@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
+                contato@engenhariabiomedica.com
               </a>. Responderemos em até 15 dias úteis.
             </p>
             <p className="text-body text-slate-600 font-serif leading-relaxed text-justify mt-3">
@@ -220,7 +220,7 @@ export default function PrivacidadePage() {
               Para dúvidas sobre esta política ou sobre o tratamento dos seus dados, entre em contato:
             </p>
             <a
-              href="mailto:privacidade@engenhariabiomedica.com"
+              href="mailto:contato@engenhariabiomedica.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors"
             >
               Contatar o DPO
