@@ -222,7 +222,7 @@ export default async function CursoPage({ params }: Props) {
               {curso.tipo === 'mestrado' ? (
                 <Link
                   href="/cursos/doutorado-engenharia-biomedica"
-                  className="flex items-center gap-3 text-teal-600 hover:text-teal-700 font-semibold text-body-sm transition-colors"
+                  className="flex items-center gap-3 text-teal-700 hover:text-teal-800 font-semibold text-body-sm transition-colors"
                 >
                   <GraduationCap className="w-5 h-5" />
                   Doutorado em Engenharia Biomédica

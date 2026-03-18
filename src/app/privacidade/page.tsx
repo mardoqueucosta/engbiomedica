@@ -49,7 +49,7 @@ export default function PrivacidadePage() {
               </p>
               <p className="text-body text-slate-600 font-serif mt-1">
                 <strong>E-mail:</strong>{' '}
-                <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-600 hover:text-teal-700 transition-colors">
+                <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
                   privacidade@engenhariabiomedica.com
                 </a>
               </p>
@@ -157,13 +157,13 @@ export default function PrivacidadePage() {
             <p className="text-body text-slate-600 font-serif leading-relaxed text-justify mt-3">
               Para exercer qualquer desses direitos, entre em contato com o Encarregado (DPO) pelo
               e-mail{' '}
-              <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-600 hover:text-teal-700 transition-colors">
+              <a href="mailto:privacidade@engenhariabiomedica.com" className="text-teal-700 hover:text-teal-800 transition-colors">
                 privacidade@engenhariabiomedica.com
               </a>. Responderemos em até 15 dias úteis.
             </p>
             <p className="text-body text-slate-600 font-serif leading-relaxed text-justify mt-3">
               Para solicitar a <strong>exclusão permanente</strong> dos seus dados pessoais, acesse a{' '}
-              <Link href="/excluir-dados" className="text-teal-600 hover:text-teal-700 transition-colors">
+              <Link href="/excluir-dados" className="text-teal-700 hover:text-teal-800 transition-colors">
                 página de exclusão de dados
               </Link>.
             </p>
@@ -175,12 +175,12 @@ export default function PrivacidadePage() {
               Você pode cancelar sua inscrição na newsletter a qualquer momento clicando no link
               &ldquo;Cancelar inscrição&rdquo; presente no rodapé de todos os e-mails, ou acessando
               diretamente a{' '}
-              <Link href="/unsubscribe" className="text-teal-600 hover:text-teal-700 transition-colors">
+              <Link href="/unsubscribe" className="text-teal-700 hover:text-teal-800 transition-colors">
                 página de cancelamento
               </Link>. O cancelamento é imediato (a menos que você se inscreva novamente).
               Se deseja a <strong>exclusão total</strong> dos seus dados (e não apenas o cancelamento da newsletter),
               acesse a{' '}
-              <Link href="/excluir-dados" className="text-teal-600 hover:text-teal-700 transition-colors">
+              <Link href="/excluir-dados" className="text-teal-700 hover:text-teal-800 transition-colors">
                 página de exclusão de dados
               </Link>.
             </p>

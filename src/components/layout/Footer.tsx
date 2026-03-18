@@ -70,7 +70,7 @@ export function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 sm:gap-x-6 lg:gap-x-8 gap-y-6 flex-1">
             {/* Formação & Carreira */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Formação & Carreira</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Formação & Carreira</p>
               <ul className="space-y-1">
                 {footerNavigation.formacao.map((item) => (
                   <li key={item.href}>
@@ -84,7 +84,7 @@ export function Footer() {
 
             {/* Áreas de Atuação */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Áreas de Atuação</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Áreas de Atuação</p>
               <ul className="space-y-1">
                 <li><Link href="/artigos/engenharia-clinica-guia-completo" className="text-[13px] text-primary-300 hover:text-white transition-colors">Eng. Clínica</Link></li>
                 <li><Link href="/artigos/ia-saude-brasil" className="text-[13px] text-primary-300 hover:text-white transition-colors">IA em Saúde</Link></li>
@@ -96,7 +96,7 @@ export function Footer() {
 
             {/* Mercado */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Mercado</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Mercado</p>
               <ul className="space-y-1">
                 {footerNavigation.mercado.map((item) => (
                   <li key={item.href}>
@@ -109,7 +109,7 @@ export function Footer() {
 
             {/* Regulamentação */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Regulamentação</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Regulamentação</p>
               <ul className="space-y-1">
                 <li><Link href="/artigos/anvisa-dispositivos-medicos-guia-2026" className="text-[13px] text-primary-300 hover:text-white transition-colors">ANVISA</Link></li>
                 <li><Link href="/artigos/registro-crea-engenheiro-biomedico-guia" className="text-[13px] text-primary-300 hover:text-white transition-colors">CREA</Link></li>
@@ -120,7 +120,7 @@ export function Footer() {
 
             {/* Pesquisa */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Pesquisa</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white mb-2">Pesquisa</p>
               <ul className="space-y-1">
                 {footerNavigation.pesquisa.map((item) => (
                   <li key={item.href}>

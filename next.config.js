@@ -25,6 +25,9 @@ const nextConfig = {
       { source: '/regulamentacao/confea-crea', destination: '/artigos/registro-crea-engenheiro-biomedico-guia', statusCode: 301 },
       { source: '/regulamentacao/anvisa', destination: '/artigos/anvisa-dispositivos-medicos-guia-2026', statusCode: 301 },
       { source: '/regulamentacao/normas', destination: '/artigos/normas-tecnicas-engenharia-biomedica', statusCode: 301 },
+      { source: '/equipamentos/manutencao', destination: '/artigos/manutencao-equipamentos-hospitalares', statusCode: 301 },
+      { source: '/carreira/como-comecar', destination: '/artigos/roadmap-carreira-engenheiro-biomedico', statusCode: 301 },
+      { source: '/areas/engenharia-clinica', destination: '/artigos/engenharia-clinica-guia-completo', statusCode: 301 },
       { source: '/pesquisa/centros', destination: '/artigos/centros-pesquisa-engbiomedica-mapa', statusCode: 301 },
       { source: '/eventos', destination: '/artigos/calendario-eventos-engbiomedica-saude-digital', statusCode: 301 },
       { source: '/internacional/eua', destination: '/artigos/engenharia-biomedica-eua-comparativo', statusCode: 301 },
@@ -102,7 +105,7 @@ const nextConfig = {
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },

@@ -78,7 +78,7 @@ export default function PesquisaPage() {
           </Link>
           <Link href="/pesquisa/financiamento" className="card p-6 group block">
             <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-3 group-hover:bg-teal-100 transition-colors">
-              <Banknote className="w-5 h-5 text-teal-600" />
+              <Banknote className="w-5 h-5 text-teal-700" />
             </div>
             <h2 className="text-h3 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">Financiamento</h2>
             <p className="text-body-sm text-slate-500 font-serif">EMBRAPII, FINEP, FAPESP PIPE, CNPq, BNDES e outros programas de fomento à inovação.</p>
@@ -104,7 +104,7 @@ export default function PesquisaPage() {
           ].map((g) => (
             <Link key={g.href} href={g.href} className="card p-5 group block">
               <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center mb-2 group-hover:bg-teal-100 transition-colors">
-                <FlaskConical className="w-4 h-4 text-teal-600" />
+                <FlaskConical className="w-4 h-4 text-teal-700" />
               </div>
               <h3 className="text-h4 text-slate-900 mb-1 group-hover:text-primary-700 transition-colors">{g.title}</h3>
               <p className="text-body-sm text-slate-500 font-serif">{g.desc}</p>

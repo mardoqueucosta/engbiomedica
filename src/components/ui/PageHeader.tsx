@@ -48,7 +48,7 @@ export function PageHeader({
         )}
 
         {overline && (
-          <span className="text-overline uppercase text-teal-600 mb-2 block">
+          <span className="text-overline uppercase text-teal-700 mb-2 block">
             {overline}
           </span>
         )}

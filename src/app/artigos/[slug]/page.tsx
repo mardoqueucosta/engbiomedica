@@ -327,7 +327,7 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
               <time dateTime={meta.data}>{formatDate(meta.data)}</time>
             </div>
             {meta.dataModificacao && meta.dataModificacao !== meta.data && (
-              <div className="flex items-center gap-1.5 text-caption text-teal-600 font-medium">
+              <div className="flex items-center gap-1.5 text-caption text-teal-700 font-medium">
                 <RefreshCw className="w-3.5 h-3.5" />
                 <time dateTime={meta.dataModificacao}>Atualizado em {formatDate(meta.dataModificacao)}</time>
               </div>

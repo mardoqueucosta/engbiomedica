@@ -396,7 +396,7 @@ export default function ProcessoSeletivoPage() {
           </div>
           <div className="card p-5">
             <h3 className="text-h3 text-slate-900 mb-3 flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-teal-600" />
+              <MapPin className="w-5 h-5 text-teal-700" />
               Local e Regime
             </h3>
             <ul className="space-y-1.5 text-body-sm text-slate-600 font-serif">
@@ -473,7 +473,7 @@ export default function ProcessoSeletivoPage() {
         <div className="space-y-4 mb-12">
           {eixos.map((eixo, i) => (
             <div key={eixo.title} className="flex gap-4 items-start">
-              <span className="font-mono text-sm font-semibold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md flex-shrink-0">
+              <span className="font-mono text-sm font-semibold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md flex-shrink-0">
                 Eixo {i + 1}
               </span>
               <div>
@@ -561,7 +561,7 @@ export default function ProcessoSeletivoPage() {
                   href={d.lattes}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-teal-600 hover:text-teal-700 transition-colors"
+                  className="inline-flex items-center gap-1 text-teal-700 hover:text-teal-800 transition-colors"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   Currículo Lattes

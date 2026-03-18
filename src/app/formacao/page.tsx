@@ -193,7 +193,7 @@ export default function FormacaoPage() {
               { year: '2024', event: 'Brasil alcança 27 cursos de graduação ativos (dados INEP).' },
             ].map((item) => (
               <div key={item.year} className="flex gap-4 items-start">
-                <span className="font-mono text-sm font-semibold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md flex-shrink-0">
+                <span className="font-mono text-sm font-semibold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md flex-shrink-0">
                   {item.year}
                 </span>
                 <p className="text-body-sm text-slate-600 font-serif pt-0.5">{item.event}</p>

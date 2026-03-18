@@ -46,14 +46,14 @@ export default function ContatoPage() {
                 <Mail className="w-5 h-5 text-primary-600" />
               </div>
               <h3 className="text-h4 text-slate-900 mb-1">E-mail</h3>
-              <a href="mailto:contato@engenhariabiomedica.com" className="text-body-sm text-teal-600 hover:text-teal-700 font-serif transition-colors">
+              <a href="mailto:contato@engenhariabiomedica.com" className="text-body-sm text-teal-700 hover:text-teal-800 font-serif transition-colors">
                 contato@engenhariabiomedica.com
               </a>
             </div>
 
             <div className="card p-5">
               <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-3">
-                <MessageSquare className="w-5 h-5 text-teal-600" />
+                <MessageSquare className="w-5 h-5 text-teal-700" />
               </div>
               <h3 className="text-h4 text-slate-900 mb-1">Sugestões</h3>
               <p className="text-body-sm text-slate-500 font-serif">

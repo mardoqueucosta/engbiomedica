@@ -204,7 +204,7 @@ function ArticleCard({ article: a }: { article: SearchableArticle }) {
         <span className="text-caption text-slate-400">
           {formatDate(a.data)}
         </span>
-        <span className="text-xs font-semibold text-teal-600 group-hover:text-teal-700 transition-colors flex items-center gap-1">
+        <span className="text-xs font-semibold text-teal-700 group-hover:text-teal-800 transition-colors flex items-center gap-1">
           Ler
           <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
         </span>

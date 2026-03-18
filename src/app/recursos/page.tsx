@@ -64,7 +64,7 @@ export default function RecursosPage() {
                 <Badge variant="primary">BR</Badge>
               </div>
               <p className="text-body-sm text-slate-500 font-serif mb-1">{s.desc}</p>
-              <span className="text-caption text-teal-600 font-mono">{s.url}</span>
+              <span className="text-caption text-teal-700 font-mono">{s.url}</span>
             </div>
           ))}
         </div>
@@ -78,7 +78,7 @@ export default function RecursosPage() {
                 <Badge variant="teal">EUA</Badge>
               </div>
               <p className="text-body-sm text-slate-500 font-serif mb-1">{s.desc}</p>
-              <span className="text-caption text-teal-600 font-mono">{s.url}</span>
+              <span className="text-caption text-teal-700 font-mono">{s.url}</span>
             </div>
           ))}
         </div>

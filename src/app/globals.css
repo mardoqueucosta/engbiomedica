@@ -22,7 +22,7 @@
     @apply font-sans text-slate-900;
   }
   .prose a {
-    @apply text-teal-600 underline decoration-teal-300 underline-offset-2 hover:decoration-teal-500 transition-colors;
+    @apply text-teal-700 underline decoration-teal-300 underline-offset-2 hover:decoration-teal-500 transition-colors;
   }
   .prose strong {
     @apply font-semibold text-slate-800;
@@ -55,7 +55,7 @@
     @apply mb-0 text-teal-700 italic;
   }
   .prose blockquote cite {
-    @apply block text-xs text-teal-600 not-italic mt-2 font-sans;
+    @apply block text-xs text-teal-700 not-italic mt-2 font-sans;
   }
   .prose table {
     @apply w-full mb-6 text-sm border-collapse;
@@ -118,7 +118,7 @@
     @apply w-full h-auto rounded-lg shadow-card;
   }
   .prose figcaption {
-    @apply mt-2 text-center text-body-sm text-slate-400 italic font-serif;
+    @apply mt-2 text-center text-body-sm text-slate-500 italic font-serif;
   }
 
   /* Blur placeholder (LQIP) */

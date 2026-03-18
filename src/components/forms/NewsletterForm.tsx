@@ -68,7 +68,7 @@ export function NewsletterForm() {
         <p className="text-teal-800 font-medium">
           Confira seu email para confirmar a inscrição!
         </p>
-        <p className="text-sm text-teal-600 mt-1">
+        <p className="text-sm text-teal-700 mt-1">
           Enviamos um link de confirmação. Verifique também a pasta de spam.
         </p>
       </div>

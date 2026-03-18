@@ -143,7 +143,7 @@ export default function RepositoriosPage() {
               <p className="text-body-sm text-slate-500 font-serif mb-1">
                 {r.desc}
               </p>
-              <span className="text-caption text-teal-600 font-mono">
+              <span className="text-caption text-teal-700 font-mono">
                 {r.url}
               </span>
             </div>

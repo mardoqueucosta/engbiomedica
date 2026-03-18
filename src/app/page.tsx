@@ -103,7 +103,7 @@ export default function HomePage() {
       <section className="bg-white border-y border-slate-100">
         <div className="container-page py-12 lg:py-16">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-overline uppercase text-teal-600 tracking-[0.12em] block mb-3">
+            <span className="text-overline uppercase text-teal-700 tracking-[0.12em] block mb-3">
               Sobre o portal
             </span>
             <h2 className="text-h2 text-slate-900 mb-4 font-serif">
@@ -118,7 +118,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/sobre"
-              className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
+              className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-teal-700 hover:text-teal-800 transition-colors"
             >
               Conheça o portal
               <ArrowRight className="w-4 h-4" />

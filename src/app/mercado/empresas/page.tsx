@@ -59,7 +59,7 @@ export default function EmpresasPage() {
                 <a href={e.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">{e.nome}</a>
               </h3>
               <p className="text-body-sm text-slate-500">{e.area}</p>
-              <p className="text-xs text-teal-600 font-semibold mt-2">{e.destaque}</p>
+              <p className="text-xs text-teal-700 font-semibold mt-2">{e.destaque}</p>
             </div>
           ))}
         </div>

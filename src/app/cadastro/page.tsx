@@ -14,7 +14,7 @@ export default function CadastroPage() {
       <p className="text-body text-slate-500 mb-6 font-serif">
         O sistema de cadastro será implementado em uma fase futura do portal.
       </p>
-      <Link href="/" className="text-sm font-semibold text-teal-600 hover:text-teal-700">
+      <Link href="/" className="text-sm font-semibold text-teal-700 hover:text-teal-800">
         ← Voltar ao portal
       </Link>
     </div>
