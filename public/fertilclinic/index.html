@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FERTIL-CDSS — Sistema de Suporte à Decisão Clínica</title>
+  <meta name="description" content="Sistema de Suporte à Decisão Clínica para Estratificação de Risco na Infertilidade Masculina — Mestrado em Engenharia Biomédica, Universidade Brasil" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233b82f6'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Crect x='24' y='12' width='16' height='40' rx='3' fill='white'/%3E%3Crect x='12' y='24' width='40' height='16' rx='3' fill='white'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f1f5f9; color: #0f172a; overflow: hidden; }
+    #root { height: 100vh; }
+    input, select, button { font-family: inherit; }
+    input:focus, select:focus { border-color: #3b82f6 !important; outline: none; box-shadow: 0 0 0 3px rgba(59,130,246,0.12); }
+    button { transition: all 0.15s ease; cursor: pointer; }
+    button:hover { opacity: 0.9; transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    @media print { .no-print { display: none !important; } main { max-height: none !important; overflow: visible !important; } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.35s ease-out; }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+    .slide-in { animation: slideIn 0.3s ease-out; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .mobile-menu-btn { display: none; }
+    @media (max-width: 860px) {
+      .sidebar { position: fixed !important; left: -260px; top: 0; bottom: 0; z-index: 100; transition: left 0.3s ease; }
+      .sidebar.open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.15); }
+      .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 99; }
+      .sidebar-overlay.open { display: block; }
+      .mobile-menu-btn { display: flex !important; }
+      .main-content { padding: 16px !important; }
+      .grid-2 { grid-template-columns: 1fr !important; }
+      .grid-3 { grid-template-columns: 1fr !important; }
+      .grid-4 { grid-template-columns: 1fr 1fr !important; }
+      .header-title-sub { display: none !important; }
+      .header-badge { display: none !important; }
+    }
+    @media (max-width: 480px) {
+      .grid-4 { grid-template-columns: 1fr !important; }
+      .radio-group { gap: 6px !important; }
+      .radio-group label { padding: 6px 10px !important; font-size: 12px !important; }
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+// ============================================================
+// RESEARCH DATA — Extracted from actual study spreadsheets
+// ============================================================
+const RESEARCH_DATA = {
+  sample: { patients: 30, doctors: 24, psy: 25, spermograms: 12 },
+
+  riskPrevalence: [
+    { factor: "Celular no bolso", count: 24, pct: 80, color: "#ef4444" },
+    { factor: "Estresse", count: 15, pct: 50, color: "#f59e0b" },
+    { factor: "COVID-19", count: 12, pct: 40, color: "#f97316" },
+    { factor: "Ansiedade", count: 8, pct: 27, color: "#8b5cf6" },
+    { factor: "Depressão", count: 4, pct: 13, color: "#6366f1" },
+    { factor: "Drogas", count: 4, pct: 13, color: "#ec4899" },
+    { factor: "Tabagismo", count: 3, pct: 10, color: "#ef4444" },
+    { factor: "Caxumba", count: 2, pct: 7, color: "#14b8a6" },
+    { factor: "Exp. Química", count: 2, pct: 7, color: "#f59e0b" },
+    { factor: "Esteroides", count: 1, pct: 3, color: "#6366f1" },
+    { factor: "Hipertensão", count: 1, pct: 3, color: "#ef4444" },
+  ],
+
+  ageGroups: [
+    { group: "20-24", count: 14 },
+    { group: "25-29", count: 10 },
+    { group: "30-34", count: 5 },
+    { group: "35-39", count: 0 },
+    { group: "40-49", count: 0 },
+    { group: "50+", count: 1 },
+  ],
+
+  mentalHealth: {
+    labels: ["Ansiedade", "Estresse", "Depressão"],
+    sim: [8, 15, 4],
+    nao: [13, 9, 22],
+    naoSei: [9, 6, 4],
+  },
+
+  spermPatients: [
+    { age: 23, vivos: 70, mot: 60, smoking: false, anxiety: true, stress: true },
+    { age: 24, vivos: 60, mot: 50, smoking: false, anxiety: true, stress: true },
+    { age: 28, vivos: 50, mot: 40, smoking: false, anxiety: false, stress: false },
+    { age: 54, vivos: 30, mot: 20, smoking: true, anxiety: false, stress: true },
+    { age: 28, vivos: 40, mot: 30, smoking: false, anxiety: false, stress: false },
+    { age: 23, vivos: 55, mot: 40, smoking: false, anxiety: true, stress: true },
+    { age: 33, vivos: 70, mot: 40, smoking: false, anxiety: false, stress: false },
+    { age: 25, vivos: 80, mot: 70, smoking: false, anxiety: false, stress: true },
+    { age: 28, vivos: 60, mot: 55, smoking: false, anxiety: false, stress: true },
+    { age: 42, vivos: 70, mot: 50, smoking: false, anxiety: false, stress: false },
+    { age: 32, vivos: 55, mot: 30, smoking: false, anxiety: false, stress: true },
+    { age: 26, vivos: 65, mot: 55, smoking: false, anxiety: false, stress: false },
+  ],
+
+  doctorConsensus: {
+    labels: ["Homem procura\nem último caso", "Indica\npsicológico", "Custo é\nbarreira", "Ansiedade\ncontribui", "Medicamentos\ncontribuem", "Já tratou\ninfertilidade"],
+    values: [96, 83, 71, 62, 54, 46],
+  },
+
+  psyConsensus: {
+    labels: ["Impacto\nao casal", "Indica\npsicológico", "Indica terapia\nconjugal", "Depressão causa\ninfertilidade", "Ansiedade causa\ninfertilidade", "Estresse causa\ninfertilidade", "Homens procuram\napoio", "Medicamentos\ncontribuem"],
+    values: [80, 76, 68, 48, 44, 44, 36, 28],
+  },
+
+  professionalComparison: {
+    labels: ["Indica psicológico", "Custo é barreira", "Medicamentos\ncontribuem"],
+    doctors: [83, 71, 54],
+    psy: [76, 68, 28],
+  },
+
+  specialties: { "Clínica Médica": 17, "Ginecologia": 6, "Urologia": 2 },
+
+  experience: {
+    labels: ["1-5 anos", "6-10 anos", "10-15 anos", "15-20 anos", "20+ anos"],
+    doctors: [6, 3, 1, 1, 13],
+    psy: [14, 3, 1, 1, 6],
+  },
+};
+
+// ============================================================
+// WHO 2021 Reference Values
+// ============================================================
+const WHO_REFS = {
+  volume: { min: 1.4, unit: "mL", label: "Volume" },
+  ph: { min: 7.2, max: 8.2, unit: "", label: "pH" },
+  concentration: { min: 16, unit: "×10⁶/mL", label: "Concentração" },
+  totalCount: { min: 39, unit: "×10⁶", label: "Contagem total" },
+  motility: { min: 42, unit: "%", label: "Motilidade" },
+  progressiveMotility: { min: 30, unit: "%", label: "Mot. progressiva" },
+  viability: { min: 54, unit: "%", label: "Vitalidade" },
+  morphology: { min: 4, unit: "%", label: "Morfologia" },
+};
+
+// ============================================================
+// RISK ENGINE
+// ============================================================
+const RISK_WEIGHTS = {
+  age_40plus: 3.0, age_35_39: 1.5,
+  smoking_frequent: 3.5, smoking_moderate: 2.5, smoking_sporadic: 1.0,
+  drugs: 2.0, anxiety: 1.8, depression: 2.2, stress: 1.5,
+  diabetes: 2.0, hypertension: 1.5, varicocele: 3.0,
+  cryptorchidism: 3.5, mumps: 1.8, steroids: 3.0,
+  chemical_exposure: 2.0, sti_history: 2.0, cellphone_daily: 0.8,
+  motility_below_ref: 4.0, viability_below_ref: 4.0, concentration_below_ref: 4.5,
+};
+
+const RISK_LEVELS = [
+  { max: 4, label: "Baixo", color: "#22c55e", bg: "#f0fdf4", rec: "Manter acompanhamento de rotina. Reforçar hábitos saudáveis." },
+  { max: 8, label: "Moderado", color: "#f59e0b", bg: "#fffbeb", rec: "Investigação andrológica recomendada. Considerar modificação de fatores de estilo de vida." },
+  { max: 14, label: "Alto", color: "#f97316", bg: "#fff7ed", rec: "Encaminhamento prioritário para urologista/andrologista. Avaliação laboratorial completa. Suporte psicológico indicado." },
+  { max: Infinity, label: "Crítico", color: "#ef4444", bg: "#fef2f2", rec: "Encaminhamento urgente. Avaliação multidisciplinar (urologia + endocrinologia + saúde mental). Considerar reprodução assistida." },
+];
+
+function calculateRisk(pd, sd) {
+  let score = 0;
+  const factors = [];
+  const add = (n, w, c) => { score += w; factors.push({ name: n, weight: w, category: c }); };
+
+  const age = parseInt(pd.age) || 0;
+  if (age >= 40) add("Idade ≥ 40 anos", 3.0, "Demográfico");
+  else if (age >= 35) add("Idade 35-39 anos", 1.5, "Demográfico");
+
+  if (pd.smoking === "Sim") {
+    const w = pd.smokingFreq === "Frequentemente" ? 3.5 : pd.smokingFreq === "Razoavelmente" ? 2.5 : 1.0;
+    add("Tabagismo (" + (pd.smokingFreq || "uso") + ")", w, "Estilo de vida");
+  }
+  if (pd.drugs === "Sim") add("Uso de drogas", 2.0, "Estilo de vida");
+  if (pd.steroids === "Sim") add("Esteroides anabolizantes", 3.0, "Estilo de vida");
+  if (pd.anxiety === "Sim") add("Ansiedade", 1.8, "Saúde mental");
+  if (pd.depression === "Sim") add("Depressão", 2.2, "Saúde mental");
+  if (pd.stress === "Sim") add("Estresse", 1.5, "Saúde mental");
+  if (pd.diabetes === "Sim") add("Diabetes", 2.0, "Comorbidade");
+  if (pd.hypertension === "Sim") add("Hipertensão", 1.5, "Comorbidade");
+  if (pd.varicocele === "Sim") add("Varicocele", 3.0, "Clínico");
+  if (pd.cryptorchidism === "Sim") add("Criptorquidia", 3.5, "Clínico");
+  if (pd.mumps === "Sim") add("Histórico de caxumba", 1.8, "Clínico");
+  if (pd.chemicalExposure === "Sim") add("Exposição química", 2.0, "Ambiental");
+  if (pd.cellphone === "Sim" && pd.cellphoneFreq === "Todos os dias") add("Celular no bolso (diário)", 0.8, "Ambiental");
+
+  if (sd && sd.motility) { const v = parseFloat(sd.motility); if (!isNaN(v) && v < 42) add("Motilidade < 42% (" + v + "%)", 4.0, "Laboratorial"); }
+  if (sd && sd.viability) { const v = parseFloat(sd.viability); if (!isNaN(v) && v < 54) add("Vitalidade < 54% (" + v + "%)", 4.0, "Laboratorial"); }
+  if (sd && sd.concentration) { const v = parseFloat(sd.concentration); if (!isNaN(v) && v < 16) add("Concentração < 16 ×10⁶/mL", 4.5, "Laboratorial"); }
+
+  const rl = RISK_LEVELS.find(r => score <= r.max) || RISK_LEVELS[3];
+
+  const recs = [];
+  const lab = factors.filter(f => f.category === "Laboratorial");
+  const mental = factors.filter(f => f.category === "Saúde mental");
+  const life = factors.filter(f => f.category === "Estilo de vida");
+  const clin = factors.filter(f => f.category === "Clínico" || f.category === "Comorbidade");
+
+  if (lab.length > 0) recs.push({ icon: "🔬", text: "Repetir espermograma em 2-4 semanas. Considerar avaliação hormonal (FSH, LH, Testosterona).", priority: "high" });
+  if (mental.length > 0) recs.push({ icon: "🧠", text: "Encaminhamento para suporte psicológico (" + mental.map(f => f.name).join(", ") + "). 80% dos especialistas consultados ratificam esta indicação.", priority: "high" });
+  if (life.length > 0) recs.push({ icon: "🏃", text: "Intervenção em estilo de vida: " + life.map(f => f.name).join(", ") + ". Orientar cessação/redução.", priority: "medium" });
+  if (clin.length > 0) recs.push({ icon: "⚕️", text: "Investigação clínica: " + clin.map(f => f.name).join(", ") + ". Encaminhamento ao especialista.", priority: "high" });
+  if (score >= 8) recs.push({ icon: "💰", text: "Avaliar barreiras financeiras. 70,8% dos profissionais identificam o custo como fator limitante.", priority: "medium" });
+  if (recs.length === 0) recs.push({ icon: "✅", text: "Perfil de baixo risco. Manter hábitos saudáveis e acompanhamento de rotina.", priority: "low" });
+
+  return { score: Math.round(score * 10) / 10, riskLevel: rl, factors, recommendations: recs };
+}
+
+// ============================================================
+// CHART COMPONENT — wrapper for Chart.js
+// ============================================================
+function ChartCanvas({ config, height }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    if (chartRef.current) chartRef.current.destroy();
+    if (!canvasRef.current) return;
+
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      ...config,
+      options: {
+        ...config.options,
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          ...config.options?.plugins,
+          legend: { ...config.options?.plugins?.legend, labels: { font: { family: "'DM Sans'", size: 12 }, padding: 16, usePointStyle: true, pointStyle: "circle" } },
+        },
+      },
+    });
+
+    return () => { if (chartRef.current) chartRef.current.destroy(); };
+  }, [JSON.stringify(config)]);
+
+  return React.createElement("div", { style: { position: "relative", height: height || 280, width: "100%" } },
+    React.createElement("canvas", { ref: canvasRef })
+  );
+}
+
+// ============================================================
+// UI COMPONENTS
+// ============================================================
+function TabBtn({ active, onClick, icon, label, count }) {
+  return React.createElement("button", {
+    onClick, style: {
+      display: "flex", alignItems: "center", gap: 8, padding: "11px 18px",
+      background: active ? "linear-gradient(135deg, #1e293b, #0f172a)" : "transparent",
+      color: active ? "#f8fafc" : "#64748b", border: "none", borderRadius: 10,
+      fontSize: 13.5, fontWeight: active ? 600 : 400, transition: "all 0.2s",
+      whiteSpace: "nowrap", width: "100%", textAlign: "left",
+      boxShadow: active ? "0 2px 8px rgba(0,0,0,0.12)" : "none",
+    }
+  },
+    React.createElement("span", { style: { fontSize: 17 } }, icon),
+    React.createElement("span", null, label),
+    count > 0 ? React.createElement("span", {
+      style: { background: active ? "#3b82f6" : "#e2e8f0", color: active ? "#fff" : "#64748b",
+        fontSize: 10, padding: "2px 7px", borderRadius: 10, fontWeight: 700, marginLeft: "auto" }
+    }, count) : null
+  );
+}
+
+function Field({ label, req, hint, children }) {
+  return React.createElement("div", { style: { marginBottom: 16 } },
+    React.createElement("label", { style: { display: "block", fontSize: 12.5, fontWeight: 600, color: "#334155", marginBottom: 5, letterSpacing: 0.1 } },
+      label, req ? React.createElement("span", { style: { color: "#ef4444" } }, " *") : null),
+    children,
+    hint ? React.createElement("div", { style: { fontSize: 11, color: "#94a3b8", marginTop: 3, fontStyle: "italic" } }, hint) : null
+  );
+}
+
+const iStyle = { width: "100%", padding: "9px 13px", border: "1.5px solid #e2e8f0", borderRadius: 8, fontSize: 14, background: "#f8fafc", outline: "none", transition: "border-color 0.2s, box-shadow 0.2s", boxSizing: "border-box" };
+
+function Sel({ value, onChange, options, ph }) {
+  return React.createElement("select", { value: value || "", onChange: e => onChange(e.target.value), style: { ...iStyle, cursor: "pointer", paddingRight: 32, backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 12px center", appearance: "none" } },
+    React.createElement("option", { value: "" }, ph || "Selecione..."),
+    options.map(o => React.createElement("option", { key: typeof o === "string" ? o : o.value, value: typeof o === "string" ? o : o.value }, typeof o === "string" ? o : o.label))
+  );
+}
+
+function Radio({ value, onChange, options, name }) {
+  return React.createElement("div", { className: "radio-group", style: { display: "flex", gap: 8, flexWrap: "wrap" } },
+    options.map(o => {
+      const v = typeof o === "string" ? o : o.value;
+      const l = typeof o === "string" ? o : o.label;
+      const s = value === v;
+      return React.createElement("label", { key: v, style: { display: "flex", alignItems: "center", gap: 6, padding: "8px 14px", border: "1.5px solid " + (s ? "#3b82f6" : "#e2e8f0"), borderRadius: 8, cursor: "pointer", fontSize: 13, background: s ? "#eff6ff" : "#fff", transition: "all 0.15s", fontWeight: s ? 600 : 400, userSelect: "none" } },
+        React.createElement("input", { type: "radio", name, value: v, checked: s, onChange: () => onChange(v), style: { display: "none" } }),
+        React.createElement("span", { style: { width: 15, height: 15, borderRadius: "50%", flexShrink: 0, border: "2px solid " + (s ? "#3b82f6" : "#cbd5e1"), background: s ? "#3b82f6" : "#fff", display: "flex", alignItems: "center", justifyContent: "center" } },
+          s ? React.createElement("span", { style: { width: 5, height: 5, borderRadius: "50%", background: "#fff" } }) : null
+        ), l
+      );
+    })
+  );
+}
+
+function Card({ children, style, className }) {
+  return React.createElement("div", { className: className || "", style: { background: "#fff", borderRadius: 14, padding: 24, border: "1px solid #e5e7eb", boxShadow: "0 1px 3px rgba(0,0,0,0.04)", ...style } }, children);
+}
+
+function StatCard({ icon, label, value, sub, accent }) {
+  return React.createElement("div", { style: { padding: "18px 16px", borderRadius: 12, background: "#fff", border: "1px solid #e5e7eb", position: "relative", overflow: "hidden" } },
+    React.createElement("div", { style: { position: "absolute", top: 0, left: 0, width: 3, height: "100%", background: accent || "#3b82f6", borderRadius: "3px 0 0 3px" } }),
+    React.createElement("div", { style: { fontSize: 12, color: "#64748b", marginBottom: 6, fontWeight: 500, display: "flex", alignItems: "center", gap: 6 } },
+      React.createElement("span", { style: { fontSize: 16 } }, icon), label
+    ),
+    React.createElement("div", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", lineHeight: 1.2 } }, value),
+    sub ? React.createElement("div", { style: { fontSize: 11, color: "#94a3b8", marginTop: 3 } }, sub) : null
+  );
+}
+
+function Badge({ text, color }) {
+  return React.createElement("span", { style: { padding: "3px 10px", borderRadius: 6, fontSize: 11, fontWeight: 600, background: color + "15", color: color, whiteSpace: "nowrap" } }, text);
+}
+
+// ============================================================
+// MAIN APP
+// ============================================================
+function App() {
+  const [tab, setTab] = useState("dashboard");
+  const [pd, setPd] = useState({});
+  const [sd, setSd] = useState({});
+  const [step, setStep] = useState(0);
+  const [result, setResult] = useState(null);
+  const [saved, setSaved] = useState([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const up = (f, v) => setPd(p => ({ ...p, [f]: v }));
+  const us = (f, v) => setSd(p => ({ ...p, [f]: v }));
+  const go = (t) => { setTab(t); setSidebarOpen(false); };
+  const run = () => { setResult(calculateRisk(pd, sd)); setTab("results"); };
+  const reset = () => { setPd({}); setSd({}); setStep(0); setResult(null); };
+  const save = () => { if (result) setSaved(p => [...p, { id: p.length + 1, age: pd.age || "N/D", date: new Date().toLocaleDateString("pt-BR"), risk: result.riskLevel, score: result.score, factors: result.factors.length }]); };
+
+  // --- HEADER ---
+  const header = React.createElement("header", {
+    style: { background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", padding: "12px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "3px solid #3b82f6", flexShrink: 0 }
+  },
+    React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 12 } },
+      React.createElement("button", {
+        className: "mobile-menu-btn no-print",
+        onClick: () => setSidebarOpen(!sidebarOpen),
+        style: { display: "none", alignItems: "center", justifyContent: "center", width: 36, height: 36, border: "none", background: "rgba(255,255,255,0.1)", borderRadius: 8, color: "#f8fafc", fontSize: 20 }
+      }, "☰"),
+      React.createElement("div", {
+        style: { width: 38, height: 38, borderRadius: 10, background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 19, color: "#fff", fontWeight: 700, flexShrink: 0 }
+      }, "⚕"),
+      React.createElement("div", null,
+        React.createElement("div", { style: { color: "#f8fafc", fontSize: 16, fontWeight: 700, letterSpacing: -0.3 } }, "FERTIL", React.createElement("span", { style: { color: "#60a5fa" } }, "CDSS")),
+        React.createElement("div", { className: "header-title-sub", style: { color: "#94a3b8", fontSize: 10.5, letterSpacing: 0.3 } }, "Sistema de Suporte à Decisão Clínica — Infertilidade Masculina")
+      )
+    ),
+    React.createElement("span", { className: "header-badge", style: { fontSize: 10, color: "#94a3b8", padding: "4px 10px", background: "rgba(255,255,255,0.06)", borderRadius: 6, border: "1px solid rgba(255,255,255,0.08)" } }, "Protótipo v2.0 · Eng. Biomédica · Universidade Brasil")
+  );
+
+  // --- SIDEBAR ---
+  const overlay = React.createElement("div", { className: "sidebar-overlay" + (sidebarOpen ? " open" : ""), onClick: () => setSidebarOpen(false) });
+  const sidebar = React.createElement("nav", {
+    className: "sidebar no-print" + (sidebarOpen ? " open" : ""),
+    style: { width: 230, background: "#fff", borderRight: "1px solid #e5e7eb", padding: "18px 10px", display: "flex", flexDirection: "column", gap: 2, flexShrink: 0, overflowY: "auto" }
+  },
+    React.createElement("div", { style: { fontSize: 10, color: "#94a3b8", fontWeight: 700, letterSpacing: 1.2, padding: "8px 18px", textTransform: "uppercase" } }, "Navegação"),
+    React.createElement(TabBtn, { active: tab === "dashboard", onClick: () => go("dashboard"), icon: "📊", label: "Dashboard" }),
+    React.createElement(TabBtn, { active: tab === "charts", onClick: () => go("charts"), icon: "📈", label: "Dados da Pesquisa" }),
+
+    React.createElement("div", { style: { fontSize: 10, color: "#94a3b8", fontWeight: 700, letterSpacing: 1.2, padding: "14px 18px 8px", textTransform: "uppercase" } }, "Coleta"),
+    React.createElement(TabBtn, { active: tab === "patient", onClick: () => { go("patient"); setStep(0); }, icon: "🧑", label: "Paciente" }),
+    React.createElement(TabBtn, { active: tab === "seminal", onClick: () => go("seminal"), icon: "🔬", label: "Espermograma" }),
+    React.createElement(TabBtn, { active: tab === "doctor", onClick: () => go("doctor"), icon: "👨‍⚕️", label: "Médico" }),
+    React.createElement(TabBtn, { active: tab === "psy", onClick: () => go("psy"), icon: "🧠", label: "Psi/Psiquiatra" }),
+
+    React.createElement("div", { style: { fontSize: 10, color: "#94a3b8", fontWeight: 700, letterSpacing: 1.2, padding: "14px 18px 8px", textTransform: "uppercase" } }, "Análise"),
+    React.createElement(TabBtn, { active: tab === "results", onClick: () => go("results"), icon: "📋", label: "Resultados", count: result ? 1 : 0 }),
+    React.createElement(TabBtn, { active: tab === "history", onClick: () => go("history"), icon: "📁", label: "Histórico", count: saved.length }),
+
+    React.createElement("div", { style: { marginTop: "auto", padding: "14px 12px", borderTop: "1px solid #e5e7eb" } },
+      React.createElement("div", { style: { fontSize: 10.5, color: "#94a3b8", lineHeight: 1.6 } }, "Universidade Brasil", React.createElement("br"), "Engenharia Biomédica", React.createElement("br"), React.createElement("span", { style: { color: "#cbd5e1" } }, "© 2025 · Dissertação de Mestrado"))
+    )
+  );
+
+  // ============================================================
+  // DASHBOARD
+  // ============================================================
+  function renderDashboard() {
+    const D = RESEARCH_DATA;
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Painel de Controle"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, "Plataforma de coleta e análise integrada para estratificação de risco na infertilidade masculina"),
+
+      React.createElement("div", { className: "grid-4", style: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14, marginBottom: 24 } },
+        React.createElement(StatCard, { icon: "🧑", label: "Pacientes válidos", value: D.sample.patients, sub: "37 coletados · 30 válidos", accent: "#3b82f6" }),
+        React.createElement(StatCard, { icon: "👨‍⚕️", label: "Médicos", value: D.sample.doctors, sub: "Questionário profissional", accent: "#8b5cf6" }),
+        React.createElement(StatCard, { icon: "🧠", label: "Psi/Psiquiatras", value: D.sample.psy, sub: "Saúde mental", accent: "#ec4899" }),
+        React.createElement(StatCard, { icon: "🔬", label: "Espermogramas", value: D.sample.spermograms, sub: "Com parâmetros seminais", accent: "#14b8a6" })
+      ),
+
+      // Quick charts row
+      React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 } },
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Prevalência de Fatores de Risco (n=30)"),
+          React.createElement(ChartCanvas, { height: 260, config: {
+            type: "bar",
+            data: {
+              labels: D.riskPrevalence.map(r => r.factor),
+              datasets: [{ data: D.riskPrevalence.map(r => r.pct), backgroundColor: D.riskPrevalence.map(r => r.color + "cc"), borderColor: D.riskPrevalence.map(r => r.color), borderWidth: 1.5, borderRadius: 4, barThickness: 18 }]
+            },
+            options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => c.raw + "% (" + D.riskPrevalence[c.dataIndex].count + "/30)" } } }, scales: { x: { max: 100, ticks: { callback: v => v + "%", font: { size: 11 } }, grid: { color: "#f1f5f9" } }, y: { ticks: { font: { size: 11 } }, grid: { display: false } } } }
+          }})
+        ),
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Saúde Mental Autorrelatada (n=30)"),
+          React.createElement(ChartCanvas, { height: 260, config: {
+            type: "bar",
+            data: {
+              labels: D.mentalHealth.labels,
+              datasets: [
+                { label: "Sim", data: D.mentalHealth.sim, backgroundColor: "#ef444499", borderColor: "#ef4444", borderWidth: 1.5, borderRadius: 3 },
+                { label: "Não", data: D.mentalHealth.nao, backgroundColor: "#22c55e99", borderColor: "#22c55e", borderWidth: 1.5, borderRadius: 3 },
+                { label: "Não sei", data: D.mentalHealth.naoSei, backgroundColor: "#f59e0b99", borderColor: "#f59e0b", borderWidth: 1.5, borderRadius: 3 },
+              ]
+            },
+            options: { plugins: { legend: { position: "bottom" } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5, font: { size: 11 } }, grid: { color: "#f1f5f9" } }, x: { grid: { display: false }, ticks: { font: { size: 12 } } } } }
+          }})
+        )
+      ),
+
+      // CTA
+      React.createElement("div", { style: { background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", borderRadius: 14, padding: "24px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 } },
+        React.createElement("div", null,
+          React.createElement("h3", { style: { color: "#f8fafc", fontSize: 17, fontWeight: 700, marginBottom: 6 } }, "Iniciar Nova Avaliação"),
+          React.createElement("p", { style: { color: "#94a3b8", fontSize: 13, maxWidth: 480 } }, "Colete dados do paciente e parâmetros seminais para gerar a estratificação de risco automatizada do CDSS.")
+        ),
+        React.createElement("div", { style: { display: "flex", gap: 10 } },
+          React.createElement("button", { onClick: () => go("charts"), style: { background: "rgba(255,255,255,0.08)", color: "#e2e8f0", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, padding: "12px 22px", fontSize: 14, fontWeight: 500 } }, "📈 Ver Dados"),
+          React.createElement("button", { onClick: () => { reset(); go("patient"); }, style: { background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", color: "#fff", border: "none", borderRadius: 10, padding: "12px 22px", fontSize: 14, fontWeight: 600, boxShadow: "0 4px 12px rgba(59,130,246,0.3)" } }, "➕ Nova Avaliação")
+        )
+      )
+    );
+  }
+
+  // ============================================================
+  // CHARTS TAB — Full interactive research data
+  // ============================================================
+  function renderCharts() {
+    const D = RESEARCH_DATA;
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Dados da Pesquisa"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, "Visualização interativa dos dados coletados — n=30 pacientes, n=24 médicos, n=25 psicólogos/psiquiatras"),
+
+      // Row 1: Scatter + Age
+      React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 } },
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 4 } }, "Vitalidade × Motilidade — Espermogramas (n=12)"),
+          React.createElement("p", { style: { fontSize: 11.5, color: "#94a3b8", marginBottom: 14 } }, "Dispersão com limiares OMS 2021. Cor: 🔴 fumante · 🟣 ansiedade · 🔵 sem fator identificado"),
+          React.createElement(ChartCanvas, { height: 300, config: {
+            type: "scatter",
+            data: {
+              datasets: [
+                {
+                  label: "Pacientes",
+                  data: D.spermPatients.map(p => ({ x: p.vivos, y: p.mot })),
+                  backgroundColor: D.spermPatients.map(p => p.smoking ? "#ef4444cc" : p.anxiety ? "#8b5cf6cc" : "#3b82f6cc"),
+                  borderColor: D.spermPatients.map(p => p.smoking ? "#ef4444" : p.anxiety ? "#8b5cf6" : "#3b82f6"),
+                  borderWidth: 2, pointRadius: 7, pointHoverRadius: 10,
+                },
+              ]
+            },
+            options: {
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: (c) => { const p = D.spermPatients[c.dataIndex]; return p.age + " anos · Vivos: " + p.vivos + "% · Mot: " + p.mot + "%" + (p.smoking ? " [Fumante]" : "") + (p.anxiety ? " [Ansiedade]" : ""); } } },
+                annotation: undefined,
+              },
+              scales: {
+                x: { title: { display: true, text: "Vitalidade (%)", font: { size: 12, weight: "600" } }, min: 20, max: 90, grid: { color: "#f1f5f9" }, ticks: { font: { size: 11 } } },
+                y: { title: { display: true, text: "Motilidade (%)", font: { size: 12, weight: "600" } }, min: 10, max: 80, grid: { color: "#f1f5f9" }, ticks: { font: { size: 11 } } },
+              }
+            }
+          }})
+        ),
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 4 } }, "Distribuição Etária dos Pacientes (n=30)"),
+          React.createElement("p", { style: { fontSize: 11.5, color: "#94a3b8", marginBottom: 14 } }, "Faixas etárias da amostra · Mediana: 25 anos"),
+          React.createElement(ChartCanvas, { height: 300, config: {
+            type: "bar",
+            data: {
+              labels: D.ageGroups.map(a => a.group + " anos"),
+              datasets: [{ data: D.ageGroups.map(a => a.count), backgroundColor: ["#3b82f6cc", "#6366f1cc", "#8b5cf6cc", "#a78bfacc", "#c4b5fdcc", "#ef4444cc"], borderRadius: 6, barThickness: 36 }]
+            },
+            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5, font: { size: 11 } }, grid: { color: "#f1f5f9" } }, x: { grid: { display: false }, ticks: { font: { size: 11 } } } } }
+          }})
+        )
+      ),
+
+      // Row 2: Doctor vs Psy comparison
+      React.createElement(Card, { style: { marginBottom: 16 } },
+        React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 4 } }, "Comparação de Consenso Profissional — Médicos (n=24) × Psicólogos/Psiquiatras (n=25)"),
+        React.createElement("p", { style: { fontSize: 11.5, color: "#94a3b8", marginBottom: 14 } }, "Percentual de concordância por tema"),
+        React.createElement(ChartCanvas, { height: 220, config: {
+          type: "bar",
+          data: {
+            labels: D.professionalComparison.labels,
+            datasets: [
+              { label: "Médicos (n=24)", data: D.professionalComparison.doctors, backgroundColor: "#3b82f6cc", borderColor: "#3b82f6", borderWidth: 1.5, borderRadius: 4 },
+              { label: "Psi/Psiquiatras (n=25)", data: D.professionalComparison.psy, backgroundColor: "#8b5cf6cc", borderColor: "#8b5cf6", borderWidth: 1.5, borderRadius: 4 },
+            ]
+          },
+          options: { plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: (c) => c.dataset.label + ": " + c.raw + "%" } } }, scales: { y: { max: 100, ticks: { callback: v => v + "%", font: { size: 11 } }, grid: { color: "#f1f5f9" } }, x: { grid: { display: false }, ticks: { font: { size: 11 } } } } }
+        }})
+      ),
+
+      // Row 3: Separate doctor + psy
+      React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 } },
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Consenso Médico (n=24)"),
+          React.createElement(ChartCanvas, { height: 260, config: {
+            type: "bar",
+            data: { labels: D.doctorConsensus.labels, datasets: [{ data: D.doctorConsensus.values, backgroundColor: D.doctorConsensus.values.map(v => v >= 70 ? "#22c55ecc" : v >= 50 ? "#f59e0bcc" : "#ef4444cc"), borderRadius: 4, barThickness: 24 }] },
+            options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + "%" } } }, scales: { x: { max: 100, ticks: { callback: v => v + "%", font: { size: 11 } }, grid: { color: "#f1f5f9" } }, y: { ticks: { font: { size: 10 } }, grid: { display: false } } } }
+          }})
+        ),
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Consenso Psi/Psiquiatras (n=25)"),
+          React.createElement(ChartCanvas, { height: 260, config: {
+            type: "bar",
+            data: { labels: D.psyConsensus.labels, datasets: [{ data: D.psyConsensus.values, backgroundColor: D.psyConsensus.values.map(v => v >= 70 ? "#22c55ecc" : v >= 40 ? "#f59e0bcc" : "#ef4444cc"), borderRadius: 4, barThickness: 24 }] },
+            options: { indexAxis: "y", plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + "%" } } }, scales: { x: { max: 100, ticks: { callback: v => v + "%", font: { size: 11 } }, grid: { color: "#f1f5f9" } }, y: { ticks: { font: { size: 10 } }, grid: { display: false } } } }
+          }})
+        )
+      ),
+
+      // Row 4: Experience + Specialties
+      React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 } },
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Tempo de Formação — Médicos × Psi"),
+          React.createElement(ChartCanvas, { height: 240, config: {
+            type: "bar",
+            data: { labels: D.experience.labels, datasets: [
+              { label: "Médicos", data: D.experience.doctors, backgroundColor: "#3b82f6cc", borderRadius: 3 },
+              { label: "Psi/Psiq", data: D.experience.psy, backgroundColor: "#8b5cf6cc", borderRadius: 3 },
+            ] },
+            options: { plugins: { legend: { position: "bottom" } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5, font: { size: 11 } }, grid: { color: "#f1f5f9" } }, x: { grid: { display: false }, ticks: { font: { size: 11 } } } } }
+          }})
+        ),
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Especialidades Médicas"),
+          React.createElement(ChartCanvas, { height: 240, config: {
+            type: "doughnut",
+            data: { labels: Object.keys(D.specialties), datasets: [{ data: Object.values(D.specialties), backgroundColor: ["#3b82f6cc", "#8b5cf6cc", "#14b8a6cc"], borderWidth: 2, borderColor: "#fff" }] },
+            options: { plugins: { legend: { position: "bottom" } }, cutout: "55%" }
+          }})
+        )
+      )
+    );
+  }
+
+  // ============================================================
+  // PATIENT FORM
+  // ============================================================
+  function renderPatient() {
+    const labels = ["Dados Demográficos", "Estilo de Vida", "Saúde Mental", "Histórico Clínico"];
+    const defs = [
+      [
+        { l: "Idade", r: true, t: "input", it: "number", f: "age", ph: "Ex: 32" },
+        { l: "Motivo do exame", t: "select", f: "examReason", o: ["Solicitação médica", "Investigação de Varicocele", "Investigação de Infertilidade", "Avaliação endócrina/hormonal", "Controle de vasectomia"] },
+        { l: "É diabético?", t: "radio", f: "diabetes", o: ["Sim", "Não", "Não sei"] },
+        { l: "É hipertenso?", t: "radio", f: "hypertension", o: ["Sim", "Não", "Não sei"] },
+        { l: "Tem Varicocele?", t: "radio", f: "varicocele", o: ["Sim", "Não", "Não sei"] },
+        { l: "IMC", t: "input", it: "number", f: "bmi", ph: "Ex: 27.5", h: "Índice de Massa Corporal" },
+      ],
+      [
+        { l: "Fuma tabaco?", t: "radio", f: "smoking", o: ["Sim", "Não"] },
+        ...(pd.smoking === "Sim" ? [{ l: "Frequência tabagismo", t: "radio", f: "smokingFreq", o: ["Esporadicamente", "Razoavelmente", "Frequentemente"] }] : []),
+        { l: "Uso contínuo de drogas?", t: "radio", f: "drugs", o: ["Sim", "Não"] },
+        { l: "Esteroides anabolizantes?", t: "radio", f: "steroids", o: ["Sim", "Não"] },
+        { l: "Celular no bolso da frente?", t: "radio", f: "cellphone", o: ["Sim", "Não"] },
+        ...(pd.cellphone === "Sim" ? [{ l: "Frequência celular", t: "radio", f: "cellphoneFreq", o: ["Raramente", "Moderadamente", "Todos os dias"] }] : []),
+        { l: "Trabalha em empresa química?", t: "radio", f: "chemicalWork", o: ["Sim", "Não"] },
+        { l: "Exposto a componentes químicos?", t: "radio", f: "chemicalExposure", o: ["Sim", "Não"] },
+      ],
+      [
+        { l: "Sofre de ansiedade?", t: "radio", f: "anxiety", o: ["Sim", "Não", "Não sei"] },
+        { l: "Medicamento para ansiedade?", t: "radio", f: "anxietyMed", o: ["Sim", "Não"] },
+        { l: "Tem estresse?", t: "radio", f: "stress", o: ["Sim", "Não", "Não sei"] },
+        { l: "Sofre de depressão?", t: "radio", f: "depression", o: ["Sim", "Não", "Não sei"] },
+        { l: "Medicamento para depressão?", t: "radio", f: "depressionMed", o: ["Sim", "Não"] },
+        { l: "Procurou acompanhamento psicológico?", t: "radio", f: "psychSupport", o: ["Sim", "Não"] },
+      ],
+      [
+        { l: "Já teve ou tem Caxumba?", t: "radio", f: "mumps", o: ["Sim", "Não", "Não sei"] },
+        { l: "Teve COVID-19?", t: "radio", f: "covid", o: ["Sim", "Não", "Não sei"] },
+        { l: "Tem Criptorquidia?", t: "radio", f: "cryptorchidism", o: ["Sim", "Não", "Não sei"] },
+        { l: "Histórico de IST?", t: "radio", f: "stiHistory", o: ["Sim", "Não"] },
+        { l: "Já realizou quimioterapia?", t: "radio", f: "chemo", o: ["Sim", "Não"] },
+        { l: "Já realizou radioterapia?", t: "radio", f: "rt", o: ["Sim", "Não"] },
+        { l: "Tratamento prévio infertilidade?", t: "radio", f: "priorTreatment", o: ["Sim", "Não"] },
+        { l: "Impacto financeiro", t: "select", f: "financialImpact", o: ["Até 20% da renda", "De 20% a 30%", "Superior a 30%", "Não se aplica"] },
+      ],
+    ];
+
+    const fields = (defs[step] || []).map((f, i) => {
+      let child;
+      if (f.t === "input") child = React.createElement("input", { type: f.it || "text", style: iStyle, placeholder: f.ph || "", step: "any", value: pd[f.f] || "", onChange: e => up(f.f, e.target.value) });
+      else if (f.t === "select") child = React.createElement(Sel, { value: pd[f.f], onChange: v => up(f.f, v), options: f.o });
+      else child = React.createElement(Radio, { name: f.f, value: pd[f.f] || "", onChange: v => up(f.f, v), options: f.o });
+      return React.createElement(Field, { key: f.f + i, label: f.l, req: f.r, hint: f.h }, child);
+    });
+
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Formulário do Paciente"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 20 } }, "Etapa " + (step + 1) + " de 4 — " + labels[step]),
+      React.createElement("div", { style: { display: "flex", gap: 4, marginBottom: 24 } },
+        [0,1,2,3].map(i => React.createElement("div", { key: i, style: { flex: 1, height: 4, borderRadius: 2, background: i <= step ? "linear-gradient(90deg, #3b82f6, #8b5cf6)" : "#e2e8f0", transition: "all 0.3s" } }))
+      ),
+      React.createElement(Card, null,
+        React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 } }, fields),
+        step === 2 && React.createElement("div", { style: { padding: 14, background: "#eff6ff", borderRadius: 10, border: "1px solid #bfdbfe", marginTop: 14 } },
+          React.createElement("div", { style: { fontSize: 12.5, color: "#1e40af", fontWeight: 600, marginBottom: 4 } }, "ℹ️ Evidência da pesquisa"),
+          React.createElement("div", { style: { fontSize: 12, color: "#3b82f6", lineHeight: 1.5 } }, "80% dos profissionais de saúde mental e 83% dos médicos recomendam suporte psicológico para homens com diagnóstico de infertilidade. Apenas 36% dos homens procuram ajuda ativamente.")
+        ),
+        React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
+          React.createElement("button", { onClick: () => setStep(Math.max(0, step - 1)), disabled: step === 0, style: { padding: "10px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: step === 0 ? "#cbd5e1" : "#334155", cursor: step === 0 ? "default" : "pointer", fontSize: 13.5, fontWeight: 500 } }, "← Anterior"),
+          step < 3 ?
+            React.createElement("button", { onClick: () => setStep(step + 1), style: { padding: "10px 22px", borderRadius: 10, border: "none", background: "#3b82f6", color: "#fff", fontSize: 13.5, fontWeight: 600 } }, "Próximo →") :
+            React.createElement("button", { onClick: () => go("seminal"), style: { padding: "10px 22px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", color: "#fff", fontSize: 13.5, fontWeight: 600 } }, "🔬 Espermograma →")
+        )
+      )
+    );
+  }
+
+  // ============================================================
+  // SEMINAL FORM
+  // ============================================================
+  function renderSeminal() {
+    const ff = [
+      { l: "Volume (mL)", f: "volume", h: "Ref: ≥ 1.4 mL" },
+      { l: "pH", f: "ph", h: "Ref: 7.2 – 8.2" },
+      { l: "Concentração (×10⁶/mL)", f: "concentration", h: "Ref: ≥ 16" },
+      { l: "Motilidade total (%)", f: "motility", h: "Ref: ≥ 42%" },
+      { l: "Vitalidade / Vivos (%)", f: "viability", h: "Ref: ≥ 54%" },
+      { l: "Morfologia normal (%)", f: "morphology", h: "Ref: ≥ 4%" },
+      { l: "Mot. não progressiva (%)", f: "nonProg" },
+      { l: "Imóveis (%)", f: "immotile" },
+      { l: "Leucócitos (×10⁶/mL)", f: "leukocytes" },
+    ];
+
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Parâmetros do Espermograma"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, "Resultados laboratoriais — Valores de referência OMS (2021)"),
+      React.createElement(Card, null,
+        React.createElement("div", { className: "grid-3", style: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14 } },
+          ff.map(f => React.createElement(Field, { key: f.f, label: f.l, hint: f.h },
+            React.createElement("input", { type: "number", step: "any", style: iStyle, placeholder: "—", value: sd[f.f] || "", onChange: e => us(f.f, e.target.value) })
+          ))
+        ),
+        React.createElement("div", { style: { marginTop: 18, padding: 14, background: "#f0fdf4", borderRadius: 10, border: "1px solid #86efac" } },
+          React.createElement("div", { style: { fontSize: 12.5, fontWeight: 600, color: "#166534", marginBottom: 8 } }, "📋 Referências OMS (2021)"),
+          React.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 8, fontSize: 11.5, color: "#166534" } },
+            Object.values(WHO_REFS).map(r => React.createElement("span", { key: r.label, style: { background: "#dcfce7", padding: "3px 9px", borderRadius: 6 } }, r.label + ": " + (r.max ? r.min + "–" + r.max : "≥ " + r.min) + r.unit))
+          )
+        ),
+        React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
+          React.createElement("button", { onClick: () => go("patient"), style: { padding: "10px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: "#334155", fontSize: 13.5, fontWeight: 500 } }, "← Paciente"),
+          React.createElement("button", { onClick: run, style: { padding: "12px 28px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #22c55e, #16a34a)", color: "#fff", fontSize: 14, fontWeight: 700, boxShadow: "0 4px 12px rgba(34,197,94,0.3)" } }, "⚡ Executar Análise de Risco")
+        )
+      )
+    );
+  }
+
+  // ============================================================
+  // PROFESSIONAL FORMS
+  // ============================================================
+  function renderProf(title, sub, fields, data, updater) {
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, title),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, sub),
+      React.createElement(Card, null,
+        React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 } },
+          fields.map((f, i) => React.createElement(Field, { key: f.f, label: f.l },
+            f.t === "select" ? React.createElement(Sel, { value: data[f.f], onChange: v => updater(f.f, v), options: f.o }) :
+            React.createElement(Radio, { name: f.f, value: data[f.f] || "", onChange: v => updater(f.f, v), options: f.o })
+          ))
+        ),
+        React.createElement("div", { style: { marginTop: 18, padding: 12, background: "#f0f9ff", borderRadius: 8, fontSize: 12, color: "#0369a1" } }, "ℹ️ Os dados profissionais calibram os pesos do modelo de decisão e validam as recomendações do sistema.")
+      )
+    );
+  }
+
+  const [dd, setDd] = useState({});
+  const [psy, setPsy] = useState({});
+  function renderDoctor() {
+    return renderProf("Formulário Médico", "Percepção profissional sobre infertilidade masculina",
+      [
+        { l: "Especialidade", t: "select", f: "sp", o: ["Urologia", "Ginecologia", "Andrologia", "Clínica Médica", "Endocrinologia"] },
+        { l: "Tempo de graduação", t: "select", f: "exp", o: ["1-5 anos", "6-10 anos", "10-15 anos", "15-20 anos", "Mais de 20 anos"] },
+        { l: "Homens procuram o médico em último caso?", t: "radio", f: "lr", o: ["Sim", "Não"] },
+        { l: "Frequência de procura por infertilidade", t: "radio", f: "sf", o: ["Esporadicamente", "Moderadamente", "Frequentemente"] },
+        { l: "Ansiedade/depressão contribuem?", t: "radio", f: "mi", o: ["Sim", "Não", "Não tive nenhum caso"] },
+        { l: "Indica acompanhamento psicológico?", t: "radio", f: "pr", o: ["Sim", "Não"] },
+        { l: "Custo é empecilho?", t: "radio", f: "cb", o: ["Sim", "Não"] },
+        { l: "Pacientes realizam todos os exames?", t: "select", f: "ec", o: ["Esporadicamente", "Moderadamente", "Frequentemente"] },
+      ], dd, (f, v) => setDd(p => ({ ...p, [f]: v })));
+  }
+
+  function renderPsy() {
+    return renderProf("Formulário Psicólogo / Psiquiatra", "Percepção sobre saúde mental e infertilidade masculina",
+      [
+        { l: "Tempo de graduação", t: "select", f: "exp", o: ["1-5 anos", "6-10 anos", "10-15 anos", "15-20 anos", "Mais de 20 anos"] },
+        { l: "Homens inférteis procuram apoio?", t: "radio", f: "ms", o: ["Sim", "Não"] },
+        { l: "Ansiedade causa infertilidade?", t: "radio", f: "ac", o: ["Sim", "Não", "Não tive nenhum caso"] },
+        { l: "Depressão causa infertilidade?", t: "radio", f: "dc", o: ["Sim", "Não", "Não tive nenhum caso"] },
+        { l: "Estresse causa infertilidade?", t: "radio", f: "sc", o: ["Sim", "Não", "Não tive nenhum caso"] },
+        { l: "Psicofármacos contribuem?", t: "radio", f: "mc", o: ["Sim", "Não", "Não tive nenhum caso"] },
+        { l: "Indica terapia conjugal?", t: "radio", f: "ct", o: ["Sim", "Não"] },
+        { l: "Custo é barreira?", t: "radio", f: "cb", o: ["Sim", "Não"] },
+      ], psy, (f, v) => setPsy(p => ({ ...p, [f]: v })));
+  }
+
+  // ============================================================
+  // RESULTS
+  // ============================================================
+  function renderResults() {
+    if (!result) return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 24, fontFamily: "'DM Serif Display', serif" } }, "Resultado da Estratificação"),
+      React.createElement(Card, { style: { textAlign: "center", padding: 40 } },
+        React.createElement("div", { style: { fontSize: 48, marginBottom: 16 } }, "📋"),
+        React.createElement("p", { style: { color: "#64748b", fontSize: 14 } }, "Nenhuma análise realizada. Preencha o formulário do paciente e execute a análise."),
+        React.createElement("button", { onClick: () => { reset(); go("patient"); }, style: { marginTop: 16, padding: "10px 22px", background: "#3b82f6", color: "#fff", border: "none", borderRadius: 10, fontSize: 13.5, fontWeight: 600 } }, "Iniciar Avaliação")
+      )
+    );
+
+    const r = result;
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Resultado da Estratificação de Risco"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, "Paciente: " + (pd.age || "N/D") + " anos · Gerado em: " + new Date().toLocaleDateString("pt-BR") + " · " + new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })),
+
+      // Score card
+      React.createElement("div", { style: { background: r.riskLevel.bg, borderRadius: 14, padding: 24, marginBottom: 20, border: "2px solid " + r.riskLevel.color, boxShadow: "0 4px 20px " + r.riskLevel.color + "18" } },
+        React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap" } },
+          React.createElement("div", { style: { width: 96, height: 96, borderRadius: "50%", background: "conic-gradient(" + r.riskLevel.color + " " + Math.min(r.score / 20 * 360, 360) + "deg, #e2e8f0 0deg)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 } },
+            React.createElement("div", { style: { width: 76, height: 76, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" } },
+              React.createElement("span", { style: { fontSize: 22, fontWeight: 800, color: r.riskLevel.color } }, r.score),
+              React.createElement("span", { style: { fontSize: 10, color: "#94a3b8" } }, "pontos")
+            )
+          ),
+          React.createElement("div", { style: { flex: 1 } },
+            React.createElement("div", { style: { display: "inline-block", padding: "5px 14px", borderRadius: 8, background: r.riskLevel.color + "20", color: r.riskLevel.color, fontSize: 15, fontWeight: 700, marginBottom: 8 } }, "Risco " + r.riskLevel.label),
+            React.createElement("p", { style: { color: "#334155", fontSize: 13.5, lineHeight: 1.6 } }, r.riskLevel.rec)
+          )
+        )
+      ),
+
+      // Factors + Recs
+      React.createElement("div", { className: "grid-2", style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 } },
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "⚠️ Fatores de Risco Identificados"),
+          r.factors.length === 0 ? React.createElement("p", { style: { color: "#94a3b8", fontSize: 13 } }, "Nenhum fator significativo.") :
+          r.factors.sort((a, b) => b.weight - a.weight).map((f, i) =>
+            React.createElement("div", { key: i, style: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: i < r.factors.length - 1 ? "1px solid #f1f5f9" : "none" } },
+              React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" } },
+                React.createElement("span", { style: { fontSize: 13, fontWeight: 500, color: "#334155" } }, f.name),
+                React.createElement(Badge, { text: f.category, color: "#64748b" })
+              ),
+              React.createElement("span", { style: { fontSize: 13, fontWeight: 700, color: f.weight >= 3 ? "#ef4444" : f.weight >= 2 ? "#f59e0b" : "#22c55e", whiteSpace: "nowrap" } }, "+" + f.weight)
+            )
+          )
+        ),
+        React.createElement(Card, null,
+          React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "💡 Recomendações do CDSS"),
+          r.recommendations.map((rec, i) =>
+            React.createElement("div", { key: i, style: { padding: 12, marginBottom: 8, borderRadius: 10, background: rec.priority === "high" ? "#fef2f2" : rec.priority === "medium" ? "#fffbeb" : "#f0fdf4", border: "1px solid " + (rec.priority === "high" ? "#fca5a5" : rec.priority === "medium" ? "#fcd34d" : "#86efac") } },
+              React.createElement("div", { style: { fontSize: 12.5, color: "#334155", lineHeight: 1.55 } }, rec.icon + " " + rec.text)
+            )
+          )
+        )
+      ),
+
+      // Chart: factor contribution
+      r.factors.length > 0 && React.createElement(Card, { style: { marginBottom: 20 } },
+        React.createElement("h3", { style: { fontSize: 14, fontWeight: 700, color: "#0f172a", marginBottom: 14 } }, "Contribuição dos Fatores ao Score Total"),
+        React.createElement(ChartCanvas, { height: 200, config: {
+          type: "bar",
+          data: {
+            labels: r.factors.sort((a,b) => b.weight - a.weight).map(f => f.name),
+            datasets: [{ data: r.factors.map(f => f.weight), backgroundColor: r.factors.map(f => f.weight >= 3 ? "#ef444499" : f.weight >= 2 ? "#f59e0b99" : "#22c55e99"), borderRadius: 4, barThickness: 22 }]
+          },
+          options: { indexAxis: "y", plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true, grid: { color: "#f1f5f9" }, ticks: { font: { size: 11 } } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } }
+        }})
+      ),
+
+      // Actions
+      React.createElement("div", { style: { display: "flex", gap: 10, justifyContent: "flex-end", flexWrap: "wrap" } },
+        React.createElement("button", { onClick: save, style: { padding: "10px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: "#334155", fontSize: 13.5, fontWeight: 500 } }, "💾 Salvar"),
+        React.createElement("button", { onClick: () => { reset(); go("patient"); }, style: { padding: "10px 22px", borderRadius: 10, border: "none", background: "#3b82f6", color: "#fff", fontSize: 13.5, fontWeight: 600 } }, "➕ Nova Avaliação")
+      )
+    );
+  }
+
+  // ============================================================
+  // HISTORY
+  // ============================================================
+  function renderHistory() {
+    return React.createElement("div", { className: "fade-in" },
+      React.createElement("h1", { style: { fontSize: 24, fontWeight: 700, color: "#0f172a", marginBottom: 4, fontFamily: "'DM Serif Display', serif" } }, "Histórico de Avaliações"),
+      React.createElement("p", { style: { color: "#64748b", fontSize: 13.5, marginBottom: 24 } }, "Registros salvos durante a sessão"),
+      saved.length === 0 ?
+        React.createElement(Card, { style: { textAlign: "center", padding: 40 } },
+          React.createElement("div", { style: { fontSize: 48, marginBottom: 16 } }, "📁"),
+          React.createElement("p", { style: { color: "#94a3b8" } }, "Nenhuma avaliação salva.")
+        ) :
+        React.createElement("div", { style: { background: "#fff", borderRadius: 14, overflow: "hidden", border: "1px solid #e5e7eb" } },
+          React.createElement("div", { style: { overflowX: "auto" } },
+            React.createElement("table", { style: { width: "100%", borderCollapse: "collapse", fontSize: 13.5, minWidth: 500 } },
+              React.createElement("thead", null,
+                React.createElement("tr", { style: { background: "#f8fafc" } },
+                  ["#", "Data", "Idade", "Score", "Risco", "Fatores"].map(h =>
+                    React.createElement("th", { key: h, style: { padding: "12px 14px", textAlign: "left", fontWeight: 600, color: "#64748b", fontSize: 11.5, borderBottom: "1px solid #e5e7eb", whiteSpace: "nowrap" } }, h)
+                  )
+                )
+              ),
+              React.createElement("tbody", null,
+                saved.map(p =>
+                  React.createElement("tr", { key: p.id, style: { borderBottom: "1px solid #f1f5f9" } },
+                    React.createElement("td", { style: { padding: "11px 14px", fontWeight: 600 } }, p.id),
+                    React.createElement("td", { style: { padding: "11px 14px" } }, p.date),
+                    React.createElement("td", { style: { padding: "11px 14px" } }, p.age + " anos"),
+                    React.createElement("td", { style: { padding: "11px 14px", fontWeight: 700 } }, p.score),
+                    React.createElement("td", { style: { padding: "11px 14px" } }, React.createElement(Badge, { text: p.risk.label, color: p.risk.color })),
+                    React.createElement("td", { style: { padding: "11px 14px" } }, p.factors)
+                  )
+                )
+              )
+            )
+          )
+        )
+    );
+  }
+
+  // ============================================================
+  // LAYOUT
+  // ============================================================
+  const tabs = { dashboard: renderDashboard, charts: renderCharts, patient: renderPatient, seminal: renderSeminal, doctor: renderDoctor, psy: renderPsy, results: renderResults, history: renderHistory };
+
+  return React.createElement("div", { style: { height: "100vh", display: "flex", flexDirection: "column", background: "#f1f5f9" } },
+    header, overlay,
+    React.createElement("div", { style: { display: "flex", flex: 1, overflow: "hidden" } },
+      sidebar,
+      React.createElement("main", { className: "main-content", style: { flex: 1, padding: "24px 28px", overflowY: "auto" } },
+        (tabs[tab] || renderDashboard)()
+      )
+    )
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>
