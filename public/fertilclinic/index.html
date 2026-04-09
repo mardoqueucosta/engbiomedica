@@ -15,8 +15,8 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f1f5f9; color: #0f172a; overflow: hidden; }
-    #root { height: 100vh; }
+    body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f1f5f9; color: #0f172a; overflow: hidden; height: 100vh; height: 100dvh; }
+    #root { height: 100%; }
     input, select, button { font-family: inherit; }
     input:focus, select:focus { border-color: #3b82f6 !important; outline: none; box-shadow: 0 0 0 3px rgba(59,130,246,0.12); }
     button { transition: all 0.15s ease; cursor: pointer; }
@@ -864,7 +864,7 @@ function App() {
   // ============================================================
   const tabs = { dashboard: renderDashboard, charts: renderCharts, patient: renderPatient, seminal: renderSeminal, doctor: renderDoctor, psy: renderPsy, results: renderResults, history: renderHistory };
 
-  return React.createElement("div", { style: { height: "100vh", display: "flex", flexDirection: "column", background: "#f1f5f9" } },
+  return React.createElement("div", { style: { height: "100%", display: "flex", flexDirection: "column", background: "#f1f5f9" } },
     header, overlay,
     React.createElement("div", { style: { display: "flex", flex: 1, overflow: "hidden" } },
       sidebar,
