@@ -33,6 +33,7 @@
     .slide-in { animation: slideIn 0.3s ease-out; }
     @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
     .mobile-menu-btn { display: none; }
+    .main-content { max-width: 1200px; margin: 0 auto; }
     @media (max-width: 860px) {
       .sidebar { position: fixed !important; left: -260px; top: 0; bottom: 0; z-index: 100; transition: left 0.3s ease; }
       .sidebar.open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.15); }
@@ -41,15 +42,24 @@
       .mobile-menu-btn { display: flex !important; }
       .main-content { padding: 16px !important; }
       .grid-2 { grid-template-columns: 1fr !important; }
-      .grid-3 { grid-template-columns: 1fr !important; }
+      .grid-3 { grid-template-columns: 1fr 1fr !important; }
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .header-title-sub { display: none !important; }
       .header-badge { display: none !important; }
+      .score-row { flex-direction: column !important; text-align: center; }
+      .cta-row { flex-direction: column !important; text-align: center; }
+      .cta-row button { width: 100% !important; }
     }
     @media (max-width: 480px) {
+      .main-content { padding: 12px !important; }
+      .grid-3 { grid-template-columns: 1fr !important; }
       .grid-4 { grid-template-columns: 1fr !important; }
       .radio-group { gap: 6px !important; }
-      .radio-group label { padding: 6px 10px !important; font-size: 12px !important; }
+      .radio-group label { padding: 8px 12px !important; font-size: 12px !important; min-height: 44px; }
+      button { min-height: 44px; }
+      h1 { font-size: 20px !important; }
+      .nav-buttons { flex-direction: column !important; gap: 8px !important; }
+      .nav-buttons button { width: 100% !important; }
     }
   </style>
 </head>
@@ -438,12 +448,12 @@ function App() {
       ),
 
       // CTA
-      React.createElement("div", { style: { background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", borderRadius: 14, padding: "24px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 } },
+      React.createElement("div", { className: "cta-row", style: { background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", borderRadius: 14, padding: "24px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 } },
         React.createElement("div", null,
           React.createElement("h3", { style: { color: "#f8fafc", fontSize: 17, fontWeight: 700, marginBottom: 6 } }, "Iniciar Nova Avaliação"),
           React.createElement("p", { style: { color: "#94a3b8", fontSize: 13, maxWidth: 480 } }, "Colete dados do paciente e parâmetros seminais para gerar a estratificação de risco automatizada do CDSS.")
         ),
-        React.createElement("div", { style: { display: "flex", gap: 10 } },
+        React.createElement("div", { style: { display: "flex", gap: 10, flexWrap: "wrap" } },
           React.createElement("button", { onClick: () => go("charts"), style: { background: "rgba(255,255,255,0.08)", color: "#e2e8f0", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, padding: "12px 22px", fontSize: 14, fontWeight: 500 } }, "📈 Ver Dados"),
           React.createElement("button", { onClick: () => { reset(); go("patient"); }, style: { background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", color: "#fff", border: "none", borderRadius: 10, padding: "12px 22px", fontSize: 14, fontWeight: 600, boxShadow: "0 4px 12px rgba(59,130,246,0.3)" } }, "➕ Nova Avaliação")
         )
@@ -631,11 +641,11 @@ function App() {
           React.createElement("div", { style: { fontSize: 12.5, color: "#1e40af", fontWeight: 600, marginBottom: 4 } }, "ℹ️ Evidência da pesquisa"),
           React.createElement("div", { style: { fontSize: 12, color: "#3b82f6", lineHeight: 1.5 } }, "80% dos profissionais de saúde mental e 83% dos médicos recomendam suporte psicológico para homens com diagnóstico de infertilidade. Apenas 36% dos homens procuram ajuda ativamente.")
         ),
-        React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
-          React.createElement("button", { onClick: () => setStep(Math.max(0, step - 1)), disabled: step === 0, style: { padding: "10px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: step === 0 ? "#cbd5e1" : "#334155", cursor: step === 0 ? "default" : "pointer", fontSize: 13.5, fontWeight: 500 } }, "← Anterior"),
+        React.createElement("div", { className: "nav-buttons", style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
+          React.createElement("button", { onClick: () => setStep(Math.max(0, step - 1)), disabled: step === 0, style: { padding: "12px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: step === 0 ? "#cbd5e1" : "#334155", cursor: step === 0 ? "default" : "pointer", fontSize: 14, fontWeight: 500 } }, "← Anterior"),
           step < 3 ?
-            React.createElement("button", { onClick: () => setStep(step + 1), style: { padding: "10px 22px", borderRadius: 10, border: "none", background: "#3b82f6", color: "#fff", fontSize: 13.5, fontWeight: 600 } }, "Próximo →") :
-            React.createElement("button", { onClick: () => go("seminal"), style: { padding: "10px 22px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", color: "#fff", fontSize: 13.5, fontWeight: 600 } }, "🔬 Espermograma →")
+            React.createElement("button", { onClick: () => setStep(step + 1), style: { padding: "12px 22px", borderRadius: 10, border: "none", background: "#3b82f6", color: "#fff", fontSize: 14, fontWeight: 600 } }, "Próximo →") :
+            React.createElement("button", { onClick: () => go("seminal"), style: { padding: "12px 22px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", color: "#fff", fontSize: 14, fontWeight: 600 } }, "🔬 Espermograma →")
         )
       )
     );
@@ -672,9 +682,9 @@ function App() {
             Object.values(WHO_REFS).map(r => React.createElement("span", { key: r.label, style: { background: "#dcfce7", padding: "3px 9px", borderRadius: 6 } }, r.label + ": " + (r.max ? r.min + "–" + r.max : "≥ " + r.min) + r.unit))
           )
         ),
-        React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
-          React.createElement("button", { onClick: () => go("patient"), style: { padding: "10px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: "#334155", fontSize: 13.5, fontWeight: 500 } }, "← Paciente"),
-          React.createElement("button", { onClick: run, style: { padding: "12px 28px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #22c55e, #16a34a)", color: "#fff", fontSize: 14, fontWeight: 700, boxShadow: "0 4px 12px rgba(34,197,94,0.3)" } }, "⚡ Executar Análise de Risco")
+        React.createElement("div", { className: "nav-buttons", style: { display: "flex", justifyContent: "space-between", marginTop: 24, paddingTop: 18, borderTop: "1px solid #e5e7eb" } },
+          React.createElement("button", { onClick: () => go("patient"), style: { padding: "12px 22px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#fff", color: "#334155", fontSize: 14, fontWeight: 500 } }, "← Paciente"),
+          React.createElement("button", { onClick: run, style: { padding: "12px 28px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #22c55e, #16a34a)", color: "#fff", fontSize: 14, fontWeight: 700, boxShadow: "0 4px 12px rgba(34,197,94,0.3)" } }, "⚡ Executar Análise")
         )
       )
     );
@@ -749,7 +759,7 @@ function App() {
 
       // Score card
       React.createElement("div", { style: { background: r.riskLevel.bg, borderRadius: 14, padding: 24, marginBottom: 20, border: "2px solid " + r.riskLevel.color, boxShadow: "0 4px 20px " + r.riskLevel.color + "18" } },
-        React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap" } },
+        React.createElement("div", { className: "score-row", style: { display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap" } },
           React.createElement("div", { style: { width: 96, height: 96, borderRadius: "50%", background: "conic-gradient(" + r.riskLevel.color + " " + Math.min(r.score / 20 * 360, 360) + "deg, #e2e8f0 0deg)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 } },
             React.createElement("div", { style: { width: 76, height: 76, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" } },
               React.createElement("span", { style: { fontSize: 22, fontWeight: 800, color: r.riskLevel.color } }, r.score),
