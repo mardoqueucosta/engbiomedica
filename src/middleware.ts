@@ -9,10 +9,12 @@ export function middleware(request: NextRequest) {
 
   // Redirect www.engenhariabiomedica.com → engenhariabiomedica.com
   if (host.startsWith('www.')) {
-    const newHost = host.replace(/^www\./, '');
+    const newHost = host.replace(/^www\./, '').replace(/:\d+$/, '');
     const url = request.nextUrl.clone();
-    url.host = newHost;
     url.protocol = 'https';
+    url.hostname = newHost;
+    // nextUrl carries the container port (3000); without clearing it the redirect points to :3000
+    url.port = '';
     return NextResponse.redirect(url, 301);
   }
 
