@@ -114,7 +114,7 @@ function injectBlurPlaceholders(html: string): string {
 
 function injectPictureElement(html: string): string {
   return html.replace(/<img\s([^>]*?)src="(\/artigos\/[^"]+?)\.webp"([^>]*?)>/gi, (full, before, basePath, after) => {
-    const sizes = '(max-width: 768px) 100vw, 768px';
+    const sizes = '(max-width: 1024px) 100vw, 1024px';
     const avifSrcset = `${basePath}-640.avif 640w, ${basePath}-768.avif 768w, ${basePath}.avif 1024w`;
     const webpSrcset = `${basePath}-640.webp 640w, ${basePath}-768.webp 768w, ${basePath}.webp 1024w`;
     return `<picture><source type="image/avif" srcset="${avifSrcset}" sizes="${sizes}"><source type="image/webp" srcset="${webpSrcset}" sizes="${sizes}"><img ${before}src="${basePath}.webp"${after}></picture>`;
@@ -311,6 +311,7 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
         title={meta.titulo}
         description={meta.resumo}
         centered
+        colunaLarga
         breadcrumbs={[
           { label: 'Artigos', href: '/artigos' },
           { label: meta.titulo },
@@ -318,7 +319,7 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
       />
 
       <article className="container-page py-10 lg:py-14">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-slate-100">
             <Badge variant={meta.categoriaVariant}>{meta.categoria}</Badge>

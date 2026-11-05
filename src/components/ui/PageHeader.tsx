@@ -37,6 +37,7 @@ export function PageHeader({
   description,
   breadcrumbs,
   centered,
+  colunaLarga,
   imagens,
   palco,
   acoes,
@@ -49,6 +50,8 @@ export function PageHeader({
   breadcrumbs?: { label: string; href?: string }[];
   /** Sem imagens, centraliza o texto numa coluna (artigos sem imagem, páginas institucionais). */
   centered?: boolean;
+  /** Com `centered`: coluna de 1024 px em vez de 768 px (artigos, alinhados ao texto). */
+  colunaLarga?: boolean;
   imagens?: ImagemPalco[];
   palco?: ReactNode;
   acoes?: ReactNode;
@@ -72,7 +75,7 @@ export function PageHeader({
           umaColuna ? '' : 'lg:grid-cols-[minmax(0,600px)_1fr] lg:gap-10'
         }`}
       >
-        <div className={umaColuna && centered ? 'max-w-3xl mx-auto w-full' : 'min-w-0'}>
+        <div className={umaColuna && centered ? `${colunaLarga ? 'max-w-5xl' : 'max-w-3xl'} mx-auto w-full` : 'min-w-0'}>
           {breadcrumbs && (
             <nav aria-label="Breadcrumb" className="mb-4 text-xs font-mono topo-azul__suave">
               <ol className="flex flex-wrap items-center gap-1.5">
@@ -119,7 +122,7 @@ export function PageHeader({
             )}
           </h1>
           {description && (
-            <p className="mt-4 font-sans text-[17px] lg:text-[19px] leading-relaxed topo-azul__texto max-w-[600px]">
+            <p className={`mt-4 font-sans text-[17px] lg:text-[19px] leading-relaxed topo-azul__texto ${colunaLarga ? 'max-w-3xl' : 'max-w-[600px]'}`}>
               {description}
             </p>
           )}
