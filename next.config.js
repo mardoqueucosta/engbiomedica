@@ -16,6 +16,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Página do laboratório: endereço antigo (05/11/2026) para o novo
+      { source: '/ppgeb/docentes/mardoqueu-costa', destination: '/ppgeb/docentes/mardoqueu-martins-costa', statusCode: 301 },
       // Redirects de rotas curtas para artigos profundos
       { source: '/formacao/graduacao', destination: '/artigos/todas-faculdades-engenharia-biomedica-brasil-ranking', statusCode: 301 },
       { source: '/formacao/pos-graduacao', destination: '/artigos/pos-graduacao-mestrado-doutorado-engenharia-biomedica', statusCode: 301 },
