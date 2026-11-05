@@ -31,7 +31,7 @@ export function PalcoImagens({ imagens }: { imagens: ImagemPalco[] }) {
           key={img.src}
           className={`relative flex-1 max-w-[200px] ${alturas[i]} rounded-xl overflow-hidden border border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.35)]`}
         >
-          <Image src={img.src} alt={img.alt} fill priority={i === lista.length - 1} unoptimized className="object-cover" sizes="200px" />
+          <Image src={img.src} alt={img.alt} fill priority unoptimized className="object-cover" sizes="200px" />
         </div>
       ))}
     </div>
