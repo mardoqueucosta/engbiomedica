@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { PalcoFotos } from '@/components/ui/PalcoImagens';
-import { fotosDocentes } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
 import Link from 'next/link';
@@ -219,7 +217,6 @@ export default function ProcessoSeletivoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Carreira', href: '/carreira' }, { name: 'Processo Seletivo', href: '/carreira/processo-seletivo' }])) }}
       />
       <PageHeader
-        palco={<PalcoFotos fotos={fotosDocentes()} />}
         overline="Edital 01/2026 — PPGEB"
         title="Processo Seletivo: Professor/Pesquisador Permanente"
         description="O Programa de Pós-Graduação em Engenharia Biomédica da Universidade Brasil busca docente permanente para atuar em ensino, pesquisa e inovação no quadriênio 2025-2028. Início imediato, regime PJ."

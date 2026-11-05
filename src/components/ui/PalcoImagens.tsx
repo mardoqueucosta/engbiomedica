@@ -37,16 +37,3 @@ export function PalcoImagens({ imagens }: { imagens: ImagemPalco[] }) {
     </div>
   );
 }
-
-/** Fotos redondas dos docentes, em grade, para a capa das páginas do PPGEB. */
-export function PalcoFotos({ fotos }: { fotos: ImagemPalco[] }) {
-  return (
-    <div className="grid grid-cols-5 gap-3 max-w-[460px] mx-auto lg:mr-0">
-      {fotos.map((f) => (
-        <div key={f.src} className="relative aspect-square rounded-full overflow-hidden ring-2 ring-white/15">
-          <Image src={f.src} alt={f.alt} fill priority unoptimized className="object-cover" sizes="88px" />
-        </div>
-      ))}
-    </div>
-  );
-}
