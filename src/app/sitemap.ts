@@ -23,6 +23,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/equipamentos', changeFrequency: 'monthly' as const, priority: 0.7, lastModified: '2026-03-01' },
     { path: '/carreira', changeFrequency: 'monthly' as const, priority: 0.7, lastModified: '2026-03-01' },
     { path: '/carreira/processo-seletivo', changeFrequency: 'weekly' as const, priority: 0.7, lastModified: '2026-03-01' },
+    { path: '/ppgeb', changeFrequency: 'monthly' as const, priority: 0.8, lastModified: '2026-11-05' },
+    { path: '/ppgeb/mestrado', changeFrequency: 'monthly' as const, priority: 0.7, lastModified: '2026-11-05' },
+    { path: '/ppgeb/doutorado', changeFrequency: 'monthly' as const, priority: 0.7, lastModified: '2026-11-05' },
+    { path: '/ppgeb/pos-doutorado', changeFrequency: 'monthly' as const, priority: 0.6, lastModified: '2026-11-05' },
   ];
 
   const pages: MetadataRoute.Sitemap = staticPages.map((page) => ({

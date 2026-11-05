@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
@@ -10,10 +9,16 @@ import {
   CheckCircle,
   FileDown,
   ExternalLink,
-  Mail,
   ArrowRight,
 } from 'lucide-react';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
+import { DocentesGrid } from '@/components/ppgeb/DocentesGrid';
+import {
+  docentes,
+  disciplinasObrigatoriasMestrado,
+  disciplinasObrigatoriasDoutorado,
+  disciplinasOptativas,
+} from '@/data/ppgeb';
 
 export const metadata: Metadata = {
   title: 'Processo Seletivo Docente — PPGEB Universidade Brasil',
@@ -98,43 +103,8 @@ const eixos = [
   },
 ];
 
-const disciplinasObrigatoriasMestrado = [
-  'Metodologia Científica e do Ensino Superior',
-  'Métodos Matemáticos para Análise de Dados',
-  'Bioestatística',
-  'Bioética',
-];
 
-const disciplinasObrigatoriasDoutorado = [
-  'Tópicos Avançados em Engenharia Biomédica',
-  'Fundamentos de Citologia e Histologia',
-  'Princípios de Fisiologia e Eletrofisiologia',
-  'Seminários em Engenharia Biomédica',
-];
 
-const disciplinasOptativas = [
-  'Engenharia de Tecidos',
-  'Bioimpressão 3D Aplicada à Engenharia Biomédica',
-  'Instrumentação Biomédica',
-  'Aplicações Clínicas e Terapêuticas dos Lasers',
-  'Ciência de Dados e Inteligência Artificial',
-  'Empreendedorismo',
-  'Processamento de Sinais',
-  'Escrita Científica',
-  'Biomateriais',
-  'Modelagem Computacional',
-  'Avanços em Lab-on-a-Chip Aplicados à Engenharia Biomédica',
-  'Espectroscopia Raman e FTIR: Análise Espectral',
-  'Introdução à Biofotônica',
-  'Aplicações Clínicas, Protocolos e Bases da Terapia Fotodinâmica',
-  'Gestão de Projetos de Pesquisa e Inovação',
-  'Fotobiomodulação: Fundamentos Físicos e Aplicações',
-  'Introdução a Sensores e Transdutores Biomédicos',
-  'Recursos Eletrofísicos Aplicados à Dermatologia',
-  'Materiais Poliméricos Aplicados à Engenharia Biomédica',
-  'Filmes Finos: Formação e Utilização na Engenharia Biomédica',
-  'Ozônio: Teoria e Aplicações',
-];
 
 const areasAtuacao = [
   {
@@ -238,106 +208,6 @@ const documentos = [
   },
 ];
 
-const docentes = [
-  {
-    nome: 'Prof. Dr. Mardoqueu M. Costa',
-    foto: '/docentes/mardoqueu-costa.gif',
-    email: 'Mardoqueu.costa@ub.edu.br',
-    lattes: 'http://lattes.cnpq.br/7819717440359474',
-    coordenador: true,
-    resumo:
-      'Pós-doutor em Engenharia de Biossistemas pela ESALQ/USP. Doutor em Engenharia Elétrica (EESC/USP). Atua nas áreas de Instrumentação, Engenharia de Materiais e Empreendedorismo, com foco em dispositivos e equipamentos científicos. Forte interface com a indústria, captação de recursos (CNPq, FAPESP, Embrapii) e transferência de tecnologia. Possui 22 artigos, 3 patentes e participação no desenvolvimento de mais de 26 produtos.',
-  },
-  {
-    nome: 'Profa. Dra. Ana Laura Andrade',
-    foto: '/docentes/ana-laura-andrade.gif',
-    email: 'ana.andrade@ub.edu.br',
-    lattes: 'http://lattes.cnpq.br/6270999048662693',
-    resumo:
-      'Graduação em Fisioterapia (UNIFAL), Mestrado e Doutorado em Fisioterapia pela UFSCar com doutorado sanduíche na Universidade do Minho (3B\'s Research Group). Pós-doutoranda na USP. Desenvolve projetos de pesquisa em dor e medicina regenerativa com eletroterapia, biomateriais e células-tronco. Docente do Instituto Israelita Albert Einstein e Professora Titular do PPGEB da Universidade Brasil.',
-  },
-  {
-    nome: 'Prof. Dr. Anderson de Oliveira Lobo',
-    foto: '/docentes/anderson-lobo.gif',
-    email: 'lobo.aol@gmail.com',
-    lattes: 'http://lattes.cnpq.br/8605141883488358',
-    resumo:
-      'Professor Titular-Livre da UFPI. Produtividade em Pesquisa nível A do CNPq. Membro afiliado da Academia Brasileira de Ciências. Incluído entre os cientistas mais influentes do mundo desde 2021 (Stanford, Engenharia Biomédica). Doutor pelo ITA, pós-doutorado em Bioengenharia na Harvard-MIT. Mais de 195 artigos, 5.600 citações, índice H=41. Coordena projetos FINEP, FAPESP, CNPq, CAPES e Serrapilheira.',
-  },
-  {
-    nome: 'Prof. Dr. Federico Aletti',
-    foto: '/docentes/federico-aletti.jpg',
-    lattes: 'http://lattes.cnpq.br/6713455294008529',
-    resumo:
-      'Mestrado (Laurea) em Engenharia Biomédica e Doutorado em Bioengenharia pelo Politecnico di Milano (Itália), onde também fez pós-doutorado. Marie Curie Fellow na University of California San Diego (EUA). Pesquisa modelagem matemática da regulação cardiovascular, choque circulatório em terapia intensiva e abordagens ômicas na busca de biomarcadores. Conselheiro eleito da European Shock Society e membro do corpo editorial da Physiological Measurement. 41 artigos publicados.',
-  },
-  {
-    nome: 'Profa. Dra. Fernanda Marciano',
-    foto: '/docentes/fernanda-marciano.gif',
-    email: 'fermarciano@gmail.com',
-    lattes: 'http://lattes.cnpq.br/1649098213102710',
-    resumo:
-      'Professora Titular-Livre da UFPI. Membro afiliada da Academia Brasileira de Ciências (Nordeste). Graduação em Engenharia Biomédica (Univap), Mestrado (INPE), Doutorado (ITA). Produtividade em Pesquisa nível C do CNPq. Experiência em nanobiomateriais e materiais biocompatíveis. Coordenou o PPGCM/UFPI (2020-2023). Embaixadora do Projeto Parent in Science (Nordeste).',
-  },
-  {
-    nome: 'Prof. Dr. Hueliton Wilian Kido',
-    foto: '/docentes/hueliton-kido.jpg',
-    lattes: 'http://lattes.cnpq.br/2913551944409323',
-    resumo:
-      'Licenciatura em Ciências Biológicas (UFMS), Mestrado e Doutorado em Biotecnologia pela UFSCar. Pós-doutorado na UNIFESP e na Nanyang Technological University (Cingapura), com bolsa FAPESP, e na UNINOVE. Pesquisa reparação e regeneração óssea e cutânea com fotobiomodulação, biomateriais (Biosilicato®, biovidro, hidroxiapatita, colágeno) e células-tronco mesenquimais. Docente do curso de Medicina da UNINOVE. 35 artigos publicados.',
-  },
-  {
-    nome: 'Prof. Dr. Jorge R. Beingolea Garay',
-    foto: '/docentes/jorge-beingolea-garay.jpg',
-    lattes: 'http://lattes.cnpq.br/0997252695811042',
-    resumo:
-      'Graduação em Computação e Informática (Universidad Inca Garcilaso de la Vega, Peru), Mestrado e Doutorado em Engenharia Elétrica pela Escola Politécnica da USP e graduação em Engenharia Biomédica (FAM). Pesquisa tecnologias assistivas, instrumentação biomédica de baixo custo, wearables, eletromiografia, bioimpedância e Internet das Coisas aplicada à saúde. Fundador da iniciativa IEEE Sustainable Cities Latin America. Mais de 15 anos no ensino superior.',
-  },
-  {
-    nome: 'Prof. Dr. José Francisco S. Costa Júnior',
-    foto: '/docentes/jose-francisco-costa-junior.gif',
-    lattes: 'https://lattes.cnpq.br/0717416627522529',
-    resumo:
-      'Bacharelado em Física (UESC), Mestrado e Doutorado em Engenharia Biomédica pela UFRJ. Pós-doutorado no Laboratório de Ultrassom da Escola Politécnica da USP. Pesquisa em elastografia ultrassônica, instrumentação biomédica, phantoms ultrassônicos e caracterização de tecidos biológicos. Atuou como professor na Academia da Força Aérea Brasileira. Membro da Sociedade Brasileira de Engenharia Biomédica.',
-  },
-  {
-    nome: 'Profa. Dra. Paula C. G. Antunes',
-    foto: '/docentes/paula-antunes.gif',
-    lattes: 'https://lattes.cnpq.br/1475048754971129',
-    resumo:
-      'Graduada em Física pela USP, com mestrado e doutorado em Física Médica pela USP e doutorado sanduíche na Universidade de Valência (Espanha). Trabalhou no projeto do Submarino Nuclear da Marinha do Brasil. Pesquisa em dosimetria, microdosimetria, Método Monte Carlo, braquiterapia e protonterapia. Professora e pesquisadora do Hospital Albert Einstein.',
-  },
-  {
-    nome: 'Profa. Dra. Priscila Favero',
-    foto: '/docentes/priscila-favero.gif',
-    email: 'priscila.favero@ub.edu.br',
-    lattes: 'http://lattes.cnpq.br/0741255176354772',
-    resumo:
-      'Graduação em Física (UnB), Mestrado em Física Experimental (UnB), Doutorado em Física Teórica (UnB/Universitaet Paderborn). Pós-doutorado na UFABC (FAPESP) e no IEAv/DCTA (FAPESP). Pesquisa propriedades físico-químicas de cosméticos, permeação e interações com a pele. Professora Titular da pós-graduação em Engenharia Biomédica da Universidade Brasil.',
-  },
-  {
-    nome: 'Prof. Dr. Rodrigo Sávio Pessoa',
-    foto: '/docentes/rodrigo-pessoa.gif',
-    email: 'rodrigospessoa@gmail.com',
-    lattes: 'http://lattes.cnpq.br/3318707277023349',
-    resumo:
-      'Professor no ITA. Graduação em Física (UNESP), Doutorado em Física de Plasmas (ITA). Produtividade em Pesquisa nível B do CNPq. 164 artigos publicados, 28 capítulos de livros, H=26 (Scopus). Pesquisador Principal em projetos temáticos da FAPESP. Coordena projetos FINEP, CNPq, CAPES e AEB. Mais de 500 revisões para periódicos internacionais de alto impacto.',
-  },
-  {
-    nome: 'Profa. Dra. Sarah Raquel de Annunzio',
-    foto: '/docentes/sarah-annunzio.gif',
-    lattes: 'https://lattes.cnpq.br/0141808750748205',
-    resumo:
-      'Graduação em Ciências Biológicas (UNIARA), Mestrado e Doutorado em Biociências e Biotecnologias Aplicadas à Farmácia (UNESP). Pós-doutorado na FOAr/UNESP com bolsa FAPESP vinculada ao CDMF-CEPID. Experiência em Microbiologia, terapia fotodinâmica, biomateriais, biofilmes e ensaios de biocompatibilidade.',
-  },
-  {
-    nome: 'Prof. Dr. Victor Augusto R. Fernandes',
-    foto: '/docentes/victor-fernandes.jpg',
-    lattes: 'http://lattes.cnpq.br/2125060422353483',
-    resumo:
-      'Bacharelado em Educação Física (ESEF Jundiaí) e graduação em Ciências Biológicas (UNICID). Mestrado, Doutorado e Pós-doutorado em Ciências da Saúde pela Faculdade de Medicina de Jundiaí. Pesquisa morfologia e estereologia de tecidos, adaptações neurais e musculoesqueléticas ao exercício físico e biomateriais para regeneração óssea. Servidor público na Escola Superior de Educação Física de Jundiaí. 107 artigos publicados.',
-  },
-];
 
 export default function ProcessoSeletivoPage() {
   return (
@@ -555,59 +425,7 @@ export default function ProcessoSeletivoPage() {
 
         {/* Corpo Docente */}
         <h2 className="text-h2 text-primary-800 mb-4 font-serif">Corpo Docente do PPGEB</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-          {docentes.map((d) => (
-            <div key={d.nome} className="card p-5">
-              <div className="flex items-center gap-4 mb-3">
-                <Image
-                  src={d.foto}
-                  alt={d.nome}
-                  width={80}
-                  height={80}
-                  className="rounded-full object-cover w-[80px] h-[80px] flex-shrink-0"
-                  unoptimized
-                />
-                <div className="min-w-0">
-                  <h3 className="text-h3 text-slate-900 leading-tight">{d.nome}</h3>
-                  {'coordenador' in d && d.coordenador && (
-                    <Badge variant="teal">Coordenador</Badge>
-                  )}
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3 mb-3 text-body-sm">
-                {'email' in d && d.email && (
-                  <a
-                    href={`mailto:${d.email}`}
-                    className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 transition-colors"
-                  >
-                    <Mail className="w-3.5 h-3.5" />
-                    {d.email}
-                  </a>
-                )}
-                <a
-                  href={d.lattes}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-teal-700 hover:text-teal-800 transition-colors"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  Currículo Lattes
-                </a>
-              </div>
-
-              <details className="group">
-                <summary className="text-body-sm text-primary-600 cursor-pointer hover:text-primary-700 transition-colors font-medium list-none flex items-center gap-1">
-                  <span className="group-open:hidden">Ver resumo</span>
-                  <span className="hidden group-open:inline">Ocultar resumo</span>
-                </summary>
-                <p className="text-body-sm text-slate-500 font-serif mt-2 leading-relaxed">
-                  {d.resumo}
-                </p>
-              </details>
-            </div>
-          ))}
-        </div>
+        <DocentesGrid docentes={docentes} />
 
         {/* Downloads */}
         <h2 className="text-h2 text-primary-800 mb-4 font-serif">Documentos para Download</h2>

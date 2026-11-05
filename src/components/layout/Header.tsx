@@ -21,15 +21,15 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {mainNavigation.map((item) => (
+          <nav className="hidden xl:flex items-center">
+            {mainNavigation.filter((item) => !item.ocultarNoMenuDesktop).map((item) => (
               <div
                 key={item.href}
                 className="relative group"
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-2.5 py-2 text-sm font-medium text-slate-600 hover:text-primary-700 transition-colors rounded-lg hover:bg-primary-50 whitespace-nowrap"
+                  className="flex items-center gap-1 px-1.5 py-2 text-[13px] font-medium text-slate-600 hover:text-primary-700 transition-colors rounded-lg hover:bg-primary-50 whitespace-nowrap"
                 >
                   {item.label}
                   {item.children && <ChevronDown className="w-3.5 h-3.5 opacity-50" />}
@@ -66,7 +66,7 @@ export function Header() {
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-slate-600 hover:text-primary-700 rounded-lg hover:bg-primary-50"
+              className="xl:hidden p-2 text-slate-600 hover:text-primary-700 rounded-lg hover:bg-primary-50"
               aria-label="Menu"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -76,7 +76,7 @@ export function Header() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-          <nav className="lg:hidden py-4 border-t border-slate-100 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <nav className="xl:hidden py-4 border-t border-slate-100 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="flex flex-col gap-1">
               {mainNavigation.map((item) => (
                 <div key={item.href}>

@@ -7,6 +7,7 @@ import {
   Microscope,
   TrendingUp,
   FileText,
+  University,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -16,6 +17,8 @@ export interface NavItem {
   icon?: LucideIcon;
   description?: string;
   children?: NavItem[];
+  /** Fica fora da barra do menu no computador (falta espaço); aparece no celular e nas grades. */
+  ocultarNoMenuDesktop?: boolean;
 }
 
 export const mainNavigation: NavItem[] = [
@@ -127,15 +130,32 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
+    label: 'PPGEB UB',
+    href: '/ppgeb',
+    icon: University,
+    description: 'Mestrado, doutorado e pós-doutorado da Universidade Brasil',
+    children: [
+      { label: 'O Programa', href: '/ppgeb' },
+      { label: 'Mestrado', href: '/ppgeb/mestrado' },
+      { label: 'Doutorado', href: '/ppgeb/doutorado' },
+      { label: 'Pós-Doutorado', href: '/ppgeb/pos-doutorado' },
+      { label: 'Corpo Docente', href: '/ppgeb#docentes' },
+      { label: 'Processo Seletivo Docente', href: '/carreira/processo-seletivo' },
+    ],
+  },
+  {
     label: 'Artigos',
     href: '/artigos',
     icon: FileText,
     description: 'Todos os artigos e análises',
+    ocultarNoMenuDesktop: true,
   },
 ];
 
 export const footerNavigation = {
   portal: [
+    { label: 'Artigos', href: '/artigos' },
+    { label: 'PPGEB UB', href: '/ppgeb' },
     { label: 'Sobre', href: '/sobre' },
     { label: 'Contato', href: '/contato' },
     { label: 'Glossário', href: '/glossario' },
