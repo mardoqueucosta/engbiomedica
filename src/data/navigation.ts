@@ -23,6 +23,20 @@ export interface NavItem {
 
 export const mainNavigation: NavItem[] = [
   {
+    label: 'PPGEB UB',
+    href: '/ppgeb',
+    icon: University,
+    description: 'Mestrado, doutorado e pós-doutorado da Universidade Brasil',
+    children: [
+      { label: 'O Programa', href: '/ppgeb' },
+      { label: 'Mestrado', href: '/ppgeb/mestrado' },
+      { label: 'Doutorado', href: '/ppgeb/doutorado' },
+      { label: 'Pós-Doutorado', href: '/ppgeb/pos-doutorado' },
+      { label: 'Corpo Docente', href: '/ppgeb#docentes' },
+      { label: 'Processo Seletivo Docente', href: '/carreira/processo-seletivo' },
+    ],
+  },
+  {
     label: 'Formação',
     href: '/formacao',
     icon: GraduationCap,
@@ -127,20 +141,6 @@ export const mainNavigation: NavItem[] = [
       { label: 'Publicação Científica', href: '/artigos/como-publicar-artigos-engenharia-biomedica' },
       { label: 'Python e MATLAB para Biomédica', href: '/artigos/python-matlab-engenharia-biomedica' },
       { label: 'Repositórios Acadêmicos', href: '/internacional/repositorios' },
-    ],
-  },
-  {
-    label: 'PPGEB UB',
-    href: '/ppgeb',
-    icon: University,
-    description: 'Mestrado, doutorado e pós-doutorado da Universidade Brasil',
-    children: [
-      { label: 'O Programa', href: '/ppgeb' },
-      { label: 'Mestrado', href: '/ppgeb/mestrado' },
-      { label: 'Doutorado', href: '/ppgeb/doutorado' },
-      { label: 'Pós-Doutorado', href: '/ppgeb/pos-doutorado' },
-      { label: 'Corpo Docente', href: '/ppgeb#docentes' },
-      { label: 'Processo Seletivo Docente', href: '/carreira/processo-seletivo' },
     ],
   },
   {
