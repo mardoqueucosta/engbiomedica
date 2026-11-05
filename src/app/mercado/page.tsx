@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Building2, Rocket, MapPin, Calendar, Globe, Newspaper } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensDaSecao } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -58,6 +59,7 @@ export default function MercadoPage() {
       />
 
       <PageHeader
+        imagens={imagensDaSecao('/mercado')}
         overline="Mercado de Trabalho"
         title="Um mercado de R$ 26 bilhões com 85 mil empregos"
         description="O setor de dispositivos médicos no Brasil movimentou R$ 26,1 bilhões em 2024, com crescimento de 11,5% sobre o ano anterior e 5.979 novas vagas criadas."

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -97,6 +98,7 @@ export default function CarreiraPage() {
       />
 
       <PageHeader
+        imagens={imagensDaSecao('/carreira')}
         overline="Carreira em Engenharia Biomédica"
         title="Carreira em Engenharia Biomédica"
         description="Do estágio à diretoria: certificações, cursos, livros e recursos para cada fase da sua trajetória profissional."

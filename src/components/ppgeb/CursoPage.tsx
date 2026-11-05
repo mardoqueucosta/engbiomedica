@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { CheckCircle } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { PalcoFotos } from '@/components/ui/PalcoImagens';
+import { fotosDocentes } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
 import { CtaInscricao, DocumentosLista, LinkPrograma } from '@/components/ppgeb/Blocos';
@@ -70,6 +72,7 @@ export function CursoPage({ slug }: { slug: Curso['slug'] }) {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cursoJsonLd) }} />
       <PageHeader
+        palco={<PalcoFotos fotos={fotosDocentes()} />}
         overline="PPGEB · Universidade Brasil"
         title={curso.nome}
         description={curso.resumo}

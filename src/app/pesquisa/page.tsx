@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Building, Banknote, BookOpen, FlaskConical } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensDaSecao } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -54,6 +55,7 @@ export default function PesquisaPage() {
       />
 
       <PageHeader
+        imagens={imagensDaSecao('/pesquisa')}
         overline="Pesquisa & Inovação"
         title="A pesquisa que transforma a saúde no Brasil"
         description="Da IA que analisa 4.000 ECGs por dia no HC-UFMG ao primeiro analisador nacional de bisturis elétricos no IFBA — a pesquisa brasileira em Engenharia Biomédica é de nível internacional."

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Clock, BookOpen, Award, Calendar, Users, MapPin, CheckCircle2, ExternalLink, GraduationCap } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { getCurso, getAllCursoSlugs } from '@/data/cursos';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
@@ -78,6 +79,7 @@ export default async function CursoPage({ params }: Props) {
       />
 
       <PageHeader
+        imagens={imagensDaSecao('/formacao')}
         overline={curso.subtitulo}
         title={curso.nome}
         description={curso.descricao}

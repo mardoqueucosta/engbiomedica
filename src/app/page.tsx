@@ -4,6 +4,8 @@ import { StatCard } from '@/components/ui/StatCard';
 import { SectionCard } from '@/components/ui/SectionCard';
 import { HomeNewsletterForm } from '@/components/forms/HomeNewsletterForm';
 import { mainNavigation } from '@/data/navigation';
+import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensRecentes } from '@/lib/topo';
 
 const jsonLdWebSite = {
   '@context': 'https://schema.org',
@@ -35,41 +37,31 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
       />
-      {/* Hero */}
-      <section className="hero-gradient relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-[-40px] right-[-40px] w-[300px] h-[300px] rounded-full glow-teal" />
-        <div className="absolute bottom-[-60px] left-[-20px] w-[200px] h-[200px] rounded-full glow-blue" />
-
-        <div className="container-page py-16 lg:py-24 relative z-10">
-          <span className="font-mono text-overline uppercase text-teal-300 tracking-[0.15em] block mb-4">
-            Portal de Referência
-          </span>
-          <h1 className="text-display lg:text-[3rem] lg:leading-[1.12] text-white max-w-2xl text-balance font-serif">
-            Tudo sobre Engenharia{' '}
-            <span className="text-teal-300">Biomédica</span> no Brasil
-          </h1>
-          <p className="mt-4 text-lg text-primary-200 max-w-xl leading-relaxed">
-            Cursos, mercado de trabalho, regulamentação, pesquisa, startups e
-            referências internacionais — em um único portal.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+      {/* Capa */}
+      <PageHeader
+        overline="Portal de Referência"
+        title="Tudo sobre Engenharia Biomédica no Brasil"
+        destaque="Biomédica no Brasil"
+        description="Cursos, mercado de trabalho, regulamentação, pesquisa, startups e referências internacionais em um único portal."
+        imagens={imagensRecentes()}
+        acoes={
+          <>
             <Link
               href="/formacao"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold text-sm hover:bg-teal-600 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white rounded-[10px] font-semibold text-sm hover:bg-primary-600 transition-colors"
             >
               Explorar o portal
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/newsletter"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 text-white border border-[#3C6A95] rounded-[10px] font-semibold text-sm hover:border-[#7FC4F5] transition-colors"
             >
               Newsletter gratuita
             </Link>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+      />
 
       {/* Stats */}
       <section className="bg-white border-b border-slate-100">

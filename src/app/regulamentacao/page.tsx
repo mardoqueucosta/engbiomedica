@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, FileCheck, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensDaSecao } from '@/lib/topo';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function RegulamentacaoPage() {
       />
 
       <PageHeader
+        imagens={imagensDaSecao('/regulamentacao')}
         overline="Regulamentação"
         title="O arcabouço regulatório da Engenharia Biomédica"
         description="A profissão é regulamentada pelo CONFEA/CREA desde 2008 e foi reconhecida pelo Ministério do Trabalho em 2022. Dispositivos médicos seguem a ANVISA e normas internacionais."

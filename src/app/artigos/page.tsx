@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { imagensRecentes } from '@/lib/topo';
 import { ArticleSearch } from '@/components/search/ArticleSearch';
 import { listaArtigos } from '@/data/artigos';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
@@ -30,6 +31,7 @@ export default function ArtigosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Artigos', href: '/artigos' }])) }}
       />
       <PageHeader
+        imagens={imagensRecentes()}
         overline="Artigos"
         title="Artigos e Análises"
         description="Tendências, guias práticos e análises de mercado sobre Engenharia Biomédica no Brasil e no mundo."

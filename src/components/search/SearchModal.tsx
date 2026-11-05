@@ -106,7 +106,7 @@ export function SearchModal() {
       {/* Trigger button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="p-2 text-slate-500 hover:text-primary-700 rounded-lg hover:bg-primary-50 transition-colors"
+        className="p-2 text-white/75 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
         aria-label="Buscar artigos (Ctrl+K)"
         title="Buscar (Ctrl+K)"
       >

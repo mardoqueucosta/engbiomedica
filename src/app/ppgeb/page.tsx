@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { PalcoFotos } from '@/components/ui/PalcoImagens';
+import { fotosDocentes } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
 import { DocentesGrid } from '@/components/ppgeb/DocentesGrid';
@@ -54,6 +56,7 @@ export default function PpgebPage() {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(programaJsonLd) }} />
       <PageHeader
+        palco={<PalcoFotos fotos={fotosDocentes()} />}
         overline="Universidade Brasil · Stricto Sensu"
         title="Programa de Pós-Graduação em Engenharia Biomédica"
         description="O PPGEB da Universidade Brasil forma pesquisadores na interface entre engenharia e saúde, articulando desenvolvimento de dispositivos, espectroscopia óptica, nanociências e sistemas de reabilitação, da pesquisa experimental à aplicação clínica e à transferência de tecnologia."
