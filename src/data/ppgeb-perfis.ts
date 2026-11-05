@@ -8,6 +8,14 @@
  * programa e alocação de docentes e laboratórios de 2026 (Recredenciamento-UB).
  */
 
+export interface Figura {
+  src: string;
+  alt: string;
+  legenda: string;
+  largura: number;
+  altura: number;
+}
+
 export interface PerfilDocente {
   slug: string;
   /** Nome do docente exatamente como em `docentes` (src/data/ppgeb.ts). */
@@ -17,7 +25,10 @@ export interface PerfilDocente {
   chamada: string;
   apresentacao: string[];
   numeros: { valor: string; legenda: string }[];
-  linhas: { titulo: string; itens: string[] }[];
+  /** `imagem`: foto ilustrativa da linha (public/ppgeb/laboratorios/<slug>/). */
+  linhas: { titulo: string; itens: string[]; imagem?: Figura }[];
+  /** Esquemas que explicam o trabalho do laboratório, por seção da página. */
+  esquemas?: { sobre?: Figura; projetos?: Figura };
   projetos: {
     periodo: string;
     titulo: string;
@@ -69,6 +80,7 @@ export const perfisDocentes: PerfilDocente[] = [
     linhas: [
       {
         titulo: 'Instrumentação e dispositivos',
+        imagem: { src: '/ppgeb/laboratorios/mardoqueu-costa/instrumentacao.webp', alt: 'Bancada de instrumentação biomédica com protótipo de biossensor aberto, eletrodos, osciloscópio e multímetro', legenda: 'Imagem ilustrativa', largura: 1200, altura: 800 },
         itens: [
           'Equipamentos e instrumentos científicos para as áreas médica, odontológica e agrícola.',
           'Biossensores para diagnóstico não invasivo.',
@@ -78,6 +90,7 @@ export const perfisDocentes: PerfilDocente[] = [
       },
       {
         titulo: 'Diagnóstico óptico',
+        imagem: { src: '/ppgeb/laboratorios/mardoqueu-costa/diagnostico-optico.webp', alt: 'Caneta de LED azul-violeta iluminando um modelo de arcada dentária com fluorescência dos dentes e da placa bacteriana', legenda: 'Imagem ilustrativa', largura: 1200, altura: 800 },
         itens: [
           'Imagens de fluorescência para uso médico e odontológico.',
           'Diagnóstico óptico e terapia fotodinâmica.',
@@ -86,6 +99,7 @@ export const perfisDocentes: PerfilDocente[] = [
       },
       {
         titulo: 'Materiais e agricultura',
+        imagem: { src: '/ppgeb/laboratorios/mardoqueu-costa/ensaios-materiais.webp', alt: 'Máquina universal de ensaios fazendo ensaio de tração em corpo de prova polimérico, com vídeo-extensômetro e curva tensão-deformação no notebook', legenda: 'Imagem ilustrativa', largura: 1200, altura: 800 },
         itens: [
           'Ensaios mecânicos de materiais: máquinas universais de ensaio e vídeo-extensometria.',
           'Ensaio físico combinado a ensaio virtual (simulação numérica) para materiais biomédicos.',
@@ -94,6 +108,10 @@ export const perfisDocentes: PerfilDocente[] = [
         ],
       },
     ],
+    esquemas: {
+      sobre: { src: '/ppgeb/laboratorios/mardoqueu-costa/esquema-prototipo-produto.webp', alt: 'Esquema do fluxo de trabalho do laboratório: concepção, protótipo, validação, patente e produto', legenda: 'Do laboratório à indústria: concepção, protótipo, validação, patente e produto', largura: 1200, altura: 344 },
+      projetos: { src: '/ppgeb/laboratorios/mardoqueu-costa/esquema-ensaio-virtual.webp', alt: 'Esquema comparando o ensaio físico de um corpo de prova na máquina de ensaio com o ensaio virtual por elementos finitos', legenda: 'Ensaio físico e ensaio virtual: a máquina mede o corpo de prova e a simulação por elementos finitos prevê o mesmo ensaio, para comparar e validar (esquema ilustrativo)', largura: 1200, altura: 800 },
+    },
     projetos: [
       {
         periodo: '2023 – atual',

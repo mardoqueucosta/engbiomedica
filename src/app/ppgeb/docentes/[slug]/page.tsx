@@ -8,7 +8,7 @@ import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 import { docentes, PPGEB_INSCRICAO_URL } from '@/data/ppgeb';
-import { getPerfil, perfisDocentes } from '@/data/ppgeb-perfis';
+import { getPerfil, perfisDocentes, type Figura } from '@/data/ppgeb-perfis';
 
 const BASE_URL = 'https://engenhariabiomedica.com';
 
@@ -43,6 +43,23 @@ function Secao({ id, titulo, children }: { id: string; titulo: string; children:
       <h2 className="text-h2 text-primary-800 mb-5 font-serif">{titulo}</h2>
       {children}
     </section>
+  );
+}
+
+/** Figura com legenda; as imagens geradas por IA são marcadas como ilustrativas na legenda. */
+function FiguraLab({ figura, className = '' }: { figura: Figura; className?: string }) {
+  return (
+    <figure className={className}>
+      <Image
+        src={figura.src}
+        alt={figura.alt}
+        width={figura.largura}
+        height={figura.altura}
+        unoptimized
+        className="w-full h-auto rounded-card border border-slate-100 bg-white"
+      />
+      <figcaption className="text-body-sm text-slate-400 mt-2 text-center">{figura.legenda}</figcaption>
+    </figure>
   );
 }
 
@@ -141,6 +158,7 @@ export default async function PerfilDocentePage({ params }: { params: Promise<{ 
             <p className="text-body-sm text-slate-500 mt-2">
               <span className="font-semibold text-slate-700">Áreas de concentração:</span> {perfil.laboratorio.areaConcentracao}
             </p>
+            {perfil.esquemas?.sobre && <FiguraLab figura={perfil.esquemas.sobre} className="mt-8" />}
           </div>
 
           <aside className="card p-6 h-fit">
@@ -187,7 +205,18 @@ export default async function PerfilDocentePage({ params }: { params: Promise<{ 
         <Secao id="linhas" titulo="Linhas de pesquisa">
           <div className="grid gap-4 lg:grid-cols-3">
             {perfil.linhas.map((l) => (
-              <div key={l.titulo} className="card p-6">
+              <div key={l.titulo} className="card overflow-hidden">
+                {l.imagem && (
+                  <Image
+                    src={l.imagem.src}
+                    alt={l.imagem.alt}
+                    width={l.imagem.largura}
+                    height={l.imagem.altura}
+                    unoptimized
+                    className="w-full aspect-[3/2] object-cover"
+                  />
+                )}
+                <div className="p-6">
                 <h3 className="text-h3 text-slate-900 mb-3">{l.titulo}</h3>
                 <ul className="space-y-2">
                   {l.itens.map((item) => (
@@ -196,6 +225,7 @@ export default async function PerfilDocentePage({ params }: { params: Promise<{ 
                     </li>
                   ))}
                 </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -217,6 +247,7 @@ export default async function PerfilDocentePage({ params }: { params: Promise<{ 
               </div>
             ))}
           </div>
+          {perfil.esquemas?.projetos && <FiguraLab figura={perfil.esquemas.projetos} className="mb-8 max-w-4xl mx-auto" />}
           <h3 className="text-overline uppercase text-teal-700 tracking-[0.12em] mb-3">Concluídos</h3>
           <div className="card divide-y divide-slate-100">
             {projetosConcluidos.map((p) => (
