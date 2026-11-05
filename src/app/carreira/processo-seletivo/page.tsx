@@ -265,12 +265,33 @@ const docentes = [
       'Professor Titular-Livre da UFPI. Produtividade em Pesquisa nível A do CNPq. Membro afiliado da Academia Brasileira de Ciências. Incluído entre os cientistas mais influentes do mundo desde 2021 (Stanford, Engenharia Biomédica). Doutor pelo ITA, pós-doutorado em Bioengenharia na Harvard-MIT. Mais de 195 artigos, 5.600 citações, índice H=41. Coordena projetos FINEP, FAPESP, CNPq, CAPES e Serrapilheira.',
   },
   {
+    nome: 'Prof. Dr. Federico Aletti',
+    foto: '/docentes/federico-aletti.jpg',
+    lattes: 'http://lattes.cnpq.br/6713455294008529',
+    resumo:
+      'Mestrado (Laurea) em Engenharia Biomédica e Doutorado em Bioengenharia pelo Politecnico di Milano (Itália), onde também fez pós-doutorado. Marie Curie Fellow na University of California San Diego (EUA). Pesquisa modelagem matemática da regulação cardiovascular, choque circulatório em terapia intensiva e abordagens ômicas na busca de biomarcadores. Conselheiro eleito da European Shock Society e membro do corpo editorial da Physiological Measurement. 41 artigos publicados.',
+  },
+  {
     nome: 'Profa. Dra. Fernanda Marciano',
     foto: '/docentes/fernanda-marciano.gif',
     email: 'fermarciano@gmail.com',
     lattes: 'http://lattes.cnpq.br/1649098213102710',
     resumo:
       'Professora Titular-Livre da UFPI. Membro afiliada da Academia Brasileira de Ciências (Nordeste). Graduação em Engenharia Biomédica (Univap), Mestrado (INPE), Doutorado (ITA). Produtividade em Pesquisa nível C do CNPq. Experiência em nanobiomateriais e materiais biocompatíveis. Coordenou o PPGCM/UFPI (2020-2023). Embaixadora do Projeto Parent in Science (Nordeste).',
+  },
+  {
+    nome: 'Prof. Dr. Hueliton Wilian Kido',
+    foto: '/docentes/hueliton-kido.jpg',
+    lattes: 'http://lattes.cnpq.br/2913551944409323',
+    resumo:
+      'Licenciatura em Ciências Biológicas (UFMS), Mestrado e Doutorado em Biotecnologia pela UFSCar. Pós-doutorado na UNIFESP e na Nanyang Technological University (Cingapura), com bolsa FAPESP, e na UNINOVE. Pesquisa reparação e regeneração óssea e cutânea com fotobiomodulação, biomateriais (Biosilicato®, biovidro, hidroxiapatita, colágeno) e células-tronco mesenquimais. Docente do curso de Medicina da UNINOVE. 35 artigos publicados.',
+  },
+  {
+    nome: 'Prof. Dr. Jorge R. Beingolea Garay',
+    foto: '/docentes/jorge-beingolea-garay.jpg',
+    lattes: 'http://lattes.cnpq.br/0997252695811042',
+    resumo:
+      'Graduação em Computação e Informática (Universidad Inca Garcilaso de la Vega, Peru), Mestrado e Doutorado em Engenharia Elétrica pela Escola Politécnica da USP e graduação em Engenharia Biomédica (FAM). Pesquisa tecnologias assistivas, instrumentação biomédica de baixo custo, wearables, eletromiografia, bioimpedância e Internet das Coisas aplicada à saúde. Fundador da iniciativa IEEE Sustainable Cities Latin America. Mais de 15 anos no ensino superior.',
   },
   {
     nome: 'Prof. Dr. José Francisco S. Costa Júnior',
@@ -308,6 +329,13 @@ const docentes = [
     lattes: 'https://lattes.cnpq.br/0141808750748205',
     resumo:
       'Graduação em Ciências Biológicas (UNIARA), Mestrado e Doutorado em Biociências e Biotecnologias Aplicadas à Farmácia (UNESP). Pós-doutorado na FOAr/UNESP com bolsa FAPESP vinculada ao CDMF-CEPID. Experiência em Microbiologia, terapia fotodinâmica, biomateriais, biofilmes e ensaios de biocompatibilidade.',
+  },
+  {
+    nome: 'Prof. Dr. Victor Augusto R. Fernandes',
+    foto: '/docentes/victor-fernandes.jpg',
+    lattes: 'http://lattes.cnpq.br/2125060422353483',
+    resumo:
+      'Bacharelado em Educação Física (ESEF Jundiaí) e graduação em Ciências Biológicas (UNICID). Mestrado, Doutorado e Pós-doutorado em Ciências da Saúde pela Faculdade de Medicina de Jundiaí. Pesquisa morfologia e estereologia de tecidos, adaptações neurais e musculoesqueléticas ao exercício físico e biomateriais para regeneração óssea. Servidor público na Escola Superior de Educação Física de Jundiaí. 107 artigos publicados.',
   },
 ];
 
