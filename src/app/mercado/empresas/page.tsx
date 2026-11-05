@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { empresasHospitalar, categorias } from '@/data/empresas';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
@@ -44,7 +43,6 @@ export default function EmpresasPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Mercado', href: '/mercado' }, { name: 'Empresas', href: '/mercado/empresas' }])) }}
       />
       <PageHeader
-        imagens={imagensDaSecao('/mercado')}
         overline="Mercado de Trabalho"
         title="Empresas que Empregam Engenheiros Biomedicos"
         description={`Gigantes globais e campeas nacionais dividem o mercado brasileiro de dispositivos medicos, que movimentou R$ 26,1 bilhoes em 2024. Confira o diretorio com ${totalEmpresas}+ expositores da Hospitalar 2026.`}

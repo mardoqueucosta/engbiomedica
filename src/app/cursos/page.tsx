@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { GraduationCap, Clock, BookOpen, Users } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { cursos } from '@/data/cursos';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
@@ -43,7 +42,6 @@ export default function CursosPage() {
       />
 
       <PageHeader
-        imagens={imagensDaSecao('/formacao')}
         overline="Pós-Graduação"
         title="Programas de Engenharia Biomédica"
         description="Mestrado e Doutorado na interface entre engenharia, tecnologia e ciências da saúde. Inscrições abertas para a turma 2026.1."

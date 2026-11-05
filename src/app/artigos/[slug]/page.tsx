@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import DOMPurify from 'isomorphic-dompurify';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagemDoArtigo } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { ArrowLeft, Calendar, Clock, RefreshCw } from 'lucide-react';
 import { slugs, artigosMetaMap, getArtigo } from '@/data/artigos';
@@ -308,7 +307,6 @@ export default async function ArtigoPage({ params }: { params: Promise<{ slug: s
         />
       )}
       <PageHeader
-        imagens={imagemDoArtigo(slug)}
         overline={meta.categoria}
         title={meta.titulo}
         description={meta.resumo}

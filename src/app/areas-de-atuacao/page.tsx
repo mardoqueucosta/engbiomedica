@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -116,7 +115,6 @@ export default function AreasDeAtuacaoPage() {
       />
 
       <PageHeader
-        imagens={imagensDaSecao('/areas-de-atuacao')}
         overline="Áreas de Atuação"
         title="Áreas de Atuação da Engenharia Biomédica"
         description="Conheça as áreas de atuação, o que cada profissional faz no dia a dia, mercado de trabalho e perspectivas futuras."

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function FinanciamentoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Pesquisa', href: '/pesquisa' }, { name: 'Financiamento', href: '/pesquisa/financiamento' }])) }}
       />
       <PageHeader
-        imagens={imagensDaSecao('/pesquisa')}
         overline="Pesquisa & Inovação"
         title="Financiamento à Pesquisa e Inovação"
         description="R$ 150 milhões da EMBRAPII sinalizam prioridade governamental para a pesquisa em saúde. Conheça todas as fontes de financiamento disponíveis."

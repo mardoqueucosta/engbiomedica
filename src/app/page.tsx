@@ -5,7 +5,6 @@ import { SectionCard } from '@/components/ui/SectionCard';
 import { HomeNewsletterForm } from '@/components/forms/HomeNewsletterForm';
 import { mainNavigation } from '@/data/navigation';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensRecentes } from '@/lib/topo';
 
 const jsonLdWebSite = {
   '@context': 'https://schema.org',
@@ -43,7 +42,6 @@ export default function HomePage() {
         title="Tudo sobre Engenharia Biomédica no Brasil"
         destaque="Biomédica no Brasil"
         description="Cursos, mercado de trabalho, regulamentação, pesquisa, startups e referências internacionais em um único portal."
-        imagens={imagensRecentes()}
         acoes={
           <>
             <Link

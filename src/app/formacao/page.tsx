@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { GraduationCap, BookOpen, Award, MapPin } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -149,7 +148,6 @@ export default function FormacaoPage() {
       ))}
 
       <PageHeader
-        imagens={imagensDaSecao('/formacao')}
         overline="Formação Acadêmica"
         title="Onde estudar Engenharia Biomédica no Brasil"
         description="De uma única pós-graduação em 1971 a mais de 28 graduações ativas. Conheça todos os cursos, grades curriculares e programas de pós-graduação."

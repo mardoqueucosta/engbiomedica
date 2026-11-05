@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
 
@@ -115,7 +114,6 @@ export default function RepositoriosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: 'Internacional', href: '/internacional/repositorios' }, { name: 'Repositórios', href: '/internacional/repositorios' }])) }}
       />
       <PageHeader
-        imagens={imagensDaSecao('/pesquisa')}
         overline="Internacional"
         title="Repositórios Acadêmicos Globais"
         description="As 10 maiores bases de dados e repositórios para pesquisa em Engenharia Biomédica no mundo."

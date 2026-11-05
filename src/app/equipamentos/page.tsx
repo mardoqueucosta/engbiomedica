@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { imagensDaSecao } from '@/lib/topo';
 import { StatCard } from '@/components/ui/StatCard';
 import { Badge } from '@/components/ui/Badge';
 import { breadcrumbJsonLd } from '@/lib/breadcrumb-schema';
@@ -99,7 +98,6 @@ export default function EquipamentosPage() {
       />
 
       <PageHeader
-        imagens={imagensDaSecao('/equipamentos')}
         overline="Equipamentos e Tecnologia Hospitalar"
         title="Equipamentos e Tecnologia Hospitalar"
         description="Guias técnicos, manutenção, gestão de parque tecnológico e indicadores para engenheiros clínicos e gestores hospitalares."
