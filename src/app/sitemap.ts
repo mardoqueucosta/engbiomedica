@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { artigosMeta } from '@/data/artigos';
+import { perfisDocentes } from '@/data/ppgeb-perfis';
 
 const BASE_URL = 'https://engenhariabiomedica.com';
 
@@ -28,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ppgeb/doutorado', changeFrequency: 'monthly' as const, priority: 0.7, lastModified: '2026-11-05' },
     { path: '/ppgeb/pos-doutorado', changeFrequency: 'monthly' as const, priority: 0.6, lastModified: '2026-11-05' },
   ];
+
+  // Páginas de laboratório dos docentes do PPGEB
+  for (const perfil of perfisDocentes) {
+    staticPages.push({ path: `/ppgeb/docentes/${perfil.slug}`, changeFrequency: 'monthly' as const, priority: 0.6, lastModified: '2026-11-05' });
+  }
 
   const pages: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: `${BASE_URL}${page.path}`,

@@ -1,22 +1,37 @@
 import Image from 'next/image';
-import { ExternalLink, Mail } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, ExternalLink, Mail } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import type { Docente } from '@/data/ppgeb';
+import { slugDoDocente } from '@/data/ppgeb-perfis';
 
 function DocenteCard({ d }: { d: Docente }) {
+  const slug = slugDoDocente(d.nome);
+  const pagina = slug ? `/ppgeb/docentes/${slug}` : null;
+  const foto = (
+    <Image
+      src={d.foto}
+      alt={d.nome}
+      width={80}
+      height={80}
+      className="rounded-full object-cover w-[80px] h-[80px] flex-shrink-0"
+      unoptimized
+    />
+  );
   return (
     <div className="card p-5">
       <div className="flex items-center gap-4 mb-3">
-        <Image
-          src={d.foto}
-          alt={d.nome}
-          width={80}
-          height={80}
-          className="rounded-full object-cover w-[80px] h-[80px] flex-shrink-0"
-          unoptimized
-        />
+        {pagina ? <Link href={pagina} className="flex-shrink-0">{foto}</Link> : foto}
         <div className="min-w-0">
-          <h3 className="text-h3 text-slate-900 leading-tight">{d.nome}</h3>
+          <h3 className="text-h3 text-slate-900 leading-tight">
+            {pagina ? (
+              <Link href={pagina} className="hover:text-primary-700 transition-colors">
+                {d.nome}
+              </Link>
+            ) : (
+              d.nome
+            )}
+          </h3>
           {d.coordenador && <Badge variant="teal">Coordenador</Badge>}
           {d.tipo === 'colaborador' && <Badge variant="slate">Colaborador</Badge>}
         </div>
@@ -50,6 +65,16 @@ function DocenteCard({ d }: { d: Docente }) {
         </summary>
         <p className="text-body-sm text-slate-500 font-serif mt-2 leading-relaxed">{d.resumo}</p>
       </details>
+
+      {pagina && (
+        <Link
+          href={pagina}
+          className="mt-4 inline-flex items-center gap-1.5 text-body-sm font-semibold text-teal-700 hover:text-teal-800 transition-colors"
+        >
+          Página do laboratório
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      )}
     </div>
   );
 }
