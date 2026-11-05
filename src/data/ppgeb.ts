@@ -11,7 +11,7 @@
  */
 
 export const PPGEB_EMAIL = 'ppgeb@universidadebrasil.edu.br';
-export const PPGEB_INSCRICAO_URL = 'https://www.inscricoes.ubvestibular.com.br/?m=3';
+export const PPGEB_INSCRICAO_URL = 'https://inscricoes.ub.edu.br/';
 export const UB_EDITAIS_URL = 'https://ub.edu.br/editais/';
 
 export const ppgebNumeros = [
