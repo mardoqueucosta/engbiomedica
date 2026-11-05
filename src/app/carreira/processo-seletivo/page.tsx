@@ -347,7 +347,7 @@ export default function ProcessoSeletivoPage() {
               </p>
             </div>
             <a
-              href="https://forms.gle/UUkXEaP13cLx9and8"
+              href="https://forms.gle/uPiGyLh5Ub3BxwVV9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg transition-colors flex-shrink-0"
@@ -609,7 +609,7 @@ export default function ProcessoSeletivoPage() {
             Envie seu Currículo Lattes atualizado e um plano de trabalho alinhado aos eixos do programa para o quadriênio 2025-2028.
           </p>
           <a
-            href="https://forms.gle/UUkXEaP13cLx9and8"
+            href="https://forms.gle/uPiGyLh5Ub3BxwVV9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg transition-colors"
